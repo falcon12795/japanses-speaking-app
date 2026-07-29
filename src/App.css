@@ -333,3 +333,26 @@ button.active {
   background: #2563eb;
   color: white;
 }
+
+.line-speaking-result {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.small-score-box {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.small-score-box span {
+  font-size: 32px;
+}
+
+.line-status {
+  margin-top: 8px;
+  color: #475569;
+  font-weight: bold;
+}

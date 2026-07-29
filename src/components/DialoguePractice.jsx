@@ -6,9 +6,13 @@ import { calculateSimpleSpeechScore } from "../utils/scoring";
 export default function DialoguePractice({ progress, onProgressChange }) {
   const [dialogueIndex, setDialogueIndex] = useState(0);
   const [role, setRole] = useState("A");
-  const [hiddenLineIds, setHiddenLineIds] = useState([]);
+
+  const [showAllScript, setShowAllScript] = useState(false);
+  const [manualVisibleLineIds, setManualVisibleLineIds] = useState([]);
+  const [manualHiddenLineIds, setManualHiddenLineIds] = useState([]);
+
   const [activeLineId, setActiveLineId] = useState(null);
-  const [transcript, setTranscript] = useState("");
+  const [lineResults, setLineResults] = useState({});
   const [status, setStatus] = useState("Ready");
 
   const currentDialogue = DIALOGUES[dialogueIndex];
@@ -17,43 +21,60 @@ export default function DialoguePractice({ progress, onProgressChange }) {
     return currentDialogue.lines.find((line) => line.id === activeLineId);
   }, [currentDialogue, activeLineId]);
 
-  const score = useMemo(() => {
-    if (!activeLine) return 0;
-    return calculateSimpleSpeechScore(transcript, activeLine.japanese);
-  }, [transcript, activeLine]);
-
-  const isLineHidden = (line) => {
-    return hiddenLineIds.includes(line.id);
+  const getLineScore = (line) => {
+    const transcript = lineResults[line.id]?.transcript || "";
+    return calculateSimpleSpeechScore(transcript, line.japanese);
   };
 
-  const shouldHideByRole = (line) => {
+  const shouldHideLine = (line) => {
+    if (showAllScript) {
+      return false;
+    }
+
+    if (manualVisibleLineIds.includes(line.id)) {
+      return false;
+    }
+
+    if (manualHiddenLineIds.includes(line.id)) {
+      return true;
+    }
+
     return line.speaker === role;
   };
 
-  const toggleLineHidden = (lineId) => {
-    setHiddenLineIds((prev) => {
-      if (prev.includes(lineId)) {
-        return prev.filter((id) => id !== lineId);
-      }
+  const toggleLineHidden = (line) => {
+    const isHidden = shouldHideLine(line);
 
-      return [...prev, lineId];
-    });
+    if (isHidden) {
+      setManualVisibleLineIds((prev) => {
+        if (prev.includes(line.id)) return prev;
+        return [...prev, line.id];
+      });
+
+      setManualHiddenLineIds((prev) => prev.filter((id) => id !== line.id));
+    } else {
+      setManualHiddenLineIds((prev) => {
+        if (prev.includes(line.id)) return prev;
+        return [...prev, line.id];
+      });
+
+      setManualVisibleLineIds((prev) => prev.filter((id) => id !== line.id));
+    }
   };
 
   const hideMyRoleLines = () => {
-    const myLineIds = currentDialogue.lines
-      .filter((line) => line.speaker === role)
-      .map((line) => line.id);
-
-    setHiddenLineIds(myLineIds);
-    setTranscript("");
+    setShowAllScript(false);
+    setManualVisibleLineIds([]);
+    setManualHiddenLineIds([]);
+    setActiveLineId(null);
     setStatus(`Hidden all lines for role ${role}.`);
   };
 
   const showAllLines = () => {
-    setHiddenLineIds([]);
-    setTranscript("");
-    setStatus("All lines are visible.");
+    setShowAllScript(true);
+    setManualVisibleLineIds([]);
+    setManualHiddenLineIds([]);
+    setStatus("Showing all script lines.");
   };
 
   const listenLine = (line) => {
@@ -69,12 +90,29 @@ export default function DialoguePractice({ progress, onProgressChange }) {
   const speakLine = async (line) => {
     try {
       setActiveLineId(line.id);
-      setTranscript("");
+
+      setLineResults((prev) => ({
+        ...prev,
+        [line.id]: {
+          transcript: "",
+          status: "Listening...",
+        },
+      }));
+
       setStatus(`Listening for speaker ${line.speaker} line ${line.id}...`);
 
-      const result = await recognizeJapaneseSpeech();
+      const transcript = await recognizeJapaneseSpeech();
+      const score = calculateSimpleSpeechScore(transcript, line.japanese);
 
-      setTranscript(result);
+      setLineResults((prev) => ({
+        ...prev,
+        [line.id]: {
+          transcript,
+          score,
+          status: "Finished",
+        },
+      }));
+
       setStatus("Finished speaking practice.");
 
       onProgressChange({
@@ -82,15 +120,26 @@ export default function DialoguePractice({ progress, onProgressChange }) {
         dialoguePractice: progress.dialoguePractice + 1,
       });
     } catch (error) {
+      setLineResults((prev) => ({
+        ...prev,
+        [line.id]: {
+          transcript: "",
+          score: 0,
+          status: error.message,
+        },
+      }));
+
       setStatus(error.message);
     }
   };
 
   const nextDialogue = () => {
     setDialogueIndex((prev) => (prev + 1) % DIALOGUES.length);
-    setHiddenLineIds([]);
+    setShowAllScript(false);
+    setManualVisibleLineIds([]);
+    setManualHiddenLineIds([]);
     setActiveLineId(null);
-    setTranscript("");
+    setLineResults({});
     setStatus("Ready");
   };
 
@@ -98,17 +147,21 @@ export default function DialoguePractice({ progress, onProgressChange }) {
     setDialogueIndex((prev) =>
       prev === 0 ? DIALOGUES.length - 1 : prev - 1
     );
-    setHiddenLineIds([]);
+    setShowAllScript(false);
+    setManualVisibleLineIds([]);
+    setManualHiddenLineIds([]);
     setActiveLineId(null);
-    setTranscript("");
+    setLineResults({});
     setStatus("Ready");
   };
 
   const changeRole = (nextRole) => {
     setRole(nextRole);
-    setHiddenLineIds([]);
+    setShowAllScript(false);
+    setManualVisibleLineIds([]);
+    setManualHiddenLineIds([]);
     setActiveLineId(null);
-    setTranscript("");
+    setLineResults({});
     setStatus(`Selected role ${nextRole}.`);
   };
 
@@ -144,9 +197,9 @@ export default function DialoguePractice({ progress, onProgressChange }) {
 
       <div className="dialogue-box">
         {currentDialogue.lines.map((line) => {
-          const manuallyHidden = isLineHidden(line);
-          const rolePracticeLine = shouldHideByRole(line);
-          const hidden = manuallyHidden || rolePracticeLine;
+          const hidden = shouldHideLine(line);
+          const lineResult = lineResults[line.id];
+          const score = getLineScore(line);
 
           return (
             <div
@@ -174,35 +227,47 @@ export default function DialoguePractice({ progress, onProgressChange }) {
               <div className="buttons compact-buttons">
                 <button onClick={() => listenLine(line)}>GG Speech</button>
                 <button onClick={() => speakLine(line)}>Speak</button>
-                <button onClick={() => toggleLineHidden(line.id)}>
-                  {manuallyHidden ? "Show line" : "Hide line"}
+                <button onClick={() => toggleLineHidden(line)}>
+                  {hidden ? "Show line" : "Hide line"}
                 </button>
               </div>
+
+              {lineResult && (
+                <div className="line-speaking-result">
+                  <p className="label">You said:</p>
+                  <p className="transcript">{lineResult.transcript || "—"}</p>
+
+                  <p className="label">Score:</p>
+                  <div className="small-score-box">
+                    <span>{score}</span>/100
+                  </div>
+
+                  <div className="progress-bar">
+                    <div
+                      className="progress-fill"
+                      style={{ width: `${score}%` }}
+                    />
+                  </div>
+
+                  <p className="line-status">{lineResult.status}</p>
+                </div>
+              )}
             </div>
           );
         })}
       </div>
 
-      <div className="dialogue-result">
-        <h3>Speaking Result</h3>
+      {activeLine && (
+        <div className="dialogue-result">
+          <h3>Current Practice Line</h3>
 
-        <p className="label">Target:</p>
-        <p className="transcript">
-          {activeLine ? activeLine.japanese : "Select a line to practice."}
-        </p>
+          <p className="label">Target:</p>
+          <p className="transcript">{activeLine.japanese}</p>
 
-        <p className="label">You said:</p>
-        <p className="transcript">{transcript || "—"}</p>
-
-        <p className="label">Score:</p>
-        <div className="score-box">
-          <span>{score}</span>/100
+          <p className="label">Speaker:</p>
+          <p className="transcript">Speaker {activeLine.speaker}</p>
         </div>
-
-        <div className="progress-bar">
-          <div className="progress-fill" style={{ width: `${score}%` }} />
-        </div>
-      </div>
+      )}
 
       <div className="buttons">
         <button onClick={previousDialogue}>Previous Dialogue</button>
