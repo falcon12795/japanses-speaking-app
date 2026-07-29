@@ -3,6 +3,8 @@ const STORAGE_KEY = "japanese-learning-progress";
 export const DEFAULT_PROGRESS = {
   vocabularyLearned: 0,
   vocabularyNeedReview: 0,
+  vocabularySpeakPractice: 0,
+  vocabularyExampleSpeakPractice: 0,
   kanaCorrect: 0,
   kanaWrong: 0,
   speakingPractice: 0,

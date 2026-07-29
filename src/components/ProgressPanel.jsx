@@ -19,6 +19,15 @@ export default function ProgressPanel({ progress, onProgressChange }) {
           {progress.vocabularyNeedReview}
         </p>
         <p>
+            <strong>Vocabulary speak practice:</strong>{" "}
+            {progress.vocabularySpeakPractice || 0}
+        </p>
+
+        <p>
+            <strong>Example speak practice:</strong>{" "}
+            {progress.vocabularyExampleSpeakPractice || 0}
+        </p>
+        <p>
           <strong>Kana correct:</strong> {progress.kanaCorrect}
         </p>
         <p>

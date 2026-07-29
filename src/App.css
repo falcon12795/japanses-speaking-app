@@ -356,3 +356,58 @@ button.active {
   color: #475569;
   font-weight: bold;
 }
+.vocabulary-answer {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+.example-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.example-japanese {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.example-romaji {
+  color: #475569;
+  margin: 4px 0;
+}
+
+.example-meaning {
+  color: #64748b;
+  margin: 4px 0 12px;
+}
+
+.speaking-check-box {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.small-score-box {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.small-score-box span {
+  font-size: 34px;
+}
+
+@media (max-width: 800px) {
+  .vocabulary-answer {
+    grid-template-columns: 1fr;
+  }
+
+  .example-japanese {
+    font-size: 24px;
+  }
+}
