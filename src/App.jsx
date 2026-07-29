@@ -4,6 +4,7 @@ import "./App.css";
 import VocabularyFlashcard from "./components/VocabularyFlashcard";
 import KanaLearning from "./components/KanaLearning";
 import SpeakingPractice from "./components/SpeakingPractice";
+import DialoguePractice from "./components/DialoguePractice";
 import JLPTQuiz from "./components/JLPTQuiz";
 import ProgressPanel from "./components/ProgressPanel";
 
@@ -53,6 +54,13 @@ export default function App() {
         </button>
 
         <button
+          className={activeTab === "dialogue" ? "active" : ""}
+          onClick={() => setActiveTab("dialogue")}
+        >
+          Dialogue
+        </button>
+
+        <button
           className={activeTab === "jlpt" ? "active" : ""}
           onClick={() => setActiveTab("jlpt")}
         >
@@ -98,6 +106,13 @@ export default function App() {
 
         {activeTab === "progress" && (
           <ProgressPanel
+            progress={progress}
+            onProgressChange={handleProgressChange}
+          />
+        )}
+
+        {activeTab === "dialogue" && (
+          <DialoguePractice
             progress={progress}
             onProgressChange={handleProgressChange}
           />

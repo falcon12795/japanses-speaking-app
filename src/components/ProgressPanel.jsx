@@ -28,6 +28,9 @@ export default function ProgressPanel({ progress, onProgressChange }) {
           <strong>Speaking practice:</strong> {progress.speakingPractice}
         </p>
         <p>
+            <strong>Dialogue practice:</strong> {progress.dialoguePractice}
+        </p>
+        <p>
           <strong>JLPT correct:</strong> {progress.jlptCorrect}
         </p>
         <p>

@@ -243,3 +243,93 @@ button.danger {
     font-size: 32px;
   }
 }
+
+.dialogue-header {
+  margin-bottom: 16px;
+}
+
+.dialogue-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.dialogue-line {
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.dialogue-line.speaker-a {
+  border-left: 6px solid #2563eb;
+}
+
+.dialogue-line.speaker-b {
+  border-left: 6px solid #e11d48;
+}
+
+.dialogue-line.active-line {
+  background: #f8fafc;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.speaker-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.dialogue-japanese {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.dialogue-romaji {
+  color: #475569;
+  margin: 4px 0;
+}
+
+.dialogue-meaning {
+  color: #64748b;
+  margin: 4px 0;
+}
+
+.hidden-dialogue-line {
+  background: repeating-linear-gradient(
+    -45deg,
+    #f1f5f9,
+    #f1f5f9 10px,
+    #e2e8f0 10px,
+    #e2e8f0 20px
+  );
+  border-radius: 14px;
+  padding: 16px;
+  color: #475569;
+  font-weight: bold;
+}
+
+.compact-buttons button {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.dialogue-result {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+button.active {
+  background: #2563eb;
+  color: white;
+}

@@ -6,6 +6,7 @@ export const DEFAULT_PROGRESS = {
   kanaCorrect: 0,
   kanaWrong: 0,
   speakingPractice: 0,
+  dialoguePractice: 0,
   jlptCorrect: 0,
   jlptWrong: 0,
 };
