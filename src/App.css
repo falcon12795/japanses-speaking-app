@@ -411,3 +411,14 @@ button.active {
     font-size: 24px;
   }
 }
+.compact-buttons button.danger {
+  background: #dc2626;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.dialogue-reading {
+  color: #64748b;
+  font-size: 22px;
+  margin: 4px 0;
+}

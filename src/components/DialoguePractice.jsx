@@ -1,7 +1,9 @@
 import { useMemo, useState } from "react";
 import { DIALOGUES } from "../data/dialogues";
 import { speakJapaneseText, recognizeJapaneseSpeech } from "../utils/speech";
-import { calculateSimpleSpeechScore } from "../utils/scoring";
+import {
+  calculateSpeechScoreWithAcceptedAnswers,
+} from "../utils/scoring";
 
 export default function DialoguePractice({ progress, onProgressChange }) {
   const [dialogueIndex, setDialogueIndex] = useState(0);
@@ -21,10 +23,23 @@ export default function DialoguePractice({ progress, onProgressChange }) {
     return currentDialogue.lines.find((line) => line.id === activeLineId);
   }, [currentDialogue, activeLineId]);
 
-  const getLineScore = (line) => {
-    const transcript = lineResults[line.id]?.transcript || "";
-    return calculateSimpleSpeechScore(transcript, line.japanese);
-  };
+  const getAcceptedAnswers = (line) => {
+  const answers = [
+    line.japanese,
+    line.reading,
+    ...(line.acceptedAnswers || []),
+  ];
+
+  return answers.filter(Boolean);
+};
+
+const getLineScore = (line) => {
+  const transcript = lineResults[line.id]?.transcript || "";
+  const acceptedAnswers = getAcceptedAnswers(line);
+
+  return calculateSpeechScoreWithAcceptedAnswers(transcript, acceptedAnswers);
+};
+
 
   const shouldHideLine = (line) => {
     if (showAllScript) {
@@ -102,7 +117,10 @@ export default function DialoguePractice({ progress, onProgressChange }) {
       setStatus(`Listening for speaker ${line.speaker} line ${line.id}...`);
 
       const transcript = await recognizeJapaneseSpeech();
-      const score = calculateSimpleSpeechScore(transcript, line.japanese);
+      const score = calculateSpeechScoreWithAcceptedAnswers(
+        transcript,
+        getAcceptedAnswers(line)
+      );
 
       setLineResults((prev) => ({
         ...prev,
@@ -154,6 +172,25 @@ export default function DialoguePractice({ progress, onProgressChange }) {
     setLineResults({});
     setStatus("Ready");
   };
+  const resetAllSpeakResults = () => {
+    setLineResults({});
+    setActiveLineId(null);
+    setStatus("All speaking results have been reset.");
+    };
+
+   const resetLineSpeakResult = (lineId) => {
+    setLineResults((prev) => {
+        const next = { ...prev };
+        delete next[lineId];
+        return next;
+    });
+
+    if (activeLineId === lineId) {
+        setActiveLineId(null);
+    }
+
+    setStatus(`Speaking result for line ${lineId} has been reset.`);
+    };
 
   const changeRole = (nextRole) => {
     setRole(nextRole);
@@ -178,22 +215,27 @@ export default function DialoguePractice({ progress, onProgressChange }) {
 
       <div className="buttons">
         <button
-          className={role === "A" ? "active" : ""}
-          onClick={() => changeRole("A")}
+            className={role === "A" ? "active" : ""}
+            onClick={() => changeRole("A")}
         >
-          Practice as A
+            Practice as A
         </button>
 
         <button
-          className={role === "B" ? "active" : ""}
-          onClick={() => changeRole("B")}
+            className={role === "B" ? "active" : ""}
+            onClick={() => changeRole("B")}
         >
-          Practice as B
+            Practice as B
         </button>
 
         <button onClick={hideMyRoleLines}>Hide my lines</button>
+
         <button onClick={showAllLines}>Show all</button>
-      </div>
+
+        <button className="danger" onClick={resetAllSpeakResults}>
+            Reset All
+        </button>
+       </div>
 
       <div className="dialogue-box">
         {currentDialogue.lines.map((line) => {
@@ -217,6 +259,9 @@ export default function DialoguePractice({ progress, onProgressChange }) {
               ) : (
                 <div>
                   <p className="dialogue-japanese">{line.japanese}</p>
+                  {line.reading && (
+                    <p className="dialogue-reading">{line.reading}</p>
+                  )}
                   <p className="dialogue-romaji">{line.romaji}</p>
                   <p className="dialogue-meaning">
                     {line.english} / {line.vietnamese}
@@ -226,10 +271,21 @@ export default function DialoguePractice({ progress, onProgressChange }) {
 
               <div className="buttons compact-buttons">
                 <button onClick={() => listenLine(line)}>GG Speech</button>
+
                 <button onClick={() => speakLine(line)}>Speak</button>
+
                 <button onClick={() => toggleLineHidden(line)}>
-                  {hidden ? "Show line" : "Hide line"}
+                    {hidden ? "Show line" : "Hide line"}
                 </button>
+
+                {lineResult && (
+                    <button
+                    className="danger"
+                    onClick={() => resetLineSpeakResult(line.id)}
+                    >
+                    Reset
+                    </button>
+                )}
               </div>
 
               {lineResult && (
@@ -277,4 +333,5 @@ export default function DialoguePractice({ progress, onProgressChange }) {
       <p className="status">{status}</p>
     </section>
   );
+  
 }
