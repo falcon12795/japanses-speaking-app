@@ -1,56 +1,64 @@
 import { useState } from "react";
 import { DIALOGUES } from "../data/dialogues";
 
-export default function DialogueList({ onSelectDialogue }) {
-  const [search, setSearch] = useState("");
+const LEVELS = ["N1", "N2", "N3", "N4", "N5"];
 
-  const filteredDialogues = DIALOGUES.filter((dialogue) =>
-    (
-      dialogue.title +
-      dialogue.description +
-      dialogue.level
-    )
-      .toLowerCase()
-      .includes(search.toLowerCase())
-  );
+export default function DialogueList({
+  onSelectDialogue,
+}) {
+  const [selectedLevel, setSelectedLevel] =
+    useState("N3");
+
+  const filteredDialogues =
+    DIALOGUES.filter(
+      (dialogue) =>
+        dialogue.level === selectedLevel
+    );
 
   return (
     <section className="panel">
       <h2>Dialogue Library</h2>
 
-      <input
-        className="dialogue-search"
-        placeholder="Search dialogue..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-
-      <div className="dialogue-list">
-        {filteredDialogues.map((dialogue) => (
-          <div
-            key={dialogue.id}
-            className="dialogue-card"
-            onClick={() => onSelectDialogue(dialogue)}
+      <div className="jlpt-filter">
+        {LEVELS.map((level) => (
+          <button
+            key={level}
+            className={
+              selectedLevel === level
+                ? "level-filter-button active"
+                : "level-filter-button"
+            }
+            onClick={() =>
+              setSelectedLevel(level)
+            }
           >
-            <div className="dialogue-card-header">
-              <span className="level">
-                {dialogue.level}
-              </span>
+            {level}
+          </button>
+        ))}
+      </div>
 
+      <div className="dialogue-simple-list">
+        {filteredDialogues.map(
+          (dialogue) => (
+            <div
+              key={dialogue.id}
+              className="dialogue-simple-card"
+              onClick={() =>
+                onSelectDialogue(dialogue)
+              }
+            >
               <span>
-                {dialogue.lines.length} lines
+                {dialogue.title}
               </span>
             </div>
+          )
+        )}
 
-            <h3>{dialogue.title}</h3>
-
-            <p>{dialogue.description}</p>
-
-            <button>
-              Start Practice →
-            </button>
+        {filteredDialogues.length === 0 && (
+          <div className="empty-dialogues">
+            No dialogues found.
           </div>
-        ))}
+        )}
       </div>
     </section>
   );
