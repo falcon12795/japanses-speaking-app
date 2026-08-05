@@ -9,10 +9,39 @@ import JLPTQuiz from "./components/JLPTQuiz";
 import ProgressPanel from "./components/ProgressPanel";
 
 import { loadProgress, saveProgress } from "./utils/storage";
+import DialogueList from "./components/DialogueList";
+import { DIALOGUES } from "./data/dialogues";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("vocabulary");
   const [progress, setProgress] = useState(() => loadProgress());
+  const [selectedDialogueIndex, setSelectedDialogueIndex] = useState(null);
+
+  const selectedDialogue =
+  selectedDialogueIndex === null ? null : DIALOGUES[selectedDialogueIndex];
+
+    const handleSelectDialogue = (dialogue) => {
+      const index = DIALOGUES.findIndex((item) => item.id === dialogue.id);
+      setSelectedDialogueIndex(index);
+    };
+
+    const handleBackToDialogueList = () => {
+      setSelectedDialogueIndex(null);
+    };
+
+    const handlePreviousDialogue = () => {
+      setSelectedDialogueIndex((prev) => {
+        if (prev === null) return 0;
+        return prev === 0 ? DIALOGUES.length - 1 : prev - 1;
+      });
+    };
+
+    const handleNextDialogue = () => {
+      setSelectedDialogueIndex((prev) => {
+        if (prev === null) return 0;
+        return (prev + 1) % DIALOGUES.length;
+      });
+    };
 
   const handleProgressChange = (nextProgress) => {
     setProgress(nextProgress);
@@ -111,10 +140,20 @@ export default function App() {
           />
         )}
 
-        {activeTab === "dialogue" && (
+        {activeTab === "dialogue" && selectedDialogueIndex === null && (
+          <DialogueList onSelectDialogue={handleSelectDialogue} />
+        )}
+
+        {activeTab === "dialogue" && selectedDialogueIndex !== null && (
           <DialoguePractice
+            dialogue={selectedDialogue}
+            dialogueIndex={selectedDialogueIndex}
+            totalDialogues={DIALOGUES.length}
             progress={progress}
             onProgressChange={handleProgressChange}
+            onBack={handleBackToDialogueList}
+            onPreviousDialogue={handlePreviousDialogue}
+            onNextDialogue={handleNextDialogue}
           />
         )}
       </main>

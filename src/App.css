@@ -422,3 +422,45 @@ button.active {
   font-size: 22px;
   margin: 4px 0;
 }
+
+.dialogue-meaning {
+  color: #64748b;
+  margin: 4px 0;
+}
+
+.dialogue-list {
+  display: grid;
+  gap: 16px;
+}
+
+.dialogue-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: .2s;
+  background: white;
+}
+
+.dialogue-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.dialogue-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dialogue-search {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background: #475569;
+}
