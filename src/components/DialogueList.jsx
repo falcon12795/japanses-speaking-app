@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DIALOGUES } from "../data/dialogues";
+import { DIALOGUES_BY_LEVEL } from "../data/dialogues";
 
 const LEVELS = ["N1", "N2", "N3", "N4", "N5"];
 
@@ -9,8 +9,10 @@ export default function DialogueList({
   const [selectedLevel, setSelectedLevel] =
     useState("N3");
 
+  const dialoguesByLevel = DIALOGUES_BY_LEVEL[selectedLevel] || [];
+
   const filteredDialogues =
-    DIALOGUES.filter(
+    dialoguesByLevel.filter(
       (dialogue) =>
         dialogue.level === selectedLevel
     );

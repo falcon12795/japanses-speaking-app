@@ -1,4 +1,4 @@
-export const DIALOGUES = [
+export const N3_DIALOGUES = [
   {
     id: 1,
     level: "N3",
