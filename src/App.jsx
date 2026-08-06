@@ -147,8 +147,6 @@ export default function App() {
         {activeTab === "dialogue" && selectedDialogueIndex !== null && (
           <DialoguePractice
             dialogue={selectedDialogue}
-            dialogueIndex={selectedDialogueIndex}
-            totalDialogues={DIALOGUES.length}
             progress={progress}
             onProgressChange={handleProgressChange}
             onBack={handleBackToDialogueList}

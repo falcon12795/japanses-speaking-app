@@ -1,11 +1,16 @@
 import { useMemo, useState } from "react";
 import { speakJapaneseText, recognizeJapaneseSpeech } from "../utils/speech";
 import { calculateSpeechScoreWithAcceptedAnswers } from "../utils/scoring";
+import {
+  Eye,
+  EyeOff,
+  Volume2,
+  Mic,
+  RotateCcw,
+} from "lucide-react";
 
 export default function DialoguePractice({
   dialogue,
-  dialogueIndex,
-  totalDialogues,
   progress,
   onProgressChange,
   onBack,
@@ -19,6 +24,7 @@ export default function DialoguePractice({
   const [activeLineId, setActiveLineId] = useState(null);
   const [lineResults, setLineResults] = useState({});
   const [status, setStatus] = useState("Ready");
+  const [showSubtitle, setShowSubtitle] = useState(false);
 
   const currentDialogue = dialogue;
   const resetPracticeState = () => {
@@ -225,38 +231,26 @@ export default function DialoguePractice({
     setStatus(`Selected role ${nextRole}.`);
   };
 
+  const toggleSubtitle = () => {
+    setShowSubtitle((prev) => !prev);
+  };
+
   return (
     <section className="panel">
       <div className="dialogue-header">
         <div>
-          <span className="level">{currentDialogue.level}</span>
-          <h2>Dialogue Practice</h2>
-          <h3>{currentDialogue.title}</h3>
-          <p className="dialogue-counter">
-            Dialogue {dialogueIndex + 1} / {totalDialogues}
-          </p>
-          <p className="subtitle">{currentDialogue.description}</p>
+          <h3 style={{ fontSize: "30px" }}>{currentDialogue.title}</h3>
         </div>
       </div>
 
       <div className="buttons">
-        <button
-          className={role === "A" ? "active" : ""}
-          onClick={() => changeRole("A")}
-        >
-          Practice as A
-        </button>
-
-        <button
-          className={role === "B" ? "active" : ""}
-          onClick={() => changeRole("B")}
-        >
-          Practice as B
-        </button>
 
         <button onClick={hideMyRoleLines}>Hide my lines</button>
 
         <button onClick={showAllLines}>Show all</button>
+        <button onClick={toggleSubtitle}>
+          {showSubtitle ? "Hide Sub" : "Show Sub"}
+        </button>
 
         <button className="danger" onClick={resetAllSpeakResults}>
           Reset All
@@ -280,9 +274,59 @@ export default function DialoguePractice({
                 line.speaker === "A" ? "speaker-a" : "speaker-b"
               } ${activeLineId === line.id ? "active-line" : ""}`}
             >
-              <div className="speaker-badge">
+            <div className="speaker-toolbar">
+              <div className="speaker-action-icons">
+                <button
+                  type="button"
+                  className="dialogue-icon-button"
+                  title="Listen"
+                  onClick={() => listenLine(line)}
+                >
+                  <Volume2 size={22} strokeWidth={2.5} />
+                </button>
+
+                <button
+                  type="button"
+                  className="dialogue-icon-button"
+                  title="Speak"
+                  onClick={() => speakLine(line)}
+                >
+                  <Mic size={22} strokeWidth={2.5} />
+                </button>
+
+                <button
+                  type="button"
+                  className="dialogue-icon-button"
+                  title={hidden ? "Show line" : "Hide line"}
+                  onClick={() => toggleLineHidden(line)}
+                >
+                  {hidden ? (
+                    <EyeOff size={22} strokeWidth={2.5} />
+                  ) : (
+                    <Eye size={22} strokeWidth={2.5} />
+                  )}
+                </button>
+
+                {lineResult && (
+                  <button
+                    type="button"
+                    className="dialogue-icon-button reset-icon-button"
+                    title="Reset this line"
+                    onClick={() => resetLineSpeakResult(line.id)}
+                  >
+                    <RotateCcw size={22} strokeWidth={2.5} />
+                  </button>
+                )}
+              </div>
+              <div
+                className={`speaker-badge ${
+                  line.speaker === role ? "speaker-selected" : ""
+                }`}
+                onClick={() => changeRole(line.speaker)}
+              >
                 Speaker {line.speaker}
               </div>
+            </div>
 
               {hidden ? (
                 <div className="hidden-dialogue-line">
@@ -291,42 +335,29 @@ export default function DialoguePractice({
               ) : (
                 <div>
                   <p className="dialogue-japanese">{line.japanese}</p>
+                  {showSubtitle && (
+                    <>
+                      {line.reading && (
+                        <p className="dialogue-reading">
+                          {line.reading}
+                        </p>
+                      )}
 
-                  {line.reading && (
-                    <p className="dialogue-reading">{line.reading}</p>
+                      {line.romaji && (
+                        <p className="dialogue-romaji">
+                          {line.romaji}
+                        </p>
+                      )}
+
+                      {(line.english || line.vietnamese) && (
+                        <p className="dialogue-meaning">
+                          {line.english} / {line.vietnamese}
+                        </p>
+                      )}
+                    </>
                   )}
-
-                  <p className="dialogue-romaji">{line.romaji}</p>
-
-                  <p className="dialogue-meaning">
-                    {line.english} / {line.vietnamese}
-                  </p>
                 </div>
               )}
-
-              <div className="buttons compact-buttons">
-                <button onClick={() => listenLine(line)}>
-                  GG Speech
-                </button>
-
-                <button onClick={() => speakLine(line)}>
-                  Speak
-                </button>
-
-                <button onClick={() => toggleLineHidden(line)}>
-                  {hidden ? "Show line" : "Hide line"}
-                </button>
-
-                {lineResult && (
-                  <button
-                    className="danger"
-                    onClick={() => resetLineSpeakResult(line.id)}
-                  >
-                    Reset
-                  </button>
-                )}
-              </div>
-
               {lineResult && (
                 <div className="line-speaking-result">
                   <p className="label">You said:</p>
