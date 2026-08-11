@@ -1,6 +1,16 @@
 import { useState } from "react";
+import {
+  NavLink,
+  Navigate,
+  Route,
+  Routes,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
+
 import "./App.css";
 
+import VocabularyList from "./components/VocabularyList";
 import VocabularyFlashcard from "./components/VocabularyFlashcard";
 import KanaLearning from "./components/KanaLearning";
 import SpeakingPractice from "./components/SpeakingPractice";
@@ -11,116 +21,44 @@ import ProgressPanel from "./components/ProgressPanel";
 
 import { loadProgress, saveProgress } from "./utils/storage";
 import { DIALOGUES } from "./data/dialogues";
-import VocabularyList from "./components/VocabularyList";
 import { VOCABULARY } from "./data/vocabulary";
 
 const MENU_ITEMS = [
   {
-    key: "vocabulary",
+    to: "/vocabulary",
     label: "Vocabulary",
     icon: "📚",
   },
   {
-    key: "kana",
+    to: "/kana",
     label: "Kana",
     icon: "あ",
   },
   {
-    key: "speaking",
+    to: "/speaking",
     label: "Speaking",
     icon: "🎤",
   },
   {
-    key: "dialogue",
+    to: "/dialogue",
     label: "Dialogue",
     icon: "💬",
   },
   {
-    key: "jlpt",
+    to: "/jlpt",
     label: "JLPT Quiz",
     icon: "📝",
   },
   {
-    key: "progress",
+    to: "/progress",
     label: "Progress",
     icon: "📈",
   },
 ];
 
-export default function App() {
-  const [activeTab, setActiveTab] = useState("dialogue");
-  const [progress, setProgress] = useState(() => loadProgress());
-  const [selectedDialogueIndex, setSelectedDialogueIndex] = useState(null);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [selectedVocabulary, setSelectedVocabulary] = useState(null);
-
-  const selectedDialogue =
-    selectedDialogueIndex === null ? null : DIALOGUES[selectedDialogueIndex];
-
-  const handleSelectVocabularyTopic = (
-    level,
-    topic
-  ) => {
-    setSelectedVocabulary({
-      level,
-      topic,
-    });
-  };
-
-  const handleBackToVocabularyList = () => {
-    setSelectedVocabulary(null);
-  };
-
-  const handleProgressChange = (nextProgress) => {
-    setProgress(nextProgress);
-    saveProgress(nextProgress);
-  };
-
-  const handleChangeTab = (tabName) => {
-    setActiveTab(tabName);
-    setSidebarOpen(false);
-
-    if (tabName !== "dialogue") {
-      setSelectedDialogueIndex(null);
-    }
-
-    if (tabName !== "vocabulary") {
-      setSelectedVocabulary(null);
-    }
-  };
-
-  const handleSelectDialogue = (dialogue) => {
-    const index = DIALOGUES.findIndex((item) => item.id === dialogue.id);
-
-    if (index === -1) {
-      console.error("Dialogue not found:", dialogue);
-      return;
-    }
-
-    setSelectedDialogueIndex(index);
-  };
-
-  const handleBackToDialogueList = () => {
-    setSelectedDialogueIndex(null);
-  };
-
-  const handlePreviousDialogue = () => {
-    setSelectedDialogueIndex((prev) => {
-      if (prev === null) return 0;
-      return prev === 0 ? DIALOGUES.length - 1 : prev - 1;
-    });
-  };
-
-  const handleNextDialogue = () => {
-    setSelectedDialogueIndex((prev) => {
-      if (prev === null) return 0;
-      return (prev + 1) % DIALOGUES.length;
-    });
-  };
-
-
+function Sidebar({ sidebarOpen, setSidebarOpen }) {
   return (
-    <div className="app-shell">
+    <>
       <aside className={`sidebar ${sidebarOpen ? "sidebar-open" : ""}`}>
         <div className="sidebar-brand">
           <div className="brand-logo">日</div>
@@ -133,18 +71,19 @@ export default function App() {
 
         <nav className="sidebar-menu">
           {MENU_ITEMS.map((item) => (
-            <button
-              key={item.key}
-              className={
-                activeTab === item.key
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
                   ? "sidebar-menu-item active"
                   : "sidebar-menu-item"
               }
-              onClick={() => handleChangeTab(item.key)}
+              onClick={() => setSidebarOpen(false)}
             >
               <span className="menu-icon">{item.icon}</span>
               <span>{item.label}</span>
-            </button>
+            </NavLink>
           ))}
         </nav>
 
@@ -160,102 +99,319 @@ export default function App() {
           aria-label="Close sidebar"
         />
       )}
+    </>
+  );
+}
+
+function PageHeader({ title, setSidebarOpen }) {
+  return (
+    <header className="topbar">
+      <button
+        className="mobile-menu-button"
+        onClick={() => setSidebarOpen(true)}
+      >
+        ☰
+      </button>
+
+      <div>
+        <p className="topbar-badge">日本語 Learning App</p>
+        <h2>{title}</h2>
+      </div>
+    </header>
+  );
+}
+
+function VocabularyListPage({ progress }) {
+  const navigate = useNavigate();
+
+  const handleSelectTopic = (level, topic) => {
+    navigate(`/vocabulary/${encodeURIComponent(level)}/${encodeURIComponent(topic)}`);
+  };
+
+  return (
+    <VocabularyList
+      progress={progress}
+      onSelectTopic={handleSelectTopic}
+    />
+  );
+}
+
+function VocabularyFlashcardPage({ progress, onProgressChange }) {
+  const navigate = useNavigate();
+  const { level, topic } = useParams();
+
+  const decodedLevel = decodeURIComponent(level || "");
+  const decodedTopic = decodeURIComponent(topic || "");
+
+  const filteredVocabulary = VOCABULARY.filter((item) => {
+    const itemTopic = item.topic || item.type || "General";
+
+    return item.level === decodedLevel && itemTopic === decodedTopic;
+  });
+
+  return (
+    <VocabularyFlashcard
+      progress={progress}
+      onProgressChange={onProgressChange}
+      level={decodedLevel}
+      topic={decodedTopic}
+      vocabulary={filteredVocabulary}
+      onBack={() => navigate("/vocabulary")}
+    />
+  );
+}
+
+function DialogueListPage({ progress }) {
+  const navigate = useNavigate();
+
+  const handleSelectDialogue = (dialogue) => {
+    navigate(`/dialogue/${encodeURIComponent(dialogue.id)}`);
+  };
+
+  return (
+    <DialogueList
+      progress={progress}
+      onSelectDialogue={handleSelectDialogue}
+    />
+  );
+}
+
+function DialoguePracticePage({ progress, onProgressChange }) {
+  const navigate = useNavigate();
+  const { dialogueId } = useParams();
+
+  const decodedDialogueId = decodeURIComponent(dialogueId || "");
+
+  const dialogueIndex = DIALOGUES.findIndex(
+    (item) => String(item.id) === String(decodedDialogueId)
+  );
+
+  const selectedDialogue =
+    dialogueIndex === -1 ? null : DIALOGUES[dialogueIndex];
+
+  const handlePreviousDialogue = () => {
+    if (DIALOGUES.length === 0) return;
+
+    const previousIndex =
+      dialogueIndex <= 0 ? DIALOGUES.length - 1 : dialogueIndex - 1;
+
+    navigate(`/dialogue/${encodeURIComponent(DIALOGUES[previousIndex].id)}`);
+  };
+
+  const handleNextDialogue = () => {
+    if (DIALOGUES.length === 0) return;
+
+    const nextIndex = (dialogueIndex + 1) % DIALOGUES.length;
+
+    navigate(`/dialogue/${encodeURIComponent(DIALOGUES[nextIndex].id)}`);
+  };
+
+  if (!selectedDialogue) {
+    return (
+      <section className="panel">
+        <h2>Dialogue not found</h2>
+
+        <p className="subtitle">
+          The selected dialogue does not exist.
+        </p>
+
+        <div className="buttons">
+          <button onClick={() => navigate("/dialogue")}>
+            ← Back to Dialogue List
+          </button>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <DialoguePractice
+      dialogue={selectedDialogue}
+      dialogueIndex={dialogueIndex}
+      totalDialogues={DIALOGUES.length}
+      progress={progress}
+      onProgressChange={onProgressChange}
+      onBack={() => navigate("/dialogue")}
+      onPreviousDialogue={handlePreviousDialogue}
+      onNextDialogue={handleNextDialogue}
+    />
+  );
+}
+
+export default function App() {
+  const [progress, setProgress] = useState(() => loadProgress());
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleProgressChange = (nextProgress) => {
+    setProgress(nextProgress);
+    saveProgress(nextProgress);
+  };
+
+  return (
+    <div className="app-shell">
+      <Sidebar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+      />
 
       <main className="main-content">
-        <header className="topbar">
-          <button
-            className="mobile-menu-button"
-            onClick={() => setSidebarOpen(true)}
-          >
-            ☰
-          </button>
+        <Routes>
+          <Route
+            path="/"
+            element={<Navigate to="/vocabulary" replace />}
+          />
 
-        </header>
+          <Route
+            path="/vocabulary"
+            element={
+              <>
+                <PageHeader
+                  title="Vocabulary"
+                  setSidebarOpen={setSidebarOpen}
+                />
 
-        <section className="content-area">
-          {activeTab === "vocabulary" && selectedVocabulary === null && (
-            <VocabularyList
-              progress={progress}
-              onSelectTopic={handleSelectVocabularyTopic}
-            />
-          )}
+                <section className="content-area">
+                  <VocabularyListPage progress={progress} />
+                </section>
+              </>
+            }
+          />
 
-          {activeTab === "vocabulary" &&
-            selectedVocabulary !== null && (
-              <VocabularyFlashcard
-                progress={progress}
-                onProgressChange={
-                  handleProgressChange
-                }
-                level={
-                  selectedVocabulary.level
-                }
-                topic={
-                  selectedVocabulary.topic
-                }
-                vocabulary={VOCABULARY.filter(
-                  (item) =>
-                    item.level ===
-                      selectedVocabulary.level &&
-                    item.type ===
-                      selectedVocabulary.topic
-                )}
-                onBack={
-                  handleBackToVocabularyList
-                }
-              />
-          )}
+          <Route
+            path="/vocabulary/:level/:topic"
+            element={
+              <>
+                <PageHeader
+                  title="Vocabulary"
+                  setSidebarOpen={setSidebarOpen}
+                />
 
-          {activeTab === "kana" && (
-            <KanaLearning
-              progress={progress}
-              onProgressChange={handleProgressChange}
-            />
-          )}
+                <section className="content-area">
+                  <VocabularyFlashcardPage
+                    progress={progress}
+                    onProgressChange={handleProgressChange}
+                  />
+                </section>
+              </>
+            }
+          />
 
-          {activeTab === "speaking" && (
-            <SpeakingPractice
-              progress={progress}
-              onProgressChange={handleProgressChange}
-            />
-          )}
+          <Route
+            path="/kana"
+            element={
+              <>
+                <PageHeader
+                  title="Kana Learning"
+                  setSidebarOpen={setSidebarOpen}
+                />
 
-          {activeTab === "dialogue" && selectedDialogueIndex === null && (
-            <DialogueList
-              progress={progress}
-              onSelectDialogue={handleSelectDialogue}
-            />
-          )}
+                <section className="content-area">
+                  <KanaLearning
+                    progress={progress}
+                    onProgressChange={handleProgressChange}
+                  />
+                </section>
+              </>
+            }
+          />
 
-          {activeTab === "dialogue" &&
-            selectedDialogueIndex !== null &&
-            selectedDialogue && (
-              <DialoguePractice
-                dialogue={selectedDialogue}
-                dialogueIndex={selectedDialogueIndex}
-                totalDialogues={DIALOGUES.length}
-                progress={progress}
-                onProgressChange={handleProgressChange}
-                onBack={handleBackToDialogueList}
-                onPreviousDialogue={handlePreviousDialogue}
-                onNextDialogue={handleNextDialogue}
-              />
-            )}
+          <Route
+            path="/speaking"
+            element={
+              <>
+                <PageHeader
+                  title="Speaking Practice"
+                  setSidebarOpen={setSidebarOpen}
+                />
 
-          {activeTab === "jlpt" && (
-            <JLPTQuiz
-              progress={progress}
-              onProgressChange={handleProgressChange}
-            />
-          )}
+                <section className="content-area">
+                  <SpeakingPractice
+                    progress={progress}
+                    onProgressChange={handleProgressChange}
+                  />
+                </section>
+              </>
+            }
+          />
 
-          {activeTab === "progress" && (
-            <ProgressPanel
-              progress={progress}
-              onProgressChange={handleProgressChange}
-            />
-          )}
-        </section>
+          <Route
+            path="/dialogue"
+            element={
+              <>
+                <PageHeader
+                  title="Dialogue"
+                  setSidebarOpen={setSidebarOpen}
+                />
+
+                <section className="content-area">
+                  <DialogueListPage progress={progress} />
+                </section>
+              </>
+            }
+          />
+
+          <Route
+            path="/dialogue/:dialogueId"
+            element={
+              <>
+                <PageHeader
+                  title="Dialogue Practice"
+                  setSidebarOpen={setSidebarOpen}
+                />
+
+                <section className="content-area">
+                  <DialoguePracticePage
+                    progress={progress}
+                    onProgressChange={handleProgressChange}
+                  />
+                </section>
+              </>
+            }
+          />
+
+          <Route
+            path="/jlpt"
+            element={
+              <>
+                <PageHeader
+                  title="JLPT Quiz"
+                  setSidebarOpen={setSidebarOpen}
+                />
+
+                <section className="content-area">
+                  <JLPTQuiz
+                    progress={progress}
+                    onProgressChange={handleProgressChange}
+                  />
+                </section>
+              </>
+            }
+          />
+
+          <Route
+            path="/progress"
+            element={
+              <>
+                <PageHeader
+                  title="Progress"
+                  setSidebarOpen={setSidebarOpen}
+                />
+
+                <section className="content-area">
+                  <ProgressPanel
+                    progress={progress}
+                    onProgressChange={handleProgressChange}
+                  />
+                </section>
+              </>
+            }
+          />
+
+          <Route
+            path="*"
+            element={<Navigate to="/vocabulary" replace />}
+          />
+        </Routes>
       </main>
     </div>
   );
