@@ -11,6 +11,8 @@ import ProgressPanel from "./components/ProgressPanel";
 
 import { loadProgress, saveProgress } from "./utils/storage";
 import { DIALOGUES } from "./data/dialogues";
+import VocabularyList from "./components/VocabularyList";
+import { VOCABULARY } from "./data/vocabulary";
 
 const MENU_ITEMS = [
   {
@@ -50,9 +52,24 @@ export default function App() {
   const [progress, setProgress] = useState(() => loadProgress());
   const [selectedDialogueIndex, setSelectedDialogueIndex] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [selectedVocabulary, setSelectedVocabulary] = useState(null);
 
   const selectedDialogue =
     selectedDialogueIndex === null ? null : DIALOGUES[selectedDialogueIndex];
+
+  const handleSelectVocabularyTopic = (
+    level,
+    topic
+  ) => {
+    setSelectedVocabulary({
+      level,
+      topic,
+    });
+  };
+
+  const handleBackToVocabularyList = () => {
+    setSelectedVocabulary(null);
+  };
 
   const handleProgressChange = (nextProgress) => {
     setProgress(nextProgress);
@@ -65,6 +82,10 @@ export default function App() {
 
     if (tabName !== "dialogue") {
       setSelectedDialogueIndex(null);
+    }
+
+    if (tabName !== "vocabulary") {
+      setSelectedVocabulary(null);
     }
   };
 
@@ -97,15 +118,6 @@ export default function App() {
     });
   };
 
-  // const getPageTitle = () => {
-  //   if (activeTab === "vocabulary") return "Vocabulary";
-  //   if (activeTab === "kana") return "Kana Learning";
-  //   if (activeTab === "speaking") return "Speaking Practice";
-  //   if (activeTab === "dialogue") return "Dialogue";
-  //   if (activeTab === "jlpt") return "JLPT Quiz";
-  //   if (activeTab === "progress") return "Progress";
-  //   return "Japanese Learning App";
-  // };
 
   return (
     <div className="app-shell">
@@ -161,11 +173,37 @@ export default function App() {
         </header>
 
         <section className="content-area">
-          {activeTab === "vocabulary" && (
-            <VocabularyFlashcard
+          {activeTab === "vocabulary" && selectedVocabulary === null && (
+            <VocabularyList
               progress={progress}
-              onProgressChange={handleProgressChange}
+              onSelectTopic={handleSelectVocabularyTopic}
             />
+          )}
+
+          {activeTab === "vocabulary" &&
+            selectedVocabulary !== null && (
+              <VocabularyFlashcard
+                progress={progress}
+                onProgressChange={
+                  handleProgressChange
+                }
+                level={
+                  selectedVocabulary.level
+                }
+                topic={
+                  selectedVocabulary.topic
+                }
+                vocabulary={VOCABULARY.filter(
+                  (item) =>
+                    item.level ===
+                      selectedVocabulary.level &&
+                    item.type ===
+                      selectedVocabulary.topic
+                )}
+                onBack={
+                  handleBackToVocabularyList
+                }
+              />
           )}
 
           {activeTab === "kana" && (

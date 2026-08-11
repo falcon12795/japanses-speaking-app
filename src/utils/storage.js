@@ -5,10 +5,21 @@ export const DEFAULT_PROGRESS = {
   vocabularyNeedReview: 0,
   vocabularySpeakPractice: 0,
   vocabularyExampleSpeakPractice: 0,
+
+  completedVocabulary: [],
+  favoriteVocabulary: [],
+  reviewVocabulary: [],
+
   kanaCorrect: 0,
   kanaWrong: 0,
+
   speakingPractice: 0,
   dialoguePractice: 0,
+
+  completedDialogues: [],
+  favoriteDialogues: [],
+  dialogueScores: {},
+
   jlptCorrect: 0,
   jlptWrong: 0,
 };
@@ -16,7 +27,15 @@ export const DEFAULT_PROGRESS = {
 export function loadProgress() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : DEFAULT_PROGRESS;
+
+    if (!saved) {
+      return DEFAULT_PROGRESS;
+    }
+
+    return {
+      ...DEFAULT_PROGRESS,
+      ...JSON.parse(saved),
+    };
   } catch {
     return DEFAULT_PROGRESS;
   }
