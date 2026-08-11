@@ -12,6 +12,7 @@ const STATUS_FILTERS = [
 
 function sortJlptLevels(levels) {
   const order = {
+    IT: 0,
     N1: 1,
     N2: 2,
     N3: 3,

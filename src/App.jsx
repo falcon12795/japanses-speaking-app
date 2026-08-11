@@ -104,7 +104,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
   );
 }
 
-function PageHeader({ title, setSidebarOpen }) {
+function PageHeader({setSidebarOpen }) {
   return (
     <header className="topbar">
       <button
@@ -113,11 +113,6 @@ function PageHeader({ title, setSidebarOpen }) {
       >
         ☰
       </button>
-
-      <div>
-        <p className="topbar-badge">日本語 Learning App</p>
-        <h2>{title}</h2>
-      </div>
     </header>
   );
 }
@@ -311,7 +306,6 @@ export default function App() {
             element={
               <>
                 <PageHeader
-                  title="Vocabulary"
                   setSidebarOpen={setSidebarOpen}
                 />
 
@@ -327,7 +321,6 @@ export default function App() {
             element={
               <>
                 <PageHeader
-                  title="Vocabulary"
                   setSidebarOpen={setSidebarOpen}
                 />
 
@@ -346,7 +339,6 @@ export default function App() {
             element={
               <>
                 <PageHeader
-                  title="Kana Learning"
                   setSidebarOpen={setSidebarOpen}
                 />
 
@@ -365,7 +357,6 @@ export default function App() {
             element={
               <>
                 <PageHeader
-                  title="Speaking Practice"
                   setSidebarOpen={setSidebarOpen}
                 />
 
@@ -384,7 +375,6 @@ export default function App() {
             element={
               <>
                 <PageHeader
-                  title="Dialogue"
                   setSidebarOpen={setSidebarOpen}
                 />
 
@@ -400,7 +390,6 @@ export default function App() {
             element={
               <>
                 <PageHeader
-                  title="Dialogue Practice"
                   setSidebarOpen={setSidebarOpen}
                 />
 
@@ -419,7 +408,6 @@ export default function App() {
             element={
               <>
                 <PageHeader
-                  title="JLPT Quiz"
                   setSidebarOpen={setSidebarOpen}
                 />
 
@@ -438,7 +426,6 @@ export default function App() {
             element={
               <>
                 <PageHeader
-                  title="Progress"
                   setSidebarOpen={setSidebarOpen}
                 />
 
