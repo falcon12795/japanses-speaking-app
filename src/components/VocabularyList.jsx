@@ -1,7 +1,6 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
+import { useSearchParams } from "react-router-dom";
 import { VOCABULARY } from "../data/vocabulary";
-
-const LEVELS = ["N1", "N2", "N3", "N4", "N5"];
 
 const STATUS_FILTERS = [
   { value: "all", label: "All" },
@@ -11,6 +10,32 @@ const STATUS_FILTERS = [
   { value: "favorite", label: "Favorite" },
   { value: "review", label: "Review" },
 ];
+
+function sortJlptLevels(levels) {
+  const order = {
+    N1: 1,
+    N2: 2,
+    N3: 3,
+    N4: 4,
+    N5: 5,
+  };
+
+  return [...levels].sort((a, b) => {
+    return (order[a] || 999) - (order[b] || 999);
+  });
+}
+
+function getAvailableLevels() {
+  const levels = new Set();
+
+  VOCABULARY.forEach((item) => {
+    if (item.level) {
+      levels.add(item.level);
+    }
+  });
+
+  return sortJlptLevels([...levels]);
+}
 
 function getTopicStatus(topicInfo) {
   if (topicInfo.favoriteCount > 0) {
@@ -41,12 +66,32 @@ function getTopicStatusIcon(status) {
 }
 
 export default function VocabularyList({ progress = {}, onSelectTopic }) {
-  const [selectedLevel, setSelectedLevel] = useState("N5");
-  const [statusFilter, setStatusFilter] = useState("all");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const availableLevels = useMemo(() => getAvailableLevels(), []);
+
+  const defaultLevel = availableLevels[0] || "N5";
+
+  const selectedLevel = searchParams.get("level") || defaultLevel;
+  const statusFilter = searchParams.get("status") || "all";
 
   const completedVocabulary = progress.completedVocabulary || [];
   const favoriteVocabulary = progress.favoriteVocabulary || [];
   const reviewVocabulary = progress.reviewVocabulary || [];
+
+  const setLevel = (level) => {
+    setSearchParams({
+      level,
+      status: "all",
+    });
+  };
+
+  const setStatus = (status) => {
+    setSearchParams({
+      level: selectedLevel,
+      status,
+    });
+  };
 
   const topics = useMemo(() => {
     const vocabularyByLevel = VOCABULARY.filter(
@@ -126,7 +171,7 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
       </div>
 
       <div className="jlpt-filter">
-        {LEVELS.map((level) => (
+        {availableLevels.map((level) => (
           <button
             key={level}
             className={
@@ -134,10 +179,7 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
                 ? "level-filter-button active"
                 : "level-filter-button"
             }
-            onClick={() => {
-              setSelectedLevel(level);
-              setStatusFilter("all");
-            }}
+            onClick={() => setLevel(level)}
           >
             {level}
           </button>
@@ -153,7 +195,7 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
                 ? "status-button active"
                 : "status-button"
             }
-            onClick={() => setStatusFilter(filter.value)}
+            onClick={() => setStatus(filter.value)}
           >
             {filter.label}
           </button>

@@ -4,6 +4,7 @@ import {
   Navigate,
   Route,
   Routes,
+  useLocation,
   useNavigate,
   useParams,
 } from "react-router-dom";
@@ -121,23 +122,10 @@ function PageHeader({ title, setSidebarOpen }) {
   );
 }
 
-function VocabularyListPage({ progress }) {
-  const navigate = useNavigate();
-
-  const handleSelectTopic = (level, topic) => {
-    navigate(`/vocabulary/${encodeURIComponent(level)}/${encodeURIComponent(topic)}`);
-  };
-
-  return (
-    <VocabularyList
-      progress={progress}
-      onSelectTopic={handleSelectTopic}
-    />
-  );
-}
 
 function VocabularyFlashcardPage({ progress, onProgressChange }) {
   const navigate = useNavigate();
+  const location = useLocation();
   const { level, topic } = useParams();
 
   const decodedLevel = decodeURIComponent(level || "");
@@ -149,6 +137,16 @@ function VocabularyFlashcardPage({ progress, onProgressChange }) {
     return item.level === decodedLevel && itemTopic === decodedTopic;
   });
 
+  const backToVocabularyList = () => {
+    const fallback = `/vocabulary?level=${encodeURIComponent(
+      decodedLevel
+    )}&status=all`;
+
+    const from = location.state?.from || fallback;
+
+    navigate(from);
+  };
+
   return (
     <VocabularyFlashcard
       progress={progress}
@@ -156,16 +154,21 @@ function VocabularyFlashcardPage({ progress, onProgressChange }) {
       level={decodedLevel}
       topic={decodedTopic}
       vocabulary={filteredVocabulary}
-      onBack={() => navigate("/vocabulary")}
+      onBack={backToVocabularyList}
     />
   );
 }
 
 function DialogueListPage({ progress }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSelectDialogue = (dialogue) => {
-    navigate(`/dialogue/${encodeURIComponent(dialogue.id)}`);
+    navigate(`/dialogue/${encodeURIComponent(dialogue.id)}`, {
+      state: {
+        from: `${location.pathname}${location.search}`,
+      },
+    });
   };
 
   return (
@@ -176,8 +179,32 @@ function DialogueListPage({ progress }) {
   );
 }
 
+function VocabularyListWithRouteState({ progress }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleSelectTopic = (level, topic) => {
+    navigate(
+      `/vocabulary/${encodeURIComponent(level)}/${encodeURIComponent(topic)}`,
+      {
+        state: {
+          from: `${location.pathname}${location.search}`,
+        },
+      }
+    );
+  };
+
+  return (
+    <VocabularyList
+      progress={progress}
+      onSelectTopic={handleSelectTopic}
+    />
+  );
+}
+
 function DialoguePracticePage({ progress, onProgressChange }) {
   const navigate = useNavigate();
+  const location = useLocation();
   const { dialogueId } = useParams();
 
   const decodedDialogueId = decodeURIComponent(dialogueId || "");
@@ -189,13 +216,27 @@ function DialoguePracticePage({ progress, onProgressChange }) {
   const selectedDialogue =
     dialogueIndex === -1 ? null : DIALOGUES[dialogueIndex];
 
+  const backToDialogueList = () => {
+    const fallback = selectedDialogue?.level
+      ? `/dialogue?level=${encodeURIComponent(selectedDialogue.level)}&status=all`
+      : "/dialogue";
+
+    const from = location.state?.from || fallback;
+
+    navigate(from);
+  };
+
   const handlePreviousDialogue = () => {
     if (DIALOGUES.length === 0) return;
 
     const previousIndex =
       dialogueIndex <= 0 ? DIALOGUES.length - 1 : dialogueIndex - 1;
 
-    navigate(`/dialogue/${encodeURIComponent(DIALOGUES[previousIndex].id)}`);
+    navigate(`/dialogue/${encodeURIComponent(DIALOGUES[previousIndex].id)}`, {
+      state: {
+        from: location.state?.from || "/dialogue",
+      },
+    });
   };
 
   const handleNextDialogue = () => {
@@ -203,7 +244,11 @@ function DialoguePracticePage({ progress, onProgressChange }) {
 
     const nextIndex = (dialogueIndex + 1) % DIALOGUES.length;
 
-    navigate(`/dialogue/${encodeURIComponent(DIALOGUES[nextIndex].id)}`);
+    navigate(`/dialogue/${encodeURIComponent(DIALOGUES[nextIndex].id)}`, {
+      state: {
+        from: location.state?.from || "/dialogue",
+      },
+    });
   };
 
   if (!selectedDialogue) {
@@ -231,7 +276,7 @@ function DialoguePracticePage({ progress, onProgressChange }) {
       totalDialogues={DIALOGUES.length}
       progress={progress}
       onProgressChange={onProgressChange}
-      onBack={() => navigate("/dialogue")}
+      onBack={backToDialogueList}
       onPreviousDialogue={handlePreviousDialogue}
       onNextDialogue={handleNextDialogue}
     />
@@ -271,7 +316,7 @@ export default function App() {
                 />
 
                 <section className="content-area">
-                  <VocabularyListPage progress={progress} />
+                  <VocabularyListWithRouteState progress={progress} />
                 </section>
               </>
             }

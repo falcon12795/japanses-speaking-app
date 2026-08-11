@@ -9,14 +9,14 @@ body {
   color: #0f172a;
 }
 
-/* =========================
-   APP SHELL
-========================= */
-
 .app-shell {
   min-height: 100vh;
   display: flex;
 }
+
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar {
   width: 280px;
@@ -78,6 +78,7 @@ body {
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .sidebar-menu-item:hover {
@@ -101,6 +102,10 @@ body {
   background: rgba(255, 255, 255, 0.08);
   color: #cbd5e1;
 }
+
+/* =========================
+   LAYOUT
+========================= */
 
 .main-content {
   flex: 1;
@@ -132,10 +137,6 @@ body {
   width: 100%;
 }
 
-/* =========================
-   COMMON PANEL
-========================= */
-
 .panel,
 .card {
   width: 100%;
@@ -150,6 +151,10 @@ body {
   color: #64748b;
 }
 
+/* =========================
+   COMMON
+========================= */
+
 .level,
 .type {
   display: inline-block;
@@ -160,10 +165,6 @@ body {
   background: #dbeafe;
   color: #1e40af;
 }
-
-/* =========================
-   BUTTON
-========================= */
 
 button {
   border: none;
@@ -194,8 +195,243 @@ button.danger {
   margin: 16px 0;
 }
 
+.back-button {
+  background: #0f172a;
+}
+
 /* =========================
-   DIALOGUE
+   FILTERS
+========================= */
+
+.jlpt-filter,
+.status-filter {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.level-filter-button,
+.status-button {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.level-filter-button.active {
+  background: #2563eb;
+  color: white;
+}
+
+.status-button.active {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* =========================
+   VOCABULARY LIST
+========================= */
+
+.vocabulary-list-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.vocabulary-topic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vocabulary-topic-card {
+  width: 100%;
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.vocabulary-topic-card:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.vocabulary-topic-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.vocabulary-topic-name {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.vocabulary-topic-count {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.vocabulary-topic-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #64748b;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.topic-progress-bar {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.topic-progress-fill {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.25s ease;
+}
+
+/* =========================
+   VOCABULARY FLASHCARD
+========================= */
+
+.flashcard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card-top {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.japanese {
+  font-size: 72px;
+  margin: 16px 0 8px;
+}
+
+.reading {
+  font-size: 28px;
+  color: #64748b;
+  margin: 0 0 20px;
+}
+
+.answer {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 16px;
+  margin: 16px 0;
+}
+
+.vocabulary-answer {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+.hidden-answer {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.example-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.empty-example-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 160px;
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.example-japanese {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.example-romaji {
+  color: #475569;
+  margin: 4px 0;
+}
+
+.example-meaning {
+  color: #64748b;
+  margin: 4px 0 12px;
+}
+
+.speaking-check-box {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.compact-buttons button {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+/* =========================
+   DIALOGUE LIST
+========================= */
+
+.dialogue-simple-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dialogue-simple-card {
+  width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  background: white;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: left;
+}
+
+.dialogue-simple-card:hover {
+  transform: translateY(-2px);
+  background: #f8fafc;
+}
+
+.dialogue-status-icon {
+  margin-right: 12px;
+}
+
+/* =========================
+   DIALOGUE PRACTICE
 ========================= */
 
 .dialogue-header {
@@ -233,10 +469,6 @@ button.danger {
 .dialogue-line.speaker-b {
   border-left: 8px solid #e11d48;
 }
-
-/* =========================
-   Speaker Toolbar
-========================= */
 
 .speaker-toolbar {
   display: flex;
@@ -289,10 +521,6 @@ button.danger {
   color: white;
 }
 
-/* =========================
-   DIALOGUE TEXT
-========================= */
-
 .dialogue-japanese {
   text-align: center;
   font-size: 36px;
@@ -326,7 +554,6 @@ button.danger {
     #e2e8f0 12px,
     #e2e8f0 24px
   );
-
   padding: 28px;
   border-radius: 18px;
   text-align: center;
@@ -336,7 +563,7 @@ button.danger {
 }
 
 /* =========================
-   SPEAK RESULT
+   RESULT / SCORE
 ========================= */
 
 .line-speaking-result {
@@ -386,49 +613,30 @@ button.danger {
   font-weight: 700;
 }
 
+.empty-dialogues {
+  text-align: center;
+  color: #64748b;
+  padding: 30px;
+}
+
 /* =========================
-   DIALOGUE LIST
+   KANA / SPEAKING / QUIZ
 ========================= */
 
-.jlpt-filter,
-.status-filter {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+.kana {
+  font-size: 96px;
+  margin: 24px 0;
+  text-align: center;
 }
 
-.level-filter-button {
-  background: white;
-  color: #0f172a;
-  border: 1px solid #cbd5e1;
+.speaking-target {
+  font-size: 48px;
+  margin: 12px 0;
 }
 
-.level-filter-button.active {
-  background: #2563eb;
-  color: white;
-}
-
-.dialogue-simple-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.dialogue-simple-card {
-  padding: 20px;
-  border-radius: 16px;
-  background: white;
-  border: 1px solid #e2e8f0;
-  font-size: 24px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.dialogue-simple-card:hover {
-  transform: translateY(-2px);
-  background: #f8fafc;
+.result {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* =========================
@@ -486,215 +694,34 @@ button.danger {
   .dialogue-japanese {
     font-size: 28px;
   }
-}
 
-.topic-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .japanese {
+    font-size: 52px;
+  }
 
-.topic-count {
-  background: #2563eb;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 14px;
-}
+  .kana {
+    font-size: 72px;
+  }
 
-.flashcard-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
+  .speaking-target {
+    font-size: 36px;
+  }
 
-.vocabulary-list-header {
-  text-align: center;
-  margin-bottom: 24px;
-}
+  .vocabulary-answer {
+    grid-template-columns: 1fr;
+  }
 
-.vocabulary-topic-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
+  .example-japanese {
+    font-size: 24px;
+  }
 
-.vocabulary-topic-card {
-  width: 100%;
-  background: #ffffff;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  padding: 20px;
-  cursor: pointer;
-  text-align: left;
-  transition: 0.2s ease;
-}
+  .speaker-toolbar {
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
 
-.vocabulary-topic-card:hover {
-  background: #f8fafc;
-  transform: translateY(-2px);
-}
-
-.vocabulary-topic-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.vocabulary-topic-name {
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.vocabulary-topic-count {
-  background: #dbeafe;
-  color: #1e40af;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.vocabulary-topic-meta {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  color: #64748b;
-  margin-top: 12px;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.topic-progress-bar {
-  height: 12px;
-  background: #e2e8f0;
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 14px;
-}
-
-.topic-progress-fill {
-  height: 100%;
-  background: #2563eb;
-  transition: width 0.25s ease;
-}
-
-.empty-example-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 160px;
-  background: #f8fafc;
-  color: #64748b;
-}
-
-.status-filter {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.status-button {
-  background: #ffffff;
-  color: #0f172a;
-  border: 1px solid #cbd5e1;
-}
-
-.status-button.active {
-  background: #0f172a;
-  color: #ffffff;
-}
-
-.vocabulary-list-header {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.vocabulary-topic-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.vocabulary-topic-card {
-  width: 100%;
-  background: #ffffff;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  padding: 20px;
-  cursor: pointer;
-  text-align: left;
-  transition: 0.2s ease;
-}
-
-.vocabulary-topic-card:hover {
-  background: #f8fafc;
-  transform: translateY(-2px);
-}
-
-.vocabulary-topic-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.vocabulary-topic-name {
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.vocabulary-topic-count {
-  background: #dbeafe;
-  color: #1e40af;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.vocabulary-topic-meta {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  color: #64748b;
-  margin-top: 12px;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.topic-progress-bar {
-  height: 12px;
-  background: #e2e8f0;
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 14px;
-}
-
-.topic-progress-fill {
-  height: 100%;
-  background: #2563eb;
-  transition: width 0.25s ease;
-}
-
-.empty-example-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 160px;
-  background: #f8fafc;
-  color: #64748b;
-}
-
-.flashcard-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 20px;
+  .speaker-action-icons {
+    flex-wrap: wrap;
+  }
 }

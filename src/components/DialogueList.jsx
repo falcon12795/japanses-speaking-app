@@ -1,28 +1,112 @@
-import { useState } from "react";
+import { useMemo } from "react";
+import { useSearchParams } from "react-router-dom";
 import { DIALOGUES_BY_LEVEL } from "../data/dialogues";
 
-const LEVELS = ["N1", "N2", "N3", "N4", "N5"];
+const STATUS_FILTERS = [
+  { value: "all", label: "All" },
+  { value: "not-started", label: "Not Started" },
+  { value: "learning", label: "Learning" },
+  { value: "completed", label: "Completed" },
+  { value: "favorite", label: "Favorite" },
+];
 
-export default function DialogueList({
-  onSelectDialogue,
-}) {
-  const [selectedLevel, setSelectedLevel] =
-    useState("N3");
+function sortJlptLevels(levels) {
+  const order = {
+    N1: 1,
+    N2: 2,
+    N3: 3,
+    N4: 4,
+    N5: 5,
+  };
+
+  return [...levels].sort((a, b) => {
+    return (order[a] || 999) - (order[b] || 999);
+  });
+}
+
+function getAvailableDialogueLevels() {
+  return sortJlptLevels(
+    Object.entries(DIALOGUES_BY_LEVEL)
+      .filter(([, dialogues]) => Array.isArray(dialogues) && dialogues.length > 0)
+      .map(([level]) => level)
+  );
+}
+
+function getDialogueStatus(dialogueId, progress = {}) {
+  const favoriteDialogues = progress.favoriteDialogues || [];
+  const completedDialogues = progress.completedDialogues || [];
+  const dialogueScores = progress.dialogueScores || {};
+
+  if (favoriteDialogues.includes(dialogueId)) {
+    return "favorite";
+  }
+
+  if (completedDialogues.includes(dialogueId)) {
+    return "completed";
+  }
+
+  if ((dialogueScores[dialogueId] || 0) > 0) {
+    return "learning";
+  }
+
+  return "not-started";
+}
+
+function getDialogueStatusIcon(status) {
+  if (status === "completed") return "✅";
+  if (status === "favorite") return "⭐";
+  if (status === "learning") return "📖";
+  return "⭕";
+}
+
+export default function DialogueList({ progress = {}, onSelectDialogue }) {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const availableLevels = useMemo(() => getAvailableDialogueLevels(), []);
+
+  const defaultLevel = availableLevels[0] || "N3";
+
+  const selectedLevel = searchParams.get("level") || defaultLevel;
+  const statusFilter = searchParams.get("status") || "all";
+
+  const setLevel = (level) => {
+    setSearchParams({
+      level,
+      status: "all",
+    });
+  };
+
+  const setStatus = (status) => {
+    setSearchParams({
+      level: selectedLevel,
+      status,
+    });
+  };
 
   const dialoguesByLevel = DIALOGUES_BY_LEVEL[selectedLevel] || [];
 
-  const filteredDialogues =
-    dialoguesByLevel.filter(
-      (dialogue) =>
-        dialogue.level === selectedLevel
-    );
+  const filteredDialogues = dialoguesByLevel.filter((dialogue) => {
+    const status = getDialogueStatus(dialogue.id, progress);
+
+    if (statusFilter === "all") {
+      return true;
+    }
+
+    return status === statusFilter;
+  });
 
   return (
     <section className="panel">
-      <h2>Dialogue Library</h2>
+      <div className="vocabulary-list-header">
+        <h2>Dialogue Library</h2>
+
+        <p className="subtitle">
+          Choose a JLPT level and dialogue to start speaking practice.
+        </p>
+      </div>
 
       <div className="jlpt-filter">
-        {LEVELS.map((level) => (
+        {availableLevels.map((level) => (
           <button
             key={level}
             className={
@@ -30,35 +114,51 @@ export default function DialogueList({
                 ? "level-filter-button active"
                 : "level-filter-button"
             }
-            onClick={() =>
-              setSelectedLevel(level)
-            }
+            onClick={() => setLevel(level)}
           >
             {level}
           </button>
         ))}
       </div>
 
+      <div className="status-filter">
+        {STATUS_FILTERS.map((filter) => (
+          <button
+            key={filter.value}
+            className={
+              statusFilter === filter.value
+                ? "status-button active"
+                : "status-button"
+            }
+            onClick={() => setStatus(filter.value)}
+          >
+            {filter.label}
+          </button>
+        ))}
+      </div>
+
       <div className="dialogue-simple-list">
-        {filteredDialogues.map(
-          (dialogue) => (
-            <div
+        {filteredDialogues.map((dialogue) => {
+          const status = getDialogueStatus(dialogue.id, progress);
+
+          return (
+            <button
               key={dialogue.id}
               className="dialogue-simple-card"
-              onClick={() =>
-                onSelectDialogue(dialogue)
-              }
+              onClick={() => onSelectDialogue(dialogue)}
             >
-              <span>
-                {dialogue.title}
+              <span className="dialogue-status-icon">
+                {getDialogueStatusIcon(status)}
               </span>
-            </div>
-          )
-        )}
+
+              <span>{dialogue.title}</span>
+            </button>
+          );
+        })}
 
         {filteredDialogues.length === 0 && (
           <div className="empty-dialogues">
-            No dialogues found.
+            No dialogues found for {selectedLevel}.
           </div>
         )}
       </div>
