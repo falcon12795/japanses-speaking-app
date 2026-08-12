@@ -887,3 +887,187 @@ button.danger {
   gap: 18px;
   flex-wrap: wrap;
 }
+
+/* =========================
+   GRAMMAR
+========================= */
+
+.grammar-list-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.grammar-lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.grammar-lesson-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grammar-lesson-title {
+  margin: 0;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+
+.grammar-card {
+  width: 100%;
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.grammar-card:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.grammar-card-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.grammar-title {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.grammar-level {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.grammar-meaning {
+  color: #475569;
+  margin: 10px 0 0;
+  font-size: 18px;
+}
+
+.grammar-structure {
+  color: #64748b;
+  margin: 8px 0 0;
+  font-weight: 700;
+}
+
+.grammar-detail-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.grammar-lesson-badge {
+  margin-left: 8px;
+}
+
+.grammar-detail-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.grammar-detail-structure {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e40af;
+}
+
+.grammar-example-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.grammar-example-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.grammar-example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.grammar-listen-button {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.grammar-example-japanese {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.grammar-example-reading {
+  color: #64748b;
+  margin: 4px 0;
+  font-size: 20px;
+}
+
+.grammar-example-meaning {
+  color: #475569;
+  margin: 4px 0;
+}
+
+/* =========================
+   GRAMMAR LIST
+========================= */
+
+.grammar-simple-card {
+  text-align: left;
+}
+
+.grammar-list-card-content {
+  width: 100%;
+}
+
+.grammar-list-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grammar-list-title {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.grammar-list-meaning {
+  color: #475569;
+  font-size: 17px;
+  margin: 8px 0 0 42px;
+  font-weight: 600;
+}
+
+.grammar-list-structure {
+  color: #64748b;
+  font-size: 15px;
+  margin: 6px 0 0 42px;
+  font-weight: 700;
+}

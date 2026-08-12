@@ -21,16 +21,24 @@ import ProgressPanel from "./components/ProgressPanel";
 import { loadProgress, saveProgress } from "./utils/storage";
 import { DIALOGUES } from "./data/dialogues";
 import { VOCABULARY } from "./data/vocabulary";
+import GrammarList from "./components/GrammarList";
+import GrammarDetail from "./components/GrammarDetail";
+import { GRAMMAR } from "./data/grammar";
 
 const MENU_ITEMS = [
   {
     to: "/vocabulary",
-    label: "Vocabulary",
+    label: "言葉",
     icon: "📚",
   },
   {
+    to: "/grammar",
+    label: "文法",
+    icon: "📖",
+  },
+  {
     to: "/dialogue",
-    label: "Dialogue",
+    label: "会話",
     icon: "💬",
   },
   {
@@ -40,7 +48,7 @@ const MENU_ITEMS = [
   },
   {
     to: "/progress",
-    label: "Progress",
+    label: "進捗",
     icon: "📈",
   },
 ];
@@ -138,6 +146,58 @@ function VocabularyFlashcardPage({ progress, onProgressChange }) {
       topic={decodedTopic}
       vocabulary={filteredVocabulary}
       onBack={backToVocabularyList}
+    />
+  );
+}
+
+function GrammarListPage() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleSelectGrammar = (grammar) => {
+    navigate(
+      `/grammar/${encodeURIComponent(grammar.level)}/${encodeURIComponent(
+        grammar.id
+      )}`,
+      {
+        state: {
+          from: `${location.pathname}${location.search}`,
+        },
+      }
+    );
+  };
+
+  return <GrammarList onSelectGrammar={handleSelectGrammar} />;
+}
+
+function GrammarDetailPage() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { level, grammarId } = useParams();
+
+  const decodedLevel = decodeURIComponent(level || "");
+  const decodedGrammarId = decodeURIComponent(grammarId || "");
+
+  const grammar = GRAMMAR.find(
+    (item) =>
+      String(item.level) === String(decodedLevel) &&
+      String(item.id) === String(decodedGrammarId)
+  );
+
+  const handleBackToGrammarList = () => {
+    const fallback = decodedLevel
+      ? `/grammar?level=${encodeURIComponent(decodedLevel)}`
+      : "/grammar";
+
+    const from = location.state?.from || fallback;
+
+    navigate(from);
+  };
+
+  return (
+    <GrammarDetail
+      grammar={grammar}
+      onBack={handleBackToGrammarList}
     />
   );
 }
@@ -317,6 +377,36 @@ export default function App() {
                     progress={progress}
                     onProgressChange={handleProgressChange}
                   />
+                </section>
+              </>
+            }
+          />
+
+          <Route
+            path="/grammar"
+            element={
+              <>
+                <PageHeader
+                  setSidebarOpen={setSidebarOpen}
+                />
+
+                <section className="content-area">
+                  <GrammarListPage />
+                </section>
+              </>
+            }
+          />
+
+          <Route
+            path="/grammar/:level/:grammarId"
+            element={
+              <>
+                <PageHeader
+                  setSidebarOpen={setSidebarOpen}
+                />
+
+                <section className="content-area">
+                  <GrammarDetailPage />
                 </section>
               </>
             }
