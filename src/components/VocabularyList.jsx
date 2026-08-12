@@ -228,13 +228,6 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
               <span>🔁 {item.reviewCount}</span>
               <span>{item.progressPercent}%</span>
             </div>
-
-            <div className="topic-progress-bar">
-              <div
-                className="topic-progress-fill"
-                style={{ width: `${item.progressPercent}%` }}
-              />
-            </div>
           </button>
         ))}
 

@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { DIALOGUES_BY_LEVEL } from "../data/dialogues";
 
@@ -62,6 +63,7 @@ function getDialogueStatusIcon(status) {
 
 export default function DialogueList({ progress = {}, onSelectDialogue }) {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [collapsedLessons, setCollapsedLessons] = useState(new Set());
 
   const availableLevels = useMemo(() => getAvailableDialogueLevels(), []);
 
@@ -75,6 +77,7 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
       level,
       status: "all",
     });
+    setCollapsedLessons(new Set());
   };
 
   const setStatus = (status) => {
@@ -95,6 +98,26 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
 
     return status === statusFilter;
   });
+
+  // Preserve lesson insertion order from the data
+  const lessonGroups = useMemo(() => {
+    const seen = new Map();
+    for (const dialogue of filteredDialogues) {
+      const key = dialogue.lesson || "Other";
+      if (!seen.has(key)) seen.set(key, []);
+      seen.get(key).push(dialogue);
+    }
+    return Array.from(seen.entries()).map(([lesson, dialogues]) => ({ lesson, dialogues }));
+  }, [filteredDialogues]);
+
+  const toggleLesson = (lesson) => {
+    setCollapsedLessons((prev) => {
+      const next = new Set(prev);
+      if (next.has(lesson)) next.delete(lesson);
+      else next.add(lesson);
+      return next;
+    });
+  };
 
   return (
     <section className="panel">
@@ -139,29 +162,50 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
       </div>
 
       <div className="dialogue-simple-list">
-        {filteredDialogues.map((dialogue) => {
-          const status = getDialogueStatus(dialogue.id, progress);
-
-          return (
-            <button
-              key={dialogue.id}
-              className="dialogue-simple-card"
-              onClick={() => onSelectDialogue(dialogue)}
-            >
-              <span className="dialogue-status-icon">
-                {getDialogueStatusIcon(status)}
-              </span>
-
-              <span>{dialogue.title}</span>
-            </button>
-          );
-        })}
-
-        {filteredDialogues.length === 0 && (
+        {lessonGroups.length === 0 && (
           <div className="empty-dialogues">
             No dialogues found for {selectedLevel}.
           </div>
         )}
+
+        {lessonGroups.map(({ lesson, dialogues: lessonDialogues }) => {
+          const isCollapsed = collapsedLessons.has(lesson);
+
+          return (
+            <div key={lesson} className="lesson-group">
+              <button
+                className="lesson-header"
+                onClick={() => toggleLesson(lesson)}
+              >
+                <span className="lesson-title">{lesson}</span>
+                <span className="lesson-count">{lessonDialogues.length} {lessonDialogues.length === 1 ? "dialogue" : "dialogues"}</span>
+                {isCollapsed ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
+              </button>
+
+              {isCollapsed && (
+                <div className="lesson-dialogues">
+                  {lessonDialogues.map((dialogue) => {
+                    const status = getDialogueStatus(dialogue.id, progress);
+
+                    return (
+                      <button
+                        key={dialogue.id}
+                        className="dialogue-simple-card"
+                        onClick={() => onSelectDialogue(dialogue)}
+                      >
+                        <span className="dialogue-status-icon">
+                          {getDialogueStatusIcon(status)}
+                        </span>
+
+                        <span>{dialogue.title}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

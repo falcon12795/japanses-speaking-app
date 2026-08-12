@@ -461,6 +461,66 @@ button.danger {
   margin-right: 12px;
 }
 
+.lesson-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.lesson-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.lesson-header:hover {
+  background: #f1f5f9;
+}
+
+.lesson-title {
+  flex: 1;
+}
+
+.lesson-count {
+  font-size: 14px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.lesson-dialogues {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.lesson-dialogues .dialogue-simple-card {
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+}
+
+.lesson-dialogues .dialogue-simple-card:last-child {
+  border-bottom: none;
+}
+
+.lesson-dialogues .dialogue-simple-card:hover {
+  transform: none;
+  background: #f8fafc;
+}
+
 /* =========================
    DIALOGUE PRACTICE
 ========================= */
@@ -470,14 +530,81 @@ button.danger {
   margin-bottom: 24px;
 }
 
+.dialogue-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .dialogue-header h3 {
   font-size: 54px;
   margin: 12px 0;
 }
 
+.dialogue-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dialogue-status-badge .dialogue-status-icon {
+  margin-right: 0;
+  font-size: 16px;
+}
+
+.dialogue-status-label {
+  color: #475569;
+}
+
+.dialogue-lines-progress {
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 13px;
+}
+
 .dialogue-counter {
   color: #64748b;
   font-weight: 700;
+}
+
+.listen-all-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 4px;
+}
+
+.listen-all-track {
+  flex: 1;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.listen-all-fill {
+  height: 100%;
+  background: #3b82f6;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.listen-all-counter {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  white-space: nowrap;
+  min-width: 36px;
+  text-align: center;
 }
 
 .dialogue-box {
@@ -489,7 +616,7 @@ button.danger {
 .dialogue-line {
   border: 1px solid #dbe3ef;
   border-radius: 24px;
-  padding: 24px;
+  padding: 10px;
   background: white;
 }
 
@@ -505,7 +632,7 @@ button.danger {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .speaker-action-icons {
@@ -514,8 +641,8 @@ button.danger {
 }
 
 .dialogue-icon-button {
-  width: 54px;
-  height: 54px;
+  width: 30px;
+  height: 30px;
   border-radius: 999px;
   background: white;
   border: 1px solid #dbe3ef;
@@ -554,9 +681,9 @@ button.danger {
 
 .dialogue-japanese {
   text-align: center;
-  font-size: 36px;
+  font-size: 25px;
   font-weight: 800;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .dialogue-reading {
@@ -585,7 +712,7 @@ button.danger {
     #e2e8f0 12px,
     #e2e8f0 24px
   );
-  padding: 5px;
+  padding: 15px;
   border-radius: 18px;
   text-align: center;
   font-size: 22px;
@@ -598,7 +725,6 @@ button.danger {
 ========================= */
 
 .line-speaking-result {
-  margin-top: 20px;
   padding: 20px;
   border-radius: 18px;
   background: #f8fafc;
@@ -723,10 +849,6 @@ button.danger {
     font-size: 36px;
   }
 
-  .dialogue-japanese {
-    font-size: 28px;
-  }
-
   .japanese {
     font-size: 52px;
   }
@@ -747,13 +869,21 @@ button.danger {
     font-size: 24px;
   }
 
-  .speaker-toolbar {
-    align-items: flex-start;
-    gap: 12px;
-    flex-direction: column;
-  }
-
   .speaker-action-icons {
     flex-wrap: wrap;
   }
+}
+.dialogue-top-actions {
+  align-items: center;
+}
+
+.speaker-badge {
+  cursor: default;
+}
+
+.speaker-action-area {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }

@@ -2,6 +2,7 @@ export const N3_DIALOGUES = [
   {
     id: 1,
     level: "N3",
+    lesson: "Lesson 1",
     title: "早くかたづけなさい",
     description: "Cleaning up and expressing frustration.",
     lines: [
@@ -65,6 +66,7 @@ export const N3_DIALOGUES = [
   {
     id: 2,
     level: "N3",
+    lesson: "Lesson 1",
     title: "傘持ってったら",
     description: "Rain and advice.",
     lines: [
@@ -131,6 +133,7 @@ export const N3_DIALOGUES = [
   {
     id: 3,
     level: "N3",
+    lesson: "Lesson 1",
     title: "この人どう？",
     description: "Talking about hobbies and interests.",
     lines: [
@@ -195,6 +198,7 @@ export const N3_DIALOGUES = [
   {
     id: 4,
     level: "N3",
+    lesson: "Lesson 1",
     title: "一流ホテル",
     description: "Talking about a luxury hotel.",
     lines: [
@@ -261,6 +265,7 @@ export const N3_DIALOGUES = [
   {
     id: 5,
     level: "N3",
+    lesson: "Lesson 1",
     title: "ぐずぐずしないで",
     description: "Feeling sick and going out.",
     lines: [
@@ -329,6 +334,7 @@ export const N3_DIALOGUES = [
   {
     id: 6,
     level: "N3",
+    lesson: "Lesson 1",
     title: "CMの人",
     description: "Talking about an actor in a commercial.",
     lines: [
@@ -391,6 +397,409 @@ export const N3_DIALOGUES = [
           "そうだねあのドラマの時は老け役だったからね",
           "そうだねあのドラマのときはふけやくだったからね",
           "そうだねあのドラマの時はふけやくだったからね"
+        ]
+      }
+    ]
+  },
+  {
+    id: 7,
+    level: "N3",
+    lesson: "Lesson 2",
+    title: "振袖の人が多いんだろ",
+    description: "Talking about Coming-of-Age Day and people wearing furisode.",
+    lines: [
+      {
+        id: 1,
+        speaker: "A",
+        japanese: "今日はどうして振袖の人が多いんだろ。",
+        reading: "きょうはどうしてふりそでのひとがおおいんだろ",
+        romaji: "kyou wa doushite furisode no hito ga ooi n darou.",
+        english: "Why are there so many people wearing furisode today?",
+        vietnamese: "Hôm nay sao có nhiều người mặc furisode vậy nhỉ?",
+        acceptedAnswers: [
+          "今日はどうして振袖の人が多いんだろ",
+          "きょうはどうしてふりそでのひとがおおいんだろ"
+        ]
+      },
+      {
+        id: 2,
+        speaker: "B",
+        japanese: "何言ってんの。成人式じゃない。",
+        reading: "なにいってんのせいじんしきじゃない",
+        romaji: "nani itten no. seijinshiki janai.",
+        english: "What are you talking about? It is Coming-of-Age Ceremony day.",
+        vietnamese: "Bạn nói gì vậy? Hôm nay là lễ trưởng thành mà.",
+        acceptedAnswers: [
+          "何言ってんの成人式じゃない",
+          "なに言ってんの成人式じゃない",
+          "なにいってんのせいじんしきじゃない",
+          "何言っているの成人式じゃない",
+          "なにいっているのせいじんしきじゃない"
+        ]
+      },
+      {
+        id: 3,
+        speaker: "A",
+        japanese: "えっ、そうだっけ。",
+        reading: "えっそうだっけ",
+        romaji: "e, sou dakke.",
+        english: "Oh, was it?",
+        vietnamese: "Ồ, vậy à?",
+        acceptedAnswers: [
+          "えっそうだっけ",
+          "えそうだっけ"
+        ]
+      },
+      {
+        id: 4,
+        speaker: "B",
+        japanese: "やだー、しっかりしてよ。",
+        reading: "やだーしっかりしてよ",
+        romaji: "yadaa, shikkari shite yo.",
+        english: "Come on, get it together.",
+        vietnamese: "Trời ơi, tỉnh táo lại đi chứ.",
+        acceptedAnswers: [
+          "やだーしっかりしてよ",
+          "やだしっかりしてよ"
+        ]
+      }
+    ]
+  },
+  {
+    id: 8,
+    level: "N3",
+    lesson: "Lesson 2",
+    title: "誕生日プレゼント",
+    description: "Talking about birthday presents and losing an alarm clock.",
+    lines: [
+      {
+        id: 1,
+        speaker: "A",
+        japanese: "先生とクラスメートから誕生日プレゼントもらったよ…。全部で五つ。",
+        reading: "せんせいとクラスメートからたんじょうびプレゼントもらったよぜんぶでいつつ",
+        romaji: "sensei to kurasumeeto kara tanjoubi purezento moratta yo. zenbu de itsutsu.",
+        english: "I got birthday presents from my teacher and classmates. Five in total.",
+        vietnamese: "Tớ nhận được quà sinh nhật từ thầy cô và bạn cùng lớp. Tổng cộng là năm món.",
+        acceptedAnswers: [
+          "先生とクラスメートから誕生日プレゼントもらったよ全部で五つ",
+          "先生とクラスメートからたんじょうびプレゼントもらったよ全部で五つ",
+          "せんせいとクラスメートからたんじょうびプレゼントもらったよぜんぶでいつつ"
+        ]
+      },
+      {
+        id: 2,
+        speaker: "B",
+        japanese: "そう…だけど、五つももらったにしては元気がないんじゃない？",
+        reading: "そうだけどいつつももらったにしてはげんきがないんじゃない",
+        romaji: "sou... dakedo, itsutsu mo moratta ni shite wa genki ga nai n janai?",
+        english: "I see... but for someone who got five presents, you do not seem very cheerful.",
+        vietnamese: "Vậy à... nhưng nhận tận năm món mà trông cậu không vui lắm nhỉ?",
+        acceptedAnswers: [
+          "そうだけど五つももらったにしては元気がないんじゃない",
+          "そうだけどいつつももらったにしてはげんきがないんじゃない"
+        ]
+      },
+      {
+        id: 3,
+        speaker: "A",
+        japanese: "それがね、五つが五つとも、目覚まし時計だったんだ。少しでも遅刻がなくなるようにってね。",
+        reading: "それがねいつつがいつつともめざましどけいだったんだすこしでもちこくがなくなるようにってね",
+        romaji: "sore ga ne, itsutsu ga itsutsu tomo, mezamashidokei datta n da. sukoshi demo chikoku ga nakunaru you ni tte ne.",
+        english: "The thing is, all five of them were alarm clocks. They said it was so I would stop being late, even a little.",
+        vietnamese: "Vấn đề là cả năm món đều là đồng hồ báo thức. Họ bảo là để tớ bớt đi muộn hơn.",
+        acceptedAnswers: [
+          "それがね五つが五つとも目覚まし時計だったんだ少しでも遅刻がなくなるようにってね",
+          "それがねいつつがいつつともめざまし時計だったんだ少しでも遅刻がなくなるようにってね",
+          "それがねいつつがいつつともめざましどけいだったんだすこしでもちこくがなくなるようにってね"
+        ]
+      },
+      {
+        id: 4,
+        speaker: "B",
+        japanese: "みんな、あんたのことよくわかってるんだね。",
+        reading: "みんなあんたのことよくわかってるんだね",
+        romaji: "minna, anta no koto yoku wakatteru n da ne.",
+        english: "Everyone really understands you well.",
+        vietnamese: "Mọi người hiểu cậu quá rõ nhỉ.",
+        acceptedAnswers: [
+          "みんなあんたのことよくわかってるんだね",
+          "みんなあんたのことよく分かってるんだね"
+        ]
+      },
+      {
+        id: 5,
+        speaker: "A",
+        japanese: "まー、そう言われれば、そうなんだけど…。",
+        reading: "まーそういわれればそうなんだけど",
+        romaji: "maa, sou iwarereba, sou nan dakedo...",
+        english: "Well, if you put it that way, I guess so...",
+        vietnamese: "Ừ thì, nếu nói vậy thì cũng đúng...",
+        acceptedAnswers: [
+          "まーそう言われればそうなんだけど",
+          "まあそう言われればそうなんだけど",
+          "まーそういわれればそうなんだけど"
+        ]
+      },
+      {
+        id: 6,
+        speaker: "B",
+        japanese: "よかったじゃない、これで遅刻がなくなるなら。頑張りなさいよ。",
+        reading: "よかったじゃないこれでちこくがなくなるならがんばりなさいよ",
+        romaji: "yokatta janai, kore de chikoku ga nakunaru nara. ganbari nasai yo.",
+        english: "That is good, isn't it, if this means you will stop being late. Do your best.",
+        vietnamese: "Thế cũng tốt mà, nếu nhờ vậy mà cậu hết đi muộn. Cố lên nhé.",
+        acceptedAnswers: [
+          "よかったじゃないこれで遅刻がなくなるなら頑張りなさいよ",
+          "よかったじゃないこれでちこくがなくなるならがんばりなさいよ"
+        ]
+      }
+    ]
+  },
+  {
+    id: 9,
+    level: "N3",
+    lesson: "Lesson 2",
+    title: "今何時？",
+    description: "Talking about time passing quickly and procrastination.",
+    lines: [
+      {
+        id: 1,
+        speaker: "A",
+        japanese: "今何時？",
+        reading: "いまなんじ",
+        romaji: "ima nanji?",
+        english: "What time is it now?",
+        vietnamese: "Bây giờ là mấy giờ?",
+        acceptedAnswers: [
+          "今何時",
+          "いまなんじ"
+        ]
+      },
+      {
+        id: 2,
+        speaker: "B",
+        japanese: "11時。",
+        reading: "じゅういちじ",
+        romaji: "juuichiji.",
+        english: "Eleven o'clock.",
+        vietnamese: "11 giờ.",
+        acceptedAnswers: [
+          "11時",
+          "１１時",
+          "じゅういちじ"
+        ]
+      },
+      {
+        id: 3,
+        speaker: "A",
+        japanese: "えっ、もうそんな時間？あ〜あ、一日があっという間に過ぎちゃった…。",
+        reading: "えっもうそんなじかんあーあいちにちがあっというまにすぎちゃった",
+        romaji: "e, mou sonna jikan? aa, ichinichi ga atto iu ma ni sugichatta...",
+        english: "What, it is already that late? Ah, the whole day passed in no time...",
+        vietnamese: "Hả, đã muộn vậy rồi à? Ôi, một ngày trôi qua nhanh thật...",
+        acceptedAnswers: [
+          "えっもうそんな時間あーあ一日があっという間に過ぎちゃった",
+          "えもうそんな時間ああ一日があっという間に過ぎちゃった",
+          "えっもうそんなじかんあーあいちにちがあっというまにすぎちゃった"
+        ]
+      },
+      {
+        id: 4,
+        speaker: "B",
+        japanese: "何言ってんの？",
+        reading: "なにいってんの",
+        romaji: "nani itten no?",
+        english: "What are you talking about?",
+        vietnamese: "Cậu đang nói gì vậy?",
+        acceptedAnswers: [
+          "何言ってんの",
+          "なに言ってんの",
+          "なにいってんの",
+          "何言っているの",
+          "なにいっているの"
+        ]
+      },
+      {
+        id: 5,
+        speaker: "A",
+        japanese: "やることいっぱいあるのに、時間だけが過ぎてく…。",
+        reading: "やることいっぱいあるのにじかんだけがすぎてく",
+        romaji: "yaru koto ippai aru noni, jikan dake ga sugiteku...",
+        english: "I have so many things to do, but only time keeps passing...",
+        vietnamese: "Có bao nhiêu việc phải làm mà chỉ có thời gian là cứ trôi đi...",
+        acceptedAnswers: [
+          "やることいっぱいあるのに時間だけが過ぎてく",
+          "やることいっぱいあるのにじかんだけがすぎてく"
+        ]
+      },
+      {
+        id: 6,
+        speaker: "B",
+        japanese: "グダグダ言ってる暇があったら、さっさとやったら〜？",
+        reading: "グダグダいってるひまがあったらさっさとやったら",
+        romaji: "gudaguda itteru hima ga attara, sassato yattara?",
+        english: "If you have time to complain, why not just get it done quickly?",
+        vietnamese: "Nếu có thời gian than vãn thì làm nhanh đi không được à?",
+        acceptedAnswers: [
+          "グダグダ言ってる暇があったらさっさとやったら",
+          "ぐだぐだ言ってる暇があったらさっさとやったら",
+          "グダグダいってるひまがあったらさっさとやったら"
+        ]
+      }
+    ]
+  },
+  {
+    id: 10,
+    level: "N3",
+    lesson: "Lesson 2",
+    title: "車の免許更新",
+    description: "Talking about renewing a driver's license and taking a photo.",
+    lines: [
+      {
+        id: 1,
+        speaker: "A",
+        japanese: "来週、車の免許、更新に行かなくちゃ。",
+        reading: "らいしゅうくるまのめんきょこうしんにいかなくちゃ",
+        romaji: "raishuu, kuruma no menkyo, koushin ni ikanakucha.",
+        english: "Next week, I have to go renew my driver's license.",
+        vietnamese: "Tuần sau tớ phải đi gia hạn bằng lái xe.",
+        acceptedAnswers: [
+          "来週車の免許更新に行かなくちゃ",
+          "らいしゅうくるまのめんきょこうしんにいかなくちゃ"
+        ]
+      },
+      {
+        id: 2,
+        speaker: "B",
+        japanese: "年末だから、混むかもね。",
+        reading: "ねんまつだからこむかもね",
+        romaji: "nenmatsu dakara, komu kamo ne.",
+        english: "Since it is the end of the year, it might be crowded.",
+        vietnamese: "Cuối năm nên chắc sẽ đông đấy.",
+        acceptedAnswers: [
+          "年末だから混むかもね",
+          "ねんまつだからこむかもね"
+        ]
+      },
+      {
+        id: 3,
+        speaker: "A",
+        japanese: "あ、そうかもね。じゃ、朝、早めに行こう。",
+        reading: "あそうかもねじゃあさはやめにいこう",
+        romaji: "a, sou kamo ne. ja, asa, hayame ni ikou.",
+        english: "Oh, that might be true. Then I will go early in the morning.",
+        vietnamese: "À, có thể thật. Vậy tớ sẽ đi sớm vào buổi sáng.",
+        acceptedAnswers: [
+          "あそうかもねじゃ朝早めに行こう",
+          "あそうかもねじゃあさはやめにいこう",
+          "あそうかもねじゃあ朝早めに行こう"
+        ]
+      },
+      {
+        id: 4,
+        speaker: "B",
+        japanese: "うん。それがいいね。",
+        reading: "うんそれがいいね",
+        romaji: "un. sore ga ii ne.",
+        english: "Yeah, that sounds good.",
+        vietnamese: "Ừ, như vậy tốt đấy.",
+        acceptedAnswers: [
+          "うんそれがいいね"
+        ]
+      },
+      {
+        id: 5,
+        speaker: "A",
+        japanese: "写真撮るから、寝起きの顔になんないようにしなくっちゃ。",
+        reading: "しゃしんとるからねおきのかおになんないようにしなくっちゃ",
+        romaji: "shashin toru kara, neoki no kao ni nannai you ni shinakuccha.",
+        english: "Since I will take a photo, I have to make sure I do not look like I just woke up.",
+        vietnamese: "Vì sẽ chụp ảnh nên tớ phải làm sao để mặt không như vừa ngủ dậy.",
+        acceptedAnswers: [
+          "写真撮るから寝起きの顔になんないようにしなくっちゃ",
+          "しゃしんとるからねおきのかおになんないようにしなくっちゃ",
+          "写真を撮るから寝起きの顔にならないようにしなくちゃ"
+        ]
+      },
+      {
+        id: 6,
+        speaker: "B",
+        japanese: "そんなに変わんないんじゃない？",
+        reading: "そんなにかわんないんじゃない",
+        romaji: "sonna ni kawannai n janai?",
+        english: "You probably do not look that different, do you?",
+        vietnamese: "Chắc cũng chẳng khác mấy đâu nhỉ?",
+        acceptedAnswers: [
+          "そんなに変わんないんじゃない",
+          "そんなに変わらないんじゃない",
+          "そんなにかわんないんじゃない"
+        ]
+      }
+    ]
+  },
+  {
+    id: 11,
+    level: "N3",
+    lesson: "Lesson 2",
+    title: "数学のテスト",
+    description: "Talking about test scores and optimism.",
+    lines: [
+      {
+        id: 1,
+        speaker: "A",
+        japanese: "太郎の数学のテストを見て。28点と32点だわ。",
+        reading: "たろうのすうがくのテストをみてにじゅうはちてんとさんじゅうにてんだわ",
+        romaji: "Tarou no suugaku no tesuto o mite. nijuuhatten to sanjuuniten da wa.",
+        english: "Look at Taro's math tests. He got 28 points and 32 points.",
+        vietnamese: "Nhìn bài kiểm tra toán của Taro này. Một bài 28 điểm và một bài 32 điểm.",
+        acceptedAnswers: [
+          "太郎の数学のテストを見て28点と32点だわ",
+          "太郎の数学のテストを見て二十八点と三十二点だわ",
+          "たろうのすうがくのテストをみてにじゅうはちてんとさんじゅうにてんだわ"
+        ]
+      },
+      {
+        id: 2,
+        speaker: "B",
+        japanese: "50点満点で？",
+        reading: "ごじゅってんまんてんで",
+        romaji: "gojutten manten de?",
+        english: "Out of 50 points?",
+        vietnamese: "Thang điểm 50 à?",
+        acceptedAnswers: [
+          "50点満点で",
+          "５０点満点で",
+          "ごじゅってんまんてんで",
+          "五十点満点で"
+        ]
+      },
+      {
+        id: 3,
+        speaker: "A",
+        japanese: "100点満点よ。あなた、本当に楽観的な人ね。",
+        reading: "ひゃくてんまんてんよあなたほんとうにらっかんてきなひとね",
+        romaji: "hyakuten manten yo. anata, hontou ni rakkanteki na hito ne.",
+        english: "Out of 100. You really are an optimistic person.",
+        vietnamese: "Thang điểm 100 đấy. Anh đúng là người lạc quan thật.",
+        acceptedAnswers: [
+          "100点満点よあなた本当に楽観的な人ね",
+          "１００点満点よあなた本当に楽観的な人ね",
+          "百点満点よあなた本当に楽観的な人ね",
+          "ひゃくてんまんてんよあなたほんとうにらっかんてきなひとね"
+        ]
+      },
+      {
+        id: 4,
+        speaker: "B",
+        japanese: "まー、いいじゃないか。かえるの子はかえるだよ。",
+        reading: "まーいいじゃないかかえるのこはかえるだよ",
+        romaji: "maa, ii janai ka. kaeru no ko wa kaeru da yo.",
+        english: "Well, it is fine. Like parent, like child.",
+        vietnamese: "Thôi, cũng được mà. Con nhà tông không giống lông cũng giống cánh mà.",
+        acceptedAnswers: [
+          "まーいいじゃないかかえるの子はかえるだよ",
+          "まあいいじゃないかかえるの子はかえるだよ",
+          "まーいいじゃないかかえるのこはかえるだよ"
         ]
       }
     ]

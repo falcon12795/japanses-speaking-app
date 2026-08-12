@@ -13,8 +13,6 @@ import "./App.css";
 
 import VocabularyList from "./components/VocabularyList";
 import VocabularyFlashcard from "./components/VocabularyFlashcard";
-import KanaLearning from "./components/KanaLearning";
-import SpeakingPractice from "./components/SpeakingPractice";
 import DialogueList from "./components/DialogueList";
 import DialoguePractice from "./components/DialoguePractice";
 import JLPTQuiz from "./components/JLPTQuiz";
@@ -29,16 +27,6 @@ const MENU_ITEMS = [
     to: "/vocabulary",
     label: "Vocabulary",
     icon: "📚",
-  },
-  {
-    to: "/kana",
-    label: "Kana",
-    icon: "あ",
-  },
-  {
-    to: "/speaking",
-    label: "Speaking",
-    icon: "🎤",
   },
   {
     to: "/dialogue",
@@ -326,42 +314,6 @@ export default function App() {
 
                 <section className="content-area">
                   <VocabularyFlashcardPage
-                    progress={progress}
-                    onProgressChange={handleProgressChange}
-                  />
-                </section>
-              </>
-            }
-          />
-
-          <Route
-            path="/kana"
-            element={
-              <>
-                <PageHeader
-                  setSidebarOpen={setSidebarOpen}
-                />
-
-                <section className="content-area">
-                  <KanaLearning
-                    progress={progress}
-                    onProgressChange={handleProgressChange}
-                  />
-                </section>
-              </>
-            }
-          />
-
-          <Route
-            path="/speaking"
-            element={
-              <>
-                <PageHeader
-                  setSidebarOpen={setSidebarOpen}
-                />
-
-                <section className="content-area">
-                  <SpeakingPractice
                     progress={progress}
                     onProgressChange={handleProgressChange}
                   />

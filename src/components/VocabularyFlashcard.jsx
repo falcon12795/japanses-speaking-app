@@ -286,12 +286,6 @@ export default function VocabularyFlashcard({
                     <span>{exampleScore}</span>/100
                   </div>
 
-                  <div className="progress-bar">
-                    <div
-                      className="progress-fill"
-                      style={{ width: `${exampleScore}%` }}
-                    />
-                  </div>
                 </div>
               )}
             </div>
@@ -343,8 +337,7 @@ export default function VocabularyFlashcard({
 
           <p className="label">Target word:</p>
           <p className="transcript">{currentCard.japanese}</p>
-
-          <p className="label">You said:</p>
+          
           <p className="transcript">{wordTranscript}</p>
 
           <p className="label">Word score:</p>
@@ -353,12 +346,6 @@ export default function VocabularyFlashcard({
             <span>{wordScore}</span>/100
           </div>
 
-          <div className="progress-bar">
-            <div
-              className="progress-fill"
-              style={{ width: `${wordScore}%` }}
-            />
-          </div>
         </div>
       )}
 
