@@ -115,8 +115,6 @@ function PageHeader({setSidebarOpen }) {
 
 
 function VocabularyFlashcardPage({ progress, onProgressChange }) {
-  const navigate = useNavigate();
-  const location = useLocation();
   const { level, topic } = useParams();
 
   const decodedLevel = decodeURIComponent(level || "");
@@ -128,16 +126,6 @@ function VocabularyFlashcardPage({ progress, onProgressChange }) {
     return item.level === decodedLevel && itemTopic === decodedTopic;
   });
 
-  const backToVocabularyList = () => {
-    const fallback = `/vocabulary?level=${encodeURIComponent(
-      decodedLevel
-    )}&status=all`;
-
-    const from = location.state?.from || fallback;
-
-    navigate(from);
-  };
-
   return (
     <VocabularyFlashcard
       progress={progress}
@@ -145,7 +133,6 @@ function VocabularyFlashcardPage({ progress, onProgressChange }) {
       level={decodedLevel}
       topic={decodedTopic}
       vocabulary={filteredVocabulary}
-      onBack={backToVocabularyList}
     />
   );
 }
@@ -171,8 +158,6 @@ function GrammarListPage() {
 }
 
 function GrammarDetailPage() {
-  const navigate = useNavigate();
-  const location = useLocation();
   const { level, grammarId } = useParams();
 
   const decodedLevel = decodeURIComponent(level || "");
@@ -184,20 +169,10 @@ function GrammarDetailPage() {
       String(item.id) === String(decodedGrammarId)
   );
 
-  const handleBackToGrammarList = () => {
-    const fallback = decodedLevel
-      ? `/grammar?level=${encodeURIComponent(decodedLevel)}`
-      : "/grammar";
-
-    const from = location.state?.from || fallback;
-
-    navigate(from);
-  };
 
   return (
     <GrammarDetail
       grammar={grammar}
-      onBack={handleBackToGrammarList}
     />
   );
 }

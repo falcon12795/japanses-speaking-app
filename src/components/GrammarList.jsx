@@ -1,7 +1,11 @@
 import { useMemo } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { GRAMMAR } from "../data/grammar";
+import CollapseGroup from "./common/CollapseGroup";
+import EmptyState from "./common/EmptyState";
+import FilterBar from "./common/FilterBar";
+import ListCard from "./common/ListCard";
+import Panel from "./common/Panel";
 
 function sortLevels(levels) {
   const order = {
@@ -88,7 +92,7 @@ export default function GrammarList({ onSelectGrammar }) {
   };
 
   return (
-    <section className="panel">
+    <Panel>
       <div className="vocabulary-list-header">
         <h2>Grammar Library</h2>
 
@@ -97,96 +101,71 @@ export default function GrammarList({ onSelectGrammar }) {
         </p>
       </div>
 
-      <div className="jlpt-filter">
-        {availableLevels.map((level) => (
-          <button
-            key={level}
-            className={
-              selectedLevel === level
-                ? "level-filter-button active"
-                : "level-filter-button"
-            }
-            onClick={() => setLevel(level)}
-          >
-            {level}
-          </button>
-        ))}
-      </div>
+      <FilterBar
+        items={availableLevels}
+        selectedValue={selectedLevel}
+        onChange={setLevel}
+        className="jlpt-filter"
+      />
 
       <div className="collapse-list dialogue-simple-list">
         {lessonGroups.length === 0 && (
-          <div className="empty-dialogues">
+          <EmptyState>
             No grammar found for {selectedLevel}.
-          </div>
+          </EmptyState>
         )}
 
         {lessonGroups.map(({ lesson, grammarItems }) => {
           const isOpen = openLesson === lesson;
 
           return (
-            <div key={lesson} className="collapse-group lesson-group">
-              <button
-                type="button"
-                className="collapse-header lesson-header"
-                onClick={() => toggleLesson(lesson)}
-              >
-                <span className="collapse-title lesson-title">{lesson}</span>
+            <CollapseGroup
+              key={lesson}
+              title={lesson}
+              count={`${grammarItems.length} ${
+                grammarItems.length === 1 ? "grammar" : "grammar patterns"
+              }`}
+              isOpen={isOpen}
+              onToggle={() => toggleLesson(lesson)}
+            >
+              {grammarItems.map((grammar) => {
+                const firstMeaning = grammar.meanings?.[0];
+                const meaningCount = grammar.meanings?.length || 0;
 
-                <span className="collapse-count lesson-count">
-                  {grammarItems.length}{" "}
-                  {grammarItems.length === 1 ? "grammar" : "grammar patterns"}
-                </span>
+                return (
+                  <ListCard
+                    key={grammar.id}
+                    className="dialogue-simple-card grammar-simple-card"
+                    onClick={() => onSelectGrammar(grammar)}
+                  >
+                    <div className="grammar-list-card-content">
+                      <div className="grammar-list-card-title-row">
+                        <span className="dialogue-status-icon">📖</span>
 
-                {isOpen ? (
-                  <ChevronUp size={20} />
-                ) : (
-                  <ChevronDown size={20} />
-                )}
-              </button>
+                        <span className="grammar-list-title">
+                          {grammar.title}
+                        </span>
+                      </div>
 
-              {isOpen && (
-                <div className="collapse-content lesson-dialogues">
-                  {grammarItems.map((grammar) => {
-                    const firstMeaning = grammar.meanings?.[0];
-                    const meaningCount = grammar.meanings?.length || 0;
+                      {firstMeaning?.meaning && (
+                        <p className="grammar-list-meaning">
+                          {firstMeaning.meaning}
+                        </p>
+                      )}
 
-                    return (
-                      <button
-                        key={grammar.id}
-                        type="button"
-                        className="list-card dialogue-simple-card grammar-simple-card"
-                        onClick={() => onSelectGrammar(grammar)}
-                      >
-                        <div className="grammar-list-card-content">
-                          <div className="grammar-list-card-title-row">
-                            <span className="dialogue-status-icon">📖</span>
-
-                            <span className="grammar-list-title">
-                              {grammar.title}
-                            </span>
-                          </div>
-
-                          {firstMeaning?.meaning && (
-                            <p className="grammar-list-meaning">
-                              {firstMeaning.meaning}
-                            </p>
-                          )}
-
-                          {meaningCount > 1 && (
-                            <p className="grammar-list-meaning-count">
-                              {meaningCount} meanings
-                            </p>
-                          )}
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
+                      {meaningCount > 1 && (
+                        <p className="grammar-list-meaning-count">
+                          {meaningCount} meanings
+                        </p>
+                      )}
+                    </div>
+                  </ListCard>
+                );
+              })}
+            </CollapseGroup>
           );
         })}
       </div>
-    </section>
+    </Panel>
   );
 }

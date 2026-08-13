@@ -2,6 +2,10 @@ import { useMemo, useState } from "react";
 import { ChevronDown, ChevronUp, Volume2 } from "lucide-react";
 import { speakJapaneseText } from "../utils/speech";
 
+import IconButton from "./common/IconButton";
+import Panel from "./common/Panel";
+import SectionBlock from "./common/SectionBlock";
+
 function toLines(value) {
   if (!value) return [];
 
@@ -68,30 +72,26 @@ function normalizeGrammarNotes(grammar) {
   return [];
 }
 
-export default function GrammarDetail({ grammar, onBack }) {
+export default function GrammarDetail({ grammar}) {
   const [collapsedMeaningIds, setCollapsedMeaningIds] = useState(new Set());
 
   const meaningItems = useMemo(() => {
     if (!grammar) return [];
+
     return normalizeMeaningItems(grammar);
   }, [grammar]);
 
   const grammarNotes = useMemo(() => {
     if (!grammar) return [];
+
     return normalizeGrammarNotes(grammar);
   }, [grammar]);
 
   if (!grammar) {
     return (
-      <section className="panel">
+      <Panel>
         <h2>Grammar not found</h2>
-
-        <div className="buttons">
-          <button type="button" onClick={onBack}>
-            ← Back to Grammar List
-          </button>
-        </div>
-      </section>
+      </Panel>
     );
   }
 
@@ -122,18 +122,13 @@ export default function GrammarDetail({ grammar, onBack }) {
   };
 
   return (
-    <section className="panel grammar-detail-panel">
+    <Panel className="grammar-detail-panel">
       <div className="grammar-detail-title-area">
         <h2>{grammar.title}</h2>
       </div>
 
       {grammar.usage && (
-        <div className="grammar-section-block">
-          <div className="grammar-section-heading">
-            <span className="grammar-section-number">1</span>
-            <h3>Cách sử dụng</h3>
-          </div>
-
+        <SectionBlock number="1" title="Cách sử dụng">
           <div className="grammar-detail-usage-list">
             {toLines(grammar.usage).map((line, index) => (
               <p key={index} className="grammar-detail-usage-line">
@@ -141,15 +136,10 @@ export default function GrammarDetail({ grammar, onBack }) {
               </p>
             ))}
           </div>
-        </div>
+        </SectionBlock>
       )}
 
-      <div className="grammar-section-block">
-        <div className="grammar-section-heading">
-          <span className="grammar-section-number">2</span>
-          <h3>Ý nghĩa, cách sử dụng và ví dụ</h3>
-        </div>
-
+      <SectionBlock number="2" title="Ý nghĩa, cách sử dụng và ví dụ">
         <div className="grammar-meaning-card-list">
           {meaningItems.map((meaningItem, meaningIndex) => {
             const meaningId = getMeaningId(meaningItem, meaningIndex);
@@ -216,14 +206,12 @@ export default function GrammarDetail({ grammar, onBack }) {
                         <div className="grammar-example-list">
                           {examples.map((example, index) => (
                             <div key={index} className="grammar-example-card">
-                              <button
-                                type="button"
-                                className="dialogue-icon-button"
+                              <IconButton
                                 title="Listen"
                                 onClick={() => handleListen(example.japanese)}
                               >
                                 <Volume2 size={22} strokeWidth={2.5} />
-                              </button>
+                              </IconButton>
 
                               <div className="grammar-example-content">
                                 <p className="grammar-example-japanese">
@@ -271,18 +259,19 @@ export default function GrammarDetail({ grammar, onBack }) {
             );
           })}
         </div>
-      </div>
+      </SectionBlock>
 
       {grammarNotes.length > 0 && (
-        <div className="grammar-section-block grammar-common-note-section">
-          <div className="grammar-section-heading">
-            <span className="grammar-section-number">!</span>
-            <h3>Chú ý chung</h3>
-          </div>
-
+        <SectionBlock
+          number="!"
+          title="Chú ý chung"
+          className="grammar-common-note-section"
+        >
           <div className="grammar-common-note-list">
             {grammarNotes.map((noteItem, noteIndex) => {
-              const lines = toLines(noteItem.lines || noteItem.text || noteItem.note);
+              const lines = toLines(
+                noteItem.lines || noteItem.text || noteItem.note
+              );
 
               return (
                 <div
@@ -298,8 +287,8 @@ export default function GrammarDetail({ grammar, onBack }) {
               );
             })}
           </div>
-        </div>
+        </SectionBlock>
       )}
-    </section>
+    </Panel>
   );
 }

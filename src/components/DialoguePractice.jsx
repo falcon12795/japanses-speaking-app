@@ -11,6 +11,12 @@ import {
 import { speakJapaneseText, recognizeJapaneseSpeech } from "../utils/speech";
 import { calculateSpeechScoreWithAcceptedAnswers } from "../utils/scoring";
 
+import Badge from "./common/Badge";
+import Button from "./common/Button";
+import IconButton from "./common/IconButton";
+import Panel from "./common/Panel";
+import ScoreBox from "./common/ScoreBox";
+
 export default function DialoguePractice({
   dialogue,
   progress = {},
@@ -157,10 +163,10 @@ export default function DialoguePractice({
 
   if (!currentDialogue) {
     return (
-      <section className="panel">
+      <Panel>
         <h2>Dialogue Practice</h2>
         <p>No dialogue selected.</p>
-      </section>
+      </Panel>
     );
   }
 
@@ -753,7 +759,7 @@ export default function DialoguePractice({
   };
 
   return (
-    <section className="panel">
+    <Panel>
       <div className="dialogue-fixed-header">
         <div className="dialogue-header">
           <div className="dialogue-title-row">
@@ -785,33 +791,29 @@ export default function DialoguePractice({
         </div>
 
         <div className="buttons dialogue-top-actions">
-          <button
-            type="button"
-            className={role === "A" ? "btn-primary" : "btn-secondary"}
+          <Button
+            variant={role === "A" ? "primary" : "secondary"}
             onClick={() => changeRole("A")}
           >
             Speak A {isPracticeRoleCompleted("A") ? "✅" : ""}
-          </button>
+          </Button>
 
-          <button
-            type="button"
-            className={role === "B" ? "btn-primary" : "btn-secondary"}
+          <Button
+            variant={role === "B" ? "primary" : "secondary"}
             onClick={() => changeRole("B")}
           >
             Speak B {isPracticeRoleCompleted("B") ? "✅" : ""}
-          </button>
+          </Button>
 
-          <button
-            type="button"
-            className={isListeningAll ? "btn-primary" : "btn-secondary"}
+          <Button
+            variant={isListeningAll ? "primary" : "secondary"}
             onClick={listenAll}
           >
             {isListeningAll ? "⏹ Stop" : "🔊 Listen All"}
-          </button>
+          </Button>
 
-          <button
-            type="button"
-            className={isPracticing ? "btn-success" : "btn-secondary"}
+          <Button
+            variant={isPracticing ? "success" : "secondary"}
             onClick={practiceDialogue}
           >
             {isPracticing
@@ -819,23 +821,23 @@ export default function DialoguePractice({
               : practiceRetryLineId
                 ? `🔁 Retry line ${practiceRetryLineId}`
                 : "🎯 Practice"}
-          </button>
+          </Button>
 
-          <button type="button" className="btn-secondary" onClick={hideMyRoleLines}>
+          <Button variant="secondary" onClick={hideMyRoleLines}>
             Hide my lines
-          </button>
+          </Button>
 
-          <button type="button" className="btn-secondary" onClick={showAllLines}>
+          <Button variant="secondary" onClick={showAllLines}>
             Show all
-          </button>
+          </Button>
 
-          <button type="button" className="btn-secondary" onClick={toggleSubtitle}>
+          <Button variant="secondary" onClick={toggleSubtitle}>
             {showSubtitle ? "Hide Sub" : "Show Sub"}
-          </button>
+          </Button>
 
-          <button type="button" className="btn-danger" onClick={resetAllSpeakResults}>
+          <Button variant="danger" onClick={resetAllSpeakResults}>
             Reset All
-          </button>
+          </Button>
         </div>
 
         {isListeningAll && (
@@ -858,17 +860,13 @@ export default function DialoguePractice({
               {listenAllProgress.current}/{listenAllProgress.total}
             </span>
 
-            <button
-              type="button"
-              className="btn-icon"
-              onClick={togglePauseListenAll}
-            >
+            <IconButton title="Pause or resume" onClick={togglePauseListenAll}>
               {isPausedListenAll ? (
                 <Play size={16} strokeWidth={2.5} />
               ) : (
                 <Pause size={16} strokeWidth={2.5} />
               )}
-            </button>
+            </IconButton>
           </div>
         )}
 
@@ -892,9 +890,9 @@ export default function DialoguePractice({
               {practiceProgress.current}/{practiceProgress.total}
             </span>
 
-            <span className="badge badge-success practice-role-badge">
+            <Badge variant="success" className="practice-role-badge">
               Practicing Speaker {role}
-            </span>
+            </Badge>
           </div>
         )}
       </div>
@@ -916,27 +914,21 @@ export default function DialoguePractice({
                 <div className="speaker-toolbar">
                   <div className="speaker-action-area">
                     <div className="speaker-action-icons">
-                      <button
-                        type="button"
-                        className="btn-icon"
+                      <IconButton
                         title="Listen"
                         onClick={() => listenLine(line)}
                       >
                         <Volume2 size={22} strokeWidth={2.5} />
-                      </button>
+                      </IconButton>
 
-                      <button
-                        type="button"
-                        className="btn-icon"
+                      <IconButton
                         title="Speak"
                         onClick={() => speakLine(line)}
                       >
                         <Mic size={22} strokeWidth={2.5} />
-                      </button>
+                      </IconButton>
 
-                      <button
-                        type="button"
-                        className="btn-icon"
+                      <IconButton
                         title={
                           hidden ? "Show this sentence" : "Hide this sentence"
                         }
@@ -947,16 +939,15 @@ export default function DialoguePractice({
                         ) : (
                           <Eye size={22} strokeWidth={2.5} />
                         )}
-                      </button>
+                      </IconButton>
 
-                      <button
-                        type="button"
-                        className="btn-icon reset-icon-button"
+                      <IconButton
                         title="Reset this sentence"
+                        className="reset-icon-button"
                         onClick={() => resetLineSpeakResult(line.id)}
                       >
                         <RotateCcw size={22} strokeWidth={2.5} />
-                      </button>
+                      </IconButton>
                     </div>
 
                     {hidden ? (
@@ -1000,11 +991,7 @@ export default function DialoguePractice({
                     </p>
 
                     <div className="score-inline-row">
-                      <p className="label">Score:</p>
-
-                      <div className="small-score-box">
-                        <span>{score}</span>/100
-                      </div>
+                      <ScoreBox score={score} />
                     </div>
                   </div>
                 )}
@@ -1034,16 +1021,16 @@ export default function DialoguePractice({
       )}
 
       <div className="buttons">
-        <button type="button" className="btn-secondary" onClick={handlePreviousDialogue}>
+        <Button variant="secondary" onClick={handlePreviousDialogue}>
           ← Previous Dialogue
-        </button>
+        </Button>
 
-        <button type="button" className="btn-secondary" onClick={handleNextDialogue}>
+        <Button variant="secondary" onClick={handleNextDialogue}>
           Next Dialogue →
-        </button>
+        </Button>
       </div>
 
       <p className="status">{status}</p>
-    </section>
+    </Panel>
   );
 }

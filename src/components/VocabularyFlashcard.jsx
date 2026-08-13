@@ -3,11 +3,15 @@ import { VOCABULARY } from "../data/vocabulary";
 import { speakJapaneseText, recognizeJapaneseSpeech } from "../utils/speech";
 import { calculateSimpleSpeechScore } from "../utils/scoring";
 
+import Badge from "./common/Badge";
+import Button from "./common/Button";
+import Panel from "./common/Panel";
+import ScoreBox from "./common/ScoreBox";
+
 export default function VocabularyFlashcard({
   progress = {},
   onProgressChange,
   vocabulary = [],
-  onBack,
   topic,
   level,
 }) {
@@ -28,10 +32,7 @@ export default function VocabularyFlashcard({
   const wordScore = useMemo(() => {
     if (!currentCard) return 0;
 
-    return calculateSimpleSpeechScore(
-      wordTranscript,
-      currentCard.japanese
-    );
+    return calculateSimpleSpeechScore(wordTranscript, currentCard.japanese);
   }, [wordTranscript, currentCard]);
 
   const exampleScore = useMemo(() => {
@@ -45,15 +46,9 @@ export default function VocabularyFlashcard({
 
   if (!currentCard) {
     return (
-      <section className="panel">
-        {onBack && (
-          <button type="button" className="btn-secondary" onClick={onBack}>
-            ← Back
-          </button>
-        )}
-
+      <Panel>
         <h3>No vocabulary found.</h3>
-      </section>
+      </Panel>
     );
   }
 
@@ -198,27 +193,23 @@ export default function VocabularyFlashcard({
   };
 
   return (
-    <section className="panel">
+    <Panel>
       <div className="flashcard-header">
         <div>
           <div className="card-top">
-            <span className="badge badge-primary">
+            <Badge variant="primary">
               {level || currentCard.level}
-            </span>
+            </Badge>
 
-            <span className="badge badge-neutral">{currentTopic}</span>
+            <Badge variant="neutral">
+              {currentTopic}
+            </Badge>
           </div>
 
           <p className="subtitle">
             Word {currentIndex + 1} / {data.length}
           </p>
         </div>
-
-        {onBack && (
-          <button type="button" className="btn-secondary" onClick={onBack}>
-            ← Back
-          </button>
-        )}
       </div>
 
       <div className="surface-card answer">
@@ -229,29 +220,27 @@ export default function VocabularyFlashcard({
         )}
 
         <div className="buttons compact-buttons">
-          <button type="button" className="btn-secondary" onClick={handleListenWord}>
+          <Button variant="secondary" onClick={handleListenWord}>
             Listen word
-          </button>
+          </Button>
 
-          <button type="button" className="btn-secondary" onClick={handleSpeakWord}>
+          <Button variant="secondary" onClick={handleSpeakWord}>
             Speak word
-          </button>
+          </Button>
 
-          <button
-            type="button"
-            className={isFavorite ? "btn-primary" : "btn-secondary"}
+          <Button
+            variant={isFavorite ? "primary" : "secondary"}
             onClick={toggleFavoriteVocabulary}
           >
             {isFavorite ? "★ Favorited" : "☆ Favorite"}
-          </button>
+          </Button>
 
-          <button
-            type="button"
-            className="btn-primary"
+          <Button
+            variant="primary"
             onClick={() => setShowAnswer((prev) => !prev)}
           >
             {showAnswer ? "Hide Answer" : "Show Answer"}
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -304,31 +293,21 @@ export default function VocabularyFlashcard({
               </p>
 
               <div className="buttons compact-buttons">
-                <button
-                  type="button"
-                  className="btn-secondary"
-                  onClick={handleListenExample}
-                >
+                <Button variant="secondary" onClick={handleListenExample}>
                   Listen example
-                </button>
+                </Button>
 
-                <button
-                  type="button"
-                  className="btn-secondary"
-                  onClick={handleSpeakExample}
-                >
+                <Button variant="secondary" onClick={handleSpeakExample}>
                   Speak example
-                </button>
+                </Button>
               </div>
 
               {exampleTranscript && (
                 <div className="soft-card speaking-check-box">
                   <p className="label">You said example:</p>
                   <p className="transcript">{exampleTranscript}</p>
-                  <p className="label">Example score:</p>
-                  <div className="small-score-box">
-                    <span>{exampleScore}</span>/100
-                  </div>
+
+                  <ScoreBox score={exampleScore} label="Example score" />
                 </div>
               )}
             </div>
@@ -346,21 +325,21 @@ export default function VocabularyFlashcard({
       )}
 
       <div className="buttons">
-        <button type="button" className="btn-success" onClick={markAsKnown}>
+        <Button variant="success" onClick={markAsKnown}>
           I know this
-        </button>
+        </Button>
 
-        <button type="button" className="btn-secondary" onClick={markAsReview}>
+        <Button variant="secondary" onClick={markAsReview}>
           Need review
-        </button>
+        </Button>
 
-        <button type="button" className="btn-secondary" onClick={goPrevious}>
+        <Button variant="secondary" onClick={goPrevious}>
           Previous
-        </button>
+        </Button>
 
-        <button type="button" className="btn-secondary" onClick={goNext}>
+        <Button variant="secondary" onClick={goNext}>
           Next
-        </button>
+        </Button>
       </div>
 
       {wordTranscript && (
@@ -373,14 +352,11 @@ export default function VocabularyFlashcard({
           <p className="label">You said:</p>
           <p className="transcript">{wordTranscript}</p>
 
-          <p className="label">Word score:</p>
-          <div className="small-score-box">
-            <span>{wordScore}</span>/100
-          </div>
+          <ScoreBox score={wordScore} label="Word score" />
         </div>
       )}
 
       <p className="status">{status}</p>
-    </section>
+    </Panel>
   );
 }

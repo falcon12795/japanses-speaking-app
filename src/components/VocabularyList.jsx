@@ -1,6 +1,12 @@
 import { useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { VOCABULARY } from "../data/vocabulary";
+import Badge from "./common/Badge";
+import EmptyState from "./common/EmptyState";
+import FilterBar from "./common/FilterBar";
+import ListCard from "./common/ListCard";
+import Panel from "./common/Panel";
+import ProgressBar from "./common/ProgressBar";
 
 const STATUS_FILTERS = [
   { value: "all", label: "All" },
@@ -38,21 +44,10 @@ function getAvailableLevels() {
 }
 
 function getTopicStatus(topicInfo) {
-  if (topicInfo.favoriteCount > 0) {
-    return "favorite";
-  }
-
-  if (topicInfo.progressPercent === 100) {
-    return "completed";
-  }
-
-  if (topicInfo.reviewCount > 0) {
-    return "review";
-  }
-
-  if (topicInfo.completedCount > 0) {
-    return "learning";
-  }
+  if (topicInfo.favoriteCount > 0) return "favorite";
+  if (topicInfo.progressPercent === 100) return "completed";
+  if (topicInfo.reviewCount > 0) return "review";
+  if (topicInfo.completedCount > 0) return "learning";
 
   return "not-started";
 }
@@ -153,15 +148,13 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
   ]);
 
   const filteredTopics = topics.filter((topic) => {
-    if (statusFilter === "all") {
-      return true;
-    }
+    if (statusFilter === "all") return true;
 
     return topic.status === statusFilter;
   });
 
   return (
-    <section className="panel">
+    <Panel>
       <div className="vocabulary-list-header">
         <h2>Vocabulary Library</h2>
 
@@ -170,46 +163,26 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
         </p>
       </div>
 
-      <div className="jlpt-filter">
-        {availableLevels.map((level) => (
-          <button
-            key={level}
-            type="button"
-            className={
-              selectedLevel === level
-                ? "level-filter-button active"
-                : "level-filter-button"
-            }
-            onClick={() => setLevel(level)}
-          >
-            {level}
-          </button>
-        ))}
-      </div>
+      <FilterBar
+        items={availableLevels}
+        selectedValue={selectedLevel}
+        onChange={setLevel}
+        className="jlpt-filter"
+      />
 
-      <div className="status-filter">
-        {STATUS_FILTERS.map((filter) => (
-          <button
-            key={filter.value}
-            type="button"
-            className={
-              statusFilter === filter.value
-                ? "status-button active"
-                : "status-button"
-            }
-            onClick={() => setStatus(filter.value)}
-          >
-            {filter.label}
-          </button>
-        ))}
-      </div>
+      <FilterBar
+        items={STATUS_FILTERS}
+        selectedValue={statusFilter}
+        onChange={setStatus}
+        className="status-filter"
+        buttonClassName="status-button"
+      />
 
       <div className="vocabulary-topic-list">
         {filteredTopics.map((item) => (
-          <button
+          <ListCard
             key={item.topic}
-            type="button"
-            className="list-card vocabulary-topic-card"
+            className="vocabulary-topic-card"
             onClick={() => onSelectTopic(selectedLevel, item.topic)}
           >
             <div className="vocabulary-topic-main">
@@ -221,9 +194,9 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
                 {item.topic}
               </span>
 
-              <span className="badge badge-primary vocabulary-topic-count">
+              <Badge variant="primary" className="vocabulary-topic-count">
                 {item.count} words
-              </span>
+              </Badge>
             </div>
 
             <div className="vocabulary-topic-meta">
@@ -233,21 +206,20 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
               <span>{item.progressPercent}%</span>
             </div>
 
-            <div className="topic-progress-bar">
-              <div
-                className="topic-progress-fill"
-                style={{ width: `${item.progressPercent}%` }}
-              />
-            </div>
-          </button>
+            <ProgressBar
+              value={item.progressPercent}
+              className="topic-progress-bar"
+              fillClassName="topic-progress-fill"
+            />
+          </ListCard>
         ))}
 
         {filteredTopics.length === 0 && (
-          <div className="empty-dialogues">
+          <EmptyState>
             No vocabulary found for {selectedLevel}.
-          </div>
+          </EmptyState>
         )}
       </div>
-    </section>
+    </Panel>
   );
 }

@@ -1,7 +1,11 @@
 import { useMemo } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { DIALOGUES_BY_LEVEL } from "../data/dialogues";
+import CollapseGroup from "./common/CollapseGroup";
+import EmptyState from "./common/EmptyState";
+import FilterBar from "./common/FilterBar";
+import ListCard from "./common/ListCard";
+import Panel from "./common/Panel";
 
 const STATUS_FILTERS = [
   { value: "all", label: "All" },
@@ -39,17 +43,9 @@ function getDialogueStatus(dialogueId, progress = {}) {
   const completedDialogues = progress.completedDialogues || [];
   const dialogueScores = progress.dialogueScores || {};
 
-  if (favoriteDialogues.includes(dialogueId)) {
-    return "favorite";
-  }
-
-  if (completedDialogues.includes(dialogueId)) {
-    return "completed";
-  }
-
-  if ((dialogueScores[dialogueId] || 0) > 0) {
-    return "learning";
-  }
+  if (favoriteDialogues.includes(dialogueId)) return "favorite";
+  if (completedDialogues.includes(dialogueId)) return "completed";
+  if ((dialogueScores[dialogueId] || 0) > 0) return "learning";
 
   return "not-started";
 }
@@ -102,9 +98,7 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
     return dialoguesByLevel.filter((dialogue) => {
       const status = getDialogueStatus(dialogue.id, progress);
 
-      if (statusFilter === "all") {
-        return true;
-      }
+      if (statusFilter === "all") return true;
 
       return status === statusFilter;
     });
@@ -143,7 +137,7 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
   };
 
   return (
-    <section className="panel">
+    <Panel>
       <div className="vocabulary-list-header">
         <h2>Dialogue Library</h2>
 
@@ -152,95 +146,62 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
         </p>
       </div>
 
-      <div className="jlpt-filter">
-        {availableLevels.map((level) => (
-          <button
-            key={level}
-            className={
-              selectedLevel === level
-                ? "level-filter-button active"
-                : "level-filter-button"
-            }
-            onClick={() => setLevel(level)}
-          >
-            {level}
-          </button>
-        ))}
-      </div>
+      <FilterBar
+        items={availableLevels}
+        selectedValue={selectedLevel}
+        onChange={setLevel}
+        className="jlpt-filter"
+      />
 
-      <div className="status-filter">
-        {STATUS_FILTERS.map((filter) => (
-          <button
-            key={filter.value}
-            className={
-              statusFilter === filter.value
-                ? "status-button active"
-                : "status-button"
-            }
-            onClick={() => setStatus(filter.value)}
-          >
-            {filter.label}
-          </button>
-        ))}
-      </div>
+      <FilterBar
+        items={STATUS_FILTERS}
+        selectedValue={statusFilter}
+        onChange={setStatus}
+        className="status-filter"
+        buttonClassName="status-button"
+      />
 
       <div className="collapse-list dialogue-simple-list">
         {lessonGroups.length === 0 && (
-          <div className="empty-dialogues">
+          <EmptyState>
             No dialogues found for {selectedLevel}.
-          </div>
+          </EmptyState>
         )}
 
         {lessonGroups.map(({ lesson, dialogues: lessonDialogues }) => {
           const isOpen = openLesson === lesson;
 
           return (
-            <div key={lesson} className="collapse-group lesson-group">
-              <button
-                type="button"
-                className="collapse-header lesson-header"
-                onClick={() => toggleLesson(lesson)}
-              >
-                <span className="collapse-title lesson-title">{lesson}</span>
+            <CollapseGroup
+              key={lesson}
+              title={lesson}
+              count={`${lessonDialogues.length} ${
+                lessonDialogues.length === 1 ? "dialogue" : "dialogues"
+              }`}
+              isOpen={isOpen}
+              onToggle={() => toggleLesson(lesson)}
+            >
+              {lessonDialogues.map((dialogue) => {
+                const status = getDialogueStatus(dialogue.id, progress);
 
-                <span className="collapse-count lesson-count">
-                  {lessonDialogues.length}{" "}
-                  {lessonDialogues.length === 1 ? "dialogue" : "dialogues"}
-                </span>
+                return (
+                  <ListCard
+                    key={dialogue.id}
+                    className="dialogue-simple-card"
+                    onClick={() => onSelectDialogue(dialogue)}
+                  >
+                    <span className="dialogue-status-icon">
+                      {getDialogueStatusIcon(status)}
+                    </span>
 
-                {isOpen ? (
-                  <ChevronUp size={20} />
-                ) : (
-                  <ChevronDown size={20} />
-                )}
-              </button>
-
-              {isOpen && (
-                <div className="collapse-content lesson-dialogues">
-                  {lessonDialogues.map((dialogue) => {
-                    const status = getDialogueStatus(dialogue.id, progress);
-
-                    return (
-                      <button
-                        key={dialogue.id}
-                        type="button"
-                        className="list-card dialogue-simple-card"
-                        onClick={() => onSelectDialogue(dialogue)}
-                      >
-                        <span className="dialogue-status-icon">
-                          {getDialogueStatusIcon(status)}
-                        </span>
-
-                        <span>{dialogue.title}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
+                    <span>{dialogue.title}</span>
+                  </ListCard>
+                );
+              })}
+            </CollapseGroup>
           );
         })}
       </div>
-    </section>
+    </Panel>
   );
 }
