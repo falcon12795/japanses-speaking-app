@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { GRAMMAR } from "../data/grammar";
@@ -30,11 +30,15 @@ function getAvailableGrammarLevels() {
   return sortLevels([...levels]);
 }
 
+function getOpenLessonFromParams(searchParams) {
+  return searchParams.get("openLesson") || "";
+}
+
 export default function GrammarList({ onSelectGrammar }) {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [collapsedLessons, setCollapsedLessons] = useState(new Set());
 
   const availableLevels = useMemo(() => getAvailableGrammarLevels(), []);
+  const openLesson = getOpenLessonFromParams(searchParams);
 
   const defaultLevel = availableLevels.includes("N3")
     ? "N3"
@@ -46,8 +50,6 @@ export default function GrammarList({ onSelectGrammar }) {
     setSearchParams({
       level,
     });
-
-    setCollapsedLessons(new Set());
   };
 
   const grammarByLevel = useMemo(() => {
@@ -74,17 +76,15 @@ export default function GrammarList({ onSelectGrammar }) {
   }, [grammarByLevel]);
 
   const toggleLesson = (lesson) => {
-    setCollapsedLessons((prev) => {
-      const next = new Set(prev);
+    const nextParams = {
+      level: selectedLevel,
+    };
 
-      if (next.has(lesson)) {
-        next.delete(lesson);
-      } else {
-        next.add(lesson);
-      }
+    if (openLesson !== lesson) {
+      nextParams.openLesson = lesson;
+    }
 
-      return next;
-    });
+    setSearchParams(nextParams);
   };
 
   return (
@@ -121,7 +121,7 @@ export default function GrammarList({ onSelectGrammar }) {
         )}
 
         {lessonGroups.map(({ lesson, grammarItems }) => {
-          const isCollapsed = collapsedLessons.has(lesson);
+          const isOpen = openLesson === lesson;
 
           return (
             <div key={lesson} className="lesson-group">
@@ -137,50 +137,50 @@ export default function GrammarList({ onSelectGrammar }) {
                   {grammarItems.length === 1 ? "grammar" : "grammar patterns"}
                 </span>
 
-                {isCollapsed ? (
-                  <ChevronDown size={20} />
-                ) : (
+                {isOpen ? (
                   <ChevronUp size={20} />
+                ) : (
+                  <ChevronDown size={20} />
                 )}
               </button>
 
-              {isCollapsed && (
+              {isOpen && (
                 <div className="lesson-dialogues">
                   {grammarItems.map((grammar) => {
                     const firstMeaning = grammar.meanings?.[0];
                     const meaningCount = grammar.meanings?.length || 0;
 
                     return (
-                        <button
+                      <button
                         key={grammar.id}
                         type="button"
                         className="dialogue-simple-card grammar-simple-card"
                         onClick={() => onSelectGrammar(grammar)}
-                        >
+                      >
                         <div className="grammar-list-card-content">
-                            <div className="grammar-list-card-title-row">
+                          <div className="grammar-list-card-title-row">
                             <span className="dialogue-status-icon">📖</span>
 
                             <span className="grammar-list-title">
-                                {grammar.title}
+                              {grammar.title}
                             </span>
-                            </div>
+                          </div>
 
-                            {firstMeaning?.meaning && (
+                          {firstMeaning?.meaning && (
                             <p className="grammar-list-meaning">
-                                {firstMeaning.meaning}
+                              {firstMeaning.meaning}
                             </p>
-                            )}
+                          )}
 
-                            {meaningCount > 1 && (
+                          {meaningCount > 1 && (
                             <p className="grammar-list-meaning-count">
-                                {meaningCount} meanings
+                              {meaningCount} meanings
                             </p>
-                            )}
+                          )}
                         </div>
-                        </button>
+                      </button>
                     );
-                    })}
+                  })}
                 </div>
               )}
             </div>
