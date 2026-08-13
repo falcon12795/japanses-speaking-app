@@ -259,15 +259,6 @@ function DialoguePracticePage({ progress, onProgressChange }) {
   const selectedDialogue =
     dialogueIndex === -1 ? null : DIALOGUES[dialogueIndex];
 
-  const backToDialogueList = () => {
-    const fallback = selectedDialogue?.level
-      ? `/dialogue?level=${encodeURIComponent(selectedDialogue.level)}&status=all`
-      : "/dialogue";
-
-    const from = location.state?.from || fallback;
-
-    navigate(from);
-  };
 
   const handlePreviousDialogue = () => {
     if (DIALOGUES.length === 0) return;
@@ -319,7 +310,6 @@ function DialoguePracticePage({ progress, onProgressChange }) {
       totalDialogues={DIALOGUES.length}
       progress={progress}
       onProgressChange={onProgressChange}
-      onBack={backToDialogueList}
       onPreviousDialogue={handlePreviousDialogue}
       onNextDialogue={handleNextDialogue}
     />

@@ -14,9 +14,8 @@ import { calculateSpeechScoreWithAcceptedAnswers } from "../utils/scoring";
 
 export default function DialoguePractice({
   dialogue,
-  progress,
-  onProgressChange,
-  onBack,
+  progress = {},
+  onProgressChange = () => {},
   onPreviousDialogue,
   onNextDialogue,
 }) {
@@ -29,9 +28,37 @@ export default function DialoguePractice({
   const [lineResults, setLineResults] = useState({});
   const [status, setStatus] = useState("Ready");
   const [isListeningAll, setIsListeningAll] = useState(false);
-  const [listenAllProgress, setListenAllProgress] = useState({ current: 0, total: 0 });
+  const [listenAllProgress, setListenAllProgress] = useState({
+    current: 0,
+    total: 0,
+  });
   const [isPausedListenAll, setIsPausedListenAll] = useState(false);
   const listenAllAbortRef = useRef(false);
+
+  const [isPracticing, setIsPracticing] = useState(false);
+  const [practiceProgress, setPracticeProgress] = useState({
+    current: 0,
+    total: 0,
+  });
+
+  const [practiceRetryLineId, setPracticeRetryLineId] = useState(null);
+  const [practiceStartIndex, setPracticeStartIndex] = useState(0);
+
+  const practiceAbortRef = useRef(false);
+
+    const getCompletedPracticeRoles = (sourceProgress = progress) => {
+    return sourceProgress.practiceCompletedRoles?.[currentDialogue.id] || [];
+  };
+
+  const isPracticeRoleCompleted = (targetRole, sourceProgress = progress) => {
+    return getCompletedPracticeRoles(sourceProgress).includes(targetRole);
+  };
+
+  const areBothPracticeRolesCompleted = (sourceProgress = progress) => {
+    const completedRoles = getCompletedPracticeRoles(sourceProgress);
+
+    return completedRoles.includes("A") && completedRoles.includes("B");
+  };
 
   const currentDialogue = dialogue;
 
@@ -55,8 +82,16 @@ export default function DialoguePractice({
       ? Math.round(spokenLines.reduce((sum, line) => sum + (lineResults[line.id]?.score || 0), 0) / total)
       : null;
 
-    const savedCompleted = (progress.completedDialogues || []).includes(currentDialogue.id);
-    const isCompleted = savedCompleted || (allLinesSpoken && avgScore >= 80);
+    const savedCompleted = (progress.completedDialogues || []).includes(
+      currentDialogue.id
+    );
+
+    const bothPracticeRolesCompleted = areBothPracticeRolesCompleted(progress);
+
+    const isCompleted =
+      savedCompleted ||
+      bothPracticeRolesCompleted ||
+      (allLinesSpoken && avgScore >= 80);
 
     const savedScore = progress.dialogueScores?.[currentDialogue.id] || 0;
     const hasAnyResult = linesCompleted > 0 || savedScore > 0;
@@ -74,10 +109,6 @@ export default function DialoguePractice({
       <section className="panel">
         <h2>Dialogue Practice</h2>
         <p>No dialogue selected.</p>
-
-        <button className="back-button" onClick={onBack}>
-          ← Back to Dialogue List
-        </button>
       </section>
     );
   }
@@ -120,8 +151,21 @@ export default function DialoguePractice({
 
   const resetPracticeState = () => {
     window.speechSynthesis?.cancel();
+
     listenAllAbortRef.current = true;
+    practiceAbortRef.current = true;
+
     setIsListeningAll(false);
+    setIsPausedListenAll(false);
+    setIsPracticing(false);
+
+    setPracticeProgress({
+      current: 0,
+      total: 0,
+    });
+    setPracticeRetryLineId(null);
+    setPracticeStartIndex(0);
+
     setShowAllScript(false);
     setManualVisibleLineIds([]);
     setManualHiddenLineIds([]);
@@ -147,8 +191,17 @@ export default function DialoguePractice({
     setManualHiddenLineIds([]);
     setActiveLineId(null);
     setLineResults({});
+
+    setPracticeRetryLineId(null);
+    setPracticeStartIndex(0);
+    setPracticeProgress({
+      current: 0,
+      total: 0,
+    });
+
     setStatus(`Selected role ${nextRole}.`);
   };
+
 
   const toggleSubtitle = () => {
     setShowSubtitle((prev) => !prev);
@@ -252,16 +305,7 @@ export default function DialoguePractice({
       setListenAllProgress({ current: idx + 1, total: currentDialogue.lines.length });
       setStatus(`(${idx + 1}/${currentDialogue.lines.length}) Playing ${line.speaker}...`);
 
-      await new Promise((resolve) => {
-        const utterance = new SpeechSynthesisUtterance(line.japanese);
-        utterance.lang = "ja-JP";
-        utterance.rate = 0.85;
-        utterance.pitch = 1;
-        utterance.onend = resolve;
-        utterance.onerror = resolve;
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utterance);
-      });
+      await speakLineText(line);
     }
 
     if (!listenAllAbortRef.current) {
@@ -282,6 +326,26 @@ export default function DialoguePractice({
       window.speechSynthesis.pause();
       setIsPausedListenAll(true);
     }
+  };
+
+  const speakLineText = (line) => {
+    return new Promise((resolve) => {
+      if (!window.speechSynthesis) {
+        resolve();
+        return;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(line.japanese);
+      utterance.lang = "ja-JP";
+      utterance.rate = 0.85;
+      utterance.pitch = 1;
+
+      utterance.onend = resolve;
+      utterance.onerror = resolve;
+
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+    });
   };
 
   const buildNextProgressAfterSpeak = (score, nextLineResults) => {
@@ -313,6 +377,232 @@ export default function DialoguePractice({
       },
       completedDialogues: nextCompletedDialogues,
     };
+  };
+
+  const buildNextProgressAfterPracticeRole = (completedRole, nextLineResults) => {
+    const currentPracticeCompletedRoles =
+      progress.practiceCompletedRoles?.[currentDialogue.id] || [];
+
+    const nextPracticeCompletedRoles = currentPracticeCompletedRoles.includes(
+      completedRole
+    )
+      ? currentPracticeCompletedRoles
+      : [...currentPracticeCompletedRoles, completedRole];
+
+    const isBothRolesCompleted =
+      nextPracticeCompletedRoles.includes("A") &&
+      nextPracticeCompletedRoles.includes("B");
+
+    const completedDialogues = progress.completedDialogues || [];
+
+    const nextCompletedDialogues =
+      isBothRolesCompleted && !completedDialogues.includes(currentDialogue.id)
+        ? [...completedDialogues, currentDialogue.id]
+        : completedDialogues;
+
+    const roleLines = currentDialogue.lines.filter(
+      (line) => line.speaker === completedRole
+    );
+
+    const roleScores = roleLines
+      .map((line) => nextLineResults[line.id]?.score)
+      .filter((score) => typeof score === "number");
+
+    const roleAverageScore =
+      roleScores.length > 0
+        ? Math.round(
+            roleScores.reduce((sum, score) => sum + score, 0) /
+              roleScores.length
+          )
+        : 0;
+
+    const currentBestScore = progress.dialogueScores?.[currentDialogue.id] || 0;
+
+    return {
+      ...progress,
+
+      dialoguePractice:
+        (progress.dialoguePractice || 0) + roleScores.length,
+
+      dialogueScores: {
+        ...(progress.dialogueScores || {}),
+        [currentDialogue.id]: Math.max(currentBestScore, roleAverageScore),
+      },
+
+      dialogueRoleScores: {
+        ...(progress.dialogueRoleScores || {}),
+        [currentDialogue.id]: {
+          ...(progress.dialogueRoleScores?.[currentDialogue.id] || {}),
+          roleAverageScore,
+        },
+      },
+
+      practiceCompletedRoles: {
+        ...(progress.practiceCompletedRoles || {}),
+        [currentDialogue.id]: nextPracticeCompletedRoles,
+      },
+
+      completedDialogues: nextCompletedDialogues,
+    };
+  };
+
+  const practiceDialogue = async () => {
+    if (isPracticing) {
+      practiceAbortRef.current = true;
+      window.speechSynthesis?.cancel();
+      setIsPracticing(false);
+      setStatus("Practice stopped.");
+      return;
+    }
+
+    if (!currentDialogue?.lines?.length) {
+      setStatus("No dialogue lines to practice.");
+      return;
+    }
+
+    practiceAbortRef.current = false;
+    listenAllAbortRef.current = true;
+    window.speechSynthesis?.cancel();
+
+    setIsListeningAll(false);
+    setIsPausedListenAll(false);
+    setIsPracticing(true);
+
+    const startIndex = practiceStartIndex || 0;
+    let nextLineResults = { ...lineResults };
+
+    setPracticeProgress({
+      current: startIndex,
+      total: currentDialogue.lines.length,
+    });
+
+    // setShowAllScript(false);
+    setManualVisibleLineIds([]);
+    setManualHiddenLineIds([]);
+
+    try {
+      for (let idx = startIndex; idx < currentDialogue.lines.length; idx += 1) {
+        if (practiceAbortRef.current) break;
+
+        const line = currentDialogue.lines[idx];
+
+        setActiveLineId(line.id);
+        setPracticeProgress({
+          current: idx + 1,
+          total: currentDialogue.lines.length,
+        });
+
+        if (line.speaker === role) {
+          setStatus(
+            `Practice Speaker ${role}: Line ${line.id}. Please speak this sentence.`
+          );
+
+          setLineResults((prev) => ({
+            ...prev,
+            [line.id]: {
+              transcript: "",
+              score: 0,
+              status: "Listening...",
+            },
+          }));
+
+          const transcript = await recognizeJapaneseSpeech();
+
+          if (practiceAbortRef.current) break;
+
+          const score = calculateSpeechScoreWithAcceptedAnswers(
+            transcript,
+            getAcceptedAnswers(line)
+          );
+
+          const nextLineResult = {
+            transcript,
+            score,
+            status: score >= 80 ? "Passed" : "Need retry",
+          };
+
+          nextLineResults = {
+            ...nextLineResults,
+            [line.id]: nextLineResult,
+          };
+
+          setLineResults(nextLineResults);
+
+          const nextProgress = buildNextProgressAfterSpeak(
+            score,
+            nextLineResults
+          );
+
+          onProgressChange(nextProgress);
+
+          if (score < 80) {
+            setPracticeStartIndex(idx);
+            setPracticeRetryLineId(line.id);
+            setIsPracticing(false);
+
+            setStatus(
+              `Line ${line.id}: ${score}/100. Need ≥80 to continue. Press Practice again to retry this line.`
+            );
+
+            return;
+          }
+
+          setPracticeStartIndex(idx + 1);
+          setPracticeRetryLineId(null);
+
+          setStatus(
+            `Line ${line.id}: ${score}/100 ✅ Passed. Moving to next line...`
+          );
+        } else {
+          setStatus(
+            `Speaker ${line.speaker}: Auto reading line ${line.id}...`
+          );
+
+          await speakLineText(line);
+        }
+      }
+
+      if (!practiceAbortRef.current) {
+        const nextProgress = buildNextProgressAfterPracticeRole(
+          role,
+          nextLineResults
+        );
+
+        onProgressChange(nextProgress);
+
+        const completedRoles =
+          nextProgress.practiceCompletedRoles?.[currentDialogue.id] || [];
+
+        const isBothDone =
+          completedRoles.includes("A") && completedRoles.includes("B");
+
+        setPracticeStartIndex(0);
+        setPracticeRetryLineId(null);
+
+        setPracticeProgress({
+          current: currentDialogue.lines.length,
+          total: currentDialogue.lines.length,
+        });
+
+        setActiveLineId(null);
+
+        if (isBothDone) {
+          setStatus(
+            "Practice completed for both Speaker A and Speaker B. Dialogue completed ✅"
+          );
+        } else {
+          const otherRole = role === "A" ? "B" : "A";
+
+          setStatus(
+            `Practice Speaker ${role} done ✅. Please practice Speaker ${otherRole} to complete this dialogue.`
+          );
+        }
+      }
+    } catch (error) {
+      setStatus(error.message || "Practice failed.");
+    } finally {
+      setIsPracticing(false);
+    }
   };
 
   const speakLine = async (line) => {
@@ -390,197 +680,231 @@ export default function DialoguePractice({
 
   return (
     <section className="panel">
-      <div className="dialogue-header">
+      <div className="dialogue-fixed-header">
+        <div className="dialogue-header">
 
-        <div className="dialogue-title-row">
-          <h3>{currentDialogue.title}</h3>
+          <div className="dialogue-title-row">
+            <h3>{currentDialogue.title}</h3>
 
-          <span className="dialogue-status-badge">
-            <span className="dialogue-status-icon">{dialogueStatus.icon}</span>
-            <span className="dialogue-status-label">{dialogueStatus.label}</span>
-            {dialogueStatus.total > 0 && (
-              <span className="dialogue-lines-progress">
-                {dialogueStatus.linesCompleted}/{dialogueStatus.total}
-                {dialogueStatus.avgScore !== null && (
-                  <> · avg {dialogueStatus.avgScore}/100</>
-                )}
-              </span>
-            )}
-          </span>
+            <span className="dialogue-status-badge">
+              <span className="dialogue-status-icon">{dialogueStatus.icon}</span>
+              <span className="dialogue-status-label">{dialogueStatus.label}</span>
+              {dialogueStatus.total > 0 && (
+                <span className="dialogue-lines-progress">
+                  {dialogueStatus.linesCompleted}/{dialogueStatus.total}
+                  {dialogueStatus.avgScore !== null && (
+                    <> · avg {dialogueStatus.avgScore}/100</>
+                  )}
+                </span>
+              )}
+            </span>
+          </div>
+
+          {currentDialogue.description && (
+            <p className="subtitle">{currentDialogue.description}</p>
+          )}
         </div>
 
-        {currentDialogue.description && (
-          <p className="subtitle">{currentDialogue.description}</p>
-        )}
-      </div>
+        <div className="buttons dialogue-top-actions">
+          <button
+            className={role === "A" ? "active" : ""}
+            onClick={() => changeRole("A")}
+          >
+            Speak A {isPracticeRoleCompleted("A") ? "✅" : ""}
+          </button>
 
-      <div className="buttons dialogue-top-actions">
-        <button
-          className={role === "A" ? "active" : ""}
-          onClick={() => changeRole("A")}
-        >
-          Speak A
-        </button>
+          <button
+            className={role === "B" ? "active" : ""}
+            onClick={() => changeRole("B")}
+          >
+            Speak B {isPracticeRoleCompleted("B") ? "✅" : ""}
+          </button>
 
-        <button
-          className={role === "B" ? "active" : ""}
-          onClick={() => changeRole("B")}
-        >
-          Speak B
-        </button>
+          <button
+            className={isListeningAll ? "active" : ""}
+            onClick={listenAll}
+          >
+            {isListeningAll ? "⏹ Stop" : "🔊 Listen All"}
+          </button>
 
-        <button
-          className={isListeningAll ? "active" : ""}
-          onClick={listenAll}
-        >
-          {isListeningAll ? "⏹ Stop" : "🔊 Listen All"}
-        </button>
+          <button
+            className={isPracticing ? "active practice-active-button" : ""}
+            onClick={practiceDialogue}
+          >
+            {isPracticing
+              ? "⏹ Stop Practice"
+              : practiceRetryLineId
+                ? `🔁 Retry line ${practiceRetryLineId}`
+                : "🎯 Practice"}
+          </button>
 
-        <button onClick={hideMyRoleLines}>Hide my lines</button>
+          <button onClick={hideMyRoleLines}>Hide my lines</button>
 
-        <button onClick={showAllLines}>Show all</button>
+          <button onClick={showAllLines}>Show all</button>
 
-        <button onClick={toggleSubtitle}>
-          {showSubtitle ? "Hide Sub" : "Show Sub"}
-        </button>
+          <button onClick={toggleSubtitle}>
+            {showSubtitle ? "Hide Sub" : "Show Sub"}
+          </button>
 
-        <button className="danger" onClick={resetAllSpeakResults}>
-          Reset All
-        </button>
-
-        <button className="back-button" onClick={onBack}>
-          ← Back to Dialogue List
-        </button>
-      </div>
-
-      {isListeningAll && (
-        <div className="listen-all-bar">
-          <div className="listen-all-track">
-            <div
-              className="listen-all-fill"
-              style={{
-                width: `${
-                  listenAllProgress.total > 0
-                    ? (listenAllProgress.current / listenAllProgress.total) * 100
-                    : 0
-                }%`,
-              }}
-            />
-          </div>
-          <span className="listen-all-counter">
-            {listenAllProgress.current}/{listenAllProgress.total}
-          </span>
-          <button className="dialogue-icon-button" onClick={togglePauseListenAll}>
-            {isPausedListenAll ? <Play size={16} strokeWidth={2.5} /> : <Pause size={16} strokeWidth={2.5} />}
+          <button className="danger" onClick={resetAllSpeakResults}>
+            Reset All
           </button>
         </div>
-      )}
 
-      <div className="dialogue-box">
-        {currentDialogue.lines.map((line) => {
-          const hidden = shouldHideLine(line);
-          const lineResult = lineResults[line.id];
-          const score = getLineScore(line);
-
-          return (
-            <div
-              key={line.id}
-              className={`dialogue-line ${
-                line.speaker === "A" ? "speaker-a" : "speaker-b"
-              } ${activeLineId === line.id ? "active-line" : ""}`}
-            >
-              <div className="speaker-toolbar">
-                <div className="speaker-action-area">
-                  <div className="speaker-action-icons">
-                    <button
-                      type="button"
-                      className="dialogue-icon-button"
-                      title="Listen"
-                      onClick={() => listenLine(line)}
-                    >
-                      <Volume2 size={22} strokeWidth={2.5} />
-                    </button>
-
-                    <button
-                      type="button"
-                      className="dialogue-icon-button"
-                      title="Speak"
-                      onClick={() => speakLine(line)}
-                    >
-                      <Mic size={22} strokeWidth={2.5} />
-                    </button>
-
-                    <button
-                      type="button"
-                      className="dialogue-icon-button"
-                      title={hidden ? "Show this sentence" : "Hide this sentence"}
-                      onClick={() => toggleLineHidden(line)}
-                    >
-                      {hidden ? (
-                        <EyeOff size={22} strokeWidth={2.5} />
-                      ) : (
-                        <Eye size={22} strokeWidth={2.5} />
-                      )}
-                    </button>
-
-                    <button
-                      type="button"
-                      className="dialogue-icon-button reset-icon-button"
-                      title="Reset this sentence"
-                      onClick={() => resetLineSpeakResult(line.id)}
-                    >
-                      <RotateCcw size={22} strokeWidth={2.5} />
-                    </button>
-                  </div>
-
-                  {hidden ? (
-                    <p className="hidden-dialogue-line">
-                      Hidden line. Try to speak this sentence.
-                    </p>
-                  ) : (
-                    <div>
-                      <p className="dialogue-japanese">{line.japanese}</p>
-
-                      {showSubtitle && (
-                        <>
-                          {line.reading && (
-                            <p className="dialogue-reading">{line.reading}</p>
-                          )}
-
-                          {line.romaji && (
-                            <p className="dialogue-romaji">{line.romaji}</p>
-                          )}
-
-                          {(line.english || line.vietnamese) && (
-                            <p className="dialogue-meaning">
-                              {line.english} / {line.vietnamese}
-                            </p>
-                          )}
-                        </>
-                      )}
-                    </div>
-                  )}
-                </div>
-
-              </div>
-
-              {lineResult && (
-                <div className="line-speaking-result">
-
-                  <p className="transcript">
-                    {lineResult.transcript || "—"}
-                  </p>
-
-                  <p className="label">Score:</p>
-
-                  <div className="small-score-box">
-                    <span>{score}</span>/100
-                  </div>
-                </div>
-              )}
+        {isListeningAll && (
+          <div className="listen-all-bar">
+            <div className="listen-all-track">
+              <div
+                className="listen-all-fill"
+                style={{
+                  width: `${listenAllProgress.total > 0
+                    ? (listenAllProgress.current / listenAllProgress.total) * 100
+                    : 0
+                    }%`,
+                }}
+              />
             </div>
-          );
-        })}
+            <span className="listen-all-counter">
+              {listenAllProgress.current}/{listenAllProgress.total}
+            </span>
+            <button className="dialogue-icon-button" onClick={togglePauseListenAll}>
+              {isPausedListenAll ? <Play size={16} strokeWidth={2.5} /> : <Pause size={16} strokeWidth={2.5} />}
+            </button>
+          </div>
+        )}
+
+        {isPracticing && (
+          <div className="listen-all-bar practice-bar">
+            <div className="listen-all-track">
+              <div
+                className="listen-all-fill practice-fill"
+                style={{
+                  width: `${practiceProgress.total > 0
+                    ? (practiceProgress.current / practiceProgress.total) * 100
+                    : 0
+                    }%`,
+                }}
+              />
+            </div>
+
+            <span className="listen-all-counter">
+              {practiceProgress.current}/{practiceProgress.total}
+            </span>
+
+            <span className="practice-role-badge">
+              Practicing Speaker {role}
+            </span>
+          </div>
+        )}
+      </div>
+      <div className="dialogue-scroll-area">
+        <div className="dialogue-box">
+          {currentDialogue.lines.map((line) => {
+            const hidden = shouldHideLine(line);
+            const lineResult = lineResults[line.id];
+            const score = getLineScore(line);
+
+            return (
+              <div
+                key={line.id}
+                className={`dialogue-line ${line.speaker === "A" ? "speaker-a" : "speaker-b"
+                  } ${activeLineId === line.id ? "active-line" : ""}`}
+              >
+                <div className="speaker-toolbar">
+                  <div className="speaker-action-area">
+                    <div className="speaker-action-icons">
+                      <button
+                        type="button"
+                        className="dialogue-icon-button"
+                        title="Listen"
+                        onClick={() => listenLine(line)}
+                      >
+                        <Volume2 size={22} strokeWidth={2.5} />
+                      </button>
+
+                      <button
+                        type="button"
+                        className="dialogue-icon-button"
+                        title="Speak"
+                        onClick={() => speakLine(line)}
+                      >
+                        <Mic size={22} strokeWidth={2.5} />
+                      </button>
+
+                      <button
+                        type="button"
+                        className="dialogue-icon-button"
+                        title={hidden ? "Show this sentence" : "Hide this sentence"}
+                        onClick={() => toggleLineHidden(line)}
+                      >
+                        {hidden ? (
+                          <EyeOff size={22} strokeWidth={2.5} />
+                        ) : (
+                          <Eye size={22} strokeWidth={2.5} />
+                        )}
+                      </button>
+
+                      <button
+                        type="button"
+                        className="dialogue-icon-button reset-icon-button"
+                        title="Reset this sentence"
+                        onClick={() => resetLineSpeakResult(line.id)}
+                      >
+                        <RotateCcw size={22} strokeWidth={2.5} />
+                      </button>
+                    </div>
+
+                    {hidden ? (
+                      <p className="hidden-dialogue-line">
+                        Hidden line. Try to speak this sentence.
+                      </p>
+                    ) : (
+                      <div>
+                        <p className="dialogue-japanese">{line.japanese}</p>
+
+                        {showSubtitle && (
+                          <>
+                            {line.reading && (
+                              <p className="dialogue-reading">{line.reading}</p>
+                            )}
+
+                            {line.romaji && (
+                              <p className="dialogue-romaji">{line.romaji}</p>
+                            )}
+
+                            {(line.english || line.vietnamese) && (
+                              <p className="dialogue-meaning">
+                                {line.english} / {line.vietnamese}
+                              </p>
+                            )}
+                          </>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
+                </div>
+
+                {lineResult && (
+                  <div className="line-speaking-result">
+
+                    <p className="transcript">
+                      {lineResult.transcript || "—"}
+                    </p>
+
+                    <div style={{ display: "flex", gap: "10px", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+                      <p className="label">Score:</p>
+                      <div className="small-score-box">
+                        <span>{score}</span>/100
+                      </div>
+                    </div>
+
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       {activeLine && (

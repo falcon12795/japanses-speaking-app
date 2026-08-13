@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { DIALOGUES_BY_LEVEL } from "../data/dialogues";
@@ -58,65 +58,88 @@ function getDialogueStatusIcon(status) {
   if (status === "completed") return "✅";
   if (status === "favorite") return "⭐";
   if (status === "learning") return "📖";
+
   return "⭕";
+}
+
+function getOpenLessonFromParams(searchParams) {
+  return searchParams.get("openLesson") || "";
 }
 
 export default function DialogueList({ progress = {}, onSelectDialogue }) {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [collapsedLessons, setCollapsedLessons] = useState(new Set());
 
   const availableLevels = useMemo(() => getAvailableDialogueLevels(), []);
 
   const defaultLevel = availableLevels[0] || "N3";
-
   const selectedLevel = searchParams.get("level") || defaultLevel;
   const statusFilter = searchParams.get("status") || "all";
+  const openLesson = getOpenLessonFromParams(searchParams);
 
   const setLevel = (level) => {
     setSearchParams({
       level,
       status: "all",
     });
-    setCollapsedLessons(new Set());
   };
 
   const setStatus = (status) => {
-    setSearchParams({
+    const nextParams = {
       level: selectedLevel,
       status,
-    });
+    };
+
+    if (openLesson) {
+      nextParams.openLesson = openLesson;
+    }
+
+    setSearchParams(nextParams);
   };
 
-  const dialoguesByLevel = DIALOGUES_BY_LEVEL[selectedLevel] || [];
+  const filteredDialogues = useMemo(() => {
+    const dialoguesByLevel = DIALOGUES_BY_LEVEL[selectedLevel] || [];
 
-  const filteredDialogues = dialoguesByLevel.filter((dialogue) => {
-    const status = getDialogueStatus(dialogue.id, progress);
+    return dialoguesByLevel.filter((dialogue) => {
+      const status = getDialogueStatus(dialogue.id, progress);
 
-    if (statusFilter === "all") {
-      return true;
-    }
+      if (statusFilter === "all") {
+        return true;
+      }
 
-    return status === statusFilter;
-  });
+      return status === statusFilter;
+    });
+  }, [selectedLevel, progress, statusFilter]);
 
-  // Preserve lesson insertion order from the data
   const lessonGroups = useMemo(() => {
     const seen = new Map();
+
     for (const dialogue of filteredDialogues) {
       const key = dialogue.lesson || "Other";
-      if (!seen.has(key)) seen.set(key, []);
+
+      if (!seen.has(key)) {
+        seen.set(key, []);
+      }
+
       seen.get(key).push(dialogue);
     }
-    return Array.from(seen.entries()).map(([lesson, dialogues]) => ({ lesson, dialogues }));
+
+    return Array.from(seen.entries()).map(([lesson, dialogues]) => ({
+      lesson,
+      dialogues,
+    }));
   }, [filteredDialogues]);
 
   const toggleLesson = (lesson) => {
-    setCollapsedLessons((prev) => {
-      const next = new Set(prev);
-      if (next.has(lesson)) next.delete(lesson);
-      else next.add(lesson);
-      return next;
-    });
+    const nextParams = {
+      level: selectedLevel,
+      status: statusFilter,
+    };
+
+    if (openLesson !== lesson) {
+      nextParams.openLesson = lesson;
+    }
+
+    setSearchParams(nextParams);
   };
 
   return (
@@ -169,20 +192,30 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
         )}
 
         {lessonGroups.map(({ lesson, dialogues: lessonDialogues }) => {
-          const isCollapsed = collapsedLessons.has(lesson);
+          const isOpen = openLesson === lesson;
 
           return (
             <div key={lesson} className="lesson-group">
               <button
+                type="button"
                 className="lesson-header"
                 onClick={() => toggleLesson(lesson)}
               >
                 <span className="lesson-title">{lesson}</span>
-                <span className="lesson-count">{lessonDialogues.length} {lessonDialogues.length === 1 ? "dialogue" : "dialogues"}</span>
-                {isCollapsed ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
+
+                <span className="lesson-count">
+                  {lessonDialogues.length}{" "}
+                  {lessonDialogues.length === 1 ? "dialogue" : "dialogues"}
+                </span>
+
+                {isOpen ? (
+                  <ChevronUp size={20} />
+                ) : (
+                  <ChevronDown size={20} />
+                )}
               </button>
 
-              {isCollapsed && (
+              {isOpen && (
                 <div className="lesson-dialogues">
                   {lessonDialogues.map((dialogue) => {
                     const status = getDialogueStatus(dialogue.id, progress);
@@ -190,6 +223,7 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
                     return (
                       <button
                         key={dialogue.id}
+                        type="button"
                         className="dialogue-simple-card"
                         onClick={() => onSelectDialogue(dialogue)}
                       >

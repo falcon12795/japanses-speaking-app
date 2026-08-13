@@ -146,36 +146,41 @@ export default function GrammarList({ onSelectGrammar }) {
 
               {isCollapsed && (
                 <div className="lesson-dialogues">
-                  {grammarItems.map((grammar) => (
-                    <button
-                      key={grammar.id}
-                      type="button"
-                      className="dialogue-simple-card grammar-simple-card"
-                      onClick={() => onSelectGrammar(grammar)}
-                    >
-                      <div className="grammar-list-card-content">
-                        <div className="grammar-list-card-title-row">
-                          <span className="dialogue-status-icon">📖</span>
+                  {grammarItems.map((grammar) => {
+                    const firstMeaning = grammar.meanings?.[0];
+                    const meaningCount = grammar.meanings?.length || 0;
 
-                          <span className="grammar-list-title">
-                            {grammar.title}
-                          </span>
+                    return (
+                        <button
+                        key={grammar.id}
+                        type="button"
+                        className="dialogue-simple-card grammar-simple-card"
+                        onClick={() => onSelectGrammar(grammar)}
+                        >
+                        <div className="grammar-list-card-content">
+                            <div className="grammar-list-card-title-row">
+                            <span className="dialogue-status-icon">📖</span>
+
+                            <span className="grammar-list-title">
+                                {grammar.title}
+                            </span>
+                            </div>
+
+                            {firstMeaning?.meaning && (
+                            <p className="grammar-list-meaning">
+                                {firstMeaning.meaning}
+                            </p>
+                            )}
+
+                            {meaningCount > 1 && (
+                            <p className="grammar-list-meaning-count">
+                                {meaningCount} meanings
+                            </p>
+                            )}
                         </div>
-
-                        {grammar.meaning && (
-                          <p className="grammar-list-meaning">
-                            {grammar.meaning}
-                          </p>
-                        )}
-
-                        {grammar.structure && (
-                          <p className="grammar-list-structure">
-                            {grammar.structure}
-                          </p>
-                        )}
-                      </div>
-                    </button>
-                  ))}
+                        </button>
+                    );
+                    })}
                 </div>
               )}
             </div>
