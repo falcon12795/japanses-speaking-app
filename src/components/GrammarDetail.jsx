@@ -70,6 +70,7 @@ function normalizeGrammarNotes(grammar) {
 
 export default function GrammarDetail({ grammar, onBack }) {
   const [collapsedMeaningIds, setCollapsedMeaningIds] = useState(new Set());
+
   const meaningItems = useMemo(() => {
     if (!grammar) return [];
     return normalizeMeaningItems(grammar);
@@ -79,6 +80,7 @@ export default function GrammarDetail({ grammar, onBack }) {
     if (!grammar) return [];
     return normalizeGrammarNotes(grammar);
   }, [grammar]);
+
   if (!grammar) {
     return (
       <section className="panel">
@@ -92,7 +94,6 @@ export default function GrammarDetail({ grammar, onBack }) {
       </section>
     );
   }
-
 
   const getMeaningId = (meaningItem, meaningIndex) => {
     return meaningItem.id || `${grammar.id}-meaning-${meaningIndex}`;
@@ -126,20 +127,22 @@ export default function GrammarDetail({ grammar, onBack }) {
         <h2>{grammar.title}</h2>
       </div>
 
-      <div className="grammar-section-block">
-        <div className="grammar-section-heading">
-          <span className="grammar-section-number">1</span>
-          <h3>Cách sử dụng</h3>
-        </div>
-        {grammar.usage && (
-          toLines(grammar.usage).map((line, index) => (
-            <p key={index} className="grammar-detail-usage-line">
-              {line}
-            </p>
-          ))
-        )}
-      </div>
+      {grammar.usage && (
+        <div className="grammar-section-block">
+          <div className="grammar-section-heading">
+            <span className="grammar-section-number">1</span>
+            <h3>Cách sử dụng</h3>
+          </div>
 
+          <div className="grammar-detail-usage-list">
+            {toLines(grammar.usage).map((line, index) => (
+              <p key={index} className="grammar-detail-usage-line">
+                {line}
+              </p>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="grammar-section-block">
         <div className="grammar-section-heading">
@@ -152,8 +155,14 @@ export default function GrammarDetail({ grammar, onBack }) {
             const meaningId = getMeaningId(meaningItem, meaningIndex);
             const isCollapsed = collapsedMeaningIds.has(meaningId);
 
-            const usageLines = toLines(meaningItem.usage || meaningItem.structure);
-            const noteLines = toLines(meaningItem.note || meaningItem.explanation);
+            const usageLines = toLines(
+              meaningItem.usage || meaningItem.structure
+            );
+
+            const noteLines = toLines(
+              meaningItem.note || meaningItem.explanation
+            );
+
             const examples = normalizeExamples(meaningItem.examples);
 
             return (
@@ -163,9 +172,9 @@ export default function GrammarDetail({ grammar, onBack }) {
                   className="grammar-meaning-card-toggle"
                   onClick={() => toggleMeaning(meaningId)}
                 >
-                  <span className="grammar-meaning-index">
-                    Ý nghĩa {meaningIndex + 1}
-                  </span>
+                    <span className="grammar-meaning-index">
+                      Ý nghĩa {meaningIndex + 1}
+                    </span>
 
                   <span className="grammar-meaning-toggle-icon">
                     {isCollapsed ? (
@@ -176,7 +185,7 @@ export default function GrammarDetail({ grammar, onBack }) {
                   </span>
                 </button>
 
-                {isCollapsed && (
+                {!isCollapsed && (
                   <div className="grammar-meaning-card-body">
                     {meaningItem.meaning && (
                       <div className="grammar-meaning-row">
@@ -263,6 +272,7 @@ export default function GrammarDetail({ grammar, onBack }) {
           })}
         </div>
       </div>
+
       {grammarNotes.length > 0 && (
         <div className="grammar-section-block grammar-common-note-section">
           <div className="grammar-section-heading">
@@ -275,7 +285,10 @@ export default function GrammarDetail({ grammar, onBack }) {
               const lines = toLines(noteItem.lines || noteItem.text || noteItem.note);
 
               return (
-                <div key={noteIndex} className="grammar-note-box grammar-common-note-box">
+                <div
+                  key={noteIndex}
+                  className="grammar-note-box grammar-common-note-box"
+                >
                   {noteItem.title && <h4>{noteItem.title}</h4>}
 
                   {lines.map((line, lineIndex) => (

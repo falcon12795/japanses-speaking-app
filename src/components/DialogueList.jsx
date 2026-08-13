@@ -70,8 +70,8 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const availableLevels = useMemo(() => getAvailableDialogueLevels(), []);
-
   const defaultLevel = availableLevels[0] || "N3";
+
   const selectedLevel = searchParams.get("level") || defaultLevel;
   const statusFilter = searchParams.get("status") || "all";
   const openLesson = getOpenLessonFromParams(searchParams);
@@ -184,7 +184,7 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
         ))}
       </div>
 
-      <div className="dialogue-simple-list">
+      <div className="collapse-list dialogue-simple-list">
         {lessonGroups.length === 0 && (
           <div className="empty-dialogues">
             No dialogues found for {selectedLevel}.
@@ -195,15 +195,15 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
           const isOpen = openLesson === lesson;
 
           return (
-            <div key={lesson} className="lesson-group">
+            <div key={lesson} className="collapse-group lesson-group">
               <button
                 type="button"
-                className="lesson-header"
+                className="collapse-header lesson-header"
                 onClick={() => toggleLesson(lesson)}
               >
-                <span className="lesson-title">{lesson}</span>
+                <span className="collapse-title lesson-title">{lesson}</span>
 
-                <span className="lesson-count">
+                <span className="collapse-count lesson-count">
                   {lessonDialogues.length}{" "}
                   {lessonDialogues.length === 1 ? "dialogue" : "dialogues"}
                 </span>
@@ -216,7 +216,7 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
               </button>
 
               {isOpen && (
-                <div className="lesson-dialogues">
+                <div className="collapse-content lesson-dialogues">
                   {lessonDialogues.map((dialogue) => {
                     const status = getDialogueStatus(dialogue.id, progress);
 
@@ -224,7 +224,7 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
                       <button
                         key={dialogue.id}
                         type="button"
-                        className="dialogue-simple-card"
+                        className="list-card dialogue-simple-card"
                         onClick={() => onSelectDialogue(dialogue)}
                       >
                         <span className="dialogue-status-icon">

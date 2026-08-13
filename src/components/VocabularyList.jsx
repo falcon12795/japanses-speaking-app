@@ -62,6 +62,7 @@ function getTopicStatusIcon(status) {
   if (status === "favorite") return "⭐";
   if (status === "review") return "🔁";
   if (status === "learning") return "📖";
+
   return "⭕";
 }
 
@@ -71,7 +72,6 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
   const availableLevels = useMemo(() => getAvailableLevels(), []);
 
   const defaultLevel = availableLevels[0] || "N5";
-
   const selectedLevel = searchParams.get("level") || defaultLevel;
   const statusFilter = searchParams.get("status") || "all";
 
@@ -174,6 +174,7 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
         {availableLevels.map((level) => (
           <button
             key={level}
+            type="button"
             className={
               selectedLevel === level
                 ? "level-filter-button active"
@@ -190,6 +191,7 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
         {STATUS_FILTERS.map((filter) => (
           <button
             key={filter.value}
+            type="button"
             className={
               statusFilter === filter.value
                 ? "status-button active"
@@ -206,7 +208,8 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
         {filteredTopics.map((item) => (
           <button
             key={item.topic}
-            className="vocabulary-topic-card"
+            type="button"
+            className="list-card vocabulary-topic-card"
             onClick={() => onSelectTopic(selectedLevel, item.topic)}
           >
             <div className="vocabulary-topic-main">
@@ -214,10 +217,11 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
                 <span className="dialogue-status-icon">
                   {getTopicStatusIcon(item.status)}
                 </span>
+
                 {item.topic}
               </span>
 
-              <span className="vocabulary-topic-count">
+              <span className="badge badge-primary vocabulary-topic-count">
                 {item.count} words
               </span>
             </div>
@@ -227,6 +231,13 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
               <span>⭐ {item.favoriteCount}</span>
               <span>🔁 {item.reviewCount}</span>
               <span>{item.progressPercent}%</span>
+            </div>
+
+            <div className="topic-progress-bar">
+              <div
+                className="topic-progress-fill"
+                style={{ width: `${item.progressPercent}%` }}
+              />
             </div>
           </button>
         ))}

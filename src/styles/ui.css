@@ -1,0 +1,315 @@
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+.btn {
+  border: none;
+  background: var(--color-text);
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover,
+.btn:hover {
+  opacity: 0.92;
+}
+
+button.active,
+.btn.active,
+.btn-primary {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+button.danger,
+.btn-danger {
+  background: var(--color-danger);
+  color: #ffffff;
+}
+
+.btn-secondary,
+.back-button {
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border-strong);
+}
+
+.btn-success,
+.practice-active-button {
+  background: var(--color-success);
+  color: #ffffff;
+}
+
+.btn-icon,
+.dialogue-icon-button {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-pill);
+  background: #ffffff;
+  border: 1px solid #dbe3ef;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.btn-icon:hover,
+.dialogue-icon-button:hover {
+  background: var(--color-soft);
+  opacity: 1;
+}
+
+.btn-icon svg,
+.dialogue-icon-button svg,
+.reset-icon-button svg {
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge,
+.level,
+.type {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.badge-primary,
+.level,
+.type {
+  background: #dbeafe;
+  color: var(--color-primary-dark);
+}
+
+.badge-success,
+.practice-role-badge {
+  background: var(--color-success-soft);
+  color: #166534;
+  border: 1px solid var(--color-success-border);
+}
+
+.badge-neutral {
+  background: #f1f5f9;
+  color: var(--color-text);
+}
+
+/* =========================
+   COMMON TEXT
+========================= */
+
+.subtitle {
+  color: var(--color-muted);
+  margin: 8px 0 0;
+}
+
+.status {
+  color: var(--color-muted);
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.label {
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.empty-dialogues {
+  text-align: center;
+  color: var(--color-muted);
+  padding: 30px;
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.jlpt-filter,
+.status-filter {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.level-filter-button,
+.status-button {
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border-strong);
+}
+
+.level-filter-button.active,
+.status-button.active {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* =========================
+   COMMON LIST / CARD
+========================= */
+
+.surface-card,
+.list-card,
+.dialogue-simple-card,
+.vocabulary-topic-card,
+.grammar-card {
+  width: 100%;
+  background: var(--color-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.surface-card:hover,
+.list-card:hover,
+.dialogue-simple-card:hover,
+.vocabulary-topic-card:hover,
+.grammar-card:hover {
+  background: var(--color-soft);
+  transform: translateY(-2px);
+}
+
+.soft-card {
+  background: var(--color-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/* =========================
+   COMMON COLLAPSE
+========================= */
+
+.collapse-list,
+.dialogue-simple-list,
+.vocabulary-topic-list,
+.grammar-lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.collapse-group,
+.lesson-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.collapse-header,
+.lesson-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--color-soft);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text);
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.collapse-header:hover,
+.lesson-header:hover {
+  background: #f1f5f9;
+  opacity: 1;
+}
+
+.collapse-title,
+.lesson-title {
+  flex: 1;
+}
+
+.collapse-count,
+.lesson-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-soft-muted);
+}
+
+.collapse-content,
+.lesson-dialogues {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.collapse-content .list-card,
+.lesson-dialogues .dialogue-simple-card {
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.collapse-content .list-card:last-child,
+.lesson-dialogues .dialogue-simple-card:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   SCORE / RESULT
+========================= */
+
+.transcript {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.small-score-box {
+  text-align: center;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.small-score-box span {
+  font-size: 64px;
+}
+
+.progress-bar {
+  height: 16px;
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #22c55e;
+}
+
+.line-status {
+  text-align: center;
+  font-weight: 700;
+}

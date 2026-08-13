@@ -21,13 +21,17 @@ export default function VocabularyFlashcard({
   const currentCard = data[currentIndex];
 
   const hasExample = Boolean(currentCard?.example?.japanese);
+
   const currentTopic =
     currentCard?.topic || currentCard?.type || topic || "General";
 
   const wordScore = useMemo(() => {
     if (!currentCard) return 0;
 
-    return calculateSimpleSpeechScore(wordTranscript, currentCard.japanese);
+    return calculateSimpleSpeechScore(
+      wordTranscript,
+      currentCard.japanese
+    );
   }, [wordTranscript, currentCard]);
 
   const exampleScore = useMemo(() => {
@@ -41,16 +45,14 @@ export default function VocabularyFlashcard({
 
   if (!currentCard) {
     return (
-      <section className="card">
-        <div className="flashcard-header">
-          {onBack && (
-            <button className="back-button" onClick={onBack}>
-              ← Back
-            </button>
-          )}
+      <section className="panel">
+        {onBack && (
+          <button type="button" className="btn-secondary" onClick={onBack}>
+            ← Back
+          </button>
+        )}
 
-          <h3>No vocabulary found.</h3>
-        </div>
+        <h3>No vocabulary found.</h3>
       </section>
     );
   }
@@ -125,8 +127,7 @@ export default function VocabularyFlashcard({
 
       onProgressChange({
         ...progress,
-        vocabularySpeakPractice:
-          (progress.vocabularySpeakPractice || 0) + 1,
+        vocabularySpeakPractice: (progress.vocabularySpeakPractice || 0) + 1,
       });
     } catch (error) {
       setStatus(error.message);
@@ -197,34 +198,66 @@ export default function VocabularyFlashcard({
   };
 
   return (
-    <section className="card">
+    <section className="panel">
       <div className="flashcard-header">
-        {onBack && (
-          <button className="back-button" onClick={onBack}>
-            ← Back
-          </button>
-        )}
-
         <div>
-          <h3>
-            {level || currentCard.level} / {currentTopic}
-          </h3>
+          <div className="card-top">
+            <span className="badge badge-primary">
+              {level || currentCard.level}
+            </span>
+
+            <span className="badge badge-neutral">{currentTopic}</span>
+          </div>
 
           <p className="subtitle">
             Word {currentIndex + 1} / {data.length}
           </p>
         </div>
+
+        {onBack && (
+          <button type="button" className="btn-secondary" onClick={onBack}>
+            ← Back
+          </button>
+        )}
       </div>
 
-      <h2 className="japanese">{currentCard.japanese}</h2>
+      <div className="surface-card answer">
+        <h2 className="japanese">{currentCard.japanese}</h2>
 
-      {currentCard.reading && (
-        <p className="reading">{currentCard.reading}</p>
-      )}
+        {currentCard.reading && (
+          <p className="reading">{currentCard.reading}</p>
+        )}
+
+        <div className="buttons compact-buttons">
+          <button type="button" className="btn-secondary" onClick={handleListenWord}>
+            Listen word
+          </button>
+
+          <button type="button" className="btn-secondary" onClick={handleSpeakWord}>
+            Speak word
+          </button>
+
+          <button
+            type="button"
+            className={isFavorite ? "btn-primary" : "btn-secondary"}
+            onClick={toggleFavoriteVocabulary}
+          >
+            {isFavorite ? "★ Favorited" : "☆ Favorite"}
+          </button>
+
+          <button
+            type="button"
+            className="btn-primary"
+            onClick={() => setShowAnswer((prev) => !prev)}
+          >
+            {showAnswer ? "Hide Answer" : "Show Answer"}
+          </button>
+        </div>
+      </div>
 
       {showAnswer ? (
-        <div className="answer vocabulary-answer">
-          <div>
+        <div className="vocabulary-answer">
+          <div className="surface-card example-box">
             <h3>Meaning</h3>
 
             {currentCard.romaji && (
@@ -245,7 +278,7 @@ export default function VocabularyFlashcard({
           </div>
 
           {hasExample ? (
-            <div className="example-box">
+            <div className="surface-card example-box">
               <h3>Example</h3>
 
               <p className="example-japanese">
@@ -271,31 +304,38 @@ export default function VocabularyFlashcard({
               </p>
 
               <div className="buttons compact-buttons">
-                <button onClick={handleListenExample}>Listen example</button>
-                <button onClick={handleSpeakExample}>Speak example</button>
+                <button
+                  type="button"
+                  className="btn-secondary"
+                  onClick={handleListenExample}
+                >
+                  Listen example
+                </button>
+
+                <button
+                  type="button"
+                  className="btn-secondary"
+                  onClick={handleSpeakExample}
+                >
+                  Speak example
+                </button>
               </div>
 
               {exampleTranscript && (
-                <div className="speaking-check-box">
+                <div className="soft-card speaking-check-box">
                   <p className="label">You said example:</p>
                   <p className="transcript">{exampleTranscript}</p>
-
                   <p className="label">Example score:</p>
-
                   <div className="small-score-box">
                     <span>{exampleScore}</span>/100
                   </div>
-
                 </div>
               )}
             </div>
           ) : (
-            <div className="example-box empty-example-box">
+            <div className="soft-card empty-example-box">
               <h3>Example</h3>
-
-              <p className="hidden-answer">
-                No example sentence is available for this word.
-              </p>
+              <p>No example sentence is available for this word.</p>
             </div>
           )}
         </div>
@@ -306,46 +346,37 @@ export default function VocabularyFlashcard({
       )}
 
       <div className="buttons">
-        <button onClick={toggleFavoriteVocabulary}>
-          {isFavorite ? "★ Favorited" : "☆ Favorite"}
-        </button>
-
-        <button onClick={() => setShowAnswer((prev) => !prev)}>
-          {showAnswer ? "Hide Answer" : "Show Answer"}
-        </button>
-
-        <button onClick={handleListenWord}>Listen word</button>
-
-        <button onClick={handleSpeakWord}>Speak word</button>
-
-        <button className="success" onClick={markAsKnown}>
+        <button type="button" className="btn-success" onClick={markAsKnown}>
           I know this
         </button>
 
-        <button className="warning" onClick={markAsReview}>
+        <button type="button" className="btn-secondary" onClick={markAsReview}>
           Need review
         </button>
 
-        <button onClick={goPrevious}>Previous</button>
+        <button type="button" className="btn-secondary" onClick={goPrevious}>
+          Previous
+        </button>
 
-        <button onClick={goNext}>Next</button>
+        <button type="button" className="btn-secondary" onClick={goNext}>
+          Next
+        </button>
       </div>
 
       {wordTranscript && (
-        <div className="speaking-check-box">
+        <div className="surface-card speaking-check-box">
           <h3>Vocabulary Speaking Check</h3>
 
           <p className="label">Target word:</p>
           <p className="transcript">{currentCard.japanese}</p>
-          
+
+          <p className="label">You said:</p>
           <p className="transcript">{wordTranscript}</p>
 
           <p className="label">Word score:</p>
-
           <div className="small-score-box">
             <span>{wordScore}</span>/100
           </div>
-
         </div>
       )}
 

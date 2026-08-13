@@ -38,13 +38,13 @@ export default function GrammarList({ onSelectGrammar }) {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const availableLevels = useMemo(() => getAvailableGrammarLevels(), []);
-  const openLesson = getOpenLessonFromParams(searchParams);
 
   const defaultLevel = availableLevels.includes("N3")
     ? "N3"
     : availableLevels[0] || "N3";
 
   const selectedLevel = searchParams.get("level") || defaultLevel;
+  const openLesson = getOpenLessonFromParams(searchParams);
 
   const setLevel = (level) => {
     setSearchParams({
@@ -113,7 +113,7 @@ export default function GrammarList({ onSelectGrammar }) {
         ))}
       </div>
 
-      <div className="dialogue-simple-list">
+      <div className="collapse-list dialogue-simple-list">
         {lessonGroups.length === 0 && (
           <div className="empty-dialogues">
             No grammar found for {selectedLevel}.
@@ -124,15 +124,15 @@ export default function GrammarList({ onSelectGrammar }) {
           const isOpen = openLesson === lesson;
 
           return (
-            <div key={lesson} className="lesson-group">
+            <div key={lesson} className="collapse-group lesson-group">
               <button
                 type="button"
-                className="lesson-header"
+                className="collapse-header lesson-header"
                 onClick={() => toggleLesson(lesson)}
               >
-                <span className="lesson-title">{lesson}</span>
+                <span className="collapse-title lesson-title">{lesson}</span>
 
-                <span className="lesson-count">
+                <span className="collapse-count lesson-count">
                   {grammarItems.length}{" "}
                   {grammarItems.length === 1 ? "grammar" : "grammar patterns"}
                 </span>
@@ -145,7 +145,7 @@ export default function GrammarList({ onSelectGrammar }) {
               </button>
 
               {isOpen && (
-                <div className="lesson-dialogues">
+                <div className="collapse-content lesson-dialogues">
                   {grammarItems.map((grammar) => {
                     const firstMeaning = grammar.meanings?.[0];
                     const meaningCount = grammar.meanings?.length || 0;
@@ -154,7 +154,7 @@ export default function GrammarList({ onSelectGrammar }) {
                       <button
                         key={grammar.id}
                         type="button"
-                        className="dialogue-simple-card grammar-simple-card"
+                        className="list-card dialogue-simple-card grammar-simple-card"
                         onClick={() => onSelectGrammar(grammar)}
                       >
                         <div className="grammar-list-card-content">

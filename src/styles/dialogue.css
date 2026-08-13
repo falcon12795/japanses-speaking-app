@@ -1,0 +1,261 @@
+.dialogue-simple-card {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.dialogue-status-icon {
+  margin-right: 12px;
+}
+
+/* =========================
+   DIALOGUE PRACTICE
+========================= */
+
+.dialogue-fixed-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #ffffff;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dialogue-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.dialogue-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dialogue-header h3 {
+  font-size: 54px;
+  margin: 12px 0;
+}
+
+.dialogue-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: #f1f5f9;
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dialogue-status-badge .dialogue-status-icon {
+  margin-right: 0;
+  font-size: 16px;
+}
+
+.dialogue-status-label {
+  color: var(--color-text);
+}
+
+.dialogue-lines-progress {
+  color: var(--color-soft-muted);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.dialogue-top-actions {
+  align-items: center;
+}
+
+.listen-all-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 4px;
+}
+
+.listen-all-track {
+  flex: 1;
+  height: 10px;
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.listen-all-fill {
+  height: 100%;
+  background: #3b82f6;
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
+
+.listen-all-counter {
+  font-size: 14px;
+  font-weight: 700;
+  color: #475569;
+  white-space: nowrap;
+  min-width: 36px;
+  text-align: center;
+}
+
+.practice-bar {
+  background: #f0fdf4;
+  border: 1px solid var(--color-success-border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.practice-fill {
+  background: var(--color-success);
+}
+
+.practice-role-badge {
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.dialogue-scroll-area {
+  height: calc(100vh - 320px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.dialogue-scroll-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dialogue-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dialogue-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: var(--radius-pill);
+}
+
+.dialogue-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--color-soft-muted);
+}
+
+.dialogue-box {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dialogue-line {
+  border: 1px solid #dbe3ef;
+  border-radius: var(--radius-panel);
+  padding: 10px;
+  background: #ffffff;
+}
+
+.dialogue-line.speaker-a {
+  border-left: 8px solid var(--color-primary);
+}
+
+.dialogue-line.speaker-b {
+  border-left: 8px solid var(--color-danger);
+}
+
+.speaker-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.speaker-action-area {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.speaker-action-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.speaker-badge {
+  padding: 16px 28px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border);
+  cursor: default;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.speaker-selected {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.dialogue-japanese {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.dialogue-reading {
+  text-align: center;
+  font-size: 24px;
+  color: var(--color-muted);
+}
+
+.dialogue-romaji {
+  text-align: center;
+  font-size: 22px;
+  color: #475569;
+}
+
+.dialogue-meaning {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 22px;
+}
+
+.hidden-dialogue-line {
+  background: repeating-linear-gradient(
+    -45deg,
+    #f1f5f9,
+    #f1f5f9 12px,
+    #e2e8f0 12px,
+    #e2e8f0 24px
+  );
+  padding: 15px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.line-speaking-result {
+  padding: 5px;
+  border-radius: var(--radius-lg);
+  background: #f0f1f3;
+  border: 1px solid var(--color-border);
+}
+
+.score-inline-row {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogue-result {
+  margin-top: 16px;
+  padding: 16px;
+}

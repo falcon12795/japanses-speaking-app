@@ -1,0 +1,294 @@
+/* =========================
+   GRAMMAR LIST
+========================= */
+
+.grammar-simple-card {
+  text-align: left;
+}
+
+.grammar-list-card-content {
+  width: 100%;
+}
+
+.grammar-list-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grammar-list-title {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.grammar-list-meaning {
+  color: #475569;
+  font-size: 17px;
+  margin: 8px 0 0 42px;
+  font-weight: 600;
+}
+
+.grammar-list-structure {
+  color: var(--color-muted);
+  font-size: 15px;
+  margin: 6px 0 0 42px;
+  font-weight: 700;
+}
+
+.grammar-list-meaning-count {
+  margin: 8px 0 0 42px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+/* =========================
+   GRAMMAR DETAIL
+========================= */
+
+.grammar-detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.grammar-detail-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.grammar-detail-title-area h2 {
+  margin: 10px 0 4px;
+  font-size: 38px;
+}
+
+.grammar-detail-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.grammar-section-block {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 22px;
+}
+
+.grammar-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.grammar-section-heading h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.grammar-section-number {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.grammar-detail-usage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.grammar-detail-usage-line {
+  margin: 0;
+  color: #334155;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.grammar-meaning-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.grammar-meaning-card {
+  background: var(--color-soft);
+  border: 1px solid #dbe3ef;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.grammar-meaning-card-toggle {
+  width: 100%;
+  background: transparent;
+  color: var(--color-text);
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+}
+
+.grammar-meaning-card-toggle:hover {
+  opacity: 1;
+}
+
+.grammar-meaning-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.grammar-meaning-card-header h4 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.grammar-meaning-index {
+  background: #dbeafe;
+  color: var(--color-primary-dark);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.grammar-meaning-title-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.grammar-meaning-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.grammar-meaning-card-body {
+  margin-top: 16px;
+}
+
+.grammar-meaning-row {
+  margin-top: 16px;
+}
+
+.grammar-label {
+  margin: 0 0 8px;
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.grammar-detail-meaning {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.grammar-detail-explanation {
+  margin: 0;
+  white-space: pre-line;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.grammar-example-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.grammar-example-card {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px;
+}
+
+.grammar-example-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.grammar-example-japanese {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.grammar-example-reading {
+  color: var(--color-muted);
+  margin: 4px 0;
+  font-size: 20px;
+}
+
+.grammar-example-meaning {
+  color: #475569;
+  margin: 4px 0;
+}
+
+.grammar-common-note-section {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.grammar-common-note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grammar-note-box {
+  background: var(--color-warning-soft);
+  border: 1px solid var(--color-warning-border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  color: var(--color-warning-text);
+  line-height: 1.7;
+}
+
+.grammar-note-box h4 {
+  margin: 0 0 8px;
+  color: var(--color-warning-text);
+}
+
+.grammar-note-box p {
+  margin: 0 0 6px;
+}
+
+.grammar-note-box p:last-child {
+  margin-bottom: 0;
+}
+
+.grammar-meaning-note-box {
+  background: var(--color-warning-soft);
+}

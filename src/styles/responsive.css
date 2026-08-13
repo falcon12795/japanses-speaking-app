@@ -1,0 +1,103 @@
+.mobile-menu-button,
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    z-index: 100;
+    transition: transform 0.2s;
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    z-index: 90;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+
+  .panel,
+  .card {
+    padding: 18px;
+  }
+
+  .dialogue-header h3 {
+    font-size: 36px;
+  }
+
+  .japanese {
+    font-size: 52px;
+  }
+
+  .kana {
+    font-size: 72px;
+  }
+
+  .speaking-target {
+    font-size: 36px;
+  }
+
+  .vocabulary-answer {
+    grid-template-columns: 1fr;
+  }
+
+  .example-japanese {
+    font-size: 24px;
+  }
+
+  .speaker-action-icons {
+    flex-wrap: wrap;
+  }
+
+  .dialogue-scroll-area {
+    height: calc(100vh - 360px);
+  }
+
+  .grammar-detail-header {
+    flex-direction: column;
+  }
+
+  .grammar-detail-title-area h2 {
+    font-size: 30px;
+  }
+
+  .grammar-section-heading h3 {
+    font-size: 24px;
+  }
+
+  .grammar-meaning-card-header h4,
+  .grammar-meaning-title-text {
+    font-size: 22px;
+  }
+
+  .grammar-example-japanese {
+    font-size: 22px;
+  }
+}
