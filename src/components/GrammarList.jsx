@@ -1,11 +1,11 @@
-import { useMemo } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { GRAMMAR } from "../data/grammar";
 import CollapseGroup from "./common/CollapseGroup";
 import EmptyState from "./common/EmptyState";
 import FilterBar from "./common/FilterBar";
-import ListCard from "./common/ListCard";
 import Panel from "./common/Panel";
+import Button from "./common/Button";
 
 function sortLevels(levels) {
   const order = {
@@ -39,7 +39,9 @@ function getOpenLessonFromParams(searchParams) {
 }
 
 export default function GrammarList({ onSelectGrammar }) {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedGrammarIds, setSelectedGrammarIds] = useState([]);
 
   const availableLevels = useMemo(() => getAvailableGrammarLevels(), []);
 
@@ -51,6 +53,7 @@ export default function GrammarList({ onSelectGrammar }) {
   const openLesson = getOpenLessonFromParams(searchParams);
 
   const setLevel = (level) => {
+    setSelectedGrammarIds([]);
     setSearchParams({
       level,
     });
@@ -91,14 +94,49 @@ export default function GrammarList({ onSelectGrammar }) {
     setSearchParams(nextParams);
   };
 
+  const isSelected = (grammarId) => {
+    return selectedGrammarIds.includes(grammarId);
+  };
+
+  const toggleGrammarSelection = (event, grammarId) => {
+    event.stopPropagation();
+
+    setSelectedGrammarIds((prev) => {
+      if (prev.includes(grammarId)) {
+        return prev.filter((id) => id !== grammarId);
+      }
+
+      return [...prev, grammarId];
+    });
+  };
+
+  const startTraining = () => {
+    if (selectedGrammarIds.length === 0) return;
+
+    const ids = selectedGrammarIds.join(",");
+
+    navigate(`/grammar-training?ids=${encodeURIComponent(ids)}`);
+  };
+
   return (
     <Panel>
-      <div className="vocabulary-list-header">
-        <h2>Grammar Library</h2>
+      <div className="grammar-list-top-row">
+        <div className="grammar-list-header-area">
+          <h2>Grammar Library</h2>
 
-        <p className="subtitle">
-          Choose a level and grammar pattern to study.
-        </p>
+          <p className="subtitle">
+            Choose a level and grammar pattern to study.
+          </p>
+        </div>
+
+        <Button
+          variant="primary"
+          className="grammar-training-button"
+          disabled={selectedGrammarIds.length === 0}
+          onClick={startTraining}
+        >
+          Training
+        </Button>
       </div>
 
       <FilterBar
@@ -107,6 +145,13 @@ export default function GrammarList({ onSelectGrammar }) {
         onChange={setLevel}
         className="jlpt-filter"
       />
+
+      {selectedGrammarIds.length > 0 && (
+        <div className="grammar-selected-summary">
+          Selected {selectedGrammarIds.length} grammar pattern
+          {selectedGrammarIds.length > 1 ? "s" : ""}
+        </div>
+      )}
 
       <div className="collapse-list dialogue-simple-list">
         {lessonGroups.length === 0 && (
@@ -131,12 +176,22 @@ export default function GrammarList({ onSelectGrammar }) {
               {grammarItems.map((grammar) => {
                 const firstMeaning = grammar.meanings?.[0];
                 const meaningCount = grammar.meanings?.length || 0;
+                const selected = isSelected(grammar.id);
 
                 return (
-                  <ListCard
+                  <div
                     key={grammar.id}
-                    className="dialogue-simple-card grammar-simple-card"
+                    className={`list-card dialogue-simple-card grammar-simple-card grammar-selectable-card ${
+                      selected ? "grammar-selected-card" : ""
+                    }`}
+                    role="button"
+                    tabIndex={0}
                     onClick={() => onSelectGrammar(grammar)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter") {
+                        onSelectGrammar(grammar);
+                      }
+                    }}
                   >
                     <div className="grammar-list-card-content">
                       <div className="grammar-list-card-title-row">
@@ -159,7 +214,22 @@ export default function GrammarList({ onSelectGrammar }) {
                         </p>
                       )}
                     </div>
-                  </ListCard>
+
+                    <button
+                      type="button"
+                      className={`grammar-select-button ${
+                        selected ? "selected" : ""
+                      }`}
+                      aria-label={
+                        selected
+                          ? `Unselect ${grammar.title}`
+                          : `Select ${grammar.title}`
+                      }
+                      onClick={(event) =>
+                        toggleGrammarSelection(event, grammar.id)
+                      }
+                    />
+                  </div>
                 );
               })}
             </CollapseGroup>

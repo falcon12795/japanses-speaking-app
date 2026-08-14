@@ -24,6 +24,7 @@ import { VOCABULARY } from "./data/vocabulary";
 import GrammarList from "./components/GrammarList";
 import GrammarDetail from "./components/GrammarDetail";
 import { GRAMMAR } from "./data/grammar";
+import GrammarTraining from "./components/GrammarTraining";
 
 const MENU_ITEMS = [
   {
@@ -100,7 +101,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
   );
 }
 
-function PageHeader({setSidebarOpen }) {
+function PageHeader({ setSidebarOpen }) {
   return (
     <header className="topbar">
       <button
@@ -375,6 +376,10 @@ export default function App() {
                 </section>
               </>
             }
+          />
+          <Route
+            path="/grammar-training"
+            element={<GrammarTraining />}
           />
 
           <Route

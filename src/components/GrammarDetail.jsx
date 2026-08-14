@@ -73,6 +73,8 @@ function normalizeGrammarNotes(grammar) {
 }
 
 export default function GrammarDetail({ grammar}) {
+  var nummber = 1;
+
   const [collapsedMeaningIds, setCollapsedMeaningIds] = useState(new Set());
 
   const meaningItems = useMemo(() => {
@@ -128,7 +130,7 @@ export default function GrammarDetail({ grammar}) {
       </div>
 
       {grammar.usage && (
-        <SectionBlock number="1" title="Cách sử dụng">
+        <SectionBlock number={nummber++} title="Cách sử dụng">
           <div className="grammar-detail-usage-list">
             {toLines(grammar.usage).map((line, index) => (
               <p key={index} className="grammar-detail-usage-line">
@@ -139,7 +141,7 @@ export default function GrammarDetail({ grammar}) {
         </SectionBlock>
       )}
 
-      <SectionBlock number="2" title="Ý nghĩa, cách sử dụng và ví dụ">
+      <SectionBlock number={nummber} title="Ý nghĩa, cách sử dụng và ví dụ">
         <div className="grammar-meaning-card-list">
           {meaningItems.map((meaningItem, meaningIndex) => {
             const meaningId = getMeaningId(meaningItem, meaningIndex);

@@ -137,8 +137,8 @@ export const N3_GRAMMAR = [
     "no": 2,
     "level": "N3",
     "lesson": "Lesson 1",
-    "title": "使役形",
     "usage": "Động từ nhóm 1: Chuyển đuôi う → あ + せる\n言う（いう）→ 言わせる、 話す（はなす）→ 話させる、 書く（かく）→ 書かせる\nĐộng từ nhóm 2: Chuyển đuôi る → させる\n食べる（たべる）→ 食べさせる、 見る（みる）→ 見させる、 起きる（おきる）→ 起きさせる\nĐộng từ nhóm 3 (bất quy tắc)\nする → させる、 来る（くる）→ 来させる（こさせる）",
+    "title": "使役形",
     "notes": [
       {
         "title": "注意",
@@ -267,6 +267,7 @@ export const N3_GRAMMAR = [
     "level": "N3",
     "lesson": "Lesson 1",
     "title": "〜ように、〜ような",
+    "usage": "",
     "notes": [],
     "meanings": [
       {
@@ -376,6 +377,284 @@ export const N3_GRAMMAR = [
             "reading": "",
             "english": "",
             "vietnamese": ""
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-004",
+    "no": 4,
+    "level": "N3",
+    "lesson": "Lesson 1",
+    "title": "〜ないと、〜なくちゃ",
+    "notes": [],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-004-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Phải làm gì đó",
+        "usage": "～ないと = ～ないといけない ; ～なくちゃ = ～なければならない",
+        "examples": [
+          {
+            "japanese": "明日は早く出かけるから、もう寝ないと。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Ngày mai phải ra ngoài sớm nên phải ngủ thôi."
+          },
+          {
+            "japanese": "試験まであと一ヶ月だ。頑張って勉強しないと。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Chỉ còn 1 tháng nữa là thi rồi, phải cố gắng học thôi."
+          },
+          {
+            "japanese": "田中さんにメールの返信をしなくちゃ。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Phải trả lời email cho anh Tanaka."
+          },
+          {
+            "japanese": "明日までに先生にレポートを出さなくちゃ。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Phải nộp báo cáo cho giáo viên trước ngày mai."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-005",
+    "no": 5,
+    "level": "N3",
+    "lesson": "Lesson 1",
+    "title": "〜ちゃう",
+    "notes": [
+      {
+        "title": "Biến đổi",
+        "lines": [
+          "～てしまう → ～ちゃう",
+          "～でしまう → ～じゃう",
+          "～てしまった → ～ちゃった",
+          "～でしまった → ～じゃった",
+          "～てしまいましょう → ～ちゃおう"
+        ]
+      }
+    ],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-005-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Cách nói thân mật của ～てしまう",
+        "usage": "Dùng trong hội thoại hàng ngày",
+        "examples": [
+          {
+            "japanese": "問題をしちゃった。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Lỡ làm bài rồi."
+          },
+          {
+            "japanese": "ビールを飲んじゃった。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Lỡ uống bia mất rồi."
+          },
+          {
+            "japanese": "結婚しちゃおう。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Cưới luôn đi."
+          },
+          {
+            "japanese": "車が混んじゃって、少し遅れます。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Xe đông quá nên tôi sẽ đến muộn một chút."
+          }
+        ],
+        "note": "「～ちゃおう」 mang nghĩa 'làm luôn đi'."
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-006",
+    "no": 6,
+    "level": "N3",
+    "lesson": "Lesson 1",
+    "title": "〜とく",
+    "notes": [
+      {
+        "title": "Biến đổi",
+        "lines": [
+          "ておく → とく",
+          "でおく → どく",
+          "ておかない → とかない"
+        ]
+      }
+    ],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-006-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Làm sẵn, chuẩn bị trước",
+        "usage": "Rút gọn của ～ておく",
+        "examples": [
+          {
+            "japanese": "テストで間違ったところを、ノートに書いとこう。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Ghi lại phần làm sai trong bài kiểm tra vào vở nhé."
+          },
+          {
+            "japanese": "これ洗濯しといて。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Giặt cái này giúp nhé."
+          },
+          {
+            "japanese": "トイレペーパーがもうすぐなくなるから、買っとかないと。",
+            "reading": "",
+            "english": "",
+            "vietnamese": "Giấy vệ sinh sắp hết nên phải mua trước."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-007",
+    "no": 7,
+    "level": "N3",
+    "lesson": "Lesson 1",
+    "title": "〜みたい",
+    "notes": [
+      {
+        "title": "注意",
+        "lines": [
+          "〜みたい có thể so sánh cả những sự vật không liên quan trực tiếp với nhau."
+        ]
+      }
+    ],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-007-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Giống như, hình như",
+        "usage": "[Danh từ/Tính từ/Động từ thể thường] + みたいだ / みたいに",
+        "examples": [
+          {
+            "japanese": "彼みたいな強い人が好きです。",
+            "vietnamese": "Tôi thích người mạnh mẽ như anh ấy."
+          },
+          {
+            "japanese": "貴方みたいな美しい人に会うのは初めてです。",
+            "vietnamese": "Đây là lần đầu tôi gặp người đẹp như bạn."
+          },
+          {
+            "japanese": "貴方は太陽みたいに明るい。",
+            "vietnamese": "Bạn rạng rỡ như mặt trời."
+          },
+          {
+            "japanese": "彼女は疲れているみたいだ。",
+            "vietnamese": "Có vẻ cô ấy mệt."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-008",
+    "no": 8,
+    "level": "N3",
+    "lesson": "Lesson 1",
+    "title": "〜らしい",
+    "notes": [],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-008-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Mang tính chất đặc trưng của ...",
+        "usage": "[Danh từ] + らしい",
+        "examples": [
+          {
+            "japanese": "今日は、春らしい暖かい日ですね。",
+            "vietnamese": "Hôm nay đúng là ngày ấm áp đặc trưng của mùa xuân."
+          },
+          {
+            "japanese": "私は女性らしい洋服はあまり着ない。",
+            "vietnamese": "Tôi không mặc quần áo quá nữ tính."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-009",
+    "no": 9,
+    "level": "N3",
+    "lesson": "Lesson 1",
+    "title": "〜っぽい",
+    "notes": [],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-009-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Có xu hướng, mang vẻ giống như",
+        "usage": "[Danh từ]っぽい / [Vます bỏ ます]っぽい",
+        "examples": [
+          {
+            "japanese": "私は白っぽい服を着ません。",
+            "vietnamese": "Tôi không mặc quần áo màu trắng nhạt."
+          },
+          {
+            "japanese": "彼は忘れっぽい人だ。",
+            "vietnamese": "Anh ấy là người hay quên."
+          },
+          {
+            "japanese": "会社にすごく怒りっぽい人がいます。",
+            "vietnamese": "Trong công ty có người rất dễ nổi nóng."
+          },
+          {
+            "japanese": "あの小学生、大人っぽい。",
+            "vietnamese": "Đứa trẻ tiểu học đó trông rất người lớn."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-010",
+    "no": 10,
+    "level": "N3",
+    "lesson": "Lesson 1",
+    "title": "まるで〜よう/みたい",
+    "notes": [],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-010-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Cứ như thể là",
+        "usage": "まるで + ～ようだ / ～みたいだ",
+        "examples": [
+          {
+            "japanese": "合格した。まるで夢のようだ。",
+            "vietnamese": "Đậu rồi, cứ như là mơ."
+          },
+          {
+            "japanese": "彼の日本語はまるで日本人が話しているみたいに聞こえる。",
+            "vietnamese": "Tiếng Nhật của anh ấy nghe như người Nhật đang nói."
+          },
+          {
+            "japanese": "田中さんは歌が上手ですね。まるで歌手のようだ。",
+            "vietnamese": "Anh Tanaka hát hay như ca sĩ vậy."
           }
         ],
         "note": ""
