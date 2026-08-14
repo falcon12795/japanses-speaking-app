@@ -1,15 +1,31 @@
 export function speakJapaneseText(text) {
-  if (!window.speechSynthesis) {
-    throw new Error("Text-to-speech is not supported in this browser.");
-  }
-
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "ja-JP";
-  utterance.rate = 0.85;
-  utterance.pitch = 1;
+  if (!text) return;
 
   window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utterance);
+
+  const utterance =
+    new SpeechSynthesisUtterance(text);
+
+  utterance.lang = "ja-JP";
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+
+  const voices =
+    window.speechSynthesis.getVoices();
+
+  const japaneseVoice =
+    voices.find(
+      (voice) =>
+        voice.lang === "ja-JP"
+    );
+
+  if (japaneseVoice) {
+    utterance.voice = japaneseVoice;
+  }
+
+  window.speechSynthesis.speak(
+    utterance
+  );
 }
 
 export function recognizeJapaneseSpeech() {
