@@ -278,10 +278,7 @@ export default function GrammarDetail({ grammar}) {
               return (
                 <div
                   key={noteIndex}
-                  className="grammar-note-box grammar-common-note-box"
                 >
-                  {noteItem.title && <h4>{noteItem.title}</h4>}
-
                   {lines.map((line, lineIndex) => (
                     <p key={lineIndex}>{line}</p>
                   ))}

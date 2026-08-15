@@ -1,0 +1,37 @@
+{
+    "id": "",
+    "no": 1,
+    "level": "",
+    "lesson": "",
+    "title": "",
+    "usage": "",
+    "notes": [
+        {
+            "title": "注意",
+            "lines": []
+        }
+    ],
+    "meanings": [
+        {
+            "id": "",
+            "title": "",
+            "meaning": "",
+            "usage": "",
+            "examples": [
+                {
+                    "japanese": "",
+                    "reading": "",
+                    "english": "",
+                    "vietnamese": ""
+                },
+                {
+                    "japanese": "",
+                    "reading": "",
+                    "english": "",
+                    "vietnamese": ""
+                }
+            ],
+            "note": ""
+        }
+    ]
+}
