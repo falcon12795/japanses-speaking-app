@@ -78,6 +78,16 @@ export async function speakJapaneseText(
 
 export function recognizeJapaneseSpeech() {
   return new Promise((resolve, reject) => {
+    console.log(
+      "SpeechRecognition",
+      window.SpeechRecognition
+    );
+
+    console.log(
+      "webkitSpeechRecognition",
+      window.webkitSpeechRecognition
+    );
+
     const SpeechRecognition =
       window.SpeechRecognition ||
       window.webkitSpeechRecognition;
@@ -85,7 +95,7 @@ export function recognizeJapaneseSpeech() {
     if (!SpeechRecognition) {
       reject(
         new Error(
-          "Speech recognition is not supported. Try Chrome or Edge."
+          "SpeechRecognition NOT supported"
         )
       );
       return;
@@ -95,18 +105,35 @@ export function recognizeJapaneseSpeech() {
       new SpeechRecognition();
 
     recognition.lang = "ja-JP";
-    recognition.interimResults = false;
-    recognition.continuous = false;
-    recognition.maxAlternatives = 1;
+
+    recognition.onstart = () => {
+      console.log("onstart");
+    };
+
+    recognition.onaudiostart = () => {
+      console.log("onaudiostart");
+    };
+
+    recognition.onspeechstart = () => {
+      console.log("onspeechstart");
+    };
 
     recognition.onresult = (event) => {
+      console.log(
+        "onresult",
+        event.results[0][0].transcript
+      );
+
       resolve(
         event.results[0][0].transcript
       );
     };
 
     recognition.onerror = (event) => {
-      reject(new Error(event.error));
+      console.error(event);
+      reject(
+        new Error(event.error)
+      );
     };
 
     recognition.start();

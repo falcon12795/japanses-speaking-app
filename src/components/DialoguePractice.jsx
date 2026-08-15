@@ -553,6 +553,15 @@ export default function DialoguePractice({
   };
 
   const practiceDialogue = async () => {
+    if (
+      !window.SpeechRecognition &&
+      !window.webkitSpeechRecognition
+    ) {
+      setStatus(
+        "Practice mode requires Chrome browser with Speech Recognition support."
+      );
+      return;
+    }
     if (isPracticing) {
       practiceAbortRef.current = true;
       window.speechSynthesis?.cancel();
@@ -973,8 +982,15 @@ export default function DialoguePractice({
 
                       <IconButton
                         title="Speak"
+                        disabled={
+                          !(
+                            window.SpeechRecognition ||
+                            window.webkitSpeechRecognition
+                          )
+                        }
                         onClick={() => speakLine(line)}
                       >
+
                         <Mic size={22} strokeWidth={2.5} />
                       </IconButton>
 
