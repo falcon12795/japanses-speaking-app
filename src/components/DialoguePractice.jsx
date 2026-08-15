@@ -1,4 +1,9 @@
-import { useMemo, useRef, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import {
   Eye,
   EyeOff,
@@ -20,7 +25,7 @@ import ScoreBox from "./common/ScoreBox";
 export default function DialoguePractice({
   dialogue,
   progress = {},
-  onProgressChange = () => {},
+  onProgressChange = () => { },
   onPreviousDialogue,
   onNextDialogue,
 }) {
@@ -49,6 +54,17 @@ export default function DialoguePractice({
   const [practiceRetryLineId, setPracticeRetryLineId] = useState(null);
   const [practiceStartIndex, setPracticeStartIndex] = useState(0);
   const practiceAbortRef = useRef(false);
+  useEffect(() => {
+    if (!window.speechSynthesis) {
+      return;
+    }
+
+    speechSynthesis.getVoices();
+
+    return () => {
+      speechSynthesis.cancel();
+    };
+  }, []);
 
   const currentDialogue = dialogue;
 
@@ -96,11 +112,11 @@ export default function DialoguePractice({
 
     const avgScore = allLinesSpoken
       ? Math.round(
-          spokenLines.reduce(
-            (sum, line) => sum + (lineResults[line.id]?.score || 0),
-            0
-          ) / total
-        )
+        spokenLines.reduce(
+          (sum, line) => sum + (lineResults[line.id]?.score || 0),
+          0
+        ) / total
+      )
       : null;
 
     const savedCompleted = (progress.completedDialogues || []).includes(
@@ -351,56 +367,71 @@ export default function DialoguePractice({
     });
   };
 
-  const listenAll = async () => {
-    if (isListeningAll) {
-      window.speechSynthesis?.cancel();
-      listenAllAbortRef.current = true;
-      setIsListeningAll(false);
-      setIsPausedListenAll(false);
-      setStatus("Listen All stopped.");
-      return;
-    }
+  const stopListenAll = () => {
+    listenAllAbortRef.current = true;
 
-    if (!window.speechSynthesis) {
-      setStatus("Text-to-speech is not supported in this browser.");
-      return;
-    }
+    speechSynthesis.cancel();
 
-    listenAllAbortRef.current = false;
-    setIsListeningAll(true);
+    setIsListeningAll(false);
+
     setIsPausedListenAll(false);
+
+    setActiveLineId(null);
 
     setListenAllProgress({
       current: 0,
-      total: currentDialogue.lines.length,
+      total: 0,
     });
-
-    for (const [idx, line] of currentDialogue.lines.entries()) {
-      if (listenAllAbortRef.current) break;
-
-      setActiveLineId(line.id);
-
-      setListenAllProgress({
-        current: idx + 1,
-        total: currentDialogue.lines.length,
-      });
-
-      setStatus(
-        `(${idx + 1}/${currentDialogue.lines.length}) Playing ${line.speaker}...`
-      );
-
-      await speakLineText(line);
-    }
-
-    if (!listenAllAbortRef.current) {
-      setStatus("Finished listening to all lines.");
-      setActiveLineId(null);
-    }
-
-    setIsListeningAll(false);
-    setIsPausedListenAll(false);
   };
 
+  const playAllLines = async (
+    startIndex = 0
+  ) => {
+    if (!currentDialogue?.lines?.length) {
+      stopListenAll();
+      return;
+    }
+
+    if (
+      startIndex >=
+      currentDialogue.lines.length
+    ) {
+      stopListenAll();
+      return;
+    }
+
+    if (listenAllAbortRef.current) {
+      stopListenAll();
+      return;
+    }
+
+    const line =
+      currentDialogue.lines[startIndex];
+
+    setActiveLineId(line.id);
+
+    setListenAllProgress({
+      current: startIndex + 1,
+      total:
+        currentDialogue.lines.length,
+    });
+
+    await new Promise((resolve) => {
+      speakJapaneseText(
+        line.japanese,
+        {
+          cancelBeforeSpeak: false,
+
+          onEnd: resolve,
+          onError: resolve,
+        }
+      );
+    });
+
+    if (!listenAllAbortRef.current) {
+      playAllLines(startIndex + 1);
+    }
+  };
   const togglePauseListenAll = () => {
     if (!window.speechSynthesis) return;
 
@@ -426,9 +457,9 @@ export default function DialoguePractice({
 
     const avgScore = allLinesSpoken
       ? spokenLines.reduce(
-          (sum, line) => sum + (nextLineResults[line.id]?.score || 0),
-          0
-        ) / spokenLines.length
+        (sum, line) => sum + (nextLineResults[line.id]?.score || 0),
+        0
+      ) / spokenLines.length
       : 0;
 
     const isCompleted = allLinesSpoken && avgScore >= 80;
@@ -485,9 +516,9 @@ export default function DialoguePractice({
     const roleAverageScore =
       roleScores.length > 0
         ? Math.round(
-            roleScores.reduce((sum, score) => sum + score, 0) /
-              roleScores.length
-          )
+          roleScores.reduce((sum, score) => sum + score, 0) /
+          roleScores.length
+        )
         : 0;
 
     const currentBestScore =
@@ -807,7 +838,29 @@ export default function DialoguePractice({
 
           <Button
             variant={isListeningAll ? "primary" : "secondary"}
-            onClick={listenAll}
+            onClick={() => {
+              if (isListeningAll) {
+                stopListenAll();
+                return;
+              }
+
+              speechSynthesis.cancel();
+
+              listenAllAbortRef.current =
+                false;
+
+              setIsListeningAll(true);
+
+              setIsPausedListenAll(false);
+
+              setListenAllProgress({
+                current: 0,
+                total:
+                  currentDialogue.lines.length,
+              });
+
+              playAllLines(0);
+            }}
           >
             {isListeningAll ? "⏹ Stop" : "🔊 Listen All"}
           </Button>
@@ -846,12 +899,11 @@ export default function DialoguePractice({
               <div
                 className="listen-all-fill"
                 style={{
-                  width: `${
-                    listenAllProgress.total > 0
+                  width: `${listenAllProgress.total > 0
                       ? (listenAllProgress.current / listenAllProgress.total) *
-                        100
+                      100
                       : 0
-                  }%`,
+                    }%`,
                 }}
               />
             </div>
@@ -876,12 +928,11 @@ export default function DialoguePractice({
               <div
                 className="listen-all-fill practice-fill"
                 style={{
-                  width: `${
-                    practiceProgress.total > 0
+                  width: `${practiceProgress.total > 0
                       ? (practiceProgress.current / practiceProgress.total) *
-                        100
+                      100
                       : 0
-                  }%`,
+                    }%`,
                 }}
               />
             </div>
@@ -907,9 +958,8 @@ export default function DialoguePractice({
             return (
               <div
                 key={line.id}
-                className={`dialogue-line ${
-                  line.speaker === "A" ? "speaker-a" : "speaker-b"
-                } ${activeLineId === line.id ? "active-line" : ""}`}
+                className={`dialogue-line ${line.speaker === "A" ? "speaker-a" : "speaker-b"
+                  } ${activeLineId === line.id ? "active-line" : ""}`}
               >
                 <div className="speaker-toolbar">
                   <div className="speaker-action-area">
