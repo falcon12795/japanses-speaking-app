@@ -8,6 +8,58 @@ function shuffleArray(array) {
     return [...array].sort(() => Math.random() - 0.5);
 }
 
+function groupQuestionsByGrammar(questions) {
+    return questions.reduce((grouped, question) => {
+        const grammarId = question.grammarId;
+
+        if (!grouped[grammarId]) {
+            grouped[grammarId] = [];
+        }
+
+        grouped[grammarId].push(question);
+
+        return grouped;
+    }, {});
+}
+
+function pickMixedQuestions(questions, limit = 10) {
+    const grouped = groupQuestionsByGrammar(questions);
+
+    const grammarIds = shuffleArray(Object.keys(grouped));
+
+    const shuffledGroups = Object.fromEntries(
+        grammarIds.map((grammarId) => [
+            grammarId,
+            shuffleArray(grouped[grammarId]),
+        ])
+    );
+
+    const pickedQuestions = [];
+    let hasRemainingQuestions = true;
+
+    while (
+        pickedQuestions.length < limit &&
+        hasRemainingQuestions
+    ) {
+        hasRemainingQuestions = false;
+
+        for (const grammarId of grammarIds) {
+            if (pickedQuestions.length >= limit) {
+                break;
+            }
+
+            const group = shuffledGroups[grammarId];
+
+            if (group.length > 0) {
+                pickedQuestions.push(group.shift());
+                hasRemainingQuestions = true;
+            }
+        }
+    }
+
+    return pickedQuestions;
+}
+
 function getAnswerIndex(question) {
     if (typeof question.answer === "number") {
         return question.answer;
@@ -22,7 +74,8 @@ export default function GrammarTraining() {
     const [answers, setAnswers] = useState({});
     const [submitted, setSubmitted] = useState(false);
     const [shuffleKey, setShuffleKey] = useState(0);
-
+    // const [previousQuestionIds, setPreviousQuestionIds] = useState([]);
+    const [usedQuestionIds, setUsedQuestionIds] = useState([]);
     const selectedGrammarIds = useMemo(() => {
         const ids = searchParams.get("ids") || "";
 
@@ -47,8 +100,20 @@ export default function GrammarTraining() {
             }));
         });
 
-        return shuffleArray(allQuestions).slice(0, 10);
-    }, [selectedGrammarIds, shuffleKey]);
+        if (allQuestions.length === 0) {
+            return [];
+        }
+
+        let availableQuestions = allQuestions.filter(
+            (question) => !usedQuestionIds.includes(question.id)
+        );
+
+        if (availableQuestions.length < 10) {
+            availableQuestions = allQuestions;
+        }
+
+        return pickMixedQuestions(availableQuestions, 10);
+    }, [selectedGrammarIds, usedQuestionIds, shuffleKey]);
 
     const handleSelectAnswer = (questionId, choiceIndex) => {
         if (submitted) return;
@@ -74,6 +139,16 @@ export default function GrammarTraining() {
         );
 
     const retryQuiz = () => {
+        setUsedQuestionIds((prev) => {
+            const nextUsedIds = new Set(prev);
+
+            questions.forEach((question) => {
+                nextUsedIds.add(question.id);
+            });
+
+            return Array.from(nextUsedIds);
+        });
+
         setAnswers({});
         setSubmitted(false);
         setShuffleKey((prev) => prev + 1);

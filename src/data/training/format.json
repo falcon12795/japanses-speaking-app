@@ -1,0 +1,138 @@
+{
+  "n3-grammar-format-001": {
+    "grammarId": "n3-grammar-format-001",
+    "title": "受身形",
+    "questions": [
+      {
+        "id": "n3-grammar-format-001-q01",
+        "grammarId": "n3-grammar-format-001",
+        "question": "私は昨日、知らない人に足をごめんなさいと___。",
+        "choices": [
+          "踏まれました",
+          "踏ませました",
+          "踏みました",
+          "踏んでしまいました"
+        ],
+        "answer": 0,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q02",
+        "grammarId": "n3-grammar-format-001",
+        "question": "このビルは2010年に___。",
+        "choices": [
+          "建てました",
+          "建てられました",
+          "建っていました",
+          "建てさせました"
+        ],
+        "answer": 1,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q03",
+        "grammarId": "n3-grammar-format-001",
+        "question": "テストの点数が悪くて、先生に___。",
+        "choices": [
+          "叱られました",
+          "叱らせました",
+          "叱りました",
+          "叱ってくれました"
+        ],
+        "answer": 0,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q04",
+        "grammarId": "n3-grammar-format-001",
+        "question": "日本の漫画は世界中でよく___。",
+        "choices": [
+          "読みます",
+          "読まされます",
+          "読まれています",
+          "読みたいです"
+        ],
+        "answer": 2,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q05",
+        "grammarId": "n3-grammar-format-001",
+        "question": "後ろの人に名前を___、びっくりしました。",
+        "choices": [
+          "呼んで",
+          "呼ばれて",
+          "呼ばせて",
+          "呼べば"
+        ],
+        "answer": 1,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q06",
+        "grammarId": "n3-grammar-format-001",
+        "question": "雨に___、服が濡れてしまいました。",
+        "choices": [
+          "降られて",
+          "降って",
+          "降らせて",
+          "降ると"
+        ],
+        "answer": 0,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q07",
+        "grammarId": "n3-grammar-format-001",
+        "question": "泥棒に財布を___、困っています。",
+        "choices": [
+          "盗んで",
+          "盗ませて",
+          "盗まれて",
+          "盗みたくて"
+        ],
+        "answer": 2,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q08",
+        "grammarId": "n3-grammar-format-001",
+        "question": "この歌は多くの若者に___います。",
+        "choices": [
+          "愛して",
+          "愛されて",
+          "愛させて",
+          "愛そうと"
+        ],
+        "answer": 1,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q09",
+        "grammarId": "n3-grammar-format-001",
+        "question": "友達に秘密をみんなに___、本当にショックだ。",
+        "choices": [
+          "言われて",
+          "言わせて",
+          "言って",
+          "言わなくて"
+        ],
+        "answer": 0,
+        "explanation": ""
+      },
+      {
+        "id": "n3-grammar-format-001-q10",
+        "grammarId": "n3-grammar-format-001",
+        "question": "母に日記を___、恥ずかしかったです。",
+        "choices": [
+          "読まれて",
+          "読ませて",
+          "読んで",
+          "読まされて"
+        ],
+        "answer": 0,
+        "explanation": ""
+      }
+    ]
+  }
+}

@@ -452,25 +452,25 @@ export const N3_GRAMMAR = [
           {
             "japanese": "問題をしちゃった。",
             "reading": "もんだいをしちゃった。",
-            "english": "",
+            "english": "I accidentally did the problem.",
             "vietnamese": "Lỡ làm bài rồi."
           },
           {
             "japanese": "ビールを飲んじゃった。",
             "reading": "びーるをのんじゃった。",
-            "english": "",
+            "english": "I accidentally drank the beer.",
             "vietnamese": "Lỡ uống bia mất rồi."
           },
           {
             "japanese": "結婚しちゃおう。",
             "reading": "けっこんしちゃおう。",
-            "english": "",
+            "english": "Let's just get married!",
             "vietnamese": "Cưới luôn đi."
           },
           {
             "japanese": "車が混んじゃって、少し遅れます。",
             "reading": "くるまがこんじゃって、すこしおくれます。",
-            "english": "",
+            "english": "The traffic got congested, so I will be a little late.",
             "vietnamese": "Xe đông quá nên tôi sẽ đến muộn một chút."
           }
         ],
@@ -504,19 +504,19 @@ export const N3_GRAMMAR = [
           {
             "japanese": "テストで間違ったところを、ノートに書いとこう。",
             "reading": "テストでまちがったところを、ノートにかいとこう。",
-            "english": "",
+            "english": "Let me write down the parts I got wrong in the test in my notebook.",
             "vietnamese": "Ghi lại phần làm sai trong bài kiểm tra vào vở nhé."
           },
           {
             "japanese": "これ洗濯しといて。",
             "reading": "これせんたくしといて。",
-            "english": "",
+            "english": "Please wash this for me.",
             "vietnamese": "Giặt cái này giúp nhé."
           },
           {
             "japanese": "トイレペーパーがもうすぐなくなるから、買っとかないと。",
             "reading": "といれぺーぱーがもうすぐなくなるから、かっとかないと。",
-            "english": "",
+            "english": "The toilet paper is running out soon, so I need to buy it in advance.",
             "vietnamese": "Giấy vệ sinh sắp hết nên phải mua trước."
           }
         ],
@@ -546,22 +546,26 @@ export const N3_GRAMMAR = [
         "examples": [
           {
             "japanese": "彼みたいな強い人が好きです。",
-            "speaking": "かれみたいなつよいひとがすきです。",
+            "reading": "かれみたいなつよいひとがすきです。",
+            "english": "I like a strong person like him.",
             "vietnamese": "Tôi thích người mạnh mẽ như anh ấy."
           },
           {
             "japanese": "貴方みたいな美しい人に会うのは初めてです。",
-            "speaking": "あなたみたいなうつくしいひとにあうのははじめてです。",
+            "reading": "あなたみたいなうつくしいひとにあうのははじめてです。",
+            "english": "This is the first time I've met someone beautiful like you.",
             "vietnamese": "Đây là lần đầu tôi gặp người đẹp như bạn."
           },
           {
             "japanese": "貴方は太陽みたいに明るい。",
-            "speaking": "あなたはたいようみたいにあかるい。",
+            "reading": "あなたはたいようみたいにあかるい。",
+            "english": "You are as bright as the sun.",
             "vietnamese": "Bạn rạng rỡ như mặt trời."
           },
           {
             "japanese": "彼女は疲れているみたいだ。",
-            "speaking": "かのじょはつかれているみたいだ。",
+            "reading": "かのじょはつかれているみたいだ。",
+            "english": "It seems like she is tired.",
             "vietnamese": "Có vẻ cô ấy mệt."
           }
         ],
@@ -585,12 +589,14 @@ export const N3_GRAMMAR = [
         "examples": [
           {
             "japanese": "今日は、春らしい暖かい日ですね。",
-            "speaking": "きょうは、はるらしいあたたかいひですね。",
+            "reading": "きょうは、はるらしいあたたかいひですね。",
+            "english": "Today is a warm day characteristic of spring, isn't it?",
             "vietnamese": "Hôm nay đúng là ngày ấm áp đặc trưng của mùa xuân."
           },
           {
             "japanese": "私は女性らしい洋服はあまり着ない。",
-            "speaking": "わたしはじょせいらしいようふくはあまりきない。",
+            "reading": "わたしはじょせいらしいようふくはあまりきない。",
+            "english": "I don't wear very feminine clothes.",
             "vietnamese": "Tôi không mặc quần áo quá nữ tính."
           }
         ],
@@ -614,22 +620,26 @@ export const N3_GRAMMAR = [
         "examples": [
           {
             "japanese": "私は白っぽい服を着ません。",
-            "speaking": "わたしはしろっぽいふくをきません。",
+            "reading": "わたしはしろっぽいふくをきません。",
+            "english": "I don't wear whitish clothes.",
             "vietnamese": "Tôi không mặc quần áo màu trắng nhạt."
           },
           {
             "japanese": "彼は忘れっぽい人だ。",
-            "speaking": "かれはわすれっぽいひとだ。",
+            "reading": "かれはわすれっぽいひとだ。",
+            "english": "He is a forgetful person.",
             "vietnamese": "Anh ấy là người hay quên."
           },
           {
             "japanese": "会社にすごく怒りっぽい人がいます。",
-            "speaking": "かいしゃにすごくおこりっぽいひとがいます。",
+            "reading": "かいしゃにすごくおこりっぽいひとがいます。",
+            "english": "There is a very easily angered person in the company.",
             "vietnamese": "Trong công ty có người rất dễ nổi nóng."
           },
           {
             "japanese": "あの小学生、大人っぽい。",
-            "speaking": "あのしょうがくせい、おとなっぽい。",
+            "reading": "あのしょうがくせい、おとなっぽい。",
+            "english": "That elementary school student looks very mature.",
             "vietnamese": "Đứa trẻ tiểu học đó trông rất người lớn."
           }
         ],
@@ -653,17 +663,20 @@ export const N3_GRAMMAR = [
         "examples": [
           {
             "japanese": "合格した。まるで夢のようだ。",
-            "speaking": "ごうかくした。まるでゆめのようだ。",
+            "reading": "ごうかくした。まるでゆめのようだ。",
+            "english": "I passed. It's like a dream.",
             "vietnamese": "Đậu rồi, cứ như là mơ."
           },
           {
             "japanese": "彼の日本語はまるで日本人が話しているみたいに聞こえる。",
-            "speaking": "かれのにほんごはまるでにほんじんがはなしているみたいにきこえる。",
+            "reading": "かれのにほんごはまるでにほんじんがはなしているみたいにきこえる。",
+            "english": "His Japanese sounds just like a Japanese person speaking.",
             "vietnamese": "Tiếng Nhật của anh ấy nghe như người Nhật đang nói."
           },
           {
             "japanese": "田中さんは歌が上手ですね。まるで歌手のようだ。",
-            "speaking": "たなかさんはうたがじょうずですね。まるでかしゅのようだ。",
+            "reading": "たなかさんはうたがじょうずですね。まるでかしゅのようだ。",
+            "english": "Tanaka sings so well. He sounds just like a singer.",
             "vietnamese": "Anh Tanaka hát hay như ca sĩ vậy."
           }
         ],
@@ -676,7 +689,7 @@ export const N3_GRAMMAR = [
     no: 11,
     level: "N3",
     lesson: "Lesson 2",
-    title: "〜ようとする",
+    title: "〜ようとする/〜ようとしない",
     notes: [],
     meanings: [
       {
@@ -707,17 +720,7 @@ export const N3_GRAMMAR = [
           }
         ],
         note: "Diễn tả ý định hoặc hành động đang chuẩn bị xảy ra."
-      }
-    ]
-  },
-  {
-    id: "n3-grammar-format-012",
-    no: 12,
-    level: "N3",
-    lesson: "Lesson 2",
-    title: "〜ようとしない",
-    notes: [],
-    meanings: [
+      },
       {
         id: "n3-grammar-format-012-meaning-01",
         title: "Ý nghĩa 1",
@@ -750,8 +753,8 @@ export const N3_GRAMMAR = [
     ]
   },
   {
-    "id": "n3-grammar-format-013",
-    "no": 13,
+    "id": "n3-grammar-format-012",
+    "no": 12,
     "level": "N3",
     "lesson": "Lesson 2",
     "title": "～ ばいい/ ～ たらいい/ ～ といい",
@@ -767,7 +770,7 @@ export const N3_GRAMMAR = [
     ],
     "meanings": [
       {
-        "id": "n3-grammar-format-013-meaning-01",
+        "id": "n3-grammar-format-012-meaning-01",
         "title": "Ý nghĩa 1",
         "meaning": "Đưa ra lời khuyên hoặc gợi ý, đề xuất.",
         "usage": "",
@@ -796,8 +799,8 @@ export const N3_GRAMMAR = [
     ]
   },
   {
-    "id": "n3-grammar-format-014",
-    "no": 14,
+    "id": "n3-grammar-format-013",
+    "no": 13,
     "level": "N3",
     "lesson": "Lesson 2",
     "title": "〜ばかり",
@@ -805,7 +808,7 @@ export const N3_GRAMMAR = [
     "notes": [],
     "meanings": [
       {
-        "id": "n3-grammar-format-014-meaning-01",
+        "id": "n3-grammar-format-013-meaning-01",
         "title": "Ý nghĩa 1",
         "meaning": "Chỉ, chỉ có, chỉ toàn là",
         "usage": "[Danh từ] + ばかり/ ばかりだ/ ばかりで \n [Danh từ 1] + ばかりの ＋ [Danh từ 2]",
@@ -826,7 +829,7 @@ export const N3_GRAMMAR = [
         "note": ""
       },
       {
-        "id": "n3-grammar-format-014-meaning-02",
+        "id": "n3-grammar-format-013-meaning-02",
         "title": "Ý nghĩa 2",
         "meaning": "Chỉ làm gì, chỉ toàn làm gì",
         "usage": "[Động từ thể て] + ばかり/ ばかりだ/ ばかりの\n [Động từ thể て] + ばかりいる",
@@ -855,25 +858,19 @@ export const N3_GRAMMAR = [
     ]
   },
   {
-    "id": "n3-grammar-format-015",
-    "no": 15,
+    "id": "n3-grammar-format-014",
+    "no": 14,
     "level": "N3",
     "lesson": "Lesson 2",
-    "title": "〜さえ",
-    "usage": "[Danh từ] + (Trợ từ) さえ/ でさえ",
-    "notes": [
-      {
-        "lines": [
-          "Mẫu câu dùng để nhấn mạnh điều gì đó là dĩ nhiên. 「でさえ」 mang nghĩa nhấn mạnh hơn 「さえ」"
-        ]
-      },
-    ],
+    "title": "〜さえ/～ さえ ～ ば",
+    "usage": "",
+    "notes": [],
     "meanings": [
       {
-        "id": "n3-grammar-format-015-meaning-01",
+        "id": "n3-grammar-format-014-meaning-01",
         "title": "Ý nghĩa 1",
         "meaning": "Ngay cả, thậm chí.",
-        "usage": "",
+        "usage": "[Danh từ] + (Trợ từ) さえ/ でさえ",
         "examples": [
           {
             "japanese": "お金がなく、パンさえ買えない。",
@@ -888,24 +885,13 @@ export const N3_GRAMMAR = [
             "vietnamese": "Ngay cả học sinh tiểu học cũng có thể hiểu vấn đề này."
           }
         ],
-        "note": ""
-      }
-    ]
-  },
-  {
-    "id": "n3-grammar-format-016",
-    "no": 16,
-    "level": "N3",
-    "lesson": "Lesson 2",
-    "title": "～ さえ ～ ば",
-    "usage": "V ます + さえすれば/ さえしなければ\nV て形 + さえいれば\nい-形→ く/ な-形→ で/ 名 + で + さえあれば/ さえなければ",
-    "notes": [],
-    "meanings": [
+        "note": "Mẫu câu dùng để nhấn mạnh điều gì đó là dĩ nhiên. 「でさえ」 mang nghĩa nhấn mạnh hơn 「さえ」"
+      },
       {
-        "id": "n3-grammar-format-016-meaning-01",
-        "title": "Ý nghĩa 1",
+        "id": "n3-grammar-format-014-meaning-02",
+        "title": "Ý nghĩa 2",
         "meaning": "Chỉ cần… thì sẽ…",
-        "usage": "",
+        "usage": "V ます + さえすれば/ さえしなければ\n V て形 + さえいれば\n い-形→ く/ な-形→ で/ 名 + で + さえあれば/ さえなければ",
         "examples": [
           {
             "japanese": "インスタントラーメンはお湯を入れさえすれば、食べられる便利な食品だ。",
@@ -925,8 +911,8 @@ export const N3_GRAMMAR = [
     ]
   },
   {
-    "id": "n3-grammar-format-017",
-    "no": 17,
+    "id": "n3-grammar-format-015",
+    "no": 15,
     "level": "N3",
     "lesson": "Lesson 2",
     "title": "〜こそ",
@@ -934,7 +920,7 @@ export const N3_GRAMMAR = [
     "notes": [],
     "meanings": [
       {
-        "id": "n3-grammar-format-017-meaning-01",
+        "id": "n3-grammar-format-015-meaning-01",
         "title": "Ý nghĩa 1",
         "meaning": "Chính là/ Nhất định là",
         "usage": "",
@@ -963,8 +949,8 @@ export const N3_GRAMMAR = [
     ]
   },
   {
-    "id": "n3-grammar-format-018",
-    "no": 18,
+    "id": "n3-grammar-format-016",
+    "no": 16,
     "level": "N3",
     "lesson": "Lesson 2",
     "title": "〜ところです",
@@ -991,7 +977,7 @@ export const N3_GRAMMAR = [
     ],
     "meanings": [
       {
-        "id": "n3-grammar-format-018-meaning-01",
+        "id": "n3-grammar-format-016-meaning-01",
         "title": "Ý nghĩa 1",
         "meaning": "Việc gì đó sắp bắt đầu \n Mẫu câu này thường dùng kèm với 「これから」、「今から」/ 「ちょうど今から」",
         "usage": "[Động từ thể từ điển] + ところだ/ ところです",
@@ -1018,7 +1004,7 @@ export const N3_GRAMMAR = [
         "note": ""
       },
       {
-        "id": "n3-grammar-format-018-meaning-02",
+        "id": "n3-grammar-format-016-meaning-02",
         "title": "Ý nghĩa 2",
         "meaning": "Việc gì đó đang diễn ra \n ＊「って」là cách nói ngắn của 「と言いました」",
         "usage": "[Động từ thể ている] + ところだ/ ところです",
@@ -1045,7 +1031,7 @@ export const N3_GRAMMAR = [
         "note": ""
       },
       {
-        "id": "n3-grammar-format-018-meaning-03",
+        "id": "n3-grammar-format-016-meaning-03",
         "title": "Ý nghĩa 3",
         "meaning": "Việc gì đó đã xảy ra \n Mẫu câu này thường đi với phó từ 「たった今」",
         "usage": "[Động từ thể た] + ところだ/ ところです",
@@ -1067,6 +1053,181 @@ export const N3_GRAMMAR = [
             "reading": "たったいまくうこうにきたところだ。",
             "english": "I just arrived at the airport.",
             "vietnamese": "Tôi vừa mới đến sân bay."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-017",
+    "no": 17,
+    "level": "N3",
+    "lesson": "Lesson 2",
+    "title": "〜べきだ/べきではない",
+    "usage": "[Động từ thể từ điển] + べきだ/ べきではない。\n[Tính từ -na (bỏ な)] + である + べきだ/ べきではない。\n\n＊する → すべきだ/ すべきではない",
+    "notes": [
+      {
+        "lines": ["* Một số ví dụ với 「べき」nhưng không phải dưới dạng 「べきだ/ べきではない」ở cuối câu. ",
+          " 彼に言うべきことを全部言った",
+          "何をすべきか、もう彼女の心は決まっていた。",
+          "彼は信頼すべき人ではない。"
+        ]
+      }
+    ],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-017-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Mẫu câu diễn đạt việc nên/ không nên làm gì đó.",
+        "usage": "",
+        "examples": [
+          {
+            "japanese": "学生はもっと勉強すべきだ。",
+            "reading": "がくせいはもっとべんきょうすべきだ。",
+            "english": "Students should study more.",
+            "vietnamese": "Học sinh nên học thêm."
+          },
+          {
+            "japanese": " 電車の中では、若者はお年寄りに席を譲るべきだ。",
+            "reading": "でんしゃのなかでは、わかものはおとしよりにせきをゆずるべきだ。",
+            "english": "On the train, young people should give their seats to the elderly.",
+            "vietnamese": "Trên tàu điện, những người trẻ nên nhường chỗ cho người già."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-018",
+    "no": 18,
+    "level": "N3",
+    "lesson": "Lesson 2",
+    "title": "〜てしょうがない/〜て||でたまらない/ならない",
+    "usage": "",
+    "notes": [],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-018-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Diễn tả cảm xúc mạnh đến mức không kiềm chế được, không chịu nổi, không thể không nghĩ đến",
+        "usage": "[Động từ thể て] + しょうがない/ 仕方(が) ない\n[Tính từ -i → くて] + しょうがない/ 仕方(が) ない\n[Tính từ -な → で] + しょうがない/ 仕方(が) ない\n" +
+          "[Vたい→ たくて] + しょうがない/ 仕方(が) ない",
+        "examples": [
+          {
+            "japanese": "乾いてしょうがない。",
+            "reading": "かわいてしょうがない。",
+            "english": "I'm extremely thirsty.",
+            "vietnamese": "Tôi khát nước vô cùng."
+          },
+          {
+            "japanese": "試験の結果が気になってしょうがない。",
+            "reading": "しけんのけっかがきになってしょうがない。",
+            "english": "I can't stop thinking about the exam results.",
+            "vietnamese": "Tôi không thể không nghĩ về kết quả của kỳ thi."
+          },
+          {
+            "japanese": " 寂しくてしょうがない。",
+            "reading": "さびしくてしょうがない。",
+            "english": "I feel extremely lonely.",
+            "vietnamese": "Tôi cảm thấy vô cùng cô đơn."
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "n3-grammar-format-018-meaning-02",
+        "title": "Ý nghĩa 2",
+        "meaning": "Diễn tả cảm xúc mạnh đến mức không kiềm chế được, không chịu nổi, không thể không nghĩ đến",
+        "usage": "[Tính từ -i → くて] + たまらない/ ならない\n" +
+          "[Tính từ -na/ Danh từ → で] + たまらない/ ならない\n" +
+          "[Động từ thể て] + たまらない/ ならない\n" +
+          "[Vたい→ たくて] + たまらない/ ならない",
+        "examples": [
+          {
+            "japanese": " そのドラマの続きが知りたくてたまらない。",
+            "reading": "そのドラマのつづきがしりたくてたまらない。",
+            "english": "I'm dying to know what happens next in that drama.",
+            "vietnamese": "Tôi rất muốn biết phần tiếp theo của bộ phim đó."
+          },
+          {
+            "japanese": "エアコンを使えないと、暑くてたまらない。",
+            "reading": "エアコンをつかえないと、あつくてたまらない。",
+            "english": "Without air conditioning, I feel unbearably hot.",
+            "vietnamese": "Nếu không có điều hòa, tôi sẽ cảm thấy nóng không chịu được."
+          },
+          {
+            "japanese": " 遠くに住んでいる母のことが心配でならない。",
+            "reading": "とおくにすんでいるははのことがしんぱいでならない。",
+            "english": "I can't stop worrying about my mother who lives far away.",
+            "vietnamese": "Tôi không thể không lo lắng cho mẹ tôi sống ở xa."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-019",
+    "no": 19,
+    "level": "N3",
+    "lesson": "Lesson 2",
+    "title": "〜つもりだったのに",
+    "usage": "[ふつう] + つもりだったのに\n" +
+      "[Tính từ -na な/ Danh từ の] + つもりだったのに",
+    "notes": [],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-019-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Có ý định làm gì, nghĩ là đã làm gì nhưng kết quả/ sự thật lại không như thế.",
+        "usage": "",
+        "examples": [
+          {
+            "japanese": "小さい声のつもりだったのに、「うるさい」と言われてしまった。",
+            "reading": "ちいさいこえのつもりだったのに、「うるさい」といわれてしまった。",
+            "english": "I intended to speak quietly, but I was told I was noisy.",
+            "vietnamese": "Tôi định nói nhỏ nhưng bị nói là ồn ào."
+          },
+          {
+            "japanese": "小さい声のつもりだったのに、「うるさい」と言われてしまった。",
+            "reading": "ちいさいこえのつもりだったのに、「うるさい」といわれてしまった。",
+            "english": "I intended to speak quietly, but I was told I was noisy.",
+            "vietnamese": "Tôi định nói nhỏ nhưng bị nói là ồn ào."
+          }
+        ],
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "n3-grammar-format-020",
+    "no": 20,
+    "level": "N3",
+    "lesson": "Lesson 2",
+    "title": "〜ために",
+    "usage": "そのため（に）: Vì lý do/ nguyên nhân đó/ vì thế nên ….",
+    "notes": [],
+    "meanings": [
+      {
+        "id": "n3-grammar-format-020-meaning-01",
+        "title": "Ý nghĩa 1",
+        "meaning": "Bởi vì, do (nguyên nhân).\n" +
+          "Nguyên nhân được nêu ra trong vế trước 「ため」thường dẫn đến kết quả không tốt.",
+        "usage": "",
+        "examples": [
+          {
+            "japanese": "雪が降ったために、電車が遅れた。",
+            "reading": "ゆきがふったために、でんしゃがおくれた。",
+            "english": "Because it snowed, the train was delayed.",
+            "vietnamese": "Vì tuyết rơi nên tàu bị chậm."
+          },
+          {
+            "japanese": " 読み方も一つだけではないため、漢字が苦手だと言う学生者もいます。",
+            "reading": "よみかたもひとつだけではないため、かんじがくてだというがくせいしゃもいます。",
+            "english": "Because there are multiple ways to read kanji, some students find kanji difficult.",
+            "vietnamese": "Vì có nhiều cách đọc chữ Hán nên một số học sinh thấy chữ Hán khó khăn."
           }
         ],
         "note": ""
