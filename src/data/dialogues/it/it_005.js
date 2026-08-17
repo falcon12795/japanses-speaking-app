@@ -23,17 +23,70 @@ export const IT_005_DIALOGUE = {
         {
             "id": 1,
             "speaker": "B",
-            "japanese": "プロジェクトのメンバーが全員揃いましたので、要件の説明会を始めたいと思います。説明の中で、分かりにくいところや確認しておきたいことがありましたら、その場で質問してください。",
+            "japanese": "プロジェクトのメンバーが全員揃いましたので、",
             "reading": "",
             "romaji": "",
-            "english": "All project members are here, so I would like to start the requirements explanation meeting. If anything is unclear or needs confirmation during the explanation, please ask on the spot.",
-            "vietnamese": "Mọi người đã có mặt đầy đủ, tôi xin bắt đầu buổi giải thích yêu cầu. Trong lúc tôi trình bày, nếu có chỗ nào khó hiểu hoặc cần xác nhận thì các bạn hãy hỏi luôn nhé.",
+            "english": "All project members are here,",
+            "vietnamese": "Mọi người đã có mặt đầy đủ,",
             "acceptedAnswers": [
-                "プロジェクトのメンバーが全員揃いましたので要件の説明会を始めたいと思います説明の中で分かりにくいところや確認しておきたいことがありましたらその場で質問してください"
+                "プロジェクトのメンバーが全員揃いましたので",
+                "プロジェクトのメンバーがぜんいんそろいましたので"
             ]
         },
         {
             "id": 2,
+            "speaker": "B",
+            "japanese": "要件の説明会を始めたいと思います。",
+            "reading": "",
+            "romaji": "",
+            "english": "so I would like to start the requirements explanation meeting.",
+            "vietnamese": "tôi xin bắt đầu buổi giải thích yêu cầu.",
+            "acceptedAnswers": [
+                "要件の説明会を始めたいと思います",
+                "ようけんのせつめいかいををはじめたいとおもいます"
+            ]
+        },
+        {
+            "id": 3,
+            "speaker": "B",
+            "japanese": "説明の中で、分かりにくいところや",
+            "reading": "",
+            "romaji": "",
+            "english": "If anything is unclear during the explanation",
+            "vietnamese": "Trong lúc tôi trình bày, nếu có chỗ nào khó hiểu",
+            "acceptedAnswers": [
+                "説明の中で分かりにくいところや",
+                "せつめいのなかでわかりにくいところや"
+            ]
+        },
+        {
+            "id": 4,
+            "speaker": "B",
+            "japanese": "確認しておきたいことがありましたら、",
+            "reading": "",
+            "romaji": "",
+            "english": "or if there is anything you want to confirm,",
+            "vietnamese": "hoặc có điều gì cần xác nhận,",
+            "acceptedAnswers": [
+                "確認しておきたいことがありましたら",
+                "かくにんしておきたいことがありましたら"
+            ]
+        },
+        {
+            "id": 5,
+            "speaker": "B",
+            "japanese": "その場で質問してください。",
+            "reading": "",
+            "romaji": "",
+            "english": "please ask on the spot.",
+            "vietnamese": "thì các bạn hãy hỏi luôn tại chỗ nhé.",
+            "acceptedAnswers": [
+                "その場で質問してください",
+                "そのばにしつもんしてください"
+            ]
+        },
+        {
+            "id": 6,
             "speaker": "A",
             "japanese": "承知しました。よろしくお願いいたします。",
             "reading": "",
@@ -41,380 +94,977 @@ export const IT_005_DIALOGUE = {
             "english": "Understood. Thank you.",
             "vietnamese": "Vâng, tôi hiểu rồi ạ.",
             "acceptedAnswers": [
-                "承知しましたよろしくお願いいたします"
-            ]
-        },
-        {
-            "id": 3,
-            "speaker": "B",
-            "japanese": "では、まずプロジェクトの概要についてご説明します。今回の開発は、1年前に作成した出席管理システムをベースに、モバイル対応を行います。既存の機能は基本的にそのまま使いますが、モバイルで使いやすいように、画面や操作を一部変更します。",
-            "reading": "",
-            "romaji": "",
-            "english": "First, I will explain the project overview. This development will be based on the attendance management system created one year ago and will add mobile support. Existing functions will basically remain, but some screens and operations will be changed for easier mobile use.",
-            "vietnamese": "Trước tiên, tôi xin giải thích về tổng quan dự án. Lần phát triển này sẽ dựa trên hệ thống quản lý điểm danh đã làm cách đây 1 năm, và thực hiện đối ứng trên mobile. Các chức năng hiện tại cơ bản sẽ được giữ nguyên, nhưng một số màn hình và thao tác sẽ được điều chỉnh để dễ dùng hơn trên mobile.",
-            "acceptedAnswers": [
-                "ではまずプロジェクトの概要についてご説明します今回の開発は1年前に作成した出席管理システムをベースにモバイル対応を行います既存の機能は基本的にそのまま使いますがモバイルで使いやすいように画面や操作を一部変更します"
-            ]
-        },
-        {
-            "id": 4,
-            "speaker": "A",
-            "japanese": "既存機能をベースにして、モバイル用に調整するという理解でよろしいでしょうか。",
-            "reading": "",
-            "romaji": "",
-            "english": "Is it correct to understand that we will adjust the existing functions for mobile use?",
-            "vietnamese": "Chúng tôi hiểu là sẽ dựa trên hệ thống cũ rồi điều chỉnh để sử dụng trên mobile đúng không ạ.",
-            "acceptedAnswers": [
-                "既存機能をベースにしてモバイル用に調整するという理解でよろしいでしょうか"
-            ]
-        },
-        {
-            "id": 5,
-            "speaker": "B",
-            "japanese": "はい、そのとおりです。特に講師が授業中に使うことを想定していますので、操作のしやすさを重視したいと考えています。講師にとっては、短い時間で入力できることが重要だと思います。",
-            "reading": "",
-            "romaji": "",
-            "english": "Yes, that is correct. We especially assume instructors will use it during class, so we want to prioritize ease of operation. For instructors, being able to input data quickly is important.",
-            "vietnamese": "Vâng, đúng vậy. Hệ thống này được thiết kế để giảng viên sử dụng trong giờ học nên chúng tôi muốn ưu tiên tính dễ thao tác. Đối với giảng viên thì việc có thể nhập liệu nhanh trong thời gian ngắn là rất quan trọng.",
-            "acceptedAnswers": [
-                "はいそのとおりです特に講師が授業中に使うことを想定していますので操作のしやすさを重視したいと考えています講師にとっては短い時間で入力できることが重要だと思います"
-            ]
-        },
-        {
-            "id": 6,
-            "speaker": "A",
-            "japanese": "講師にとって使いやすい画面にする必要がありますね。",
-            "reading": "",
-            "romaji": "",
-            "english": "We need to make screens that are easy for instructors to use.",
-            "vietnamese": "Như vậy sẽ cần thiết kế màn hình dễ sử dụng cho giảng viên.",
-            "acceptedAnswers": [
-                "講師にとって使いやすい画面にする必要がありますね"
+                "承知しましたよろしくお願いいたします",
+                "しょうちしましたよろしくおねがいいたします"
             ]
         },
         {
             "id": 7,
             "speaker": "B",
-            "japanese": "では、機能について説明します。今回のシステムでは、出席・欠席・遅刻の管理に加えて、学習時間も自動で記録します。学習時間は、授業の開始時間と終了時間から計算する想定です。",
+            "japanese": "では、まずプロジェクトの概要についてご説明します。",
             "reading": "",
             "romaji": "",
-            "english": "Next, I will explain the functions. In this system, in addition to managing attendance, absence, and lateness, study time will also be recorded automatically. Study time is assumed to be calculated from lesson start and end times.",
-            "vietnamese": "Tiếp theo là phần chức năng. Ngoài việc quản lý đi học, nghỉ học, đi muộn, hệ thống còn tự động ghi lại thời gian học. Thời gian học sẽ được tính dựa trên thời gian bắt đầu và kết thúc buổi học.",
+            "english": "First, I will explain the project overview.",
+            "vietnamese": "Trước tiên, tôi xin giải thích về tổng quan dự án.",
             "acceptedAnswers": [
-                "では機能について説明します今回のシステムでは出席・欠席・遅刻の管理に加えて学習時間も自動で記録します学習時間は授業の開始時間と終了時間から計算する想定です"
+                "ではまずプロジェクトの概要についてご説明します",
+                "ではまずプロジェクトのがいようについてごせつめいします"
             ]
         },
         {
             "id": 8,
-            "speaker": "A",
-            "japanese": "開始と終了の時間から自動で計算する形で合っていますか。",
+            "speaker": "B",
+            "japanese": "今回の開発は、1年前に作成した",
             "reading": "",
             "romaji": "",
-            "english": "Is it correct that it will be automatically calculated from the start and end times?",
-            "vietnamese": "Tức là hệ thống sẽ tự động tính dựa trên thời gian bắt đầu và kết thúc đúng không ạ.",
+            "english": "In this development, created one year ago,",
+            "vietnamese": "Lần phát triển này dựa trên hệ thống",
             "acceptedAnswers": [
-                "開始と終了の時間から自動で計算する形で合っていますか"
+                "今回の開発は1年前に作成した",
+                "こんかいのかいはつはいちねんまえにさくせいした",
+                "今回の開発は一年前に作成した"
             ]
         },
         {
             "id": 9,
             "speaker": "B",
-            "japanese": "はい、その通りです。また、途中で学習者が退出した場合は、その時点までの時間を記録します。",
+            "japanese": "出席管理システムをベースに、モバイル対応を行います。",
             "reading": "",
             "romaji": "",
-            "english": "Yes, that is correct. Also, if a learner leaves midway, the time up to that point will be recorded.",
-            "vietnamese": "Đúng vậy. Ngoài ra, nếu học viên rời khỏi buổi học giữa chừng thì sẽ ghi nhận đến thời điểm đó.",
+            "english": "attendance management system as a base, we will add mobile support.",
+            "vietnamese": "quản lý điểm danh đã làm 1 năm trước để đối ứng mobile.",
             "acceptedAnswers": [
-                "はいその通りですまた途中で学習者が退出した場合はその時点までの時間を記録します"
+                "出席管理システムをベースにモバイル対応を行います",
+                "しゅっせきかんりシステムをベースにモバイルたいおうをおこないます"
             ]
         },
         {
             "id": 10,
-            "speaker": "A",
-            "japanese": "つまり、自習時間なども含めて、1日の学習時間をまとめて記録するという理解でよろしいでしょうか。",
+            "speaker": "B",
+            "japanese": "既存の機能は基本的にそのまま使いますが、",
             "reading": "",
             "romaji": "",
-            "english": "So is it correct to understand that the total daily study time including self-study will be recorded?",
-            "vietnamese": "Tức là sẽ tính gộp thời gian học của 1 ngày bao gồm cả thời gian tự học đúng không ạ?",
+            "english": "Existing functions will basically remain as they are, but",
+            "vietnamese": "Các chức năng hiện tại cơ bản giữ nguyên,",
             "acceptedAnswers": [
-                "つまり自習時間なども含めて1日の学習時間をまとめて記録するという理解でよろしいでしょうか"
+                "既存の機能は基本的にそのまま使いますが",
+                "きそんのきのうはきほんてきにそのままつかいますが"
             ]
         },
         {
             "id": 11,
             "speaker": "B",
-            "japanese": "いいえ、今回はそこまでは含みません。あくまで授業中の時間のみを対象としています。自習時間については、今回の範囲には入っていません。",
+            "japanese": "モバイルで使いやすいように、画面や操作を一部変更します。",
             "reading": "",
             "romaji": "",
-            "english": "No, this time it does not include that. Only the time during class is targeted. Self-study time is not included in the scope this time.",
-            "vietnamese": "Không, lần này không bao gồm phần đó. Đối tượng tính chỉ là thời gian trong giờ học thôi. Về thời gian tự học thì không nằm trong phạm vi của lần này.",
+            "english": "some screens and operations will be changed for easier mobile use.",
+            "vietnamese": "nhưng sẽ thay đổi một số màn hình và thao tác để dễ dùng trên mobile.",
             "acceptedAnswers": [
-                "いいえ今回はそこまでは含みませんあくまで授業中の時間のみを対象としています自習時間については今回の範囲には入っていません"
+                "モバイルで使いやすいように画面や操作を一部変更します",
+                "モバイルでつかいやすいようにがめんやそうさをいちぶへんこうします"
             ]
         },
         {
             "id": 12,
             "speaker": "A",
-            "japanese": "失礼しました。授業中の時間のみを記録するということですね。",
+            "japanese": "既存機能をベースにして、",
             "reading": "",
             "romaji": "",
-            "english": "Excuse me. So it means only time during class will be recorded.",
-            "vietnamese": "Tôi hiểu rồi, vậy là chỉ tính thời gian trong giờ học thôi.",
+            "english": "Based on existing functions,",
+            "vietnamese": "Dựa trên các chức năng hiện có,",
             "acceptedAnswers": [
-                "失礼しました授業中の時間のみを記録するということですね"
+                "既存機能をベースにして",
+                "きそんきのうをベースにして"
             ]
         },
         {
             "id": 13,
-            "speaker": "B",
-            "japanese": "はい、その認識でお願いします。",
-            "reading": "",
-            "romaji": "",
-            "english": "Yes, please proceed with that understanding.",
-            "vietnamese": "Vâng, đúng như các bạn hiểu nhé.",
-            "acceptedAnswers": [
-                "はいその認識でお願いします"
-            ]
-        },
-        {
-            "id": 14,
-            "speaker": "B",
-            "japanese": "次に、画面設計書についてです。今回は1年前の設計書をベースに使いますが、モバイル対応で追加・変更する部分には、「追加」または「変更」と記載しています。",
-            "reading": "",
-            "romaji": "",
-            "english": "Next is the screen design document. We will use the design document from one year ago as the base, and parts added or changed for mobile support are marked as 'Add' or 'Change'.",
-            "vietnamese": "Tiếp theo là tài liệu thiết kế màn hình. Chúng tôi sẽ dùng lại tài liệu của 1 năm trước, nhưng những phần thay đổi hoặc bổ sung sẽ được ghi rõ là “追加” hoặc “変更”.",
-            "acceptedAnswers": [
-                "次に画面設計書についてです今回は1年前の設計書をベースに使いますがモバイル対応で追加・変更する部分には「追加」または「変更」と記載しています"
-            ]
-        },
-        {
-            "id": 15,
             "speaker": "A",
-            "japanese": "変更がある部分にマークが付いている形ですね。",
+            "japanese": "モバイル用に調整するという理解でよろしいでしょうか。",
             "reading": "",
-            "romaji": "",
-            "english": "So the changed parts are marked, right?",
-            "vietnamese": "Như vậy các phần có thay đổi sẽ được đánh dấu đúng không ạ.",
-            "acceptedAnswers": [
-                "変更がある部分にマークが付いている形ですね"
-            ]
-        },
-        {
-            "id": 16,
-            "speaker": "B",
-            "japanese": "はい、そのとおりです。まずはその部分を中心に確認していただければと思います。",
-            "reading": "",
-            "romaji": "",
-            "english": "Yes, that is correct. Please check those parts first.",
-            "vietnamese": "Đúng vậy, các bạn hãy kiểm tra những phần đó trước nhé.",
-            "acceptedAnswers": [
-                "はいそのとおりですまずはその部分を中心に確認していただければと思います"
-            ]
-        },
-        {
-            "id": 17,
-            "speaker": "A",
-            "japanese": "分かりました。",
-            "reading": "",
-            "romaji": "",
-            "english": "Understood.",
-            "vietnamese": "Vâng, chúng tôi hiểu rồi.",
-            "acceptedAnswers": [
-                "分かりました"
-            ]
-        },
-        {
-            "id": 18,
-            "speaker": "B",
-            "japanese": "続いて、「モバイル対応＿特別対応」のファイルについて説明します。こちらには、異常処理をまとめています。特に、通信が不安定な場合の対応が重要になります。",
-            "reading": "",
-            "romaji": "",
-            "english": "Next, I will explain the 'Mobile Support Special Handling' file. This file summarizes abnormal handling. Especially handling unstable communication is important.",
-            "vietnamese": "Tiếp theo tôi sẽ giải thích về file “Đối ứng trên mobile_Xử lý đặc biệt”. Trong file chúng tôi đã tổng hợp về những xử lý bất thường. Đặc biệt việc đối ứng khi mạng không ổn định là rất quan trọng.",
-            "acceptedAnswers": [
-                "続いて「モバイル対応＿特別対応」のファイルについて説明しますこちらには異常処理をまとめています特に通信が不安定な場合の対応が重要になります"
-            ]
-        },
-        {
-            "id": 19,
-            "speaker": "A",
-            "japanese": "通信が不安定な場合でも入力できるようにする、という対応ですね。",
-            "reading": "",
-            "romaji": "",
-            "english": "This means users should be able to input data even when communication is unstable, right?",
-            "vietnamese": "Khi mạng không ổn định thì vẫn nhập được dữ liệu đúng không ạ.",
-            "acceptedAnswers": [
-                "通信が不安定な場合でも入力できるようにするという対応ですね"
-            ]
-        },
-        {
-            "id": 20,
-            "speaker": "B",
-            "japanese": "はい、そのようにしたいと考えています。オフラインで入力したデータは、オンラインに戻ったタイミングで自動送信します。",
-            "reading": "",
-            "romaji": "",
-            "english": "Yes, that is what we want. Data entered offline will be automatically sent when the device returns online.",
-            "vietnamese": "Đúng vậy, chúng tôi muốn xử lý theo hướng đó. Dữ liệu nhập offline sẽ tự động gửi khi có lại kết nối.",
-            "acceptedAnswers": [
-                "はいそのようにしたいと考えていますオフラインで入力したデータはオンラインに戻ったタイミングで自動送信します"
-            ]
-        },
-        {
-            "id": 21,
-            "speaker": "A",
-            "japanese": "オンラインに戻った後、ユーザーがボタンを押して送信する形でしょうか。",
-            "reading": "",
-            "romaji": "",
-            "english": "After returning online, will the user press a button to send it?",
-            "vietnamese": "Khi có kết nối trở lại thì người dùng sẽ bấm nút để gửi thông tin nhỉ?",
-            "acceptedAnswers": [
-                "オンラインに戻った後ユーザーがボタンを押して送信する形でしょうか"
-            ]
-        },
-        {
-            "id": 22,
-            "speaker": "B",
-            "japanese": "いえ、その操作は不要にしたいと考えています。ユーザーが操作しなくても、自動で送信される仕様にしたいです。",
-            "reading": "",
-            "romaji": "",
-            "english": "No, we want to make that operation unnecessary. We want the specification to send automatically without user operation.",
-            "vietnamese": "Không phải, chúng tôi muốn xử lý để không cần thao tác đó. Dù user không thao tác gì cả thì data vẫn sẽ được gửi tự động.",
-            "acceptedAnswers": [
-                "いえその操作は不要にしたいと考えていますユーザーが操作しなくても自動で送信される仕様にしたいです"
-            ]
-        },
-        {
-            "id": 23,
-            "speaker": "A",
-            "japanese": "承知しました。",
-            "reading": "",
-            "romaji": "",
-            "english": "Understood.",
-            "vietnamese": "Tôi hiểu rồi.",
-            "acceptedAnswers": [
-                "承知しました"
-            ]
-        },
-        {
-            "id": 24,
-            "speaker": "B",
-            "japanese": "もし送信に失敗した場合は、再送できるようにしてください。",
-            "reading": "",
-            "romaji": "",
-            "english": "If sending fails, please make it possible to resend.",
-            "vietnamese": "Nếu gửi thất bại thì các bạn hãy xử lý để sao cho có thể gửi lại được nhé.",
-            "acceptedAnswers": [
-                "もし送信に失敗した場合は再送できるようにしてください"
-            ]
-        },
-        {
-            "id": 25,
-            "speaker": "A",
-            "japanese": "エラー時は再送する想定で進めます。",
-            "reading": "",
-            "romaji": "",
-            "english": "We will proceed assuming resend on error.",
-            "vietnamese": "Vâng, tôi sẽ xử lý theo hướng khi có lỗi thì sẽ gửi lại.",
-            "acceptedAnswers": [
-                "エラー時は再送する想定で進めます"
-            ]
-        },
-        {
-            "id": 26,
-            "speaker": "B",
-            "japanese": "はい、その対応をお願いします。",
-            "reading": "",
-            "romaji": "",
-            "english": "Yes, please handle it that way.",
-            "vietnamese": "Vâng, nhờ các bạn xử lý như vậy.",
-            "acceptedAnswers": [
-                "はいその対応をお願いします"
-            ]
-        },
-        {
-            "id": 27,
-            "speaker": "B",
-            "japanese": "次に、出席データの修正についてです。入力後の修正は、当日中であれば可能とします。また、修正した場合は履歴を残すようにしてください。",
-            "reading": "",
-            "romaji": "",
-            "english": "Next is about correction of attendance data. Corrections after input are allowed within the same day. Also, please keep a history when corrections are made.",
-            "vietnamese": "Tiếp theo là việc chỉnh sửa dữ liệu điểm danh. Sau khi nhập xong thì có thể chỉnh sửa trong ngày hôm đó. Ngoài ra, các bạn hãy xử lý sao cho có thể lưu lại lịch sử trong trường hợp đã sửa.",
-            "acceptedAnswers": [
-                "次に出席データの修正についてです入力後の修正は当日中であれば可能としますまた修正した場合は履歴を残すようにしてください"
-            ]
-        },
-        {
-            "id": 28,
-            "speaker": "A",
-            "japanese": "当日中は修正可能で、履歴も残す形で対応します。",
-            "reading": "",
-            "romaji": "",
-            "english": "We will handle it so corrections are possible within the same day and history is kept.",
-            "vietnamese": "Vâng, chúng tôi sẽ xử lý để có thể chỉnh sửa trong ngày hôm đó và lưu lại lịch sử chỉnh sửa.",
-            "acceptedAnswers": [
-                "当日中は修正可能で履歴も残す形で対応します"
-            ]
-        },
-        {
-            "id": 29,
-            "speaker": "B",
-            "japanese": "最後に、モバイル画面についてです。PC版と同じ内容をすべて表示するのではなく、必要な情報に絞って表示したいと考えています。",
-            "reading": "",
-            "romaji": "",
-            "english": "Finally, about the mobile screen. Instead of displaying everything from the PC version, we want to show only necessary information.",
-            "vietnamese": "Cuối cùng là về màn hình mobile. Chúng tôi muốn rằng không cần hiển thị toàn bộ nội dung giống như PC mà chỉ cần hiển thị những thông tin cần thiết.",
-            "acceptedAnswers": [
-                "最後にモバイル画面についてですPC版と同じ内容をすべて表示するのではなく必要な情報に絞って表示したいと考えています"
-            ]
-        },
-        {
-            "id": 30,
-            "speaker": "A",
-            "japanese": "表示項目を絞って、シンプルな画面にする方向ですね。",
-            "reading": "",
-            "romaji": "",
-            "english": "So the direction is to narrow down display items and make a simple screen.",
-            "vietnamese": "Tức là các bạn muốn lọc ra các item hiển thị và xử lý thành một màn hình đơn giản thôi nhỉ.",
-            "acceptedAnswers": [
-                "表示項目を絞ってシンプルな画面にする方向ですね"
-            ]
-        },
-        {
-            "id": 31,
-            "speaker": "B",
-            "japanese": "はい。操作しやすい画面になるように設計をお願いします。",
-            "reading": "",
-            "romaji": "",
-            "english": "Yes. Please design it to be easy to operate.",
-            "vietnamese": "Đúng vậy, nhờ các bạn design sao cho màn hình dễ thao tác nhé.",
-            "acceptedAnswers": [
-                "はい操作しやすい画面になるように設計をお願いします"
-            ]
-        },
-        {
-            "id": 32,
-            "speaker": "A",
-            "japanese": "承知しました。本日の内容については理解しました。資料を確認して、不明点があれば後ほど確認させてください。",
-            "reading": "",
-            "romaji": "",
-            "english": "Understood. I understood today's content. I will check the materials and confirm later if there are unclear points.",
-            "vietnamese": "Tôi đã hiểu nội dung hôm nay. Sau khi xem tài liệu, nếu có điểm chưa rõ tôi sẽ xác nhận lại sau.",
-            "acceptedAnswers": [
-                "承知しました本日の内容については理解しました資料を確認して不明点があれば後ほど確認させてください"
-            ]
-        },
-        {
-            "id": 33,
-            "speaker": "B",
-            "japanese": "はい、お願いします。それでは、本日の説明は以上です。本日はありがとうございました。",
-            "reading": "",
-            "romaji": "",
-            "english": "Yes, please. That is all for today's explanation. Thank you very much for today.",
-            "vietnamese": "Vâng. Vậy hôm nay xin kết thúc phần giải thích tại đây. Cảm ơn mọi người.",
-            "acceptedAnswers": [
-                "はいお願いしますそれでは本日の説明は以上です本日はありがとうございました"
-            ]
-        }
-    ]
+      "romaji": "",
+      "english": "is it correct to understand that we will adjust them for mobile?",
+      "vietnamese": "chúng tôi hiểu là sẽ điều chỉnh cho mobile đúng không ạ?",
+      "acceptedAnswers": [
+        "モバイル用に調整するという理解でよろしいでしょうか",
+        "モバイルようにちょうせいするというりかいでよろしいでしょうか"
+      ]
+    },
+    {
+      "id": 14,
+      "speaker": "B",
+      "japanese": "はい、そのとおりです。",
+      "reading": "",
+      "romaji": "",
+      "english": "Yes, that is correct.",
+      "vietnamese": "Vâng, đúng vậy.",
+      "acceptedAnswers": [
+        "はいそのとおりです",
+        "はいその通りです"
+      ]
+    },
+    {
+      "id": 15,
+      "speaker": "B",
+      "japanese": "特に講師が授業中に使うことを想定していますので、",
+      "reading": "",
+      "romaji": "",
+      "english": "Since we assume instructors will use it during class,",
+      "vietnamese": "Vì dự định để giảng viên dùng trong giờ học,",
+      "acceptedAnswers": [
+        "特に講師が授業中に使うことを想定していますので",
+        "とくにこうしがじゅぎょうちゅうにつかうことをそうていしていますので"
+      ]
+    },
+    {
+      "id": 16,
+      "speaker": "B",
+      "japanese": "操作のしやすさを重視したいと考えています。",
+      "reading": "",
+      "romaji": "",
+      "english": "we want to emphasize ease of operation.",
+      "vietnamese": "nên chúng tôi muốn coi trọng tính dễ thao tác.",
+      "acceptedAnswers": [
+        "操作のしやすさを重視したいと考えています",
+        "そうさのしやすさをじゅうししたいとかんがえています"
+      ]
+    },
+    {
+      "id": 17,
+      "speaker": "B",
+      "japanese": "講師にとっては、短い時間で入力できることが",
+      "reading": "",
+      "romaji": "",
+      "english": "For instructors, being able to input in a short time",
+      "vietnamese": "Đối với giảng viên, việc có thể nhập liệu trong thời gian ngắn",
+      "acceptedAnswers": [
+        "講師にとっては短い時間で入力できることが",
+        "こうしにとってはみじかいじかんでにゅうりょくできることが"
+      ]
+    },
+    {
+      "id": 18,
+      "speaker": "B",
+      "japanese": "重要だと思います。",
+      "reading": "",
+      "romaji": "",
+      "english": "is considered important.",
+      "vietnamese": "là rất quan trọng.",
+      "acceptedAnswers": [
+        "重要だと思います",
+        "じゅうようだとおもいます"
+      ]
+    },
+    {
+      "id": 19,
+      "speaker": "A",
+      "japanese": "講師にとって使いやすい画面にする必要がありますね。",
+      "reading": "",
+      "romaji": "",
+      "english": "We need to make screens that are easy for instructors to use.",
+      "vietnamese": "Như vậy sẽ cần thiết kế màn hình dễ sử dụng cho giảng viên.",
+      "acceptedAnswers": [
+        "講師にとって使いやすい画面にする必要がありますね",
+        "こうしにつかってつかいやすいがめんにするひつようがありますね"
+      ]
+    },
+    {
+      "id": 20,
+      "speaker": "B",
+      "japanese": "では、機能について説明します。",
+      "reading": "",
+      "romaji": "",
+      "english": "Then, I will explain the functions.",
+      "vietnamese": "Sau đây tôi xin giải thích về chức năng.",
+      "acceptedAnswers": [
+        "では機能について説明します",
+        "ではきのうについてせつめいします"
+      ]
+    },
+    {
+      "id": 21,
+      "speaker": "B",
+      "japanese": "今回のシステムでは、出席・欠席・遅刻の管理に加えて、",
+      "reading": "",
+      "romaji": "",
+      "english": "In this system, in addition to attendance, absence, and lateness management,",
+      "vietnamese": "Ở hệ thống lần này, ngoài việc quản lý đi học, nghỉ học, đi muộn,",
+      "acceptedAnswers": [
+        "今回のシステムでは出席・欠席・遅刻の管理に加えて",
+        "こんかいのシステムではしゅっせきけっせきちこくのかんりにくわえて"
+      ]
+    },
+    {
+      "id": 22,
+      "speaker": "B",
+      "japanese": "学習時間も自動で記録します。",
+      "reading": "",
+      "romaji": "",
+      "english": "study time will also be recorded automatically.",
+      "vietnamese": "thì thời gian học cũng được ghi tự động.",
+      "acceptedAnswers": [
+        "学習時間も自動で記録します",
+        "がくしゅうじかんもじどうできろくします"
+      ]
+    },
+    {
+      "id": 23,
+      "speaker": "B",
+      "japanese": "学習時間は、授業の開始時間と",
+      "reading": "",
+      "romaji": "",
+      "english": "Study time is calculated from the class start time",
+      "vietnamese": "Thời gian học sẽ được tính dựa trên",
+      "acceptedAnswers": [
+        "学習時間は授業の開始時間と",
+        "がくしゅうじかんはじゅぎょうのかいしじかんと"
+      ]
+    },
+    {
+      "id": 24,
+      "speaker": "B",
+      "japanese": "終了時間から計算する想定です。",
+      "reading": "",
+      "romaji": "",
+      "english": "and end time.",
+      "vietnamese": "thời gian bắt đầu và kết thúc buổi học.",
+      "acceptedAnswers": [
+        "終了時間から計算する想定です",
+        "しゅうりょうじかんからけいさんするそうていです"
+      ]
+    },
+    {
+      "id": 25,
+      "speaker": "A",
+      "japanese": "開始と終了の時間から自動で計算する形で合っていますか。",
+      "reading": "",
+      "romaji": "",
+      "english": "Is it correct that it will be calculated automatically from start and end times?",
+      "vietnamese": "Tức là tự động tính dựa trên thời gian bắt đầu và kết thúc đúng không ạ?",
+      "acceptedAnswers": [
+        "開始と終了の時間から自動で計算する形で合っていますか",
+        "かいしとしゅうりょうのじかんからじどうでけいさんするかたちであっていますか"
+      ]
+    },
+    {
+      "id": 26,
+      "speaker": "B",
+      "japanese": "はい、その通りです。",
+      "reading": "",
+      "romaji": "",
+      "english": "Yes, that is correct.",
+      "vietnamese": "Vâng, đúng vậy.",
+      "acceptedAnswers": [
+        "はいその通りです",
+        "はいそのとおりです"
+      ]
+    },
+    {
+      "id": 27,
+      "speaker": "B",
+      "japanese": "また、途中で学習者が退出した場合は、",
+      "reading": "",
+      "romaji": "",
+      "english": "Also, if a learner leaves midway,",
+      "vietnamese": "Ngoài ra, nếu học viên rời khỏi giữa chừng,",
+      "acceptedAnswers": [
+        "また途中で学習者が退出した場合は",
+        "またとちゅうでがくしゅうしゃがたいしゅつしたばあいは"
+      ]
+    },
+    {
+      "id": 28,
+      "speaker": "B",
+      "japanese": "その時点までの時間を記録します。",
+      "reading": "",
+      "romaji": "",
+      "english": "the time up to that point will be recorded.",
+      "vietnamese": "hệ thống sẽ ghi nhận thời gian tính đến thời điểm đó.",
+      "acceptedAnswers": [
+        "その時点までの時間を記録します",
+        "そのじてんまでのじかんをきろくします"
+      ]
+    },
+    {
+      "id": 29,
+      "speaker": "A",
+      "japanese": "つまり、自習時間なども含めて、",
+      "reading": "",
+      "romaji": "",
+      "english": "In other words, including self-study time,",
+      "vietnamese": "Tức là bao gồm cả thời gian tự học,",
+      "acceptedAnswers": [
+        "つまり自習時間なども含めて",
+        "つまりじしゅうじかんなどもふくめて"
+      ]
+    },
+    {
+      "id": 30,
+      "speaker": "A",
+      "japanese": "1日の学習時間をまとめて記録するという理解でよろしいでしょうか。",
+      "reading": "",
+      "romaji": "",
+      "english": "is it correct to understand that total daily study time is recorded?",
+      "vietnamese": "sẽ tính gộp thời gian học trong ngày đúng không ạ?",
+      "acceptedAnswers": [
+        "1日の学習時間をまとめて記録するという理解でよろしいでしょうか",
+        "ついたちのがくしゅうじかんをまとめてきろくするというりかいでよろしいでしょうか",
+        "いちにちのがくしゅうじかんをまとめてきろくするというりかいでよろしいでしょうか",
+        "一日の学習時間をまとめて記録するという理解でよろしいでしょうか"
+      ]
+    },
+    {
+      "id": 31,
+      "speaker": "B",
+      "japanese": "いいえ、今回はそこまでは含みません。",
+      "reading": "",
+      "romaji": "",
+      "english": "No, this time it does not include that.",
+      "vietnamese": "Không, lần này không bao gồm đến mức đó.",
+      "acceptedAnswers": [
+        "いいえ今回はそこまでは含みません",
+        "いいえこんかいはそこまではふくみません"
+      ]
+    },
+    {
+      "id": 32,
+      "speaker": "B",
+      "japanese": "あくまで授業中の時間のみを対象としています。",
+      "reading": "",
+      "romaji": "",
+      "english": "It targets strictly the time during class.",
+      "vietnamese": "Đối tượng chỉ là thời gian trong giờ học thôi.",
+      "acceptedAnswers": [
+        "あくまで授業中の時間のみを対象としています",
+        "あくまでじゅぎょうちゅうのじかんのみをたいしょうとしています"
+      ]
+    },
+    {
+      "id": 33,
+      "speaker": "B",
+      "japanese": "自習時間については、今回の範囲には入っていません。",
+      "reading": "",
+      "romaji": "",
+      "english": "Self-study time is not included in the scope this time.",
+      "vietnamese": "Thời gian tự học không nằm trong phạm vi đợt này.",
+      "acceptedAnswers": [
+        "自習時間については今回の範囲には入っていません",
+        "じしゅうじかんについてはこんかいのはんいにははいっていません"
+      ]
+    },
+    {
+      "id": 34,
+      "speaker": "A",
+      "japanese": "失礼しました。",
+      "reading": "",
+      "romaji": "",
+      "english": "Excuse me.",
+      "vietnamese": "Tôi xin lỗi.",
+      "acceptedAnswers": [
+        "失礼しました",
+        "しつれいしました"
+      ]
+    },
+    {
+      "id": 35,
+      "speaker": "A",
+      "japanese": "授業中の時間のみを記録するということですね。",
+      "reading": "",
+      "romaji": "",
+      "english": "So only time during class will be recorded.",
+      "vietnamese": "Nghĩa là chỉ ghi nhận thời gian trong giờ học thôi đúng không ạ.",
+      "acceptedAnswers": [
+        "授業中の時間のみを記録するということですね",
+        "じゅぎょうちゅうのじかんのみをきろくするということですね"
+      ]
+    },
+    {
+      "id": 36,
+      "speaker": "B",
+      "japanese": "はい、その認識でお願いします。",
+      "reading": "",
+      "romaji": "",
+      "english": "Yes, please proceed with that understanding.",
+      "vietnamese": "Vâng, nhờ bạn hiểu theo hướng đó.",
+      "acceptedAnswers": [
+        "はいその認識でお願いします",
+        "はいそのにんしきでおねがいします"
+      ]
+    },
+    {
+      "id": 37,
+      "speaker": "B",
+      "japanese": "次に、画面設計書についてです。",
+      "reading": "",
+      "romaji": "",
+      "english": "Next is about the screen design document.",
+      "vietnamese": "Tiếp theo là về tài liệu thiết kế màn hình.",
+      "acceptedAnswers": [
+        "次に画面設計書についてです",
+        "つぎにがめんせっけいしょについてです"
+      ]
+    },
+    {
+      "id": 38,
+      "speaker": "B",
+      "japanese": "今回は1年前の設計書をベースに使いますが、",
+      "reading": "",
+      "romaji": "",
+      "english": "We will use the design document from one year ago as a base, but",
+      "vietnamese": "Lần này dùng lại tài liệu thiết kế 1 năm trước,",
+      "acceptedAnswers": [
+        "今回は1年前の設計書をベースに使いますが",
+        "こんかいはいちねんまえのせっけいしょをベースにつかいますが",
+        "今回は一年前の設計書をベースに使いますが"
+      ]
+    },
+    {
+      "id": 39,
+      "speaker": "B",
+      "japanese": "モバイル対応で追加・変更する部分には、",
+      "reading": "",
+      "romaji": "",
+      "english": "for parts added or changed for mobile support,",
+      "vietnamese": "nhưng những phần bổ sung hay thay đổi cho mobile,",
+      "acceptedAnswers": [
+        "モバイル対応で追加変更する部分には",
+        "モバイル対応で追加・変更する部分には",
+        "モバイルたいおうでついかへんこうするぶぶんには"
+      ]
+    },
+    {
+      "id": 40,
+      "speaker": "B",
+      "japanese": "「追加」または「変更」と記載しています。",
+      "reading": "",
+      "romaji": "",
+      "english": "they are marked as 'Add' or 'Change'.",
+      "vietnamese": "đều được ghi rõ là “追加” hoặc “変更”.",
+      "acceptedAnswers": [
+        "追加または変更と記載しています",
+        "ついかまたはへんこうときさいしています"
+      ]
+    },
+    {
+      "id": 41,
+      "speaker": "A",
+      "japanese": "変更がある部分にマークが付いている形ですね。",
+      "reading": "",
+      "romaji": "",
+      "english": "So the changed parts are marked, right?",
+      "vietnamese": "Như vậy các phần có thay đổi sẽ được đánh dấu đúng không ạ.",
+      "acceptedAnswers": [
+        "変更がある部分にマークが付いている形ですね",
+        "へんこうがあるぶぶんにマークがついているかたちですね"
+      ]
+    },
+    {
+      "id": 42,
+      "speaker": "B",
+      "japanese": "はい、そのとおりです。",
+      "reading": "",
+      "romaji": "",
+      "english": "Yes, that is correct.",
+      "vietnamese": "Vâng, đúng vậy.",
+      "acceptedAnswers": [
+        "はいそのとおりです",
+        "はいその通りです"
+      ]
+    },
+    {
+      "id": 43,
+      "speaker": "B",
+      "japanese": "まずはその部分を中心に確認していただければと思います。",
+      "reading": "",
+      "romaji": "",
+      "english": "Please check those parts first.",
+      "vietnamese": "Trước hết nhờ các bạn tập trung kiểm tra những phần đó.",
+      "acceptedAnswers": [
+        "まずはその部分を中心に確認していただければと思います",
+        "まずはそのぶぶんをちゅうしんにかくにんしていただければとおもいます"
+      ]
+    },
+    {
+      "id": 44,
+      "speaker": "A",
+      "japanese": "分かりました。",
+      "reading": "",
+      "romaji": "",
+      "english": "Understood.",
+      "vietnamese": "Vâng, tôi hiểu rồi.",
+      "acceptedAnswers": [
+        "分かりました",
+        "わかりました"
+      ]
+    },
+    {
+      "id": 45,
+      "speaker": "B",
+      "japanese": "続いて、「モバイル対応＿特別対応」のファイルについて説明します。",
+      "reading": "",
+      "romaji": "",
+      "english": "Next, I will explain the 'Mobile Support Special Handling' file.",
+      "vietnamese": "Tiếp theo tôi sẽ giải thích về file “Đối ứng mobile_Xử lý đặc biệt”.",
+      "acceptedAnswers": [
+        "続いてモバイル対応特別対応のファイルについて説明します",
+        "続いて「モバイル対応＿特別対応」のファイルについて説明します",
+        "つづいてモバイルたいおうとくべつたいおうのファイルについてせつめいします"
+      ]
+    },
+    {
+      "id": 46,
+      "speaker": "B",
+      "japanese": "こちらには、異常処理をまとめています。",
+      "reading": "",
+      "romaji": "",
+      "english": "Abnormal processing is summarized here.",
+      "vietnamese": "File này tổng hợp các xử lý bất thường.",
+      "acceptedAnswers": [
+        "こちらには異常処理をまとめています",
+        "こちらにはいじょうしょりをまとめています"
+      ]
+    },
+    {
+      "id": 47,
+      "speaker": "B",
+      "japanese": "特に、通信が不安定な場合の対応が重要になります。",
+      "reading": "",
+      "romaji": "",
+      "english": "In particular, handling unstable communication is important.",
+      "vietnamese": "Đặc biệt, việc xử lý khi mạng không ổn định là rất quan trọng.",
+      "acceptedAnswers": [
+        "特に通信が不安定な場合の対応が重要になります",
+        "とくにつうしんがふあんていなばあいのたいおうがじゅうようになります"
+      ]
+    },
+    {
+      "id": 48,
+      "speaker": "A",
+      "japanese": "通信が不安定な場合でも入力できるようにする、",
+      "reading": "",
+      "romaji": "",
+      "english": "Even when communication is unstable, allowing input,",
+      "vietnamese": "Dù mạng không ổn định vẫn nhập được dữ liệu,",
+      "acceptedAnswers": [
+        "通信が不安定な場合でも入力できるようにする",
+        "つうしんがふあんていなばあいでもにゅうりょくできるようにする"
+      ]
+    },
+    {
+      "id": 49,
+      "speaker": "A",
+      "japanese": "という対応ですね。",
+      "reading": "",
+      "romaji": "",
+      "english": "that is the handling, right?",
+      "vietnamese": "đây là hướng đối ứng đúng không ạ?",
+      "acceptedAnswers": [
+        "という対応ですね",
+        "というたいおうですね"
+      ]
+    },
+    {
+      "id": 50,
+      "speaker": "B",
+      "japanese": "はい、そのようにしたいと考えています。",
+      "reading": "",
+      "romaji": "",
+      "english": "Yes, that is what we want to do.",
+      "vietnamese": "Vâng, chúng tôi muốn xử lý theo hướng đó.",
+      "acceptedAnswers": [
+        "はいそのようにしたいと考えています",
+        "はいそのようにしたいとかんがえています"
+      ]
+    },
+    {
+      "id": 51,
+      "speaker": "B",
+      "japanese": "オフラインで入力したデータは、",
+      "reading": "",
+      "romaji": "",
+      "english": "Data entered offline,",
+      "vietnamese": "Dữ liệu đã nhập offline,",
+      "acceptedAnswers": [
+        "オフラインで入力したデータは",
+        "オフラインでにゅうりょくしたデータは"
+      ]
+    },
+    {
+      "id": 52,
+      "speaker": "B",
+      "japanese": "オンラインに戻ったタイミングで自動送信します。",
+      "reading": "",
+      "romaji": "",
+      "english": "will be automatically sent when back online.",
+      "vietnamese": "sẽ tự động gửi khi có lại kết nối online.",
+      "acceptedAnswers": [
+        "オンラインに戻ったタイミングで自動送信します",
+        "オンラインにもどったタイミングでじどうそうしんします"
+      ]
+    },
+    {
+      "id": 53,
+      "speaker": "A",
+      "japanese": "オンラインに戻った後、",
+      "reading": "",
+      "romaji": "",
+      "english": "After returning online,",
+      "vietnamese": "Sau khi có mạng trở lại,",
+      "acceptedAnswers": [
+        "オンラインに戻った後",
+        "オンラインにもどったあと"
+      ]
+    },
+    {
+      "id": 54,
+      "speaker": "A",
+      "japanese": "ユーザーがボタンを押して送信する形でしょうか。",
+      "reading": "",
+      "romaji": "",
+      "english": "will the user press a button to send?",
+      "vietnamese": "người dùng sẽ bấm nút để gửi phải không ạ?",
+      "acceptedAnswers": [
+        "ユーザーがボタンを押して送信する形でしょうか",
+        "ユーザーがボタンをおしてそうしんするかたちでしょうか"
+      ]
+    },
+    {
+      "id": 55,
+      "speaker": "B",
+      "japanese": "いえ、その操作は不要にしたいと考えています。",
+      "reading": "",
+      "romaji": "",
+      "english": "No, we want to make that operation unnecessary.",
+      "vietnamese": "Không, chúng tôi muốn bỏ qua thao tác đó.",
+      "acceptedAnswers": [
+        "いえその操作は不要にしたいと考えています",
+        "いえそのそうさはふようにしたいとかんがえています"
+      ]
+    },
+    {
+      "id": 56,
+      "speaker": "B",
+      "japanese": "ユーザーが操作しなくても、",
+      "reading": "",
+      "romaji": "",
+      "english": "Even without user operation,",
+      "vietnamese": "Dù người dùng không thao tác,",
+      "acceptedAnswers": [
+        "ユーザーが操作しなくても",
+        "ユーザーがそうさしなくても"
+      ]
+    },
+    {
+      "id": 57,
+      "speaker": "B",
+      "japanese": "自動で送信される仕様にしたいです。",
+      "reading": "",
+      "romaji": "",
+      "english": "we want it to send automatically.",
+      "vietnamese": "vẫn muốn thiết kế để gửi tự động.",
+      "acceptedAnswers": [
+        "自動で送信される仕様にしたいです",
+        "じどうでそうしんされるしようにしたいです"
+      ]
+    },
+    {
+      "id": 58,
+      "speaker": "A",
+      "japanese": "承知しました。",
+      "reading": "",
+      "romaji": "",
+      "english": "Understood.",
+      "vietnamese": "Tôi hiểu rồi.",
+      "acceptedAnswers": [
+        "承知しました",
+        "しょうちしました"
+      ]
+    },
+    {
+      "id": 59,
+      "speaker": "B",
+      "japanese": "もし送信に失敗した場合は、",
+      "reading": "",
+      "romaji": "",
+      "english": "If sending fails,",
+      "vietnamese": "Nếu gửi thất bại,",
+      "acceptedAnswers": [
+        "もし送信に失敗した場合は",
+        "もしそうしんにしっぱいしたばあいは"
+      ]
+    },
+    {
+      "id": 60,
+      "speaker": "B",
+      "japanese": "再送できるようにしてください。",
+      "reading": "",
+      "romaji": "",
+      "english": "please make it possible to resend.",
+      "vietnamese": "nhờ bạn làm sao để có thể gửi lại.",
+      "acceptedAnswers": [
+        "再送できるようにしてください",
+        "さいそうできるようにしてください"
+      ]
+    },
+    {
+      "id": 61,
+      "speaker": "A",
+      "japanese": "エラー時は再送する想定で進めます。",
+      "reading": "",
+      "romaji": "",
+      "english": "We will proceed assuming resend on error.",
+      "vietnamese": "Tôi sẽ làm theo hướng khi bị lỗi thì sẽ gửi lại.",
+      "acceptedAnswers": [
+        "エラー時は再送する想定で進めます",
+        "エラーじはさいそうするそうていですすめます"
+      ]
+    },
+    {
+      "id": 62,
+      "speaker": "B",
+      "japanese": "はい、その対応をお願いします。",
+      "reading": "",
+      "romaji": "",
+      "english": "Yes, please handle it that way.",
+      "vietnamese": "Vâng, nhờ bạn xử lý như vậy.",
+      "acceptedAnswers": [
+        "はいその対応をお願いします",
+        "はいそのたいおうをおねがいします"
+      ]
+    },
+    {
+      "id": 63,
+      "speaker": "B",
+      "japanese": "次に、出席データの修正についてです。",
+      "reading": "",
+      "romaji": "",
+      "english": "Next is about correction of attendance data.",
+      "vietnamese": "Tiếp theo là việc chỉnh sửa dữ liệu điểm danh.",
+      "acceptedAnswers": [
+        "次に出席データの修正についてです",
+        "つぎにしゅっせきデータのしゅうせいについてです"
+      ]
+    },
+    {
+      "id": 64,
+      "speaker": "B",
+      "japanese": "入力後の修正は、当日中であれば可能とします。",
+      "reading": "",
+      "romaji": "",
+      "english": "Corrections after input are allowed within the same day.",
+      "vietnamese": "Cho phép sửa sau khi nhập nếu trong cùng ngày.",
+      "acceptedAnswers": [
+        "入力後の修正は当日中であれば可能とします",
+        "にゅうりょくごのしゅうせいはとうじつちゅうであればかのうとします"
+      ]
+    },
+    {
+      "id": 65,
+      "speaker": "B",
+      "japanese": "また、修正した場合は履歴を残すようにしてください。",
+      "reading": "",
+      "romaji": "",
+      "english": "Also, please keep history when corrected.",
+      "vietnamese": "Ngoài ra, khi sửa thì hãy lưu lại lịch sử nhé.",
+      "acceptedAnswers": [
+        "また修正した場合は履歴を残すようにしてください",
+        "またしゅうせいしたばあいはりれきをのこすようにしてください"
+      ]
+    },
+    {
+      "id": 66,
+      "speaker": "A",
+      "japanese": "当日中は修正可能で、",
+      "reading": "",
+      "romaji": "",
+      "english": "Corrections are possible within the same day,",
+      "vietnamese": "Có thể sửa trong ngày,",
+      "acceptedAnswers": [
+        "当日中は修正可能で",
+        "とうじつちゅうはしゅうせいかのうで"
+      ]
+    },
+    {
+      "id": 67,
+      "speaker": "A",
+      "japanese": "履歴も残す形で対応します。",
+      "reading": "",
+      "romaji": "",
+      "english": "and we will handle it to keep history.",
+      "vietnamese": "và lưu lại lịch sử chỉnh sửa.",
+      "acceptedAnswers": [
+        "履歴も残す形で対応します",
+        "りれきものこすかたちでたいおうします"
+      ]
+    },
+    {
+      "id": 68,
+      "speaker": "B",
+      "japanese": "最後に、モバイル画面についてです。",
+      "reading": "",
+      "romaji": "",
+      "english": "Finally, about the mobile screen.",
+      "vietnamese": "Cuối cùng là về màn hình mobile.",
+      "acceptedAnswers": [
+        "最後にモバイル画面についてです",
+        "さいごにモバイルがめんについてです"
+      ]
+    },
+    {
+      "id": 69,
+      "speaker": "B",
+      "japanese": "PC版と同じ内容をすべて表示するのではなく、",
+      "reading": "",
+      "romaji": "",
+      "english": "Instead of displaying all content from PC version,",
+      "vietnamese": "Không hiển thị tất cả nội dung như bản PC,",
+      "acceptedAnswers": [
+        "PC版と同じ内容をすべて表示するのではなく",
+        "PCばんとおなじないようをすべてひょうじするのではなく"
+      ]
+    },
+    {
+      "id": 70,
+      "speaker": "B",
+      "japanese": "必要な情報に絞って表示したいと考えています。",
+      "reading": "",
+      "romaji": "",
+      "english": "we want to filter and display only necessary information.",
+      "vietnamese": "mà chỉ hiển thị các thông tin cần thiết.",
+      "acceptedAnswers": [
+        "必要な情報に絞って表示したいと考えています",
+        "ひつようなじょうほうにしぼってひょうじしたいとかんがえています"
+      ]
+    },
+    {
+      "id": 71,
+      "speaker": "A",
+      "japanese": "表示項目を絞って、",
+      "reading": "",
+      "romaji": "",
+      "english": "Filter display items,",
+      "vietnamese": "Lọc các mục hiển thị,",
+      "acceptedAnswers": [
+        "表示項目を絞って",
+        "ひょうじこうもくにしぼって"
+      ]
+    },
+    {
+      "id": 72,
+      "speaker": "A",
+      "japanese": "シンプルな画面にする方向ですね。",
+      "reading": "",
+      "romaji": "",
+      "english": "and head towards a simple screen direction.",
+      "vietnamese": "và làm thành màn hình đơn giản đúng không ạ.",
+      "acceptedAnswers": [
+        "シンプルな画面にする方向ですね",
+        "シンプルながめんにするほうこうですね"
+      ]
+    },
+    {
+      "id": 73,
+      "speaker": "B",
+      "japanese": "はい。操作しやすい画面になるように",
+      "reading": "",
+      "romaji": "",
+      "english": "Yes. To make it an easy to operate screen,",
+      "vietnamese": "Vâng, nhờ bạn thiết kế sao cho",
+      "acceptedAnswers": [
+        "はい操作しやすい画面になるように",
+        "はいそうさしやすいがめんになるように"
+      ]
+    },
+    {
+      "id": 74,
+      "speaker": "B",
+      "japanese": "設計をお願いします。",
+      "reading": "",
+      "romaji": "",
+      "english": "please design it.",
+      "vietnamese": "màn hình dễ thao tác nhé.",
+      "acceptedAnswers": [
+        "設計をお願いします",
+        "せっけいをおねがいします"
+      ]
+    },
+    {
+      "id": 75,
+      "speaker": "A",
+      "japanese": "承知しました。本日の内容については理解しました。",
+      "reading": "",
+      "romaji": "",
+      "english": "Understood. I understood today's content.",
+      "vietnamese": "Tôi đã hiểu nội dung hôm nay.",
+      "acceptedAnswers": [
+        "承知しました本日の内容については理解しました",
+        "しょうちしましたほんじつのないようについてはりかいしました"
+      ]
+    },
+    {
+      "id": 76,
+      "speaker": "A",
+      "japanese": "資料を確認して、不明点があれば",
+      "reading": "",
+      "romaji": "",
+      "english": "I will check the materials, and if there are unclear points,",
+      "vietnamese": "Sau khi xem tài liệu, nếu có điểm chưa rõ,",
+      "acceptedAnswers": [
+        "資料を確認して不明点があれば",
+        "しりょうをかくにんしてふめいてんがあれば"
+      ]
+    },
+    {
+      "id": 77,
+      "speaker": "A",
+      "japanese": "後ほど確認させてください。",
+      "reading": "",
+      "romaji": "",
+      "english": "please let me confirm later.",
+      "vietnamese": "tôi xin phép được hỏi lại sau.",
+      "acceptedAnswers": [
+        "後ほど確認させてください",
+        "のちほどかくにんさせてください"
+      ]
+    },
+    {
+      "id": 78,
+      "speaker": "B",
+      "japanese": "はい、お願いします。",
+      "reading": "",
+      "romaji": "",
+      "english": "Yes, please.",
+      "vietnamese": "Vâng, nhờ bạn nhé.",
+      "acceptedAnswers": [
+        "はいお願いします",
+        "はいおねがいします"
+      ]
+    },
+    {
+      "id": 79,
+      "speaker": "B",
+      "japanese": "それでは、本日の説明は以上です。",
+      "reading": "",
+      "romaji": "",
+      "english": "Then, that is all for today's explanation.",
+      "vietnamese": "Vậy thì phần giải thích hôm nay đến đây là hết.",
+      "acceptedAnswers": [
+        "それでは本日の説明は以上です",
+        "それではほんじつのせつめいはいじょうです"
+      ]
+    },
+    {
+      "id": 80,
+      "speaker": "B",
+      "japanese": "本日はありがとうございました。",
+      "reading": "",
+      "romaji": "",
+      "english": "Thank you very much today.",
+      "vietnamese": "Cảm ơn các bạn hôm nay.",
+      "acceptedAnswers": [
+        "本日はありがとうございました",
+        "ほんじつはありがとうございました"
+      ]
+    }
+  ]
 };
