@@ -1,11 +1,12 @@
+
 {
-  "n3-grammar-format-001": {
-    "grammarId": "n3-grammar-format-001",
+  "n4-grammar-format-001": {
+    "grammarId": "n4-grammar-format-001",
     "title": "受身形",
     "questions": [
       {
-        "id": "n3-grammar-format-001-q01",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q01",
+        "grammarId": "n4-grammar-format-001",
         "question": "私は昨日、知らない人に足をごめんなさいと___。",
         "choices": [
           "踏まれました",
@@ -17,8 +18,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q02",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q02",
+        "grammarId": "n4-grammar-format-001",
         "question": "このビルは2010年に___。",
         "choices": [
           "建てました",
@@ -30,8 +31,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q03",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q03",
+        "grammarId": "n4-grammar-format-001",
         "question": "テストの点数が悪くて、先生に___。",
         "choices": [
           "叱られました",
@@ -43,8 +44,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q04",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q04",
+        "grammarId": "n4-grammar-format-001",
         "question": "日本の漫画は世界中でよく___。",
         "choices": [
           "読みます",
@@ -56,8 +57,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q05",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q05",
+        "grammarId": "n4-grammar-format-001",
         "question": "後ろの人に名前を___、びっくりしました。",
         "choices": [
           "呼んで",
@@ -69,8 +70,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q06",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q06",
+        "grammarId": "n4-grammar-format-001",
         "question": "雨に___、服が濡れてしまいました。",
         "choices": [
           "降られて",
@@ -82,8 +83,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q07",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q07",
+        "grammarId": "n4-grammar-format-001",
         "question": "泥棒に財布を___、困っています。",
         "choices": [
           "盗んで",
@@ -95,8 +96,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q08",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q08",
+        "grammarId": "n4-grammar-format-001",
         "question": "この歌は多くの若者に___います。",
         "choices": [
           "愛して",
@@ -108,8 +109,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q09",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q09",
+        "grammarId": "n4-grammar-format-001",
         "question": "友達に秘密をみんなに___、本当にショックだ。",
         "choices": [
           "言われて",
@@ -121,8 +122,8 @@
         "explanation": ""
       },
       {
-        "id": "n3-grammar-format-001-q10",
-        "grammarId": "n3-grammar-format-001",
+        "id": "n4-grammar-format-001-q10",
+        "grammarId": "n4-grammar-format-001",
         "question": "母に日記を___、恥ずかしかったです。",
         "choices": [
           "読まれて",
@@ -134,5 +135,26 @@
         "explanation": ""
       }
     ]
+  },
+
+  "n4-grammar-format-002": {
+    "grammarId": "n4-grammar-format-002",
+    "title": "受身形",
+    "questions": [
+      {
+        "id": "n4-grammar-format-002-q01",
+        "grammarId": "n4-grammar-format-002",
+        "question": "私は昨日、知らない人に足をごめんなさいと___。",
+        "choices": [
+          "踏まれました",
+          "踏ませました",
+          "踏みました",
+          "踏んでしまいました"
+        ],
+        "answer": 0,
+        "explanation": ""
+      }
+    ]
   }
 }
+

@@ -1,19 +1,18 @@
 {
-    "id": "",
+    "id": "n4-grammar-format-001",
     "no": 1,
-    "level": "",
-    "lesson": "",
+    "level": "N4",
+    "lesson": "Lesson 1",
     "title": "",
     "usage": "",
     "notes": [
         {
-            "title": "注意",
             "lines": []
         }
     ],
     "meanings": [
         {
-            "id": "",
+            "id": "n4-grammar-format-00-meaning-01",
             "title": "",
             "meaning": "",
             "usage": "",

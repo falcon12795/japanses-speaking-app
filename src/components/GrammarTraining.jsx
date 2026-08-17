@@ -3,6 +3,9 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { N3_GRAMMAR_QUESTIONS } from "../data/training/n3Ques";
 import Panel from "./common/Panel";
 import Button from "./common/Button";
+import { N2_GRAMMAR_QUESTIONS } from "../data/training/n2Ques";
+import { N4_GRAMMAR_QUESTIONS } from "../data/training/n4Ques";
+import { N5_GRAMMAR_QUESTIONS } from "../data/training/n5Ques";
 
 function shuffleArray(array) {
     return [...array].sort(() => Math.random() - 0.5);
@@ -87,7 +90,24 @@ export default function GrammarTraining() {
 
     const questions = useMemo(() => {
         const allQuestions = selectedGrammarIds.flatMap((grammarId) => {
-            const quizGroup = N3_GRAMMAR_QUESTIONS[grammarId];
+            var quizGroup;
+            switch (grammarId.substring(0, 2).toUpperCase) {
+                case "N1":
+                    quizGroup = N2_GRAMMAR_QUESTIONS[grammarId];
+                    break;
+                case "N2":
+                    quizGroup = N2_GRAMMAR_QUESTIONS[grammarId];
+                    break;
+                case "N3":
+                    quizGroup = N3_GRAMMAR_QUESTIONS[grammarId];
+                    break;
+                case "N4":
+                    quizGroup = N4_GRAMMAR_QUESTIONS[grammarId];
+                    break;
+                default:
+                    quizGroup = N5_GRAMMAR_QUESTIONS[grammarId];
+                    break;
+            }
 
             if (!quizGroup?.questions?.length) {
                 return [];
