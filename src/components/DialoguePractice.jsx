@@ -65,6 +65,7 @@ export default function DialoguePractice({
       speechSynthesis.cancel();
     };
   }, []);
+  const lineRefs = useRef({});
 
   const currentDialogue = dialogue;
 
@@ -89,6 +90,19 @@ export default function DialoguePractice({
 
     return currentDialogue.lines.find((line) => line.id === activeLineId);
   }, [currentDialogue, activeLineId]);
+  useEffect(() => {
+  if (!activeLineId) return;
+
+  const element = lineRefs.current[activeLineId];
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
+  }
+}, [activeLineId]);
 
   const dialogueStatus = useMemo(() => {
     if (!currentDialogue) {
@@ -967,6 +981,11 @@ export default function DialoguePractice({
             return (
               <div
                 key={line.id}
+                ref={(el) => {
+                  if (el) {
+                    lineRefs.current[line.id] = el;
+                  }
+                }}
                 className={`dialogue-line ${line.speaker === "A" ? "speaker-a" : "speaker-b"
                   } ${activeLineId === line.id ? "active-line" : ""}`}
               >
