@@ -59,9 +59,15 @@
   margin-bottom: 8px;
 }
 
+.grammar-detail-title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
 .grammar-detail-title-area h2 {
-  margin: 10px 0 4px;
-  font-size: 38px;
+  margin: 0;
 }
 
 .grammar-detail-badges {
@@ -448,6 +454,34 @@
   background: #f8fafc;
   color: #475569;
   font-weight: 700;
+}
+
+.grammar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.grammar-nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .grammar-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .grammar-nav-buttons {
+    width: 100%;
+  }
+
+  .grammar-nav-buttons button {
+    flex: 1;
+  }
 }
 
 @media (max-width: 900px) {

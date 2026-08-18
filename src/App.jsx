@@ -159,24 +159,74 @@ function GrammarListPage() {
 }
 
 function GrammarDetailPage() {
+  const navigate = useNavigate();
   const { level, grammarId } = useParams();
-
   const decodedLevel = decodeURIComponent(level || "");
   const decodedGrammarId = decodeURIComponent(grammarId || "");
-
-  const grammar = GRAMMAR.find(
-    (item) =>
-      String(item.level) === String(decodedLevel) &&
-      String(item.id) === String(decodedGrammarId)
+  const grammarListByLevel = GRAMMAR.filter(
+    (item) => item.level === decodedLevel
   );
+  const currentIndex =
+    grammarListByLevel.findIndex(
+      (item) =>
+        String(item.id) ===
+        String(decodedGrammarId)
+    );
+  const grammar = currentIndex >= 0
+    ? grammarListByLevel[currentIndex]
+    : null;
+  const previousGrammar =
+    currentIndex > 0
+      ? grammarListByLevel[currentIndex - 1]
+      : null;
+  const nextGrammar =
+    currentIndex < grammarListByLevel.length - 1
+      ? grammarListByLevel[currentIndex + 1]
+      : null;
+  const handlePreviousGrammar = () => {
+    if (!previousGrammar) return;
+    navigate(
+      `/grammar/${previousGrammar.level}/${previousGrammar.id}`
+    );
+  };
+  const handleNextGrammar = () => {
+    if (!nextGrammar) return;
 
+    navigate(
+      `/grammar/${nextGrammar.level}/${nextGrammar.id}`
+    );
+  };
+  
+  console.log({
+    decodedLevel,
+    decodedGrammarId,
+    grammarListByLevelLength:
+      grammarListByLevel.length,
+    currentIndex,
+    grammar,
+    previousGrammar,
+    nextGrammar,
+  });
+  if (!grammar) {
+    return (
+      <div>
+        Grammar not found:
+        {decodedLevel} / {decodedGrammarId}
+      </div>
+    );
+  }
 
   return (
     <GrammarDetail
       grammar={grammar}
+      onPreviousGrammar={handlePreviousGrammar}
+      onNextGrammar={handleNextGrammar}
+      hasPrevious={!!previousGrammar}
+      hasNext={!!nextGrammar}
     />
   );
 }
+
 
 function DialogueListPage({ progress }) {
   const navigate = useNavigate();

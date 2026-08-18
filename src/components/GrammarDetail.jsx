@@ -5,6 +5,7 @@ import { speakJapaneseText } from "../utils/speech";
 import IconButton from "./common/IconButton";
 import Panel from "./common/Panel";
 import SectionBlock from "./common/SectionBlock";
+import Button from "./common/Button";
 
 function toLines(value) {
   if (!value) return [];
@@ -72,7 +73,13 @@ function normalizeGrammarNotes(grammar) {
   return [];
 }
 
-export default function GrammarDetail({ grammar}) {
+export default function GrammarDetail({
+  grammar,
+  onPreviousGrammar,
+  onNextGrammar,
+  hasPrevious,
+  hasNext,
+}){
   var nummber = 1;
 
   const [collapsedMeaningIds, setCollapsedMeaningIds] = useState(new Set());
@@ -127,6 +134,23 @@ export default function GrammarDetail({ grammar}) {
     <Panel className="grammar-detail-panel">
       <div className="grammar-detail-title-area">
         <h2>{grammar.title}</h2>
+        <div className="grammar-nav-buttons">
+          {hasPrevious && (<Button
+            variant="secondary"
+            onClick={onPreviousGrammar}
+            disabled={!hasPrevious}
+          >
+            ← Prev
+          </Button>)}
+
+          {hasNext && (<Button
+            variant="secondary"
+            onClick={onNextGrammar}
+            disabled={!hasNext}
+          >
+            Next →
+          </Button>)}
+        </div>
       </div>
 
       {grammar.usage && (
