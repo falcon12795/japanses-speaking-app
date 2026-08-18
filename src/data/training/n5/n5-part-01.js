@@ -1,4 +1,4 @@
-export const N5_GRAMMAR_QUESTIONS = {
+export default {
   "n5-grammar-format-001": {
     "grammarId": "n5-grammar-format-001",
     "title": "N1 は N2 です",
@@ -7,7 +7,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q01",
         "grammarId": "n5-grammar-format-001",
         "question": "わたし___学生です。",
-        "choices": ["は", "が", "を", "に"],
+        "choices": [
+          "は",
+          "が",
+          "を",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -15,7 +20,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q02",
         "grammarId": "n5-grammar-format-001",
         "question": "ミラーさん___会社員です。",
-        "choices": ["で", "は", "も", "へ"],
+        "choices": [
+          "で",
+          "は",
+          "も",
+          "へ"
+        ],
         "answer": 1,
         "explanation": ""
       },
@@ -23,7 +33,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q03",
         "grammarId": "n5-grammar-format-001",
         "question": "あの人は先生___。",
-        "choices": ["です", "ます", "でした", "ました"],
+        "choices": [
+          "です",
+          "ます",
+          "でした",
+          "ました"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -31,7 +46,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q04",
         "grammarId": "n5-grammar-format-001",
         "question": "サントスさんはエンジニア___。",
-        "choices": ["です", "だ", "で", "に"],
+        "choices": [
+          "です",
+          "だ",
+          "で",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -39,7 +59,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q05",
         "grammarId": "n5-grammar-format-001",
         "question": "マイクさんはアメリカ人___。",
-        "choices": ["です", "ます", "である", "で"],
+        "choices": [
+          "です",
+          "ます",
+          "である",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -47,7 +72,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q06",
         "grammarId": "n5-grammar-format-001",
         "question": "田中さん___医者です。",
-        "choices": ["は", "を", "へ", "に"],
+        "choices": [
+          "は",
+          "を",
+          "へ",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -55,7 +85,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q07",
         "grammarId": "n5-grammar-format-001",
         "question": "かれ___銀行員です。",
-        "choices": ["は", "が", "で", "と"],
+        "choices": [
+          "は",
+          "が",
+          "で",
+          "と"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -63,7 +98,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q08",
         "grammarId": "n5-grammar-format-001",
         "question": "彼女___日本人です。",
-        "choices": ["は", "を", "に", "へ"],
+        "choices": [
+          "は",
+          "を",
+          "に",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -71,7 +111,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q09",
         "grammarId": "n5-grammar-format-001",
         "question": "わたし___リンです。",
-        "choices": ["は", "が", "を", "で"],
+        "choices": [
+          "は",
+          "が",
+          "を",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -79,7 +124,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-001-q10",
         "grammarId": "n5-grammar-format-001",
         "question": "ワンさん___中国人です。",
-        "choices": ["は", "を", "に", "で"],
+        "choices": [
+          "は",
+          "を",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -93,7 +143,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q01",
         "grammarId": "n5-grammar-format-002",
         "question": "わたしは医者___。",
-        "choices": ["じゃありません", "ではありませんでした", "ではありませんです", "ではありませんでしたか"],
+        "choices": [
+          "じゃありません",
+          "ではありませんでした",
+          "ではありませんです",
+          "ではありませんでしたか"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -101,7 +156,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q02",
         "grammarId": "n5-grammar-format-002",
         "question": "サントスさんは先生___。",
-        "choices": ["じゃありません", "ではありませんです", "ですありません", "じゃありませんでしたか"],
+        "choices": [
+          "じゃありません",
+          "ではありませんです",
+          "ですありません",
+          "じゃありませんでしたか"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -109,7 +169,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q03",
         "grammarId": "n5-grammar-format-002",
         "question": "ミラーさんは日本人___。",
-        "choices": ["ではありません", "ではありませんでしたか", "じゃありませんでした", "ではないです"],
+        "choices": [
+          "ではありません",
+          "ではありませんでしたか",
+          "じゃありませんでした",
+          "ではないです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -117,7 +182,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q04",
         "grammarId": "n5-grammar-format-002",
         "question": "あのかたは学生___。",
-        "choices": ["じゃありません", "ではありませんでした", "ですではありません", "ではありませんです"],
+        "choices": [
+          "じゃありません",
+          "ではありませんでした",
+          "ですではありません",
+          "ではありませんです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -125,7 +195,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q05",
         "grammarId": "n5-grammar-format-002",
         "question": "わたしはエンジニア___。",
-        "choices": ["ではありません", "ではありませんでしたか", "じゃありませんでした", "ではないです"],
+        "choices": [
+          "ではありません",
+          "ではありませんでしたか",
+          "じゃありませんでした",
+          "ではないです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -133,7 +208,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q06",
         "grammarId": "n5-grammar-format-002",
         "question": "田中さんは銀行員___。",
-        "choices": ["じゃありません", "ではありませんでした", "ですありません", "ではありませんです"],
+        "choices": [
+          "じゃありません",
+          "ではありませんでした",
+          "ですありません",
+          "ではありませんです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -141,7 +221,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q07",
         "grammarId": "n5-grammar-format-002",
         "question": "あの人は研究者___。",
-        "choices": ["ではありません", "ではありませんでしたか", "じゃありませんでした", "ではないです"],
+        "choices": [
+          "ではありません",
+          "ではありませんでしたか",
+          "じゃありませんでした",
+          "ではないです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -149,7 +234,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q08",
         "grammarId": "n5-grammar-format-002",
         "question": "山田さんは歌手___。",
-        "choices": ["じゃありません", "ではありませんでした", "ですありません", "ではありませんです"],
+        "choices": [
+          "じゃありません",
+          "ではありませんでした",
+          "ですありません",
+          "ではありませんです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -157,7 +247,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q09",
         "grammarId": "n5-grammar-format-002",
         "question": "マイクさんはアメリカ人___。",
-        "choices": ["ではありません", "ではありませんでしたか", "じゃありませんでした", "ではないです"],
+        "choices": [
+          "ではありません",
+          "ではありませんでしたか",
+          "じゃありませんでした",
+          "ではないです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -165,7 +260,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-002-q10",
         "grammarId": "n5-grammar-format-002",
         "question": "私は会社員___。",
-        "choices": ["じゃありません", "ではありませんでした", "ですありません", "ではありませんです"],
+        "choices": [
+          "じゃありません",
+          "ではありませんでした",
+          "ですありません",
+          "ではありませんです"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -179,7 +279,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q01",
         "grammarId": "n5-grammar-format-003",
         "question": "ミラーさんは日本人です___。",
-        "choices": ["か", "ね", "よ", "の"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "の"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -187,7 +292,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q02",
         "grammarId": "n5-grammar-format-003",
         "question": "あの人は先生です___。",
-        "choices": ["か", "ね", "よ", "わ"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "わ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -195,7 +305,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q03",
         "grammarId": "n5-grammar-format-003",
         "question": "サントスさんは学生です___。",
-        "choices": ["か", "ね", "よ", "の"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "の"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -203,7 +318,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q04",
         "grammarId": "n5-grammar-format-003",
         "question": "あなたは会社員です___。",
-        "choices": ["か", "ね", "よ", "わ"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "わ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -211,7 +331,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q05",
         "grammarId": "n5-grammar-format-003",
         "question": "田中さんは医者です___。",
-        "choices": ["か", "ね", "よ", "の"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "の"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -219,7 +344,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q06",
         "grammarId": "n5-grammar-format-003",
         "question": "あのかたは研究者です___。",
-        "choices": ["か", "ね", "よ", "わ"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "わ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -227,7 +357,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q07",
         "grammarId": "n5-grammar-format-003",
         "question": "山田さんは銀行員です___。",
-        "choices": ["か", "ね", "よ", "の"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "の"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -235,7 +370,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q08",
         "grammarId": "n5-grammar-format-003",
         "question": "マイクさんはエンジニアです___。",
-        "choices": ["か", "ね", "よ", "わ"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "わ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -243,7 +383,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q09",
         "grammarId": "n5-grammar-format-003",
         "question": "ワンさんは中国人です___。",
-        "choices": ["か", "ね", "よ", "の"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "の"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -251,7 +396,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-003-q10",
         "grammarId": "n5-grammar-format-003",
         "question": "あの人は留学生です___。",
-        "choices": ["か", "ね", "よ", "わ"],
+        "choices": [
+          "か",
+          "ね",
+          "よ",
+          "わ"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -265,7 +415,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q01",
         "grammarId": "n5-grammar-format-004",
         "question": "ミラーさんは会社員です。グプタさん___会社員です。",
-        "choices": ["も", "は", "が", "を"],
+        "choices": [
+          "も",
+          "は",
+          "が",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -273,7 +428,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q02",
         "grammarId": "n5-grammar-format-004",
         "question": "山田さんは学生です。田中さん___学生です。",
-        "choices": ["も", "は", "に", "で"],
+        "choices": [
+          "も",
+          "は",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -281,7 +441,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q03",
         "grammarId": "n5-grammar-format-004",
         "question": "わたしは学生です。キムさん___学生ですか。",
-        "choices": ["も", "は", "が", "を"],
+        "choices": [
+          "も",
+          "は",
+          "が",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -289,7 +454,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q04",
         "grammarId": "n5-grammar-format-004",
         "question": "山田さんは学生じゃありません。田中さん___学生じゃありません。",
-        "choices": ["も", "は", "に", "で"],
+        "choices": [
+          "も",
+          "は",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -297,7 +467,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q05",
         "grammarId": "n5-grammar-format-004",
         "question": "ミラーさんはアメリカ人です。マイクさん___アメリカ人です。",
-        "choices": ["も", "は", "が", "を"],
+        "choices": [
+          "も",
+          "は",
+          "が",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -305,7 +480,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q06",
         "grammarId": "n5-grammar-format-004",
         "question": "わたしはエンジニアじゃありません。サントスさん___エンジニアじゃありません。",
-        "choices": ["も", "は", "に", "で"],
+        "choices": [
+          "も",
+          "は",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -313,7 +493,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q07",
         "grammarId": "n5-grammar-format-004",
         "question": "リンさんは留学生です。ワンさん___留学生です。",
-        "choices": ["も", "は", "が", "を"],
+        "choices": [
+          "も",
+          "は",
+          "が",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -321,7 +506,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q08",
         "grammarId": "n5-grammar-format-004",
         "question": "あのかたは先生です。あの人___先生ですか。",
-        "choices": ["も", "は", "に", "で"],
+        "choices": [
+          "も",
+          "は",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -329,7 +519,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q09",
         "grammarId": "n5-grammar-format-004",
         "question": "わたしは銀行員です。彼___銀行員です。",
-        "choices": ["も", "は", "が", "を"],
+        "choices": [
+          "も",
+          "は",
+          "が",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -337,7 +532,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-004-q10",
         "grammarId": "n5-grammar-format-004",
         "question": "鈴木さんは医者じゃありません。佐藤さん___医者じゃありません。",
-        "choices": ["も", "は", "に", "で"],
+        "choices": [
+          "も",
+          "は",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -351,7 +551,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q01",
         "grammarId": "n5-grammar-format-005",
         "question": "わたしはIMC___社員です。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -359,7 +564,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q02",
         "grammarId": "n5-grammar-format-005",
         "question": "これ___わたしの本です。",
-        "choices": ["は", "の", "が", "で"],
+        "choices": [
+          "は",
+          "の",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -367,7 +577,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q03",
         "grammarId": "n5-grammar-format-005",
         "question": "ミラーさんはさくら大学___先生です。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -375,7 +590,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q04",
         "grammarId": "n5-grammar-format-005",
         "question": "これは日本___自動車です。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -383,7 +603,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q05",
         "grammarId": "n5-grammar-format-005",
         "question": "あれはわたし___かばんです。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -391,7 +616,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q06",
         "grammarId": "n5-grammar-format-005",
         "question": "太郎君は富士病院___医者です。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -399,7 +629,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q07",
         "grammarId": "n5-grammar-format-005",
         "question": "これはコンピューター___本です。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -407,7 +642,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q08",
         "grammarId": "n5-grammar-format-005",
         "question": "わたしは東京大学___学生です。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -415,7 +655,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q09",
         "grammarId": "n5-grammar-format-005",
         "question": "それは英語___辞書です。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -423,7 +668,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-005-q10",
         "grammarId": "n5-grammar-format-005",
         "question": "田中さんはパワー電気___社員です。",
-        "choices": ["の", "は", "が", "で"],
+        "choices": [
+          "の",
+          "は",
+          "が",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -437,7 +687,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q01",
         "grammarId": "n5-grammar-format-006",
         "question": "（話し手の近く）___は辞書です。",
-        "choices": ["これ", "それ", "あれ", "この"],
+        "choices": [
+          "これ",
+          "それ",
+          "あれ",
+          "この"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -445,7 +700,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q02",
         "grammarId": "n5-grammar-format-006",
         "question": "（聞き手の近く）___は私のかばんです。",
-        "choices": ["それ", "これ", "あれ", "その"],
+        "choices": [
+          "それ",
+          "これ",
+          "あれ",
+          "その"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -453,7 +713,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q03",
         "grammarId": "n5-grammar-format-006",
         "question": "（両方から遠い）___は私の傘です。",
-        "choices": ["あれ", "これ", "それ", "あの"],
+        "choices": [
+          "あれ",
+          "これ",
+          "それ",
+          "あの"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -461,7 +726,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q04",
         "grammarId": "n5-grammar-format-006",
         "question": "___は本ですか、雑誌ですか。",
-        "choices": ["これ", "この", "その", "あの"],
+        "choices": [
+          "これ",
+          "この",
+          "その",
+          "あの"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -469,7 +739,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q05",
         "grammarId": "n5-grammar-format-006",
         "question": "（聞き手の近く）___は何ですか。",
-        "choices": ["それ", "これ", "あれ", "その"],
+        "choices": [
+          "それ",
+          "これ",
+          "あれ",
+          "その"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -477,7 +752,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q06",
         "grammarId": "n5-grammar-format-006",
         "question": "（話し手の近く）___は私の鍵です。",
-        "choices": ["これ", "それ", "あれ", "この"],
+        "choices": [
+          "これ",
+          "それ",
+          "あれ",
+          "この"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -485,7 +765,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q07",
         "grammarId": "n5-grammar-format-006",
         "question": "（両方から遠い）___は学校です。",
-        "choices": ["あれ", "これ", "それ", "あの"],
+        "choices": [
+          "あれ",
+          "これ",
+          "それ",
+          "あの"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -493,7 +778,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q08",
         "grammarId": "n5-grammar-format-006",
         "question": "___はノートではありません。",
-        "choices": ["これ", "この", "その", "あの"],
+        "choices": [
+          "これ",
+          "この",
+          "その",
+          "あの"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -501,7 +791,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q09",
         "grammarId": "n5-grammar-format-006",
         "question": "（聞き手の近く）___は時計ですか。",
-        "choices": ["それ", "これ", "あれ", "その"],
+        "choices": [
+          "それ",
+          "これ",
+          "あれ",
+          "その"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -509,7 +804,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-006-q10",
         "grammarId": "n5-grammar-format-006",
         "question": "（両方から遠い）___は病院です。",
-        "choices": ["あれ", "これ", "それ", "あの"],
+        "choices": [
+          "あれ",
+          "これ",
+          "それ",
+          "あの"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -523,7 +823,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q01",
         "grammarId": "n5-grammar-format-007",
         "question": "___本は面白いです。",
-        "choices": ["この", "これ", "それ", "あれ"],
+        "choices": [
+          "この",
+          "これ",
+          "それ",
+          "あれ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -531,7 +836,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q02",
         "grammarId": "n5-grammar-format-007",
         "question": "___人はだれですか。",
-        "choices": ["あの", "あれ", "これ", "それ"],
+        "choices": [
+          "あの",
+          "あれ",
+          "これ",
+          "それ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -539,7 +849,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q03",
         "grammarId": "n5-grammar-format-007",
         "question": "___かばんは私のです。",
-        "choices": ["その", "それ", "これ", "あれ"],
+        "choices": [
+          "その",
+          "それ",
+          "これ",
+          "あれ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -547,7 +862,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q04",
         "grammarId": "n5-grammar-format-007",
         "question": "___傘はあなたのですか。",
-        "choices": ["この", "これ", "それ", "あれ"],
+        "choices": [
+          "この",
+          "これ",
+          "それ",
+          "あれ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -555,7 +875,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q05",
         "grammarId": "n5-grammar-format-007",
         "question": "___カメラはいくらですか。",
-        "choices": ["その", "それ", "これ", "あれ"],
+        "choices": [
+          "その",
+          "それ",
+          "これ",
+          "あれ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -563,7 +888,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q06",
         "grammarId": "n5-grammar-format-007",
         "question": "___建物は銀行です。",
-        "choices": ["あの", "あれ", "これ", "それ"],
+        "choices": [
+          "あの",
+          "あれ",
+          "これ",
+          "それ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -571,7 +901,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q07",
         "grammarId": "n5-grammar-format-007",
         "question": "___辞書はだれのですか。",
-        "choices": ["この", "これ", "それ", "あれ"],
+        "choices": [
+          "この",
+          "これ",
+          "それ",
+          "あれ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -579,7 +914,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q08",
         "grammarId": "n5-grammar-format-007",
         "question": "___新聞は私のです。",
-        "choices": ["その", "それ", "これ", "あれ"],
+        "choices": [
+          "その",
+          "それ",
+          "これ",
+          "あれ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -587,7 +927,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q09",
         "grammarId": "n5-grammar-format-007",
         "question": "___車は高いです。",
-        "choices": ["あの", "あれ", "これ", "それ"],
+        "choices": [
+          "あの",
+          "あれ",
+          "これ",
+          "それ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -595,7 +940,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-007-q10",
         "grammarId": "n5-grammar-format-007",
         "question": "___ノートは田中さんのです。",
-        "choices": ["この", "これ", "それ", "あれ"],
+        "choices": [
+          "この",
+          "これ",
+          "それ",
+          "あれ"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -609,7 +959,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q01",
         "grammarId": "n5-grammar-format-008",
         "question": "（話し手の場所）___は教室です。",
-        "choices": ["ここ", "そこ", "あそこ", "こちら"],
+        "choices": [
+          "ここ",
+          "そこ",
+          "あそこ",
+          "こちら"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -617,7 +972,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q02",
         "grammarId": "n5-grammar-format-008",
         "question": "お手洗いは___です。",
-        "choices": ["あそこ", "あれ", "あの", "この"],
+        "choices": [
+          "あそこ",
+          "あれ",
+          "あの",
+          "この"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -625,7 +985,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q03",
         "grammarId": "n5-grammar-format-008",
         "question": "（聞き手の場所）___は事務所ですか。",
-        "choices": ["そこ", "ここ", "あそこ", "これ"],
+        "choices": [
+          "そこ",
+          "ここ",
+          "あそこ",
+          "これ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -633,7 +998,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q04",
         "grammarId": "n5-grammar-format-008",
         "question": "受付は___です。",
-        "choices": ["ここ", "これ", "この", "こちら"],
+        "choices": [
+          "ここ",
+          "これ",
+          "この",
+          "こちら"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -641,7 +1011,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q05",
         "grammarId": "n5-grammar-format-008",
         "question": "会議室は___です。",
-        "choices": ["あそこ", "あれ", "あの", "そこ"],
+        "choices": [
+          "あそこ",
+          "あれ",
+          "あの",
+          "そこ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -649,7 +1024,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q06",
         "grammarId": "n5-grammar-format-008",
         "question": "（話し手の場所）___は図書室です。",
-        "choices": ["ここ", "そこ", "あそこ", "これ"],
+        "choices": [
+          "ここ",
+          "そこ",
+          "あそこ",
+          "これ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -657,7 +1037,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q07",
         "grammarId": "n5-grammar-format-008",
         "question": "食堂は___です。",
-        "choices": ["そこ", "それ", "その", "ここ"],
+        "choices": [
+          "そこ",
+          "それ",
+          "その",
+          "ここ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -665,7 +1050,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q08",
         "grammarId": "n5-grammar-format-008",
         "question": "（両方から遠い場所）___は駅です。",
-        "choices": ["あそこ", "あれ", "あの", "そこ"],
+        "choices": [
+          "あそこ",
+          "あれ",
+          "あの",
+          "そこ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -673,7 +1063,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q09",
         "grammarId": "n5-grammar-format-008",
         "question": "郵便局は___ですか。",
-        "choices": ["どこ", "どれ", "どの", "だれ"],
+        "choices": [
+          "どこ",
+          "どれ",
+          "どの",
+          "だれ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -681,7 +1076,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-008-q10",
         "grammarId": "n5-grammar-format-008",
         "question": "（話し手の場所）___は私の部屋です。",
-        "choices": ["ここ", "そこ", "あそこ", "これ"],
+        "choices": [
+          "ここ",
+          "そこ",
+          "あそこ",
+          "これ"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -695,7 +1095,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q01",
         "grammarId": "n5-grammar-format-009",
         "question": "毎朝6時___起きます。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -703,7 +1108,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q02",
         "grammarId": "n5-grammar-format-009",
         "question": "日曜日___友達と遊びに行きます。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -711,7 +1121,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q03",
         "grammarId": "n5-grammar-format-009",
         "question": "毎晩10時半___寝ます。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -719,7 +1134,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q04",
         "grammarId": "n5-grammar-format-009",
         "question": "7月15日___日本へ来ました。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -727,7 +1147,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q05",
         "grammarId": "n5-grammar-format-009",
         "question": "明日、何時___起きますか。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -735,7 +1160,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q06",
         "grammarId": "n5-grammar-format-009",
         "question": "来週の月曜日___勉強します。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -743,7 +1173,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q07",
         "grammarId": "n5-grammar-format-009",
         "question": "今晩8時___友達に会います。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -751,7 +1186,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q08",
         "grammarId": "n5-grammar-format-009",
         "question": "銀行は9時___開きます。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -759,7 +1199,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q09",
         "grammarId": "n5-grammar-format-009",
         "question": "誕生日は5月5日___です。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -767,7 +1212,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-009-q10",
         "grammarId": "n5-grammar-format-009",
         "question": "正午12時___昼ご飯を食べます。",
-        "choices": ["に", "で", "を", "へ"],
+        "choices": [
+          "に",
+          "で",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -781,7 +1231,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q01",
         "grammarId": "n5-grammar-format-010",
         "question": "明日、日本___行きます。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -789,7 +1244,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q02",
         "grammarId": "n5-grammar-format-010",
         "question": "うち___帰ります。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -797,7 +1257,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q03",
         "grammarId": "n5-grammar-format-010",
         "question": "昨日、学校___来ました。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -805,7 +1270,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q04",
         "grammarId": "n5-grammar-format-010",
         "question": "スーパー___行きます。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -813,7 +1283,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q05",
         "grammarId": "n5-grammar-format-010",
         "question": "どこ___も行きません。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -821,7 +1296,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q06",
         "grammarId": "n5-grammar-format-010",
         "question": "友達が国___帰りました。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -829,7 +1309,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q07",
         "grammarId": "n5-grammar-format-010",
         "question": "会社___行きます。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -837,7 +1322,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q08",
         "grammarId": "n5-grammar-format-010",
         "question": "病院___行かなければなりません。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -845,7 +1335,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q09",
         "grammarId": "n5-grammar-format-010",
         "question": "先生がここ___来ます。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -853,7 +1348,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-010-q10",
         "grammarId": "n5-grammar-format-010",
         "question": "日曜日、どこ___行きますか。",
-        "choices": ["へ", "で", "を", "が"],
+        "choices": [
+          "へ",
+          "で",
+          "を",
+          "が"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -867,7 +1367,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q01",
         "grammarId": "n5-grammar-format-011",
         "question": "水___飲みます。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -875,7 +1380,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q02",
         "grammarId": "n5-grammar-format-011",
         "question": "日本語___勉強します。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -883,7 +1393,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q03",
         "grammarId": "n5-grammar-format-011",
         "question": "ご飯___食べました。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -891,7 +1406,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q04",
         "grammarId": "n5-grammar-format-011",
         "question": "テレビ___見ます。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -899,7 +1419,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q05",
         "grammarId": "n5-grammar-format-011",
         "question": "音楽___聞きます。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -907,7 +1432,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q06",
         "grammarId": "n5-grammar-format-011",
         "question": "手紙___書きます。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -915,7 +1445,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q07",
         "grammarId": "n5-grammar-format-011",
         "question": "写真を___撮ります。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -923,7 +1458,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q08",
         "grammarId": "n5-grammar-format-011",
         "question": "タバコ___吸いますか。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -931,7 +1471,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q09",
         "grammarId": "n5-grammar-format-011",
         "question": "サッカー___します。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -939,7 +1484,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-011-q10",
         "grammarId": "n5-grammar-format-011",
         "question": "本___読みます。",
-        "choices": ["を", "が", "に", "で"],
+        "choices": [
+          "を",
+          "が",
+          "に",
+          "で"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -953,7 +1503,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q01",
         "grammarId": "n5-grammar-format-012",
         "question": "電車___会社へ行きます。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -961,7 +1516,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q02",
         "grammarId": "n5-grammar-format-012",
         "question": "はし___ご飯を食べます。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -969,7 +1529,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q03",
         "grammarId": "n5-grammar-format-012",
         "question": "日本語___話します。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -977,7 +1542,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q04",
         "grammarId": "n5-grammar-format-012",
         "question": "バス___学校へ来ました。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -985,7 +1555,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q05",
         "grammarId": "n5-grammar-format-012",
         "question": "ペン___名前を書きます。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -993,7 +1568,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q06",
         "grammarId": "n5-grammar-format-012",
         "question": "タクシー___病院へ行きました。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1001,7 +1581,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q07",
         "grammarId": "n5-grammar-format-012",
         "question": "ハサミ___紙を切ります。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1009,7 +1594,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q08",
         "grammarId": "n5-grammar-format-012",
         "question": "飛行機___日本へ行きます。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1017,7 +1607,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q09",
         "grammarId": "n5-grammar-format-012",
         "question": "スプーン___カレーを食べます。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1025,7 +1620,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-012-q10",
         "grammarId": "n5-grammar-format-012",
         "question": "何___国へ帰りますか。",
-        "choices": ["で", "に", "を", "へ"],
+        "choices": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -1039,7 +1639,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q01",
         "grammarId": "n5-grammar-format-013",
         "question": "図書館___本を読みます。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1047,7 +1652,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q02",
         "grammarId": "n5-grammar-format-013",
         "question": "レストラン___昼ご飯を食べました。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1055,7 +1665,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q03",
         "grammarId": "n5-grammar-format-013",
         "question": "駅___友達に会います。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1063,7 +1678,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q04",
         "grammarId": "n5-grammar-format-013",
         "question": "部屋___勉強します。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1071,7 +1691,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q05",
         "grammarId": "n5-grammar-format-013",
         "question": "どこ___服を買いましたか。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1079,7 +1704,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q06",
         "grammarId": "n5-grammar-format-013",
         "question": "公園___散歩します。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1087,7 +1717,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q07",
         "grammarId": "n5-grammar-format-013",
         "question": "会社___仕事をします。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1095,7 +1730,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q08",
         "grammarId": "n5-grammar-format-013",
         "question": "デパート___買い物をしました。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1103,7 +1743,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q09",
         "grammarId": "n5-grammar-format-013",
         "question": "学校___日本語を習います。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1111,7 +1756,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-013-q10",
         "grammarId": "n5-grammar-format-013",
         "question": "ロビー___煙草を吸わないでください。",
-        "choices": ["で", "に", "へ", "を"],
+        "choices": [
+          "で",
+          "に",
+          "へ",
+          "を"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -1125,7 +1775,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q01",
         "grammarId": "n5-grammar-format-014",
         "question": "ちょっと休みに___。",
-        "choices": ["ましょう", "ます", "ません", "ました"],
+        "choices": [
+          "ましょう",
+          "ます",
+          "ません",
+          "ました"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1133,7 +1788,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q02",
         "grammarId": "n5-grammar-format-014",
         "question": "タクシーを呼び___。",
-        "choices": ["ましょうか", "ますか", "ませんか", "ましたか"],
+        "choices": [
+          "ましょうか",
+          "ますか",
+          "ませんか",
+          "ましたか"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1141,7 +1801,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q03",
         "grammarId": "n5-grammar-format-014",
         "question": "一緒にご飯を食に___。",
-        "choices": ["べましょう", "べます", "べません", "べました"],
+        "choices": [
+          "べましょう",
+          "べます",
+          "べません",
+          "べました"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1149,7 +1814,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q04",
         "grammarId": "n5-grammar-format-014",
         "question": "手伝い___。",
-        "choices": ["ましょうか", "ますか", "ませんか", "ましたか"],
+        "choices": [
+          "ましょうか",
+          "ますか",
+          "ませんか",
+          "ましたか"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1157,7 +1827,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q05",
         "grammarId": "n5-grammar-format-014",
         "question": "そろそろ行に___。",
-        "choices": ["きましょう", "きます", "きません", "きました"],
+        "choices": [
+          "きましょう",
+          "きます",
+          "きません",
+          "きました"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1165,7 +1840,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q06",
         "grammarId": "n5-grammar-format-014",
         "question": "窓を開け___。",
-        "choices": ["ましょうか", "ますか", "ませんか", "ましたか"],
+        "choices": [
+          "ましょうか",
+          "ますか",
+          "ませんか",
+          "ましたか"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1173,7 +1853,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q07",
         "grammarId": "n5-grammar-format-014",
         "question": "明日また会いに___。",
-        "choices": ["いましょう", "います", "いません", "いました"],
+        "choices": [
+          "いましょう",
+          "います",
+          "いません",
+          "いました"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1181,7 +1866,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q08",
         "grammarId": "n5-grammar-format-014",
         "question": "傘を貸し___。",
-        "choices": ["ましょうか", "ますか", "ませんか", "ましたか"],
+        "choices": [
+          "ましょうか",
+          "ますか",
+          "ませんか",
+          "ましたか"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1189,7 +1879,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q09",
         "grammarId": "n5-grammar-format-014",
         "question": "お茶を飲みに___。",
-        "choices": ["みましょう", "みます", "みません", "みました"],
+        "choices": [
+          "みましょう",
+          "みます",
+          "みません",
+          "みました"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1197,7 +1892,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-014-q10",
         "grammarId": "n5-grammar-format-014",
         "question": "写真をお撮り___。",
-        "choices": ["しましょうか", "しますか", "しませんか", "しましたか"],
+        "choices": [
+          "しましょうか",
+          "しますか",
+          "しませんか",
+          "しましたか"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -1211,7 +1911,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q01",
         "grammarId": "n5-grammar-format-015",
         "question": "部屋にテレビ___あります。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1219,7 +1924,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q02",
         "grammarId": "n5-grammar-format-015",
         "question": "庭に犬___います。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1227,7 +1937,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q03",
         "grammarId": "n5-grammar-format-015",
         "question": "机の上に本が___。",
-        "choices": ["あります", "います", "です", "します"],
+        "choices": [
+          "あります",
+          "います",
+          "です",
+          "します"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1235,7 +1950,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q04",
         "grammarId": "n5-grammar-format-015",
         "question": "あそこに男の人が___。",
-        "choices": ["います", "あります", "です", "します"],
+        "choices": [
+          "います",
+          "あります",
+          "です",
+          "します"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1243,7 +1963,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q05",
         "grammarId": "n5-grammar-format-015",
         "question": "公園に子供が___。",
-        "choices": ["います", "あります", "です", "します"],
+        "choices": [
+          "います",
+          "あります",
+          "です",
+          "します"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1251,7 +1976,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q06",
         "grammarId": "n5-grammar-format-015",
         "question": "冷蔵庫の中に何が___か。",
-        "choices": ["あります", "います", "です", "します"],
+        "choices": [
+          "あります",
+          "います",
+          "です",
+          "します"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1259,7 +1989,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q07",
         "grammarId": "n5-grammar-format-015",
         "question": "事務所にだれが___か。",
-        "choices": ["います", "あります", "です", "します"],
+        "choices": [
+          "います",
+          "あります",
+          "です",
+          "します"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1267,7 +2002,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q08",
         "grammarId": "n5-grammar-format-015",
         "question": "私のかばんの中に鍵が___。",
-        "choices": ["あります", "います", "です", "します"],
+        "choices": [
+          "あります",
+          "います",
+          "です",
+          "します"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1275,7 +2015,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q09",
         "grammarId": "n5-grammar-format-015",
         "question": "池に魚が___。",
-        "choices": ["います", "あります", "です", "します"],
+        "choices": [
+          "います",
+          "あります",
+          "です",
+          "します"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1283,7 +2028,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-015-q10",
         "grammarId": "n5-grammar-format-015",
         "question": "車の下に猫が___。",
-        "choices": ["います", "あります", "です", "します"],
+        "choices": [
+          "います",
+          "あります",
+          "です",
+          "します"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -1297,7 +2047,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q01",
         "grammarId": "n5-grammar-format-016",
         "question": "このお茶は___です。",
-        "choices": ["熱い", "熱いく", "熱いな", "熱いに"],
+        "choices": [
+          "熱い",
+          "熱いく",
+          "熱いな",
+          "熱いに"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1305,7 +2060,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q02",
         "grammarId": "n5-grammar-format-016",
         "question": "富士山は___です。",
-        "choices": ["有名", "有名な", "有名い", "有名く"],
+        "choices": [
+          "有名",
+          "有名な",
+          "有名い",
+          "有名く"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1313,7 +2073,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q03",
         "grammarId": "n5-grammar-format-016",
         "question": "今日の天気は___くないです。",
-        "choices": ["良", "いい", "よく", "いいな"],
+        "choices": [
+          "良",
+          "いい",
+          "よく",
+          "いいな"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1321,7 +2086,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q04",
         "grammarId": "n5-grammar-format-016",
         "question": "この町は静か___。",
-        "choices": ["じゃありません", "くないです", "くありません", "ないです"],
+        "choices": [
+          "じゃありません",
+          "くないです",
+          "くありません",
+          "ないです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1329,7 +2099,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q05",
         "grammarId": "n5-grammar-format-016",
         "question": "日本の食べ物は___です。",
-        "choices": ["おいしい", "おいしいな", "おいしく", "おいし"],
+        "choices": [
+          "おいしい",
+          "おいしいな",
+          "おいしく",
+          "おいし"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1337,7 +2112,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q06",
         "grammarId": "n5-grammar-format-016",
         "question": "この部屋はあまり___くないです。",
-        "choices": ["広", "ひろい", "ひろく", "ひろ"],
+        "choices": [
+          "広",
+          "ひろい",
+          "ひろく",
+          "ひろ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1345,7 +2125,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q07",
         "grammarId": "n5-grammar-format-016",
         "question": "あの人はあまり親切___。",
-        "choices": ["じゃありません", "くないです", "くありません", "ないです"],
+        "choices": [
+          "じゃありません",
+          "くないです",
+          "くありません",
+          "ないです"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1353,7 +2138,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q08",
         "grammarId": "n5-grammar-format-016",
         "question": "テストはとても___です。",
-        "choices": ["むずかしい", "むずかしく", "むずかしいな", "むずかし"],
+        "choices": [
+          "むずかしい",
+          "むずかしく",
+          "むずかしいな",
+          "むずかし"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1361,7 +2151,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q09",
         "grammarId": "n5-grammar-format-016",
         "question": "この車は___くないです。",
-        "choices": ["高", "たかい", "たかく", "たか"],
+        "choices": [
+          "高",
+          "たかい",
+          "たかく",
+          "たか"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1369,7 +2164,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-016-q10",
         "grammarId": "n5-grammar-format-016",
         "question": "京都は___町です。",
-        "choices": ["きれいな", "きれい", "きれいしい", "きれいくだ"],
+        "choices": [
+          "きれいな",
+          "きれい",
+          "きれいしい",
+          "きれいくだ"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -1383,7 +2183,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q01",
         "grammarId": "n5-grammar-format-017",
         "question": "わたしはスポーツ___好きです。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1391,7 +2196,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q02",
         "grammarId": "n5-grammar-format-017",
         "question": "ミラーさんは料理___上手です。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1399,7 +2209,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q03",
         "grammarId": "n5-grammar-format-017",
         "question": "私は魚___嫌いです。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1407,7 +2222,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q04",
         "grammarId": "n5-grammar-format-017",
         "question": "弟は歌___下手です。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1415,7 +2235,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q05",
         "grammarId": "n5-grammar-format-017",
         "question": "どんな映画___好きですか。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1423,7 +2248,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q06",
         "grammarId": "n5-grammar-format-017",
         "question": "サントスさんはサッカー___上手です。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1431,7 +2261,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q07",
         "grammarId": "n5-grammar-format-017",
         "question": "私は野菜___あまり好きじゃありません。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1439,7 +2274,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q08",
         "grammarId": "n5-grammar-format-017",
         "question": "田中さんは絵___下手です。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1447,7 +2287,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q09",
         "grammarId": "n5-grammar-format-017",
         "question": "マイクさんは日本語___上手ですね。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1455,7 +2300,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-017-q10",
         "grammarId": "n5-grammar-format-017",
         "question": "犬と猫と、どちら___好きですか。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -1469,7 +2319,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q01",
         "grammarId": "n5-grammar-format-018",
         "question": "わたしは日本語___分かります。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1477,7 +2332,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q02",
         "grammarId": "n5-grammar-format-018",
         "question": "きょうは約束___あります。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1485,7 +2345,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q03",
         "grammarId": "n5-grammar-format-018",
         "question": "お金___ありません。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1493,7 +2358,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q04",
         "grammarId": "n5-grammar-format-018",
         "question": "英語___よく分かりますか。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1501,7 +2371,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q05",
         "grammarId": "n5-grammar-format-018",
         "question": "明日、用事___あります。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1509,7 +2384,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q06",
         "grammarId": "n5-grammar-format-018",
         "question": "漢字___全然分かりません。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1517,7 +2397,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q07",
         "grammarId": "n5-grammar-format-018",
         "question": "車___ありますか。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1525,7 +2410,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q08",
         "grammarId": "n5-grammar-format-018",
         "question": "細かいお金___ありますか。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1533,7 +2423,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q09",
         "grammarId": "n5-grammar-format-018",
         "question": "ニュースの意味___だいたい分かります。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1541,7 +2436,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-018-q10",
         "grammarId": "n5-grammar-format-018",
         "question": "今日は時間___ありません。",
-        "choices": ["が", "を", "は", "に"],
+        "choices": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -1555,7 +2455,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q01",
         "grammarId": "n5-grammar-format-019",
         "question": "ここに名前を___ください。",
-        "choices": ["書いて", "書きて", "書く", "書かない"],
+        "choices": [
+          "書いて",
+          "書きて",
+          "書く",
+          "書かない"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1563,7 +2468,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q02",
         "grammarId": "n5-grammar-format-019",
         "question": "ちょっと___ください。",
-        "choices": ["待って", "待つ", "待たて", "待たない"],
+        "choices": [
+          "待って",
+          "待つ",
+          "待たて",
+          "待たない"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1571,7 +2481,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q03",
         "grammarId": "n5-grammar-format-019",
         "question": "本を___ください。",
-        "choices": ["読んで", "読みて", "読ん", "読まて"],
+        "choices": [
+          "読んで",
+          "読みて",
+          "読ん",
+          "読まて"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1579,7 +2494,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q04",
         "grammarId": "n5-grammar-format-019",
         "question": "ゆっくり___ください。",
-        "choices": ["話して", "話しで", "話す", "話してで"],
+        "choices": [
+          "話して",
+          "話しで",
+          "話す",
+          "話してで"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1587,7 +2507,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q05",
         "grammarId": "n5-grammar-format-019",
         "question": "ドアを___ください。",
-        "choices": ["開けて", "開きて", "開ける", "開けない"],
+        "choices": [
+          "開けて",
+          "開きて",
+          "開ける",
+          "開けない"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1595,7 +2520,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q06",
         "grammarId": "n5-grammar-format-019",
         "question": "写真を___ください。",
-        "choices": ["撮って", "撮りて", "撮る", "撮らない"],
+        "choices": [
+          "撮って",
+          "撮りて",
+          "撮る",
+          "撮らない"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1603,7 +2533,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q07",
         "grammarId": "n5-grammar-format-019",
         "question": "ここに___ください。",
-        "choices": ["座って", "座りて", "座る", "座らない"],
+        "choices": [
+          "座って",
+          "座りて",
+          "座る",
+          "座らない"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1611,7 +2546,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q08",
         "grammarId": "n5-grammar-format-019",
         "question": "辞書を___ください。",
-        "choices": ["貸して", "貸してで", "貸す", "貸さない"],
+        "choices": [
+          "貸して",
+          "貸してで",
+          "貸す",
+          "貸さない"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1619,7 +2559,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q09",
         "grammarId": "n5-grammar-format-019",
         "question": "明日、8時に___ください。",
-        "choices": ["来て", "来で", "来る", "こない"],
+        "choices": [
+          "来て",
+          "来で",
+          "来る",
+          "こない"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1627,7 +2572,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-019-q10",
         "grammarId": "n5-grammar-format-019",
         "question": "電気を___ください。",
-        "choices": ["つけて", "つきで", "つける", "つけない"],
+        "choices": [
+          "つけて",
+          "つきで",
+          "つける",
+          "つけない"
+        ],
         "answer": 0,
         "explanation": ""
       }
@@ -1641,7 +2591,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q01",
         "grammarId": "n5-grammar-format-020",
         "question": "今、雨が___います。",
-        "choices": ["降って", "降りて", "降る", "降り"],
+        "choices": [
+          "降って",
+          "降りて",
+          "降る",
+          "降り"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1649,7 +2604,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q02",
         "grammarId": "n5-grammar-format-020",
         "question": "太郎君は今テレビを___います。",
-        "choices": ["見て", "見りて", "見る", "見"],
+        "choices": [
+          "見て",
+          "見りて",
+          "見る",
+          "見"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1657,7 +2617,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q03",
         "grammarId": "n5-grammar-format-020",
         "question": "山田さんは本を___います。",
-        "choices": ["読んで", "読みて", "読ん", "読ま"],
+        "choices": [
+          "読んで",
+          "読みて",
+          "読ん",
+          "読ま"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1665,7 +2630,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q04",
         "grammarId": "n5-grammar-format-020",
         "question": "母は今料理を___います。",
-        "choices": ["作って", "作りて", "作る", "作られ"],
+        "choices": [
+          "作って",
+          "作りて",
+          "作る",
+          "作られ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1673,7 +2643,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q05",
         "grammarId": "n5-grammar-format-020",
         "question": "今何を___いますか。",
-        "choices": ["して", "しで", "する", "なさ"],
+        "choices": [
+          "して",
+          "しで",
+          "する",
+          "なさ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1681,7 +2656,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q06",
         "grammarId": "n5-grammar-format-020",
         "question": "子供たちは公園で___います。",
-        "choices": ["遊んで", "遊びて", "遊ん", "遊ぶ"],
+        "choices": [
+          "遊んで",
+          "遊びて",
+          "遊ん",
+          "遊ぶ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1689,7 +2669,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q07",
         "grammarId": "n5-grammar-format-020",
         "question": "友達と日本語で___います。",
-        "choices": ["話して", "話しで", "話す", "話され"],
+        "choices": [
+          "話して",
+          "話しで",
+          "話す",
+          "話され"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1697,7 +2682,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q08",
         "grammarId": "n5-grammar-format-020",
         "question": "父は新聞を___います。",
-        "choices": ["読んで", "読みて", "読ん", "読む"],
+        "choices": [
+          "読んで",
+          "読みて",
+          "読ん",
+          "読む"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1705,7 +2695,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q09",
         "grammarId": "n5-grammar-format-020",
         "question": "音楽を___います。",
-        "choices": ["聞いて", "聞きて", "聞く", "聞かれ"],
+        "choices": [
+          "聞いて",
+          "聞きて",
+          "聞く",
+          "聞かれ"
+        ],
         "answer": 0,
         "explanation": ""
       },
@@ -1713,867 +2708,12 @@ export const N5_GRAMMAR_QUESTIONS = {
         "id": "n5-grammar-format-020-q10",
         "grammarId": "n5-grammar-format-020",
         "question": "先生は手紙を___います。",
-        "choices": ["書いて", "書きて", "書く", "書かれ"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-021": {
-    "grammarId": "n5-grammar-format-021",
-    "title": "V-てもいいです",
-    "questions": [
-      {
-        "id": "n5-grammar-format-021-q01",
-        "grammarId": "n5-grammar-format-021",
-        "question": "写真を___もいいですか。",
-        "choices": ["撮って", "撮りて", "撮る", "撮らない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q02",
-        "grammarId": "n5-grammar-format-021",
-        "question": "ここに___もいいですよ。",
-        "choices": ["座って", "座りて", "座る", "座らない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q03",
-        "grammarId": "n5-grammar-format-021",
-        "question": "煙草を___もいいですか。",
-        "choices": ["吸っても", "吸いて", "吸う", "吸わない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q04",
-        "grammarId": "n5-grammar-format-021",
-        "question": "テレビを___もいいですか。",
-        "choices": ["見ても", "見りて", "見る", "見ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q05",
-        "grammarId": "n5-grammar-format-021",
-        "question": "帰っ___もいいですか。",
-        "choices": ["て", "で", "と", "たら"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q06",
-        "grammarId": "n5-grammar-format-021",
-        "question": "部屋に入っ___もいいですか。",
-        "choices": ["て", "で", "と", "たら"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q07",
-        "grammarId": "n5-grammar-format-021",
-        "question": "辞書を___もいいですか。",
-        "choices": ["使っても", "使いで", "使う", "使わない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q08",
-        "grammarId": "n5-grammar-format-021",
-        "question": "この本を___もいいですか。",
-        "choices": ["借りても", "借りて", "借りる", "借りない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q09",
-        "grammarId": "n5-grammar-format-021",
-        "question": "ラジオを___もいいですか。",
-        "choices": ["消しても", "消して", "消す", "消さない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-021-q10",
-        "grammarId": "n5-grammar-format-021",
-        "question": "ここに車を___もいいですか。",
-        "choices": ["止めても", "止めて", "止める", "止めない"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-022": {
-    "grammarId": "n5-grammar-format-022",
-    "title": "V-てはいけません",
-    "questions": [
-      {
-        "id": "n5-grammar-format-022-q01",
-        "grammarId": "n5-grammar-format-022",
-        "question": "ここでタバコを___はいけません。",
-        "choices": ["吸って", "吸い", "吸う", "吸わない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q02",
-        "grammarId": "n5-grammar-format-022",
-        "question": "美術館で写真を___はいけません。",
-        "choices": ["撮って", "撮り", "撮る", "撮らない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q03",
-        "grammarId": "n5-grammar-format-022",
-        "question": "教室で大声で___はいけません。",
-        "choices": ["話して", "話し", "話す", "話さない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q04",
-        "grammarId": "n5-grammar-format-022",
-        "question": "ここに車を___はいけません。",
-        "choices": [" people", "止めて", "止める", "止めない"],
-        "answer": 1,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q05",
-        "grammarId": "n5-grammar-format-022",
-        "question": "テストのとき、辞書を___はいけません。",
-        "choices": ["使って", "使い", "使う", "使わない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q06",
-        "grammarId": "n5-grammar-format-022",
-        "question": "芝生に___はいけません。",
-        "choices": ["入って", "入り", "入る", "入らない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q07",
-        "grammarId": "n5-grammar-format-022",
-        "question": "お酒を飲んで、車を___はいけません。",
-        "choices": ["運転して", "運転し", "運転する", "運転しない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q08",
-        "grammarId": "n5-grammar-format-022",
-        "question": "図書室でご飯を___はいけません。",
-        "choices": ["食べて", "食べ", "食べる", "食べない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q09",
-        "grammarId": "n5-grammar-format-022",
-        "question": "危険ですから、触っ___はいけません。",
-        "choices": ["て", "で", "と", "たら"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-022-q10",
-        "grammarId": "n5-grammar-format-022",
-        "question": "川で___はいけません。",
-        "choices": ["泳いで", "泳ぎ", "泳ぐ", "泳がない"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-023": {
-    "grammarId": "n5-grammar-format-023",
-    "title": "V-ています (Trạng thái kết quả / Nghề nghiệp)",
-    "questions": [
-      {
-        "id": "n5-grammar-format-023-q01",
-        "grammarId": "n5-grammar-format-023",
-        "question": "わたしはハノイに___います。",
-        "choices": ["住んで", "住み", "住む", "住ま"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q02",
-        "grammarId": "n5-grammar-format-023",
-        "question": "田中さんの電話番号を___いますか。",
-        "choices": ["知って", "知リ", "知る", "知られ"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q03",
-        "grammarId": "n5-grammar-format-023",
-        "question": "ミラーさんは結婚___います。",
-        "choices": ["して", "し", "する", "され"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q04",
-        "grammarId": "n5-grammar-format-023",
-        "question": "私は車を___います。",
-        "choices": ["持って", "持ち", "持つ", "持た"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q05",
-        "grammarId": "n5-grammar-format-023",
-        "question": "兄はIMCで___います。",
-        "choices": ["働いて", "働き", "働く", "働か"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q06",
-        "grammarId": "n5-grammar-format-023",
-        "question": "あの会社を知っ___いますか。",
-        "choices": ["て", "で", "と", "たら"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q07",
-        "grammarId": "n5-grammar-format-023",
-        "question": "妹は大学で法律を教えて___います。",
-        "choices": ["て", "で", "と", "たら"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q08",
-        "grammarId": "n5-grammar-format-023",
-        "question": "いいカメラを___いますね。",
-        "choices": ["持って", "持ち", "持つ", "持た"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q09",
-        "grammarId": "n5-grammar-format-023",
-        "question": "東京に___います。",
-        "choices": ["住んで", "住み", "住む", "住ま"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-023-q10",
-        "grammarId": "n5-grammar-format-023",
-        "question": "そのニュースを知っ___いますか。",
-        "choices": ["て", "で", "と", "たら"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-024": {
-    "grammarId": "n5-grammar-format-024",
-    "title": "V-ないでください",
-    "questions": [
-      {
-        "id": "n5-grammar-format-024-q01",
-        "grammarId": "n5-grammar-format-024",
-        "question": "心配___でください。",
-        "choices": ["しないで", "しないでで", "する", "しない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q02",
-        "grammarId": "n5-grammar-format-024",
-        "question": "ここに写真を貼ら___でください。",
-        "choices": ["ない", "なく", "なくて", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q03",
-        "grammarId": "n5-grammar-format-024",
-        "question": "図書館で大声を___でください。",
-        "choices": ["出さない", "出さなくて", "出さなく", "出す"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q04",
-        "grammarId": "n5-grammar-format-024",
-        "question": "無理を___でください。",
-        "choices": ["しないで", "しなく", "しないでで", "しない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q05",
-        "grammarId": "n5-grammar-format-024",
-        "question": "パスポートを忘れ___でください。",
-        "choices": ["ない", "なく", "なくて", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q06",
-        "grammarId": "n5-grammar-format-024",
-        "question": "部屋に入ら___でください。",
-        "choices": ["ない", "なく", "なくて", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q07",
-        "grammarId": "n5-grammar-format-024",
-        "question": "ここに荷物を置か___でください。",
-        "choices": ["ない", "なく", "なくて", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q08",
-        "grammarId": "n5-grammar-format-024",
-        "question": "お酒を飲み___でください。",
-        "choices": ["すぎない", "すぎなく", "すぎなくて", "すぎないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q09",
-        "grammarId": "n5-grammar-format-024",
-        "question": "電気を消さ___でください。",
-        "choices": ["ない", "なく", "なくて", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-024-q10",
-        "grammarId": "n5-grammar-format-024",
-        "question": "ここで煙草を吸わ___でください。",
-        "choices": ["ない", "なく", "なくて", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-025": {
-    "grammarId": "n5-grammar-format-025",
-    "title": "V-なければなりません",
-    "questions": [
-      {
-        "id": "n5-grammar-format-025-q01",
-        "grammarId": "n5-grammar-format-025",
-        "question": "毎日薬を飲ま___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q02",
-        "grammarId": "n5-grammar-format-025",
-        "question": "パスポートを見せ___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q03",
-        "grammarId": "n5-grammar-format-025",
-        "question": "明日早く起き___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q04",
-        "grammarId": "n5-grammar-format-025",
-        "question": "宿題をし___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q05",
-        "grammarId": "n5-grammar-format-025",
-        "question": "本を返さ___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q06",
-        "grammarId": "n5-grammar-format-025",
-        "question": "靴を脱が___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q07",
-        "grammarId": "n5-grammar-format-025",
-        "question": "レポートを書か___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q08",
-        "grammarId": "n5-grammar-format-025",
-        "question": "お金を払わ___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q09",
-        "grammarId": "n5-grammar-format-025",
-        "question": "病院へ行かな___なりません。",
-        "choices": ["ければ", "くて", "い", "いと"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-025-q10",
-        "grammarId": "n5-grammar-format-025",
-        "question": "漢字を覚え___なりません。",
-        "choices": ["なければ", "ないと", "なくては", "ないで"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-026": {
-    "grammarId": "n5-grammar-format-026",
-    "title": "V-なくてもいいです",
-    "questions": [
-      {
-        "id": "n5-grammar-format-026-q01",
-        "grammarId": "n5-grammar-format-026",
-        "question": "明日来___もいいです。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q02",
-        "grammarId": "n5-grammar-format-026",
-        "question": "靴を脱が___もいいです。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q03",
-        "grammarId": "n5-grammar-format-026",
-        "question": "全部食べ___もいいですよ。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q04",
-        "grammarId": "n5-grammar-format-026",
-        "question": "急が___もいいです。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q05",
-        "grammarId": "n5-grammar-format-026",
-        "question": "名前を書か___もいいです。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q06",
-        "grammarId": "n5-grammar-format-026",
-        "question": "傘を持っていか___もいいです。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q07",
-        "grammarId": "n5-grammar-format-026",
-        "question": "今日、残業し___もいいです。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q08",
-        "grammarId": "n5-grammar-format-026",
-        "question": "心配し___もいいですよ。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q09",
-        "grammarId": "n5-grammar-format-026",
-        "question": "お金を払わ___もいいです。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-026-q10",
-        "grammarId": "n5-grammar-format-026",
-        "question": "コピーし___もいいです。",
-        "choices": ["なくても", "ないで", "なくて", "ない"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-027": {
-    "grammarId": "n5-grammar-format-027",
-    "title": "N が できます",
-    "questions": [
-      {
-        "id": "n5-grammar-format-027-q01",
-        "grammarId": "n5-grammar-format-027",
-        "question": "ミラーさんは日本語___できます。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q02",
-        "grammarId": "n5-grammar-format-027",
-        "question": "スキー___できますか。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q03",
-        "grammarId": "n5-grammar-format-027",
-        "question": "ダンス___できますか。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q04",
-        "grammarId": "n5-grammar-format-027",
-        "question": "運転___できますか。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q05",
-        "grammarId": "n5-grammar-format-027",
-        "question": "ピアノ___できますか。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q06",
-        "grammarId": "n5-grammar-format-027",
-        "question": "料理___できますか。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q07",
-        "grammarId": "n5-grammar-format-027",
-        "question": "水泳___できますか。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q08",
-        "grammarId": "n5-grammar-format-027",
-        "question": "テニス___できます。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q09",
-        "grammarId": "n5-grammar-format-027",
-        "question": "カードでの支払い___できますか。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-027-q10",
-        "grammarId": "n5-grammar-format-027",
-        "question": "予約___できますか。",
-        "choices": ["が", "を", "は", "に"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-028": {
-    "grammarId": "n5-grammar-format-028",
-    "title": "わたしの趣味は N です / V-ることです",
-    "questions": [
-      {
-        "id": "n5-grammar-format-028-q01",
-        "grammarId": "n5-grammar-format-028",
-        "question": "私の趣味は写真を撮る___ことです。",
-        "choices": ["こと", "もの", "の", "そう"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q02",
-        "grammarId": "n5-grammar-format-028",
-        "question": "趣味は映画を___ことです。",
-        "choices": ["見る", "見ます", "見て", "見た"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q03",
-        "grammarId": "n5-grammar-format-028",
-        "question": "趣味は音楽を___ことです。",
-        "choices": ["聴く", "聴きます", "聴いて", "聴いた"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q04",
-        "grammarId": "n5-grammar-format-028",
-        "question": "私の趣味は本を___ことです。",
-        "choices": ["読む", "読みます", "読んで", "読んだ"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q05",
-        "grammarId": "n5-grammar-format-028",
-        "question": "趣味は絵を___ことです。",
-        "choices": ["描く", "描きます", "描いて", "描いた"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q06",
-        "grammarId": "n5-grammar-format-028",
-        "question": "私の趣味は料理を___ことです。",
-        "choices": ["作る", "作ります", "作って", "作った"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q07",
-        "grammarId": "n5-grammar-format-028",
-        "question": "趣味は切手を___ことです。",
-        "choices": ["集める", "集めます", "集めて", "集めた"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q08",
-        "grammarId": "n5-grammar-format-028",
-        "question": "私の趣味は山に___ことです。",
-        "choices": ["登る", "登ります", "登って", "登った"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q09",
-        "grammarId": "n5-grammar-format-028",
-        "question": "趣味は旅行を___ことです。",
-        "choices": ["する", "します", "して", "した"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-028-q10",
-        "grammarId": "n5-grammar-format-028",
-        "question": "私の趣味は泳ぐ___です。",
-        "choices": ["こと", "もの", "の", "ところ"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-029": {
-    "grammarId": "n5-grammar-format-029",
-    "title": "V-た ことがあります",
-    "questions": [
-      {
-        "id": "n5-grammar-format-029-q01",
-        "grammarId": "n5-grammar-format-029",
-        "question": "馬に乗っ___ことがあります。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q02",
-        "grammarId": "n5-grammar-format-029",
-        "question": "一度も寿司を食___ことがありません。",
-        "choices": ["べた", "べる", "べて", "べない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q03",
-        "grammarId": "n5-grammar-format-029",
-        "question": "富士山に登っ___ことがありますか。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q04",
-        "grammarId": "n5-grammar-format-029",
-        "question": "日本へ行っ___ことがあります。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q05",
-        "grammarId": "n5-grammar-format-029",
-        "question": "新幹線に乗っ___ことがありますか。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q06",
-        "grammarId": "n5-grammar-format-029",
-        "question": "着物を着___ことがあります。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q07",
-        "grammarId": "n5-grammar-format-029",
-        "question": "歌舞伎を見___ことがありますか。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q08",
-        "grammarId": "n5-grammar-format-029",
-        "question": "スキーをし___ことがありません。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q09",
-        "grammarId": "n5-grammar-format-029",
-        "question": "有名人に会っ___ことがあります。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-029-q10",
-        "grammarId": "n5-grammar-format-029",
-        "question": "納豆を食べ___ことがありますか。",
-        "choices": ["た", "て", "る", "ない"],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n5-grammar-format-030": {
-    "grammarId": "n5-grammar-format-030",
-    "title": "V-たり、V-たり します",
-    "questions": [
-      {
-        "id": "n5-grammar-format-030-q01",
-        "grammarId": "n5-grammar-format-030",
-        "question": "日曜日、本を読ん___、散歩したりします。",
-        "choices": ["たり", "たら", "て", "と"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q02",
-        "grammarId": "n5-grammar-format-030",
-        "question": "昨日は買い物したり、映画を視___しました。",
-        "choices": ["たり", "たら", "て", "と"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q03",
-        "grammarId": "n5-grammar-format-030",
-        "question": "休みの日はテレビを見たり、音楽を聴い___します。",
-        "choices": ["たり", "たら", "て", "と"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q04",
-        "grammarId": "n5-grammar-format-030",
-        "question": "掃除したり、洗濯したり___。",
-        "choices": ["します", "できます", "あります", "います"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q05",
-        "grammarId": "n5-grammar-format-030",
-        "question": "友達に会ったり、ご飯を食べ___しました。",
-        "choices": ["たり", "たら", "て", "と"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q06",
-        "grammarId": "n5-grammar-format-030",
-        "question": "泳いだり、写真を撮っ___しました。",
-        "choices": ["たり", "たら", "て", "と"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q07",
-        "grammarId": "n5-grammar-format-030",
-        "question": "遊んだり、勉強したり___。",
-        "choices": ["します", "できます", "あります", "います"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q08",
-        "grammarId": "n5-grammar-format-030",
-        "question": "手紙を書いたり、電話をかけ___しました。",
-        "choices": ["たり", "たら", "て", "と"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q09",
-        "grammarId": "n5-grammar-format-030",
-        "question": "歌ったり、踊っ___しました。",
-        "choices": ["たり", "たら", "て", "と"],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n5-grammar-format-030-q10",
-        "grammarId": "n5-grammar-format-030",
-        "question": "泣いたり、笑っ___します。",
-        "choices": ["たり", "たら", "て", "と"],
+        "choices": [
+          "書いて",
+          "書きて",
+          "書く",
+          "書かれ"
+        ],
         "answer": 0,
         "explanation": ""
       }

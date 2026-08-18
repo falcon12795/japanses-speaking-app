@@ -1,11 +1,20 @@
 import { useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { N3_GRAMMAR_QUESTIONS } from "../data/training/n3Ques";
 import Panel from "./common/Panel";
 import Button from "./common/Button";
-import { N2_GRAMMAR_QUESTIONS } from "../data/training/n2Ques";
-import { N4_GRAMMAR_QUESTIONS } from "../data/training/n4Ques";
-import { N5_GRAMMAR_QUESTIONS } from "../data/training/n5Ques";
+import { N1_GRAMMAR_QUESTIONS } from "../data/training/n1";
+import { N2_GRAMMAR_QUESTIONS } from "../data/training/n2";
+import { N3_GRAMMAR_QUESTIONS } from "../data/training/n3";
+import { N4_GRAMMAR_QUESTIONS } from "../data/training/n4";
+import { N5_GRAMMAR_QUESTIONS } from "../data/training/n5";
+console.log(
+  "N2 keys",
+  Object.keys(N2_GRAMMAR_QUESTIONS).slice(0, 5)
+);
+
+console.log(
+  "N2 first value",
+  N2_GRAMMAR_QUESTIONS["n2-grammar-001"]);
 
 function shuffleArray(array) {
     return [...array].sort(() => Math.random() - 0.5);
@@ -90,10 +99,10 @@ export default function GrammarTraining() {
 
     const questions = useMemo(() => {
         const allQuestions = selectedGrammarIds.flatMap((grammarId) => {
-            var quizGroup;
-            switch (grammarId.substring(0, 2).toUpperCase) {
+            var quizGroup
+            switch (grammarId.substring(0, 2).toUpperCase()) {
                 case "N1":
-                    quizGroup = N2_GRAMMAR_QUESTIONS[grammarId];
+                    quizGroup = N1_GRAMMAR_QUESTIONS[grammarId];
                     break;
                 case "N2":
                     quizGroup = N2_GRAMMAR_QUESTIONS[grammarId];
@@ -108,6 +117,7 @@ export default function GrammarTraining() {
                     quizGroup = N5_GRAMMAR_QUESTIONS[grammarId];
                     break;
             }
+            
 
             if (!quizGroup?.questions?.length) {
                 return [];
