@@ -7,14 +7,6 @@ import { N2_GRAMMAR_QUESTIONS } from "../data/training/n2";
 import { N3_GRAMMAR_QUESTIONS } from "../data/training/n3";
 import { N4_GRAMMAR_QUESTIONS } from "../data/training/n4";
 import { N5_GRAMMAR_QUESTIONS } from "../data/training/n5";
-console.log(
-  "N2 keys",
-  Object.keys(N2_GRAMMAR_QUESTIONS).slice(0, 5)
-);
-
-console.log(
-  "N2 first value",
-  N2_GRAMMAR_QUESTIONS["n2-grammar-001"]);
 
 function shuffleArray(array) {
     return [...array].sort(() => Math.random() - 0.5);

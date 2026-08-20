@@ -13,6 +13,7 @@ import "./App.css";
 
 import VocabularyList from "./components/VocabularyList";
 import VocabularyFlashcard from "./components/VocabularyFlashcard";
+import VocabularyTopicDetail from "./components/VocabularyTopicDetail";
 import DialogueList from "./components/DialogueList";
 import DialoguePractice from "./components/DialoguePractice";
 import JLPTQuiz from "./components/JLPTQuiz";
@@ -25,6 +26,7 @@ import GrammarList from "./components/GrammarList";
 import GrammarDetail from "./components/GrammarDetail";
 import { GRAMMAR } from "./data/grammar";
 import GrammarTraining from "./components/GrammarTraining";
+import { buildVocabularyTopics } from "./utils/buildVocabularyTopics";
 
 const MENU_ITEMS = [
   {
@@ -114,26 +116,175 @@ function PageHeader({ setSidebarOpen }) {
   );
 }
 
+function VocabularyTopicDetailPage() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { topicId } = useParams();
 
-function VocabularyFlashcardPage({ progress, onProgressChange }) {
+  const vocabularyTopics =
+    buildVocabularyTopics(VOCABULARY);
+
+  const topic =
+    vocabularyTopics.find(
+      (item) =>
+        String(item.id) === String(topicId)
+    ) || null;
+
+  const topicsInLevel =
+    vocabularyTopics.filter(
+      (item) =>
+        item.level === topic?.level
+    );
+
+  const currentIndex =
+    topicsInLevel.findIndex(
+      (item) =>
+        String(item.id) === String(topicId)
+    );
+
+  const previousTopic =
+    currentIndex > 0
+      ? topicsInLevel[currentIndex - 1]
+      : null;
+
+  const nextTopic =
+    currentIndex <
+      topicsInLevel.length - 1
+      ? topicsInLevel[currentIndex + 1]
+      : null;
+
+  const handlePreviousTopic = () => {
+    if (!previousTopic) return;
+
+    navigate(
+      `/vocabulary-topic/${encodeURIComponent(
+        previousTopic.id
+      )}`
+    );
+  };
+
+  const handleNextTopic = () => {
+    if (!nextTopic) return;
+
+    navigate(
+      `/vocabulary-topic/${encodeURIComponent(
+        nextTopic.id
+      )}`
+    );
+  };
+
+  const handlePractice = () => {
+    if (!topic) return;
+
+    navigate(
+      `/vocabulary-flashcard/${encodeURIComponent(
+        topic.level
+      )}/${encodeURIComponent(
+        topic.title
+      )}`,
+      {
+        state: {
+          from: `${location.pathname}${location.search}`,
+          startWordId: topic.words?.[0]?.id ?? null,
+        },
+      }
+    );
+  };
+
+  const handleSelectWord = (word) => {
+    if (!topic || !word) return;
+
+    navigate(
+      `/vocabulary-flashcard/${encodeURIComponent(
+        topic.level
+      )}/${encodeURIComponent(
+        topic.title
+      )}`,
+      {
+        state: {
+          from: `${location.pathname}${location.search}`,
+          startWordId: word.id,
+        },
+      }
+    );
+  };
+
+  if (!topic) {
+    return (
+      <div className="page-container">
+        Topic not found: {topicId}
+      </div>
+    );
+  }
+
+  return (
+    <VocabularyTopicDetail
+      topic={topic}
+      onPreviousTopic={handlePreviousTopic}
+      onNextTopic={handleNextTopic}
+      onPractice={handlePractice}
+      onSelectWord={handleSelectWord}
+      hasPrevious={Boolean(previousTopic)}
+      hasNext={Boolean(nextTopic)}
+    />
+  );
+}
+
+
+function VocabularyFlashcardPage({
+  progress,
+  onProgressChange,
+}) {
+  const location = useLocation();
   const { level, topic } = useParams();
 
-  const decodedLevel = decodeURIComponent(level || "");
-  const decodedTopic = decodeURIComponent(topic || "");
+  const decodedLevel = decodeURIComponent(
+    level || ""
+  );
 
-  const filteredVocabulary = VOCABULARY.filter((item) => {
-    const itemTopic = item.topic || item.type || "General";
+  const decodedTopic = decodeURIComponent(
+    topic || ""
+  );
 
-    return item.level === decodedLevel && itemTopic === decodedTopic;
-  });
+  const filteredVocabulary = VOCABULARY.filter(
+    (item) => {
+      const itemTopic =
+        item.topic ||
+        item.type ||
+        "General";
+
+      return (
+        String(item.level) ===
+        String(decodedLevel) &&
+        String(itemTopic) ===
+        String(decodedTopic)
+      );
+    }
+  );
+
+  const startWordId =
+    location.state?.startWordId ?? null;
+
+  const initialWordIndex = startWordId
+    ? filteredVocabulary.findIndex(
+      (word) =>
+        String(word.id) ===
+        String(startWordId)
+    )
+    : 0;
 
   return (
     <VocabularyFlashcard
+      vocabulary={filteredVocabulary}
       progress={progress}
       onProgressChange={onProgressChange}
       level={decodedLevel}
       topic={decodedTopic}
-      vocabulary={filteredVocabulary}
+      initialIndex={
+        initialWordIndex >= 0
+          ? initialWordIndex
+          : 0
+      }
     />
   );
 }
@@ -196,7 +347,7 @@ function GrammarDetailPage() {
       `/grammar/${nextGrammar.level}/${nextGrammar.id}`
     );
   };
-  
+
   console.log({
     decodedLevel,
     decodedGrammarId,
@@ -252,9 +403,29 @@ function VocabularyListWithRouteState({ progress }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleSelectTopic = (level, topic) => {
+  const handleSelectTopic = (level, topicName) => {
+    const vocabularyTopics =
+      buildVocabularyTopics(VOCABULARY);
+
+    const topic = vocabularyTopics.find(
+      (item) =>
+        item.level === level &&
+        item.title === topicName
+    );
+
+    if (!topic) {
+      console.warn(
+        "Topic not found",
+        level,
+        topicName
+      );
+      return;
+    }
+
     navigate(
-      `/vocabulary/${encodeURIComponent(level)}/${encodeURIComponent(topic)}`,
+      `/vocabulary-topic/${encodeURIComponent(
+        topic.id
+      )}`,
       {
         state: {
           from: `${location.pathname}${location.search}`,
@@ -381,20 +552,17 @@ export default function App() {
           />
 
           <Route
-            path="/vocabulary/:level/:topic"
-            element={
-              <>
-                <PageHeader
-                  setSidebarOpen={setSidebarOpen}
-                />
+            path="/vocabulary-topic/:topicId"
+            element={<VocabularyTopicDetailPage />}
+          />
 
-                <section className="content-area">
-                  <VocabularyFlashcardPage
-                    progress={progress}
-                    onProgressChange={handleProgressChange}
-                  />
-                </section>
-              </>
+          <Route
+            path="/vocabulary-flashcard/:level/:topic"
+            element={
+              <VocabularyFlashcardPage
+                progress={progress}
+                onProgressChange={handleProgressChange}
+              />
             }
           />
 

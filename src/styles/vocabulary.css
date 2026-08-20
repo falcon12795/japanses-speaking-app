@@ -144,3 +144,121 @@
   padding: 8px 12px;
   font-size: 13px;
 }
+
+.topic-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.topic-nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.topic-word-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topic-word-card {
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.topic-word-card:hover {
+  border-color: #93c5fd;
+  background: #f8fbff;
+  transform: translateY(-1px);
+}
+
+.topic-word-card:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 2px;
+}
+
+.topic-word-card .icon-button {
+  flex-shrink: 0;
+}
+
+.topic-word-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.topic-word-main {
+  flex: 1;
+}
+
+.topic-word-main h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.topic-word-main .reading {
+  color: #666;
+  margin: 4px 0;
+}
+
+.topic-word-main .meaning {
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.topic-word-main .example {
+  margin-top: 8px;
+}
+
+.active-word-card {
+  border: 2px solid #2563eb;
+  background: #eff6ff;
+}
+.subject-group {
+  margin-bottom: 32px;
+}
+
+.subject-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-left: 12px;
+  border-left: 4px solid #2563eb;
+}
+
+.vocabulary-topic-card {
+  margin-left: 24px;
+  margin-bottom: 12px;
+}
+
+.vocabulary-topic-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vocabulary-topic-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .topic-detail-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .topic-word-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,8 +1,9 @@
-export const N3_011_VOCABULARY =
+export const N3_011_ADVERB=
 [
   {
     "id": "n3-conjunction-001",
     "level": "N3",
+      "subject": "副詞 - Phó từ",
     "topic": "接続詞 - Liên từ",
     "japanese": "それで",
     "reading": "それで",
@@ -18,6 +19,7 @@ export const N3_011_VOCABULARY =
   {
     "id": "n3-conjunction-002",
     "level": "N3",
+      "subject": "副詞 - Phó từ",
     "topic": "接続詞 - Liên từ",
     "japanese": "それで",
     "reading": "それで",
@@ -33,6 +35,7 @@ export const N3_011_VOCABULARY =
   {
     "id": "n3-conjunction-003",
     "level": "N3",
+      "subject": "副詞 - Phó từ",
     "topic": "接続詞 - Liên từ",
     "japanese": "そこで",
     "reading": "そこで",
@@ -48,6 +51,7 @@ export const N3_011_VOCABULARY =
   {
     "id": "n3-conjunction-004",
     "level": "N3",
+      "subject": "副詞 - Phó từ",
     "topic": "接続詞 - Liên từ",
     "japanese": "そのうえ",
     "reading": "そのうえ",
@@ -63,6 +67,7 @@ export const N3_011_VOCABULARY =
   {
     "id": "n3-conjunction-005",
     "level": "N3",
+      "subject": "副詞 - Phó từ",
     "topic": "接続詞 - Liên từ",
     "japanese": "また",
     "reading": "また",
@@ -78,6 +83,7 @@ export const N3_011_VOCABULARY =
   {
     "id": "n3-conjunction-006",
     "level": "N3",
+      "subject": "副詞 - Phó từ",
     "topic": "接続詞 - Liên từ",
     "japanese": "または",
     "reading": "または",
@@ -93,6 +99,7 @@ export const N3_011_VOCABULARY =
   {
     "id": "n3-conjunction-007",
     "level": "N3",
+      "subject": "副詞 - Phó từ",
     "topic": "接続詞 - Liên từ",
     "japanese": "それとも",
     "reading": "それとも",
@@ -108,6 +115,7 @@ export const N3_011_VOCABULARY =
   {
     "id": "n3-conjunction-008",
     "level": "N3",
+      "subject": "副詞 - Phó từ",
     "topic": "接続詞 - Liên từ",
     "japanese": "つまり",
     "reading": "つまり",

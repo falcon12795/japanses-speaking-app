@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { VOCABULARY } from "../data/vocabulary";
 import { speakJapaneseText, recognizeJapaneseSpeech } from "../utils/speech";
 import { calculateSimpleSpeechScore } from "../utils/scoring";
@@ -9,13 +9,23 @@ import Panel from "./common/Panel";
 import ScoreBox from "./common/ScoreBox";
 
 export default function VocabularyFlashcard({
-  progress = {},
-  onProgressChange,
   vocabulary = [],
-  topic,
-  level,
+  progress = {},
+  onProgressChange = () => {},
+  level = "",
+  topic = "",
+  initialIndex = 0,
 }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const safeIndex =
+      initialIndex >= 0 &&
+        initialIndex < vocabulary.length
+        ? initialIndex
+        : 0;
+
+    setCurrentIndex(safeIndex);
+  }, [initialIndex, vocabulary]);
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [showAnswer, setShowAnswer] = useState(false);
   const [status, setStatus] = useState("Ready");
   const [wordTranscript, setWordTranscript] = useState("");
@@ -27,7 +37,7 @@ export default function VocabularyFlashcard({
   const hasExample = Boolean(currentCard?.example?.japanese);
 
   const currentTopic =
-    currentCard?.topic || currentCard?.type || topic || "General";
+    currentCard?.topic || currentCard?.type || "General";
 
   const wordScore = useMemo(() => {
     if (!currentCard) return 0;
@@ -43,6 +53,14 @@ export default function VocabularyFlashcard({
       currentCard.example.japanese
     );
   }, [exampleTranscript, currentCard, hasExample]);
+
+  console.log("Vocabulary count", vocabulary.length);
+
+  console.log(
+    "Current word",
+    vocabulary[initialIndex]
+  );
+
 
   if (!currentCard) {
     return (
@@ -255,15 +273,19 @@ export default function VocabularyFlashcard({
               </p>
             )}
 
-            <p>
-              <strong>English:</strong>{" "}
-              {currentCard.english || "No English translation"}
-            </p>
+            {currentCard.english && (
+              <p>
+                <strong>English:</strong>{" "}
+                {currentCard.english}
+              </p>
+            )}
 
-            <p>
-              <strong>Vietnamese:</strong>{" "}
-              {currentCard.vietnamese || "No Vietnamese translation"}
-            </p>
+            {currentCard.vietnamese && (
+              <p>
+                <strong>Vietnamese:</strong>{" "}
+                {currentCard.vietnamese}
+              </p>
+            )}
           </div>
 
           {hasExample ? (
@@ -288,8 +310,7 @@ export default function VocabularyFlashcard({
 
               <p className="example-meaning">
                 {currentCard.example.english || "No English translation"} /{" "}
-                {currentCard.example.vietnamese ||
-                  "No Vietnamese translation"}
+                {currentCard.example.vietnamese || "No Vietnamese translation"}
               </p>
 
               <div className="buttons compact-buttons">

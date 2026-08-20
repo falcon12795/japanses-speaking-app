@@ -1,8 +1,9 @@
-export const N3_008_VOCABULARY =
+export const N3_008_ADVERB =
     [
         {
             "id": "n3-grammar-emotion-001",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "もちろん",
             "reading": "もちろん",
@@ -18,6 +19,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-002",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "ぜひ",
             "reading": "ぜひ",
@@ -33,6 +35,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-003",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "ぜひとも",
             "reading": "ぜひとも",
@@ -48,6 +51,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-004",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "なるべく",
             "reading": "なるべく",
@@ -63,6 +67,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-005",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "できるだけ",
             "reading": "できるだけ",
@@ -78,6 +83,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-006",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "もしかすると / もしかしたら / もしかして",
             "reading": "もしかすると / もしかしたら / もしかして",
@@ -93,6 +99,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-007",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "ひょっとすると / ひょっとしたら / ひょっとして",
             "reading": "ひょっとすると / ひょっとしたら / ひょっとして",
@@ -108,6 +115,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-008",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "まさか",
             "reading": "まさか",
@@ -123,6 +131,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-009",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "つい",
             "reading": "つい",
@@ -138,6 +147,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-010",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "思わず",
             "reading": "おもわず",
@@ -153,6 +163,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-011",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "さすが",
             "reading": "さすが",
@@ -168,6 +179,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-012",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "わざと",
             "reading": "わざと",
@@ -183,6 +195,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-013",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "実は",
             "reading": "じつは",
@@ -198,6 +211,7 @@ export const N3_008_VOCABULARY =
         {
             "id": "n3-grammar-emotion-014",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "気持ちや主観を表す副詞 - Phó từ chỉ cảm xúc, chủ quan",
             "japanese": "案外",
             "reading": "あんがい",

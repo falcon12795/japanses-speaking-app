@@ -201,7 +201,7 @@ export default function GrammarDetail({
                   </span>
                 </button>
 
-                {!isCollapsed && (
+                {isCollapsed && (
                   <div className="grammar-meaning-card-body">
                     {meaningItem.meaning && (
                       <div className="grammar-meaning-row">

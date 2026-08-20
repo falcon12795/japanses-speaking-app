@@ -1,12 +1,15 @@
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+
 import { VOCABULARY } from "../data/vocabulary";
+
 import Badge from "./common/Badge";
 import EmptyState from "./common/EmptyState";
 import FilterBar from "./common/FilterBar";
 import ListCard from "./common/ListCard";
 import Panel from "./common/Panel";
 import ProgressBar from "./common/ProgressBar";
+import CollapseGroup from "./common/CollapseGroup";
 
 const STATUS_FILTERS = [
   { value: "all", label: "All" },
@@ -26,9 +29,11 @@ function sortJlptLevels(levels) {
     N5: 5,
   };
 
-  return [...levels].sort((a, b) => {
-    return (order[a] || 999) - (order[b] || 999);
-  });
+  return [...levels].sort(
+    (levelA, levelB) =>
+      (order[levelA] || 999) -
+      (order[levelB] || 999)
+  );
 }
 
 function getAvailableLevels() {
@@ -43,41 +48,149 @@ function getAvailableLevels() {
   return sortJlptLevels([...levels]);
 }
 
+function getAvailableSubjects(level) {
+  const subjects = new Set();
+
+  VOCABULARY.forEach((item) => {
+    if (
+      String(item.level) === String(level) &&
+      item.subject
+    ) {
+      subjects.add(item.subject);
+    }
+  });
+
+  return [...subjects].sort((subjectA, subjectB) =>
+    subjectA.localeCompare(subjectB, "ja")
+  );
+}
+
 function getTopicStatus(topicInfo) {
-  if (topicInfo.favoriteCount > 0) return "favorite";
-  if (topicInfo.progressPercent === 100) return "completed";
-  if (topicInfo.reviewCount > 0) return "review";
-  if (topicInfo.completedCount > 0) return "learning";
+  if (topicInfo.progressPercent === 100) {
+    return "completed";
+  }
+
+  if (topicInfo.reviewCount > 0) {
+    return "review";
+  }
+
+  if (topicInfo.completedCount > 0) {
+    return "learning";
+  }
+
+  if (topicInfo.favoriteCount > 0) {
+    return "favorite";
+  }
 
   return "not-started";
 }
 
 function getTopicStatusIcon(status) {
-  if (status === "completed") return "✅";
-  if (status === "favorite") return "⭐";
-  if (status === "review") return "🔁";
-  if (status === "learning") return "📖";
+  switch (status) {
+    case "completed":
+      return "✅";
 
-  return "⭕";
+    case "favorite":
+      return "⭐";
+
+    case "review":
+      return "🔁";
+
+    case "learning":
+      return "📖";
+
+    default:
+      return "⭕";
+  }
 }
 
-export default function VocabularyList({ progress = {}, onSelectTopic }) {
-  const [searchParams, setSearchParams] = useSearchParams();
+function buildTopicInfo(
+  topicName,
+  words,
+  completedVocabulary,
+  favoriteVocabulary,
+  reviewVocabulary
+) {
+  const completedCount = words.filter((word) =>
+    completedVocabulary.includes(word.id)
+  ).length;
 
-  const availableLevels = useMemo(() => getAvailableLevels(), []);
+  const favoriteCount = words.filter((word) =>
+    favoriteVocabulary.includes(word.id)
+  ).length;
 
-  const defaultLevel = availableLevels[0] || "N5";
-  const selectedLevel = searchParams.get("level") || defaultLevel;
-  const statusFilter = searchParams.get("status") || "all";
+  const reviewCount = words.filter((word) =>
+    reviewVocabulary.includes(word.id)
+  ).length;
 
-  const completedVocabulary = progress.completedVocabulary || [];
-  const favoriteVocabulary = progress.favoriteVocabulary || [];
-  const reviewVocabulary = progress.reviewVocabulary || [];
+  const progressPercent =
+    words.length > 0
+      ? Math.round(
+        (completedCount / words.length) * 100
+      )
+      : 0;
+
+  const topicInfo = {
+    topic: topicName,
+    words,
+    count: words.length,
+    completedCount,
+    favoriteCount,
+    reviewCount,
+    progressPercent,
+  };
+
+  return {
+    ...topicInfo,
+    status: getTopicStatus(topicInfo),
+  };
+}
+
+export default function VocabularyList({
+  progress = {},
+  onSelectTopic = () => { },
+}) {
+  const [searchParams, setSearchParams] =
+    useSearchParams();
+
+  const [expandedSubjects, setExpandedSubjects] = useState({});
+
+  const availableLevels = useMemo(
+    () => getAvailableLevels(),
+    []
+  );
+
+  const defaultLevel =
+    availableLevels[0] || "N5";
+
+  const selectedLevel =
+    searchParams.get("level") || defaultLevel;
+
+  const statusFilter =
+    searchParams.get("status") || "all";
+
+  const selectedSubject =
+    searchParams.get("subject") || "all";
+
+  const completedVocabulary =
+    progress.completedVocabulary || [];
+
+  const favoriteVocabulary =
+    progress.favoriteVocabulary || [];
+
+  const reviewVocabulary =
+    progress.reviewVocabulary || [];
+
+  const availableSubjects = useMemo(
+    () => getAvailableSubjects(selectedLevel),
+    [selectedLevel]
+  );
 
   const setLevel = (level) => {
     setSearchParams({
       level,
       status: "all",
+      subject: "all",
     });
   };
 
@@ -85,73 +198,135 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
     setSearchParams({
       level: selectedLevel,
       status,
+      subject: selectedSubject,
     });
   };
 
-  const topics = useMemo(() => {
-    const vocabularyByLevel = VOCABULARY.filter(
-      (item) => item.level === selectedLevel
-    );
+  const setSubject = (subject) => {
+    setSearchParams({
+      level: selectedLevel,
+      status: statusFilter,
+      subject,
+    });
+  };
 
-    const groupedByTopic = vocabularyByLevel.reduce((acc, item) => {
-      const topic = item.topic || item.type || "General";
+  const subjects = useMemo(() => {
+    const vocabularyByLevel =
+      VOCABULARY.filter(
+        (item) =>
+          String(item.level) ===
+          String(selectedLevel)
+      );
 
-      if (!acc[topic]) {
-        acc[topic] = [];
-      }
+    const groupedBySubject =
+      vocabularyByLevel.reduce(
+        (subjectMap, item) => {
+          const subject =
+            item.subject || "Others";
 
-      acc[topic].push(item);
+          const topic =
+            item.topic ||
+            item.type ||
+            "General";
 
-      return acc;
-    }, {});
+          if (!subjectMap[subject]) {
+            subjectMap[subject] = {};
+          }
 
-    return Object.entries(groupedByTopic)
-      .map(([topic, words]) => {
-        const completedCount = words.filter((word) =>
-          completedVocabulary.includes(word.id)
-        ).length;
+          if (!subjectMap[subject][topic]) {
+            subjectMap[subject][topic] = [];
+          }
 
-        const favoriteCount = words.filter((word) =>
-          favoriteVocabulary.includes(word.id)
-        ).length;
+          subjectMap[subject][topic].push(item);
 
-        const reviewCount = words.filter((word) =>
-          reviewVocabulary.includes(word.id)
-        ).length;
+          return subjectMap;
+        },
+        {}
+      );
 
-        const progressPercent =
-          words.length === 0
-            ? 0
-            : Math.round((completedCount / words.length) * 100);
+    return Object.entries(groupedBySubject)
+      .map(([subjectName, topicsMap]) => {
+        const topicList = Object.entries(
+          topicsMap
+        )
+          .map(([topicName, words]) =>
+            buildTopicInfo(
+              topicName,
+              words,
+              completedVocabulary,
+              favoriteVocabulary,
+              reviewVocabulary
+            )
+          )
+          .filter((topicInfo) => {
+            if (statusFilter === "all") {
+              return true;
+            }
 
-        const topicInfo = {
-          topic,
-          words,
-          count: words.length,
-          completedCount,
-          favoriteCount,
-          reviewCount,
-          progressPercent,
-        };
+            return (
+              topicInfo.status === statusFilter
+            );
+          })
+          .sort((topicA, topicB) =>
+            topicA.topic.localeCompare(
+              topicB.topic,
+              "ja"
+            )
+          );
 
         return {
-          ...topicInfo,
-          status: getTopicStatus(topicInfo),
+          subject: subjectName,
+          topics: topicList,
         };
       })
-      .sort((a, b) => a.topic.localeCompare(b.topic));
+      .filter((subjectInfo) => {
+        const matchesSubject =
+          selectedSubject === "all" ||
+          subjectInfo.subject === selectedSubject;
+
+        return (
+          matchesSubject &&
+          subjectInfo.topics.length > 0
+        );
+      })
+      .sort((subjectA, subjectB) =>
+        subjectA.subject.localeCompare(
+          subjectB.subject,
+          "ja"
+        )
+      );
   }, [
     selectedLevel,
+    selectedSubject,
+    statusFilter,
     completedVocabulary,
     favoriteVocabulary,
     reviewVocabulary,
   ]);
 
-  const filteredTopics = topics.filter((topic) => {
-    if (statusFilter === "all") return true;
+  useEffect(() => {
+    if (
+      subjects.length > 0 &&
+      Object.keys(expandedSubjects).length === 0
+    ) {
+      setExpandedSubjects({
+        [subjects[0].subject]: false,
+      });
+    }
+  }, [subjects]);
 
-    return topic.status === statusFilter;
-  });
+  const topicCount = subjects.reduce(
+    (total, subject) =>
+      total + subject.topics.length,
+    0
+  );
+
+  const toggleSubject = (subjectName) => {
+    setExpandedSubjects((prev) => ({
+      ...prev,
+      [subjectName]: !(prev[subjectName] ?? false),
+    }));
+  };
 
   return (
     <Panel>
@@ -178,47 +353,80 @@ export default function VocabularyList({ progress = {}, onSelectTopic }) {
         buttonClassName="status-button"
       />
 
-      <div className="vocabulary-topic-list">
-        {filteredTopics.map((item) => (
-          <ListCard
-            key={item.topic}
-            className="vocabulary-topic-card"
-            onClick={() => onSelectTopic(selectedLevel, item.topic)}
-          >
-            <div className="vocabulary-topic-main">
-              <span className="vocabulary-topic-name">
-                <span className="dialogue-status-icon">
-                  {getTopicStatusIcon(item.status)}
-                </span>
+      <div className="grammar-lessons-list">
 
-                {item.topic}
-              </span>
+        {subjects.map((subject) => {
 
-              <Badge variant="primary" className="vocabulary-topic-count">
-                {item.count} words
-              </Badge>
-            </div>
+          const expanded =
+            expandedSubjects[
+            subject.subject
+            ] ?? false;
 
-            <div className="vocabulary-topic-meta">
-              <span>✅ {item.completedCount}</span>
-              <span>⭐ {item.favoriteCount}</span>
-              <span>🔁 {item.reviewCount}</span>
-              <span>{item.progressPercent}%</span>
-            </div>
+          return (
+            <CollapseGroup
+              key={subject.subject}
+              title={subject.subject}
+              count={`${subject.topics.length} ${subject.topics.length === 1 ? "topic" : "topics"
+                }`}
+              isOpen={expanded}
+              onToggle={() => toggleSubject(subject.subject)}
+            >
+              {expanded && (
 
-            <ProgressBar
-              value={item.progressPercent}
-              className="topic-progress-bar"
-              fillClassName="topic-progress-fill"
-            />
-          </ListCard>
-        ))}
+                <div className="lesson-group-content">
 
-        {filteredTopics.length === 0 && (
-          <EmptyState>
-            No vocabulary found for {selectedLevel}.
-          </EmptyState>
-        )}
+                  {subject.topics.map(
+                    (item) => (
+
+                      <ListCard
+                        key={item.topic}
+                        className="vocabulary-topic-card"
+                        onClick={() => onSelectTopic(selectedLevel, item.topic)}
+                      >
+                        <div className="vocabulary-topic-main">
+                          <span className="vocabulary-topic-name">
+                            <span className="dialogue-status-icon">
+                              {getTopicStatusIcon(item.status)}
+                            </span>
+
+                            {item.topic}
+                          </span>
+
+                          <Badge variant="primary" className="vocabulary-topic-count">
+                            {item.count} words
+                          </Badge>
+                        </div>
+
+                        <div className="vocabulary-topic-meta">
+                          <span>✅ {item.completedCount}</span>
+                          <span>⭐ {item.favoriteCount}</span>
+                          <span>🔁 {item.reviewCount}</span>
+                          <span>{item.progressPercent}%</span>
+                        </div>
+
+                        <ProgressBar
+                          value={item.progressPercent}
+                          className="topic-progress-bar"
+                          fillClassName="topic-progress-fill"
+                        />
+                      </ListCard>
+
+                    ))}
+
+                  {
+                    subject.topics.length === 0 && (
+                      <EmptyState>
+                        No topics found for this subject.
+                      </EmptyState>
+                    )
+                  }
+                </div>
+
+              )}
+            </CollapseGroup>
+            
+          );
+        })}
       </div>
     </Panel>
   );

@@ -1,8 +1,9 @@
-export const N3_007_VOCABULARY =
+export const N3_007_ADVERB =
     [
         {
             "id": "n3-grammar-format-001",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "変化に関係のある副詞 - Phó từ chỉ sự thay đổi",
             "japanese": "相変わらず",
             "reading": "あいかわらず",
@@ -18,6 +19,7 @@ export const N3_007_VOCABULARY =
         {
             "id": "n3-grammar-format-002",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "変化に関係のある副詞 - Phó từ chỉ sự thay đổi",
             "japanese": "次々",
             "reading": "つぎつぎ",
@@ -33,6 +35,7 @@ export const N3_007_VOCABULARY =
         {
             "id": "n3-grammar-format-003",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "変化に関係のある副詞 - Phó từ chỉ sự thay đổi",
             "japanese": "だんだん",
             "reading": "だんだん",
@@ -48,6 +51,7 @@ export const N3_007_VOCABULARY =
         {
             "id": "n3-grammar-format-004",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "変化に関係のある副詞 - Phó từ chỉ sự thay đổi",
             "japanese": "どんどん",
             "reading": "どんどん",
@@ -63,6 +67,7 @@ export const N3_007_VOCABULARY =
         {
             "id": "n3-grammar-format-005",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "変化に関係のある副詞 - Phó từ chỉ sự thay đổi",
             "japanese": "ますます",
             "reading": "ますます",
@@ -78,6 +83,7 @@ export const N3_007_VOCABULARY =
         {
             "id": "n3-grammar-format-006",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "変化に関係のある副詞 - Phó từ chỉ sự thay đổi",
             "japanese": "とうとう",
             "reading": "とうとう",
@@ -93,6 +99,7 @@ export const N3_007_VOCABULARY =
         {
             "id": "n3-grammar-format-007",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "変化に関係のある副詞 - Phó từ chỉ sự thay đổi",
             "japanese": "ついに",
             "reading": "ついに",
@@ -108,6 +115,7 @@ export const N3_007_VOCABULARY =
         {
             "id": "n3-grammar-format-008",
             "level": "N3",
+            "subject": "副詞 - Phó từ",
             "topic": "変化に関係のある副詞 - Phó từ chỉ sự thay đổi",
             "japanese": "絶えず",
             "reading": "たえず",

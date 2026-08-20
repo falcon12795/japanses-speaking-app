@@ -3,9 +3,10 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-031",
         "no": 31,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜わけじゃない/わけではない",
-        "usage": "[Thể thường (普通形)] + わけじゃない/ わけではない（Kanji: 訳じゃない)\n"+
+        "usage": "[Thể thường (普通形)] + わけじゃない/ わけではない（Kanji: 訳じゃない)\n" +
             "(*) Tính từ-na/ Danh từ + な + わけじゃない/ わけではない",
         "notes": [
             {
@@ -44,6 +45,7 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-032",
         "no": 32,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜わけにはいかない",
         "usage": "",
@@ -97,6 +99,7 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-033",
         "no": 33,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜(んだ) もの/ もん",
         "usage": "[Thể thường (ふつう)] + (んだ) もの/ もん",
@@ -133,6 +136,7 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-034",
         "no": 34,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜おかげで",
         "usage": "[Thể thường (ふつう)] +  おかげで/ おかげだ\n(*) Tính từ-na/ Danh từ + な + おかげで/ おかげだ",
@@ -171,11 +175,12 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-035",
         "no": 35,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜に違いない",
-        "usage": "[Thể thường (ふつう)] + に違いない (にちがいない)\n"+
-               "(*) Tính từ -na/ Danh từ + だ + に違いない\n"+
-               "(*) Thể lịch sự hơn của 「に違いない」 là 「に違いありません」",
+        "usage": "[Thể thường (ふつう)] + に違いない (にちがいない)\n" +
+            "(*) Tính từ -na/ Danh từ + だ + に違いない\n" +
+            "(*) Thể lịch sự hơn của 「に違いない」 là 「に違いありません」",
         "notes": [],
         "meanings": [
             {
@@ -256,6 +261,7 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-036",
         "no": 36,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜って",
         "usage": "",
@@ -378,6 +384,7 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-037",
         "no": 37,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜なんか/〜なんて",
         "usage": "[Danh từ] + なんか \n [Động từ thể thường (ふつう)/ Danh từ] + なんて",
@@ -428,7 +435,7 @@ export const N3_004_GRAMMAR = [
             {
                 "id": "n3-grammar-format-037-meaning-03",
                 "title": "",
-                "meaning": "Dùng như một từ nối trong khi nói,\n"+ 
+                "meaning": "Dùng như một từ nối trong khi nói,\n" +
                     "thường là để nhấn nhá trước khi nói ra tiếp ý còn lại, có thể dịch theo nghĩa “Kiểu như là“. ",
                 "usage": "",
                 "examples": [
@@ -531,6 +538,7 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-038",
         "no": 38,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜代わりに",
         "usage": "Danh từ + の + かわりに/ かわりの + Danh từ\nĐộng từ thể từ điển （辞書形) + かわりに/ かわりの + Danh từ",
@@ -563,6 +571,7 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-039",
         "no": 39,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜うえに",
         "usage": "Thể thường (ふつう) + うえ（に）（Kanji: 上に)\nTính từ -na + な/ である + うえ（に）\nDanh từ + の/ である + うえ（に）",
@@ -616,6 +625,7 @@ export const N3_004_GRAMMAR = [
         "id": "n3-grammar-format-040",
         "no": 40,
         "level": "N3",
+        "subject": "副詞 - Phó từ",
         "lesson": "Lesson 4",
         "title": "〜に加えて",
         "usage": "Danh từ + に加え（て）（にくわえて）",
