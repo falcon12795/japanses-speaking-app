@@ -98,6 +98,40 @@ export default function GrammarList({ onSelectGrammar }) {
     return selectedGrammarIds.includes(grammarId);
   };
 
+  const isLessonFullySelected = (grammars) => {
+    return grammars.every((grammar) =>
+      selectedGrammarIds.includes(grammar.id)
+    );
+  };
+  const handleSelectAllLesson = (
+    lessonName,
+    lessonGrammars
+  ) => {
+    const grammarIds = lessonGrammars.map(
+      (g) => g.id
+    );
+
+    const allSelected =
+      grammarIds.every((id) =>
+        selectedGrammarIds.includes(id)
+      );
+
+    if (allSelected) {
+      setSelectedGrammarIds((prev) =>
+        prev.filter(
+          (id) => !grammarIds.includes(id)
+        )
+      );
+    } else {
+      setSelectedGrammarIds((prev) => [
+        ...new Set([
+          ...prev,
+          ...grammarIds,
+        ]),
+      ]);
+    }
+  };
+
   const toggleGrammarSelection = (event, grammarId) => {
     event.stopPropagation();
 
@@ -164,12 +198,46 @@ export default function GrammarList({ onSelectGrammar }) {
           const isOpen = openLesson === lesson;
 
           return (
+
             <CollapseGroup
               key={lesson}
-              title={lesson}
-              count={`${grammarItems.length} ${
-                grammarItems.length === 1 ? "grammar" : "grammar patterns"
-              }`}
+              title={
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    gap: "12px",
+                  }}
+                >
+                  <span>{lesson}</span>
+
+                  <Button
+                    variant={
+                      isLessonFullySelected(grammarItems)
+                        ? "primary"
+                        : "secondary"
+                    }
+                    size="small"
+                    onClick={(event) => {
+                      event.stopPropagation();
+
+                      handleSelectAllLesson(
+                        lesson,
+                        grammarItems
+                      );
+                    }}
+                  >
+                    {isLessonFullySelected(grammarItems)
+                      ? "✓ Selected All"
+                      : "Select All"}
+                  </Button>
+                </div>
+              }
+              count={`${grammarItems.length} ${grammarItems.length === 1
+                  ? "grammar"
+                  : "grammar patterns"
+                }`}
               isOpen={isOpen}
               onToggle={() => toggleLesson(lesson)}
             >
