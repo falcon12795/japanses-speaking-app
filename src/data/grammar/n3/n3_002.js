@@ -15,22 +15,22 @@ export const N3_002_GRAMMAR = [
         examples: [
           {
             japanese: "電車に乗ろうとした時、ドアが閉まって、乗れなかった。",
-            speaking: "でんしゃにのろうとしたとき、ドアがしまって、のれなかった。",
+            reading: "でんしゃにのろうとしたとき、ドアがしまって、のれなかった。",
             vietnamese: "Khi định lên tàu thì cửa đóng lại nên không lên được."
           },
           {
             japanese: "早く寝ようとしたけれど、結局夜遅くまで起きていた。",
-            speaking: "はやくねようとしたけれど、けっきょくよるおそくまでおきていた。",
+            reading: "はやくねようとしたけれど、けっきょくよるおそくまでおきていた。",
             vietnamese: "Tôi đã định đi ngủ sớm nhưng cuối cùng lại thức đến khuya."
           },
           {
             japanese: "彼は何か言おうとしているが、なかなか話し出さない。",
-            speaking: "かれはなにかいおうとしているが、なかなかはなしださない。",
+            reading: "かれはなにかいおうとしているが、なかなかはなしださない。",
             vietnamese: "Anh ấy đang định nói điều gì đó nhưng mãi vẫn chưa bắt đầu nói."
           },
           {
             japanese: "家を出ようとした時、友達から電話がかかってきた。",
-            speaking: "いえをでようとしたとき、ともだちからでんわがかかってきた。",
+            reading: "いえをでようとしたとき、ともだちからでんわがかかってきた。",
             vietnamese: "Lúc đang định rời khỏi nhà thì bạn gọi điện đến."
           }
         ],
@@ -44,22 +44,22 @@ export const N3_002_GRAMMAR = [
         examples: [
           {
             japanese: "彼は自分の間違いを認めようとしない。",
-            speaking: "かれはじぶんのまちがいをみとめようとしない。",
+            reading: "かれはじぶんのまちがいをみとめようとしない。",
             vietnamese: "Anh ấy không chịu thừa nhận lỗi của mình."
           },
           {
             japanese: "あの子は何度言っても勉強しようとしない。",
-            speaking: "あのこはなんどいってもべんきょうしようとしない。",
+            reading: "あのこはなんどいってもべんきょうしようとしない。",
             vietnamese: "Dù nhắc bao nhiêu lần đứa trẻ đó cũng không chịu học."
           },
           {
             japanese: "彼女は理由を説明しようとしなかった。",
-            speaking: "かのじょはりゆうをせつめいしようとしなかった。",
+            reading: "かのじょはりゆうをせつめいしようとしなかった。",
             vietnamese: "Cô ấy đã không cố gắng giải thích lý do."
           },
           {
             japanese: "その猫は人に近づこうとしない。",
-            speaking: "そのねこはひとにちかづこうとしない。",
+            reading: "そのねこはひとにちかづこうとしない。",
             vietnamese: "Con mèo đó không chịu lại gần người."
           }
         ],

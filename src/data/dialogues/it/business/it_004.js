@@ -1,8 +1,8 @@
 export const IT_004_DIALOGUE = {
-  "id": "it-004",
+  "id": "it-business-004",
   "level": "IT",
   "title": "指示受けと作業手順・進め方の説明",
-  "lesson": "TOPIC 1",
+  "lesson": "Business",
   "description": "Tiếp nhận chỉ thị và giải thích về quy trình, cách thức tiến hành công việc. Hoa nhận chỉ thị từ Suzuki về kiểm tra chức năng hệ thống quản lý bán hàng, cách báo cáo kết quả và thứ tự ưu tiên công việc.",
   "category": "Work Instruction / Procedure Explanation",
   "characters": [

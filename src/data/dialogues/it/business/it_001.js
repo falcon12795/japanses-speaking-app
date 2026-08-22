@@ -1,7 +1,7 @@
 export const IT_001_DIALOGUE = {
-    id: "it-001",
+    id: "it-business-001",
     level: "IT",
-    lesson: "TOPIC 1",
+    lesson: "Business",
     title: "オンサイト初日の挨拶",
     description: "Chào hỏi trong ngày đầu tiên đi onsite. An, Front SE từ NTT Việt Nam, gặp Tanaka, người phụ trách dự án phía Sakura Soft, sau khi trao đổi danh thiếp và bắt đầu trao đổi về dự án phát triển hệ thống quản lý nhân sự.",
     category: "Onsite / Project Kickoff",

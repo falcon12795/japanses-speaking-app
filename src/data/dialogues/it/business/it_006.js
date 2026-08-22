@@ -1,8 +1,8 @@
 export const IT_006_DIALOGUE = {
-    "id": "it-006",
+    "id": "it-business-006",
     "level": "IT",
     "title": "打ち合わせでの業務確認",
-    "lesson": "TOPIC 1",
+    "lesson": "Business",
     "description": "Confirm về nghiệp vụ trong buổi họp. Minh xác nhận nghiệp vụ của chức năng xử lý xuất hàng với Yamamoto, bao gồm picking list, xuất PDF, nhập hoàn tất xuất hàng, batch, lỗi, cập nhật dữ liệu, phạm vi và schedule.",
     "category": "Business Confirmation / Shipping Process",
     "characters": [

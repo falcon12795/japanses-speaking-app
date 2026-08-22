@@ -1,7 +1,7 @@
 export const IT_005_DIALOGUE = {
-    "id": "it-005",
+    "id": "it-business-005",
     "level": "IT",
-    "lesson": "TOPIC 1",
+    "lesson": "Business",
     "title": "要件説明",
     "description": "Giải thích yêu cầu. Tamamura giải thích yêu cầu mobile cho hệ thống quản lý chuyên cần, Ly xác nhận các điểm liên quan đến chức năng, xử lý offline, gửi tự động, lịch sử chỉnh sửa và màn hình mobile.",
     "category": "Requirements Explanation / Mobile Support",

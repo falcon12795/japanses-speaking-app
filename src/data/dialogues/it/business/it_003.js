@@ -1,7 +1,7 @@
 export const IT_003_DIALOGUE = {
-  id: "it-003",
+  id: "it-business-003",
   level: "IT",
-  lesson: "TOPIC 1",
+  lesson: "Business",
   title: "新しい職場での作業依頼・作業確認",
   description: "Yêu cầu công việc và xác nhận công việc tại nơi làm việc mới. Linh vừa gia nhập JOS Systems, được Yamada hướng dẫn về cài đặt email công ty, quy định viết tuần báo và nhờ kiểm tra nội dung tuần báo.",
   category: "Work Request / Task Confirmation",

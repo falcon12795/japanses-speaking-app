@@ -1,7 +1,7 @@
 export const IT_002_DIALOGUE = {
-    id: "it-002",
+    id: "it-business-002",
     level: "IT",
-    lesson: "TOPIC 1",
+    lesson: "Business",
     title: "キックオフ会議",
     description: "プロジェクトの目的・概要・体制の説明。自動化テストPOCプロジェクトのキックオフ会議で、Satoがプロジェクト目的を説明し、Lanが概要・体制・計画・課題・リスクを説明します。",
     category: "Kickoff / Automation Test POC",
