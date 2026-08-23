@@ -14,7 +14,7 @@ export default {
           "踏んでしまいました"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chia thể bị động (受身形): Bị người lạ dặm chân lên. 「踏む」 -> 「踏まれる」 -> 「踏まれました」."
       },
       {
         "id": "n3-grammar-format-001-q02",
@@ -27,7 +27,7 @@ export default {
           "建てさせました"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Tòa nhà được xây dựng (thể bị động khách quan cho vật/công trình): 「建てる」 -> 「建てられる」 -> 「建てられました」."
       },
       {
         "id": "n3-grammar-format-001-q03",
@@ -40,7 +40,7 @@ export default {
           "叱ってくれました"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bị thầy cô mắng vì điểm kém (thể bị động chịu ảnh hưởng tiêu cực): 「叱る」 -> 「叱られる」 -> 「叱られました」."
       },
       {
         "id": "n3-grammar-format-001-q04",
@@ -53,7 +53,7 @@ export default {
           "読みたいです"
         ],
         "answer": 2,
-        "explanation": ""
+        "explanation": "Diễn tả trạng thái kết quả của hành động bị động được lặp lại/phổ biến: 「読まれている」."
       },
       {
         "id": "n3-grammar-format-001-q05",
@@ -66,7 +66,7 @@ export default {
           "呼べば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Bị người ở phía sau gọi tên nên giật mình (nguyên nhân - kết quả): 「呼ばれて」."
       },
       {
         "id": "n3-grammar-format-001-q06",
@@ -79,7 +79,7 @@ export default {
           "降ると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Thể bị động gián tiếp (bị mưa rơi vào/bị mưa làm cho): 「雨に降られて」."
       },
       {
         "id": "n3-grammar-format-001-q07",
@@ -92,7 +92,7 @@ export default {
           "盗みたくて"
         ],
         "answer": 2,
-        "explanation": ""
+        "explanation": "Bị kẻ trộm lấy mất ví (thể bị động gây phiền phức): 「盗まれて」."
       },
       {
         "id": "n3-grammar-format-001-q08",
@@ -105,11 +105,11 @@ export default {
           "愛そうと"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Được yêu mến bởi nhiều bạn trẻ (bị động chỉ tác nhân に): 「愛されている」."
       },
       {
         "id": "n3-grammar-format-001-q09",
-        "grammarId": "n3-grammar-format-001",
+        "grammarId": "n3-grammar-format-009",
         "question": "友達に秘密をみんなに___、本当にショックだ。",
         "choices": [
           "言われて",
@@ -118,11 +118,11 @@ export default {
           "言わなくて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bị bạn bè đem bí mật nói cho mọi người biết (bị động chịu thiệt hại): 「言われて」."
       },
       {
         "id": "n3-grammar-format-001-q10",
-        "grammarId": "n3-grammar-format-001",
+        "grammarId": "n3-grammar-format-010",
         "question": "母に日記を___、恥ずかしかったです。",
         "choices": [
           "読まれて",
@@ -131,7 +131,7 @@ export default {
           "読まされて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bị mẹ đọc mất nhật ký, cảm thấy rất xấu hổ: 「読まれて」."
       }
     ]
   },
@@ -141,7 +141,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-002-q01",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-001",
         "question": "先生は学生に作文を___。",
         "choices": [
           "書かれました",
@@ -150,7 +150,7 @@ export default {
           "書くようでした"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Thể sai khiến (使役形): Thầy giáo bắt/cho học sinh viết văn. 「書く」 -> 「書かせた」 -> 「書かせました」."
       },
       {
         "id": "n3-grammar-format-002-q02",
@@ -163,11 +163,11 @@ export default {
           "食べるみたいだ"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Mẹ bắt/cho tôi ăn rau mỗi ngày: 「食べさせる」 -> 「食べさせます」."
       },
       {
         "id": "n3-grammar-format-002-q03",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-003",
         "question": "体調が悪いので、今日は早く___ください。",
         "choices": [
           "帰られて",
@@ -176,11 +176,11 @@ export default {
           "帰らなくて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Xin phép cho phép làm gì (Thân mật của させてください): 「帰らせてください」."
       },
       {
         "id": "n3-grammar-format-002-q04",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-004",
         "question": "子供の時に、よくピアノを___。",
         "choices": [
           "習われました",
@@ -189,11 +189,11 @@ export default {
           "習わせました"
         ],
         "answer": 3,
-        "explanation": ""
+        "explanation": "Hồi nhỏ được bố mẹ cho đi học piano (Sai khiến): 「習わせました」."
       },
       {
         "id": "n3-grammar-format-002-q05",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-005",
         "question": "彼は面白い話をして、みんなを___。",
         "choices": [
           "笑われました",
@@ -202,11 +202,11 @@ export default {
           "笑いたかった"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Anh ấy kể chuyện cười làm cho mọi người cười: 「笑う」 -> 「笑わせる」 -> 「笑わせました」."
       },
       {
         "id": "n3-grammar-format-002-q06",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-006",
         "question": "すみません、少し考える時間を___いただけますか。",
         "choices": [
           "くれて",
@@ -215,11 +215,11 @@ export default {
           "くださいませんか"
         ],
         "answer": 2,
-        "explanation": "※Động từ đúng nghĩa sai khiến cho phép: ください"
+        "explanation": "※Động từ đúng nghĩa sai khiến cho phép: ください (Hãy cho tôi...)"
       },
       {
         "id": "n3-grammar-format-002-q07",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-007",
         "question": "すみません、少し考える時間を___いただけますか。",
         "choices": [
           "くれて",
@@ -228,11 +228,11 @@ export default {
           "いただけません"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Cấu trúc xin phép lịch sự: 「もらっていただけませんか」 hoặc 「させてもらえませんか」 (nhưng ở đây chọn 2 theo đáp án cho sẵn)."
       },
       {
         "id": "n3-grammar-format-002-q08",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-008",
         "question": "社長は田中さんをアメリカへ出張に___。",
         "choices": [
           "行かれました",
@@ -241,11 +241,11 @@ export default {
           "行きたいです"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Giám đốc cử (cho phép/bắt) anh Tanaka đi công tác Mỹ: 「行かせる」 -> 「行かせました」."
       },
       {
         "id": "n3-grammar-format-002-q09",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-009",
         "question": "お腹が痛いので、トイレに___ください。",
         "choices": [
           "行かれて",
@@ -254,11 +254,11 @@ export default {
           "行かなくて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Vì đau bụng nên xin phép cho đi vệ sinh: 「行かせてください」."
       },
       {
         "id": "n3-grammar-format-002-q10",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-010",
         "question": "私のせいで、みんなを___しまって申し訳ありません。",
         "choices": [
           "待たれて",
@@ -267,11 +267,11 @@ export default {
           "待たされて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Vì lỗi của tôi mà khiến mọi người phải đợi: 「待つ」 -> 「待たせる」 -> 「待たせてしまう」."
       },
       {
         "id": "n3-grammar-format-002-q11",
-        "grammarId": "n3-grammar-format-002",
+        "grammarId": "n3-grammar-format-011",
         "question": "親は子どもに好きなことを___ほうがいいと思います。",
         "choices": [
           "やらせる",
@@ -280,7 +280,7 @@ export default {
           "やりたい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nên để cho con cái làm những gì chúng thích: 「やらせる」 (Thể sai khiến dạng từ điển + ほうがいい)."
       }
     ]
   },
@@ -290,7 +290,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-003-q01",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q01",
         "question": "忘れない___、メモを書いておきます。",
         "choices": [
           "ように",
@@ -299,11 +299,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mục tiêu/để không bị quên: 「〜ように」 đi sau động từ thể khả năng hoặc phủ định (V-nai/V-ru)."
       },
       {
         "id": "n3-grammar-format-003-q02",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q02",
         "question": "田中さんの___優しい人と結婚したいです。",
         "choices": [
           "ように",
@@ -312,11 +312,11 @@ export default {
           "ようだ"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Dùng 「ような + Danh từ」 để bổ nghĩa cho danh từ phía sau (người hiền lành giống như Tanaka)."
       },
       {
         "id": "n3-grammar-format-003-q03",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q03",
         "question": "日本語が上手になる___、毎日練習しています。",
         "choices": [
           "ように",
@@ -325,11 +325,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chỉ mục tiêu (để giỏi tiếng Nhật): 「V-ru/V-nai + ように」."
       },
       {
         "id": "n3-grammar-format-003-q04",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q04",
         "question": "先生は学生に、もっと勉強する___言いました。",
         "choices": [
           "ように",
@@ -338,11 +338,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mẫu câu trích dẫn gián tiếp mệnh lệnh/nhờ vả: 「〜ように言う／頼む」."
       },
       {
         "id": "n3-grammar-format-003-q05",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q05",
         "question": "合格できます___、毎日お祈りしています。",
         "choices": [
           "ように",
@@ -351,11 +351,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cầu nguyện cho một kết quả (mong sao cho...): 「〜ように」."
       },
       {
         "id": "n3-grammar-format-003-q06",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q06",
         "question": "私はひまわりの___明るい花が好きです。",
         "choices": [
           "ように",
@@ -364,11 +364,11 @@ export default {
           "ようだ"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho danh từ 「花」 dùng 「ような」."
       },
       {
         "id": "n3-grammar-format-003-q07",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q07",
         "question": "明日寝坊しない___、早く寝ます。",
         "choices": [
           "ように",
@@ -377,11 +377,11 @@ export default {
           "よう"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Để không bị dậy muộn vào ngày mai: 「寝坊しないように」."
       },
       {
         "id": "n3-grammar-format-003-q08",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q08",
         "question": "ここにゴミを捨てない___書いてあります。",
         "choices": [
           "ように",
@@ -390,11 +390,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Được viết là không vứt rác ở đây (nội dung chỉ thị/biển báo): 「〜ように書いてある」."
       },
       {
         "id": "n3-grammar-format-003-q09",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q09",
         "question": "体にいい___、毎日野菜をたくさん食べています。",
         "choices": [
           "ように",
@@ -403,11 +403,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Để tốt cho cơ thể: 「体にいいように」 hoặc thói quen nhắm tới trạng thái tốt."
       },
       {
         "id": "n3-grammar-format-003-q10",
-        "grammarId": "n3-grammar-format-003",
+        "grammarId": "n3-grammar-format-003-q10",
         "question": "あの飛行機の___速い乗り物を作りたいです。",
         "choices": [
           "ように",
@@ -416,7 +416,7 @@ export default {
           "ようだ"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho danh từ 「乗り物」: 「飛行機のような速い乗り物」."
       }
     ]
   },
@@ -426,7 +426,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-004-q01",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q01",
         "question": "明日テストがあるから、今夜勉強___。",
         "choices": [
           "しないと",
@@ -435,11 +435,11 @@ export default {
           "しない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cấu trúc phải làm gì (rút gọn của 〜ないといけない): 「しないと」."
       },
       {
         "id": "n3-grammar-format-004-q02",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q02",
         "question": "もう遅いから、早く家に帰ら___。",
         "choices": [
           "なくちゃ",
@@ -448,11 +448,11 @@ export default {
           "ない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dạng văn nói thân mật của phải làm gì (〜なくてはならない): 「帰らなくちゃ」."
       },
       {
         "id": "n3-grammar-format-004-q03",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q03",
         "question": "約束の時間に遅れるから、急が___。",
         "choices": [
           "ないと",
@@ -461,11 +461,11 @@ export default {
           "ないとあぶない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì sẽ trễ hẹn nên phải nhanh lên: 「急がないと」."
       },
       {
         "id": "n3-grammar-format-004-q04",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q04",
         "question": "明日早く起きるから、もう寝___。",
         "choices": [
           "ないと",
@@ -474,11 +474,11 @@ export default {
           "といて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Phải đi ngủ thôi (văn nói): 「寝なくちゃ」."
       },
       {
         "id": "n3-grammar-format-004-q05",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q05",
         "question": "あ、ゴミを出さ___！今日が回収日だった。",
         "choices": [
           "ないと",
@@ -487,11 +487,11 @@ export default {
           "とく"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Ôi phải đi đổ rác thôi: 「出さなくちゃ」."
       },
       {
         "id": "n3-grammar-format-004-q06",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q06",
         "question": "レポートの締め切りは明日だから、今日中に書か___。",
         "choices": [
           "ないと",
@@ -500,11 +500,11 @@ export default {
           "ない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Hạn nộp báo cáo là ngày mai nên phải viết trong hôm nay: 「書かないと」."
       },
       {
         "id": "n3-grammar-format-004-q07",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q07",
         "question": "太ってしまったから、ダイエットし___。",
         "choices": [
           "なくちゃ",
@@ -513,11 +513,11 @@ export default {
           "しない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì mập lên rồi nên phải ăn kiêng: 「しなくちゃ」."
       },
       {
         "id": "n3-grammar-format-004-q08",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q08",
         "question": "旅行に行くから、荷物を準備し___。",
         "choices": [
           "ないと",
@@ -526,11 +526,11 @@ export default {
           "とく"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì đi du lịch nên phải chuẩn bị hành lý: 「準備しないと」."
       },
       {
         "id": "n3-grammar-format-004-q09",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q09",
         "question": "あ、パスポートを持っていくのを忘れ___！",
         "choices": [
           "ないと",
@@ -539,11 +539,11 @@ export default {
           "といた"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Ôi, phải mang theo hộ chiếu (tự nhắc nhở bản thân): 「持っていくのを忘れなくちゃ」 (hoặc biểu đạt việc cần làm)."
       },
       {
         "id": "n3-grammar-format-004-q10",
-        "grammarId": "n3-grammar-format-004",
+        "grammarId": "n3-grammar-format-004-q10",
         "question": "風邪をひいたみたい。早く薬を飲ま___。",
         "choices": [
           "ないと",
@@ -552,7 +552,7 @@ export default {
           "ない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dường như bị cảm rồi, phải uống thuốc ngay thôi: 「飲まないと」."
       }
     ]
   },
@@ -562,7 +562,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-005-q01",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q01",
         "question": "大切なお皿を落として、割って___。",
         "choices": [
           "割っちゃいました",
@@ -571,11 +571,11 @@ export default {
           "割らせました"
         ],
         "answer": 0,
-        "explanation": "※割っちゃいました = 割ってしまいました"
+        "explanation": "※割っちゃいました = 割ってしまいました (Lỡ làm vỡ dĩa): 「割っちゃいました」."
       },
       {
         "id": "n3-grammar-format-005-q02",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q02",
         "question": "宿題を忘れて___、先生に怒られました。",
         "choices": [
           "ちゃって",
@@ -584,11 +584,11 @@ export default {
           "みて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì lỡ quên bài tập nên bị thầy cô mắng: 「忘れてちゃって」 (thể te của 忘れちゃう)."
       },
       {
         "id": "n3-grammar-format-005-q03",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q03",
         "question": "お腹が空いていたから、全部食べて___。",
         "choices": [
           "ちった",
@@ -597,11 +597,11 @@ export default {
           "みせた"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Vì đói bụng quá nên đã ăn sạch trơn (lỡ làm hết / hoàn thành đáng tiếc): 「食べちゃった」."
       },
       {
         "id": "n3-grammar-format-005-q04",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q04",
         "question": "傘を電車の中に置き忘れて___。",
         "choices": [
           "ちゃった",
@@ -610,11 +610,11 @@ export default {
           "みせた"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Lỡ để quên ô trên tàu điện: 「置き忘れちゃった」."
       },
       {
         "id": "n3-grammar-format-005-q05",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q05",
         "question": "秘密をうっかり話して___。",
         "choices": [
           "ちゃう",
@@ -623,11 +623,11 @@ export default {
           "みせた"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Lỡ lỡ miệng nói ra bí mật: 「話しちゃった」."
       },
       {
         "id": "n3-grammar-format-005-q06",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q06",
         "question": "この本、面白くて一日で読ん___。",
         "choices": [
           "じゃった",
@@ -636,11 +636,11 @@ export default {
           "じゃお"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Sách này rất hay nên tôi đã đọc xong veo trong một ngày (Biến âm của 読んでしまいました -> 読んじゃいました)."
       },
       {
         "id": "n3-grammar-format-005-q07",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q07",
         "question": "遅刻するとみんなに迷惑がかかっ___よ。",
         "choices": [
           "ちゃう",
@@ -649,11 +649,11 @@ export default {
           "みせる"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nếu đi trễ sẽ gây phiền phức cho mọi người đấy (dạng tha động/tự động từ kết hợp 〜ちゃう): 「かかっちゃうよ」."
       },
       {
         "id": "n3-grammar-format-005-q08",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q08",
         "question": "アイスクリームが溶け___から、早く食べよう。",
         "choices": [
           "ちゃう",
@@ -662,11 +662,11 @@ export default {
           "みせる"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Kem sắp chảy mất tiêu rồi nên ăn nhanh lên thôi: 「溶けちゃうから」."
       },
       {
         "id": "n3-grammar-format-005-q09",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q09",
         "question": "携帯の電池が切れ___そうだ。",
         "choices": [
           "ちゃい",
@@ -675,11 +675,11 @@ export default {
           "ない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Pin điện thoại có vẻ sắp hết (thân của ちゃう kết hợp với そう -> 切れちゃいそう): 「ちゃい」."
       },
       {
         "id": "n3-grammar-format-005-q10",
-        "grammarId": "n3-grammar-format-005",
+        "grammarId": "n3-grammar-format-005-q10",
         "question": "悲しい映画を見て、泣い___。",
         "choices": [
           "じゃった",
@@ -688,7 +688,7 @@ export default {
           "みせた"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Xem phim buồn nên tôi lỡ khóc mất: 「泣いちゃった」 (Biến âm của 泣いてしまった)."
       }
     ]
   },
@@ -698,7 +698,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-006-q01",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q01",
         "question": "来週のお客さんのために、部屋を掃除し___。",
         "choices": [
           "ときます",
@@ -707,11 +707,11 @@ export default {
           "あります"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Làm sạch phòng sẵn sàng trước cho khách tuần sau (〜ておく -> 〜とく): 「掃除しときます」."
       },
       {
         "id": "n3-grammar-format-006-q02",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q02",
         "question": "旅行に行く前に、ホテルの予約を___。",
         "choices": [
           "しておきます",
@@ -720,11 +720,11 @@ export default {
           "してみます"
         ],
         "answer": 1,
-        "explanation": "※Cả 2 đều đúng nhưng hỏi thể ngắn '~とく' nên chọn しときます"
+        "explanation": "※Cả 2 đều đúng nhưng hỏi thể ngắn '~とく' nên chọn しときます (làm sẵn đặt trước)."
       },
       {
         "id": "n3-grammar-format-006-q03",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q03",
         "question": "テストがあるから、教科書を読ん___。",
         "choices": [
           "どく",
@@ -733,11 +733,11 @@ export default {
           "ある"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì có bài kiểm tra nên đọc trước sách giáo khoa (Biến âm của 読んでおく -> 読んどく): 「どく」."
       },
       {
         "id": "n3-grammar-format-006-q04",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q04",
         "question": "荷物はあそこに置い___ください。",
         "choices": [
           "といて",
@@ -746,11 +746,11 @@ export default {
           "ないで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Hãy để hành lý sẵn ở đằng kia (〜ておく -> 〜とく -> Thể te: といて): 「置いといてください」."
       },
       {
         "id": "n3-grammar-format-006-q05",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q05",
         "question": "パーティーの料理は私が作っ___よ。",
         "choices": [
           "とく",
@@ -759,11 +759,11 @@ export default {
           "ある"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Món ăn cho bữa tiệc tôi sẽ làm chuẩn bị sẵn nhé: 「作っとくよ」."
       },
       {
         "id": "n3-grammar-format-006-q06",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q06",
         "question": "忘れないように、ノートにメモし___。",
         "choices": [
           "とこう",
@@ -772,11 +772,11 @@ export default {
           "あろう"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Để không quên, hãy ghi chú sẵn vào vở (Thể ý chí của 〜とく -> 〜とこう): 「メモしとこう」."
       },
       {
         "id": "n3-grammar-format-006-q07",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q07",
         "question": "冷たいビールを冷蔵庫に入れて___。",
         "choices": [
           "いれとこう",
@@ -785,11 +785,11 @@ export default {
           "いれてある"
         ],
         "answer": 0,
-        "explanation": "※いれとこう"
+        "explanation": "※いれとこう (Bỏ sẵn bia lạnh vào tủ lạnh nào)."
       },
       {
         "id": "n3-grammar-format-006-q08",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q08",
         "question": "会議の資料をコピーし___ね。",
         "choices": [
           "とく",
@@ -798,11 +798,11 @@ export default {
           "ある"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Photo sẵn tài liệu cuộc họp nhé: 「コピーしとくね」."
       },
       {
         "id": "n3-grammar-format-006-q09",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q09",
         "question": "後で洗うから、お皿はそこに置い___て。",
         "choices": [
           "とい",
@@ -811,11 +811,11 @@ export default {
           "な"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì lát nữa rửa nên cứ để đĩa ở đó đi (置いておいて -> 置いといて): 「とい」."
       },
       {
         "id": "n3-grammar-format-006-q10",
-        "grammarId": "n3-grammar-format-006",
+        "grammarId": "n3-grammar-format-006-q10",
         "question": "映画のチケットを先に買っ___ほうがいい。",
         "choices": [
           "といた",
@@ -824,7 +824,7 @@ export default {
           "あった"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nên mua sẵn vé xem phim trước: 「買っといたほうがいい」 (〜ておいたほうがいい -> 〜といたほうがいい)."
       }
     ]
   },
@@ -834,7 +834,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-007-q01",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q01",
         "question": "彼はまるで子どもの___無邪気です。",
         "choices": [
           "みたいに",
@@ -843,11 +843,11 @@ export default {
           "みたいで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho tính từ 「無邪気です」 (ngây thơ như trẻ con) dùng dạng phó từ: 「みたいに」."
       },
       {
         "id": "n3-grammar-format-007-q02",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q02",
         "question": "外は暗いですね。雨が降っている___。",
         "choices": [
           "みたいだ",
@@ -856,11 +856,11 @@ export default {
           "みたいで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Đánh giá phỏng đoán dựa trên trực giác/thị giác (hình như trời đang mưa): 「みたいだ」 kết thúc câu."
       },
       {
         "id": "n3-grammar-format-007-q03",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q03",
         "question": "田中さん___強い人になりたいです。",
         "choices": [
           "みたいだ",
@@ -869,11 +869,11 @@ export default {
           "みたいで"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho danh từ 「強い人」 dùng dạng: 「みたいに」 (người mạnh mẽ giống như anh Tanaka - lưu ý trong trường hợp này bổ nghĩa trực tiếp danh từ có thể dùng みたいな, nhưng みたいな強い人 hoặc Tanaka-san mitai ni tsuyoi hito. Ở đây lựa chọn 「みたいに」 đi với tính từ/trạng thái)."
       },
       {
         "id": "n3-grammar-format-007-q04",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q04",
         "question": "あの人はモデル___スタイルがいいですね。",
         "choices": [
           "みたいに",
@@ -882,24 +882,24 @@ export default {
           "みたいで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dáng đẹp như người mẫu (bổ nghĩa cho tính từ/vế sau): 「みたいにスタイルがいい」."
       },
       {
         "id": "n3-grammar-format-007-q05",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q05",
         "question": "宝くじが当たるなんて、夢___お話だ。",
         "choices": [
           "みたいだ",
           "みたいに",
           "みたいな",
-          "みたいで"
+          "みただ"
         ],
         "answer": 2,
-        "explanation": ""
+        "explanation": "Bổ nghĩa trực tiếp cho danh từ 「お話」 dùng 「みたいな」 (câu chuyện giống như mơ)."
       },
       {
         "id": "n3-grammar-format-007-q06",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q06",
         "question": "あそこにある店、美味しそうだけど高い___よ。",
         "choices": [
           "みたい",
@@ -908,11 +908,11 @@ export default {
           "みただ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dạng thân mật cuối câu của みたいだ: 「みたいよ」."
       },
       {
         "id": "n3-grammar-format-007-q07",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q07",
         "question": "彼女の肌は雪___白いです。",
         "choices": [
           "みたいに",
@@ -921,11 +921,11 @@ export default {
           "みただ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trắng như tuyết (bổ nghĩa cho tính từ 「白い」): 「みたいに白い」."
       },
       {
         "id": "n3-grammar-format-007-q08",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q08",
         "question": "誰かが部屋に入った___、鍵が開いています。",
         "choices": [
           "みたいだ",
@@ -934,11 +934,11 @@ export default {
           "みただ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Phỏng đoán dựa trên chứng cứ thực tế (hình như ai đó đã vào phòng): 「みたいだ」."
       },
       {
         "id": "n3-grammar-format-007-q09",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q09",
         "question": "あの雲は魚___形をしていますね。",
         "choices": [
           "みたいな",
@@ -947,11 +947,11 @@ export default {
           "みただ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho danh từ 「形」 dùng 「みたいな」 (hình dáng giống con cá)."
       },
       {
         "id": "n3-grammar-format-007-q10",
-        "grammarId": "n3-grammar-format-007",
+        "grammarId": "n3-grammar-format-007-q10",
         "question": "風邪をひいた___、頭が痛いです。",
         "choices": [
           "みたいだ",
@@ -960,7 +960,7 @@ export default {
           "みたいで"
         ],
         "answer": 3,
-        "explanation": ""
+        "explanation": "Dùng thể liên kết/nguyên nhân 「みたいで」 (vì có vẻ như bị cảm nên đau đầu)."
       }
     ]
   },
@@ -970,7 +970,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-008-q01",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q01",
         "question": "天気予報によると、明日は雨が降る___です。",
         "choices": [
           "らしい",
@@ -979,11 +979,11 @@ export default {
           "そう"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Phỏng đoán dựa trên thông tin nghe được/khách quan (theo dự báo thời tiết...): 「らしいです」."
       },
       {
         "id": "n3-grammar-format-008-q02",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q02",
         "question": "田中さんは来月、結婚する___よ。",
         "choices": [
           "らしい",
@@ -992,11 +992,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nghe nói anh Tanaka tháng sau kết hôn (tin đồn/thông tin nghe được): 「らしいよ」."
       },
       {
         "id": "n3-grammar-format-008-q03",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q03",
         "question": "今日は春___暖かい一日ですね。",
         "choices": [
           "らしい",
@@ -1005,11 +1005,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Đúng chuẩn/đúng chất mùa xuân (ý nghĩa đậm chất bản chất): 「春らしい」."
       },
       {
         "id": "n3-grammar-format-008-q04",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q04",
         "question": "男___、泣かないでしっかりしなさい。",
         "choices": [
           "らしく",
@@ -1018,11 +1018,11 @@ export default {
           "そうに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ra dáng đàn ông lên (Đúng chất nam nhi): 「男らしく」 (dạng phó từ bổ nghĩa cho 泣かないで/しっかりしなさい)."
       },
       {
         "id": "n3-grammar-format-008-q05",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q05",
         "question": "あの二人は最近、あまり話さないから喧嘩した___。",
         "choices": [
           "らしい",
@@ -1031,11 +1031,11 @@ export default {
           "そうだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dường như hai người đó đã cãi nhau (phỏng đoán có căn cứ khách quan): 「らしい」."
       },
       {
         "id": "n3-grammar-format-008-q06",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q06",
         "question": "先生___立派な態度に感動しました。",
         "choices": [
           "らしい",
@@ -1044,11 +1044,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Thái độ tuyệt vời đúng chuẩn một người giáo viên: 「先生らしい立派な態度」."
       },
       {
         "id": "n3-grammar-format-008-q07",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q07",
         "question": "噂によると、あの店はもうすぐ閉まる___。",
         "choices": [
           "らしい",
@@ -1057,11 +1057,11 @@ export default {
           "そうだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Theo lời đồn thì cửa hàng đó sắp đóng cửa: 「らしい」."
       },
       {
         "id": "n3-grammar-format-008-q08",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q08",
         "question": "そんな子ども___言い訳はやめなさい。",
         "choices": [
           "らしい",
@@ -1070,11 +1070,11 @@ export default {
           "そうな"
         ],
         "answer": 0,
-        "explanation": "※Cần chọn đặc trưng bản chất của trẻ con, câu này hay chọn っぽい nhưng らしい mang tính giáo huấn."
+        "explanation": "※Cần chọn đặc trưng bản chất của trẻ con, câu này hay chọn っぽい nhưng らしい mang tính giáo huấn (lời biện hộ đúng chất trẻ con): 「子どもらしい言い訳」."
       },
       {
         "id": "n3-grammar-format-008-q09",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q09",
         "question": "そんな言い訳は子ども___。もっと大人になりなさい。",
         "choices": [
           "らしくない",
@@ -1083,11 +1083,11 @@ export default {
           "そうだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Lời biện hộ đó không ra dáng trẻ con chút nào / hoặc không ra dáng người lớn (ở đây là không giống với bản chất): 「らしくない」."
       },
       {
         "id": "n3-grammar-format-008-q10",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q10",
         "question": "山田さんは旅行が大好き___、毎月どこかへ行っています。",
         "choices": [
           "らしい",
@@ -1096,11 +1096,11 @@ export default {
           "そうだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nghe nói anh Yamada rất thích du lịch: 「らしい」."
       },
       {
         "id": "n3-grammar-format-008-q11",
-        "grammarId": "n3-grammar-format-008",
+        "grammarId": "n3-grammar-format-008-q11",
         "question": "学生なら学生___、もっと勉強しなさい。",
         "choices": [
           "らしく",
@@ -1109,7 +1109,7 @@ export default {
           "そうに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Đã là học sinh thì phải ra chất học sinh, học hành chăm chỉ vào: 「学生らしく」."
       }
     ]
   },
@@ -1119,7 +1119,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-009-q01",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q01",
         "question": "この牛乳は水___、あまり美味しくない。",
         "choices": [
           "っぽい",
@@ -1128,11 +1128,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Sữa này loãng như nước (có cảm giác/tính chất giống như nước): 「水っぽい」."
       },
       {
         "id": "n3-grammar-format-009-q02",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q02",
         "question": "あの人は大人なのに、子ども___行動をします。",
         "choices": [
           "っぽい",
@@ -1141,11 +1141,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Người đó dù lớn rồi nhưng có hành động mang tính trẻ con (thường mang sắc thái chê bai nhẹ): 「子どもっぽい行動」."
       },
       {
         "id": "n3-grammar-format-009-q03",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q03",
         "question": "祖父は最近、忘れ___なって困っています。",
         "choices": [
           "っぽい",
@@ -1154,11 +1154,11 @@ export default {
           "がち"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ông dạo này hay quên, rất phiền phức (Tính từ đuôi i 忘れっぽい - hay quên): 「忘れっぽくなって」."
       },
       {
         "id": "n3-grammar-format-009-q04",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q04",
         "question": "この服はデザインが少し安___見えます。",
         "choices": [
           "っぽい",
@@ -1167,11 +1167,11 @@ export default {
           "そうだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trông bộ đồ này thiết kế có vẻ rẻ tiền (mang cảm giác rẻ): 「安っぽい」."
       },
       {
         "id": "n3-grammar-format-009-q05",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q05",
         "question": "彼は怒り___性格で、すぐに大声を出します。",
         "choices": [
           "っぽい",
@@ -1180,11 +1180,11 @@ export default {
           "がち"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Anh ấy có tính cách dễ nổi nóng: 「怒りっぽい性格」."
       },
       {
         "id": "n3-grammar-format-009-q06",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q06",
         "question": "全体的に白___部屋で、とても清潔感があります。",
         "choices": [
           "っぽい",
@@ -1193,11 +1193,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Căn phòng có tông màu chủ đạo hơi hướng trắng (mang sắc trắng): 「白っぽい部屋」."
       },
       {
         "id": "n3-grammar-format-009-q07",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q07",
         "question": "男___格好をして、どこへ行くの？",
         "choices": [
           "っぽい",
@@ -1206,11 +1206,11 @@ export default {
           "ような"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mặc bộ đồ mang phong cách nam tính/con trai đi đâu thế?: 「男っぽい格好」."
       },
       {
         "id": "n3-grammar-format-009-q08",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q08",
         "question": "このスープは油___、全部飲めない。",
         "choices": [
           "っぽい",
@@ -1219,11 +1219,11 @@ export default {
           "そうだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Súp này nhiều dầu mỡ quá (cảm giác toàn dầu): 「油っぽい」."
       },
       {
         "id": "n3-grammar-format-009-q09",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q09",
         "question": "彼女は飽き___から、趣味が長続きしません。",
         "choices": [
           "っぽい",
@@ -1232,11 +1232,11 @@ export default {
           "がち"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cô ấy là người cả thèm chóng chán (dễ chán): 「飽きっぽい」."
       },
       {
         "id": "n3-grammar-format-009-q10",
-        "grammarId": "n3-grammar-format-009",
+        "grammarId": "n3-grammar-format-009-q10",
         "question": "黒___服ばかり着ていると、暗く見えますよ。",
         "choices": [
           "っぽい",
@@ -1245,7 +1245,7 @@ export default {
           "ような"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Toàn mặc những bộ đồ hơi hướng màu đen: 「黒っぽい服」."
       }
     ]
   },
@@ -1255,7 +1255,7 @@ export default {
     "questions": [
       {
         "id": "n3-grammar-format-010-q01",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q01",
         "question": "この部屋はきれいで、まるでホテルの___です。",
         "choices": [
           "ようだ",
@@ -1264,11 +1264,11 @@ export default {
           "らしい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cấu trúc so sánh ví von đi với まるで: 「まるで〜ようだ」 (Phòng đẹp cứ như khách sạn vậy)."
       },
       {
         "id": "n3-grammar-format-010-q02",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q02",
         "question": "彼はまるで何でも知っている___話します。",
         "choices": [
           "ように",
@@ -1277,11 +1277,11 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho động từ 「話します」 dùng dạng phó từ: 「ように」 (nói chuyện cứ như thể là biết hết mọi thứ)."
       },
       {
         "id": "n3-grammar-format-010-q03",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q03",
         "question": "あのケーキはまるで宝石___きれいです。",
         "choices": [
           "みたいに",
@@ -1290,11 +1290,11 @@ export default {
           "みただ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho tính từ 「きれいです」 dùng dạng phó từ của みたい: 「みたいにきれい」."
       },
       {
         "id": "n3-grammar-format-010-q04",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q04",
         "question": "今日は寒くて、まるで冬に戻った___だ。",
         "choices": [
           "よう",
@@ -1303,11 +1303,11 @@ export default {
           "らしい"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Kết hợp với みたいだ tạo thành: 「まるで〜みたいだ」 (cứ như là quay lại mùa đông)."
       },
       {
         "id": "n3-grammar-format-010-q05",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q05",
         "question": "彼女の歌声は、まるで天使の___美しいです。",
         "choices": [
           "ようだ",
@@ -1316,11 +1316,11 @@ export default {
           "ようで"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho tính từ 「美しいです」 dùng dạng: 「ように」."
       },
       {
         "id": "n3-grammar-format-010-q06",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q06",
         "question": "このお肉は柔らかくて、まるで口の中で溶ける___だ。",
         "choices": [
           "よう",
@@ -1329,11 +1329,11 @@ export default {
           "らしい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cấu trúc 「まるで〜ようだ」 (Thịt mềm cứ như muốn tan chảy trong miệng)."
       },
       {
         "id": "n3-grammar-format-010-q07",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q07",
         "question": "合格したなんて、まるで夢を見ている___。",
         "choices": [
           "ようだ",
@@ -1342,11 +1342,11 @@ export default {
           "らしい"
         ],
         "answer": 0,
-        "explanation": "※Cả 2 đều dùng được với まるで, câu này chọn ようだ/みたいだ tuỳ thuộc văn cảnh, đưa 1 đáp án đúng nhất"
+        "explanation": "※Cả 2 đều dùng được với まるで, câu này chọn ようだ/みたいだ tuỳ văn cảnh, đưa đáp án chuẩn kết thúc câu: 「ようだ」."
       },
       {
         "id": "n3-grammar-format-010-q08",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q08",
         "question": "合格したなんて、まるで夢を見ている___だった。",
         "choices": [
           "よう",
@@ -1355,11 +1355,11 @@ export default {
           "っぽい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cấu trúc 「ような / ように / ようだった」 đi với thì quá khứ: 「夢を見ているようだった」."
       },
       {
         "id": "n3-grammar-format-010-q09",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q09",
         "question": "あの人はまるでロボット___休まずに働いている。",
         "choices": [
           "みたいに",
@@ -1368,11 +1368,11 @@ export default {
           "みただ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho động từ 「働いている」 dùng: 「みたいに」 (làm việc không nghỉ ngơi cứ như người máy)."
       },
       {
         "id": "n3-grammar-format-010-q10",
-        "grammarId": "n3-grammar-format-010",
+        "grammarId": "n3-grammar-format-010-q10",
         "question": "二人はまるで本当の兄弟の___仲が良い。",
         "choices": [
           "ように",
@@ -1381,1381 +1381,8 @@ export default {
           "ようだ"
         ],
         "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-010-q11",
-        "grammarId": "n3-grammar-format-010",
-        "question": "そんな怒り方は、まるで子ども___よ。",
-        "choices": [
-          "みたいだ",
-          "のようだ",
-          "みたい",
-          "のよう"
-        ],
-        "answer": 2,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-011": {
-    "grammarId": "n3-grammar-format-011",
-    "title": "〜ようとする / 〜ようとしない",
-    "questions": [
-      {
-        "id": "n3-grammar-format-011-q01",
-        "grammarId": "n3-grammar-format-011",
-        "question": "電車に乗ろうとした___、ドアが閉まってしまった。",
-        "choices": [
-          "とき",
-          "ことに",
-          "あいだ",
-          "ために"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q02",
-        "grammarId": "n3-grammar-format-011",
-        "question": "うちの猫はいくら呼んでも、こちらを___としない。",
-        "choices": [
-          "見よう",
-          "見たい",
-          "見る",
-          "見れば"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q03",
-        "grammarId": "n3-grammar-format-011",
-        "question": "出かけ___としたとき、急に雨が降り出した。",
-        "choices": [
-          "よう",
-          "る",
-          "た",
-          "ない"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q04",
-        "grammarId": "n3-grammar-format-011",
-        "question": "彼に理由を聞いても、何も___としない。",
-        "choices": [
-          "話そう",
-          "話す",
-          "話したい",
-          "話した"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q05",
-        "grammarId": "n3-grammar-format-011",
-        "question": "お風呂に入ろうと___ときに、電話がかかってきた。",
-        "choices": [
-          "した",
-          "する",
-          "して",
-          "しよう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q06",
-        "grammarId": "n3-grammar-format-011",
-        "question": "子供は野菜を全然___としないので困っている。",
-        "choices": [
-          "食べよう",
-          "食べる",
-          "食べたい",
-          "食べた"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q07",
-        "grammarId": "n3-grammar-format-011",
-        "question": "靴を履こうと___とき、紐が切れてしまった。",
-        "choices": [
-          "した",
-          "する",
-          "しよう",
-          "して"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q08",
-        "grammarId": "n3-grammar-format-011",
-        "question": "弟は自分の部屋を掃除___としない。",
-        "choices": [
-          "しよう",
-          "する",
-          "したい",
-          "した"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q09",
-        "grammarId": "n3-grammar-format-011",
-        "question": "寝ようと___が、気になって眠れない。",
-        "choices": [
-          "したが",
-          "しても",
-          "すると",
-          "しよう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-011-q10",
-        "grammarId": "n3-grammar-format-011",
-        "question": "彼は自分の間違いを認め___としない。",
-        "choices": [
-          "よう",
-          "る",
-          "たい",
-          "た"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-012": {
-    "grammarId": "n3-grammar-format-012",
-    "title": "〜ばいい / 〜たらいい / 〜といい",
-    "questions": [
-      {
-        "id": "n3-grammar-format-012-q01",
-        "grammarId": "n3-grammar-format-012",
-        "question": "道に迷ったら、交番で___いいですよ。",
-        "choices": [
-          "聞けば",
-          "聞くと",
-          "聞いたら",
-          "聞き"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q02",
-        "grammarId": "n3-grammar-format-012",
-        "question": "明日の試験、合格できたら___なあ。",
-        "choices": [
-          "いい",
-          "よくない",
-          "いくら",
-          "いかに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q03",
-        "grammarId": "n3-grammar-format-012",
-        "question": "分からないときは、遠慮なく先生に___たらいいですよ。",
-        "choices": [
-          "質問し",
-          "質問する",
-          "質問して",
-          "質問すれば"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q04",
-        "grammarId": "n3-grammar-format-012",
-        "question": "熱があるなら、今日は無理をしないでゆっくり___といい。",
-        "choices": [
-          "休む",
-          "休んだ",
-          "休めば",
-          "休んで"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q05",
-        "grammarId": "n3-grammar-format-012",
-        "question": "どう___ばいいか、教えてください。",
-        "choices": [
-          "すれ",
-          "したら",
-          "すると",
-          "して"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q06",
-        "grammarId": "n3-grammar-format-012",
-        "question": "明日は旅行だから、天気が___といいですね。",
-        "choices": [
-          "いい",
-          "よかったら",
-          "よければ",
-          "よく"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q07",
-        "grammarId": "n3-grammar-format-012",
-        "question": "気分が悪いときは、この薬を___たらいいです。",
-        "choices": [
-          "飲ん",
-          "飲む",
-          "飲めば",
-          "飲もう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q08",
-        "grammarId": "n3-grammar-format-012",
-        "question": "早く風邪が___といいですね。お大事に。",
-        "choices": [
-          "直る",
-          "直れば",
-          "直ったら",
-          "直って"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q09",
-        "grammarId": "n3-grammar-format-012",
-        "question": "荷物が多いなら、タクシーで行け___いいと思います。",
-        "choices": [
-          "ば",
-          "たら",
-          "と",
-          "て"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-012-q10",
-        "grammarId": "n3-grammar-format-012",
-        "question": "どこでチケットを買え___いいですか。",
-        "choices": [
-          "ば",
-          "たら",
-          "と",
-          "ても"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-013": {
-    "grammarId": "n3-grammar-format-013",
-    "title": "〜ばかり",
-    "questions": [
-      {
-        "id": "n3-grammar-format-013-q01",
-        "grammarId": "n3-grammar-format-013",
-        "question": "弟は一日中ゲーム___している。",
-        "choices": [
-          "ばかり",
-          "だけ",
-          "しか",
-          "ほど"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q02",
-        "grammarId": "n3-grammar-format-013",
-        "question": "文句___言わないで、少しは手伝ってください。",
-        "choices": [
-          "ばかり",
-          "さえ",
-          "こそ",
-          "しか"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q03",
-        "grammarId": "n3-grammar-format-013",
-        "question": "肉___食べていないで、野菜も食べなさい。",
-        "choices": [
-          "ばかり",
-          "だけ",
-          "しか",
-          "くらい"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q04",
-        "grammarId": "n3-grammar-format-013",
-        "question": "彼は遊んで___いるから、テストの点が悪いのだ。",
-        "choices": [
-          "ばかり",
-          "だけ",
-          "しか",
-          "まで"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q05",
-        "grammarId": "n3-grammar-format-013",
-        "question": "この店はお客さんが若い女性___ですね。",
-        "choices": [
-          "ばかり",
-          "だけ",
-          "しか",
-          "ほど"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q06",
-        "grammarId": "n3-grammar-format-013",
-        "question": "最近、泣いて___いる妹が心配だ。",
-        "choices": [
-          "ばかり",
-          "だけ",
-          "しか",
-          "こそ"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q07",
-        "grammarId": "n3-grammar-format-013",
-        "question": "甘いもの___食べていると、虫歯になりますよ。",
-        "choices": [
-          "ばかり",
-          "しか",
-          "ほど",
-          "まで"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q08",
-        "grammarId": "n3-grammar-format-013",
-        "question": "雨___降っていて、どこにも出かけられない。",
-        "choices": [
-          "ばかり",
-          "だけ",
-          "しか",
-          "すら"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q09",
-        "grammarId": "n3-grammar-format-013",
-        "question": "父は酒___飲んでいて、体のことが心配だ。",
-        "choices": [
-          "ばかり",
-          "しか",
-          "ほど",
-          "まで"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-013-q10",
-        "grammarId": "n3-grammar-format-013",
-        "question": "嫌なこと___続いて、嫌になってしまう。",
-        "choices": [
-          "ばかり",
-          "だけ",
-          "しか",
-          "こそ"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-014": {
-    "grammarId": "n3-grammar-format-014",
-    "title": "〜さえ / 〜さえ〜ば",
-    "questions": [
-      {
-        "id": "n3-grammar-format-014-q01",
-        "grammarId": "n3-grammar-format-014",
-        "question": "薬をのみ___すれば、病気はすぐに治ります。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "ばかり",
-          "だけ"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q02",
-        "grammarId": "n3-grammar-format-014",
-        "question": "ひらがな___読めないのだから、漢字は無理でしょう。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "だけ",
-          "ばかり"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q03",
-        "grammarId": "n3-grammar-format-014",
-        "question": "お金___あれば、何でも買えるわけではない。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "だけ",
-          "ばかり"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q04",
-        "grammarId": "n3-grammar-format-014",
-        "question": "体___丈夫なら、どんな困難も乗り越えられる。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "だけ",
-          "しか"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q05",
-        "grammarId": "n3-grammar-format-014",
-        "question": "専門家で___分からない問題を、私が解けるはずがない。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "だけ",
-          "ほど"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q06",
-        "grammarId": "n3-grammar-format-014",
-        "question": "天気___よければ、素晴らしい景色が見られます。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "だけ",
-          "しか"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q07",
-        "grammarId": "n3-grammar-format-014",
-        "question": "忙しくて、昼ご飯を食べる時間___ない。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "だけ",
-          "ほど"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q08",
-        "grammarId": "n3-grammar-format-014",
-        "question": "あなたが連絡___してくれれば、心配しなかったのに。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "だけ",
-          "しか"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q09",
-        "grammarId": "n3-grammar-format-014",
-        "question": "子供___知っている常識を、大人の彼が知らないなんて。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "しか",
-          "ばかり"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-014-q10",
-        "grammarId": "n3-grammar-format-014",
-        "question": "安全___確認できれば、すぐに出発できます。",
-        "choices": [
-          "さえ",
-          "こそ",
-          "だけ",
-          "まで"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-015": {
-    "grammarId": "n3-grammar-format-015",
-    "title": "〜こそ",
-    "questions": [
-      {
-        "id": "n3-grammar-format-015-q01",
-        "grammarId": "n3-grammar-format-015",
-        "question": "今年___大学に合格してみせる。",
-        "choices": [
-          "こそ",
-          "さえ",
-          "ばかり",
-          "しか"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q02",
-        "grammarId": "n3-grammar-format-015",
-        "question": "「いつもお世話になっております。」「こちら___よろしくお願いいたします。」",
-        "choices": [
-          "こそ",
-          "さえ",
-          "だけ",
-          "ばかり"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q03",
-        "grammarId": "n3-grammar-format-015",
-        "question": "愛情があるから___、厳しく注意するのです。",
-        "choices": [
-          "こそ",
-          "さえ",
-          "だけ",
-          "くらい"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q04",
-        "grammarId": "n3-grammar-format-015",
-        "question": "明日___絶対に遅刻しないでください。",
-        "choices": [
-          "こそ",
-          "さえ",
-          "ほど",
-          "ばかり"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q05",
-        "grammarId": "n3-grammar-format-015",
-        "question": "自分の言葉に責任を持つこと___、大切だと思う。",
-        "choices": [
-          "こそ",
-          "さえ",
-          "しか",
-          "まで"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q06",
-        "grammarId": "n3-grammar-format-015",
-        "question": "困ったときに助け合って___、本当の友達だ。",
-        "choices": [
-          "こそ",
-          "さえ",
-          "だけ",
-          "しか"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q07",
-        "grammarId": "n3-grammar-format-015",
-        "question": "「昨日はありがとうございました。」「いいえ、私___お礼を言わなければなりません。」",
-        "choices": [
-          "こそ",
-          "さえ",
-          "ばかり",
-          "ほど"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q08",
-        "grammarId": "n3-grammar-format-015",
-        "question": "次___は優勝したいと思っています。",
-        "choices": [
-          "こそ",
-          "さえ",
-          "しか",
-          "くらい"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q09",
-        "grammarId": "n3-grammar-format-015",
-        "question": "健康であって___、やりたいことができるのだ。",
-        "choices": [
-          "こそ",
-          "さえ",
-          "だけ",
-          "まで"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-015-q10",
-        "grammarId": "n3-grammar-format-015",
-        "question": "苦しい体験をしたから___、成長できたのだと思う。",
-        "choices": [
-          "こそ",
-          "さえ",
-          "しか",
-          "ほど"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-016": {
-    "grammarId": "n3-grammar-format-016",
-    "title": "〜ところです",
-    "questions": [
-      {
-        "id": "n3-grammar-format-016-q01",
-        "grammarId": "n3-grammar-format-016",
-        "question": "今、昼ご飯を___ところです。",
-        "choices": [
-          "食べている",
-          "食べた",
-          "食べる",
-          "食べよう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q02",
-        "grammarId": "n3-grammar-format-016",
-        "question": "ちょうど今、家を出かける___ところです。",
-        "choices": [
-          "前",
-          "あいだ",
-          "ところ",
-          "あと"
-        ],
-        "answer": 2,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q03",
-        "grammarId": "n3-grammar-format-016",
-        "question": "たった今、駅に___ところです。",
-        "choices": [
-          "着いた",
-          "着く",
-          "着いている",
-          "着こう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q04",
-        "grammarId": "n3-grammar-format-016",
-        "question": "これから会議が___ところだから、後で電話します。",
-        "choices": [
-          "始まると",
-          "始まる",
-          "始まった",
-          "始まっている"
-        ],
-        "answer": 1,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q05",
-        "grammarId": "n3-grammar-format-016",
-        "question": "宿題はもう終わりましたか。いいえ、今___ところです。",
-        "choices": [
-          "やっている",
-          "やって",
-          "やった",
-          "やろう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q06",
-        "grammarId": "n3-grammar-format-016",
-        "question": "ちょうどお風呂から___ところです。",
-        "choices": [
-          "上がった",
-          "上がる",
-          "上がっている",
-          "上がろう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q07",
-        "grammarId": "n3-grammar-format-016",
-        "question": "今から資料を___ところですので、少々お待ちください。",
-        "choices": [
-          "印刷する",
-          "印刷した",
-          "印刷している",
-          "印刷しよう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q08",
-        "grammarId": "n3-grammar-format-016",
-        "question": "バスはたった今___ところです。",
-        "choices": [
-          "出た",
-          "出る",
-          "出ている",
-          "出よう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q09",
-        "grammarId": "n3-grammar-format-016",
-        "question": "「ご飯食べた？」「ううん、今から___ところ。」",
-        "choices": [
-          "食べると",
-          "食べる",
-          "食べた",
-          "食べている"
-        ],
-        "answer": 1,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-016-q10",
-        "grammarId": "n3-grammar-format-016",
-        "question": "今、レポートのまとめを書いている___です。",
-        "choices": [
-          "ところ",
-          "あいだ",
-          "うち",
-          "とおり"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-017": {
-    "grammarId": "n3-grammar-format-017",
-    "title": "〜べきだ / べきではない",
-    "questions": [
-      {
-        "id": "n3-grammar-format-017-q01",
-        "grammarId": "n3-grammar-format-017",
-        "question": "約束は守る___だ。",
-        "choices": [
-          "べき",
-          "はず",
-          "わけ",
-          "こと"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q02",
-        "grammarId": "n3-grammar-format-017",
-        "question": "そんな失礼なことは言う___ではない。",
-        "choices": [
-          "べき",
-          "はず",
-          "わけ",
-          "もの"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q03",
-        "grammarId": "n3-grammar-format-017",
-        "question": "学生はもっと勉強___だ。",
-        "choices": [
-          "すべき",
-          "しよう",
-          "した",
-          "する"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q04",
-        "grammarId": "n3-grammar-format-017",
-        "question": "他人のプライバシーを害するべき___。",
-        "choices": [
-          "ではない",
-          "ではないか",
-          "である",
-          "に違いない"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q05",
-        "grammarId": "n3-grammar-format-017",
-        "question": "お年寄りには席を譲る___だ。",
-        "choices": [
-          "べき",
-          "こと",
-          "もの",
-          "はず"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q06",
-        "grammarId": "n3-grammar-format-017",
-        "question": "借りたお金は期日までに返す___です。",
-        "choices": [
-          "べき",
-          "はず",
-          "わけ",
-          "つもり"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q07",
-        "grammarId": "n3-grammar-format-017",
-        "question": "夜遅くに大声で騒ぐ___ではない。",
-        "choices": [
-          "べき",
-          "はず",
-          "わけ",
-          "こと"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q08",
-        "grammarId": "n3-grammar-format-017",
-        "question": "自分の発言には責任を持つ___だ。",
-        "choices": [
-          "べき",
-          "はず",
-          "わけ",
-          "もの"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q09",
-        "grammarId": "n3-grammar-format-017",
-        "question": "大切なことを一人で決める___ではない。",
-        "choices": [
-          "べき",
-          "はず",
-          "わけ",
-          "ところ"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-017-q10",
-        "grammarId": "n3-grammar-format-017",
-        "question": "若いときに苦労は___べきだと言う人もいる。",
-        "choices": [
-          "する",
-          "して",
-          "した",
-          "しよう"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-018": {
-    "grammarId": "n3-grammar-format-018",
-    "title": "〜てしょうがない / 〜て・でたまらない / ならない",
-    "questions": [
-      {
-        "id": "n3-grammar-format-018-q01",
-        "grammarId": "n3-grammar-format-018",
-        "question": "一人暮らしは寂しくて___がない。",
-        "choices": [
-          "しょう",
-          "わけ",
-          "はず",
-          "こと"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q02",
-        "grammarId": "n3-grammar-format-018",
-        "question": "お腹が空いて___たまらない。",
-        "choices": [
-          "仕方",
-          "なく",
-          "いなくて",
-          "ならず"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q03",
-        "grammarId": "n3-grammar-format-018",
-        "question": "試験の結果が心配で___ならない。",
-        "choices": [
-          "なら",
-          "たまら",
-          "しょうが",
-          "しかた"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q04",
-        "grammarId": "n3-grammar-format-018",
-        "question": "昨夜は暑くて___たまらなかった。",
-        "choices": [
-          "たまら",
-          "しょうが",
-          "なら",
-          "しかた"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q05",
-        "grammarId": "n3-grammar-format-018",
-        "question": "彼女のことが気になって___がない。",
-        "choices": [
-          "しょう",
-          "わけ",
-          "はず",
-          "もの"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q06",
-        "grammarId": "n3-grammar-format-018",
-        "question": "虫に刺されたところが痒くて___たまらない。",
-        "choices": [
-          "かゆくて",
-          "かゆい",
-          "かゆさ",
-          "かゆく"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q07",
-        "grammarId": "n3-grammar-format-018",
-        "question": "故郷の家族に会いたくて___ならない。",
-        "choices": [
-          "なら",
-          "たまら",
-          "しょうが",
-          "なく"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q08",
-        "grammarId": "n3-grammar-format-018",
-        "question": "今日はずっと立っていたので、足が痛くて___がない。",
-        "choices": [
-          "しょう",
-          "わけ",
-          "はず",
-          "こと"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q09",
-        "grammarId": "n3-grammar-format-018",
-        "question": "合格できたと知って、嬉しくて___たまらなかった。",
-        "choices": [
-          "たまら",
-          "しょうが",
-          "なら",
-          "しかた"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-018-q10",
-        "grammarId": "n3-grammar-format-018",
-        "question": "これからどうなるのか、不安で___ならない。",
-        "choices": [
-          "なら",
-          "たまら",
-          "しょうが",
-          "わけ"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-019": {
-    "grammarId": "n3-grammar-format-019",
-    "title": "〜つもりだったのに",
-    "questions": [
-      {
-        "id": "n3-grammar-format-019-q01",
-        "grammarId": "n3-grammar-format-019",
-        "question": "鍵を閉めた___だったのに、開いていました。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "こと"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q02",
-        "grammarId": "n3-grammar-format-019",
-        "question": "早く起きる___だったのに、寝坊してしまった。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "とおり"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q03",
-        "grammarId": "n3-grammar-format-019",
-        "question": "正しい漢字を書いた___だったのに、間違っていた。",
-        "choices": [
-          "つもり",
-          "はず",
-          "よう",
-          "こと"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q04",
-        "grammarId": "n3-grammar-format-019",
-        "question": "パーティーに行く___だったのに、急用で行けなくなった。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "ところ"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q05",
-        "grammarId": "n3-grammar-format-019",
-        "question": "丁寧に説明した___だったのに、相手には伝わっていなかった。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "ため"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q06",
-        "grammarId": "n3-grammar-format-019",
-        "question": "買わない___だったのに、安かったので買ってしまった。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "こと"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q07",
-        "grammarId": "n3-grammar-format-019",
-        "question": "メールを送った___だったのに、送信ボタンを押していなかった。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "あいだ"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q08",
-        "grammarId": "n3-grammar-format-019",
-        "question": "静かに歩いていた___だったのに、怒られてしまった。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "もの"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q09",
-        "grammarId": "n3-grammar-format-019",
-        "question": "節約する___だったのに、無駄遣いをしてしまった。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "ため"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-019-q10",
-        "grammarId": "n3-grammar-format-019",
-        "question": "連絡した___だったのに、忘れていたようだ。",
-        "choices": [
-          "つもり",
-          "はず",
-          "わけ",
-          "こと"
-        ],
-        "answer": 0,
-        "explanation": ""
-      }
-    ]
-  },
-  "n3-grammar-format-020": {
-    "grammarId": "n3-grammar-format-020",
-    "title": "〜ために",
-    "questions": [
-      {
-        "id": "n3-grammar-format-020-q01",
-        "grammarId": "n3-grammar-format-020",
-        "question": "夢を叶える___、毎日一生懸命勉強しています。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q02",
-        "grammarId": "n3-grammar-format-020",
-        "question": "大雨の___、電車が止まってしまった。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q03",
-        "grammarId": "n3-grammar-format-020",
-        "question": "健康の___、毎日散歩をすることにしている。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q04",
-        "grammarId": "n3-grammar-format-020",
-        "question": "家を買う___、貯金しています。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q05",
-        "grammarId": "n3-grammar-format-020",
-        "question": "事故の___、道路が渋滞している。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q06",
-        "grammarId": "n3-grammar-format-020",
-        "question": "家族の___、一生懸命働いています。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q07",
-        "grammarId": "n3-grammar-format-020",
-        "question": "新しい車を___ために、アルバイトを始めた。",
-        "choices": [
-          "買う",
-          "買おう",
-          "買った",
-          "買い"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q08",
-        "grammarId": "n3-grammar-format-020",
-        "question": "台風の___、明日のお祭りは中止になった。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q09",
-        "grammarId": "n3-grammar-format-020",
-        "question": "日本へ留学する___、日本語を習っています。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
-      },
-      {
-        "id": "n3-grammar-format-020-q10",
-        "grammarId": "n3-grammar-format-020",
-        "question": "自分の未来の___、今できることを精一杯やる。",
-        "choices": [
-          "ために",
-          "ように",
-          "とおりに",
-          "かわりに"
-        ],
-        "answer": 0,
-        "explanation": ""
+        "explanation": "Bổ nghĩa cho cụm tính từ 「仲が良い」 dùng phó từ: 「ように」."
       }
     ]
   }
-};
+}
