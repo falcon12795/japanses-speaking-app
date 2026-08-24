@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { VOCABULARY } from "../data/vocabulary";
@@ -48,22 +48,6 @@ function getAvailableLevels() {
   return sortJlptLevels([...levels]);
 }
 
-function getAvailableSubjects(level) {
-  const subjects = new Set();
-
-  VOCABULARY.forEach((item) => {
-    if (
-      String(item.level) === String(level) &&
-      item.subject
-    ) {
-      subjects.add(item.subject);
-    }
-  });
-
-  return [...subjects].sort((subjectA, subjectB) =>
-    subjectA.localeCompare(subjectB, "ja")
-  );
-}
 
 function getTopicStatus(topicInfo) {
   if (topicInfo.favoriteCount > 0) {
@@ -191,10 +175,6 @@ export default function VocabularyList({
   const reviewVocabulary =
     progress.reviewVocabulary || [];
 
-  const availableSubjects = useMemo(
-    () => getAvailableSubjects(selectedLevel),
-    [selectedLevel]
-  );
 
   const setLevel = (level) => {
     setSearchParams({
@@ -209,14 +189,6 @@ export default function VocabularyList({
       level: selectedLevel,
       status,
       subject: selectedSubject,
-    });
-  };
-
-  const setSubject = (subject) => {
-    setSearchParams({
-      level: selectedLevel,
-      status: statusFilter,
-      subject,
     });
   };
 
@@ -335,33 +307,30 @@ export default function VocabularyList({
     reviewVocabulary,
   ]);
 
-  useEffect(() => {
-    if (
-      subjects.length > 0 &&
-      Object.keys(expandedSubjects).length === 0
-    ) {
-      const subjectToExpand =
-        openSubject &&
-        subjects.some((s) => s.subject === openSubject)
-          ? openSubject
-          : null;
-
-      setExpandedSubjects(
-        subjectToExpand
-          ? { [subjectToExpand]: true }
-          : { [subjects[0].subject]: false }
-      );
+  const initialExpandedSubjects = useMemo(() => {
+    if (subjects.length === 0) {
+      return {};
     }
-  }, [subjects]);
 
-  const topicCount = subjects.reduce(
-    (total, subject) =>
-      total + subject.topics.length,
-    0
-  );
+    const subjectToExpand =
+      openSubject &&
+      subjects.some((subject) => subject.subject === openSubject)
+        ? openSubject
+        : subjects[0].subject;
+
+    return {
+      [subjectToExpand]: subjectToExpand === openSubject,
+    };
+  }, [subjects, openSubject]);
+
+  const visibleExpandedSubjects =
+    Object.keys(expandedSubjects).length > 0
+      ? expandedSubjects
+      : initialExpandedSubjects;
 
   const toggleSubject = (subjectName) => {
-    const newIsOpen = !(expandedSubjects[subjectName] ?? false);
+    const newIsOpen =
+      !(visibleExpandedSubjects[subjectName] ?? false);
 
     setExpandedSubjects((prev) => ({
       ...prev,
@@ -409,7 +378,7 @@ export default function VocabularyList({
         {subjects.map((subject) => {
 
           const expanded =
-            expandedSubjects[
+            visibleExpandedSubjects[
             subject.subject
             ] ?? false;
 

@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import { VOCABULARY } from "../data/vocabulary";
 import { speakJapaneseText, recognizeJapaneseSpeech } from "../utils/speech";
 import { calculateSimpleSpeechScore } from "../utils/scoring";
@@ -16,29 +16,19 @@ export default function VocabularyFlashcard({
   topic = "",
   initialIndex = 0,
 }) {
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const data = vocabulary.length > 0 ? vocabulary : VOCABULARY;
+  const [currentIndex, setCurrentIndex] = useState(() =>
+    initialIndex >= 0 && initialIndex < data.length ? initialIndex : 0
+  );
   const [showAnswer, setShowAnswer] = useState(false);
   const [status, setStatus] = useState("Ready");
   const [wordTranscript, setWordTranscript] = useState("");
   const [exampleTranscript, setExampleTranscript] = useState("");
 
-  useEffect(() => {
-    const safeIndex =
-      initialIndex >= 0 &&
-        initialIndex < vocabulary.length
-        ? initialIndex
-        : 0;
-
-    setCurrentIndex(safeIndex);
-  }, [initialIndex, vocabulary]);
-
-  const data = vocabulary.length > 0 ? vocabulary : VOCABULARY;
-  const currentCard = data[currentIndex];
+  const safeIndex = data.length > 0 ? Math.min(currentIndex, data.length - 1) : 0;
+  const currentCard = data[safeIndex];
 
   const hasExample = Boolean(currentCard?.example?.japanese);
-
-  const currentTopic =
-    currentCard?.topic || currentCard?.type || "General";
 
   const wordScore = useMemo(() => {
     if (!currentCard) return 0;
@@ -213,7 +203,7 @@ export default function VocabularyFlashcard({
             </Badge>
 
             <Badge variant="neutral">
-              {currentTopic}
+              {topic}
             </Badge>
           </div>
 
