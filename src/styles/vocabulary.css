@@ -262,3 +262,8 @@
     align-items: flex-start;
   }
 }
+
+.topic-header {
+  display: flex;
+  gap: 10px;
+}

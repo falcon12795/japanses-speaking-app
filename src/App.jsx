@@ -121,26 +121,36 @@ function VocabularyTopicDetailPage() {
   const location = useLocation();
   const { topicId } = useParams();
 
-  const vocabularyTopics =
-    buildVocabularyTopics(VOCABULARY);
+  const decodedTopicId = decodeURIComponent(
+    topicId || ""
+  );
 
-  const topic =
-    vocabularyTopics.find(
-      (item) =>
-        String(item.id) === String(topicId)
-    ) || null;
+  const vocabularyTopics = useMemo(
+    () => buildVocabularyTopics(VOCABULARY),
+    []
+  );
 
-  const topicsInLevel =
-    vocabularyTopics.filter(
-      (item) =>
-        item.level === topic?.level
-    );
+  const topic = vocabularyTopics.find(
+    (item) =>
+      String(item.id) ===
+      String(decodedTopicId)
+  );
 
-  const currentIndex =
-    topicsInLevel.findIndex(
+  const topicsInLevel = topic
+    ? vocabularyTopics.filter(
       (item) =>
-        String(item.id) === String(topicId)
-    );
+        String(item.level) ===
+        String(topic.level)
+    )
+    : [];
+
+  const currentIndex = topic
+    ? topicsInLevel.findIndex(
+      (item) =>
+        String(item.id) ===
+        String(topic.id)
+    )
+    : -1;
 
   const previousTopic =
     currentIndex > 0
@@ -148,71 +158,85 @@ function VocabularyTopicDetailPage() {
       : null;
 
   const nextTopic =
-    currentIndex <
-      topicsInLevel.length - 1
+    currentIndex >= 0 &&
+      currentIndex < topicsInLevel.length - 1
       ? topicsInLevel[currentIndex + 1]
       : null;
 
-  const handlePreviousTopic = () => {
-    if (!previousTopic) return;
+  const navigateToTopic = (targetTopic) => {
+    if (!targetTopic) return;
 
     navigate(
       `/vocabulary-topic/${encodeURIComponent(
-        previousTopic.id
-      )}`
+        targetTopic.id
+      )}`,
+      {
+        state: {
+          from:
+            location.state?.from ||
+            "/vocabulary",
+        },
+      }
     );
+  };
+
+  const handlePreviousTopic = () => {
+    navigateToTopic(previousTopic);
   };
 
   const handleNextTopic = () => {
-    if (!nextTopic) return;
-
-    navigate(
-      `/vocabulary-topic/${encodeURIComponent(
-        nextTopic.id
-      )}`
-    );
+    navigateToTopic(nextTopic);
   };
 
-  const handlePractice = () => {
+  const navigateToFlashcard = (
+    startWordId = null
+  ) => {
     if (!topic) return;
 
     navigate(
       `/vocabulary-flashcard/${encodeURIComponent(
         topic.level
       )}/${encodeURIComponent(
-        topic.title
-      )}`,
-      {
-        state: {
-          from: `${location.pathname}${location.search}`,
-          startWordId: topic.words?.[0]?.id ?? null,
-        },
-      }
-    );
-  };
-
-  const handleSelectWord = (word) => {
-    if (!topic || !word) return;
-
-    navigate(
-      `/vocabulary-flashcard/${encodeURIComponent(
-        topic.level
+        topic.subject
       )}/${encodeURIComponent(
         topic.title
       )}`,
       {
         state: {
           from: `${location.pathname}${location.search}`,
-          startWordId: word.id,
+          startWordId,
         },
       }
     );
   };
 
+  const handlePractice = () => {
+    navigateToFlashcard(
+      topic?.words?.[0]?.id ?? null
+    );
+  };
+
+  const handleSelectWord = (word) => {
+    if (!word) return;
+
+    navigateToFlashcard(word.id);
+  };
+
   if (!topic) {
     return (
       <div className="page-container">
-        Topic not found: {topicId}
+        <h3>Topic not found</h3>
+
+        <p>
+          Topic ID: {decodedTopicId || "Empty"}
+        </p>
+
+        <button
+          type="button"
+          onClick={() => navigate("/vocabulary")}
+        >
+          Back to Vocabulary Library
+        </button>
       </div>
     );
   }
@@ -236,18 +260,30 @@ function VocabularyFlashcardPage({
   onProgressChange,
 }) {
   const location = useLocation();
-  const { level, topic } = useParams();
+
+  const {
+    level,
+    subject,
+    topic,
+  } = useParams();
 
   const decodedLevel = decodeURIComponent(
     level || ""
+  );
+
+  const decodedSubject = decodeURIComponent(
+    subject || ""
   );
 
   const decodedTopic = decodeURIComponent(
     topic || ""
   );
 
-  const filteredVocabulary = VOCABULARY.filter(
-    (item) => {
+  const filteredVocabulary =
+    VOCABULARY.filter((item) => {
+      const itemSubject =
+        item.subject || "Others";
+
       const itemTopic =
         item.topic ||
         item.type ||
@@ -256,11 +292,12 @@ function VocabularyFlashcardPage({
       return (
         String(item.level) ===
         String(decodedLevel) &&
+        String(itemSubject) ===
+        String(decodedSubject) &&
         String(itemTopic) ===
         String(decodedTopic)
       );
-    }
-  );
+    });
 
   const startWordId =
     location.state?.startWordId ?? null;
@@ -273,12 +310,25 @@ function VocabularyFlashcardPage({
     )
     : 0;
 
+  if (filteredVocabulary.length === 0) {
+    return (
+      <div className="page-container">
+        <h3>Vocabulary not found</h3>
+
+        <p>Level: {decodedLevel}</p>
+        <p>Subject: {decodedSubject}</p>
+        <p>Topic: {decodedTopic}</p>
+      </div>
+    );
+  }
+
   return (
     <VocabularyFlashcard
       vocabulary={filteredVocabulary}
       progress={progress}
       onProgressChange={onProgressChange}
       level={decodedLevel}
+      subject={decodedSubject}
       topic={decodedTopic}
       initialIndex={
         initialWordIndex >= 0
@@ -288,6 +338,7 @@ function VocabularyFlashcardPage({
     />
   );
 }
+
 
 function GrammarListPage() {
   const navigate = useNavigate();
@@ -399,32 +450,23 @@ function DialogueListPage({ progress }) {
   );
 }
 
-function VocabularyListWithRouteState({ progress }) {
+function VocabularyListWithRouteState({
+  progress,
+}) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleSelectTopic = (level, topicName) => {
-    const vocabularyTopics =
-      buildVocabularyTopics(VOCABULARY);
-
-    const topic = vocabularyTopics.find(
-      (item) =>
-        item.level === level &&
-        item.title === topicName
-    );
-
-    if (!topic) {
+  const handleSelectTopic = (topicId) => {
+    if (!topicId) {
       console.warn(
-        "Topic not found",
-        level,
-        topicName
+        "Cannot navigate because topicId is empty."
       );
       return;
     }
 
     navigate(
       `/vocabulary-topic/${encodeURIComponent(
-        topic.id
+        topicId
       )}`,
       {
         state: {
@@ -557,7 +599,7 @@ export default function App() {
           />
 
           <Route
-            path="/vocabulary-flashcard/:level/:topic"
+            path="/vocabulary-flashcard/:level/:subject/:topic"
             element={
               <VocabularyFlashcardPage
                 progress={progress}

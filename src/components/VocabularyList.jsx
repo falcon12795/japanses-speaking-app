@@ -105,6 +105,8 @@ function getTopicStatusIcon(status) {
 }
 
 function buildTopicInfo(
+  level,
+  subjectName,
   topicName,
   words,
   completedVocabulary,
@@ -141,6 +143,11 @@ function buildTopicInfo(
   };
 
   return {
+    id: `${level}-${subjectName}-${topicName}`
+      .toLowerCase()
+      .replace(/\s+/g, "-"),
+    level,
+    subject: subjectName,
     ...topicInfo,
     status: getTopicStatus(topicInfo),
   };
@@ -251,6 +258,8 @@ export default function VocabularyList({
         )
           .map(([topicName, words]) =>
             buildTopicInfo(
+              selectedLevel,
+              subjectName,
               topicName,
               words,
               completedVocabulary,
@@ -381,7 +390,9 @@ export default function VocabularyList({
                       <ListCard
                         key={item.topic}
                         className="vocabulary-topic-card"
-                        onClick={() => onSelectTopic(selectedLevel, item.topic)}
+                        onClick={() =>
+                          onSelectTopic(item.id)
+                        }
                       >
                         <div className="vocabulary-topic-main">
                           <span className="vocabulary-topic-name">

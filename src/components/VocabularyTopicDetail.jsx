@@ -6,6 +6,7 @@ import IconButton from "./common/IconButton";
 import Panel from "./common/Panel";
 
 import { speakJapaneseText } from "../utils/speech";
+import Badge from "./common/Badge";
 
 export default function VocabularyTopicDetail({
     topic,
@@ -118,6 +119,16 @@ export default function VocabularyTopicDetail({
         <Panel>
             {/* Header */}
             <div className="topic-detail-header">
+                <div className="topic-header">
+                    <Badge>
+                        {topic.level}
+                    </Badge>
+
+                    <Badge variant="secondary">
+                        {topic.subject}
+                    </Badge>
+                </div>
+
                 <h2>{topic.title}</h2>
 
                 <div className="topic-nav-buttons">

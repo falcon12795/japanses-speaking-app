@@ -2,19 +2,24 @@ export function buildVocabularyTopics(vocabularyList) {
   const topicMap = new Map();
 
   vocabularyList.forEach((item) => {
-    const key = `${item.level}-${item.topic}`;
+    const key =
+      `${item.level}-${item.subject}-${item.topic}`;
 
     if (!topicMap.has(key)) {
       topicMap.set(key, {
-        id: `${item.level}-${item.topic}`
+        id: key
           .toLowerCase()
           .replace(/\s+/g, "-"),
 
         level: item.level,
 
+        subject:
+          item.subject || "Others",
+
         title: item.topic,
 
-        description: `${item.topic} vocabulary`,
+        description:
+          `${item.topic} vocabulary`,
 
         words: [],
       });
@@ -34,11 +39,5 @@ export function buildVocabularyTopics(vocabularyList) {
     });
   });
 
-  return [...topicMap.values()].sort((a, b) => {
-    if (a.level !== b.level) {
-      return a.level.localeCompare(b.level);
-    }
-
-    return a.title.localeCompare(b.title);
-  });
+  return [...topicMap.values()];
 }
