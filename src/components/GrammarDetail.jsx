@@ -79,10 +79,11 @@ export default function GrammarDetail({
   onNextGrammar,
   hasPrevious,
   hasNext,
-}){
-  var nummber = 1;
-
+}) {
   const [collapsedMeaningIds, setCollapsedMeaningIds] = useState(new Set());
+
+  const usageSectionNumber = 1;
+  const meaningsSectionNumber = grammar?.usage ? 2 : 1;
 
   const meaningItems = useMemo(() => {
     if (!grammar) return [];
@@ -154,7 +155,7 @@ export default function GrammarDetail({
       </div>
 
       {grammar.usage && (
-        <SectionBlock number={nummber++} title="Cách sử dụng">
+        <SectionBlock number={usageSectionNumber} title="Cách sử dụng">
           <div className="grammar-detail-usage-list">
             {toLines(grammar.usage).map((line, index) => (
               <p key={index} className="grammar-detail-usage-line">
@@ -165,7 +166,7 @@ export default function GrammarDetail({
         </SectionBlock>
       )}
 
-      <SectionBlock number={nummber} title="Ý nghĩa, cách sử dụng và ví dụ">
+      <SectionBlock number={meaningsSectionNumber} title="Ý nghĩa, cách sử dụng và ví dụ">
         <div className="grammar-meaning-card-list">
           {meaningItems.map((meaningItem, meaningIndex) => {
             const meaningId = getMeaningId(meaningItem, meaningIndex);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   NavLink,
   Navigate,
@@ -399,16 +399,6 @@ function GrammarDetailPage() {
     );
   };
 
-  console.log({
-    decodedLevel,
-    decodedGrammarId,
-    grammarListByLevelLength:
-      grammarListByLevel.length,
-    currentIndex,
-    grammar,
-    previousGrammar,
-    nextGrammar,
-  });
   if (!grammar) {
     return (
       <div>

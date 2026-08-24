@@ -16,6 +16,12 @@ export default function VocabularyFlashcard({
   topic = "",
   initialIndex = 0,
 }) {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [status, setStatus] = useState("Ready");
+  const [wordTranscript, setWordTranscript] = useState("");
+  const [exampleTranscript, setExampleTranscript] = useState("");
+
   useEffect(() => {
     const safeIndex =
       initialIndex >= 0 &&
@@ -25,11 +31,6 @@ export default function VocabularyFlashcard({
 
     setCurrentIndex(safeIndex);
   }, [initialIndex, vocabulary]);
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
-  const [showAnswer, setShowAnswer] = useState(false);
-  const [status, setStatus] = useState("Ready");
-  const [wordTranscript, setWordTranscript] = useState("");
-  const [exampleTranscript, setExampleTranscript] = useState("");
 
   const data = vocabulary.length > 0 ? vocabulary : VOCABULARY;
   const currentCard = data[currentIndex];
@@ -53,14 +54,6 @@ export default function VocabularyFlashcard({
       currentCard.example.japanese
     );
   }, [exampleTranscript, currentCard, hasExample]);
-
-  console.log("Vocabulary count", vocabulary.length);
-
-  console.log(
-    "Current word",
-    vocabulary[initialIndex]
-  );
-
 
   if (!currentCard) {
     return (

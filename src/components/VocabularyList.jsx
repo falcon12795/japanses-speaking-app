@@ -66,6 +66,10 @@ function getAvailableSubjects(level) {
 }
 
 function getTopicStatus(topicInfo) {
+  if (topicInfo.favoriteCount > 0) {
+    return "favorite";
+  }
+
   if (topicInfo.progressPercent === 100) {
     return "completed";
   }
@@ -76,10 +80,6 @@ function getTopicStatus(topicInfo) {
 
   if (topicInfo.completedCount > 0) {
     return "learning";
-  }
-
-  if (topicInfo.favoriteCount > 0) {
-    return "favorite";
   }
 
   return "not-started";
@@ -179,6 +179,9 @@ export default function VocabularyList({
   const selectedSubject =
     searchParams.get("subject") || "all";
 
+  const openSubject =
+    searchParams.get("open") || "";
+
   const completedVocabulary =
     progress.completedVocabulary || [];
 
@@ -268,13 +271,32 @@ export default function VocabularyList({
             )
           )
           .filter((topicInfo) => {
-            if (statusFilter === "all") {
-              return true;
-            }
+            switch (statusFilter) {
+              case "favorite":
+                return topicInfo.favoriteCount > 0;
 
-            return (
-              topicInfo.status === statusFilter
-            );
+              case "review":
+                return topicInfo.reviewCount > 0;
+
+              case "completed":
+                return topicInfo.progressPercent === 100;
+
+              case "learning":
+                return (
+                  topicInfo.completedCount > 0 &&
+                  topicInfo.progressPercent < 100
+                );
+
+              case "not-started":
+                return (
+                  topicInfo.completedCount === 0 &&
+                  topicInfo.favoriteCount === 0 &&
+                  topicInfo.reviewCount === 0
+                );
+
+              default:
+                return true;
+            }
           })
           .sort((topicA, topicB) =>
             topicA.topic.localeCompare(
@@ -318,9 +340,17 @@ export default function VocabularyList({
       subjects.length > 0 &&
       Object.keys(expandedSubjects).length === 0
     ) {
-      setExpandedSubjects({
-        [subjects[0].subject]: false,
-      });
+      const subjectToExpand =
+        openSubject &&
+        subjects.some((s) => s.subject === openSubject)
+          ? openSubject
+          : null;
+
+      setExpandedSubjects(
+        subjectToExpand
+          ? { [subjectToExpand]: true }
+          : { [subjects[0].subject]: false }
+      );
     }
   }, [subjects]);
 
@@ -331,10 +361,22 @@ export default function VocabularyList({
   );
 
   const toggleSubject = (subjectName) => {
+    const newIsOpen = !(expandedSubjects[subjectName] ?? false);
+
     setExpandedSubjects((prev) => ({
       ...prev,
-      [subjectName]: !(prev[subjectName] ?? false),
+      [subjectName]: newIsOpen,
     }));
+
+    setSearchParams(
+      {
+        level: selectedLevel,
+        status: statusFilter,
+        subject: selectedSubject,
+        ...(newIsOpen ? { open: subjectName } : {}),
+      },
+      { replace: true }
+    );
   };
 
   return (

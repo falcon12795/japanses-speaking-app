@@ -78,16 +78,6 @@ export async function speakJapaneseText(
 
 export function recognizeJapaneseSpeech() {
   return new Promise((resolve, reject) => {
-    console.log(
-      "SpeechRecognition",
-      window.SpeechRecognition
-    );
-
-    console.log(
-      "webkitSpeechRecognition",
-      window.webkitSpeechRecognition
-    );
-
     const SpeechRecognition =
       window.SpeechRecognition ||
       window.webkitSpeechRecognition;
@@ -106,24 +96,7 @@ export function recognizeJapaneseSpeech() {
 
     recognition.lang = "ja-JP";
 
-    recognition.onstart = () => {
-      console.log("onstart");
-    };
-
-    recognition.onaudiostart = () => {
-      console.log("onaudiostart");
-    };
-
-    recognition.onspeechstart = () => {
-      console.log("onspeechstart");
-    };
-
     recognition.onresult = (event) => {
-      console.log(
-        "onresult",
-        event.results[0][0].transcript
-      );
-
       resolve(
         event.results[0][0].transcript
       );
