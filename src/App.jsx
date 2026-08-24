@@ -386,7 +386,7 @@ function VocabularyTopicDetailPage({
 
 
 function VocabularyFlashcardPage({
-  progress,
+  progress = {},
   onProgressChange,
 }) {
   const location = useLocation();
@@ -409,8 +409,16 @@ function VocabularyFlashcardPage({
     topic || ""
   );
 
-  const filteredVocabulary =
-    VOCABULARY.filter((item) => {
+  const vocabularyFilter =
+    location.state?.vocabularyFilter || "all";
+
+  const filteredWordIds = useMemo(
+    () => location.state?.filteredWordIds || [],
+    [location.state?.filteredWordIds]
+  );
+
+  const topicVocabulary = useMemo(() => {
+    return VOCABULARY.filter((item) => {
       const itemSubject =
         item.subject || "Others";
 
@@ -428,6 +436,43 @@ function VocabularyFlashcardPage({
         String(decodedTopic)
       );
     });
+  }, [
+    decodedLevel,
+    decodedSubject,
+    decodedTopic,
+  ]);
+
+  /*
+   * Ưu tiên filteredWordIds được truyền từ màn Detail.
+   * Trường hợp refresh trang làm mất location.state,
+   * app sẽ tự lọc lại dựa trên vocabularyFilter.
+   */
+  const filteredVocabulary = useMemo(() => {
+    if (filteredWordIds.length > 0) {
+      const filteredIdSet = new Set(
+        filteredWordIds.map(String)
+      );
+
+      return topicVocabulary.filter((word) =>
+        filteredIdSet.has(String(word.id))
+      );
+    }
+
+    return filterWordsByStatus(
+      topicVocabulary,
+      vocabularyFilter,
+      progress.completedVocabulary || [],
+      progress.favoriteVocabulary || [],
+      progress.reviewVocabulary || []
+    );
+  }, [
+    topicVocabulary,
+    filteredWordIds,
+    vocabularyFilter,
+    progress.completedVocabulary,
+    progress.favoriteVocabulary,
+    progress.reviewVocabulary,
+  ]);
 
   const startWordId =
     location.state?.startWordId ?? null;
@@ -443,23 +488,38 @@ function VocabularyFlashcardPage({
   if (filteredVocabulary.length === 0) {
     return (
       <div className="page-container">
-        <h3>Vocabulary not found</h3>
+        <h3>No matching vocabulary</h3>
 
         <p>Level: {decodedLevel}</p>
         <p>Subject: {decodedSubject}</p>
         <p>Topic: {decodedTopic}</p>
+        <p>Filter: {vocabularyFilter}</p>
       </div>
     );
   }
 
   return (
     <VocabularyFlashcard
+      /*
+       * key giúp reset currentIndex khi danh sách
+       * filter thay đổi.
+       */
+      key={[
+        decodedLevel,
+        decodedSubject,
+        decodedTopic,
+        vocabularyFilter,
+        filteredVocabulary
+          .map((word) => word.id)
+          .join(","),
+      ].join("|")}
       vocabulary={filteredVocabulary}
       progress={progress}
       onProgressChange={onProgressChange}
       level={decodedLevel}
       subject={decodedSubject}
       topic={decodedTopic}
+      filter={vocabularyFilter}
       initialIndex={
         initialWordIndex >= 0
           ? initialWordIndex

@@ -13,7 +13,9 @@ export default function VocabularyFlashcard({
   progress = {},
   onProgressChange = () => {},
   level = "",
+  subject = "",
   topic = "",
+  filter = "all",
   initialIndex = 0,
 }) {
   const data = vocabulary.length > 0 ? vocabulary : VOCABULARY;
@@ -202,9 +204,29 @@ export default function VocabularyFlashcard({
               {level || currentCard.level}
             </Badge>
 
+            {subject && (
+              <Badge variant="secondary">
+                {subject}
+              </Badge>
+            )}
+
             <Badge variant="neutral">
               {topic}
             </Badge>
+
+            {filter !== "all" && (
+              <Badge variant="warning">
+                {filter === "favorite"
+                  ? "⭐ Favorite"
+                  : filter === "review"
+                    ? "🔁 Review"
+                    : filter === "completed"
+                      ? "✅ Completed"
+                      : filter === "learning"
+                        ? "📖 Learning"
+                        : "⭕ Not Started"}
+              </Badge>
+            )}
           </div>
 
           <p className="subtitle">
