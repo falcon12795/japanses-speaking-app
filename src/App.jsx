@@ -26,7 +26,7 @@ import GrammarList from "./components/GrammarList";
 import GrammarDetail from "./components/GrammarDetail";
 import { GRAMMAR } from "./data/grammar";
 import GrammarTraining from "./components/GrammarTraining";
-import { buildVocabularyTopics } from "./utils/buildVocabularyTopics";
+import { buildVocabularyTopics, filterWordsByStatus } from "./utils/buildVocabularyTopics";
 
 const MENU_ITEMS = [
   {
@@ -116,7 +116,9 @@ function PageHeader({ setSidebarOpen }) {
   );
 }
 
-function VocabularyTopicDetailPage() {
+function VocabularyTopicDetailPage({
+  progress = {},
+}) {
   const navigate = useNavigate();
   const location = useLocation();
   const { topicId } = useParams();
@@ -130,27 +132,96 @@ function VocabularyTopicDetailPage() {
     []
   );
 
-  const topic = vocabularyTopics.find(
-    (item) =>
-      String(item.id) ===
-      String(decodedTopicId)
+  const searchParams = useMemo(
+    () => new URLSearchParams(location.search),
+    [location.search]
   );
 
-  const topicsInLevel = topic
-    ? vocabularyTopics.filter(
-      (item) =>
-        String(item.level) ===
-        String(topic.level)
-    )
-    : [];
+  const vocabularyFilter =
+    searchParams.get("filter") ||
+    location.state?.vocabularyFilter ||
+    "all";
 
-  const currentIndex = topic
-    ? topicsInLevel.findIndex(
+  const topic =
+    vocabularyTopics.find(
       (item) =>
         String(item.id) ===
-        String(topic.id)
-    )
-    : -1;
+        String(decodedTopicId)
+    ) || null;
+
+  const filteredTopicWords = useMemo(
+    () =>
+      filterWordsByStatus(
+        topic?.words || [],
+        vocabularyFilter,
+        progress.completedVocabulary || [],
+        progress.favoriteVocabulary || [],
+        progress.reviewVocabulary || []
+      ),
+    [
+      topic,
+      vocabularyFilter,
+      progress.completedVocabulary,
+      progress.favoriteVocabulary,
+      progress.reviewVocabulary,
+    ]
+  );
+
+  const displayedTopic = topic
+    ? {
+      ...topic,
+      words: filteredTopicWords,
+    }
+    : null;
+
+  /*
+   * Prev / Next chỉ sử dụng các topic cùng level.
+   * Khi đang dùng Favorite hoặc Review, chỉ giữ lại
+   * những topic có ít nhất một từ phù hợp filter.
+   */
+  const topicsInLevel = useMemo(() => {
+    if (!topic) {
+      return [];
+    }
+
+    return vocabularyTopics.filter(
+      (candidateTopic) => {
+        if (
+          String(candidateTopic.level) !==
+          String(topic.level)
+        ) {
+          return false;
+        }
+
+        const matchingWords =
+          filterWordsByStatus(
+            candidateTopic.words || [],
+            vocabularyFilter,
+            progress.completedVocabulary || [],
+            progress.favoriteVocabulary || [],
+            progress.reviewVocabulary || []
+          );
+
+        return matchingWords.length > 0;
+      }
+    );
+  }, [
+    topic,
+    vocabularyTopics,
+    vocabularyFilter,
+    progress.completedVocabulary,
+    progress.favoriteVocabulary,
+    progress.reviewVocabulary,
+  ]);
+
+  const currentIndex =
+    topic
+      ? topicsInLevel.findIndex(
+        (item) =>
+          String(item.id) ===
+          String(topic.id)
+      )
+      : -1;
 
   const previousTopic =
     currentIndex > 0
@@ -164,17 +235,22 @@ function VocabularyTopicDetailPage() {
       : null;
 
   const navigateToTopic = (targetTopic) => {
-    if (!targetTopic) return;
+    if (!targetTopic) {
+      return;
+    }
 
     navigate(
       `/vocabulary-topic/${encodeURIComponent(
         targetTopic.id
+      )}?filter=${encodeURIComponent(
+        vocabularyFilter
       )}`,
       {
         state: {
           from:
             location.state?.from ||
             "/vocabulary",
+          vocabularyFilter,
         },
       }
     );
@@ -191,20 +267,34 @@ function VocabularyTopicDetailPage() {
   const navigateToFlashcard = (
     startWordId = null
   ) => {
-    if (!topic) return;
+    if (!displayedTopic) {
+      return;
+    }
 
     navigate(
       `/vocabulary-flashcard/${encodeURIComponent(
-        topic.level
+        displayedTopic.level
       )}/${encodeURIComponent(
-        topic.subject
+        displayedTopic.subject || "Others"
       )}/${encodeURIComponent(
-        topic.title
+        displayedTopic.title
       )}`,
       {
         state: {
-          from: `${location.pathname}${location.search}`,
+          from:
+            `${location.pathname}${location.search}`,
           startWordId,
+          vocabularyFilter,
+
+          /*
+           * Truyền đúng danh sách ID đang hiển thị.
+           * Flashcard có thể sử dụng danh sách này
+           * để chỉ luyện các từ Favorite/Review.
+           */
+          filteredWordIds:
+            displayedTopic.words.map(
+              (word) => word.id
+            ),
         },
       }
     );
@@ -212,12 +302,14 @@ function VocabularyTopicDetailPage() {
 
   const handlePractice = () => {
     navigateToFlashcard(
-      topic?.words?.[0]?.id ?? null
+      displayedTopic?.words?.[0]?.id ?? null
     );
   };
 
   const handleSelectWord = (word) => {
-    if (!word) return;
+    if (!word) {
+      return;
+    }
 
     navigateToFlashcard(word.id);
   };
@@ -228,12 +320,47 @@ function VocabularyTopicDetailPage() {
         <h3>Topic not found</h3>
 
         <p>
-          Topic ID: {decodedTopicId || "Empty"}
+          Topic ID:{" "}
+          {decodedTopicId || "Empty"}
         </p>
 
         <button
           type="button"
-          onClick={() => navigate("/vocabulary")}
+          onClick={() =>
+            navigate(
+              location.state?.from ||
+              "/vocabulary"
+            )
+          }
+        >
+          Back to Vocabulary Library
+        </button>
+      </div>
+    );
+  }
+
+  if (
+    vocabularyFilter !== "all" &&
+    filteredTopicWords.length === 0
+  ) {
+    return (
+      <div className="page-container">
+        <h3>No matching vocabulary</h3>
+
+        <p>
+          No words in this topic match the{" "}
+          <strong>{vocabularyFilter}</strong>{" "}
+          filter.
+        </p>
+
+        <button
+          type="button"
+          onClick={() =>
+            navigate(
+              location.state?.from ||
+              "/vocabulary"
+            )
+          }
         >
           Back to Vocabulary Library
         </button>
@@ -243,8 +370,11 @@ function VocabularyTopicDetailPage() {
 
   return (
     <VocabularyTopicDetail
-      topic={topic}
-      onPreviousTopic={handlePreviousTopic}
+      topic={displayedTopic}
+      filter={vocabularyFilter}
+      onPreviousTopic={
+        handlePreviousTopic
+      }
       onNextTopic={handleNextTopic}
       onPractice={handlePractice}
       onSelectWord={handleSelectWord}
@@ -446,21 +576,20 @@ function VocabularyListWithRouteState({
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleSelectTopic = (topicId) => {
-    if (!topicId) {
-      console.warn(
-        "Cannot navigate because topicId is empty."
-      );
-      return;
-    }
-
+  const handleSelectTopic = (
+    topicId,
+    vocabularyFilter = "all"
+  ) => {
     navigate(
       `/vocabulary-topic/${encodeURIComponent(
         topicId
+      )}?filter=${encodeURIComponent(
+        vocabularyFilter
       )}`,
       {
         state: {
           from: `${location.pathname}${location.search}`,
+          vocabularyFilter,
         },
       }
     );
@@ -585,7 +714,11 @@ export default function App() {
 
           <Route
             path="/vocabulary-topic/:topicId"
-            element={<VocabularyTopicDetailPage />}
+            element={
+              <VocabularyTopicDetailPage
+                progress={progress}
+              />
+            }
           />
 
           <Route

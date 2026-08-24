@@ -9,13 +9,14 @@ import { speakJapaneseText } from "../utils/speech";
 import Badge from "./common/Badge";
 
 export default function VocabularyTopicDetail({
-    topic,
-    onPreviousTopic,
-    onNextTopic,
-    onPractice,
-    onSelectWord,
-    hasPrevious = true,
-    hasNext = true,
+  topic,
+  filter = "all",
+  onPreviousTopic,
+  onNextTopic,
+  onPractice,
+  onSelectWord,
+  hasPrevious = true,
+  hasNext = true,
 }) {
     const [activeWordId, setActiveWordId] = useState(null);
     const [isListeningAll, setIsListeningAll] = useState(false);
@@ -127,6 +128,16 @@ export default function VocabularyTopicDetail({
                     <Badge variant="secondary">
                         {topic.subject}
                     </Badge>
+
+                    {filter !== "all" && (
+                        <Badge variant="warning">
+                            {filter === "favorite"
+                                ? `⭐ Favorite: ${topic.words.length}`
+                                : filter === "review"
+                                    ? `🔁 Review: ${topic.words.length}`
+                                    : `${filter}: ${topic.words.length}`}
+                        </Badge>
+                    )}
                 </div>
 
                 <h2>{topic.title}</h2>

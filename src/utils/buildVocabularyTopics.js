@@ -41,3 +41,45 @@ export function buildVocabularyTopics(vocabularyList) {
 
   return [...topicMap.values()];
 }
+export function filterWordsByStatus(
+  words,
+  statusFilter,
+  completedVocabulary,
+  favoriteVocabulary,
+  reviewVocabulary
+) {
+  switch (statusFilter) {
+    case "favorite":
+      return words.filter((word) =>
+        favoriteVocabulary.includes(word.id)
+      );
+
+    case "review":
+      return words.filter((word) =>
+        reviewVocabulary.includes(word.id)
+      );
+
+    case "completed":
+      return words.filter((word) =>
+        completedVocabulary.includes(word.id)
+      );
+
+    case "learning":
+      return words.filter(
+        (word) =>
+          !completedVocabulary.includes(word.id) &&
+          !reviewVocabulary.includes(word.id)
+      );
+
+    case "not-started":
+      return words.filter(
+        (word) =>
+          !completedVocabulary.includes(word.id) &&
+          !favoriteVocabulary.includes(word.id) &&
+          !reviewVocabulary.includes(word.id)
+      );
+
+    default:
+      return words;
+  }
+}

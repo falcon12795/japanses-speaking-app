@@ -10,6 +10,7 @@ import ListCard from "./common/ListCard";
 import Panel from "./common/Panel";
 import ProgressBar from "./common/ProgressBar";
 import CollapseGroup from "./common/CollapseGroup";
+import { filterWordsByStatus } from "../utils/buildVocabularyTopics";
 
 const STATUS_FILTERS = [
   { value: "all", label: "All" },
@@ -166,14 +167,20 @@ export default function VocabularyList({
   const openSubject =
     searchParams.get("open") || "";
 
-  const completedVocabulary =
-    progress.completedVocabulary || [];
+  const completedVocabulary = useMemo(
+    () => progress.completedVocabulary || [],
+    [progress.completedVocabulary]
+  );
 
-  const favoriteVocabulary =
-    progress.favoriteVocabulary || [];
+  const favoriteVocabulary = useMemo(
+    () => progress.favoriteVocabulary || [],
+    [progress.favoriteVocabulary]
+  );
 
-  const reviewVocabulary =
-    progress.reviewVocabulary || [];
+  const reviewVocabulary = useMemo(
+    () => progress.reviewVocabulary || [],
+    [progress.reviewVocabulary]
+  );
 
 
   const setLevel = (level) => {
@@ -228,48 +235,44 @@ export default function VocabularyList({
 
     return Object.entries(groupedBySubject)
       .map(([subjectName, topicsMap]) => {
-        const topicList = Object.entries(
-          topicsMap
-        )
-          .map(([topicName, words]) =>
-            buildTopicInfo(
-              selectedLevel,
-              subjectName,
-              topicName,
-              words,
+        const topicList = Object.entries(topicsMap)
+          .map(([topicName, allWords]) => {
+            const filteredWords = filterWordsByStatus(
+              allWords,
+              statusFilter,
               completedVocabulary,
               favoriteVocabulary,
               reviewVocabulary
-            )
-          )
-          .filter((topicInfo) => {
-            switch (statusFilter) {
-              case "favorite":
-                return topicInfo.favoriteCount > 0;
+            );
 
-              case "review":
-                return topicInfo.reviewCount > 0;
-
-              case "completed":
-                return topicInfo.progressPercent === 100;
-
-              case "learning":
-                return (
-                  topicInfo.completedCount > 0 &&
-                  topicInfo.progressPercent < 100
-                );
-
-              case "not-started":
-                return (
-                  topicInfo.completedCount === 0 &&
-                  topicInfo.favoriteCount === 0 &&
-                  topicInfo.reviewCount === 0
-                );
-
-              default:
-                return true;
+            if (filteredWords.length === 0) {
+              return null;
             }
+
+            const fullTopicInfo = buildTopicInfo(
+              selectedLevel,
+              subjectName,
+              topicName,
+              allWords,
+              completedVocabulary,
+              favoriteVocabulary,
+              reviewVocabulary
+            );
+
+            return {
+              ...fullTopicInfo,
+
+              // Chỉ chứa các từ phù hợp filter hiện tại
+              words: filteredWords,
+
+              // Badge hiển thị số từ đã được lọc
+              count: filteredWords.length,
+
+              // Giữ tổng số từ để có thể hiển thị nếu cần
+              totalCount: allWords.length,
+            };
           })
+          .filter(Boolean)
           .sort((topicA, topicB) =>
             topicA.topic.localeCompare(
               topicB.topic,
@@ -402,7 +405,10 @@ export default function VocabularyList({
                         key={item.topic}
                         className="vocabulary-topic-card"
                         onClick={() =>
-                          onSelectTopic(item.id)
+                          onSelectTopic(
+                            item.id,
+                            statusFilter
+                          )
                         }
                       >
                         <div className="vocabulary-topic-main">
