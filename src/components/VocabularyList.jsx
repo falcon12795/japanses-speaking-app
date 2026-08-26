@@ -28,6 +28,7 @@ function sortJlptLevels(levels) {
     N3: 3,
     N4: 4,
     N5: 5,
+    IT: 6,
   };
 
   return [...levels].sort(
