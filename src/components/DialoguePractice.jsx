@@ -85,7 +85,7 @@ export default function DialoguePractice({
     return completedRoles.includes("A") && completedRoles.includes("B");
   };
 
-  const activeLine = useMemo(() => {
+  useMemo(() => {
     if (!currentDialogue) return null;
 
     return currentDialogue.lines.find((line) => line.id === activeLineId);
@@ -1051,11 +1051,11 @@ export default function DialoguePractice({
                               </p>
                             )}
 
-                            {line.romaji && (
+                            {/* {line.romaji && (
                               <p className="dialogue-romaji">
                                 {line.romaji}
                               </p>
-                            )}
+                            )} */}
 
                             {(line.english || line.vietnamese) && (
                               <p className="dialogue-meaning">
@@ -1086,7 +1086,7 @@ export default function DialoguePractice({
         </div>
       </div>
 
-      {activeLine && (
+      {/* {activeLine && (
         <div className="surface-card dialogue-result">
           <h3>Current Practice Line</h3>
 
@@ -1103,7 +1103,7 @@ export default function DialoguePractice({
           <p className="label">Speaker:</p>
           <p className="transcript">Speaker {activeLine.speaker}</p>
         </div>
-      )}
+      )} */}
 
       <div className="buttons">
         <Button variant="secondary" onClick={handlePreviousDialogue}>

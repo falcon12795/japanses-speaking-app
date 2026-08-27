@@ -1,6 +1,13 @@
 export default function ScoreBox({ score = 0, label = "Score" }) {
   return (
-    <div>
+    <div style={
+      {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        gap: "10px",
+      }
+    }>
       <p className="label">{label}:</p>
 
       <div className="small-score-box">
