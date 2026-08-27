@@ -490,15 +490,25 @@ export default [
       {
         id: 4,
         speaker: "B",
-        japanese: "ええ。でも、ほら営業って、結果が数字っていう目に見える形で出てくるでしょ。だから、「何くそ負けるものか」ってやってたら、いつからかその魅力にすっかりはまっちゃって。",
-        reading: "ええ。でも、ほら えいぎょう って、けっか が すうじ って いう め に みえる かたち で でてくる でしょ。だから、「なにくそ まける もの か」って やってたら、いつからか その みりょく に すっかり はまっちゃって。",
-        romaji: "Ee. Demo, hora eigyō tte, kekka ga sūji tte iu me ni mieru katachi de dete kuru desho. Dakara, 'nani kuso makeru mono ka' tte yattetara, itsu kara ka sono miryoku ni sukkari hamacchatte.",
-        english: "Yes. But you know, in sales the results come out as numbers you can actually see. So when I kept at it with the attitude 'no way I'm losing', at some point I just got completely hooked on its appeal.",
-        vietnamese: "Vâng. Nhưng mà, kinh doanh ấy, kết quả hiện ra dưới dạng con số rõ ràng mà. Vì vậy, khi tôi cứ cố với tinh thần 'nhất định không thua', lúc nào đó tôi đã bị cuốn hút hoàn toàn.",
-        acceptedAnswers: ["ええ。でも、ほら営業って、結果が数字っていう目に見える形で出てくるでしょ。だから、「何くそ負けるものか」ってやってたら、いつからかその魅力にすっかりはまっちゃって。", "ええ。でも、ほらえいぎょうって、けっかがすうじっていうめにみえるかたちででてくるでしょ。だから、「なにくそまけるものか」ってやってたら、いつからかそのみりょくにすっかりはまっちゃって。"]
+        japanese: "ええ。でも、ほら営業って、結果が数字っていう目に見える形で出てくるでしょ。",
+        reading: "ええ。でも、ほら えいぎょう って、けっか が すうじ って いう め に みえる かたち で でてくる でしょ。",
+        romaji: "Ee. Demo, hora eigyō tte, kekka ga sūji tte iu me ni mieru katachi de dete kuru desho.",
+        english: "Yes. But you know, in sales the results come out as numbers you can actually see.",
+        vietnamese: "Vâng. Nhưng mà, kinh doanh ấy, kết quả hiện ra dưới dạng con số rõ ràng mà.",
+        acceptedAnswers: ["ええ。でも、ほら営業って、結果が数字っていう目に見える形で出てくるでしょ。", "ええ。でも、ほらえいぎょうって、けっかがすうじっていうめにみえるかたちででてくるでしょ。"]
       },
       {
         id: 5,
+        speaker: "B",
+        japanese: "だから、「何くそ負けるものか」ってやってたら、いつからかその魅力にすっかりはまっちゃって。",
+        reading: "だから、「なにくそ まける もの か」って やってたら、いつからか その みりょく に すっかり はまっちゃって。",
+        romaji: "Dakara, 'nani kuso makeru mono ka' tte yattetara, itsu kara ka sono miryoku ni sukkari hamacchatte.",
+        english: "So when I kept at it with the attitude 'no way I'm losing', at some point I just got completely hooked on its appeal.",
+        vietnamese: "Vì vậy, khi tôi cứ cố với tinh thần 'nhất định không thua', lúc nào đó tôi đã bị cuốn hút hoàn toàn.",
+        acceptedAnswers: ["だから、「何くそ負けるものか」ってやってたら、いつからかその魅力にすっかりはまっちゃって。", "だから、「なにくそまけるものか」ってやってたら、いつからかそのみりょくにすっかりはまっちゃって。"]
+      },
+      {
+        id: 6,
         speaker: "A",
         japanese: "そうですか。確かに、その点はやりがいがありますよね。でも、ノルマもあって、毎日大変でしょう。",
         reading: "そう です か。たしかに、その てん は やりがい が あります よ ね。でも、のるま も あって、まいにち たいへん でしょう。",
@@ -508,7 +518,7 @@ export default [
         acceptedAnswers: ["そうですか。確かに、その点はやりがいがありますよね。でも、ノルマもあって、毎日大変でしょう。", "そうですか。たしかに、そのてんはやりがいがありますよね。でも、のるまもあって、まいにちたいへんでしょう。"]
       },
       {
-        id: 6,
+        id: 7,
         speaker: "B",
         japanese: "ええ、大変は大変なんですが…。営業の魅力に取りつかれちゃったんでしょうね。",
         reading: "ええ、たいへん は たいへん な ん です が…。えいぎょう の みりょく に とりつかれ ちゃった ん でしょう ね。",

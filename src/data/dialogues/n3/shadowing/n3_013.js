@@ -147,15 +147,25 @@ export default [
       {
         id: 5,
         speaker: "A",
-        japanese: "一杯ぐらい飲んでも罰は当たりませんよ。それに「酒は百薬の長」って言うじゃないですか。",
-        reading: "いっぱい ぐらい のんで も ばつ は あたり ません よ。それ に「さけ は ひゃくやく の ちょう」って いう じゃ ない です か。",
-        romaji: "Ippai gurai nonde mo batsu wa atarimasen yo. Sore ni 'sake wa hyakuyaku no chō' tte iu ja nai desu ka.",
-        english: "One drink won't hurt you. Besides, they say 'sake is the best of all medicines', don't they?",
-        vietnamese: "Uống một ly chẳng sao đâu. Với lại, có câu 'rượu là vị thuốc tốt nhất' mà.",
-        acceptedAnswers: ["一杯ぐらい飲んでも罰は当たりませんよ。それに「酒は百薬の長」って言うじゃないですか。", "いっぱいぐらいのんでもばつはあたりませんよ。それに「さけはひゃくやくのちょう」っていうじゃないですか。"]
+        japanese: "一杯ぐらい飲んでも罰は当たりませんよ。",
+        reading: "いっぱい ぐらい のんで も ばつ は あたり ません よ。",
+        romaji: "Ippai gurai nonde mo batsu wa atarimasen yo.",
+        english: "One drink won't hurt you.",
+        vietnamese: "Uống một ly chẳng sao đâu.",
+        acceptedAnswers: ["一杯ぐらい飲んでも罰は当たりませんよ。", "いっぱいぐらいのんでもばつはあたりませんよ。"]
       },
       {
         id: 6,
+        speaker: "A",
+        japanese: "それに「酒は百薬の長」って言うじゃないですか。",
+        reading: "それ に「さけ は ひゃくやく の ちょう」って いう じゃ ない です か。",
+        romaji: "Sore ni 'sake wa hyakuyaku no chō' tte iu ja nai desu ka.",
+        english: "Besides, they say 'sake is the best of all medicines', don't they?",
+        vietnamese: "Với lại, có câu 'rượu là vị thuốc tốt nhất' mà.",
+        acceptedAnswers: ["それに「酒は百薬の長」って言うじゃないですか。", "それに「さけはひゃくやくのちょう」っていうじゃないですか。"]
+      },
+      {
+        id: 7,
         speaker: "B",
         japanese: "まー、そうですけど〜、今夜はやめときます。",
         reading: "まー、そう です けど〜、こんや は やめ とき ます。",

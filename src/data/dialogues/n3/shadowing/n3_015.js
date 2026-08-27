@@ -69,15 +69,25 @@ export default [
       {
         id: 7,
         speaker: "A",
-        japanese: "はい、中村様ですね。確かに本日3時までとうけたまわっております。ただいま、ドライバーと連絡を取って確かめまして、こちらから中村様のお宅に折り返しお電話差し上げます。",
-        reading: "はい、なかむら さま です ね。たしかに ほんじつ さんじ まで と うけたまわって おります。ただいま、どらいばー と れんらく を とって たしかめまして、こちら から なかむら さま の おたく に おりかえし おでんわ さしあげます。",
-        romaji: "Hai, Nakamura-sama desu ne. Tashika ni honjitsu san-ji made to uketamawatte orimasu. Tadaima, doraibā to renraku o totte tashikamemashite, kochira kara Nakamura-sama no o-taku ni orikaeshi o-denwa sashiagemasu.",
-        english: "Yes, Mr./Ms. Nakamura. We do have a note for delivery by 3 today. I'll contact the driver to confirm and call you back at home.",
-        vietnamese: "Vâng, anh/chị Nakamura phải không. Đúng là chúng tôi có ghi nhận giao trước 3 giờ hôm nay. Tôi sẽ liên hệ tài xế xác nhận và gọi lại cho anh/chị.",
-        acceptedAnswers: ["はい、中村様ですね。確かに本日3時までとうけたまわっております。ただいま、ドライバーと連絡を取って確かめまして、こちらから中村様のお宅に折り返しお電話差し上げます。", "はい、なかむらさまですね。たしかにほんじつさんじまでとうけたまわっております。ただいま、どらいばーとれんらくをとってたしかめまして、こちらからなかむらさまのおたくにおりかえしおでんわさしあげます。"]
+        japanese: "はい、中村様ですね。確かに本日3時までとうけたまわっております。",
+        reading: "はい、なかむら さま です ね。たしかに ほんじつ さんじ まで と うけたまわって おります。",
+        romaji: "Hai, Nakamura-sama desu ne. Tashika ni honjitsu san-ji made to uketamawatte orimasu.",
+        english: "Yes, Mr./Ms. Nakamura. We do have a note for delivery by 3 today.",
+        vietnamese: "Vâng, anh/chị Nakamura phải không. Đúng là chúng tôi có ghi nhận giao trước 3 giờ hôm nay.",
+        acceptedAnswers: ["はい、中村様ですね。確かに本日3時までとうけたまわっております。", "はい、なかむらさまですね。たしかにほんじつさんじまでとうけたまわっております。"]
       },
       {
         id: 8,
+        speaker: "A",
+        japanese: "ただいま、ドライバーと連絡を取って確かめまして、こちらから中村様のお宅に折り返しお電話差し上げます。",
+        reading: "ただいま、どらいばー と れんらく を とって たしかめまして、こちら から なかむら さま の おたく に おりかえし おでんわ さしあげます。",
+        romaji: "Tadaima, doraibā to renraku o totte tashikamemashite, kochira kara Nakamura-sama no o-taku ni orikaeshi o-denwa sashiagemasu.",
+        english: "I'll contact the driver to confirm and call you back at home right away.",
+        vietnamese: "Tôi sẽ liên hệ tài xế xác nhận và gọi lại cho anh/chị.",
+        acceptedAnswers: ["ただいま、ドライバーと連絡を取って確かめまして、こちらから中村様のお宅に折り返しお電話差し上げます。", "ただいま、どらいばーとれんらくをとってたしかめまして、こちらからなかむらさまのおたくにおりかえしおでんわさしあげます。"]
+      },
+      {
+        id: 9,
         speaker: "B",
         japanese: "えっと、これから出かけなくちゃいけないんで、あんまり待っていられないんですが。",
         reading: "えっと、これから でかけ なく ちゃ いけない ん で、あんまり まって いられ ない ん です が。",
@@ -87,7 +97,7 @@ export default [
         acceptedAnswers: ["えっと、これから出かけなくちゃいけないんで、あんまり待っていられないんですが。", "えっと、これからでかけなくちゃいけないんで、あんまりまっていられないんですが。"]
       },
       {
-        id: 9,
+        id: 10,
         speaker: "A",
         japanese: "2、3分ですぐお電話差し上げられますが…。",
         reading: "に、さんぷん で すぐ おでんわ さしあげられます が…。",
@@ -97,7 +107,7 @@ export default [
         acceptedAnswers: ["2、3分ですぐお電話差し上げられますが…。", "に、さんぷんですぐおでんわさしあげられますが…。"]
       },
       {
-        id: 10,
+        id: 11,
         speaker: "B",
         japanese: "あー、わかりました。じゃー、お願いします。",
         reading: "あー、わかりました。じゃー、おねがい します。",
@@ -107,7 +117,7 @@ export default [
         acceptedAnswers: ["あー、わかりました。じゃー、お願いします。", "あー、わかりました。じゃー、おねがいします。"]
       },
       {
-        id: 11,
+        id: 12,
         speaker: "A",
         japanese: "中村様、たいへん申し訳ございませんが、ただいま事故の影響で道路が渋滞しておりまして、そちらにお届けできるのが30分後ぐらいになるということなんですが…。",
         reading: "なかむら さま、たいへん もうしわけ ございません が、ただいま じこ の えいきょう で どうろ が じゅうたい して おりまして、そちら に おとどけ できる の が さんじゅっぷんご ぐらい に なる と いう こと な ん です が…。",
@@ -117,17 +127,27 @@ export default [
         acceptedAnswers: ["中村様、たいへん申し訳ございませんが、ただいま事故の影響で道路が渋滞しておりまして、そちらにお届けできるのが30分後ぐらいになるということなんですが…。", "なかむらさま、たいへんもうしわけございませんが、ただいまじこのえいきょうでどうろがじゅうたいしておりまして、そちらにおとどけできるのがさんじゅっぷんごぐらいになるということなんですが…。"]
       },
       {
-        id: 12,
+        id: 13,
         speaker: "B",
-        japanese: "あー、あの、私もう家を出なきゃいけないんで、それはちょっと無理ですね。明日の3時までにしてもらえますか？",
-        reading: "あー、あの、わたし もう いえ を でなきゃ いけない ん で、それ は ちょっと むり です ね。あした の さんじ まで に して もらえます か？",
-        romaji: "Ā, ano, watashi mō ie o denakya ikenain de, sore wa chotto muri desu ne. Ashita no san-ji made ni shite moraemasu ka?",
-        english: "Ah, well, I have to leave the house soon, so that's a bit difficult. Could you make it by 3 tomorrow instead?",
-        vietnamese: "À, tôi sắp phải ra ngoài rồi, nên như vậy hơi khó. Có thể giao trước 3 giờ ngày mai không?",
-        acceptedAnswers: ["あー、あの、私もう家を出なきゃいけないんで、それはちょっと無理ですね。明日の3時までにしてもらえますか？", "あー、あの、わたしもういえをでなきゃいけないんで、それはちょっとむりですね。あしたのさんじまでにしてもらえますか？"]
+        japanese: "あー、あの、私もう家を出なきゃいけないんで、それはちょっと無理ですね。",
+        reading: "あー、あの、わたし もう いえ を でなきゃ いけない ん で、それ は ちょっと むり です ね。",
+        romaji: "Ā, ano, watashi mō ie o denakya ikenain de, sore wa chotto muri desu ne.",
+        english: "Ah, well, I have to leave the house soon, so that's a bit difficult.",
+        vietnamese: "À, tôi sắp phải ra ngoài rồi, nên như vậy hơi khó.",
+        acceptedAnswers: ["あー、あの、私もう家を出なきゃいけないんで、それはちょっと無理ですね。", "あー、あの、わたしもういえをでなきゃいけないんで、それはちょっとむりですね。"]
       },
       {
-        id: 13,
+        id: 14,
+        speaker: "B",
+        japanese: "明日の3時までにしてもらえますか？",
+        reading: "あした の さんじ まで に して もらえます か？",
+        romaji: "Ashita no san-ji made ni shite moraemasu ka?",
+        english: "Could you make it by 3 tomorrow instead?",
+        vietnamese: "Có thể giao trước 3 giờ ngày mai không?",
+        acceptedAnswers: ["明日の3時までにしてもらえますか？", "あしたのさんじまでにしてもらえますか？"]
+      },
+      {
+        id: 15,
         speaker: "A",
         japanese: "かしこまりました。では、明日1時から3時の間にお届けいたします。ご迷惑をおかけしてたいへん申し訳ございませんでした。",
         reading: "かしこまりました。では、あした いちじ から さんじ の あいだ に おとどけ いたします。ごめいわく を おかけ して たいへん もうしわけ ございません でした。",
@@ -137,17 +157,27 @@ export default [
         acceptedAnswers: ["かしこまりました。では、明日1時から3時の間にお届けいたします。ご迷惑をおかけしてたいへん申し訳ございませんでした。", "かしこまりました。では、あしたいちじからさんじのあいだにおとどけいたします。ごめいわくをおかけしてたいへんもうしわけございませんでした。"]
       },
       {
-        id: 14,
+        id: 16,
         speaker: "B",
-        japanese: "わかりました。じゃー、その時間でお願いします。あ、明日も3時すぎには出かけるんで、絶対3時までに届けてもらいたいんですけど。",
-        reading: "わかりました。じゃー、その じかん で おねがい します。あ、あした も さんじ すぎ には でかける ん で、ぜったい さんじ まで に とどけて もらいたい ん です けど。",
-        romaji: "Wakarimashita. Jā, sono jikan de onegai shimasu. A, ashita mo san-ji sugi ni wa dekakeru n de, zettai san-ji made ni todokeite moraitain desu kedo.",
-        english: "Understood. Okay, please come in that window. Oh, I'm going out again after 3 tomorrow too, so please absolutely deliver by 3.",
-        vietnamese: "Hiểu rồi. Vậy phiền anh/chị trong khoảng thời gian đó nhé. À, ngày mai tôi cũng ra ngoài sau 3 giờ, nên nhất định phải giao trước 3 giờ nhé.",
-        acceptedAnswers: ["わかりました。じゃー、その時間でお願いします。あ、明日も3時すぎには出かけるんで、絶対3時までに届けてもらいたいんですけど。", "わかりました。じゃー、そのじかんでおねがいします。あ、あしたもさんじすぎにはでかけるんで、ぜったいさんじまでにとどけてもらいたいんですけど。"]
+        japanese: "わかりました。じゃー、その時間でお願いします。",
+        reading: "わかりました。じゃー、その じかん で おねがい します。",
+        romaji: "Wakarimashita. Jā, sono jikan de onegai shimasu.",
+        english: "Understood. Okay, please come in that window.",
+        vietnamese: "Hiểu rồi. Vậy phiền anh/chị trong khoảng thời gian đó nhé.",
+        acceptedAnswers: ["わかりました。じゃー、その時間でお願いします。", "わかりました。じゃー、そのじかんでおねがいします。"]
       },
       {
-        id: 15,
+        id: 17,
+        speaker: "B",
+        japanese: "あ、明日も3時すぎには出かけるんで、絶対3時までに届けてもらいたいんですけど。",
+        reading: "あ、あした も さんじ すぎ には でかける ん で、ぜったい さんじ まで に とどけて もらいたい ん です けど。",
+        romaji: "A, ashita mo san-ji sugi ni wa dekakeru n de, zettai san-ji made ni todokeite moraitain desu kedo.",
+        english: "Oh, I'm going out again after 3 tomorrow too, so please absolutely deliver by 3.",
+        vietnamese: "À, ngày mai tôi cũng ra ngoài sau 3 giờ, nên nhất định phải giao trước 3 giờ nhé.",
+        acceptedAnswers: ["あ、明日も3時すぎには出かけるんで、絶対3時までに届けてもらいたいんですけど。", "あ、あしたもさんじすぎにはでかけるんで、ぜったいさんじまでにとどけてもらいたいんですけど。"]
+      },
+      {
+        id: 18,
         speaker: "A",
         japanese: "はい、明日は大丈夫でございます。",
         reading: "はい、あした は だいじょうぶ で ございます。",
@@ -157,7 +187,7 @@ export default [
         acceptedAnswers: ["はい、明日は大丈夫でございます。", "はい、あしたはだいじょうぶでございます。"]
       },
       {
-        id: 16,
+        id: 19,
         speaker: "B",
         japanese: "はい。じゃあよろしくお願いします。",
         reading: "はい。じゃあ よろしく おねがい します。",
@@ -268,15 +298,25 @@ export default [
       {
         id: 10,
         speaker: "B",
-        japanese: "そうだね、「下手な鉄砲数撃ちゃ当たる」って言うしね。ところで、由美のほうはどう？　うわさの彼とは上手くいってるの？",
-        reading: "そう だ ね、「へた な てっぽう かずうちゃ あたる」って いう し ね。ところ で、ゆみ の ほう は どう？うわさ の かれ と は うまく いってる の？",
-        romaji: "Sō da ne, 'heta na teppō kazuuchya ataru' tte iu shi ne. Tokoro de, Yumi no hō wa dō? Uwasa no kare to wa umaku itteru no?",
-        english: "Right, as they say 'keep shooting and you'll eventually hit'. By the way, how about you Yumi? How's it going with the guy everyone's talking about?",
-        vietnamese: "Đúng nhỉ, có câu 'bắn nhiều thì trúng'. Nhân tiện, Yumi thì sao? Chuyện với anh chàng mọi người đồn có ổn không?",
-        acceptedAnswers: ["そうだね、「下手な鉄砲数撃ちゃ当たる」って言うしね。ところで、由美のほうはどう？　うわさの彼とは上手くいってるの？", "そうだね、「へたなてっぽうかずうちゃあたる」っていうしね。ところで、ゆみのほうはどう？うわさのかれとはうまくいってるの？"]
+        japanese: "そうだね、「下手な鉄砲数撃ちゃ当たる」って言うしね。",
+        reading: "そう だ ね、「へた な てっぽう かずうちゃ あたる」って いう し ね。",
+        romaji: "Sō da ne, 'heta na teppō kazuuchya ataru' tte iu shi ne.",
+        english: "Right, as they say 'keep shooting and you'll eventually hit'.",
+        vietnamese: "Đúng nhỉ, có câu 'bắn nhiều thì trúng'.",
+        acceptedAnswers: ["そうだね、「下手な鉄砲数撃ちゃ当たる」って言うしね。", "そうだね、「へたなてっぽうかずうちゃあたる」っていうしね。"]
       },
       {
         id: 11,
+        speaker: "B",
+        japanese: "ところで、由美のほうはどう？うわさの彼とは上手くいってるの？",
+        reading: "ところ で、ゆみ の ほう は どう？うわさ の かれ と は うまく いってる の？",
+        romaji: "Tokoro de, Yumi no hō wa dō? Uwasa no kare to wa umaku itteru no?",
+        english: "By the way, how about you Yumi? How's it going with the guy everyone's talking about?",
+        vietnamese: "Nhân tiện, Yumi thì sao? Chuyện với anh chàng mọi người đồn có ổn không?",
+        acceptedAnswers: ["ところで、由美のほうはどう？うわさの彼とは上手くいってるの？", "ところで、ゆみのほうはどう？うわさのかれとはうまくいってるの？"]
+      },
+      {
+        id: 12,
         speaker: "A",
         japanese: "えっ、どうって。まー、ぼちぼち、かな。",
         reading: "えっ、どう って。まー、ぼちぼち、かな。",
@@ -286,7 +326,7 @@ export default [
         acceptedAnswers: ["えっ、どうって。まー、ぼちぼち、かな。", "えっ、どうって。まー、ぼちぼち、かな。"]
       },
       {
-        id: 12,
+        id: 13,
         speaker: "B",
         japanese: "ぼちぼちって？",
         reading: "ぼちぼち って？",
@@ -296,7 +336,7 @@ export default [
         acceptedAnswers: ["ぼちぼちって？", "ぼちぼちって？"]
       },
       {
-        id: 13,
+        id: 14,
         speaker: "A",
         japanese: "まあまあ上手くいってるってこと。でもね、実はこの間、彼にプロポーズされたんだ。",
         reading: "まあまあ うまく いってる って こと。でも ね、じつ は この まえ、かれ に ぷろぽーず された ん だ。",
@@ -306,7 +346,7 @@ export default [
         acceptedAnswers: ["まあまあ上手くいってるってこと。でもね、実はこの間、彼にプロポーズされたんだ。", "まあまあうまくいってるってこと。でもね、じつはこのまえ、かれにぷろぽーずされたんだ。"]
       },
       {
-        id: 14,
+        id: 15,
         speaker: "B",
         japanese: "えー、すごい。やったじゃない！　で、なんて言われたの？",
         reading: "えー、すごい。やった じゃ ない！で、なんて いわれた の？",
@@ -316,7 +356,7 @@ export default [
         acceptedAnswers: ["えー、すごい。やったじゃない！　で、なんて言われたの？", "えー、すごい。やったじゃない！で、なんていわれたの？"]
       },
       {
-        id: 15,
+        id: 16,
         speaker: "A",
         japanese: "それがね、フフフ…。",
         reading: "それ が ね、ふふふ…。",
@@ -326,7 +366,7 @@ export default [
         acceptedAnswers: ["それがね、フフフ…。", "それがね、ふふふ…。"]
       },
       {
-        id: 16,
+        id: 17,
         speaker: "B",
         japanese: "え、何？",
         reading: "え、なに？",
@@ -336,17 +376,27 @@ export default [
         acceptedAnswers: ["え、何？", "え、なに？"]
       },
       {
-        id: 17,
+        id: 18,
         speaker: "A",
-        japanese: "この間、神社の前を通りかかったら、ちょうど結婚式をやってて、白無垢姿のお嫁さんが見えたの。そしたら、彼が「あれ、着てみない？」って急に言い出して…。私、びっくりしちゃった。",
-        reading: "この まえ、じんじゃ の まえ を とおりかかったら、ちょうど けっこんしき を やってて、しろむく すがた の およめ さん が みえた の。そしたら、かれ が「あれ、きてみない？」って きゅう に いいだして…。わたし、びっくりしちゃった。",
-        romaji: "Kono mae, jinja no mae o tōrikakattara, chōdo kekkon-shiki o yattete, shiro-muku sugata no o-yome-san ga mieta no. Soshitara, kare ga 'are, kite minai?' tte kyū ni ii dashite…. Watashi, bikkuri shichatta.",
-        english: "The other day when we were passing by a shrine, a wedding was happening and we could see a bride in a white kimono. Then he suddenly said 'hey, want to try wearing that?'… I was shocked.",
-        vietnamese: "Hôm trước khi đi ngang qua đền thờ, đúng lúc có đám cưới, nhìn thấy cô dâu mặc áo trắng truyền thống. Rồi anh ấy đột nhiên nói 'cái đó, thử mặc xem không?'… Tôi bật ngửa.",
-        acceptedAnswers: ["この間、神社の前を通りかかったら、ちょうど結婚式をやってて、白無垢姿のお嫁さんが見えたの。そしたら、彼が「あれ、着てみない？」って急に言い出して…。私、びっくりしちゃった。", "このまえ、じんじゃのまえをとおりかかったら、ちょうどけっこんしきをやってて、しろむくすがたのおよめさんがみえたの。そしたら、かれが「あれ、きてみない？」ってきゅうにいいだして…。わたし、びっくりしちゃった。"]
+        japanese: "この間、神社の前を通りかかったら、ちょうど結婚式をやってて、白無垢姿のお嫁さんが見えたの。",
+        reading: "この まえ、じんじゃ の まえ を とおりかかったら、ちょうど けっこんしき を やってて、しろむく すがた の およめ さん が みえた の。",
+        romaji: "Kono mae, jinja no mae o tōrikakattara, chōdo kekkon-shiki o yattete, shiro-muku sugata no o-yome-san ga mieta no.",
+        english: "The other day when we were passing by a shrine, a wedding was happening and we could see a bride in a white kimono.",
+        vietnamese: "Hôm trước khi đi ngang qua đền thờ, đúng lúc có đám cưới, nhìn thấy cô dâu mặc áo trắng truyền thống.",
+        acceptedAnswers: ["この間、神社の前を通りかかったら、ちょうど結婚式をやってて、白無垢姿のお嫁さんが見えたの。", "このまえ、じんじゃのまえをとおりかかったら、ちょうどけっこんしきをやってて、しろむくすがたのおよめさんがみえたの。"]
       },
       {
-        id: 18,
+        id: 19,
+        speaker: "A",
+        japanese: "そしたら、彼が「あれ、着てみない？」って急に言い出して…。私、びっくりしちゃった。",
+        reading: "そしたら、かれ が「あれ、きてみない？」って きゅう に いいだして…。わたし、びっくりしちゃった。",
+        romaji: "Soshitara, kare ga 'are, kite minai?' tte kyū ni ii dashite…. Watashi, bikkuri shichatta.",
+        english: "Then he suddenly said 'hey, want to try wearing that?'… I was shocked.",
+        vietnamese: "Rồi anh ấy đột nhiên nói 'cái đó, thử mặc xem không?'… Tôi bật ngửa.",
+        acceptedAnswers: ["そしたら、彼が「あれ、着てみない？」って急に言い出して…。私、びっくりしちゃった。", "そしたら、かれが「あれ、きてみない？」ってきゅうにいいだして…。わたし、びっくりしちゃった。"]
+      },
+      {
+        id: 20,
         speaker: "B",
         japanese: "それってプロポーズなの？　彼ってシャイなんだね。",
         reading: "それって ぷろぽーず な の？かれ って しゃい な ん だ ね。",
@@ -356,7 +406,7 @@ export default [
         acceptedAnswers: ["それってプロポーズなの？　彼ってシャイなんだね。", "それってぷろぽーずなの？かれってしゃいなんだね。"]
       },
       {
-        id: 19,
+        id: 21,
         speaker: "A",
         japanese: "うん、そうなの。でも、もっと気の利いたこと言ってほしいよね。",
         reading: "うん、そう な の。でも、もっと き の きいた こと いって ほしい よ ね。",
@@ -366,7 +416,7 @@ export default [
         acceptedAnswers: ["うん、そうなの。でも、もっと気の利いたこと言ってほしいよね。", "うん、そうなの。でも、もっときのきいたこといってほしいよね。"]
       },
       {
-        id: 20,
+        id: 22,
         speaker: "B",
         japanese: "まー、いいじゃない。贅沢言わないの！　で、由美、何て答えたの？",
         reading: "まー、いい じゃ ない。ぜいたく いわ ない の！で、ゆみ、なんて こたえた の？",
@@ -376,7 +426,7 @@ export default [
         acceptedAnswers: ["まー、いいじゃない。贅沢言わないの！　で、由美、何て答えたの？", "まー、いいじゃない。ぜいたくいわないの！で、ゆみ、なんてこたえたの？"]
       },
       {
-        id: 21,
+        id: 23,
         speaker: "A",
         japanese: "「私はウェディングドレスのほうがいいんだけどな…」って答えたんだけどね。",
         reading: "「わたし は うぇでぃんぐ どれす の ほう が いい ん だ けど な…」って こたえた ん だ けど ね。",
@@ -386,7 +436,7 @@ export default [
         acceptedAnswers: ["「私はウェディングドレスのほうがいいんだけどな…」って答えたんだけどね。", "「わたしはうぇでぃんぐどれすのほうがいいんだけどな…」ってこたえたんだけどね。"]
       },
       {
-        id: 22,
+        id: 24,
         speaker: "B",
         japanese: "へー、で、彼は何て？",
         reading: "へー、で、かれ は なんて？",
@@ -396,7 +446,7 @@ export default [
         acceptedAnswers: ["へー、で、彼は何て？", "へー、で、かれはなんて？"]
       },
       {
-        id: 23,
+        id: 25,
         speaker: "A",
         japanese: "「君がウェディングドレスがいいなら、僕もタキシードにするよ」だって。",
         reading: "「きみ が うぇでぃんぐ どれす が いい なら、ぼく も たきしーど に する よ」だって。",
@@ -406,7 +456,7 @@ export default [
         acceptedAnswers: ["「君がウェディングドレスがいいなら、僕もタキシードにするよ」だって。", "「きみがうぇでぃんぐどれすがいいなら、ぼくもたきしーどにするよ」だって。"]
       },
       {
-        id: 24,
+        id: 26,
         speaker: "B",
         japanese: "ふーん、そうなんだ。じゃ、プロポーズ成立ってわけか。",
         reading: "ふーん、そう なん だ。じゃ、ぷろぽーず せいりつ って わけ か。",
@@ -548,15 +598,25 @@ export default [
       {
         id: 13,
         speaker: "B",
-        japanese: "こんな調子じゃ、優勝なんて夢のまた夢だな。いつになったらうまいビールが飲めるんだよ、まったく。",
-        reading: "こんな ちょうし じゃ、ゆうしょう なんて ゆめ の また ゆめ だ な。いつ に なったら うまい びーる が のめる ん だ よ、まったく。",
-        romaji: "Konna chōshi ja, yūshō nante yume no mata yume da na. Itsu ni nattara umai bīru ga nomeru n da yo, mattaku.",
-        english: "At this rate, winning the championship is a pipe dream. When will I ever get to enjoy a cold victory beer, seriously.",
-        vietnamese: "Kiểu này thì vô địch chỉ là mơ thôi. Bao giờ mới được uống bia ăn mừng đây, thật sự.",
-        acceptedAnswers: ["こんな調子じゃ、優勝なんて夢のまた夢だな。いつになったらうまいビールが飲めるんだよ、まったく。", "こんなちょうしじゃ、ゆうしょうなんてゆめのまたゆめだな。いつになったらうまいびーるがのめるんだよ、まったく。"]
+        japanese: "こんな調子じゃ、優勝なんて夢のまた夢だな。",
+        reading: "こんな ちょうし じゃ、ゆうしょう なんて ゆめ の また ゆめ だ な。",
+        romaji: "Konna chōshi ja, yūshō nante yume no mata yume da na.",
+        english: "At this rate, winning the championship is a pipe dream.",
+        vietnamese: "Kiểu này thì vô địch chỉ là mơ thôi.",
+        acceptedAnswers: ["こんな調子じゃ、優勝なんて夢のまた夢だな。", "こんなちょうしじゃ、ゆうしょうなんてゆめのまたゆめだな。"]
       },
       {
         id: 14,
+        speaker: "B",
+        japanese: "いつになったらうまいビールが飲めるんだよ、まったく。",
+        reading: "いつ に なったら うまい びーる が のめる ん だ よ、まったく。",
+        romaji: "Itsu ni nattara umai bīru ga nomeru n da yo, mattaku.",
+        english: "When will I ever get to enjoy a cold victory beer, seriously.",
+        vietnamese: "Bao giờ mới được uống bia ăn mừng đây, thật sự.",
+        acceptedAnswers: ["いつになったらうまいビールが飲めるんだよ、まったく。", "いつになったらうまいびーるがのめるんだよ、まったく。"]
+      },
+      {
+        id: 15,
         speaker: "A",
         japanese: "も、帰ろ帰ろ。",
         reading: "も、かえろ かえろ。",
@@ -657,15 +717,25 @@ export default [
       {
         id: 9,
         speaker: "A",
-        japanese: "いや〜、知らなかったよー。ところで、実は、今週の金曜日にＫＢＢ電機さんの社長とうちの社長が会食をする予定になっていてね。",
-        reading: "いや〜、しらなかった よー。ところ で、じつ は、こんしゅう の きんようび に けーびーびー でんき さん の しゃちょう と うち の しゃちょう が かいしょく を する よてい に なってい て ね。",
-        romaji: "Iyā, shiranakatta yō. Tokoro de, jitsu wa, konshū no kin'yōbi ni KBB Denki-san no shachō to uchi no shachō ga kaishoku o suru yotei ni natte ite ne.",
-        english: "Wow, I had no idea. By the way, it turns out this Friday, the president of KBB Electronics and our president are scheduled to have a dinner together.",
-        vietnamese: "Ồ, mình không biết đấy. Nhân tiện, thực ra thứ Sáu tuần này, Giám đốc KBB Electronics và Giám đốc của chúng ta dự định ăn tối cùng nhau.",
-        acceptedAnswers: ["いや〜、知らなかったよー。ところで、実は、今週の金曜日にＫＢＢ電機さんの社長とうちの社長が会食をする予定になっていてね。", "いや〜、しらなかったよー。ところで、じつは、こんしゅうのきんようびにけーびーびーでんきさんのしゃちょうとうちのしゃちょうがかいしょくをするよていになっていてね。"]
+        japanese: "いや〜、知らなかったよー。",
+        reading: "いや〜、しらなかった よー。",
+        romaji: "Iyā, shiranakatta yō.",
+        english: "Wow, I had no idea.",
+        vietnamese: "Ồ, mình không biết đấy.",
+        acceptedAnswers: ["いや〜、知らなかったよー。", "いや〜、しらなかったよー。"]
       },
       {
         id: 10,
+        speaker: "A",
+        japanese: "ところで、実は、今週の金曜日にＫＢＢ電機さんの社長とうちの社長が会食をする予定になっていてね。",
+        reading: "ところ で、じつ は、こんしゅう の きんようび に けーびーびー でんき さん の しゃちょう と うち の しゃちょう が かいしょく を する よてい に なってい て ね。",
+        romaji: "Tokoro de, jitsu wa, konshū no kin'yōbi ni KBB Denki-san no shachō to uchi no shachō ga kaishoku o suru yotei ni natte ite ne.",
+        english: "By the way, it turns out this Friday, the president of KBB Electronics and our president are scheduled to have a dinner together.",
+        vietnamese: "Nhân tiện, thực ra thứ Sáu tuần này, Giám đốc KBB Electronics và Giám đốc của chúng ta dự định ăn tối cùng nhau.",
+        acceptedAnswers: ["ところで、実は、今週の金曜日にＫＢＢ電機さんの社長とうちの社長が会食をする予定になっていてね。", "ところで、じつは、こんしゅうのきんようびにけーびーびーでんきさんのしゃちょうとうちのしゃちょうがかいしょくをするよていになっていてね。"]
+      },
+      {
+        id: 11,
         speaker: "B",
         japanese: "あ、そうなんですか。",
         reading: "あ、そう なん です か。",
@@ -675,7 +745,7 @@ export default [
         acceptedAnswers: ["あ、そうなんですか。", "あ、そうなんですか。"]
       },
       {
-        id: 11,
+        id: 12,
         speaker: "A",
         japanese: "それで、せっかくだから、会食の時に山田君にも出席してもらったらどかとうちの社長がおっしゃるんだよ。",
         reading: "それ で、せっかく だ から、かいしょく の とき に やまだ くん に も しゅっせき して もらったら どう か と うち の しゃちょう が おっしゃる ん だ よ。",
@@ -685,7 +755,7 @@ export default [
         acceptedAnswers: ["それで、せっかくだから、会食の時に山田君にも出席してもらったらどかとうちの社長がおっしゃるんだよ。", "それで、せっかくだから、かいしょくのときにやまだくんにもしゅっせきしてもらったらどうかとうちのしゃちょうがおっしゃるんだよ。"]
       },
       {
-        id: 12,
+        id: 13,
         speaker: "B",
         japanese: "私がですか？",
         reading: "わたし が です か？",
@@ -695,7 +765,7 @@ export default [
         acceptedAnswers: ["私がですか？", "わたしがですか？"]
       },
       {
-        id: 13,
+        id: 14,
         speaker: "A",
         japanese: "うん、ＫＢＢ電機さんの社長はめったに上京なさらないそうだし…、山田君とも久しぶりにお会いになりたいんじゃないかな？",
         reading: "うん、けーびーびー でんき さん の しゃちょう は めったに じょうきょう なさらない そう だ し…、やまだ くん とも ひさしぶり に おあい に なりたい ん じゃ ない かな？",
@@ -705,7 +775,7 @@ export default [
         acceptedAnswers: ["うん、ＫＢＢ電機さんの社長はめったに上京なさらないそうだし…、山田君とも久しぶりにお会いになりたいんじゃないかな？", "うん、けーびーびーでんきさんのしゃちょうはめったにじょうきょうなさらないそうだし…、やまだくんともひさしぶりにおあいになりたいんじゃないかな？"]
       },
       {
-        id: 14,
+        id: 15,
         speaker: "B",
         japanese: "はあ…。しかし、部長、こんなことを申し上げては何ですが、祖父には仕事とプライベートを混同してはいけないといつも言われていますが…。",
         reading: "はあ…。しかし、ぶちょう、こんな こと を もうしあげては なん です が、そふ に は しごと と ぷらいべーと を こんどう してはいけない と いつも いわれていますが…。",
@@ -715,7 +785,7 @@ export default [
         acceptedAnswers: ["はあ…。しかし、部長、こんなことを申し上げては何ですが、祖父には仕事とプライベートを混同してはいけないといつも言われていますが…。", "はあ…。しかし、ぶちょう、こんなことをもうしあげてはなんですが、そふにはしごととぷらいべーとをこんどうしてはいけないといつもいわれていますが…。"]
       },
       {
-        id: 15,
+        id: 16,
         speaker: "A",
         japanese: "あー、それは十分承知してるんだが、まあ今回は特別ということで。",
         reading: "あー、それ は じゅうぶん しょうち してる ん だ が、まあ こんかい は とくべつ と いう こと で。",
@@ -725,7 +795,7 @@ export default [
         acceptedAnswers: ["あー、それは十分承知してるんだが、まあ今回は特別ということで。", "あー、それはじゅうぶんしょうちしてるんだが、まあこんかいはとくべつということで。"]
       },
       {
-        id: 16,
+        id: 17,
         speaker: "B",
         japanese: "わかりました。それでは、お言葉に甘えて出席させていただきます。",
         reading: "わかりました。それ では、おことば に あまえて しゅっせき させて いただきます。",
@@ -735,7 +805,7 @@ export default [
         acceptedAnswers: ["わかりました。それでは、お言葉に甘えて出席させていただきます。", "わかりました。それでは、おことばにあまえてしゅっせきさせていただきます。"]
       },
       {
-        id: 17,
+        id: 18,
         speaker: "A",
         japanese: "頼むよ。何てったって、うちの社長のご提案なんだからね。",
         reading: "たのむ よ。なんてったって、うち の しゃちょう の ごていあん なん だ から ね。",
@@ -745,7 +815,7 @@ export default [
         acceptedAnswers: ["頼むよ。何てったって、うちの社長のご提案なんだからね。", "たのむよ。なんてったって、うちのしゃちょうのごていあんなんだからね。"]
       },
       {
-        id: 18,
+        id: 19,
         speaker: "B",
         japanese: "光栄です。では、祖父にはサプライズということにして…。",
         reading: "こうえい です。では、そふ に は さぷらいず と いう こと に して…。",
@@ -755,7 +825,7 @@ export default [
         acceptedAnswers: ["光栄です。では、祖父にはサプライズということにして…。", "こうえいです。では、そふにはさぷらいずということにして…。"]
       },
       {
-        id: 19,
+        id: 20,
         speaker: "A",
         japanese: "うん。ところで、お祖父様はどんなものがお好きなのかな？",
         reading: "うん。ところ で、おじいさま は どんな もの が おすき な の かな？",
@@ -765,7 +835,7 @@ export default [
         acceptedAnswers: ["うん。ところで、お祖父様はどんなものがお好きなのかな？", "うん。ところで、おじいさまはどんなものがおすきなのかな？"]
       },
       {
-        id: 20,
+        id: 21,
         speaker: "B",
         japanese: "そうですねー。祖父は「今十」の牛肉が好きで、母がよく送ったりしてますけど…。",
         reading: "そう です ねー。そふ は「いまじゅう」の ぎゅうにく が すき で、はは が よく おくったり してます けど…。",
@@ -775,17 +845,27 @@ export default [
         acceptedAnswers: ["そうですねー。祖父は「今十」の牛肉が好きで、母がよく送ったりしてますけど…。", "そうですねー。そふは「いまじゅう」のぎゅうにくがすきで、ははがよくおくったりしてますけど…。"]
       },
       {
-        id: 21,
+        id: 22,
         speaker: "A",
-        japanese: "じゃっ、それで決まりだな。うちの社長も「今十」好きだし、ちょうどよかった。じゃー、細かいことは後で連絡するから、頼んだよ。",
-        reading: "じゃっ、それ で きまり だ な。うち の しゃちょう も「いまじゅう」すき だ し、ちょうど よかった。じゃー、こまかい こと は あと で れんらく する から、たのんだ よ。",
-        romaji: "Ja, sore de kimari da na. Uchi no shachō mo 'Imajū' suki da shi, chōdo yokatta. Jā, komakai koto wa ato de renraku suru kara, tanonda yo.",
-        english: "That settles it then. Our president likes 'Imaju' too, so that works out perfectly. I'll be in touch later with the details — I'm counting on you.",
-        vietnamese: "Vậy thì quyết định rồi. Giám đốc chúng ta cũng thích 'Imaju', thật hợp lý. Mình sẽ liên lạc sau về chi tiết — nhờ bạn nhé.",
-        acceptedAnswers: ["じゃっ、それで決まりだな。うちの社長も「今十」好きだし、ちょうどよかった。じゃー、細かいことは後で連絡するから、頼んだよ。", "じゃっ、それできまりだな。うちのしゃちょうも「いまじゅう」すきだし、ちょうどよかった。じゃー、こまかいことはあとでれんらくするから、たのんだよ。"]
+        japanese: "じゃっ、それで決まりだな。うちの社長も「今十」好きだし、ちょうどよかった。",
+        reading: "じゃっ、それ で きまり だ な。うち の しゃちょう も「いまじゅう」すき だ し、ちょうど よかった。",
+        romaji: "Ja, sore de kimari da na. Uchi no shachō mo 'Imajū' suki da shi, chōdo yokatta.",
+        english: "That settles it then. Our president likes 'Imaju' too, so that works out perfectly.",
+        vietnamese: "Vậy thì quyết định rồi. Giám đốc chúng ta cũng thích 'Imaju', thật hợp lý.",
+        acceptedAnswers: ["じゃっ、それで決まりだな。うちの社長も「今十」好きだし、ちょうどよかった。", "じゃっ、それできまりだな。うちのしゃちょうも「いまじゅう」すきだし、ちょうどよかった。"]
       },
       {
-        id: 22,
+        id: 23,
+        speaker: "A",
+        japanese: "じゃー、細かいことは後で連絡するから、頼んだよ。",
+        reading: "じゃー、こまかい こと は あと で れんらく する から、たのんだ よ。",
+        romaji: "Jā, komakai koto wa ato de renraku suru kara, tanonda yo.",
+        english: "I'll be in touch later with the details — I'm counting on you.",
+        vietnamese: "Mình sẽ liên lạc sau về chi tiết — nhờ bạn nhé.",
+        acceptedAnswers: ["じゃー、細かいことは後で連絡するから、頼んだよ。", "じゃー、こまかいことはあとでれんらくするから、たのんだよ。"]
+      },
+      {
+        id: 24,
         speaker: "B",
         japanese: "はい、承知しました。",
         reading: "はい、しょうち しました。",
@@ -816,15 +896,25 @@ export default [
       {
         id: 2,
         speaker: "B",
-        japanese: "はい。えー、近年、韓国ドラマブームをきっかけに、日本では韓国に対する関心が高まっていると思います。韓国へ旅行に来る日本の方もずいぶん増えました。",
-        reading: "はい。えー、きんねん、かんこく どらま ぶーむ を きっかけ に、にほん では かんこく に たいする かんしん が たかまって いる と おもいます。かんこく へ りょこう に くる にほん の かた も ずいぶん ふえました。",
-        romaji: "Hai. Ē, kinnen, Kankoku dorama būmu o kikkake ni, Nihon de wa Kankoku ni taisuru kanshin ga takamatte iru to omoimasu. Kankoku e ryokō ni kuru Nihon no kata mo zuibun fuemashita.",
-        english: "Yes. In recent years, sparked by the Korean drama boom, I believe interest in Korea has been growing in Japan. The number of Japanese people coming to Korea as tourists has increased considerably.",
-        vietnamese: "Vâng. Những năm gần đây, nhờ làn sóng phim Hàn, tôi nghĩ sự quan tâm đến Hàn Quốc ở Nhật ngày càng tăng. Số người Nhật đến Hàn Quốc du lịch cũng tăng nhiều.",
-        acceptedAnswers: ["はい。えー、近年、韓国ドラマブームをきっかけに、日本では韓国に対する関心が高まっていると思います。韓国へ旅行に来る日本の方もずいぶん増えました。", "はい。えー、きんねん、かんこくどらまぶーむをきっかけに、にほんではかんこくにたいするかんしんがたかまっているとおもいます。かんこくへりょこうにくるにほんのかたもずいぶんふえました。"]
+        japanese: "はい。えー、近年、韓国ドラマブームをきっかけに、日本では韓国に対する関心が高まっていると思います。",
+        reading: "はい。えー、きんねん、かんこく どらま ぶーむ を きっかけ に、にほん では かんこく に たいする かんしん が たかまって いる と おもいます。",
+        romaji: "Hai. Ē, kinnen, Kankoku dorama būmu o kikkake ni, Nihon de wa Kankoku ni taisuru kanshin ga takamatte iru to omoimasu.",
+        english: "Yes. In recent years, sparked by the Korean drama boom, I believe interest in Korea has been growing in Japan.",
+        vietnamese: "Vâng. Những năm gần đây, nhờ làn sóng phim Hàn, tôi nghĩ sự quan tâm đến Hàn Quốc ở Nhật ngày càng tăng.",
+        acceptedAnswers: ["はい。えー、近年、韓国ドラマブームをきっかけに、日本では韓国に対する関心が高まっていると思います。", "はい。えー、きんねん、かんこくどらまぶーむをきっかけに、にほんではかんこくにたいするかんしんがたかまっているとおもいます。"]
       },
       {
         id: 3,
+        speaker: "B",
+        japanese: "韓国へ旅行に来る日本の方もずいぶん増えました。",
+        reading: "かんこく へ りょこう に くる にほん の かた も ずいぶん ふえました。",
+        romaji: "Kankoku e ryokō ni kuru Nihon no kata mo zuibun fuemashita.",
+        english: "The number of Japanese people coming to Korea as tourists has increased considerably.",
+        vietnamese: "Số người Nhật đến Hàn Quốc du lịch cũng tăng nhiều.",
+        acceptedAnswers: ["韓国へ旅行に来る日本の方もずいぶん増えました。", "かんこくへりょこうにくるにほんのかたもずいぶんふえました。"]
+      },
+      {
+        id: 4,
         speaker: "A",
         japanese: "そうですね。",
         reading: "そう です ね。",
@@ -834,7 +924,7 @@ export default [
         acceptedAnswers: ["そうですね。", "そうですね。"]
       },
       {
-        id: 4,
+        id: 5,
         speaker: "B",
         japanese: "はい。そこで、そういう日本の方に、韓国の家庭にホームステイしてもらえるようなツアーを開発してみたいと思っています。",
         reading: "はい。そこ で、そういう にほん の かた に、かんこく の かてい に ほーむすてい して もらえる よう な つあー を かいはつ してみたい と おもって います。",
@@ -844,17 +934,27 @@ export default [
         acceptedAnswers: ["はい。そこで、そういう日本の方に、韓国の家庭にホームステイしてもらえるようなツアーを開発してみたいと思っています。", "はい。そこで、そういうにほんのかたに、かんこくのかていにほーむすていしてもらえるようなつあーをかいはつしてみたいとおもっています。"]
       },
       {
-        id: 5,
+        id: 6,
         speaker: "A",
-        japanese: "ははあ。韓国の家庭にホームステイですか。今までに李さんは外国でホームステイしたり、反対に受け入れたりした経験があるんですか？",
-        reading: "ははあ。かんこく の かてい に ほーむすてい です か。いままで に り さん は がいこく で ほーむすてい したり、はんたい に うけいれたり した けいけん が ある ん です か？",
-        romaji: "Hahā. Kankoku no katei ni hōmusutei desu ka. Ima made ni Ri-san wa gaikoku de hōmusutei shitari, hantai ni ukeiretari shita keiken ga arun desu ka?",
-        english: "I see. A home-stay with a Korean family. Have you ever stayed with a family abroad yourself, or hosted foreign visitors?",
-        vietnamese: "Ồ vậy. Ở lại với gia đình Hàn Quốc ư. Trước đây bạn có từng ở lại với gia đình nước ngoài, hay ngược lại tiếp nhận người nước ngoài không?",
-        acceptedAnswers: ["ははあ。韓国の家庭にホームステイですか。今までに李さんは外国でホームステイしたり、反対に受け入れたりした経験があるんですか？", "ははあ。かんこくのかていにほーむすていですか。いままでにりさんはがいこくでほーむすていしたり、はんたいにうけいれたりしたけいけんがあるんですか？"]
+        japanese: "ははあ。韓国の家庭にホームステイですか。",
+        reading: "ははあ。かんこく の かてい に ほーむすてい です か。",
+        romaji: "Hahā. Kankoku no katei ni hōmusutei desu ka.",
+        english: "I see. A home-stay with a Korean family.",
+        vietnamese: "Ồ vậy. Ở lại với gia đình Hàn Quốc ư.",
+        acceptedAnswers: ["ははあ。韓国の家庭にホームステイですか。", "ははあ。かんこくのかていにほーむすていですか。"]
       },
       {
-        id: 6,
+        id: 7,
+        speaker: "A",
+        japanese: "今までに李さんは外国でホームステイしたり、反対に受け入れたりした経験があるんですか？",
+        reading: "いままで に り さん は がいこく で ほーむすてい したり、はんたい に うけいれたり した けいけん が ある ん です か？",
+        romaji: "Ima made ni Ri-san wa gaikoku de hōmusutei shitari, hantai ni ukeiretari shita keiken ga arun desu ka?",
+        english: "Have you ever stayed with a family abroad yourself, or hosted foreign visitors?",
+        vietnamese: "Trước đây bạn có từng ở lại với gia đình nước ngoài, hay ngược lại tiếp nhận người nước ngoài không?",
+        acceptedAnswers: ["今までに李さんは外国でホームステイしたり、反対に受け入れたりした経験があるんですか？", "いままでにりさんはがいこくでほーむすていしたり、はんたいにうけいれたりしたけいけんがあるんですか？"]
+      },
+      {
+        id: 8,
         speaker: "B",
         japanese: "いいえ、残念ながらありません。",
         reading: "いいえ、ざんねん ながら ありません。",
@@ -864,7 +964,7 @@ export default [
         acceptedAnswers: ["いいえ、残念ながらありません。", "いいえ、ざんねんながらありません。"]
       },
       {
-        id: 7,
+        id: 9,
         speaker: "A",
         japanese: "あー、ではホームステイについてのノウハウとか、プランを立てる際のツボとかを研究したことは？",
         reading: "あー、では ほーむすてい に ついて の のうはう とか、ぷらん を たてる さい の つぼ とか を けんきゅう した こと は？",
@@ -874,47 +974,107 @@ export default [
         acceptedAnswers: ["あー、ではホームステイについてのノウハウとか、プランを立てる際のツボとかを研究したことは？", "あー、ではほーむすていについてののうはうとか、ぷらんをたてるさいのつぼとかをけんきゅうしたことは？"]
       },
       {
-        id: 8,
-        speaker: "B",
-        japanese: "いいえ、まだありませんが、これから勉強するつもりです。夏休みには北海道の農家にホームステイする予定です。また、日本人を受け入れたことがある韓国人の友人から、そのときの経験について聞き取りをする約束をしました。そして、気がついたことをまとめていこうと思っています。",
-        reading: "いいえ、まだ ありません が、これから べんきょう する つもり です。なつやすみ には ほっかいどう の のうか に ほーむすてい する よてい です。また、にほんじん を うけいれた こと が ある かんこくじん の ゆうじん から、その とき の けいけん に ついて ききとり を する やくそく を しました。そして、きがついた こと を まとめて いこう と おもって います。",
-        romaji: "Iie, mada arimasen ga, korekara benkyō suru tsumori desu. Natsuyasumi ni wa Hokkaidō no nōka ni hōmusutei suru yotei desu. Mata, Nihonjin o ukeireta koto ga aru Kankokujin no yūjin kara, sono toki no keiken ni tsuite kikitori o suru yakusoku o shimashita. Soshite, ki ga tsuita koto o matomete ikō to omotte imasu.",
-        english: "No, not yet, but I plan to study from now on. I'm planning to do a home-stay at a farm in Hokkaido this summer. I've also arranged to interview a Korean friend who has hosted Japanese people, to hear about their experience. I plan to compile what I learn.",
-        vietnamese: "Chưa, nhưng tôi định học từ bây giờ. Kỳ nghỉ hè tôi dự định ở lại với một nông gia ở Hokkaido. Tôi cũng đã hẹn phỏng vấn một người bạn Hàn Quốc từng tiếp nhận người Nhật để nghe về kinh nghiệm của họ. Và tôi sẽ tổng hợp những gì tôi học được.",
-        acceptedAnswers: ["いいえ、まだありませんが、これから勉強するつもりです。夏休みには北海道の農家にホームステイする予定です。また、日本人を受け入れたことがある韓国人の友人から、そのときの経験について聞き取りをする約束をしました。そして、気がついたことをまとめていこうと思っています。", "いいえ、まだありませんが、これからべんきょうするつもりです。なつやすみにはほっかいどうののうかにほーむすていするよていです。また、にほんじんをうけいれたことがあるかんこくじんのゆうじんから、そのときのけいけんについてききとりをするやくそくをしました。そして、きがついたことをまとめていこうとおもっています。"]
-      },
-      {
-        id: 9,
-        speaker: "A",
-        japanese: "うん。まー、おもしろい発想だとは思うんですがね。あー、こういうプランは留学斡旋会社なんかでやってみたほうがいいんじゃないかな。うちではまだやったことないし、未知数だね。",
-        reading: "うん。まー、おもしろい はっそう だ と は おもう ん です が ね。あー、こういう ぷらん は りゅうがく あっせん かいしゃ なんか で やってみた ほう が いい ん じゃ ない かな。うち では まだ やった こと ない し、みちすう だ ね。",
-        romaji: "Un. Mā, omoshiroi hassō da to wa omoun desu ga ne. Ā, kō iu puran wa ryūgaku assen kaisha nanka de yattemita hō ga iin ja nai kana. Uchi de wa mada yatta koto nai shi, michisū da ne.",
-        english: "Hmm. Well, I do think it's an interesting idea. But you know, this kind of plan might be better tried at a study-abroad agency. We haven't done anything like this, and it's an unknown quantity.",
-        vietnamese: "Ừ. Tôi nghĩ đó là ý tưởng thú vị đấy. Nhưng loại kế hoạch này có lẽ nên thử ở các công ty môi giới du học. Chúng tôi chưa làm điều này bao giờ, và đây là ẩn số.",
-        acceptedAnswers: ["うん。まー、おもしろい発想だとは思うんですがね。あー、こういうプランは留学斡旋会社なんかでやってみたほうがいいんじゃないかな。うちではまだやったことないし、未知数だね。", "うん。まー、おもしろいはっそうだとはおもうんですがね。あー、こういうぷらんはりゅうがくあっせんかいしゃなんかでやってみたほうがいいんじゃないかな。うちではまだやったことないし、みちすうだね。"]
-      },
-      {
         id: 10,
         speaker: "B",
-        japanese: "そうかもしれませんが、留学斡旋専門の会社では、学生が中心だと思うんです。でも、私は、学生よりもむしろ一般の社会人の方、高齢の方などを対象にしたものを作ってみたいと考えています。",
-        reading: "そう かも しれません が、りゅうがく あっせん せんもん の かいしゃ では、がくせい が ちゅうしん だ と おもう ん です。でも、わたし は、がくせい より も むしろ いっぱん の しゃかいじん の かた、こうれい の かた など を たいしょう に した もの を つくってみたい と かんがえています。",
-        romaji: "Sō kamo shiremasen ga, ryūgaku assen senmon no kaisha de wa, gakusei ga chūshin da to omoun desu. Demo, watashi wa, gakusei yori mo mushiro ippan no shakaijin no kata, kōrei no kata nado o taishō ni shita mono o tsukutte mitai to kangaete imasu.",
-        english: "That may be so, but I think study-abroad agencies are mainly focused on students. However, I'd like to create something targeting working adults and elderly people rather than students.",
-        vietnamese: "Có thể vậy, nhưng tôi nghĩ các công ty môi giới du học chủ yếu tập trung vào học sinh. Tuy nhiên, tôi muốn tạo ra thứ gì đó dành cho người đi làm thông thường và người cao tuổi thay vì học sinh.",
-        acceptedAnswers: ["そうかもしれませんが、留学斡旋専門の会社では、学生が中心だと思うんです。でも、私は、学生よりもむしろ一般の社会人の方、高齢の方などを対象にしたものを作ってみたいと考えています。", "そうかもしれませんが、りゅうがくあっせんせんもんのかいしゃでは、がくせいがちゅうしんだとおもうんです。でも、わたしは、がくせいよりもむしろいっぱんのしゃかいじんのかた、こうれいのかたなどをたいしょうにしたものをつくってみたいとかんがえています。"]
+        japanese: "いいえ、まだありませんが、これから勉強するつもりです。",
+        reading: "いいえ、まだ ありません が、これから べんきょう する つもり です。",
+        romaji: "Iie, mada arimasen ga, korekara benkyō suru tsumori desu.",
+        english: "No, not yet, but I plan to study from now on.",
+        vietnamese: "Chưa, nhưng tôi định học từ bây giờ.",
+        acceptedAnswers: ["いいえ、まだありませんが、これから勉強するつもりです。", "いいえ、まだありませんが、これからべんきょうするつもりです。"]
       },
       {
         id: 11,
+        speaker: "B",
+        japanese: "夏休みには北海道の農家にホームステイする予定です。",
+        reading: "なつやすみ には ほっかいどう の のうか に ほーむすてい する よてい です。",
+        romaji: "Natsuyasumi ni wa Hokkaidō no nōka ni hōmusutei suru yotei desu.",
+        english: "I'm planning to do a home-stay at a farm in Hokkaido this summer.",
+        vietnamese: "Kỳ nghỉ hè tôi dự định ở lại với một nông gia ở Hokkaido.",
+        acceptedAnswers: ["夏休みには北海道の農家にホームステイする予定です。", "なつやすみにはほっかいどうののうかにほーむすていするよていです。"]
+      },
+      {
+        id: 12,
+        speaker: "B",
+        japanese: "また、日本人を受け入れたことがある韓国人の友人から、そのときの経験について聞き取りをする約束をしました。",
+        reading: "また、にほんじん を うけいれた こと が ある かんこくじん の ゆうじん から、その とき の けいけん に ついて ききとり を する やくそく を しました。",
+        romaji: "Mata, Nihonjin o ukeireta koto ga aru Kankokujin no yūjin kara, sono toki no keiken ni tsuite kikitori o suru yakusoku o shimashita.",
+        english: "I've also arranged to interview a Korean friend who has hosted Japanese people, to hear about their experience.",
+        vietnamese: "Tôi cũng đã hẹn phỏng vấn một người bạn Hàn Quốc từng tiếp nhận người Nhật để nghe về kinh nghiệm của họ.",
+        acceptedAnswers: ["また、日本人を受け入れたことがある韓国人の友人から、そのときの経験について聞き取りをする約束をしました。", "また、にほんじんをうけいれたことがあるかんこくじんのゆうじんから、そのときのけいけんについてききとりをするやくそくをしました。"]
+      },
+      {
+        id: 13,
+        speaker: "B",
+        japanese: "そして、気がついたことをまとめていこうと思っています。",
+        reading: "そして、きがついた こと を まとめて いこう と おもって います。",
+        romaji: "Soshite, ki ga tsuita koto o matomete ikō to omotte imasu.",
+        english: "I plan to compile what I learn.",
+        vietnamese: "Và tôi sẽ tổng hợp những gì tôi học được.",
+        acceptedAnswers: ["そして、気がついたことをまとめていこうと思っています。", "そして、きがついたことをまとめていこうとおもっています。"]
+      },
+      {
+        id: 14,
+        speaker: "A",
+        japanese: "うん。まー、おもしろい発想だとは思うんですがね。",
+        reading: "うん。まー、おもしろい はっそう だ と は おもう ん です が ね。",
+        romaji: "Un. Mā, omoshiroi hassō da to wa omoun desu ga ne.",
+        english: "Hmm. Well, I do think it's an interesting idea.",
+        vietnamese: "Ừ. Tôi nghĩ đó là ý tưởng thú vị đấy.",
+        acceptedAnswers: ["うん。まー、おもしろい発想だとは思うんですがね。", "うん。まー、おもしろいはっそうだとはおもうんですがね。"]
+      },
+      {
+        id: 15,
+        speaker: "A",
+        japanese: "あー、こういうプランは留学斡旋会社なんかでやってみたほうがいいんじゃないかな。",
+        reading: "あー、こういう ぷらん は りゅうがく あっせん かいしゃ なんか で やってみた ほう が いい ん じゃ ない かな。",
+        romaji: "Ā, kō iu puran wa ryūgaku assen kaisha nanka de yattemita hō ga iin ja nai kana.",
+        english: "But you know, this kind of plan might be better tried at a study-abroad agency.",
+        vietnamese: "Nhưng loại kế hoạch này có lẽ nên thử ở các công ty môi giới du học.",
+        acceptedAnswers: ["あー、こういうプランは留学斡旋会社なんかでやってみたほうがいいんじゃないかな。", "あー、こういうぷらんはりゅうがくあっせんかいしゃなんかでやってみたほうがいいんじゃないかな。"]
+      },
+      {
+        id: 16,
+        speaker: "A",
+        japanese: "うちではまだやったことないし、未知数だね。",
+        reading: "うち では まだ やった こと ない し、みちすう だ ね。",
+        romaji: "Uchi de wa mada yatta koto nai shi, michisū da ne.",
+        english: "We haven't done anything like this, and it's an unknown quantity.",
+        vietnamese: "Chúng tôi chưa làm điều này bao giờ, và đây là ẩn số.",
+        acceptedAnswers: ["うちではまだやったことないし、未知数だね。", "うちではまだやったことないし、みちすうだね。"]
+      },
+      {
+        id: 17,
+        speaker: "B",
+        japanese: "そうかもしれませんが、留学斡旋専門の会社では、学生が中心だと思うんです。",
+        reading: "そう かも しれません が、りゅうがく あっせん せんもん の かいしゃ では、がくせい が ちゅうしん だ と おもう ん です。",
+        romaji: "Sō kamo shiremasen ga, ryūgaku assen senmon no kaisha de wa, gakusei ga chūshin da to omoun desu.",
+        english: "That may be so, but I think study-abroad agencies are mainly focused on students.",
+        vietnamese: "Có thể vậy, nhưng tôi nghĩ các công ty môi giới du học chủ yếu tập trung vào học sinh.",
+        acceptedAnswers: ["そうかもしれませんが、留学斡旋専門の会社では、学生が中心だと思うんです。", "そうかもしれませんが、りゅうがくあっせんせんもんのかいしゃでは、がくせいがちゅうしんだとおもうんです。"]
+      },
+      {
+        id: 18,
+        speaker: "B",
+        japanese: "でも、私は、学生よりもむしろ一般の社会人の方、高齢の方などを対象にしたものを作ってみたいと考えています。",
+        reading: "でも、わたし は、がくせい より も むしろ いっぱん の しゃかいじん の かた、こうれい の かた など を たいしょう に した もの を つくってみたい と かんがえています。",
+        romaji: "Demo, watashi wa, gakusei yori mo mushiro ippan no shakaijin no kata, kōrei no kata nado o taishō ni shita mono o tsukutte mitai to kangaete imasu.",
+        english: "However, I'd like to create something targeting working adults and elderly people rather than students.",
+        vietnamese: "Tuy nhiên, tôi muốn tạo ra thứ gì đó dành cho người đi làm thông thường và người cao tuổi thay vì học sinh.",
+        acceptedAnswers: ["でも、私は、学生よりもむしろ一般の社会人の方、高齢の方などを対象にしたものを作ってみたいと考えています。", "でも、わたしは、がくせいよりもむしろいっぱんのしゃかいじんのかた、こうれいのかたなどをたいしょうにしたものをつくってみたいとかんがえています。"]
+      },
+      {
+        id: 19,
         speaker: "A",
         japanese: "そうですか。ま、ほかでやっているのとどう差別化を図るかが問題でしょうね。",
         reading: "そう です か。ま、ほか で やってる の と どう さべつか を はかる か が もんだい でしょう ね。",
         romaji: "Sō desu ka. Ma, hoka de yatteru no to dō sabetsuka o hakaru ka ga mondai deshō ne.",
         english: "I see. Well, how you differentiate from what others are doing will be the key question.",
-        vietnamese: "Vậy ư. Vấn đề là làm thế nào để khác biệt so với những gì người khác đang làm.",
+        vietnamese: "Vấn đề là làm thế nào để khác biệt so với những gì người khác đang làm.",
         acceptedAnswers: ["そうですか。ま、ほかでやっているのとどう差別化を図るかが問題でしょうね。", "そうですか。ま、ほかでやっているのとどうさべつかをはかるかがもんだいでしょうね。"]
       },
       {
-        id: 12,
+        id: 20,
         speaker: "B",
         japanese: "はい。そのあたりを研究して、実現に向けて努力したいと思います。",
         reading: "はい。その あたり を けんきゅう して、じつげん に むけて どりょく したい と おもいます。",
@@ -924,17 +1084,27 @@ export default [
         acceptedAnswers: ["はい。そのあたりを研究して、実現に向けて努力したいと思います。", "はい。そのあたりをけんきゅうして、じつげんにむけてどりょくしたいとおもいます。"]
       },
       {
-        id: 13,
+        id: 21,
         speaker: "A",
-        japanese: "そうですか。ところで李さんはどうして日本で就職しようと思ったんですか？韓国の会社でも同じようなことは出来ると思いますけど。",
-        reading: "そう です か。ところ で り さん は どうして にほん で しゅうしょく しよう と おもった ん です か？かんこく の かいしゃ でも おなじ よう な こと は できる と おもいます けど。",
-        romaji: "Sō desu ka. Tokoro de Ri-san wa dōshite Nihon de shūshoku shiyō to omotta n desu ka? Kankoku no kaisha demo onaji yō na koto wa dekiru to omoimasu kedo.",
-        english: "I see. By the way, why did you decide to seek employment in Japan? I would think a Korean company could do the same kind of thing.",
-        vietnamese: "Vậy ư. Nhân tiện, tại sao bạn muốn xin việc ở Nhật? Tôi nghĩ các công ty Hàn Quốc cũng có thể làm điều tương tự.",
-        acceptedAnswers: ["そうですか。ところで李さんはどうして日本で就職しようと思ったんですか？韓国の会社でも同じようなことは出来ると思いますけど。", "そうですか。ところでりさんはどうしてにほんでしゅうしょくしようとおもったんですか？かんこくのかいしゃでもおなじようなことはできるとおもいますけど。"]
+        japanese: "そうですか。",
+        reading: "そう です か。",
+        romaji: "Sō desu ka.",
+        english: "I see.",
+        vietnamese: "Vậy ư.",
+        acceptedAnswers: ["そうですか。", "そうですか。"]
       },
       {
-        id: 14,
+        id: 22,
+        speaker: "A",
+        japanese: "ところで李さんはどうして日本で就職しようと思ったんですか？韓国の会社でも同じようなことは出来ると思いますけど。",
+        reading: "ところ で り さん は どうして にほん で しゅうしょく しよう と おもった ん です か？かんこく の かいしゃ でも おなじ よう な こと は できる と おもいます けど。",
+        romaji: "Tokoro de Ri-san wa dōshite Nihon de shūshoku shiyō to omotta n desu ka? Kankoku no kaisha demo onaji yō na koto wa dekiru to omoimasu kedo.",
+        english: "By the way, why did you decide to seek employment in Japan? I would think a Korean company could do the same kind of thing.",
+        vietnamese: "Nhân tiện, tại sao bạn muốn xin việc ở Nhật? Tôi nghĩ các công ty Hàn Quốc cũng có thể làm điều tương tự.",
+        acceptedAnswers: ["ところで李さんはどうして日本で就職しようと思ったんですか？韓国の会社でも同じようなことは出来ると思いますけど。", "ところでりさんはどうしてにほんでしゅうしょくしようとおもったんですか？かんこくのかいしゃでもおなじようなことはできるとおもいますけど。"]
+      },
+      {
+        id: 23,
         speaker: "B",
         japanese: "はい。確かに韓国にある会社でも可能だとは思いますが、日本の文化や風土をよく理解することがこの仕事には重要だと思いますので、日本の会社で働きたいと考えています。",
         reading: "はい。たしかに かんこく に ある かいしゃ でも かのう だ と は おもいます が、にほん の ぶんか や ふうど を よく りかい する こと が この しごと に は じゅうよう だ と おもいます ので、にほん の かいしゃ で はたらきたい と かんがえています。",
