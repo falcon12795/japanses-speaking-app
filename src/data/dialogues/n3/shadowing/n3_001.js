@@ -502,19 +502,33 @@ export default [
             {
                 id: 3,
                 speaker: "A",
-                japanese: "それがね、五つが五つとも、目覚まし時計だったんだ。少しでも遅刻がなくなるようにってね。",
-                reading: "それがねいつつがいつつともめざましどけいだったんだすこしでもちこくがなくなるようにってね",
-                romaji: "sore ga ne, itsutsu ga itsutsu tomo, mezamashidokei datta n da. sukoshi demo chikoku ga nakunaru you ni tte ne.",
-                english: "The thing is, all five of them were alarm clocks. They said it was so I would stop being late, even a little.",
-                vietnamese: "Vấn đề là cả năm món đều là đồng hồ báo thức. Họ bảo là để tớ bớt đi muộn hơn.",
+                japanese: "それがね、五つが五つとも、目覚まし時計だったんだ。",
+                reading: "それがねいつつがいつつともめざましどけいだったんだ",
+                romaji: "sore ga ne, itsutsu ga itsutsu tomo, mezamashidokei datta n da.",
+                english: "The thing is, all five of them were alarm clocks.",
+                vietnamese: "Vấn đề là cả năm món đều là đồng hồ báo thức.",
                 acceptedAnswers: [
-                    "それがね五つが五つとも目覚まし時計だったんだ少しでも遅刻がなくなるようにってね",
-                    "それがねいつつがいつつともめざまし時計だったんだ少しでも遅刻がなくなるようにってね",
-                    "それがねいつつがいつつともめざましどけいだったんだすこしでもちこくがなくなるようにってね"
+                    "それがね五つが五つとも目覚まし時計だったんだ",
+                    "それがねいつつがいつつともめざまし時計だったんだ",
+                    "それがねいつつがいつつともめざましどけいだったんだ"
                 ]
             },
             {
                 id: 4,
+                speaker: "A",
+                japanese: "少しでも遅刻がなくなるようにってね。",
+                reading: "すこしでもちこくがなくなるようにってね",
+                romaji: "sukoshi demo chikoku ga nakunaru you ni tte ne.",
+                english: "They said it was so I would stop being late, even a little.",
+                vietnamese: "Họ bảo là để tớ bớt đi muộn hơn.",
+                acceptedAnswers: [
+                    "少しでも遅刻がなくなるようにってね",
+                    "少しでも遅刻がなくなるようにってね",
+                    "すこしでもちこくがなくなるようにってね"
+                ]
+            },
+            {
+                id: 5,
                 speaker: "B",
                 japanese: "みんな、あんたのことよくわかってるんだね。",
                 reading: "みんなあんたのことよくわかってるんだね",
@@ -527,7 +541,7 @@ export default [
                 ]
             },
             {
-                id: 5,
+                id: 6,
                 speaker: "A",
                 japanese: "まー、そう言われれば、そうなんだけど…。",
                 reading: "まーそういわれればそうなんだけど",
@@ -541,7 +555,7 @@ export default [
                 ]
             },
             {
-                id: 6,
+                id: 7,
                 speaker: "B",
                 japanese: "よかったじゃない、これで遅刻がなくなるなら。頑張りなさいよ。",
                 reading: "よかったじゃないこれでちこくがなくなるならがんばりなさいよ",
