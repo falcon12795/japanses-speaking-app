@@ -1,4 +1,4 @@
-export const N3_003_DIALOGUE = [
+export default [
     {
         id: "lesson3_1",
         level: "N3",

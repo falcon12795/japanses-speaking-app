@@ -1,4 +1,4 @@
-export const N3_005_DIALOGUE = [
+export default [
     {
         id: "lesson5_1",
         level: "N3",
@@ -873,6 +873,300 @@ export const N3_005_DIALOGUE = [
                 acceptedAnswers: [
                     "じゃあ早速お茶入れていただきますわ",
                     "じゃあさっそくおちゃいれていただきますわ"
+                ]
+            }
+        ]
+    },
+    {
+        id: "lesson5_11",
+        level: "N3",
+        lesson: "Lesson 5",
+        title: "受験勉強の追い込み",
+        description: "Encouraging someone in the final stretch of exam prep.",
+        lines: [
+            {
+                id: 1,
+                speaker: "A",
+                japanese: "いよいよ受験勉強も追い込みですね。",
+                reading: "いよいよじゅけんべんきょうもおいこみですね",
+                romaji: "iyoiyo juken benkyou mo oikomi desu ne",
+                english: "You're really getting into the final stretch of exam prep now.",
+                vietnamese: "Giai đoạn nước rút ôn thi đã đến thật rồi nhỉ.",
+                acceptedAnswers: [
+                    "いよいよ受験勉強も追い込みですね",
+                    "いよいよじゅけんべんきょうもおいこみですね"
+                ]
+            },
+            {
+                id: 2,
+                speaker: "B",
+                japanese: "はい。あとがないので、ここで一発決めようと思ってます。",
+                reading: "はい あとがないので ここでいっぱつきめようとおもってます",
+                romaji: "hai ato ga nai node koko de ippatsu kimeyou to omottemasu",
+                english: "Yes. Since I have no time left, I'm planning to give it my all here.",
+                vietnamese: "Vâng. Vì không còn thời gian nữa, tôi định dốc toàn lực ở đây.",
+                acceptedAnswers: [
+                    "はいあとがないのでここで一発決めようと思ってます",
+                    "はいあとがないのでここでいっぱつきめようとおもってます"
+                ]
+            },
+            {
+                id: 3,
+                speaker: "A",
+                japanese: "その意気込みなら合格間違いなしですね。頑張ってください。",
+                reading: "そのいきごみならごうかくまちがいなしですね がんばってください",
+                romaji: "sono ikigomi nara goukaku machigai nashi desu ne ganbatte kudasai",
+                english: "With that spirit, passing is a sure thing. Do your best!",
+                vietnamese: "Với tinh thần như vậy thì thi đậu là chắc chắn rồi. Cố lên nhé!",
+                acceptedAnswers: [
+                    "その意気込みなら合格間違いなしですね頑張ってください",
+                    "そのいきごみならごうかくまちがいなしですねがんばってください"
+                ]
+            },
+            {
+                id: 4,
+                speaker: "B",
+                japanese: "ありがとうございます。頑張ります。",
+                reading: "ありがとうございます がんばります",
+                romaji: "arigatou gozaimasu ganbarimasu",
+                english: "Thank you. I'll do my best.",
+                vietnamese: "Cảm ơn anh. Tôi sẽ cố gắng.",
+                acceptedAnswers: [
+                    "ありがとうございます頑張ります",
+                    "ありがとうございますがんばります"
+                ]
+            }
+        ]
+    },
+    {
+        id: "lesson5_12",
+        level: "N3",
+        lesson: "Lesson 5",
+        title: "卒業後の就職",
+        description: "Talking about working in Japan after graduation.",
+        lines: [
+            {
+                id: 1,
+                speaker: "A",
+                japanese: "卒業後は何をしたいですか？",
+                reading: "そつぎょうごはなにをしたいですか",
+                romaji: "sotsugyou go wa nani o shitai desu ka",
+                english: "What do you want to do after graduation?",
+                vietnamese: "Sau khi tốt nghiệp bạn muốn làm gì?",
+                acceptedAnswers: [
+                    "卒業後は何をしたいですか",
+                    "そつぎょうごはなにをしたいですか"
+                ]
+            },
+            {
+                id: 2,
+                speaker: "B",
+                japanese: "日本でしばらく仕事をしてみたいんですが…。",
+                reading: "にほんでしばらくしごとをしてみたいんですが",
+                romaji: "nihon de shibaraku shigoto o shite mitain desu ga",
+                english: "I'd like to work in Japan for a while...",
+                vietnamese: "Tôi muốn thử làm việc ở Nhật một thời gian...",
+                acceptedAnswers: [
+                    "日本でしばらく仕事をしてみたいんですが",
+                    "にほんでしばらくしごとをしてみたいんですが"
+                ]
+            },
+            {
+                id: 3,
+                speaker: "A",
+                japanese: "外国人の就職はなかなか難しいけど、これをしたいという気持ちがあれば可能性はありますよ。",
+                reading: "がいこくじんのしゅうしょくはなかなかむずかしいけど これをしたいというきもちがあればかのうせいはありますよ",
+                romaji: "gaikokujin no shuushoku wa nakanaka muzukashii kedo kore o shitai to iu kimochi ga areba kanousei wa arimasu yo",
+                english: "Finding employment as a foreigner is quite difficult, but if you have the desire, there are possibilities.",
+                vietnamese: "Việc tìm việc làm của người nước ngoài khá khó, nhưng nếu bạn có tâm huyết thì vẫn có cơ hội đấy.",
+                acceptedAnswers: [
+                    "外国人の就職はなかなか難しいけどこれをしたいという気持ちがあれば可能性はありますよ",
+                    "がいこくじんのしゅうしょくはなかなかむずかしいけどこれをしたいというきもちがあればかのうせいはありますよ"
+                ]
+            },
+            {
+                id: 4,
+                speaker: "B",
+                japanese: "そうですか…。私は一応IT企業を志望しているんですけど。",
+                reading: "そうですか わたしはいちおうアイティーきぎょうをしぼうしているんですけど",
+                romaji: "sou desu ka watashi wa ichijou IT kigyou o shibou shiteiru n desu kedo",
+                english: "I see... I'm aiming for an IT company, for now at least.",
+                vietnamese: "Vậy ạ... Dù sao tôi cũng đang nhắm đến các công ty IT.",
+                acceptedAnswers: [
+                    "そうですか私は一応IT企業を志望しているんですけど",
+                    "そうですかわたしはいちおうアイティーきぎょうをしぼうしているんですけど"
+                ]
+            }
+        ]
+    },
+    {
+        id: "lesson5_13",
+        level: "N3",
+        lesson: "Lesson 5",
+        title: "箱根温泉",
+        description: "Talking about soaking in hot springs in Hakone.",
+        lines: [
+            {
+                id: 1,
+                speaker: "A",
+                japanese: "来週は箱根ですね。箱根に行ったら、温泉たくさん入りたいですね。",
+                reading: "らいしゅうははこねですね はこねにいったら おんせんたくさんはいりたいですね",
+                romaji: "raishuu wa hakone desu ne hakone ni ittara onsen takusan hairitai desu ne",
+                english: "Next week is Hakone, right? When we go, I'd love to soak in lots of hot springs.",
+                vietnamese: "Tuần sau là đi Hakone nhỉ. Đến Hakone rồi, tôi muốn tắm suối nước nóng nhiều thật nhiều.",
+                acceptedAnswers: [
+                    "来週は箱根ですね箱根に行ったら温泉たくさん入りたいですね",
+                    "らいしゅうははこねですねはこねにいったらおんせんたくさんはいりたいですね"
+                ]
+            },
+            {
+                id: 2,
+                speaker: "B",
+                japanese: "ええ。少なくとも5回は入りましょうね。",
+                reading: "ええ すくなくとも5かいははいりましょうね",
+                romaji: "ee sukunakutomo go kai wa hairimashou ne",
+                english: "Yes. Let's soak in at least 5 times.",
+                vietnamese: "Vâng. Ít nhất cũng phải tắm 5 lần nhỉ.",
+                acceptedAnswers: [
+                    "ええ少なくとも5回は入りましょうね",
+                    "ええすくなくとも5かいははいりましょうね"
+                ]
+            },
+            {
+                id: 3,
+                speaker: "A",
+                japanese: "でも、あんまり入りすぎると湯あたりして体に良くないって言いますよ。",
+                reading: "でも あんまりはいりすぎるとゆあたりしてからだによくないっていいますよ",
+                romaji: "demo anmari hairi sugiru to yuatari shite karada ni yokunai tte iimasu yo",
+                english: "But they say soaking too much can cause heat exhaustion and be bad for your body.",
+                vietnamese: "Nhưng người ta bảo ngâm quá nhiều dễ bị say nóng và không tốt cho cơ thể đấy.",
+                acceptedAnswers: [
+                    "でもあんまり入りすぎると湯あたりして体に良くないって言いますよ",
+                    "でもあんまりはいりすぎるとゆあたりしてからだによくないっていいますよ"
+                ]
+            },
+            {
+                id: 4,
+                speaker: "B",
+                japanese: "あー、そうなんですか。てっきり体にいいと思ってました。",
+                reading: "あー そうなんですか てっきりからだにいいとおもってました",
+                romaji: "aa sou nan desu ka tekkiri karada ni ii to omottemashita",
+                english: "Oh, really? I thought it was supposed to be good for you.",
+                vietnamese: "Ôi vậy sao. Tôi cứ tưởng là tắm suối tốt cho sức khỏe lắm.",
+                acceptedAnswers: [
+                    "あーそうなんですかてっきり体にいいと思ってました",
+                    "あーそうなんですかてっきりからだにいいとおもってました"
+                ]
+            },
+            {
+                id: 5,
+                speaker: "A",
+                japanese: "そうでもないみたいですよ。",
+                reading: "そうでもないみたいですよ",
+                romaji: "sou demo nai mitai desu yo",
+                english: "It seems like it's not quite like that.",
+                vietnamese: "Có vẻ không hẳn vậy đâu.",
+                acceptedAnswers: [
+                    "そうでもないみたいですよ"
+                ]
+            },
+            {
+                id: 6,
+                speaker: "B",
+                japanese: "何でも過ぎると良くないんでしょうね。",
+                reading: "なんでもすぎるとよくないんでしょうね",
+                romaji: "nandemo sugiru to yokunain deshou ne",
+                english: "I guess too much of anything isn't good.",
+                vietnamese: "Cái gì quá cũng không tốt nhỉ.",
+                acceptedAnswers: [
+                    "何でも過ぎると良くないんでしょうね",
+                    "なんでもすぎるとよくないんでしょうね"
+                ]
+            }
+        ]
+    },
+    {
+        id: "lesson5_14",
+        level: "N3",
+        lesson: "Lesson 5",
+        title: "松下さんの近況",
+        description: "Wondering about someone who has been absent.",
+        lines: [
+            {
+                id: 1,
+                speaker: "A",
+                japanese: "最近、松下さんの姿が見えないけど、どうしたのかしら。",
+                reading: "さいきん まつしたさんのすがたがみえないけど どうしたのかしら",
+                romaji: "saikin matsushita san no sugata ga mienai kedo doushita no kashira",
+                english: "I haven't seen Matsushita-san lately. I wonder what happened.",
+                vietnamese: "Dạo này không thấy bóng dáng anh Matsushita đâu cả, không biết có chuyện gì không nhỉ.",
+                acceptedAnswers: [
+                    "最近松下さんの姿が見えないけどどうしたのかしら",
+                    "さいきんまつしたさんのすがたがみえないけどどうしたのかしら"
+                ]
+            },
+            {
+                id: 2,
+                speaker: "B",
+                japanese: "何でも、ご家族にご不幸があったとかで、大変だったみたい。",
+                reading: "なんでも ごかぞくにごふこうがあったとかで たいへんだったみたい",
+                romaji: "nandemo gokazoku ni gofukou ga atta toka de taihen datta mitai",
+                english: "Apparently there was some misfortune in his family, and it seems it's been quite tough.",
+                vietnamese: "Nghe nói gia đình anh ấy có chuyện không may, có vẻ đã rất vất vả.",
+                acceptedAnswers: [
+                    "何でもご家族にご不幸があったとかで大変だったみたい",
+                    "なんでもごかぞくにごふこうがあったとかでたいへんだったみたい"
+                ]
+            },
+            {
+                id: 3,
+                speaker: "A",
+                japanese: "あら、そうなの。だから、電話しても出なかったのね。",
+                reading: "あら そうなの だから でんわしてもでなかったのね",
+                romaji: "ara sou na no dakara denwa shite mo denakatta no ne",
+                english: "Oh, is that so. That's why he didn't answer when I called.",
+                vietnamese: "Ôi vậy à. Vì thế mà gọi điện cũng không bắt máy.",
+                acceptedAnswers: [
+                    "あらそうなのだから電話しても出なかったのね",
+                    "あらそうなのだからでんわしてもでなかったのね"
+                ]
+            },
+            {
+                id: 4,
+                speaker: "B",
+                japanese: "ええ、前はメール入れたらすぐに返事くれたんですけどね。",
+                reading: "ええ まえはメールいれたらすぐにへんじくれたんですけどね",
+                romaji: "ee mae wa meeru iretara sugu ni henji kureta n desu kedo ne",
+                english: "Yes, he used to reply right away when I messaged him before.",
+                vietnamese: "Vâng, trước đây nhắn tin là trả lời ngay, thế mà bây giờ...",
+                acceptedAnswers: [
+                    "ええ前はメール入れたらすぐに返事くれたんですけどね",
+                    "ええまえはメールいれたらすぐにへんじくれたんですけどね"
+                ]
+            },
+            {
+                id: 5,
+                speaker: "A",
+                japanese: "どなたがお亡くなりになったんでしょうねー。",
+                reading: "どなたがおなくなりになったんでしょうねー",
+                romaji: "donata ga onakunari ni nattan deshou nee",
+                english: "I wonder who passed away.",
+                vietnamese: "Không biết ai đã mất nhỉ.",
+                acceptedAnswers: [
+                    "どなたがお亡くなりになったんでしょうねー",
+                    "どなたがおなくなりになったんでしょうねー"
+                ]
+            },
+            {
+                id: 6,
+                speaker: "B",
+                japanese: "さー、どなたでしょうかねー。",
+                reading: "さー どなたでしょうかねー",
+                romaji: "saa donata deshou ka nee",
+                english: "Who knows...",
+                vietnamese: "Không biết nữa, không biết là ai nhỉ.",
+                acceptedAnswers: [
+                    "さーどなたでしょうかねー"
                 ]
             }
         ]
