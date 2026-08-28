@@ -1,37 +1,33 @@
 import { useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { GRAMMAR } from "../data/grammar";
+import { useLanguage } from "../contexts/LanguageContext";
 import CollapseGroup from "./common/CollapseGroup";
 import EmptyState from "./common/EmptyState";
 import FilterBar from "./common/FilterBar";
 import Panel from "./common/Panel";
 import Button from "./common/Button";
 
-function sortLevels(levels) {
-  const order = {
-    IT: 0,
-    N1: 1,
-    N2: 2,
-    N3: 3,
-    N4: 4,
-    N5: 5,
-  };
+function sortGrammarLevels(levels) {
+  const jlptOrder = { IT: 0, N1: 1, N2: 2, N3: 3, N4: 4, N5: 5 };
+  const hasJlpt = levels.some((l) => l in jlptOrder);
 
-  return [...levels].sort((a, b) => {
-    return (order[a] || 999) - (order[b] || 999);
-  });
+  if (hasJlpt) {
+    return [...levels].sort((a, b) => (jlptOrder[a] || 999) - (jlptOrder[b] || 999));
+  }
+
+  return [...levels].sort();
 }
 
-function getAvailableGrammarLevels() {
+function getAvailableGrammarLevels(grammar) {
   const levels = new Set();
 
-  for (const item of GRAMMAR) {
+  for (const item of grammar) {
     if (item.level) {
       levels.add(item.level);
     }
   }
 
-  return sortLevels([...levels]);
+  return sortGrammarLevels([...levels]);
 }
 
 function getOpenLessonFromParams(searchParams) {
@@ -40,14 +36,15 @@ function getOpenLessonFromParams(searchParams) {
 
 export default function GrammarList({ onSelectGrammar }) {
   const navigate = useNavigate();
+  const { grammar } = useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedGrammarIds, setSelectedGrammarIds] = useState([]);
 
-  const availableLevels = useMemo(() => getAvailableGrammarLevels(), []);
+  const availableLevels = useMemo(() => getAvailableGrammarLevels(grammar), [grammar]);
 
   const defaultLevel = availableLevels.includes("N3")
     ? "N3"
-    : availableLevels[0] || "N3";
+    : availableLevels[0] || availableLevels[0] || "A1";
 
   const selectedLevel = searchParams.get("level") || defaultLevel;
   const openLesson = getOpenLessonFromParams(searchParams);
@@ -60,8 +57,8 @@ export default function GrammarList({ onSelectGrammar }) {
   };
 
   const grammarByLevel = useMemo(() => {
-    return GRAMMAR.filter((item) => item.level === selectedLevel);
-  }, [selectedLevel]);
+    return grammar.filter((item) => item.level === selectedLevel);
+  }, [grammar, selectedLevel]);
 
   const lessonGroups = useMemo(() => {
     const lessonMap = new Map();
@@ -201,38 +198,28 @@ export default function GrammarList({ onSelectGrammar }) {
 
             <CollapseGroup
               key={lesson}
-              title={
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    gap: "12px",
+              title={lesson}
+              headerActions={
+                <Button
+                  variant={
+                    isLessonFullySelected(grammarItems)
+                      ? "primary"
+                      : "secondary"
+                  }
+                  size="small"
+                  onClick={(event) => {
+                    event.stopPropagation();
+
+                    handleSelectAllLesson(
+                      lesson,
+                      grammarItems
+                    );
                   }}
                 >
-                  <span>{lesson}</span>
-
-                  <Button
-                    variant={
-                      isLessonFullySelected(grammarItems)
-                        ? "primary"
-                        : "secondary"
-                    }
-                    size="small"
-                    onClick={(event) => {
-                      event.stopPropagation();
-
-                      handleSelectAllLesson(
-                        lesson,
-                        grammarItems
-                      );
-                    }}
-                  >
-                    {isLessonFullySelected(grammarItems)
-                      ? "✓ Selected All"
-                      : "Select All"}
-                  </Button>
-                </div>
+                  {isLessonFullySelected(grammarItems)
+                    ? "✓ Selected All"
+                    : "Select All"}
+                </Button>
               }
               count={`${grammarItems.length} ${grammarItems.length === 1
                   ? "grammar"

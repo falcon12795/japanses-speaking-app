@@ -19,58 +19,40 @@ import DialoguePractice from "./components/DialoguePractice";
 import JLPTQuiz from "./components/JLPTQuiz";
 import ProgressPanel from "./components/ProgressPanel";
 
-import { loadProgress, saveProgress } from "./utils/storage";
-import { DIALOGUES } from "./data/dialogues";
-import { VOCABULARY } from "./data/vocabulary";
+import { loadProgress, saveProgress, loadLanguage, saveLanguage } from "./utils/storage";
+import LanguageSelector, { LANGUAGES } from "./components/LanguageSelector";
+import { LanguageProvider, useLanguage } from "./contexts/LanguageContext";
 import GrammarList from "./components/GrammarList";
 import GrammarDetail from "./components/GrammarDetail";
-import { GRAMMAR } from "./data/grammar";
 import GrammarTraining from "./components/GrammarTraining";
 import { buildVocabularyTopics, filterWordsByStatus } from "./utils/buildVocabularyTopics";
 
-const MENU_ITEMS = [
-  {
-    to: "/vocabulary",
-    label: "言葉",
-    icon: "📚",
-  },
-  {
-    to: "/grammar",
-    label: "文法",
-    icon: "📖",
-  },
-  {
-    to: "/dialogue",
-    label: "会話",
-    icon: "💬",
-  },
-  {
-    to: "/jlpt",
-    label: "JLPT Quiz",
-    icon: "📝",
-  },
-  {
-    to: "/progress",
-    label: "進捗",
-    icon: "📈",
-  },
-];
+function Sidebar({ sidebarOpen, setSidebarOpen, language, onChangeLang }) {
+  const lang = LANGUAGES.find((l) => l.code === language);
+  const { menuLabels } = useLanguage();
 
-function Sidebar({ sidebarOpen, setSidebarOpen }) {
+  const menuItems = [
+    { to: "/vocabulary", label: menuLabels.vocabulary, icon: "📚" },
+    { to: "/grammar",    label: menuLabels.grammar,    icon: "📖" },
+    { to: "/dialogue",   label: menuLabels.dialogue,   icon: "💬" },
+    { to: "/jlpt",       label: menuLabels.quiz,       icon: "📝" },
+    { to: "/progress",   label: menuLabels.progress,   icon: "📈" },
+  ];
+
   return (
     <>
       <aside className={`sidebar ${sidebarOpen ? "sidebar-open" : ""}`}>
         <div className="sidebar-brand">
-          <div className="brand-logo">日</div>
+          <div className="brand-logo">{lang ? lang.flag : "🌐"}</div>
 
           <div>
-            <h1>日本語</h1>
+            <h1>{lang ? lang.nativeName : "Learn"}</h1>
             <p>Learning App</p>
           </div>
         </div>
 
         <nav className="sidebar-menu">
-          {MENU_ITEMS.map((item) => (
+          {menuItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
@@ -88,7 +70,21 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
         </nav>
 
         <div className="sidebar-footer">
-          <p>今日も頑張りましょう！</p>
+          <button
+            className="sidebar-lang-btn"
+            onClick={onChangeLang}
+            aria-label="Change language"
+          >
+            <span className="sidebar-lang-flag">{lang ? lang.flag : "🌐"}</span>
+            <span className="sidebar-lang-text">
+              <span className="sidebar-lang-label">Learning</span>
+              <span className="sidebar-lang-name">{lang ? lang.name : "Choose language"}</span>
+            </span>
+            <span className="sidebar-lang-chevron">▼</span>
+          </button>
+          <div className="sidebar-footer-note">
+            <p>{menuLabels.footerNote}</p>
+          </div>
         </div>
       </aside>
 
@@ -122,14 +118,15 @@ function VocabularyTopicDetailPage({
   const navigate = useNavigate();
   const location = useLocation();
   const { topicId } = useParams();
+  const { vocabulary } = useLanguage();
 
   const decodedTopicId = decodeURIComponent(
     topicId || ""
   );
 
   const vocabularyTopics = useMemo(
-    () => buildVocabularyTopics(VOCABULARY),
-    []
+    () => buildVocabularyTopics(vocabulary),
+    [vocabulary]
   );
 
   const searchParams = useMemo(
@@ -390,6 +387,7 @@ function VocabularyFlashcardPage({
   onProgressChange,
 }) {
   const location = useLocation();
+  const { vocabulary } = useLanguage();
 
   const {
     level,
@@ -418,7 +416,7 @@ function VocabularyFlashcardPage({
   );
 
   const topicVocabulary = useMemo(() => {
-    return VOCABULARY.filter((item) => {
+    return vocabulary.filter((item) => {
       const itemSubject =
         item.subject || "Others";
 
@@ -553,9 +551,10 @@ function GrammarListPage() {
 function GrammarDetailPage() {
   const navigate = useNavigate();
   const { level, grammarId } = useParams();
+  const { grammar: grammarList } = useLanguage();
   const decodedLevel = decodeURIComponent(level || "");
   const decodedGrammarId = decodeURIComponent(grammarId || "");
-  const grammarListByLevel = GRAMMAR.filter(
+  const grammarListByLevel = grammarList.filter(
     (item) => item.level === decodedLevel
   );
   const currentIndex =
@@ -667,24 +666,25 @@ function DialoguePracticePage({ progress, onProgressChange }) {
   const navigate = useNavigate();
   const location = useLocation();
   const { dialogueId } = useParams();
+  const { dialogues } = useLanguage();
 
   const decodedDialogueId = decodeURIComponent(dialogueId || "");
 
-  const dialogueIndex = DIALOGUES.findIndex(
+  const dialogueIndex = dialogues.findIndex(
     (item) => String(item.id) === String(decodedDialogueId)
   );
 
   const selectedDialogue =
-    dialogueIndex === -1 ? null : DIALOGUES[dialogueIndex];
+    dialogueIndex === -1 ? null : dialogues[dialogueIndex];
 
 
   const handlePreviousDialogue = () => {
-    if (DIALOGUES.length === 0) return;
+    if (dialogues.length === 0) return;
 
     const previousIndex =
-      dialogueIndex <= 0 ? DIALOGUES.length - 1 : dialogueIndex - 1;
+      dialogueIndex <= 0 ? dialogues.length - 1 : dialogueIndex - 1;
 
-    navigate(`/dialogue/${encodeURIComponent(DIALOGUES[previousIndex].id)}`, {
+    navigate(`/dialogue/${encodeURIComponent(dialogues[previousIndex].id)}`, {
       state: {
         from: location.state?.from || "/dialogue",
       },
@@ -692,11 +692,11 @@ function DialoguePracticePage({ progress, onProgressChange }) {
   };
 
   const handleNextDialogue = () => {
-    if (DIALOGUES.length === 0) return;
+    if (dialogues.length === 0) return;
 
-    const nextIndex = (dialogueIndex + 1) % DIALOGUES.length;
+    const nextIndex = (dialogueIndex + 1) % dialogues.length;
 
-    navigate(`/dialogue/${encodeURIComponent(DIALOGUES[nextIndex].id)}`, {
+    navigate(`/dialogue/${encodeURIComponent(dialogues[nextIndex].id)}`, {
       state: {
         from: location.state?.from || "/dialogue",
       },
@@ -725,7 +725,7 @@ function DialoguePracticePage({ progress, onProgressChange }) {
     <DialoguePractice
       dialogue={selectedDialogue}
       dialogueIndex={dialogueIndex}
-      totalDialogues={DIALOGUES.length}
+      totalDialogues={dialogues.length}
       progress={progress}
       onProgressChange={onProgressChange}
       onPreviousDialogue={handlePreviousDialogue}
@@ -737,17 +737,47 @@ function DialoguePracticePage({ progress, onProgressChange }) {
 export default function App() {
   const [progress, setProgress] = useState(() => loadProgress());
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [language, setLanguage] = useState(() => loadLanguage());
+  const [showLangSelector, setShowLangSelector] = useState(false);
 
   const handleProgressChange = (nextProgress) => {
     setProgress(nextProgress);
     saveProgress(nextProgress);
   };
 
+  const handleSelectLanguage = (code) => {
+    saveLanguage(code);
+    setLanguage(code);
+    setShowLangSelector(false);
+  };
+
+  if (!language) {
+    return (
+      <LanguageProvider language="ja">
+        <LanguageSelector
+          currentCode={null}
+          onSelect={handleSelectLanguage}
+        />
+      </LanguageProvider>
+    );
+  }
+
   return (
-    <div className="app-shell">
+    <LanguageProvider language={language}>
+      <div className="app-shell">
+        {showLangSelector && (
+          <LanguageSelector
+            currentCode={language}
+            onSelect={handleSelectLanguage}
+            onClose={() => setShowLangSelector(false)}
+          />
+        )}
+
       <Sidebar
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
+        language={language}
+        onChangeLang={() => setShowLangSelector(true)}
       />
 
       <main className="main-content">
@@ -901,5 +931,6 @@ export default function App() {
         </Routes>
       </main>
     </div>
+    </LanguageProvider>
   );
 }

@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { JLPT_QUIZ } from "../data/jlptQuiz";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function JLPTQuiz({ progress, onProgressChange }) {
+  const { quiz, menuLabels } = useLanguage();
+  const JLPT_QUIZ = quiz;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [result, setResult] = useState("");
@@ -34,22 +36,30 @@ export default function JLPTQuiz({ progress, onProgressChange }) {
 
   return (
     <section className="panel">
-      <h2>JLPT Quiz</h2>
+      <h2>{menuLabels.quizTitle}</h2>
 
       <span className="level">{currentQuestion.level}</span>
 
       <h3>{currentQuestion.question}</h3>
 
       <div className="quiz-options">
-        {currentQuestion.options.map((option) => (
-          <button
-            key={option}
-            onClick={() => selectAnswer(option)}
-            disabled={selectedAnswer !== ""}
-          >
-            {option}
-          </button>
-        ))}
+        {currentQuestion.options.map((option) => {
+          let cls = "";
+          if (selectedAnswer !== "") {
+            if (option === currentQuestion.answer) cls = "quiz-correct";
+            else if (option === selectedAnswer) cls = "quiz-wrong";
+          }
+          return (
+            <button
+              key={option}
+              className={cls}
+              onClick={() => selectAnswer(option)}
+              disabled={selectedAnswer !== ""}
+            >
+              {option}
+            </button>
+          );
+        })}
       </div>
 
       {result && (

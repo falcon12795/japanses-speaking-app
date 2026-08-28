@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
-import { DIALOGUES_BY_LEVEL } from "../data/dialogues";
+import { useLanguage } from "../contexts/LanguageContext";
 import CollapseGroup from "./common/CollapseGroup";
 import EmptyState from "./common/EmptyState";
 import FilterBar from "./common/FilterBar";
@@ -15,24 +15,20 @@ const STATUS_FILTERS = [
   { value: "favorite", label: "Favorite" },
 ];
 
-function sortJlptLevels(levels) {
-  const order = {
-    IT: 0,
-    N1: 1,
-    N2: 2,
-    N3: 3,
-    N4: 4,
-    N5: 5,
-  };
+function sortDialogueLevels(levels) {
+  const jlptOrder = { IT: 0, N1: 1, N2: 2, N3: 3, N4: 4, N5: 5 };
+  const hasJlpt = levels.some((l) => l in jlptOrder);
 
-  return [...levels].sort((a, b) => {
-    return (order[a] || 999) - (order[b] || 999);
-  });
+  if (hasJlpt) {
+    return [...levels].sort((a, b) => (jlptOrder[a] || 999) - (jlptOrder[b] || 999));
+  }
+
+  return [...levels].sort();
 }
 
-function getAvailableDialogueLevels() {
-  return sortJlptLevels(
-    Object.entries(DIALOGUES_BY_LEVEL)
+function getAvailableDialogueLevels(dialoguesByLevel) {
+  return sortDialogueLevels(
+    Object.entries(dialoguesByLevel)
       .filter(([, dialogues]) => Array.isArray(dialogues) && dialogues.length > 0)
       .map(([level]) => level)
   );
@@ -63,9 +59,10 @@ function getOpenLessonFromParams(searchParams) {
 }
 
 export default function DialogueList({ progress = {}, onSelectDialogue }) {
+  const { dialoguesByLevel } = useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const availableLevels = useMemo(() => getAvailableDialogueLevels(), []);
+  const availableLevels = useMemo(() => getAvailableDialogueLevels(dialoguesByLevel), [dialoguesByLevel]);
   const defaultLevel = availableLevels[0] || "N3";
 
   const selectedLevel = searchParams.get("level") || defaultLevel;
@@ -93,9 +90,9 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
   };
 
   const filteredDialogues = useMemo(() => {
-    const dialoguesByLevel = DIALOGUES_BY_LEVEL[selectedLevel] || [];
+    const dialoguesByThisLevel = dialoguesByLevel[selectedLevel] || [];
 
-    return dialoguesByLevel.filter((dialogue) => {
+    return dialoguesByThisLevel.filter((dialogue) => {
       const status = getDialogueStatus(dialogue.id, progress);
 
       if (statusFilter === "all") return true;

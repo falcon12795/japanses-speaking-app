@@ -215,10 +215,30 @@ button.danger,
 .lesson-group {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 10px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
+}
+
+.collapse-header-row {
+  display: flex;
+  align-items: center;
+  background: var(--color-soft);
+  border-bottom: 1px solid transparent;
+  gap: 10px;
+}
+
+.collapse-header-row .collapse-header,
+.collapse-header-row .lesson-header {
+  flex: 1;
+  min-width: 0;
+  border-radius: 0;
+}
+
+.collapse-header-actions {
+  padding: 0 12px;
+  flex-shrink: 0;
 }
 
 .collapse-header,
@@ -312,4 +332,52 @@ button.danger,
 .line-status {
   text-align: center;
   font-weight: 700;
+}
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.quiz-options button {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  background: #ffffff;
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+
+.quiz-options button:not(:disabled):hover {
+  border-color: var(--color-primary);
+  background: #eff6ff;
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.quiz-options button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.quiz-options button.quiz-correct {
+  border-color: var(--color-success);
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.quiz-options button.quiz-wrong {
+  border-color: var(--color-danger);
+  background: #fff1f2;
+  color: var(--color-danger);
 }

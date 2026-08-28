@@ -13,8 +13,8 @@ import {
   Pause,
   Play,
 } from "lucide-react";
-import { speakJapaneseText, recognizeJapaneseSpeech } from "../utils/speech";
 import { calculateSpeechScoreWithAcceptedAnswers } from "../utils/scoring";
+import { useLanguage } from "../contexts/LanguageContext";
 
 import Badge from "./common/Badge";
 import Button from "./common/Button";
@@ -29,6 +29,7 @@ export default function DialoguePractice({
   onPreviousDialogue,
   onNextDialogue,
 }) {
+  const { speakText, recognizeSpeech } = useLanguage();
   const [role, setRole] = useState("B");
   const [showAllScript, setShowAllScript] = useState(false);
   const [showSubtitle, setShowSubtitle] = useState(false);
@@ -354,7 +355,7 @@ export default function DialoguePractice({
 
   const listenLine = (line) => {
     try {
-      speakJapaneseText(line.japanese);
+      speakText(line.japanese);
       setActiveLineId(line.id);
       setStatus(`Playing line ${line.id} by speaker ${line.speaker}...`);
     } catch (error) {
@@ -364,20 +365,12 @@ export default function DialoguePractice({
 
   const speakLineText = (line) => {
     return new Promise((resolve) => {
-      if (!window.speechSynthesis) {
-        resolve();
-        return;
-      }
-
-      const utterance = new SpeechSynthesisUtterance(line.japanese);
-      utterance.lang = "ja-JP";
-      utterance.rate = 0.85;
-      utterance.pitch = 1;
-      utterance.onend = resolve;
-      utterance.onerror = resolve;
-
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(utterance);
+      speakText(line.japanese, {
+        rate: 0.85,
+        cancelBeforeSpeak: true,
+        onEnd: resolve,
+        onError: resolve,
+      });
     });
   };
 
@@ -431,7 +424,7 @@ export default function DialoguePractice({
     });
 
     await new Promise((resolve) => {
-      speakJapaneseText(
+      speakText(
         line.japanese,
         {
           cancelBeforeSpeak: false,
@@ -635,7 +628,7 @@ export default function DialoguePractice({
             },
           }));
 
-          const transcript = await recognizeJapaneseSpeech();
+          const transcript = await recognizeSpeech();
 
           if (practiceAbortRef.current) break;
 
@@ -746,7 +739,7 @@ export default function DialoguePractice({
 
       setStatus(`Listening for speaker ${line.speaker} line ${line.id}...`);
 
-      const transcript = await recognizeJapaneseSpeech();
+      const transcript = await recognizeSpeech();
 
       const score = calculateSpeechScoreWithAcceptedAnswers(
         transcript,

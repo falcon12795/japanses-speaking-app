@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-import { VOCABULARY } from "../data/vocabulary";
+import { useLanguage } from "../contexts/LanguageContext";
 
 import Badge from "./common/Badge";
 import EmptyState from "./common/EmptyState";
@@ -21,33 +21,28 @@ const STATUS_FILTERS = [
   { value: "review", label: "Review" },
 ];
 
-function sortJlptLevels(levels) {
-  const order = {
-    N1: 1,
-    N2: 2,
-    N3: 3,
-    N4: 4,
-    N5: 5,
-    IT: 6,
-  };
+function sortLevels(levels, vocabulary) {
+  // JLPT levels need explicit ordering; CEFR (A1, A2, B1…) sort fine alphabetically
+  const jlptOrder = { N1: 1, N2: 2, N3: 3, N4: 4, N5: 5, IT: 6 };
+  const hasJlpt = levels.some((l) => l in jlptOrder);
 
-  return [...levels].sort(
-    (levelA, levelB) =>
-      (order[levelA] || 999) -
-      (order[levelB] || 999)
-  );
+  if (hasJlpt) {
+    return [...levels].sort((a, b) => (jlptOrder[a] || 999) - (jlptOrder[b] || 999));
+  }
+
+  return [...levels].sort();
 }
 
-function getAvailableLevels() {
+function getAvailableLevels(vocabulary) {
   const levels = new Set();
 
-  VOCABULARY.forEach((item) => {
+  vocabulary.forEach((item) => {
     if (item.level) {
       levels.add(item.level);
     }
   });
 
-  return sortJlptLevels([...levels]);
+  return sortLevels([...levels], vocabulary);
 }
 
 
@@ -143,14 +138,15 @@ export default function VocabularyList({
   progress = {},
   onSelectTopic = () => { },
 }) {
+  const { vocabulary } = useLanguage();
   const [searchParams, setSearchParams] =
     useSearchParams();
 
   const [expandedSubjects, setExpandedSubjects] = useState({});
 
   const availableLevels = useMemo(
-    () => getAvailableLevels(),
-    []
+    () => getAvailableLevels(vocabulary),
+    [vocabulary]
   );
 
   const defaultLevel =
@@ -202,7 +198,7 @@ export default function VocabularyList({
 
   const subjects = useMemo(() => {
     const vocabularyByLevel =
-      VOCABULARY.filter(
+      vocabulary.filter(
         (item) =>
           String(item.level) ===
           String(selectedLevel)
@@ -377,7 +373,7 @@ export default function VocabularyList({
         buttonClassName="status-button"
       />
 
-      <div className="grammar-lessons-list">
+      <div className="grammar-lesson-list">
 
         {subjects.map((subject) => {
 

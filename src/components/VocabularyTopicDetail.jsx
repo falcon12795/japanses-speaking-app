@@ -5,7 +5,7 @@ import Button from "./common/Button";
 import IconButton from "./common/IconButton";
 import Panel from "./common/Panel";
 
-import { speakJapaneseText } from "../utils/speech";
+import { useLanguage } from "../contexts/LanguageContext";
 import Badge from "./common/Badge";
 
 export default function VocabularyTopicDetail({
@@ -18,6 +18,7 @@ export default function VocabularyTopicDetail({
   hasPrevious = true,
   hasNext = true,
 }) {
+    const { speakText } = useLanguage();
     const [activeWordId, setActiveWordId] = useState(null);
     const [isListeningAll, setIsListeningAll] = useState(false);
 
@@ -56,7 +57,7 @@ export default function VocabularyTopicDetail({
             setActiveWordId(word.id);
 
             await new Promise((resolve) => {
-                speakJapaneseText(word.japanese, {
+                speakText(word.japanese, {
                     onEnd: resolve,
                     onError: resolve,
                 });
@@ -64,7 +65,7 @@ export default function VocabularyTopicDetail({
 
             if (word.example) {
                 await new Promise((resolve) => {
-                    speakJapaneseText(word.example, {
+                    speakText(word.example, {
                         cancelBeforeSpeak: false,
                         onEnd: resolve,
                         onError: resolve,
@@ -94,7 +95,7 @@ export default function VocabularyTopicDetail({
                 setActiveWordId(word.id);
 
                 await new Promise((resolve) => {
-                    speakJapaneseText(word.japanese, {
+                    speakText(word.japanese, {
                         onEnd: resolve,
                         onError: resolve,
                     });
@@ -103,7 +104,7 @@ export default function VocabularyTopicDetail({
                 if (stopRef.current) break;
 
                 await new Promise((resolve) => {
-                    speakJapaneseText(word.example || "", {
+                    speakText(word.example || "", {
                         cancelBeforeSpeak: false,
                         onEnd: resolve,
                         onError: resolve,

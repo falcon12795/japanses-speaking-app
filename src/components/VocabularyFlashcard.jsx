@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react";
-import { VOCABULARY } from "../data/vocabulary";
-import { speakJapaneseText, recognizeJapaneseSpeech } from "../utils/speech";
+import { useLanguage } from "../contexts/LanguageContext";
 import { calculateSimpleSpeechScore } from "../utils/scoring";
 
 import Badge from "./common/Badge";
@@ -18,7 +17,8 @@ export default function VocabularyFlashcard({
   filter = "all",
   initialIndex = 0,
 }) {
-  const data = vocabulary.length > 0 ? vocabulary : VOCABULARY;
+  const { vocabulary: contextVocabulary, speakText, recognizeSpeech } = useLanguage();
+  const data = vocabulary.length > 0 ? vocabulary : contextVocabulary;
   const [currentIndex, setCurrentIndex] = useState(() =>
     initialIndex >= 0 && initialIndex < data.length ? initialIndex : 0
   );
@@ -92,7 +92,7 @@ export default function VocabularyFlashcard({
 
   const handleListenWord = () => {
     try {
-      speakJapaneseText(currentCard.japanese);
+      speakText(currentCard.japanese);
       setStatus("Playing vocabulary audio...");
     } catch (error) {
       setStatus(error.message);
@@ -106,7 +106,7 @@ export default function VocabularyFlashcard({
     }
 
     try {
-      speakJapaneseText(currentCard.example.japanese);
+      speakText(currentCard.example.japanese);
       setStatus("Playing example audio...");
     } catch (error) {
       setStatus(error.message);
@@ -118,7 +118,7 @@ export default function VocabularyFlashcard({
       setWordTranscript("");
       setStatus("Listening for vocabulary pronunciation...");
 
-      const result = await recognizeJapaneseSpeech();
+      const result = await recognizeSpeech();
 
       setWordTranscript(result);
       setStatus("Finished vocabulary speaking check.");
@@ -142,7 +142,7 @@ export default function VocabularyFlashcard({
       setExampleTranscript("");
       setStatus("Listening for example sentence pronunciation...");
 
-      const result = await recognizeJapaneseSpeech();
+      const result = await recognizeSpeech();
 
       setExampleTranscript(result);
       setStatus("Finished example speaking check.");

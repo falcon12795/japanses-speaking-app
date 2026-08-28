@@ -49,3 +49,13 @@ export function resetProgress() {
   localStorage.removeItem(STORAGE_KEY);
   return DEFAULT_PROGRESS;
 }
+
+const LANGUAGE_KEY = "learning-language";
+
+export function loadLanguage() {
+  return localStorage.getItem(LANGUAGE_KEY) || null;
+}
+
+export function saveLanguage(code) {
+  localStorage.setItem(LANGUAGE_KEY, code);
+}

@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { ChevronDown, ChevronUp, Volume2 } from "lucide-react";
-import { speakJapaneseText } from "../utils/speech";
+import { useLanguage } from "../contexts/LanguageContext";
 
 import IconButton from "./common/IconButton";
 import Panel from "./common/Panel";
@@ -80,6 +80,7 @@ export default function GrammarDetail({
   hasPrevious,
   hasNext,
 }) {
+  const { speakText } = useLanguage();
   const [collapsedMeaningIds, setCollapsedMeaningIds] = useState(new Set());
 
   const usageSectionNumber = 1;
@@ -125,7 +126,7 @@ export default function GrammarDetail({
 
   const handleListen = (text) => {
     try {
-      speakJapaneseText(text);
+      speakText(text);
     } catch {
       // Browser speech may not be supported.
     }
