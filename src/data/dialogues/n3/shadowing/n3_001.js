@@ -914,14 +914,14 @@ export default [
             {
                 id: 1,
                 speaker: "A",
-                japanese: "谷口さんちからの年賀状きてる？あそこの毎年おもしろいんだよ。",
-                reading: "たにぐちさんちからのねんがじょうきてる あそこのまいとしおもしろいんだよ",
-                romaji: "taniguchi sanchi kara no nengajou kiteru? asoko no maitoshi omoshiroi nda yo.",
+                japanese: "谷口さんからの年賀状きてる？あそこの毎年おもしろいんだよ。",
+                reading: "たにぐちさんからのねんがじょうきてる あそこのまいとしおもしろいんだよ",
+                romaji: "taniguchi san kara no nengajou kiteru? asoko no maitoshi omoshiroi nda yo.",
                 english: "Did the New Year's card from the Taniguchi family arrive? Theirs is interesting every year.",
                 vietnamese: "Nhà Taniguchi gửi thiệp năm mới chưa? Năm nào của họ cũng thú vị.",
                 acceptedAnswers: [
-                    "谷口さんちからの年賀状きてるあそこの毎年おもしろいんだよ",
-                    "たにぐちさんちからのねんがじょうきてるあそこのまいとしおもしろいんだよ"
+                    "谷口さんからの年賀状きてるあそこの毎年おもしろいんだよ",
+                    "たにぐちさんからのねんがじょうきてるあそこのまいとしおもしろいんだよ"
                 ]
             },
             {

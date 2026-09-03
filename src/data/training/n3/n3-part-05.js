@@ -1,1420 +1,862 @@
 export default {
-  "n3-grammar-format-081": {
-    "grammarId": "n3-grammar-format-081",
-    "title": "〜たて",
-    "questions": [
-      {
-        "id": "n3-grammar-format-081-q01",
-        "grammarId": "n3-grammar-format-081",
-        "question": "焼き___のパンは美味しい。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "〜たて diễn tả hành động vừa mới thực hiện xong (thường dùng cho đồ ăn, thức uống, đồ vật mới làm). 焼き立て: Vừa mới nướng."
-      },
-      {
-        "id": "n3-grammar-format-081-q02",
-        "grammarId": "n3-grammar-format-081",
-        "question": "出来___の料理を食べる。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "出来たて: Vừa mới nấu/làm xong."
-      },
-      {
-        "id": "n3-grammar-format-081-q03",
-        "grammarId": "n3-grammar-format-081",
-        "question": "ペンキ塗り___のベンチに座らないでください。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "塗りたて: Vừa mới sơn xong (vẫn còn ướt)."
-      },
-      {
-        "id": "n3-grammar-format-081-q04",
-        "grammarId": "n3-grammar-format-081",
-        "question": "淹れ___のコーヒーはいかがですか。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "淹れたて: Cà phê vừa mới pha xong."
-      },
-      {
-        "id": "n3-grammar-format-081-q05",
-        "grammarId": "n3-grammar-format-081",
-        "question": "採り___の新鮮な野菜を味わう。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "採りたて: Rau củ vừa mới hái."
-      },
-      {
-        "id": "n3-grammar-format-081-q06",
-        "grammarId": "n3-grammar-format-081",
-        "question": "炊き___のご飯は香りがいい。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "炊きたて: Cơm vừa mới nấu xong."
-      },
-      {
-        "id": "n3-grammar-format-081-q07",
-        "grammarId": "n3-grammar-format-081",
-        "question": "入社し___の新人社員。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "入社したて (hoặc kết hợp dạng V-ta + tate): Nhân viên mới vào công ty chưa lâu."
-      },
-      {
-        "id": "n3-grammar-format-081-q08",
-        "grammarId": "n3-grammar-format-081",
-        "question": "洗い___の服を着ると気持ちがいい。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "洗いたて: Quần áo vừa mới giặt xong."
-      },
-      {
-        "id": "n3-grammar-format-081-q09",
-        "grammarId": "n3-grammar-format-081",
-        "question": "作り___のお菓子をどうぞ。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "作りたて: Bánh kẹo vừa mới làm xong."
-      },
-      {
-        "id": "n3-grammar-format-081-q10",
-        "grammarId": "n3-grammar-format-081",
-        "question": "免許を取り___で、運転が下手だ。",
-        "choices": [
-          "たて",
-          "ばかり",
-          "ところ",
-          "まま"
-        ],
-        "answer": 0,
-        "explanation": "取りたて: Vừa mới lấy (bằng lái xe) xong."
-      }
-    ]
-  },
-  "n3-grammar-format-082": {
-    "grammarId": "n3-grammar-format-082",
-    "title": "〜かける/〜かけの/〜かけだ",
-    "questions": [
-      {
-        "id": "n3-grammar-format-082-q01",
-        "grammarId": "n3-grammar-format-082",
-        "question": "この本はまだ読み___だ。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけの",
-          "かけた"
-        ],
-        "answer": 0,
-        "explanation": "〜かけ(だ/の): Biểu thị hành động đang làm dở dang, chưa kết thúc."
-      },
-      {
-        "id": "n3-grammar-format-082-q02",
-        "grammarId": "n3-grammar-format-082",
-        "question": "書き___の手紙を机の上に置いた。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "書きかけの手紙: Bức thư viết dở."
-      },
-      {
-        "id": "n3-grammar-format-082-q03",
-        "grammarId": "n3-grammar-format-082",
-        "question": "食べ___のパンが残っている。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "食べかけのパン: Bánh mì ăn dở."
-      },
-      {
-        "id": "n3-grammar-format-082-q04",
-        "grammarId": "n3-grammar-format-082",
-        "question": "言い___てやめた。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "言いかけて: Đang nói dở thì dừng lại."
-      },
-      {
-        "id": "n3-grammar-format-082-q05",
-        "grammarId": "n3-grammar-format-082",
-        "question": "飲み___のジュースを捨てないで。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "飲みかけのジュース: Nước trái cây uống dở."
-      },
-      {
-        "id": "n3-grammar-format-082-q06",
-        "grammarId": "n3-grammar-format-082",
-        "question": "花が枯れ___ている。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "枯れかけている: Đang héo dở / sắp héo."
-      },
-      {
-        "id": "n3-grammar-format-082-q07",
-        "grammarId": "n3-grammar-format-082",
-        "question": "やり___の仕事を片付ける。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "やりかけの仕事: Công việc đang làm dở."
-      },
-      {
-        "id": "n3-grammar-format-082-q08",
-        "grammarId": "n3-grammar-format-082",
-        "question": "眠り___た時に電話が鳴った。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "眠りかけた時に: Vào lúc thiu thiu ngủ / bắt đầu ngủ."
-      },
-      {
-        "id": "n3-grammar-format-082-q09",
-        "grammarId": "n3-grammar-format-082",
-        "question": "話し___の途中で割り込まれた。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "話しかけの途中 (hoặc dạng tương đương): Lúc đang nói dở."
-      },
-      {
-        "id": "n3-grammar-format-082-q10",
-        "grammarId": "n3-grammar-format-082",
-        "question": "作り___のプラモデル。",
-        "choices": [
-          "かけ",
-          "たて",
-          "かけた",
-          "かけだ"
-        ],
-        "answer": 0,
-        "explanation": "作りかけのプラモデル: Mô hình lắp ráp làm dở."
-      }
-    ]
-  },
-  "n3-grammar-format-083": {
-    "grammarId": "n3-grammar-format-083",
-    "title": "〜まで",
-    "questions": [
-      {
-        "id": "n3-grammar-format-083-q01",
-        "grammarId": "n3-grammar-format-083",
-        "question": "映画が始まる___三十分がある。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "〜まで: Cho đến khi (chỉ khoảng thời gian kéo dài đến mốc đó)."
-      },
-      {
-        "id": "n3-grammar-format-083-q02",
-        "grammarId": "n3-grammar-format-083",
-        "question": "連絡がある___待っています。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "Chờ cho đến khi có liên lạc."
-      },
-      {
-        "id": "n3-grammar-format-083-q03",
-        "grammarId": "n3-grammar-format-083",
-        "question": "雨がやむ___雨宿りをしよう。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "Trú mưa cho đến khi tạnh hẳn."
-      },
-      {
-        "id": "n3-grammar-format-083-q04",
-        "grammarId": "n3-grammar-format-083",
-        "question": "子供___知っている簡単な問題だ。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "〜まで (phó từ): Đến cả / thậm chí cả trẻ con cũng biết."
-      },
-      {
-        "id": "n3-grammar-format-083-q05",
-        "grammarId": "n3-grammar-format-083",
-        "question": "合格する___諦めない。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "Không bỏ cuộc cho đến khi đậu."
-      },
-      {
-        "id": "n3-grammar-format-083-q06",
-        "grammarId": "n3-grammar-format-083",
-        "question": "親___裏切るようなことはするな。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "Đừng làm những việc đến cả bố mẹ cũng phản bội."
-      },
-      {
-        "id": "n3-grammar-format-083-q07",
-        "grammarId": "n3-grammar-format-083",
-        "question": "目標を達成する___頑張る。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "Cố gắng cho đến khi đạt được mục tiêu."
-      },
-      {
-        "id": "n3-grammar-format-083-q08",
-        "grammarId": "n3-grammar-format-083",
-        "question": "バスが来る___ここで待ちましょう。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "Đợi ở đây cho đến khi xe buýt đến."
-      },
-      {
-        "id": "n3-grammar-format-083-q09",
-        "grammarId": "n3-grammar-format-083",
-        "question": "最後___諦めずに走った。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "最後まで: Chạy không bỏ cuộc cho đến tận cùng/phút cuối."
-      },
-      {
-        "id": "n3-grammar-format-083-q10",
-        "grammarId": "n3-grammar-format-083",
-        "question": "日本にいる___日本語を勉強したい。",
-        "choices": [
-          "まで",
-          "までに",
-          "までで",
-          "までも"
-        ],
-        "answer": 0,
-        "explanation": "Muốn học tiếng Nhật trong suốt thời gian ở Nhật."
-      }
-    ]
-  },
-  "n3-grammar-format-084": {
-    "grammarId": "n3-grammar-format-084",
-    "title": "〜において",
-    "questions": [
-      {
-        "id": "n3-grammar-format-084-q01",
-        "grammarId": "n3-grammar-format-084",
-        "question": "大阪___、国際会議が行われた。",
-        "choices": [
-          "において",
-          "にして",
-          "によって",
-          "について"
-        ],
-        "answer": 0,
-        "explanation": "〜において: Tại / ở (dùng trong văn viết, chỉ địa điểm hoặc bối cảnh diễn ra sự kiện)."
-      },
-      {
-        "id": "n3-grammar-format-084-q02",
-        "grammarId": "n3-grammar-format-084",
-        "question": "結果がホームページ___発表されます。",
-        "choices": [
-          "において",
-          "にして",
-          "によって",
-          "について"
-        ],
-        "answer": 0,
-        "explanation": "Được công bố tại/trên trang web."
-      },
-      {
-        "id": "n3-grammar-format-084-q03",
-        "grammarId": "n3-grammar-format-084",
-        "question": "現代社会___ITの役割は大きい。",
-        "choices": [
-          "において",
-          "にして",
-          "によって",
-          "について"
-        ],
-        "answer": 0,
-        "explanation": "Trong xã hội hiện đại."
-      },
-      {
-        "id": "n3-grammar-format-084-q04",
-        "grammarId": "n3-grammar-format-084",
-        "question": "式典はホール___執り行われます。",
-        "choices": [
-          "において",
-          "にして",
-          "によって",
-          "について"
-        ],
-        "answer": 0,
-        "explanation": "Buổi lễ được cử hành tại hội trường."
-      },
-      {
-        "id": "n3-grammar-format-084-q05",
-        "grammarId": "n3-grammar-format-084",
-        "question": "数学___彼の右に出るものはいない。",
-        "choices": [
-          "において",
-          "にして",
-          "によって",
-          "について"
-        ],
-        "answer": 0,
-        "explanation": "Trong lĩnh vực toán học, không ai sánh bằng anh ấy."
-      },
-      {
-        "id": "n3-grammar-format-084-q06",
-        "grammarId": "n3-grammar-format-084",
-        "question": "21世紀___環境問題は重要だ。",
-        "choices": [
-          "における",
-          "において",
-          "におけるの",
-          "においての"
-        ],
-        "answer": 0,
-        "explanation": "〜における: Dạng bổ nghĩa danh từ của おいて (Vấn đề môi trường *trong* thế kỷ 21)."
-      },
-      {
-        "id": "n3-grammar-format-084-q07",
-        "grammarId": "n3-grammar-format-084",
-        "question": "会議室___討論が続いている。",
-        "choices": [
-          "において",
-          "にして",
-          "によって",
-          "について"
-        ],
-        "answer": 0,
-        "explanation": "Thảo luận đang tiếp tục diễn ra tại phòng họp."
-      },
-      {
-        "id": "n3-grammar-format-084-q08",
-        "grammarId": "n3-grammar-format-084",
-        "question": "歴史___重要な出来事だ。",
-        "choices": [
-          "において",
-          "にして",
-          "によって",
-          "について"
-        ],
-        "answer": 0,
-        "explanation": "Là một sự kiện quan trọng trong lịch sử."
-      },
-      {
-        "id": "n3-grammar-format-084-q09",
-        "grammarId": "n3-grammar-format-084",
-        "question": "海外___の経験を活かす。",
-        "choices": [
-          "における",
-          "において",
-          "にして",
-          "によって"
-        ],
-        "answer": 0,
-        "explanation": "Tận dụng kinh nghiệm có được *ở* nước ngoài (海外における経験)."
-      },
-      {
-        "id": "n3-grammar-format-084-q10",
-        "grammarId": "n3-grammar-format-084",
-        "question": "教育の現場___ ICTの活用が進んでいる。",
-        "choices": [
-          "において",
-          "にして",
-          "によって",
-          "について"
-        ],
-        "answer": 0,
-        "explanation": "Tại hiện trường giáo dục."
-      }
-    ]
-  },
-  "n3-grammar-format-085": {
-    "grammarId": "n3-grammar-format-085",
-    "title": "もしかしたら/もしかすると ～ かもしれない",
-    "questions": [
-      {
-        "id": "n3-grammar-format-085-q01",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかすると、彼の話は嘘___。",
-        "choices": [
-          "かもしれない",
-          "にちがいない",
-          "はずがない",
-          "わけがない"
-        ],
-        "answer": 0,
-        "explanation": "Cấu trúc もしかすると...かもしれない: Biết đâu / có lẽ là..."
-      },
-      {
-        "id": "n3-grammar-format-085-q02",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかしたら、明日行けない___。",
-        "choices": [
-          "かもしれません",
-          "にちがいありません",
-          "はずがありません",
-          "わけがありません"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu ngày mai tôi không đi được."
-      },
-      {
-        "id": "n3-grammar-format-085-q03",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかしたら雨が___かもしれない。",
-        "choices": [
-          "降る",
-          "降り",
-          "降って",
-          "降れ"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu trời sẽ mưa."
-      },
-      {
-        "id": "n3-grammar-format-085-q04",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかすると事故に___かもしれない。",
-        "choices": [
-          "遭った",
-          "遭い",
-          "遭って",
-          "遭う"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu đã gặp tai nạn."
-      },
-      {
-        "id": "n3-grammar-format-085-q05",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかしたら道に___かもしれない。",
-        "choices": [
-          "迷った",
-          "迷い",
-          "迷って",
-          "迷う"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu đã lạc đường."
-      },
-      {
-        "id": "n3-grammar-format-085-q06",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかすると彼女は怒っている___。",
-        "choices": [
-          "かもしれない",
-          "にちがいない",
-          "はずがない",
-          "わけがない"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu cô ấy đang giận."
-      },
-      {
-        "id": "n3-grammar-format-085-q07",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかしたら合格できる___。",
-        "choices": [
-          "かもしれない",
-          "にちがいない",
-          "はずがない",
-          "わけがない"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu có thể đỗ."
-      },
-      {
-        "id": "n3-grammar-format-085-q08",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかすると電車に___かもしれない。",
-        "choices": [
-          "遅れる",
-          "遅れ",
-          "遅れて",
-          "遅れた"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu sẽ trễ tàu."
-      },
-      {
-        "id": "n3-grammar-format-085-q09",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかしたら鍵を忘れた___。",
-        "choices": [
-          "かもしれない",
-          "にちがいない",
-          "はずがない",
-          "わけがない"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu đã quên chìa khóa."
-      },
-      {
-        "id": "n3-grammar-format-085-q10",
-        "grammarId": "n3-grammar-format-085",
-        "question": "もしかすると台風が___かもしれない。",
-        "choices": [
-          "来る",
-          "来",
-          "来て",
-          "来よう"
-        ],
-        "answer": 0,
-        "explanation": "Biết đâu bão sẽ đến."
-      }
-    ]
-  },
-  "n3-grammar-format-086": {
-    "grammarId": "n3-grammar-format-086",
-    "title": "必ずしも〜とは限らない",
-    "questions": [
-      {
-        "id": "n3-grammar-format-086-q01",
-        "grammarId": "n3-grammar-format-086",
-        "question": "お金持ちが必ずしも幸福だ___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "必ずしも〜とは限らない: Không hẳn / không nhất thiết là..."
-      },
-      {
-        "id": "n3-grammar-format-086-q02",
-        "grammarId": "n3-grammar-format-086",
-        "question": "高いものが必ずしもいいものだ___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Đồ đắt tiền chưa chắc đã là đồ tốt."
-      },
-      {
-        "id": "n3-grammar-format-086-q03",
-        "grammarId": "n3-grammar-format-086",
-        "question": "日本人が必ずしも日本語を教えられる___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Người Nhật chưa chắc ai cũng dạy được tiếng Nhật."
-      },
-      {
-        "id": "n3-grammar-format-086-q04",
-        "grammarId": "n3-grammar-format-086",
-        "question": "有名大学を出たからといって、必ずしも成功する___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Dù tốt nghiệp trường danh tiếng thì cũng chưa chắc đã thành công."
-      },
-      {
-        "id": "n3-grammar-format-086-q05",
-        "grammarId": "n3-grammar-format-086",
-        "question": "薬を飲んだからといって、必ずしもすぐ治る___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Dù uống thuốc chưa chắc đã khỏi ngay lập tức."
-      },
-      {
-        "id": "n3-grammar-format-086-q06",
-        "grammarId": "n3-grammar-format-086",
-        "question": "書いてあることが必ずしも正しい___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Những điều được viết ra chưa chắc đã hoàn toàn đúng."
-      },
-      {
-        "id": "n3-grammar-format-086-q07",
-        "grammarId": "n3-grammar-format-086",
-        "question": "足が速い人が必ずしもサッカーがうまい___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Người chạy nhanh chưa chắc đã đá bóng giỏi."
-      },
-      {
-        "id": "n3-grammar-format-086-q08",
-        "grammarId": "n3-grammar-format-086",
-        "question": "努力したからといって、必ずしも報われる___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Nỗ lực chưa chắc đã luôn được đền đáp."
-      },
-      {
-        "id": "n3-grammar-format-086-q09",
-        "grammarId": "n3-grammar-format-086",
-        "question": "天気予報が必ずしも当たる___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Dự báo thời tiết không phải lúc nào cũng chính xác."
-      },
-      {
-        "id": "n3-grammar-format-086-q10",
-        "grammarId": "n3-grammar-format-086",
-        "question": "安物が必ずしも悪い___。",
-        "choices": [
-          "とは限らない",
-          "にちがいない",
-          "わけがない",
-          "はずがない"
-        ],
-        "answer": 0,
-        "explanation": "Đồ rẻ tiền chưa chắc đã là đồ tồi."
-      }
-    ]
-  },
-  "n3-grammar-format-087": {
-    "grammarId": "n3-grammar-format-087",
-    "title": "～ んじゃない/ ～ のではないでしょうか",
-    "questions": [
-      {
-        "id": "n3-grammar-format-087-q01",
-        "grammarId": "n3-grammar-format-087",
-        "question": "これは高い___？",
-        "choices": [
-          "んじゃない",
-          "のか",
-          "ではない",
-          "んではない"
-        ],
-        "answer": 0,
-        "explanation": "～んじゃない: Chẳng phải là... hay sao? (dùng để xác nhận hoặc phỏng đoán)."
-      },
-      {
-        "id": "n3-grammar-format-087-q02",
-        "grammarId": "n3-grammar-format-087",
-        "question": "若者が増える___のではないでしょうか？",
-        "choices": [
-          "の",
-          "こと",
-          "もの",
-          "わけ"
-        ],
-        "answer": 0,
-        "explanation": "Cấu trúc のではないでしょうか: Chẳng phải là... hay sao (lịch sự)."
-      },
-      {
-        "id": "n3-grammar-format-087-q03",
-        "grammarId": "n3-grammar-format-087",
-        "question": "もうすぐ雨が降る___？",
-        "choices": [
-          "んじゃない",
-          "のか",
-          "ではない",
-          "んではない"
-        ],
-        "answer": 0,
-        "explanation": "Chẳng phải sắp mưa rồi sao?"
-      },
-      {
-        "id": "n3-grammar-format-087-q04",
-        "grammarId": "n3-grammar-format-087",
-        "question": "この方法のほうがいい___でしょうか。",
-        "choices": [
-          "のではない",
-          "んじゃない",
-          "ではない",
-          "んではない"
-        ],
-        "answer": 0,
-        "explanation": "Chẳng phải phương pháp này tốt hơn sao?"
-      },
-      {
-        "id": "n3-grammar-format-087-q05",
-        "grammarId": "n3-grammar-format-087",
-        "question": "彼はもう帰った___？",
-        "choices": [
-          "んじゃない",
-          "のか",
-          "ではない",
-          "んではない"
-        ],
-        "answer": 0,
-        "explanation": "Chẳng phải anh ấy đã về rồi sao?"
-      },
-      {
-        "id": "n3-grammar-format-087-q06",
-        "grammarId": "n3-grammar-format-087",
-        "question": "それ、ちょっと変___？",
-        "choices": [
-          "なんじゃない",
-          "んじゃない",
-          "ではない",
-          "のか"
-        ],
-        "answer": 0,
-        "explanation": "Chẳng phải cái đó hơi kỳ lạ sao? (Tính từ đuôi na dùng なんだ)."
-      },
-      {
-        "id": "n3-grammar-format-087-q07",
-        "grammarId": "n3-grammar-format-087",
-        "question": "解決策が見つかる___だろうか。",
-        "choices": [
-          "のではない",
-          "んじゃない",
-          "ではない",
-          "んではない"
-        ],
-        "answer": 0,
-        "explanation": "Liệu có phải là sẽ tìm thấy giải pháp không?"
-      },
-      {
-        "id": "n3-grammar-format-087-q08",
-        "grammarId": "n3-grammar-format-087",
-        "question": "少し休みが必要___？",
-        "choices": [
-          "なんじゃない",
-          "んじゃない",
-          "ではない",
-          "のか"
-        ],
-        "answer": 0,
-        "explanation": "Chẳng phải cần nghỉ ngơi một chút sao?"
-      },
-      {
-        "id": "n3-grammar-format-087-q09",
-        "grammarId": "n3-grammar-format-087",
-        "question": "道に迷った___？",
-        "choices": [
-          "んじゃない",
-          "のか",
-          "ではない",
-          "んではない"
-        ],
-        "answer": 0,
-        "explanation": "Chẳng phải đã lạc đường rồi sao?"
-      },
-      {
-        "id": "n3-grammar-format-087-q10",
-        "grammarId": "n3-grammar-format-087",
-        "question": "明日の方が都合がいい___でしょうか。",
-        "choices": [
-          "のではない",
-          "んじゃない",
-          "ではない",
-          "んではない"
-        ],
-        "answer": 0,
-        "explanation": "Chẳng phải ngày mai sẽ thuận tiện hơn sao?"
-      }
-    ]
-  },
-  "n3-grammar-format-088": {
-    "grammarId": "n3-grammar-format-088",
-    "title": "にわたって/にわたり",
-    "questions": [
-      {
-        "id": "n3-grammar-format-088-q01",
-        "grammarId": "n3-grammar-format-088",
-        "question": "会議は五日間に___行われました。",
-        "choices": [
-          "わたって",
-          "かけて",
-          "通して",
-          "沿って"
-        ],
-        "answer": 0,
-        "explanation": "にわたって: Trải suốt (khoảng thời gian/không gian rộng lớn). Trải qua 5 ngày."
-      },
-      {
-        "id": "n3-grammar-format-088-q02",
-        "grammarId": "n3-grammar-format-088",
-        "question": "７００メートルに___、桜の木が植えられている。",
-        "choices": [
-          "わたって",
-          "かけて",
-          "沿って",
-          "伴って"
-        ],
-        "answer": 0,
-        "explanation": "Trải dài suốt 700 mét."
-      },
-      {
-        "id": "n3-grammar-format-088-q03",
-        "grammarId": "n3-grammar-format-088",
-        "question": "長年に___研究が実を結んだ。",
-        "choices": [
-          "わたる",
-          "わたって",
-          "わたり",
-          "わたった"
-        ],
-        "answer": 0,
-        "explanation": "Nghiên cứu kéo dài suốt nhiều năm đã đơm hoa kết trái."
-      },
-      {
-        "id": "n3-grammar-format-088-q04",
-        "grammarId": "n3-grammar-format-088",
-        "question": "台風は広い地域に___被害をもたらした。",
-        "choices": [
-          "わたり",
-          "かけて",
-          "通して",
-          "対して"
-        ],
-        "answer": 0,
-        "explanation": "Trải khắp một vùng rộng lớn."
-      },
-      {
-        "id": "n3-grammar-format-088-q05",
-        "grammarId": "n3-grammar-format-088",
-        "question": "3時間に___議論が続いた。",
-        "choices": [
-          "わたって",
-          "かけて",
-          "通して",
-          "沿って"
-        ],
-        "answer": 0,
-        "explanation": "Cuộc thảo luận kéo dài suốt 3 tiếng."
-      },
-      {
-        "id": "n3-grammar-format-088-q06",
-        "grammarId": "n3-grammar-format-088",
-        "question": "数ヶ月に___工事が終了した。",
-        "choices": [
-          "わたる",
-          "わたって",
-          "わたり",
-          "わたった"
-        ],
-        "answer": 0,
-        "explanation": "Công trình kéo dài trong suốt mấy tháng."
-      },
-      {
-        "id": "n3-grammar-format-088-q07",
-        "grammarId": "n3-grammar-format-088",
-        "question": "関東全域に___大雨が降った。",
-        "choices": [
-          "わたって",
-          "かけて",
-          "沿って",
-          "向かって"
-        ],
-        "answer": 0,
-        "explanation": "Mưa lớn trải khắp toàn khu vực Kanto."
-      },
-      {
-        "id": "n3-grammar-format-088-q08",
-        "grammarId": "n3-grammar-format-088",
-        "question": "多箇所に___検査が行われた。",
-        "choices": [
-          "わたる",
-          "わたって",
-          "わたり",
-          "わたった"
-        ],
-        "answer": 0,
-        "explanation": "Kiểm tra diễn ra ở nhiều địa điểm."
-      },
-      {
-        "id": "n3-grammar-format-088-q09",
-        "grammarId": "n3-grammar-format-088",
-        "question": "10年間に___調査の結果。",
-        "choices": [
-          "わたる",
-          "わたって",
-          "わたり",
-          "わたった"
-        ],
-        "answer": 0,
-        "explanation": "Kết quả khảo sát kéo dài suốt 10 năm."
-      },
-      {
-        "id": "n3-grammar-format-088-q10",
-        "grammarId": "n3-grammar-format-088",
-        "question": "市全体に___停電が発生した。",
-        "choices": [
-          "わたって",
-          "かけて",
-          "沿って",
-          "向かって"
-        ],
-        "answer": 0,
-        "explanation": "Mất điện diện rộng trên toàn thành phố."
-      }
-    ]
-  },
-  "n3-grammar-format-089": {
-    "grammarId": "n3-grammar-format-089",
-    "title": "～には/〜とは",
-    "questions": [
-      {
-        "id": "n3-grammar-format-089-q01",
-        "grammarId": "n3-grammar-format-089",
-        "question": "日本語が上手になる___、どうしたらいいですか。",
-        "choices": [
-          "には",
-          "とは",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "〜には: Để mà... (chỉ mục đích, điều kiện cần thiết để đạt được mục tiêu)."
-      },
-      {
-        "id": "n3-grammar-format-089-q02",
-        "grammarId": "n3-grammar-format-089",
-        "question": "デジカメ___、デジタルカメラということだ。",
-        "choices": [
-          "とは",
-          "には",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "〜とは: Định nghĩa (Nói về... có nghĩa là...)."
-      },
-      {
-        "id": "n3-grammar-format-089-q03",
-        "grammarId": "n3-grammar-format-089",
-        "question": "コンサートに行く___、バスが便利だ。",
-        "choices": [
-          "には",
-          "とは",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "Để đi đến buổi hòa nhạc thì..."
-      },
-      {
-        "id": "n3-grammar-format-089-q04",
-        "grammarId": "n3-grammar-format-089",
-        "question": "「顔が広い」___、友達がたくさんいるという意味だ。",
-        "choices": [
-          "とは",
-          "には",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "Định nghĩa thành ngữ: 'Kao ga hiroi' có nghĩa là..."
-      },
-      {
-        "id": "n3-grammar-format-089-q05",
-        "grammarId": "n3-grammar-format-089",
-        "question": "家を建てる___、まとまったお金が必要だ。",
-        "choices": [
-          "には",
-          "とは",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "Để xây nhà thì cần một khoản tiền lớn."
-      },
-      {
-        "id": "n3-grammar-format-089-q06",
-        "grammarId": "n3-grammar-format-089",
-        "question": "AI___、人工知能のことだ。",
-        "choices": [
-          "とは",
-          "には",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "AI có nghĩa là trí tuệ nhân tạo."
-      },
-      {
-        "id": "n3-grammar-format-089-q07",
-        "grammarId": "n3-grammar-format-089",
-        "question": "試験に合格する___、毎日の努力が不可欠だ。",
-        "choices": [
-          "には",
-          "とは",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "Để đỗ kỳ thi thì..."
-      },
-      {
-        "id": "n3-grammar-format-089-q08",
-        "grammarId": "n3-grammar-format-089",
-        "question": " eco___、環境に優しいという意味がある。",
-        "choices": [
-          "とは",
-          "には",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "'Eco' có nghĩa là thân thiện với môi trường."
-      },
-      {
-        "id": "n3-grammar-format-089-q09",
-        "grammarId": "n3-grammar-format-089",
-        "question": "健康を保つ___、規則正しい生活が必要だ。",
-        "choices": [
-          "には",
-          "とは",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "Để duy trì sức khỏe thì..."
-      },
-      {
-        "id": "n3-grammar-format-089-q10",
-        "grammarId": "n3-grammar-format-089",
-        "question": "「一期一会」___、一生に一度の出会いを大切にするという意味だ。",
-        "choices": [
-          "とは",
-          "には",
-          "ては",
-          "では"
-        ],
-        "answer": 0,
-        "explanation": "'Ichigo ichie' có nghĩa là..."
-      }
-    ]
-  },
-  "n3-grammar-format-090": {
-    "grammarId": "n3-grammar-format-090",
-    "title": "もし～ たなら/ もし ～ としても/ としたって",
-    "questions": [
-      {
-        "id": "n3-grammar-format-090-q01",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし試験を受けていた___、合格していたと思う。",
-        "choices": [
-          "なら",
-          "としても",
-          "としたって",
-          "とすれば"
-        ],
-        "answer": 0,
-        "explanation": "もし〜なら: Nếu giả sử... (giả thiết)."
-      },
-      {
-        "id": "n3-grammar-format-090-q02",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし彼が社長でなかった___、会社は潰れていた。",
-        "choices": [
-          "なら",
-          "としても",
-          "としたって",
-          "とすれば"
-        ],
-        "answer": 0,
-        "explanation": "Nếu anh ấy không phải là giám đốc thì..."
-      },
-      {
-        "id": "n3-grammar-format-090-q03",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし休みを取った___、旅行に行かないつもりだ。",
-        "choices": [
-          "としても",
-          "なら",
-          "とすれば",
-          "としたら"
-        ],
-        "answer": 0,
-        "explanation": "もし〜としても: Cho dù giả sử có... đi nữa thì..."
-      },
-      {
-        "id": "n3-grammar-format-090-q04",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もしお金がたくさんあった___、そんなものは買わない。",
-        "choices": [
-          "としても",
-          "なら",
-          "とすれば",
-          "としたら"
-        ],
-        "answer": 0,
-        "explanation": "Cho dù có rất nhiều tiền đi nữa..."
-      },
-      {
-        "id": "n3-grammar-format-090-q05",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし生まれ変われる___、鳥になりたい。",
-        "choices": [
-          "なら",
-          "としても",
-          "としたって",
-          "とすれば"
-        ],
-        "answer": 0,
-        "explanation": "Nếu được sinh ra một lần nữa..."
-      },
-      {
-        "id": "n3-grammar-format-090-q06",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし時間がなかった___、挨拶だけはするべきだ。",
-        "choices": [
-          "としても",
-          "なら",
-          "とすれば",
-          "としたら"
-        ],
-        "answer": 0,
-        "explanation": "Cho dù không có thời gian đi nữa..."
-      },
-      {
-        "id": "n3-grammar-format-090-q07",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし雨が降った___、予定通り決行します。",
-        "choices": [
-          "としても",
-          "なら",
-          "とすれば",
-          "としたら"
-        ],
-        "answer": 0,
-        "explanation": "Cho dù trời có mưa đi nữa..."
-      },
-      {
-        "id": "n3-grammar-format-090-q08",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし昨日早く寝ていた___、今朝寝坊しなかったのに。",
-        "choices": [
-          "なら",
-          "としても",
-          "としたって",
-          "とすれば"
-        ],
-        "answer": 0,
-        "explanation": "Nếu ngày hôm qua mà đi ngủ sớm..."
-      },
-      {
-        "id": "n3-grammar-format-090-q09",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし失敗した___、またやり直せばいい。",
-        "choices": [
-          "としても",
-          "なら",
-          "とすれば",
-          "としたら"
-        ],
-        "answer": 0,
-        "explanation": "Cho dù có thất bại đi chăng nữa..."
-      },
-      {
-        "id": "n3-grammar-format-090-q10",
-        "grammarId": "n3-grammar-format-090",
-        "question": "もし話を知っていた___、教えてほしかった。",
-        "choices": [
-          "なら",
-          "としても",
-          "としたって",
-          "とすれば"
-        ],
-        "answer": 0,
-        "explanation": "Nếu đã biết câu chuyện đó..."
-      }
-    ]
-  },
-  "n3-grammar-format-091": {
-    "grammarId": "n3-grammar-format-091",
-    "title": "～ ていく、～ てくる",
-    "questions": [
-      {
-        "id": "n3-grammar-format-091-q01",
-        "grammarId": "n3-grammar-format-091",
-        "question": "駅まで歩いて___。",
-        "choices": [
-          "行きます",
-          "きます",
-          "いきました",
-          "こなかった"
-        ],
-        "answer": 0,
-        "explanation": "～ていく: Di chuyển hướng ra xa người nói (đi bộ đến nhà ga rồi đi tiếp)."
-      },
-      {
-        "id": "n3-grammar-format-091-q02",
-        "grammarId": "n3-grammar-format-091",
-        "question": "お土産を持って___。",
-        "choices": [
-          "きます",
-          "いきます",
-          "いきました",
-          "いかない"
-        ],
-        "answer": 0,
-        "explanation": "～てくる: Di chuyển hướng lại gần phía người nói (mang quà đến đây)."
-      },
-      {
-        "id": "n3-grammar-format-091-q03",
-        "grammarId": "n3-grammar-format-091",
-        "question": "これから寒くなって___ね。",
-        "choices": [
-          "いきます",
-          "きました",
-          "こない",
-          "いかなかった"
-        ],
-        "answer": 0,
-        "explanation": "～ていく (biến đổi): Diễn tả sự thay đổi tiếp diễn hướng về tương lai (trở nên lạnh dần đi từ bây giờ)."
-      },
-      {
-        "id": "n3-grammar-format-091-q04",
-        "grammarId": "n3-grammar-format-091",
-        "question": "ずっと日本語を勉強して___。",
-        "choices": [
-          "きた",
-          "いく",
-          "こない",
-          "いけない"
-        ],
-        "answer": 0,
-        "explanation": "～てきた: Diễn tả một hành động/trạng thái kéo dài từ quá khứ cho đến hiện tại."
-      }
-    ]
-  }
+    "n3-grammar-format-041": {
+        "grammarId": "n3-grammar-format-041",
+        "title": "〜ことがある/こともある",
+        "questions": [
+            {
+                "id": "n3-grammar-format-041-q01",
+                "grammarId": "n3-grammar-format-041",
+                "question": "たまに仕事が忙しくて、昼ごはんを___ことがあります。",
+                "choices": ["食べない", "食べた", "食べる", "食べよう"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「V-ru/V-nai ＋ ことがある」 dùng để diễn tả thói quen hoặc sự việc thỉnh thoảng xảy ra. 'Thỉnh thoảng vì bận việc nên có lúc không ăn trưa'."
+            },
+            {
+                "id": "n3-grammar-format-041-q02",
+                "grammarId": "n3-grammar-format-041",
+                "question": "この地域では、夏でも夜は___ことがあります。",
+                "choices": ["寒い", "寒くて", "寒さ", "寒く"],
+                "answer": 0,
+                "explanation": "Tính từ đuôi i giữ nguyên đi với ことがある (寒いことがある - thỉnh thoảng vẫn lạnh)."
+            },
+            {
+                "id": "n3-grammar-format-041-q03",
+                "grammarId": "n3-grammar-format-041",
+                "question": "普段は静かな街ですが、週末は___こともある。",
+                "choices": ["賑やかな", "賑やか", "賑やかに", "賑やかだ"],
+                "answer": 0,
+                "explanation": "Tính từ đuôi na khi bổ nghĩa trực tiếp cho danh từ こと phải thêm 「な」 (賑やかなこともある)."
+            },
+            {
+                "id": "n3-grammar-format-041-q04",
+                "grammarId": "n3-grammar-format-041",
+                "question": "パソコンの調子が悪くて、突然画面が___ことがあります。",
+                "choices": ["消える", "消えた", "消えて", "消せ"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển ＋ ことがある diễn tả sự việc có khả năng xảy ra thỉnh thoảng ('thỉnh thoảng màn hình bị tắt đột ngột')."
+            },
+            {
+                "id": "n3-grammar-format-041-q05",
+                "grammarId": "n3-grammar-format-041",
+                "question": "ストレスが原因で、夜あまり___こともある。",
+                "choices": ["寝られない", "寝た", "寝ろ", "寝て"],
+                "answer": 0,
+                "explanation": "Dùng thể khả năng phủ định 「寝られない」 kết hợp với ことがある ('có lúc không thể ngủ được')."
+            },
+            {
+                "id": "n3-grammar-format-041-q06",
+                "grammarId": "n3-grammar-format-041",
+                "question": "バスは交通渋滞___遅れることがあります。",
+                "choices": ["で", "を", "に", "が"],
+                "answer": 0,
+                "explanation": "Trợ từ 「で」 chỉ nguyên nhân/lý do (do kẹt xe nên xe buýt có khi bị trễ)."
+            },
+            {
+                "id": "n3-grammar-format-041-q07",
+                "grammarId": "n3-grammar-format-041",
+                "question": "親しい友達の間でも、意見が合わずに___ことがあります。",
+                "choices": ["けんかする", "けんかした", "けんかして", "けんかされ"],
+                "answer": 0,
+                "explanation": "Mẫu V-ru ＋ ことがある diễn tả sự việc thỉnh thoảng xảy ra ('thỉnh thoảng cãi nhau')."
+            },
+            {
+                "id": "n3-grammar-format-041-q08",
+                "grammarId": "n3-grammar-format-041",
+                "question": "休みの日は、家でゆっくり映画を___こともある。",
+                "choices": ["見る", "見た", "見られ", "見よう"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển 「見る」 kết hợp với こともある ('cũng có lúc xem phim')."
+            },
+            {
+                "id": "n3-grammar-format-041-q09",
+                "grammarId": "n3-grammar-format-041",
+                "question": "仕事のミス___、落ち込むこともあります。",
+                "choices": ["で", "に", "を", "へ"],
+                "answer": 0,
+                "explanation": "Trợ từ 「で」 chỉ nguyên nhân (vì lỗi lầm trong công việc nên cũng có lúc suy sụp)."
+            },
+            {
+                "id": "n3-grammar-format-041-q10",
+                "grammarId": "n3-grammar-format-041",
+                "question": "いつもは優しい田中先生も、時々___ことがあります。",
+                "choices": ["怒る", "怒った", "怒らせる", "怒られ"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển 「怒る」 kết hợp với ことがある ('thỉnh thoảng cũng nổi giận')."
+            }
+        ]
+    },
+    "n3-grammar-format-042": {
+        "grammarId": "n3-grammar-format-042",
+        "title": "〜恐れがある",
+        "questions": [
+            {
+                "id": "n3-grammar-format-042-q01",
+                "grammarId": "n3-grammar-format-042",
+                "question": "台風の接近に伴い、大雨になる恐れが___。",
+                "choices": ["ある", "いる", "する", "なる"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「〜恐れがある」 đi với danh từ/động từ, diễn tả sự lo ngại rằng một việc xấu có thể xảy ra ('có nguy cơ mưa lớn')."
+            },
+            {
+                "id": "n3-grammar-format-042-q02",
+                "grammarId": "n3-grammar-format-042",
+                "question": "この病気は放置すると、悪化する恐れが___。",
+                "choices": ["ある", "ない", "できた", "なった"],
+                "answer": 0,
+                "explanation": "Cố định cụm 「恐れがある」 (có nguy cơ trở nên xấu đi)."
+            },
+            {
+                "id": "n3-grammar-format-042-q03",
+                "grammarId": "n3-grammar-format-042",
+                "question": "津波の恐れがありますので、海岸から遠ざかって___。",
+                "choices": ["ください", "みます", "あげます", "います"],
+                "answer": 0,
+                "explanation": "Mẫu câu mệnh lệnh lịch sự 「〜てください」 (vì có nguy cơ có sóng thần, xin hãy rời khỏi bờ biển)."
+            },
+            {
+                "id": "n3-grammar-format-042-q04",
+                "grammarId": "n3-grammar-format-042",
+                "question": "個人情報が外部に___恐れがあるため、注意してください。",
+                "choices": ["漏れる", "漏れて", "漏れた", "漏れよう"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển 「漏れる」 đứng trước 恐れがある ('có nguy cơ bị rò rỉ thông tin')."
+            },
+            {
+                "id": "n3-grammar-format-042-q05",
+                "grammarId": "n3-grammar-format-042",
+                "question": "不景気が続くと、失業者が___恐れがある。",
+                "choices": ["増える", "増えて", "増えた", "増えよう"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển 「増える」 kết hợp với 恐れがある ('có nguy cơ người thất nghiệp tăng lên')."
+            },
+            {
+                "id": "n3-grammar-format-042-q06",
+                "grammarId": "n3-grammar-format-042",
+                "question": "夜間の路上放置は、事故を招く恐れが___。",
+                "choices": ["ある", "よい", "ほしい", "ない"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「恐れがある」 dùng để chỉ rủi ro ('có nguy cơ dẫn đến tai nạn')."
+            },
+            {
+                "id": "n3-grammar-format-042-q07",
+                "grammarId": "n3-grammar-format-042",
+                "question": "大雪___道路が通行止めになる恐れがあります。",
+                "choices": ["で", "に", "を", "へ"],
+                "answer": 0,
+                "explanation": "Trợ từ 「で」 chỉ nguyên nhân (do tuyết lớn nên có nguy cơ...)."
+            },
+            {
+                "id": "n3-grammar-format-042-q08",
+                "grammarId": "n3-grammar-format-042",
+                "question": "計画の不備により、予算が___恐れがある。",
+                "choices": ["不足する", "不足して", "不足した", "不足しよう"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển 「不足する」 kết hợp với 恐れがある ('có nguy cơ thiếu hụt ngân sách')."
+            },
+            {
+                "id": "n3-grammar-format-042-q09",
+                "grammarId": "n3-grammar-format-042",
+                "question": "火山噴火___恐れがあるため、警戒レベルが上がった。",
+                "choices": ["の", "な", "に", "で"],
+                "answer": 0,
+                "explanation": "Danh từ kết hợp với 恐れがある thông qua trợ từ 「の」 (火山噴火の恐れがある - có nguy cơ phun trào núi lửa)."
+            },
+            {
+                "id": "n3-grammar-format-042-q10",
+                "grammarId": "n3-grammar-format-042",
+                "question": "この古い橋は、大きな車が通ると崩落する___がある。",
+                "choices": ["恐れ", "予定", "つもり", "おかげ"],
+                "answer": 0,
+                "explanation": "Cụm từ hoàn chỉnh 「恐れがある」 (có nguy cơ sập)."
+            }
+        ]
+    },
+    "n3-grammar-format-043": {
+        "grammarId": "n3-grammar-format-043",
+        "title": "〜決まっている",
+        "questions": [
+            {
+                "id": "n3-grammar-format-043-q01",
+                "grammarId": "n3-grammar-format-043",
+                "question": "毎日練習したんだから、試合に___に決まっている。",
+                "choices": ["勝つ", "勝って", "勝った", "勝とう"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「〜に決まっている」 dùng để khẳng định chắc chắn theo chủ quan ('chắc chắn là sẽ thắng')."
+            },
+            {
+                "id": "n3-grammar-format-043-q02",
+                "grammarId": "n3-grammar-format-043",
+                "question": "あんなに甘いものばかり食べていたら、太るに___。",
+                "choices": ["決まっている", "限られている", "違いない", "思い込んでいる"],
+                "answer": 0,
+                "explanation": "Cụm ngữ pháp cố định 「〜に決まっている」 (chắc chắn là sẽ béo lên)."
+            },
+            {
+                "id": "n3-grammar-format-043-q03",
+                "grammarId": "n3-grammar-format-043",
+                "question": "そんな嘘をついても、すぐに___に決まっている。",
+                "choices": ["ばれる", "ばれて", "ばれた", "ばれよう"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển 「ばれる」 đi với に決まっている ('chắc chắn sẽ bị bại lộ')."
+            },
+            {
+                "id": "n3-grammar-format-043-q04",
+                "grammarId": "n3-grammar-format-043",
+                "question": "一人で全部やるなんて、___に決まっている。",
+                "choices": ["無理", "無理だ", "無理な", "無理の"],
+                "answer": 0,
+                "explanation": "Danh từ/Tính từ đuôi na khi đi với に決まっている thường dùng trực tiếp hoặc dạng nguyên thể (無理に決まっている - chắc chắn là quá sức/vô lý)."
+            },
+            {
+                "id": "n3-grammar-format-043-q05",
+                "grammarId": "n3-grammar-format-043",
+                "question": "一流のシェフが作った料理だから、美味しかったに___。",
+                "choices": ["決まっている", "すぎない", "ほかならない", "あたらない"],
+                "answer": 0,
+                "explanation": "Biểu thị sự khẳng định chắc chắn trong quá khứ/suy đoán ('chắc chắn là rất ngon')."
+            },
+            {
+                "id": "n3-grammar-format-043-q06",
+                "grammarId": "n3-grammar-format-043",
+                "question": "準備もしないで試験を受けても、___に決まっている。",
+                "choices": ["落ちる", "落ちて", "落ちた", "落ちよう"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển 「落ちる」 đi với に決まっている ('chắc chắn sẽ trượt')."
+            },
+            {
+                "id": "n3-grammar-format-043-q07",
+                "grammarId": "n3-grammar-format-043",
+                "question": "こんな夜中に大声を出したら、近所迷惑___決まっている。",
+                "choices": ["に", "で", "を", "が"],
+                "answer": 0,
+                "explanation": "Cụm từ 「〜に決まっている」 đi sau danh từ/tính từ (近所迷惑に決まっている - chắc chắn là làm phiền hàng xóm)."
+            },
+            {
+                "id": "n3-grammar-format-043-q08",
+                "grammarId": "n3-grammar-format-043",
+                "question": "彼ならこの難問を解決できるに___。",
+                "choices": ["決まっている", "ありえない", "見えている", "言えない"],
+                "answer": 0,
+                "explanation": "Khẳng định mạnh mẽ khả năng của ai đó ('chắc chắn anh ấy giải quyết được')."
+            },
+            {
+                "id": "n3-grammar-format-043-q09",
+                "grammarId": "n3-grammar-format-043",
+                "question": "彼女のプレゼントなら、彼は絶対に___に決まっている。",
+                "choices": ["喜ぶ", "喜んで", "喜んだ", "喜ぼう"],
+                "answer": 0,
+                "explanation": "Động từ thể từ điển 「喜ぶ」 kết hợp với に決まっている ('chắc chắn anh ấy sẽ vui mừng')."
+            },
+            {
+                "id": "n3-grammar-format-043-q10",
+                "grammarId": "n3-grammar-format-043",
+                "question": "こんなに素晴らしい景色、誰もが感動するに___。",
+                "choices": ["決まっている", "ちがわない", "かかわらない", "すぎない"],
+                "answer": 0,
+                "explanation": "Khẳng định cảm xúc tất yếu ('chắc chắn ai cũng sẽ xúc động')."
+            }
+        ]
+    },
+    "n3-grammar-format-044": {
+        "grammarId": "n3-grammar-format-044",
+        "title": "〜よって",
+        "questions": [
+            {
+                "id": "n3-grammar-format-044-q01",
+                "grammarId": "n3-grammar-format-044",
+                "question": "人___、好みや考え方が大きく異なります。",
+                "choices": ["によって", "について", "に対して", "にとって"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「Nによって」 chỉ sự thay đổi tùy theo đối tượng ('tùy từng người mà...')."
+            },
+            {
+                "id": "n3-grammar-format-044-q02",
+                "grammarId": "n3-grammar-format-044",
+                "question": "この作品は有名な芸術家___作られました。",
+                "choices": ["によって", "において", "について", "に関して"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「Nによって」 dùng trong câu bị động để chỉ tác nhân thực hiện hành động ('do nghệ sĩ nổi tiếng tạo ra')."
+            },
+            {
+                "id": "n3-grammar-format-044-q03",
+                "grammarId": "n3-grammar-format-044",
+                "question": "台風___被害が全国に広がっています。",
+                "choices": ["による", "によれば", "によって", "により"],
+                "answer": 0,
+                "explanation": "Dạng bổ nghĩa danh từ 「NによるN」 ('thiệt hại do bão gây ra')."
+            },
+            {
+                "id": "n3-grammar-format-044-q04",
+                "grammarId": "n3-grammar-format-044",
+                "question": "毎日の努力___、合格を勝ち取ることができました。",
+                "choices": ["によって", "について", "に対して", "にとって"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「Nによって」 chỉ phương tiện, nguyên nhân dẫn đến kết quả ('nhờ có sự nỗ lực mỗi ngày')."
+            },
+            {
+                "id": "n3-grammar-format-044-q05",
+                "grammarId": "n3-grammar-format-044",
+                "question": "季節___、咲く花の種類が変わります。",
+                "choices": ["によって", "にあたって", "に際して", "に比べて"],
+                "answer": 0,
+                "explanation": "Ý nghĩa 'tùy theo mùa' (季節によって)."
+            },
+            {
+                "id": "n3-grammar-format-044-q06",
+                "grammarId": "n3-grammar-format-044",
+                "question": "事故___、電車の運行が一時見合わされました。",
+                "choices": ["により", "につき", "にして", "に沿って"],
+                "answer": 0,
+                "explanation": "Dạng trang trọng của によって là により ('do tai nạn nên...')."
+            },
+            {
+                "id": "n3-grammar-format-044-q07",
+                "grammarId": "n3-grammar-format-044",
+                "question": "インターネット___、世界中の情報がすぐに手に入る。",
+                "choices": ["によって", "に向けて", "を通じて", "を通して"],
+                "answer": 0,
+                "explanation": "Chỉ phương tiện/công cụ ('thông qua/bằng internet')."
+            },
+            {
+                "id": "n3-grammar-format-044-q08",
+                "grammarId": "n3-grammar-format-044",
+                "question": "国___習慣が違うので、事前に調べておきましょう。",
+                "choices": ["によっては", "にあっては", "について", "にとって"],
+                "answer": 0,
+                "explanation": "Mẫu 「Nによっては」 mang nghĩa 'tùy thuộc vào... mà có thể...'."
+            },
+            {
+                "id": "n3-grammar-format-044-q09",
+                "grammarId": "n3-grammar-format-044",
+                "question": "火災___被害額は数億円に上るとみられる。",
+                "choices": ["による", "によって", "により", "によると"],
+                "answer": 0,
+                "explanation": "Dạng bổ nghĩa danh từ 「火災による被害額」 (số tiền thiệt hại do hỏa hoạn gây ra)."
+            },
+            {
+                "id": "n3-grammar-format-044-q10",
+                "grammarId": "n3-grammar-format-044",
+                "question": "新しい薬の開発___、多くの病気が治るようになった。",
+                "choices": ["によって", "について", "に対して", "にあたって"],
+                "answer": 0,
+                "explanation": "Chỉ nguyên nhân/phương thức ('nhờ vào việc phát triển thuốc mới')."
+            }
+        ]
+    },
+    "n3-grammar-format-045": {
+        "grammarId": "n3-grammar-format-045",
+        "title": "〜という",
+        "questions": [
+            {
+                "id": "n3-grammar-format-045-q01",
+                "grammarId": "n3-grammar-format-045",
+                "question": "「サクラ」___花を知っていますか。",
+                "choices": ["という", "といって", "といえば", "といっても"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「NというN」 dùng để định nghĩa hoặc gọi tên ('bông hoa có tên là Sakura')."
+            },
+            {
+                "id": "n3-grammar-format-045-q02",
+                "grammarId": "n3-grammar-format-045",
+                "question": "先ほど、鈴木さん___人からお電話がありましたよ。",
+                "choices": ["という", "というの", "ということ", "というもの"],
+                "answer": 0,
+                "explanation": "Dùng để chỉ định danh tính cụ thể ('người có tên là Suzuki')."
+            },
+            {
+                "id": "n3-grammar-format-045-q03",
+                "grammarId": "n3-grammar-format-045",
+                "question": "「PC」___のは、パーソナルコンピューターの略です。",
+                "choices": ["という", "といえば", "としたら", "とおり"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「〜というのは」 dùng để giải thích ý nghĩa hoặc định nghĩa từ ngữ."
+            },
+            {
+                "id": "n3-grammar-format-045-q04",
+                "grammarId": "n3-grammar-format-045",
+                "question": "来月から電気代が値上がりする___ことだ。",
+                "choices": ["という", "というの", "というもの", "というわけ"],
+                "answer": 0,
+                "explanation": "Mẫu truyền đạt thông tin nghe được hoặc định nghĩa sự việc ('có tin nói rằng...')."
+            },
+            {
+                "id": "n3-grammar-format-045-q05",
+                "grammarId": "n3-grammar-format-045",
+                "question": "困ったときはお互い様に助け合うのが仲間___ものだ。",
+                "choices": ["という", "といって", "といえば", "とした"],
+                "answer": 0,
+                "explanation": "Dùng để khẳng định bản chất sự việc (bản chất của bạn bè là...). "
+            },
+            {
+                "id": "n3-grammar-format-045-q06",
+                "grammarId": "n3-grammar-format-045",
+                "question": "連絡がないということは、辞退する___ことですね。",
+                "choices": ["という", "といい", "といえば", "とすると"],
+                "answer": 0,
+                "explanation": "Dùng để xác nhận lại ý nghĩa của một hành động/sự việc."
+            },
+            {
+                "id": "n3-grammar-format-045-q07",
+                "grammarId": "n3-grammar-format-045",
+                "question": "親という___は、いつも子供の心配をするものだ。",
+                "choices": ["もの", "こと", "わけ", "ところ"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「〜というものは」 dùng để nêu đặc tính chung chung của một đối tượng."
+            },
+            {
+                "id": "n3-grammar-format-045-q08",
+                "grammarId": "n3-grammar-format-045",
+                "question": "あそこで歌っているのは何___歌手ですか。",
+                "choices": ["という", "といって", "といえば", "とおり"],
+                "answer": 0,
+                "explanation": "Hỏi về tên hoặc danh tính ('ca sĩ tên là gì')."
+            },
+            {
+                "id": "n3-grammar-format-045-q09",
+                "grammarId": "n3-grammar-format-045",
+                "question": "ニュースによると、隣町で事件があった___ことだ。",
+                "choices": ["という", "というの", "というわけ", "というはず"],
+                "answer": 0,
+                "explanation": "Trích dẫn lại thông tin từ tin tức ('nghe nói là có vụ án')."
+            },
+            {
+                "id": "n3-grammar-format-045-q10",
+                "grammarId": "n3-grammar-format-045",
+                "question": "「一期一会」___言葉の意味を教えてください。",
+                "choices": ["という", "といって", "といえば", "とした"],
+                "answer": 0,
+                "explanation": "Dùng để bổ nghĩa cho danh từ chỉ tên gọi/từ ngữ ('cụm từ có ý nghĩa là...')."
+            }
+        ]
+    },
+    "n3-grammar-format-046": {
+        "grammarId": "n3-grammar-format-046",
+        "title": "〜もんか/ものか",
+        "questions": [
+            {
+                "id": "n3-grammar-format-046-q01",
+                "grammarId": "n3-grammar-format-046",
+                "question": "あんな失礼な店、二度と行く___か。",
+                "choices": ["もん", "もの", "こと", "わけ"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「〜もんか/ものか」 dùng để phủ định mạnh mẽ, thể hiện cảm xúc bất mãn ('Còn lâu mới đi lần nữa!')."
+            },
+            {
+                "id": "n3-grammar-format-046-q02",
+                "grammarId": "n3-grammar-format-046",
+                "question": "こんなに難しい問題、１分で解ける___か。",
+                "choices": ["もの", "こと", "はず", "わけ"],
+                "answer": 0,
+                "explanation": "Phủ định khả năng với sắc thái khẳng định ngược lại ('Làm sao mà giải được trong 1 phút chứ!')."
+            },
+            {
+                "id": "n3-grammar-format-046-q03",
+                "grammarId": "n3-grammar-format-046",
+                "question": "元気な___か。体中が痛くて動けないよ。",
+                    "choices": ["もん", "もの", "こと", "わけ"],
+                "answer": 0,
+                "explanation": "Phủ định trạng thái ('Khỏe cái nỗi gì chứ!')."
+            },
+            {
+                "id": "n3-grammar-format-046-q04",
+                "grammarId": "n3-grammar-format-046",
+                "question": "彼が約束を守る___か。いつも破ってばかりだ。",
+                "choices": ["もん", "もの", "こと", "はず"],
+                "answer": 0,
+                "explanation": "Biểu thị sự hoài nghi và phủ định mạnh mẽ ('Cơ mà hắn có giữ lời hứa đâu!')."
+            },
+            {
+                "id": "n3-grammar-format-046-q05",
+                "grammarId": "n3-grammar-format-046",
+                "question": "あんな不味い料理、頼まれても食べる___か。",
+                "choices": ["もん", "こと", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Biểu thị ý từ chối quyết liệt ('Còn lâu mới ăn!')."
+            },
+            {
+                "id": "n3-grammar-format-046-q06",
+                "grammarId": "n3-grammar-format-046",
+                "question": "負ける___か！最後まで絶対にあきらめないぞ。",
+                "choices": ["もん", "こと", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Cổ vũ bản thân, quyết tâm không chịu thua ('Nhất định không thua đâu!')."
+            },
+            {
+                "id": "n3-grammar-format-046-q07",
+                "grammarId": "n3-grammar-format-046",
+                "question": "下手な___か。彼はプロ並みの腕前だよ。",
+                "choices": ["もん", "もの", "こと", "わけ"],
+                "answer": 0,
+                "explanation": "Phủ định ý kiến trái chiều ('Kém cỏi gì chứ!')."
+            },
+            {
+                "id": "n3-grammar-format-046-q08",
+                "grammarId": "n3-grammar-format-046",
+                "question": "そんなくだらない噂話を信用する___か。",
+                "choices": ["もん", "こと", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Phủ định việc tin tưởng vào tin đồn nhảm nhí."
+            },
+            {
+                "id": "n3-grammar-format-046-q09",
+                "grammarId": "n3-grammar-format-046",
+                "question": "こんなに雨が降っているのに、外出なんてする___か。",
+                "choices": ["もん", "こと", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Phủ định việc ra ngoài trong thời tiết xấu."
+            },
+            {
+                "id": "n3-grammar-format-046-q10",
+                "grammarId": "n3-grammar-format-046",
+                "question": "一度や二度の失敗で、諦める___か。",
+                "choices": ["もん", "こと", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Biểu thị sự kiên quyết không bỏ cuộc."
+            }
+        ]
+    },
+    "n3-grammar-format-047": {
+        "grammarId": "n3-grammar-format-047",
+        "title": "どんなに〜ことか",
+        "questions": [
+            {
+                "id": "n3-grammar-format-047-q01",
+                "grammarId": "n3-grammar-format-047",
+                "question": "試験に合格したと知った時、どんなに___ことか。",
+                "choices": ["嬉しかった", "嬉しい", "嬉しく", "嬉しさ"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「どんなに〜ことか」 dùng để cảm thán mức độ cảm xúc ('Đã vui mừng biết bao nhiêu!')."
+            },
+            {
+                "id": "n3-grammar-format-047-q02",
+                "grammarId": "n3-grammar-format-047",
+                "question": "外国で一人暮らしをするのは、どれほど大変な___か。",
+                "choices": ["こと", "もの", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Cố định cụm cảm thán 「どれほど〜ことか」 (vất vả biết bao)."
+            },
+            {
+                "id": "n3-grammar-format-047-q03",
+                "grammarId": "n3-grammar-format-047",
+                "question": "長年の夢が叶って、どれだけ___ことか。",
+                "choices": ["感動した", "感動する", "感動して", "感動させ"],
+                "answer": 0,
+                "explanation": "Biểu thị sự xúc động sâu sắc khi ước mơ thành hiện thực."
+            },
+            {
+                "id": "n3-grammar-format-047-q04",
+                "grammarId": "n3-grammar-format-047",
+                "question": "連絡が取れなくて、両親がどれほど___ことか。",
+                "choices": ["心配した", "心配する", "心配して", "心配"],
+                "answer": 0,
+                "explanation": "Diễn tả mức độ lo lắng tột cùng của bố mẹ."
+            },
+            {
+                "id": "n3-grammar-format-047-q05",
+                "grammarId": "n3-grammar-format-047",
+                "question": "子供が元気になった姿を見て、母はどんなに___ことか。",
+                "choices": ["安心した", "安心する", "安心", "安心だ"],
+                "answer": 0,
+                "explanation": "Cảm giác nhẹ nhõm, an tâm khi thấy con khỏe mạnh."
+            },
+            {
+                "id": "n3-grammar-format-047-q06",
+                "grammarId": "n3-grammar-format-047",
+                "question": "この日を何年も待っていたので、なんと___ことか。",
+                "choices": ["幸せな", "幸せだ", "幸せに", "幸せ"],
+                "answer": 0,
+                "explanation": "Tính từ đuôi na kết hợp với cấu trúc cảm thán (なんと幸せなことか - hạnh phúc biết bao)."
+            },
+            {
+                "id": "n3-grammar-format-047-q07",
+                "grammarId": "n3-grammar-format-047",
+                "question": "昔の思い出を振り返ると、どんなに懐かしい___か。",
+                "choices": ["こと", "もの", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Cấu trúc cảm thán cố định kết thúc bằng 「ことか」."
+            },
+            {
+                "id": "n3-grammar-format-047-q08",
+                "grammarId": "n3-grammar-format-047",
+                "question": "家族と離れて暮らすのは、どれほど寂しい___か。",
+                "choices": ["こと", "もの", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Cảm thán về nỗi cô đơn khi sống xa gia đình."
+            },
+            {
+                "id": "n3-grammar-format-047-q09",
+                "grammarId": "n3-grammar-format-047",
+                "question": "失敗したとき、友人の励ましがどれほど心強かった___か。",
+                "choices": ["こと", "もの", "わけ", "はず"],
+                "answer": 0,
+                "explanation": "Cảm thán về sự biết ơn và mức độ vững tâm khi được bạn bè động viên."
+            },
+            {
+                "id": "n3-grammar-format-047-q10",
+                "grammarId": "n3-grammar-format-047",
+                "question": "自分のチームが優勝して、どんなに___ことか。",
+                "choices": ["誇らしかった", "誇らしい", "誇らしく", "誇らしさ"],
+                "answer": 0,
+                "explanation": "Cảm thán về niềm tự hào khi đội nhà vô địch."
+            }
+        ]
+    },
+    "n3-grammar-format-048": {
+        "grammarId": "n3-grammar-format-048",
+        "title": "〜として(は)/〜としても/ 〜としての",
+        "questions": [
+            {
+                "id": "n3-grammar-format-048-q01",
+                "grammarId": "n3-grammar-format-048",
+                "question": "彼は留学生___日本へやって来ました。",
+                "choices": ["として", "にして", "としてのは", "としての"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「Nとして」 chỉ tư cách, vai trò, lập trường ('với tư cách là lưu học sinh')."
+            },
+            {
+                "id": "n3-grammar-format-048-q02",
+                "grammarId": "n3-grammar-format-048",
+                "question": "教師___責任を持って、生徒に接するべきだ。",
+                "choices": ["として", "にして", "としてのは", "としての"],
+                "answer": 0,
+                "explanation": "Chỉ tư cách nghề nghiệp ('với tư cách là giáo viên')."
+            },
+            {
+                "id": "n3-grammar-format-048-q03",
+                "grammarId": "n3-grammar-format-048",
+                "question": "趣味___始めた写真ですが、今では仕事になっています。",
+                "choices": ["として", "にして", "としてのは", "としての"],
+                "answer": 0,
+                "explanation": "Chỉ mục đích/tính chất khởi đầu ('bắt đầu với tư cách/như là một sở thích')."
+            },
+            {
+                "id": "n3-grammar-format-048-q04",
+                "grammarId": "n3-grammar-format-048",
+                "question": "プロの選手___自覚を持って練習に励む。",
+                "choices": ["としての", "として", "としても", "としては"],
+                "answer": 0,
+                "explanation": "Dạng bổ nghĩa danh từ 「NとしてのN」 ('ý thức với tư cách là cầu thủ chuyên nghiệp')."
+            },
+            {
+                "id": "n3-grammar-format-048-q05",
+                "grammarId": "n3-grammar-format-048",
+                "question": "この地域の代表___、会議に出席させていただきます。",
+                "choices": ["として", "にして", "としてのは", "としての"],
+                "answer": 0,
+                "explanation": "Chỉ vai trò đại diện ('với tư cách là đại diện của khu vực')."
+            },
+            {
+                "id": "n3-grammar-format-048-q06",
+                "grammarId": "n3-grammar-format-048",
+                "question": "私個人___は、その提案に賛成です。",
+                "choices": ["としては", "としてはの", "としても", "としての"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「Nとしては」 biểu thị lập trường cá nhân ('về phần cá nhân tôi thì...')."
+            },
+            {
+                "id": "n3-grammar-format-048-q07",
+                "grammarId": "n3-grammar-format-048",
+                "question": "医者___だけでなく、作家としても活躍している。",
+                "choices": ["として", "にして", "としてのは", "としての"],
+                "answer": 0,
+                "explanation": "Chỉ vai trò bác sĩ ('không chỉ với tư cách là bác sĩ...')."
+            },
+            {
+                "id": "n3-grammar-format-048-q08",
+                "grammarId": "n3-grammar-format-048",
+                "question": "たとえ親___許せても、社会は許さないだろう。",
+                "choices": ["としても", "としては", "として", "としての"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「Nとしても」 chỉ sự giả định nhượng bộ ('cho dù là bố mẹ đi chăng nữa')."
+            },
+            {
+                "id": "n3-grammar-format-048-q09",
+                "grammarId": "n3-grammar-format-048",
+                "question": "環境問題は地球全体の課題___捉える必要がある。",
+                "choices": ["として", "にして", "としてのは", "としての"],
+                "answer": 0,
+                "explanation": "Xác định tính chất/vai trò của đối tượng khi nhìn nhận ('xem như là vấn đề toàn cầu')."
+            },
+            {
+                "id": "n3-grammar-format-048-q10",
+                "grammarId": "n3-grammar-format-048",
+                "question": "リーダー___役割をしっかり果たしてください。",
+                "choices": ["としての", "として", "としても", "としては"],
+                "answer": 0,
+                "explanation": "Dạng bổ nghĩa danh từ 「リーダーとしての役割」 ('vai trò với tư cách là leader')."
+            }
+        ]
+    },
+    "n3-grammar-format-049": {
+        "grammarId": "n3-grammar-format-049",
+        "title": "～ ば（いい）と思う/〜ばいいのに/〜ばよかった",
+        "questions": [
+            {
+                "id": "n3-grammar-format-049-q01",
+                "grammarId": "n3-grammar-format-049",
+                "question": "明日は晴れれ___いいなと思っています。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「〜ばいいと思う」 dùng để diễn tả mong muốn ('tôi hy vọng ngày mai trời sẽ đẹp')."
+            },
+            {
+                "id": "n3-grammar-format-049-q02",
+                "grammarId": "n3-grammar-format-049",
+                "question": "もっと早く家を出れ___よかったのに、間に合わなかった。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「〜ばよかった」 dùng để thể hiện sự hối tiếc ('giá mà xuất phát sớm hơn thì hay biết mấy')."
+            },
+            {
+                "id": "n3-grammar-format-049-q03",
+                "grammarId": "n3-grammar-format-049",
+                "question": "困ったときは、遠慮せずに相談してくれれ___と思います。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Diễn tả nguyện vọng, mong muốn người khác làm gì giúp mình."
+            },
+            {
+                "id": "n3-grammar-format-049-q04",
+                "grammarId": "n3-grammar-format-049",
+                "question": "昨日のパーティー、君も来れ___よかったのに。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Thể hiện sự tiếc nuối cho đối phương ('giá mà bạn cũng đến dự tiệc thì tốt biết mấy')."
+            },
+            {
+                "id": "n3-grammar-format-049-q05",
+                "grammarId": "n3-grammar-format-049",
+                "question": "あんな高い服、買わなければ___よかった。",
+                "choices": ["よかった", "いい", "よさそう", "いいのに"],
+                "answer": 0,
+                "explanation": "Cấu trúc phủ định tiếc nuối 「〜なければよかった」 ('biết thế không mua bộ đồ đắt đỏ đó')."
+            },
+            {
+                "id": "n3-grammar-format-049-q06",
+                "grammarId": "n3-grammar-format-049",
+                "question": "自分だけの部屋があれ___いいなあ。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Diễn tả mong ước cá nhân ('Ước gì có căn phòng của riêng mình')."
+            },
+            {
+                "id": "n3-grammar-format-049-q07",
+                "grammarId": "n3-grammar-format-049",
+                "question": "わからないことは、先生に聞けば___のに。",
+                "choices": ["いい", "よく", "よさ", "よかった"],
+                "answer": 0,
+                "explanation": "Mẫu 「〜ばいいのに」 dùng để đưa ra lời khuyên hoặc trách móc nhẹ nhàng ('Lẽ ra nên hỏi thầy cô những điều không hiểu')."
+            },
+            {
+                "id": "n3-grammar-format-049-q08",
+                "grammarId": "n3-grammar-format-049",
+                "question": "テストの前にもっと勉強しておけ___よかった。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Thể hiện sự hối hận vì đã không chuẩn bị trước kỳ thi."
+            },
+            {
+                "id": "n3-grammar-format-049-q09",
+                "grammarId": "n3-grammar-format-049",
+                "question": "お時間のある時に、ご確認いただけれ___と思います。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Cách nói lịch sự nhờ vả/đề xuất ('tôi hy vọng bạn có thể xác nhận khi rảnh')."
+            },
+            {
+                "id": "n3-grammar-format-049-q10",
+                "grammarId": "n3-grammar-format-049",
+                "question": "あんな酷いことを言わなければ___のに、後悔している。",
+                "choices": ["よかった", "いい", "よさそう", "いいのに"],
+                "answer": 0,
+                "explanation": "Thể hiện sự hối hận sâu sắc về lời nói trong quá khứ."
+            }
+        ]
+    },
+    "n3-grammar-format-050": {
+        "grammarId": "n3-grammar-format-050",
+        "title": "〜ば〜ほど",
+        "questions": [
+            {
+                "id": "n3-grammar-format-050-q01",
+                "grammarId": "n3-grammar-format-050",
+                "question": "日本語は勉強すれ___勉強するほど難しくなる。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Cấu trúc 「V-ba ... V-ru hodo」 diễn tả sự thay đổi song song mức độ ('càng học tiếng Nhật càng thấy khó')."
+            },
+            {
+                "id": "n3-grammar-format-050-q02",
+                "grammarId": "n3-grammar-format-050",
+                "question": "操作は簡単なら___簡単なほどいいです。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Cấu trúc với tính từ đuôi na (なら...なほど) ('thao tác càng đơn giản càng tốt')."
+            },
+            {
+                "id": "n3-grammar-format-050-q03",
+                "grammarId": "n3-grammar-format-050",
+                "question": "給料は高けれ___高いほど嬉しい。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Cấu trúc với tính từ đuôi i (高ければ高いほど - lương càng cao càng vui)."
+            },
+            {
+                "id": "n3-grammar-format-050-q04",
+                "grammarId": "n3-grammar-format-050",
+                "question": "見れ___見るほど、魅力的に思えてくる。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Động từ khả năng kết hợp với cấu trúc tương ứng ('càng nhìn càng thấy hấp dẫn')."
+            },
+            {
+                "id": "n3-grammar-format-050-q05",
+                "grammarId": "n3-grammar-format-050",
+                "question": "荷物は少なければ早い___いい。",
+                "choices": ["ほど", "くらい", "ばかり", "だけ"],
+                "answer": 0,
+                "explanation": "Cố định phần sau của cấu trúc 「〜ば〜ほど」 là 「〜ほど」."
+            },
+            {
+                "id": "n3-grammar-format-050-q06",
+                "grammarId": "n3-grammar-format-050",
+                "question": "考えれ___考えるほど、解決策がわからなくなる。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Diễn tả việc suy nghĩ nhiều dẫn đến bế tắc ('càng suy nghĩ càng không rõ giải pháp')."
+            },
+            {
+                "id": "n3-grammar-format-050-q07",
+                "grammarId": "n3-grammar-format-050",
+                "question": "駅に近けれ___近いほど、家賃は高くなります。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Tính từ i (近ければ近いほど - càng gần ga tiền nhà càng cao)."
+            },
+            {
+                "id": "n3-grammar-format-050-q08",
+                "grammarId": "n3-grammar-format-050",
+                "question": "話せ___話すほど、お互いの理解が深まる。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Cấu trúc tăng tiến song song ('càng trò chuyện càng hiểu nhau hơn')."
+            },
+            {
+                "id": "n3-grammar-format-050-q09",
+                "grammarId": "n3-grammar-format-050",
+                "question": "静かなら___静かなほど、集中して勉強できる。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Cấu trúc với tính từ na (静かなら静かなほど - càng yên tĩnh càng tập trung). "
+            },
+            {
+                "id": "n3-grammar-format-050-q10",
+                "grammarId": "n3-grammar-format-050",
+                "question": "食べれ___食べるほど太ってしまうので気をつけたい。",
+                "choices": ["ば", "たら", "なら", "と"],
+                "answer": 0,
+                "explanation": "Tăng tiến tiêu cực ('càng ăn càng béo nên cần chú ý')."
+            }
+        ]
+    }
 };

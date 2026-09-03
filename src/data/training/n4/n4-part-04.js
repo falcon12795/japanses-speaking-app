@@ -14,7 +14,7 @@ export default {
                     "持たれました"
                 ],
                 "answer": 0,
-                "explanation": "Dùng khiêm nhường ngữ お持ちします để hạ thấp hành động xách đồ của bản thân nhằm thể hiện sự tôn trọng với người đối thoại[cite: 18]."
+                "explanation": "Dùng khiêm nhường ngữ お持ちします để hạ thấp hành động xách đồ của bản thân nhằm thể hiện sự tôn trọng với người đối thoại."
             },
             {
                 "id": "n4-grammar-format-031-q02",
@@ -27,7 +27,7 @@ export default {
                     "ご連絡になられます"
                 ],
                 "answer": 0,
-                "explanation": "Cấu trúc ご + N-漢字 + します (ご連絡します) là khiêm nhường ngữ dùng cho hành động liên lạc của bản thân[cite: 18]."
+                "explanation": "Cấu trúc ご + N-漢字 + します (ご連絡します) là khiêm nhường ngữ dùng cho hành động liên lạc của bản thân."
             },
             {
                 "id": "n4-grammar-format-031-q03",
@@ -40,7 +40,7 @@ export default {
                     "はお目にかかります"
                 ],
                 "answer": 0,
-                "explanation": "Động từ đặc biệt của いう (nói tên mình) trong khiêm nhường ngữ là 申します[cite: 18]."
+                "explanation": "Động từ đặc biệt của いう (nói tên mình) trong khiêm nhường ngữ là 申します."
             },
             {
                 "id": "n4-grammar-format-031-q04",
@@ -53,7 +53,7 @@ export default {
                     "いらっしゃいます"
                 ],
                 "answer": 0,
-                "explanation": "Khiêm nhường ngữ đặc biệt cho việc đi đến nhà/công ty người khác (hay 行く/来る) là 伺います[cite: 18]."
+                "explanation": "Khiêm nhường ngữ đặc biệt cho việc đi đến nhà/công ty người khác (hay 行く/来る) là 伺います."
             },
             {
                 "id": "n4-grammar-format-031-q05",
@@ -66,7 +66,7 @@ export default {
                     "お話しなさっても"
                 ],
                 "answer": 0,
-                "explanation": "Hỏi (聞く) dùng khiêm nhường ngữ お伺いする (hoặc 尋ねる)[cite: 18]."
+                "explanation": "Hỏi (聞く) dùng khiêm nhường ngữ お伺いする (hoặc 尋ねる)."
             },
             {
                 "id": "n4-grammar-format-031-q06",
@@ -79,7 +79,7 @@ export default {
                     "お迎えになられます"
                 ],
                 "answer": 0,
-                "explanation": "Đón (迎える) chuyển sang khiêm nhường ngữ お迎えします[cite: 18]."
+                "explanation": "Đón (迎える) chuyển sang khiêm nhường ngữ お迎えします."
             },
             {
                 "id": "n4-grammar-format-031-q07",
@@ -92,7 +92,7 @@ export default {
                     "お送りになられます"
                 ],
                 "answer": 0,
-                "explanation": "Gửi tài liệu (送る) dùng cấu trúc お + V-stem + します (お送りします)[cite: 18]."
+                "explanation": "Gửi tài liệu (送る) dùng cấu trúc お + V-stem + します (お送りします)."
             },
             {
                 "id": "n4-grammar-format-031-q08",
@@ -105,7 +105,7 @@ export default {
                     "いらっしゃいました"
                 ],
                 "answer": 0,
-                "explanation": "Gặp (会う) ở dạng khiêm nhường ngữ là お目にかかる[cite: 18]."
+                "explanation": "Gặp (会う) ở dạng khiêm nhường ngữ là お目にかかる."
             },
             {
                 "id": "n4-grammar-format-031-q09",
@@ -118,7 +118,7 @@ export default {
                     "ご説明になられます"
                 ],
                 "answer": 0,
-                "explanation": "Giải thích (説明する) dùng khiêm nhường ngữ ご + N + します (ご説明します)[cite: 18]."
+                "explanation": "Giải thích (説明する) dùng khiêm nhường ngữ ご + N + します (ご説明します)."
             },
             {
                 "id": "n4-grammar-format-031-q10",
@@ -131,7 +131,7 @@ export default {
                     "召し上がります"
                 ],
                 "answer": 0,
-                "explanation": "Đưa ra/phục vụ (出す) dùng khiêm nhường ngữ お出しします[cite: 18]."
+                "explanation": "Đưa ra/phục vụ (出す) dùng khiêm nhường ngữ お出しします."
             }
         ]
     },
@@ -151,7 +151,7 @@ export default {
                     "ております"
                 ],
                 "answer": 0,
-                "explanation": "ございます là dạng lịch sự trang trọng của あります[cite: 18]."
+                "explanation": "ございます là dạng lịch sự trang trọng của あります."
             },
             {
                 "id": "n4-grammar-format-032-q02",
@@ -164,7 +164,7 @@ export default {
                     "でした"
                 ],
                 "answer": 0,
-                "explanation": "Dùng でございます để tăng mức độ lịch sự cho です trong văn cảnh dịch vụ/khách sạn[cite: 18]."
+                "explanation": "Dùng でございます để tăng mức độ lịch sự cho です trong văn cảnh dịch vụ/khách sạn."
             },
             {
                 "id": "n4-grammar-format-032-q03",
@@ -177,7 +177,7 @@ export default {
                     "おありです"
                 ],
                 "answer": 0,
-                "explanation": "Dùng ご質問はございますか để hỏi khách hàng một cách lịch sự nhất[cite: 18]."
+                "explanation": "Dùng ご質問はございますか để hỏi khách hàng một cách lịch sự nhất."
             },
             {
                 "id": "n4-grammar-format-032-q04",
@@ -190,7 +190,7 @@ export default {
                     "おいでです"
                 ],
                 "answer": 0,
-                "explanation": "Chỉ vị trí đồ vật/nơi chốn lịch sự bằng ございます[cite: 18]."
+                "explanation": "Chỉ vị trí đồ vật/nơi chốn lịch sự bằng ございます."
             },
             {
                 "id": "n4-grammar-format-032-q05",
@@ -203,7 +203,7 @@ export default {
                     "お持ちですか"
                 ],
                 "answer": 0,
-                "explanation": "Nhân viên cửa hàng dùng ございます để hỏi khách[cite: 18]."
+                "explanation": "Nhân viên cửa hàng dùng ございます để hỏi khách."
             },
             {
                 "id": "n4-grammar-format-032-q06",
@@ -216,7 +216,7 @@ export default {
                     "ません"
                 ],
                 "answer": 0,
-                "explanation": "Trang trọng hóa câu báo cáo với khách hàng bằng ございます[cite: 18]."
+                "explanation": "Trang trọng hóa câu báo cáo với khách hàng bằng ございます."
             },
             {
                 "id": "n4-grammar-format-032-q07",
@@ -229,7 +229,7 @@ export default {
                     "すべてであります"
                 ],
                 "answer": 0,
-                "explanation": "Dạng lịch sự của です trong thông báo dịch vụ là でございます[cite: 18]."
+                "explanation": "Dạng lịch sự của です trong thông báo dịch vụ là でございます."
             },
             {
                 "id": "n4-grammar-format-032-q08",
@@ -242,7 +242,7 @@ export default {
                     "おられます"
                 ],
                 "answer": 0,
-                "explanation": "Sử dụng ございます để báo giá cho khách hàng lịch sự[cite: 18]."
+                "explanation": "Sử dụng ございます để báo giá cho khách hàng lịch sự."
             },
             {
                 "id": "n4-grammar-format-032-q09",
@@ -255,7 +255,7 @@ export default {
                     "なり"
                 ],
                 "answer": 0,
-                "explanation": "Dạng điều kiện của ございます là ございましたら / ございますなら (Biến thể lịch sự của あります)[cite: 18]."
+                "explanation": "Dạng điều kiện của ございます là ございましたら / ございますなら (Biến thể lịch sự của あります)."
             },
             {
                 "id": "n4-grammar-format-032-q10",
@@ -268,7 +268,7 @@ export default {
                     "おいでです"
                 ],
                 "answer": 0,
-                "explanation": "Chỉ dẫn khách hàng vị trí đặt ô bằng ございます[cite: 18]."
+                "explanation": "Chỉ dẫn khách hàng vị trí đặt ô bằng ございます."
             }
         ]
     },
@@ -288,7 +288,7 @@ export default {
                     "降るはずです"
                 ],
                 "answer": 0,
-                "explanation": "Truyền đạt thông tin nghe ngóng từ dự báo thời tiết (dùng thể thông thường trước そうです)[cite: 18]."
+                "explanation": "Truyền đạt thông tin nghe ngóng từ dự báo thời tiết (dùng thể thông thường trước そうです)."
             },
             {
                 "id": "n4-grammar-format-033-q02",
@@ -301,7 +301,7 @@ export default {
                     "行くところです"
                 ],
                 "answer": 0,
-                "explanation": "Nghe nói anh Tanaka tháng sau sẽ đi Mỹ (truyền đạt thông tin)[cite: 18]."
+                "explanation": "Nghe nói anh Tanaka tháng sau sẽ đi Mỹ (truyền đạt thông tin)."
             },
             {
                 "id": "n4-grammar-format-033-q03",
@@ -314,7 +314,7 @@ export default {
                     "あったはずです"
                 ],
                 "answer": 0,
-                "explanation": "Trích dẫn tin tức từ bản tin: だった/あったそうです[cite: 18]."
+                "explanation": "Trích dẫn tin tức từ bản tin: だった/あったそうです."
             },
             {
                 "id": "n4-grammar-format-033-q04",
@@ -327,7 +327,7 @@ export default {
                     "美味しいはずです"
                 ],
                 "answer": 0,
-                "explanation": "Theo lời Yamada kể lại thì quán này ngon (truyền đạt)[cite: 18]."
+                "explanation": "Theo lời Yamada kể lại thì quán này ngon (truyền đạt)."
             },
             {
                 "id": "n4-grammar-format-033-q05",
@@ -340,7 +340,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Nghe nói nhà hàng đó tuần sau sẽ đóng cửa[cite: 18]."
+                "explanation": "Nghe nói nhà hàng đó tuần sau sẽ đóng cửa."
             },
             {
                 "id": "n4-grammar-format-033-q06",
@@ -353,7 +353,7 @@ export default {
                     "変わるはずです"
                 ],
                 "answer": 0,
-                "explanation": "Nghe nói hệ thống thi năm sau sẽ thay đổi[cite: 18]."
+                "explanation": "Nghe nói hệ thống thi năm sau sẽ thay đổi."
             },
             {
                 "id": "n4-grammar-format-033-q07",
@@ -366,7 +366,7 @@ export default {
                     "忙しいはずです"
                 ],
                 "answer": 0,
-                "explanation": "Truyền đạt lại nội dung trong thư của anh ấy[cite: 18]."
+                "explanation": "Truyền đạt lại nội dung trong thư của anh ấy."
             },
             {
                 "id": "n4-grammar-format-033-q08",
@@ -379,7 +379,7 @@ export default {
                     "結婚するはずです"
                 ],
                 "answer": 0,
-                "explanation": "Theo tin đồn thì hai người đó sắp kết hôn (nghe nói)[cite: 18]."
+                "explanation": "Theo tin đồn thì hai người đó sắp kết hôn (nghe nói)."
             },
             {
                 "id": "n4-grammar-format-033-q09",
@@ -392,7 +392,7 @@ export default {
                     "なるはずです"
                 ],
                 "answer": 0,
-                "explanation": "Đài phát thanh đưa tin sáng mai trời sẽ lạnh đi[cite: 18]."
+                "explanation": "Đài phát thanh đưa tin sáng mai trời sẽ lạnh đi."
             },
             {
                 "id": "n4-grammar-format-033-q10",
@@ -405,7 +405,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Theo lời giáo viên thì tuần sau nghỉ học (thể thông thường + そうです)[cite: 18]."
+                "explanation": "Theo lời giáo viên thì tuần sau nghỉ học (thể thông thường + そうです)."
             }
         ]
     },
@@ -425,7 +425,7 @@ export default {
                     "来たところです"
                 ],
                 "answer": 0,
-                "explanation": "Nghe thấy tiếng động nên suy đoán chủ quan: Hình như có ai vừa đến[cite: 18]."
+                "explanation": "Nghe thấy tiếng động nên suy đoán chủ quan: Hình như có ai vừa đến."
             },
             {
                 "id": "n4-grammar-format-034-q02",
@@ -438,7 +438,7 @@ export default {
                     "降っているところです"
                 ],
                 "answer": 0,
-                "explanation": "Dựa vào bằng chứng đường ướt để phán đoán: Hình như ban đêm trời đã mưa[cite: 18]."
+                "explanation": "Dựa vào bằng chứng đường ướt để phán đoán: Hình như ban đêm trời đã mưa."
             },
             {
                 "id": "n4-grammar-format-034-q03",
@@ -451,7 +451,7 @@ export default {
                     "そう です"
                 ],
                 "answer": 0,
-                "explanation": "Danh từ + のようです (病気のようです) dùng để phán đoán qua sắc mặt[cite: 18]."
+                "explanation": "Danh từ + のようです (病気のようです) dùng để phán đoán qua sắc mặt."
             },
             {
                 "id": "n4-grammar-format-034-q04",
@@ -464,7 +464,7 @@ export default {
                     "なっているところです"
                 ],
                 "answer": 0,
-                "explanation": "Phán đoán theo cảm nhận chủ quan: Hình như uống thuốc này sẽ khỏe lên[cite: 18]."
+                "explanation": "Phán đoán theo cảm nhận chủ quan: Hình như uống thuốc này sẽ khỏe lên."
             },
             {
                 "id": "n4-grammar-format-034-q05",
@@ -477,7 +477,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Nhìn phòng trống nên phán đoán: Hình như đã ra ngoài rồi[cite: 18]."
+                "explanation": "Nhìn phòng trống nên phán đoán: Hình như đã ra ngoài rồi."
             },
             {
                 "id": "n4-grammar-format-034-q06",
@@ -490,7 +490,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Sử dụng ようです để so sánh, ví von (giống như người Nhật)[cite: 18]."
+                "explanation": "Sử dụng ようです để so sánh, ví von (giống như người Nhật)."
             },
             {
                 "id": "n4-grammar-format-034-q07",
@@ -503,7 +503,7 @@ export default {
                     "降るはずです"
                 ],
                 "answer": 0,
-                "explanation": "(Lưu ý: Nếu nhìn mây đen trước mắt thì dùng そうです, nhưng nếu đánh giá tổng thể thời tiết có thể dùng ようです hoặc そうです. Ở đây chọn hình thức phù hợp theo suy đoán cảm quan dạng ようです)[cite: 18]."
+                "explanation": "(Lưu ý: Nếu nhìn mây đen trước mắt thì dùng そうです, nhưng nếu đánh giá tổng thể thời tiết có thể dùng ようです hoặc そうです. Ở đây chọn hình thức phù hợp theo suy đoán cảm quan dạng ようです)."
             },
             {
                 "id": "n4-grammar-format-034-q08",
@@ -516,7 +516,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Dựa trên kết quả điểm kém để phán đoán: Hình như bài này khó với mọi người[cite: 18]."
+                "explanation": "Dựa trên kết quả điểm kém để phán đoán: Hình như bài này khó với mọi người."
             },
             {
                 "id": "n4-grammar-format-034-q09",
@@ -529,7 +529,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Dựa vào việc anh ấy hay mệt mỏi/vắng mặt để phán đoán[cite: 18]."
+                "explanation": "Dựa vào việc anh ấy hay mệt mỏi/vắng mặt để phán đoán."
             },
             {
                 "id": "n4-grammar-format-034-q10",
@@ -542,7 +542,7 @@ export default {
                     "あるところです"
                 ],
                 "answer": 0,
-                "explanation": "Nghe tiếng động lớn nên suy đoán: Hình như có chuyện gì vừa xảy ra[cite: 18]."
+                "explanation": "Nghe tiếng động lớn nên suy đoán: Hình như có chuyện gì vừa xảy ra."
             }
         ]
     },
@@ -562,7 +562,7 @@ export default {
                     "ついて"
                 ],
                 "answer": 0,
-                "explanation": "Danh từ + のために chỉ nguyên nhân tiêu cực (Do bão nên...)[cite: 18]."
+                "explanation": "Danh từ + のために chỉ nguyên nhân tiêu cực (Do bão nên...)."
             },
             {
                 "id": "n4-grammar-format-035-q02",
@@ -575,7 +575,7 @@ export default {
                     "あれば"
                 ],
                 "answer": 0,
-                "explanation": "V-thể thông thường + ために chỉ nguyên nhân xảy ra sự cố[cite: 18]."
+                "explanation": "V-thể thông thường + ために chỉ nguyên nhân xảy ra sự cố."
             },
             {
                 "id": "n4-grammar-format-035-q03",
@@ -588,7 +588,7 @@ export default {
                     "ので"
                 ],
                 "answer": 0,
-                "explanation": "Do đường đông nên tôi bị muộn (V-thể thông thường + ために)[cite: 18]."
+                "explanation": "Do đường đông nên tôi bị muộn (V-thể thông thường + ために)."
             },
             {
                 "id": "n4-grammar-format-035-q04",
@@ -601,7 +601,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Danh từ + のため chỉ nguyên nhân do mưa lớn[cite: 18]."
+                "explanation": "Danh từ + のため chỉ nguyên nhân do mưa lớn."
             },
             {
                 "id": "n4-grammar-format-035-q05",
@@ -614,7 +614,7 @@ export default {
                     "わりに"
                 ],
                 "answer": 0,
-                "explanation": "Tính từ na / Danh từ dùng なため / のため (下手なために: Vì kém tiếng Nhật)[cite: 18]."
+                "explanation": "Tính từ na / Danh từ dùng なため / のため (下手なために: Vì kém tiếng Nhật)."
             },
             {
                 "id": "n4-grammar-format-035-q06",
@@ -627,7 +627,7 @@ export default {
                     "あれば"
                 ],
                 "answer": 0,
-                "explanation": "V-quá khứ/thể thông thường + ために chỉ lý do nghỉ làm[cite: 18]."
+                "explanation": "V-quá khứ/thể thông thường + ために chỉ lý do nghỉ làm."
             },
             {
                 "id": "n4-grammar-format-035-q07",
@@ -640,7 +640,7 @@ export default {
                     "ものの"
                 ],
                 "answer": 0,
-                "explanation": "Tính từ i giữ nguyên + ために chỉ nguyên nhân bận rộn[cite: 18]."
+                "explanation": "Tính từ i giữ nguyên + ために chỉ nguyên nhân bận rộn."
             },
             {
                 "id": "n4-grammar-format-035-q08",
@@ -653,7 +653,7 @@ export default {
                     "ので"
                 ],
                 "answer": 0,
-                "explanation": "Vì gió mạnh nên không qua cầu được[cite: 18]."
+                "explanation": "Vì gió mạnh nên không qua cầu được."
             },
             {
                 "id": "n4-grammar-format-035-q09",
@@ -666,7 +666,7 @@ export default {
                     "ものの"
                 ],
                 "answer": 0,
-                "explanation": "Do quên hộ chiếu nên không lên được máy bay[cite: 18]."
+                "explanation": "Do quên hộ chiếu nên không lên được máy bay."
             },
             {
                 "id": "n4-grammar-format-035-q10",
@@ -679,7 +679,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Do sự cố tàu điện nên đã gây phiền phức (văn phong trang trọng, thông báo)[cite: 18]."
+                "explanation": "Do sự cố tàu điện nên đã gây phiền phức (văn phong trang trọng, thông báo)."
             }
         ]
     },
@@ -699,7 +699,7 @@ export default {
                     "ので"
                 ],
                 "answer": 0,
-                "explanation": "Dù đã học chăm chỉ thế mà lại trượt (thể hiện sự bất ngờ, thất vọng)[cite: 18]."
+                "explanation": "Dù đã học chăm chỉ thế mà lại trượt (thể hiện sự bất ngờ, thất vọng)."
             },
             {
                 "id": "n4-grammar-format-036-q02",
@@ -712,7 +712,7 @@ export default {
                     "ので"
                 ],
                 "answer": 0,
-                "explanation": "Dù đã hứa thế mà anh ấy vẫn không đến (bất mãn)[cite: 18]."
+                "explanation": "Dù đã hứa thế mà anh ấy vẫn không đến (bất mãn)."
             },
             {
                 "id": "n4-grammar-format-036-q03",
@@ -725,7 +725,7 @@ export default {
                     "なければ"
                 ],
                 "answer": 0,
-                "explanation": "Dù không có tiền nhưng lại không mua được món đồ muốn mua (trái ngược)[cite: 18]."
+                "explanation": "Dù không có tiền nhưng lại không mua được món đồ muốn mua (trái ngược)."
             },
             {
                 "id": "n4-grammar-format-036-q04",
@@ -738,7 +738,7 @@ export default {
                     "ため"
                 ],
                 "answer": 0,
-                "explanation": "Danh từ + なのに (Dù là chủ nhật thế mà...)[cite: 18]."
+                "explanation": "Danh từ + なのに (Dù là chủ nhật thế mà...)."
             },
             {
                 "id": "n4-grammar-format-036-q05",
@@ -751,7 +751,7 @@ export default {
                     "ため"
                 ],
                 "answer": 0,
-                "explanation": "Tính từ na + なのに (Dù khỏe mạnh thế mà...)[cite: 18]."
+                "explanation": "Tính từ na + なのに (Dù khỏe mạnh thế mà...)."
             },
             {
                 "id": "n4-grammar-format-036-q06",
@@ -764,7 +764,7 @@ export default {
                     "ので"
                 ],
                 "answer": 0,
-                "explanation": "Dù có bản đồ thế mà vẫn lạc đường[cite: 18]."
+                "explanation": "Dù có bản đồ thế mà vẫn lạc đường."
             },
             {
                 "id": "n4-grammar-format-036-q07",
@@ -777,7 +777,7 @@ export default {
                     "ので"
                 ],
                 "answer": 0,
-                "explanation": "Dù đi ngủ sớm thế mà sáng nay vẫn ngủ nướng[cite: 18]."
+                "explanation": "Dù đi ngủ sớm thế mà sáng nay vẫn ngủ nướng."
             },
             {
                 "id": "n4-grammar-format-036-q08",
@@ -790,7 +790,7 @@ export default {
                     "ので"
                 ],
                 "answer": 0,
-                "explanation": "Dù đã luyện tập nhưng vẫn thua trận[cite: 18]."
+                "explanation": "Dù đã luyện tập nhưng vẫn thua trận."
             },
             {
                 "id": "n4-grammar-format-036-q09",
@@ -803,7 +803,7 @@ export default {
                     "ので"
                 ],
                 "answer": 0,
-                "explanation": "Dù đã uống thuốc mà sốt vẫn không hạ[cite: 18]."
+                "explanation": "Dù đã uống thuốc mà sốt vẫn không hạ."
             },
             {
                 "id": "n4-grammar-format-036-q10",
@@ -816,7 +816,7 @@ export default {
                     "ため"
                 ],
                 "answer": 0,
-                "explanation": "Dù hát dở thế mà lúc nào cũng đòi hát karaoke[cite: 18]."
+                "explanation": "Dù hát dở thế mà lúc nào cũng đòi hát karaoke."
             }
         ]
     },
@@ -836,7 +836,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Phán đoán chắc chắn dựa trên cơ sở logic (đã rời nhà nên sắp tới)[cite: 18]."
+                "explanation": "Phán đoán chắc chắn dựa trên cơ sở logic (đã rời nhà nên sắp tới)."
             },
             {
                 "id": "n4-grammar-format-037-q02",
@@ -849,7 +849,7 @@ export default {
                     "ため"
                 ],
                 "answer": 0,
-                "explanation": "Chắc chắn chìa khóa phải ở đây (nhưng thực tế lại không tìm thấy)[cite: 18]."
+                "explanation": "Chắc chắn chìa khóa phải ở đây (nhưng thực tế lại không tìm thấy)."
             },
             {
                 "id": "n4-grammar-format-037-q03",
@@ -862,7 +862,7 @@ export default {
                     "そうです"
                 ],
                 "answer": 0,
-                "explanation": "Dạng phủ định ～はずがない (Chắc chắn không thể có chuyện đó)[cite: 18]."
+                "explanation": "Dạng phủ định ～はずがない (Chắc chắn không thể có chuyện đó)."
             },
             {
                 "id": "n4-grammar-format-037-q04",
@@ -875,7 +875,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Chắc chắn mọi người đều đọc được vì chữ kanji này dễ[cite: 18]."
+                "explanation": "Chắc chắn mọi người đều đọc được vì chữ kanji này dễ."
             },
             {
                 "id": "n4-grammar-format-037-q05",
@@ -888,7 +888,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Dựa trên lời hứa hôm qua để phán đoán chắc chắn[cite: 18]."
+                "explanation": "Dựa trên lời hứa hôm qua để phán đoán chắc chắn."
             },
             {
                 "id": "n4-grammar-format-037-q06",
@@ -901,7 +901,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Chắc chắn hôm nay không có mặt vì đã xin nghỉ từ hôm qua[cite: 18]."
+                "explanation": "Chắc chắn hôm nay không có mặt vì đã xin nghỉ từ hôm qua."
             },
             {
                 "id": "n4-grammar-format-037-q07",
@@ -914,7 +914,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Cơ sở logic: Đeo kính này vào thì chắc chắn sẽ nhìn rõ[cite: 18]."
+                "explanation": "Cơ sở logic: Đeo kính này vào thì chắc chắn sẽ nhìn rõ."
             },
             {
                 "id": "n4-grammar-format-037-q08",
@@ -927,7 +927,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Chắc chắn thắng vì đã luyện tập đàng hoàng[cite: 18]."
+                "explanation": "Chắc chắn thắng vì đã luyện tập đàng hoàng."
             },
             {
                 "id": "n4-grammar-format-037-q09",
@@ -940,7 +940,7 @@ export default {
                     "ところです"
                 ],
                 "answer": 0,
-                "explanation": "Dự đoán chắc chắn dựa vào thời gian sinh sống tại Nhật[cite: 18]."
+                "explanation": "Dự đoán chắc chắn dựa vào thời gian sinh sống tại Nhật."
             },
             {
                 "id": "n4-grammar-format-037-q10",
@@ -953,7 +953,7 @@ export default {
                     "そうです"
                 ],
                 "answer": 0,
-                "explanation": "Chắc chắn không thể có lỗi sai vì đã kiểm tra kỹ[cite: 18]."
+                "explanation": "Chắc chắn không thể có lỗi sai vì đã kiểm tra kỹ."
             }
         ]
     },
@@ -973,7 +973,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "V-辞書形 + ところです chỉ hành động sắp sửa diễn ra[cite: 18]."
+                "explanation": "V-辞書形 + ところです chỉ hành động sắp sửa diễn ra."
             },
             {
                 "id": "n4-grammar-format-038-q02",
@@ -986,7 +986,7 @@ export default {
                     "るところ"
                 ],
                 "answer": 2,
-                "explanation": "V-ている + ところです chỉ hành động đang diễn ra đúng lúc này[cite: 18]."
+                "explanation": "V-ている + ところです chỉ hành động đang diễn ra đúng lúc này."
             },
             {
                 "id": "n4-grammar-format-038-q03",
@@ -999,7 +999,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "V-た + ところです chỉ hành động vừa mới xảy ra trong tích tắc[cite: 18]."
+                "explanation": "V-た + ところです chỉ hành động vừa mới xảy ra trong tích tắc."
             },
             {
                 "id": "n4-grammar-format-038-q04",
@@ -1012,7 +1012,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Sắp sửa ra ngoài (V-辞書形 + ところ)[cite: 18]."
+                "explanation": "Sắp sửa ra ngoài (V-辞書形 + ところ)."
             },
             {
                 "id": "n4-grammar-format-038-q05",
@@ -1025,7 +1025,7 @@ export default {
                     "い"
                 ],
                 "answer": 0,
-                "explanation": "Đang viết báo cáo: 書いているところ[cite: 18]."
+                "explanation": "Đang viết báo cáo: 書いているところ."
             },
             {
                 "id": "n4-grammar-format-038-q06",
@@ -1038,7 +1038,7 @@ export default {
                     "ば"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới đến ga thì tàu xuất phát (V-た + ところ, mẫu câu chỉ sự ngạc nhiên ở vế sau)[cite: 18]."
+                "explanation": "Vừa mới đến ga thì tàu xuất phát (V-た + ところ, mẫu câu chỉ sự ngạc nhiên ở vế sau)."
             },
             {
                 "id": "n4-grammar-format-038-q07",
@@ -1051,7 +1051,7 @@ export default {
                     "およそ"
                 ],
                 "answer": 0,
-                "explanation": "Đang lập kế hoạch: 立てているところ[cite: 18]."
+                "explanation": "Đang lập kế hoạch: 立てているところ."
             },
             {
                 "id": "n4-grammar-format-038-q08",
@@ -1064,7 +1064,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới nấu xong xong (có thể dùng ばかり hoặc たところ, tuy nhiên たところ nhấn mạnh thời điểm vừa xong. Ở đây xét phương án vừa mới theo cảm nhận chủ quan rộng hơn hoặc tích tắc. Chọn たところ / ばかり tùy cấu trúc). Xét câu: できたところ / できたばかり. [cite: 18]."
+                "explanation": "Vừa mới nấu xong xong (có thể dùng ばかり hoặc たところ, tuy nhiên たところ nhấn mạnh thời điểm vừa xong. Ở đây xét phương án vừa mới theo cảm nhận chủ quan rộng hơn hoặc tích tắc. Chọn たところ / ばかり tùy cấu trúc). Xét câu: できたところ / できたばかり. ."
             },
             {
                 "id": "n4-grammar-format-038-q09",
@@ -1077,7 +1077,7 @@ export default {
                     "よう"
                 ],
                 "answer": 1,
-                "explanation": "Vừa mới thi xong (V-た + ところ/ばかり, tùy ngữ cảnh. Với khoảng thời gian vừa dứt, たところ diễn tả vừa xong tức thì)[cite: 18]."
+                "explanation": "Vừa mới thi xong (V-た + ところ/ばかり, tùy ngữ cảnh. Với khoảng thời gian vừa dứt, たところ diễn tả vừa xong tức thì)."
             },
             {
                 "id": "n4-grammar-format-038-q10",
@@ -1090,7 +1090,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Đang tắm: 浴びているところ[cite: 18]."
+                "explanation": "Đang tắm: 浴びているところ."
             }
         ]
     },
@@ -1110,7 +1110,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "V-た + ばかりです (Vừa mới ăn cơm xong khi nãy)[cite: 18]."
+                "explanation": "V-た + ばかりです (Vừa mới ăn cơm xong khi nãy)."
             },
             {
                 "id": "n4-grammar-format-039-q02",
@@ -1123,7 +1123,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "V-た + ばかりの時は (Thời điểm khi vừa mới sang Nhật)[cite: 18]."
+                "explanation": "V-た + ばかりの時は (Thời điểm khi vừa mới sang Nhật)."
             },
             {
                 "id": "n4-grammar-format-039-q03",
@@ -1136,7 +1136,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới vào công ty tháng trước (khoảng thời gian tương đối dài vẫn dùng ばかり)[cite: 18]."
+                "explanation": "Vừa mới vào công ty tháng trước (khoảng thời gian tương đối dài vẫn dùng ばかり)."
             },
             {
                 "id": "n4-grammar-format-039-q04",
@@ -1149,7 +1149,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới mua chiếc xe này xong[cite: 18]."
+                "explanation": "Vừa mới mua chiếc xe này xong."
             },
             {
                 "id": "n4-grammar-format-039-q05",
@@ -1162,7 +1162,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới tốt nghiệp đại học năm nay[cite: 18]."
+                "explanation": "Vừa mới tốt nghiệp đại học năm nay."
             },
             {
                 "id": "n4-grammar-format-039-q06",
@@ -1175,7 +1175,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới nấu xong món ăn[cite: 18]."
+                "explanation": "Vừa mới nấu xong món ăn."
             },
             {
                 "id": "n4-grammar-format-039-q07",
@@ -1188,7 +1188,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới bắt đầu sống một mình[cite: 18]."
+                "explanation": "Vừa mới bắt đầu sống một mình."
             },
             {
                 "id": "n4-grammar-format-039-q08",
@@ -1201,7 +1201,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới mua xong (thế mà đã hỏng)[cite: 18]."
+                "explanation": "Vừa mới mua xong (thế mà đã hỏng)."
             },
             {
                 "id": "n4-grammar-format-039-q09",
@@ -1214,7 +1214,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới học thuộc kanji thế mà đã quên[cite: 18]."
+                "explanation": "Vừa mới học thuộc kanji thế mà đã quên."
             },
             {
                 "id": "n4-grammar-format-039-q10",
@@ -1227,7 +1227,7 @@ export default {
                     "よう"
                 ],
                 "answer": 0,
-                "explanation": "Vừa mới tắm xong[cite: 18]."
+                "explanation": "Vừa mới tắm xong."
             }
         ]
     },
@@ -1247,7 +1247,7 @@ export default {
                     "することの"
                 ],
                 "answer": 0,
-                "explanation": "Dùng のが trước tính từ chỉ cảm xúc (好き) để danh từ hóa hành động[cite: 18]."
+                "explanation": "Dùng のが trước tính từ chỉ cảm xúc (好き) để danh từ hóa hành động."
             },
             {
                 "id": "n4-grammar-format-040-q02",
@@ -1260,7 +1260,7 @@ export default {
                     "見よう"
                 ],
                 "answer": 1,
-                "explanation": "Dùng こと để định nghĩa sở thích (映画を見ることです)[cite: 18]."
+                "explanation": "Dùng こと để định nghĩa sở thích (映画を見ることです)."
             },
             {
                 "id": "n4-grammar-format-040-q03",
@@ -1273,7 +1273,7 @@ export default {
                     "勉強したの"
                 ],
                 "answer": 0,
-                "explanation": "Danh từ hóa làm chủ ngữ với tính từ cảm xúc/đánh giá (の / こと đều có thể, ở đây の là lựa chọn phổ biến trong văn nói)[cite: 18]."
+                "explanation": "Danh từ hóa làm chủ ngữ với tính từ cảm xúc/đánh giá (の / こと đều có thể, ở đây の là lựa chọn phổ biến trong văn nói)."
             },
             {
                 "id": "n4-grammar-format-040-q04",
@@ -1286,7 +1286,7 @@ export default {
                     "あいだ"
                 ],
                 "answer": 0,
-                "explanation": "V-辞書形 + 前に (Trước khi đi ngủ)[cite: 18]."
+                "explanation": "V-辞書形 + 前に (Trước khi đi ngủ)."
             },
             {
                 "id": "n4-grammar-format-040-q05",
@@ -1299,7 +1299,7 @@ export default {
                     "持つのは"
                 ],
                 "answer": 0,
-                "explanation": "Động từ tri giác/quên (忘れる) thường đi với のを[cite: 18]."
+                "explanation": "Động từ tri giác/quên (忘れる) thường đi với のを."
             },
             {
                 "id": "n4-grammar-format-040-q06",
@@ -1312,7 +1312,7 @@ export default {
                     "撮るのが"
                 ],
                 "answer": 0,
-                "explanation": "Mẫu câu cấm đoán ～てははいけない[cite: 18]."
+                "explanation": "Mẫu câu cấm đoán ～てははいけない."
             },
             {
                 "id": "n4-grammar-format-040-q07",
@@ -1325,7 +1325,7 @@ export default {
                     "旅行しよう"
                 ],
                 "answer": 1,
-                "explanation": "Dùng こと trong cấu trúc định nghĩa ước mơ (夢は〜こと)[cite: 18]."
+                "explanation": "Dùng こと trong cấu trúc định nghĩa ước mơ (夢は〜こと)."
             },
             {
                 "id": "n4-grammar-format-040-q08",
@@ -1338,7 +1338,7 @@ export default {
                     "ながら"
                 ],
                 "answer": 0,
-                "explanation": "V-辞書形 + 前に (Trước khi vào phòng)[cite: 18]."
+                "explanation": "V-辞書形 + 前に (Trước khi vào phòng)."
             },
             {
                 "id": "n4-grammar-format-040-q09",
@@ -1351,7 +1351,7 @@ export default {
                     "もの"
                 ],
                 "answer": 1,
-                "explanation": "Kết hợp với động từ biết/không biết (知っている) thường dùng mệnh đề + こと[cite: 18]."
+                "explanation": "Kết hợp với động từ biết/không biết (知っている) thường dùng mệnh đề + こと."
             },
             {
                 "id": "n4-grammar-format-040-q10",
@@ -1364,7 +1364,7 @@ export default {
                     "ほう"
                 ],
                 "answer": 0,
-                "explanation": "Dùng こと để biến mệnh đề thành chủ ngữ chỉ sự việc chung (Việc vận động mỗi ngày rất tốt cho sức khỏe)[cite: 18]."
+                "explanation": "Dùng こと để biến mệnh đề thành chủ ngữ chỉ sự việc chung (Việc vận động mỗi ngày rất tốt cho sức khỏe)."
             }
         ]
     }

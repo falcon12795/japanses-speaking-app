@@ -14,7 +14,7 @@ export default {
           "ばかりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～以上（は）」 diễn tả ý nghĩa \"Một khi đã... thì phải...\". Vế sau thường là những quy định, nghĩa vụ hoặc quyết tâm."
       },
       {
         "id": "n2-grammar-021-q02",
@@ -27,7 +27,7 @@ export default {
           "のみならず"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "「～以上」 dùng khi đã nhận lời làm gì thì phải có trách nhiệm hoàn thành đến cùng."
       },
       {
         "id": "n2-grammar-021-q03",
@@ -40,7 +40,7 @@ export default {
           "もとに"
         ],
         "answer": 2,
-        "explanation": ""
+        "explanation": "「～以上」 thể hiện quyết tâm hoặc mục tiêu cao sau khi đã bước vào hoàn cảnh đó (đã đến Nhật)."
       },
       {
         "id": "n2-grammar-021-q04",
@@ -53,7 +53,7 @@ export default {
           "そばから"
         ],
         "answer": 2,
-        "explanation": ""
+        "explanation": "「～以上」 dùng để chỉ lý do đương nhiên dựa trên tiền đề \"Một khi luật đã cấm...\"."
       },
       {
         "id": "n2-grammar-021-q05",
@@ -66,7 +66,7 @@ export default {
           "わりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Đã được chọn làm leader (tiền đề) thì cần có trách nhiệm và giác ngộ."
       },
       {
         "id": "n2-grammar-021-q06",
@@ -79,7 +79,7 @@ export default {
           "くせに"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Một khi đã ký hợp đồng thì không thể thay đổi điều kiện."
       },
       {
         "id": "n2-grammar-021-q07",
@@ -92,7 +92,7 @@ export default {
           "どころか"
         ],
         "answer": 2,
-        "explanation": ""
+        "explanation": "Vì ngân sách có hạn (tiền đề), nên cần thiết phải xem xét lại kế hoạch."
       },
       {
         "id": "n2-grammar-021-q08",
@@ -105,7 +105,7 @@ export default {
           "ままに"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "Đã tham gia cuộc họp thì phải có nghĩa vụ phát biểu ý kiến."
       },
       {
         "id": "n2-grammar-021-q09",
@@ -118,7 +118,7 @@ export default {
           "たびに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Đã tự quyết định làm thì không được bỏ cuộc giữa chừng."
       },
       {
         "id": "n2-grammar-021-q10",
@@ -131,7 +131,7 @@ export default {
           "とおり"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "「～以上は」 tương đương với 「～以上」, dùng để nhấn mạnh quyết tâm."
       }
     ]
   },
@@ -150,7 +150,7 @@ export default {
           "ついでに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～折に」 mang ý nghĩa \"Vào lúc / Nhân dịp...\". Diễn tả thời điểm làm việc gì đó."
       },
       {
         "id": "n2-grammar-022-q02",
@@ -163,7 +163,7 @@ export default {
           "あげくに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nhân dịp gặp mặt hôm trước, đã nhận được lời khuyên quý giá."
       },
       {
         "id": "n2-grammar-022-q03",
@@ -176,7 +176,7 @@ export default {
           "ものなら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vào dịp về nước, đi chào hỏi những người đã giúp đỡ."
       },
       {
         "id": "n2-grammar-022-q04",
@@ -189,7 +189,7 @@ export default {
           "わりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vào lúc hoa anh đào nở rộ, rất thích thú khi đi ngắm hoa."
       },
       {
         "id": "n2-grammar-022-q05",
@@ -202,7 +202,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nhân dịp xây nhà mới, đã tổ chức tiệc mời bạn bè."
       },
       {
         "id": "n2-grammar-022-q06",
@@ -215,7 +215,7 @@ export default {
           "ものの"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～折には」 dùng để chỉ cơ hội/thời điểm trong tương lai khi đến gần."
       },
       {
         "id": "n2-grammar-022-q07",
@@ -228,7 +228,7 @@ export default {
           "ついで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nhân dịp đứa con ra đời, đã chụp và lưu giữ rất nhiều ảnh kỷ niệm."
       },
       {
         "id": "n2-grammar-022-q08",
@@ -241,7 +241,7 @@ export default {
           "あげくに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nhân dịp/khi đi du lịch nước ngoài, hãy kiểm tra kỹ hạn của hộ chiếu."
       },
       {
         "id": "n2-grammar-022-q09",
@@ -254,7 +254,7 @@ export default {
           "たびに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vào dịp nghỉ hưu, muốn dành thời gian cho sở thích cá nhân."
       },
       {
         "id": "n2-grammar-022-q10",
@@ -267,7 +267,7 @@ export default {
           "かぎり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nhân dịp đón lễ khai giảng, muốn trân trọng tinh thần không quên thuở ban đầu."
       }
     ]
   },
@@ -286,7 +286,7 @@ export default {
           "をよそに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～からして」 có nghĩa là \"Ngay từ... (đã thế này thì những cái khác suy ra cũng vậy)\", dùng để đưa ra một ví dụ nhỏ, tiêu biểu để đánh giá toàn thể."
       },
       {
         "id": "n2-grammar-023-q02",
@@ -299,7 +299,7 @@ export default {
           "にともなって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ nội thất sảnh đã tuyệt vời, suy ra toàn bộ khách sạn rất đẳng cấp."
       },
       {
         "id": "n2-grammar-023-q03",
@@ -312,7 +312,7 @@ export default {
           "にかけては"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ cái tiêu đề (ví dụ nhỏ) đã mang nét cuốn hút độc đáo."
       },
       {
         "id": "n2-grammar-023-q04",
@@ -325,7 +325,7 @@ export default {
           "をめぐって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ cách nói chuyện đã thể hiện sự thanh lịch."
       },
       {
         "id": "n2-grammar-023-q05",
@@ -338,7 +338,7 @@ export default {
           "に基づいて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ giai đoạn chuẩn bị luyện tập đã không hề lơ là."
       },
       {
         "id": "n2-grammar-023-q06",
@@ -351,7 +351,7 @@ export default {
           "をよそに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ âm nhạc phần mở đầu đã rất công phu."
       },
       {
         "id": "n2-grammar-023-q07",
@@ -364,7 +364,7 @@ export default {
           "にともなって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ câu nói đầu tiên trong bài phát biểu đã có vẻ gian dối."
       },
       {
         "id": "n2-grammar-023-q08",
@@ -377,7 +377,7 @@ export default {
           "にそって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ món khai vị/món nhỏ đầu tiên đã tuyệt cú mèo."
       },
       {
         "id": "n2-grammar-023-q09",
@@ -390,7 +390,7 @@ export default {
           "にわたって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ trang đầu tiên đã khó đọc."
       },
       {
         "id": "n2-grammar-023-q10",
@@ -403,7 +403,7 @@ export default {
           "にともなって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay từ độ đẹp của đoạn code viết ra đã khác biệt so với kỹ sư thông thường."
       }
     ]
   },
@@ -416,13 +416,14 @@ export default {
         "grammarId": "n2-grammar-024",
         "question": "詳細が決まり___、改めてメールでご連絡差し上げます。",
         "choices": [
+          "Test",
           "次第",
           "ものの",
           "くせに",
           "あげく"
         ],
-        "answer": 0,
-        "explanation": ""
+        "answer": 1,
+        "explanation": "「～次第」 (sau khi...) diễn tả hành động vế sau sẽ được thực hiện ngay lập tức sau khi hành động vế trước hoàn thành."
       },
       {
         "id": "n2-grammar-024-q02",
@@ -435,7 +436,7 @@ export default {
           "一方で"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～次第」 (tùy thuộc vào...) đứng sau danh từ để chỉ sự phụ thuộc hoàn toàn vào yếu tố đó."
       },
       {
         "id": "n2-grammar-024-q03",
@@ -448,7 +449,7 @@ export default {
           "きり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay khi tài liệu in xong thì phát ở phòng họp."
       },
       {
         "id": "n2-grammar-024-q04",
@@ -461,7 +462,7 @@ export default {
           "だけ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Tùy thuộc vào thời tiết ngày mai để quyết định lịch trình."
       },
       {
         "id": "n2-grammar-024-q05",
@@ -474,7 +475,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay khi đến nơi, hãy tập trung ở sảnh khách sạn."
       },
       {
         "id": "n2-grammar-024-q06",
@@ -487,7 +488,7 @@ export default {
           "たびに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cuộc sống có vui vẻ hay không là tùy thuộc vào cách suy nghĩ của bản thân."
       },
       {
         "id": "n2-grammar-024-q07",
@@ -500,7 +501,7 @@ export default {
           "とおり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay khi chuẩn bị xong xuôi, sự kiện sẽ bắt đầu."
       },
       {
         "id": "n2-grammar-024-q08",
@@ -513,7 +514,7 @@ export default {
           "つつ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cuộc sống có suôn sẻ hay không cũng có mặt phụ thuộc vào vận may."
       },
       {
         "id": "n2-grammar-024-q09",
@@ -526,7 +527,7 @@ export default {
           "くせに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ngay khi vấn đề được giải quyết, phải nộp báo cáo ngay."
       },
       {
         "id": "n2-grammar-024-q10",
@@ -539,7 +540,7 @@ export default {
           "かわりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ứng phó từ nay về sau tùy thuộc vào ý muốn của khách hàng."
       }
     ]
   },
@@ -558,7 +559,7 @@ export default {
           "かわりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～限り」 mang nghĩa \"Trong giới hạn... / Theo như...\" (phạm vi thông tin, hiểu biết)."
       },
       {
         "id": "n2-grammar-025-q02",
@@ -571,7 +572,7 @@ export default {
           "最中"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～限り」 cũng có nghĩa là \"Chừng nào mà... / Miễn là...\": Miễn là tuân thủ quy định."
       },
       {
         "id": "n2-grammar-025-q03",
@@ -584,7 +585,7 @@ export default {
           "ものなら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chừng nào trạng thái hòa bình còn tiếp diễn thì con người còn được sống an toàn."
       },
       {
         "id": "n2-grammar-025-q04",
@@ -597,7 +598,7 @@ export default {
           "くせに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Theo như điều tra của chuyên gia..."
       },
       {
         "id": "n2-grammar-025-q05",
@@ -610,7 +611,7 @@ export default {
           "とおり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chừng nào còn sống..."
       },
       {
         "id": "n2-grammar-025-q06",
@@ -623,7 +624,7 @@ export default {
           "つつ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Theo như ký ức của tôi..."
       },
       {
         "id": "n2-grammar-025-q07",
@@ -636,7 +637,7 @@ export default {
           "ものだから"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Miễn là không đưa mật khẩu cho người khác..."
       },
       {
         "id": "n2-grammar-025-q08",
@@ -649,7 +650,7 @@ export default {
           "ついでに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trong giới hạn những gì tôi biết..."
       },
       {
         "id": "n2-grammar-025-q09",
@@ -662,7 +663,7 @@ export default {
           "きり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chừng nào mà không bỏ cuộc..."
       },
       {
         "id": "n2-grammar-025-q10",
@@ -675,7 +676,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Theo như nhìn vào tài liệu này..."
       }
     ]
   },
@@ -694,7 +695,7 @@ export default {
           "えない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～たいものだ」 diễn tả nguyện vọng, mong ước mạnh mẽ từ đáy lòng muốn làm gì đó."
       },
       {
         "id": "n2-grammar-026-q02",
@@ -707,7 +708,7 @@ export default {
           "ざるを得ない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～てほしいものだ」 diễn tả mong ước người khác/xã hội làm gì đó."
       },
       {
         "id": "n2-grammar-026-q03",
@@ -720,7 +721,7 @@ export default {
           "にすぎない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mong muốn hướng tới tương lai với cách sống khôn ngoan hơn."
       },
       {
         "id": "n2-grammar-026-q04",
@@ -733,7 +734,7 @@ export default {
           "どころではない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nguyện vọng muốn xây dựng mối quan hệ đối tác tuyệt vời."
       },
       {
         "id": "n2-grammar-026-q05",
@@ -746,7 +747,7 @@ export default {
           "得る"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mong ước luôn giữ được vẻ trẻ trung."
       },
       {
         "id": "n2-grammar-026-q06",
@@ -759,7 +760,7 @@ export default {
           "わけがない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mong muốn nuôi dưỡng ý chí mạnh mẽ."
       },
       {
         "id": "n2-grammar-026-q07",
@@ -772,7 +773,7 @@ export default {
           "っこない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nguyện vọng muốn thử tận hưởng cuộc sống chậm rãi ở vùng quê."
       },
       {
         "id": "n2-grammar-026-q08",
@@ -785,7 +786,7 @@ export default {
           "えない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mong muốn có ngày gặp lại bạn cũ."
       },
       {
         "id": "n2-grammar-026-q09",
@@ -798,7 +799,7 @@ export default {
           "わけにはいかない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mong muốn nỗ lực hết mình mỗi ngày."
       },
       {
         "id": "n2-grammar-026-q10",
@@ -811,7 +812,7 @@ export default {
           "っこない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nguyện vọng mong bản thân luôn là người biết trân trọng gia đình."
       }
     ]
   },
@@ -830,7 +831,7 @@ export default {
           "にすぎない"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "「～ないものか」 diễn tả nguyện vọng khẩn thiết muốn làm điều gì đó mặc dù khó khăn (\"Liệu có cách nào... không?\")."
       },
       {
         "id": "n2-grammar-027-q02",
@@ -843,7 +844,7 @@ export default {
           "すぎる"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ước gì tàu bớt đông đi một chút..."
       },
       {
         "id": "n2-grammar-027-q03",
@@ -856,7 +857,7 @@ export default {
           "きれない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Liệu có thể nâng cao kỹ năng nghe tiếng Anh trong thời gian ngắn không nhỉ?"
       },
       {
         "id": "n2-grammar-027-q04",
@@ -869,7 +870,7 @@ export default {
           "得る"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Liệu có mua được rẻ hơn một chút không..."
       },
       {
         "id": "n2-grammar-027-q05",
@@ -882,7 +883,7 @@ export default {
           "べきではない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Liệu thế hệ chúng ta có chặn đứng được sự ấm lên toàn cầu không?"
       },
       {
         "id": "n2-grammar-027-q06",
@@ -895,7 +896,7 @@ export default {
           "きれない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Liệu có cách nào ghi nhớ kanji vui và dễ dàng không?"
       },
       {
         "id": "n2-grammar-027-q07",
@@ -908,7 +909,7 @@ export default {
           "にすぎない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Liệu có thể làm giảm tiếng ồn công trình ban đêm không..."
       },
       {
         "id": "n2-grammar-027-q08",
@@ -921,7 +922,7 @@ export default {
           "ざるを得ない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Liệu chiếc nhẫn kỷ niệm có tìm lại được ở đâu đó không..."
       },
       {
         "id": "n2-grammar-027-q09",
@@ -934,7 +935,7 @@ export default {
           "わけがない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Liệu có thể biến việc dậy sớm thành thói quen không..."
       },
       {
         "id": "n2-grammar-027-q10",
@@ -947,7 +948,7 @@ export default {
           "ほかない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Liệu có thể tìm ra nguyên nhân lỗi một cách suôn sẻ không..."
       }
     ]
   },
@@ -966,7 +967,7 @@ export default {
           "に基づいて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～はともかく（として）」 có nghĩa là \"Tạm gác lại chuyện... / Không kể...\", nhấn mạnh rằng vấn đề sau quan trọng hơn hoặc đáng chú ý hơn."
       },
       {
         "id": "n2-grammar-028-q02",
@@ -979,7 +980,7 @@ export default {
           "にあわせて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Tạm gác lại chuyện giá cả, thiết kế và tính năng thì tuyệt vời không chê vào đâu được."
       },
       {
         "id": "n2-grammar-028-q03",
@@ -992,7 +993,7 @@ export default {
           "にそって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Tạm không bàn đến chuyện có đỗ hay không..."
       },
       {
         "id": "n2-grammar-028-q04",
@@ -1005,7 +1006,7 @@ export default {
           "を問わず"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Tạm gác lại thiết kế..."
       },
       {
         "id": "n2-grammar-028-q05",
@@ -1018,7 +1019,7 @@ export default {
           "に基づいて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Tạm gác lại những giờ phút bận rộn ngày thường..."
       },
       {
         "id": "n2-grammar-028-q06",
@@ -1031,7 +1032,7 @@ export default {
           "をめぐって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không bàn đến dư luận xã hội..."
       },
       {
         "id": "n2-grammar-028-q07",
@@ -1044,7 +1045,7 @@ export default {
           "にかけては"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Tạm gác lại kết quả sẽ ra sao..."
       },
       {
         "id": "n2-grammar-028-q08",
@@ -1057,7 +1058,7 @@ export default {
           "を問わず"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không kể đến việc thích hay ghét tính cách của cô ấy..."
       },
       {
         "id": "n2-grammar-028-q09",
@@ -1070,7 +1071,7 @@ export default {
           "に反して"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Tạm gác lại vẻ bề ngoài cũ kỹ của ngôi nhà..."
       },
       {
         "id": "n2-grammar-028-q10",
@@ -1083,7 +1084,7 @@ export default {
           "にあわせて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Tạm không bàn đến các nghệ sĩ chuyên nghiệp..."
       }
     ]
   },
@@ -1102,7 +1103,7 @@ export default {
           "ため"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～だけましだ」 có nghĩa là \"Vẫn còn ơn chán / Đã là may lắm rồi\" (dù không hoàn hảo nhưng tốt hơn là tồi tệ hơn)."
       },
       {
         "id": "n2-grammar-029-q02",
@@ -1115,7 +1116,7 @@ export default {
           "うち"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mất ví thì đau thật, nhưng không bị thương đã là may lắm rồi."
       },
       {
         "id": "n2-grammar-029-q03",
@@ -1128,7 +1129,7 @@ export default {
           "せいで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù là xe cũ nhưng dùng để đi làm được là may lắm rồi."
       },
       {
         "id": "n2-grammar-029-q04",
@@ -1141,7 +1142,7 @@ export default {
           "ばかり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Lương giảm một chút nhưng vẫn còn tốt chán so với việc công ty phá sản thất nghiệp."
       },
       {
         "id": "n2-grammar-029-q05",
@@ -1154,7 +1155,7 @@ export default {
           "はず"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Phòng chật nhưng vẫn ở được là may rồi."
       },
       {
         "id": "n2-grammar-029-q06",
@@ -1167,7 +1168,7 @@ export default {
           "かぎり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Máy bay chậm chuyến nhưng đến nơi an toàn là may mắn rồi."
       },
       {
         "id": "n2-grammar-029-q07",
@@ -1180,7 +1181,7 @@ export default {
           "たびに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khác với bộ phận mong muốn nhưng được chuyển đi là may rồi."
       },
       {
         "id": "n2-grammar-029-q08",
@@ -1193,7 +1194,7 @@ export default {
           "がてら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Thất bại nhưng không gây thiệt hại lớn là may lắm rồi."
       },
       {
         "id": "n2-grammar-029-q09",
@@ -1206,7 +1207,7 @@ export default {
           "とおり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bận rộn nhưng không bị đuổi theo hạn chót là đỡ lắm rồi."
       },
       {
         "id": "n2-grammar-029-q10",
@@ -1219,7 +1220,7 @@ export default {
           "きり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Đồ ăn hơi cháy nhưng vẫn ăn ngon được là may rồi."
       }
     ]
   },
@@ -1238,7 +1239,7 @@ export default {
           "うちに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～きり」 diễn tả trạng thái \"Cứ giữ nguyên tình trạng đó từ lúc... cho đến nay\" hoặc \"Chỉ có... (số ít)\"."
       },
       {
         "id": "n2-grammar-030-q02",
@@ -1251,7 +1252,7 @@ export default {
           "とたん"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Từ lần gặp ở buổi họp lớp năm ngoái cho đến nay chưa liên lạc lần nào."
       },
       {
         "id": "n2-grammar-030-q03",
@@ -1264,7 +1265,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trong tủ lạnh chỉ còn sót lại đúng 1 quả trứng."
       },
       {
         "id": "n2-grammar-030-q04",
@@ -1277,7 +1278,7 @@ export default {
           "くせに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cô ấy gật đầu nhẹ một cái rồi sau đó không nói thêm câu nào."
       },
       {
         "id": "n2-grammar-030-q05",
@@ -1290,7 +1291,7 @@ export default {
           "ついで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Sáng nay uống cà phê xong rồi thôi, đến trưa chưa ăn uống gì."
       },
       {
         "id": "n2-grammar-030-q06",
@@ -1303,7 +1304,7 @@ export default {
           "つつ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Gửi mail xong là bặt tăm, không thấy hồi âm."
       },
       {
         "id": "n2-grammar-030-q07",
@@ -1316,7 +1317,7 @@ export default {
           "だけ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cuộc sống chỉ có hai vợ chồng (chỉ có...)."
       },
       {
         "id": "n2-grammar-030-q08",
@@ -1329,7 +1330,7 @@ export default {
           "わりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Một khi đã bắt đầu đọc là cứ thế đọc liền một mạch."
       },
       {
         "id": "n2-grammar-030-q09",
@@ -1342,7 +1343,7 @@ export default {
           "あげく"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nằm xuống ghế sofa rồi cứ giữ nguyên tư thế đó mà ngủ thiếp đi."
       },
       {
         "id": "n2-grammar-030-q10",
@@ -1355,7 +1356,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Hồi nhỏ đi sở thú đúng một lần rồi thôi, từ đó chưa đi lần nào nữa."
       }
     ]
   },
@@ -1374,7 +1375,7 @@ export default {
           "にわたって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～に先立って / 先立ち」 có nghĩa là \"Trước khi... / Chuẩn bị trước sự kiện gì đó\"."
       },
       {
         "id": "n2-grammar-031-q02",
@@ -1387,7 +1388,7 @@ export default {
           "にあわせて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước khi bắt đầu cuộc họp quan trọng..."
       },
       {
         "id": "n2-grammar-031-q03",
@@ -1400,7 +1401,7 @@ export default {
           "にそって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước thềm khai mạc Olympic..."
       },
       {
         "id": "n2-grammar-031-q04",
@@ -1413,7 +1414,7 @@ export default {
           "を問わず"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước khi nhà máy tạm ngưng hoạt động..."
       },
       {
         "id": "n2-grammar-031-q05",
@@ -1426,7 +1427,7 @@ export default {
           "に基づいて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước khi đi công tác nước ngoài..."
       },
       {
         "id": "n2-grammar-031-q06",
@@ -1439,7 +1440,7 @@ export default {
           "をめぐって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước khi luật mới có hiệu lực..."
       },
       {
         "id": "n2-grammar-031-q07",
@@ -1452,7 +1453,7 @@ export default {
           "にかけては"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước khi phim được công chiếu rộng rãi..."
       },
       {
         "id": "n2-grammar-031-q08",
@@ -1465,7 +1466,7 @@ export default {
           "を問わず"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước ngày cửa hàng mở cửa trở lại sau khi sửa chữa..."
       },
       {
         "id": "n2-grammar-031-q09",
@@ -1478,7 +1479,7 @@ export default {
           "に反して"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước buổi lễ khai giảng chính thức..."
       },
       {
         "id": "n2-grammar-031-q10",
@@ -1491,7 +1492,7 @@ export default {
           "にあわせて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trước khi dự án khởi động chính thức..."
       }
     ]
   },
@@ -1510,7 +1511,7 @@ export default {
           "えない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～がたい」 diễn tả ý nghĩa \"Khó lòng mà... / Không thể...\" (về mặt tình cảm, tâm lý, nhận thức)."
       },
       {
         "id": "n2-grammar-032-q02",
@@ -1523,7 +1524,7 @@ export default {
           "ほかない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà chấp nhận được."
       },
       {
         "id": "n2-grammar-032-q03",
@@ -1536,7 +1537,7 @@ export default {
           "っこない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà tha thứ được."
       },
       {
         "id": "n2-grammar-032-q04",
@@ -1549,7 +1550,7 @@ export default {
           "ざるを得ない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà có thể thấu hiểu được."
       },
       {
         "id": "n2-grammar-032-q05",
@@ -1562,12 +1563,12 @@ export default {
           "わけがない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà quên được (ghi khắc trong tim không thể quên)."
       },
       {
         "id": "n2-grammar-032-q06",
         "grammarId": "n2-grammar-032",
-        "question": "これまでの努力が水の泡になったという現実は、なかなか飲み込み___。",
+        "question": "これまでの努力が水の泡になったという現日は、なかなか飲み込み___。",
         "choices": [
           "がたい",
           "すぎる",
@@ -1575,7 +1576,7 @@ export default {
           "ほかない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà nuốt trôi/chấp nhận hiện thực đó."
       },
       {
         "id": "n2-grammar-032-q07",
@@ -1588,7 +1589,7 @@ export default {
           "っこない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà tưởng tượng/lý giải nổi."
       },
       {
         "id": "n2-grammar-032-q08",
@@ -1601,7 +1602,7 @@ export default {
           "べきではない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà diễn tả hết bằng lời (言い難い)."
       },
       {
         "id": "n2-grammar-032-q09",
@@ -1614,7 +1615,7 @@ export default {
           "きれない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà suy đoán ra được."
       },
       {
         "id": "n2-grammar-032-q10",
@@ -1627,7 +1628,7 @@ export default {
           "にすぎない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khó lòng mà biểu đạt bằng lời."
       }
     ]
   },
@@ -1646,7 +1647,7 @@ export default {
           "にくい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～得ない」 có nghĩa là \"Không thể xảy ra / Không có khả năng...\" (về mặt lý luận, logic hoặc khả năng khách quan)."
       },
       {
         "id": "n2-grammar-033-q02",
@@ -1659,7 +1660,7 @@ export default {
           "すぎる"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chuyện không thể có thật (あり得ない)."
       },
       {
         "id": "n2-grammar-033-q03",
@@ -1672,7 +1673,7 @@ export default {
           "べきではない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không thể giải thích dưới góc độ khoa học."
       },
       {
         "id": "n2-grammar-033-q04",
@@ -1685,7 +1686,7 @@ export default {
           "すぎる"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không thể nghĩ rằng anh ấy là thủ phạm."
       },
       {
         "id": "n2-grammar-033-q05",
@@ -1698,7 +1699,7 @@ export default {
           "がたい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không thể xảy ra thêm thất bại nào nữa."
       },
       {
         "id": "n2-grammar-033-q06",
@@ -1711,7 +1712,7 @@ export default {
           "べきではない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không thể có chuyện bị yêu cầu bồi thường thiệt hại."
       },
       {
         "id": "n2-grammar-033-q07",
@@ -1724,7 +1725,7 @@ export default {
           "わけがない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chuyện đó là không thể xảy ra."
       },
       {
         "id": "n2-grammar-033-q08",
@@ -1737,7 +1738,7 @@ export default {
           "にくい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không thể dự đoán chính xác toàn bộ biến động giá cổ phiếu."
       },
       {
         "id": "n2-grammar-033-q09",
@@ -1750,7 +1751,7 @@ export default {
           "ほかない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không thể tưởng tượng nổi."
       },
       {
         "id": "n2-grammar-033-q10",
@@ -1763,7 +1764,7 @@ export default {
           "にすぎない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Không thể chấp nhận/có hiệu lực được."
       }
     ]
   },
@@ -1782,7 +1783,7 @@ export default {
           "うちに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～あまり」 có nghĩa là \"Vì quá... nên kết quả là...\" (thường dẫn đến trạng thái cực đoan, vượt mức bình thường)."
       },
       {
         "id": "n2-grammar-034-q02",
@@ -1795,7 +1796,7 @@ export default {
           "とたん"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá căng thẳng..."
       },
       {
         "id": "n2-grammar-034-q03",
@@ -1808,7 +1809,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá bận rộn với công việc..."
       },
       {
         "id": "n2-grammar-034-q04",
@@ -1821,7 +1822,7 @@ export default {
           "くせに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá an tâm (sau khi thấy con bình an)..."
       },
       {
         "id": "n2-grammar-034-q05",
@@ -1831,10 +1832,9 @@ export default {
           "あまり",
           "うえ",
           "とおり",
-          "ついで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá ngạc nhiên và sốc..."
       },
       {
         "id": "n2-grammar-034-q06",
@@ -1847,7 +1847,7 @@ export default {
           "つつ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá lo lắng..."
       },
       {
         "id": "n2-grammar-034-q07",
@@ -1860,7 +1860,7 @@ export default {
           "だけ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá phấn khích..."
       },
       {
         "id": "n2-grammar-034-q08",
@@ -1873,7 +1873,7 @@ export default {
           "わりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá đau buồn..."
       },
       {
         "id": "n2-grammar-034-q09",
@@ -1886,7 +1886,7 @@ export default {
           "あげく"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá hoảng loạn..."
       },
       {
         "id": "n2-grammar-034-q10",
@@ -1899,7 +1899,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Vì quá cưng chiều mèo..."
       }
     ]
   },
@@ -1918,7 +1918,7 @@ export default {
           "ところ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～ことになると / と-1」 mang nghĩa \"Cứ hễ nhắc đến chuyện... / Khi trở thành vấn đề liên quan đến...\" thì thái độ hoặc tính cách thay đổi hẳn."
       },
       {
         "id": "n2-grammar-035-q02",
@@ -1931,7 +1931,7 @@ export default {
           "うえ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ nhắc đến chuyện quản lý tiền bạc..."
       },
       {
         "id": "n2-grammar-035-q03",
@@ -1944,7 +1944,7 @@ export default {
           "たび"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ nói đến đồ ăn ngon..."
       },
       {
         "id": "n2-grammar-035-q04",
@@ -1957,7 +1957,7 @@ export default {
           "ほど"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ đến dự án công việc..."
       },
       {
         "id": "n2-grammar-035-q05",
@@ -1970,7 +1970,7 @@ export default {
           "うえ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ nhắc đến chuyện giáo dục con trẻ..."
       },
       {
         "id": "n2-grammar-035-q06",
@@ -1983,7 +1983,7 @@ export default {
           "たび"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ nói đến máy tính hay smartphone mới..."
       },
       {
         "id": "n2-grammar-035-q07",
@@ -1996,7 +1996,7 @@ export default {
           "ほど"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ đến kế hoạch du lịch..."
       },
       {
         "id": "n2-grammar-035-q08",
@@ -2009,7 +2009,7 @@ export default {
           "うえ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ nhắc đến các vị tướng lịch sử..."
       },
       {
         "id": "n2-grammar-035-q09",
@@ -2022,7 +2022,7 @@ export default {
           "たび"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ xem thi đấu thể thao..."
       },
       {
         "id": "n2-grammar-035-q10",
@@ -2035,7 +2035,7 @@ export default {
           "ほど"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cứ hễ đụng đến sở thích cá nhân..."
       }
     ]
   },
@@ -2054,7 +2054,7 @@ export default {
           "かねて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～つつある」 diễn tả sự việc đang trong quá trình thay đổi, tiến triển (\"Đang dần dần...\")."
       },
       {
         "id": "n2-grammar-036-q02",
@@ -2067,7 +2067,7 @@ export default {
           "一方で"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khí hậu thế giới đang dần thay đổi lớn."
       },
       {
         "id": "n2-grammar-036-q03",
@@ -2080,7 +2080,7 @@ export default {
           "最中"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Lối sống của con người đang dần trở nên đa dạng hóa."
       },
       {
         "id": "n2-grammar-036-q04",
@@ -2093,7 +2093,7 @@ export default {
           "ものなら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Số lượng động vật hoang dã đang dần tăng lên từng chút một."
       },
       {
         "id": "n2-grammar-036-q05",
@@ -2106,7 +2106,7 @@ export default {
           "くせに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Khu phố cổ truyền thống đang dần biến mất."
       },
       {
         "id": "n2-grammar-036-q06",
@@ -2119,7 +2119,7 @@ export default {
           "ついで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Căn bệnh nan y đang dần trở nên có thể chữa trị được."
       },
       {
         "id": "n2-grammar-036-q07",
@@ -2132,7 +2132,7 @@ export default {
           "きり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nhiều công việc đang dần bị máy móc thay thế."
       },
       {
         "id": "n2-grammar-036-q08",
@@ -2145,7 +2145,7 @@ export default {
           "だけ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Số lượng phát hành tạp chí giấy đang dần giảm đi."
       },
       {
         "id": "n2-grammar-036-q09",
@@ -2158,7 +2158,7 @@ export default {
           "わりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Hệ thống hợp tác toàn cầu đang dần được xây dựng."
       },
       {
         "id": "n2-grammar-036-q10",
@@ -2171,7 +2171,7 @@ export default {
           "あげく"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Sức hút của thủ công mỹ nghệ truyền thống đang dần được biết đến rộng rãi."
       }
     ]
   },
@@ -2190,7 +2190,7 @@ export default {
           "がてら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Cấu trúc 「～ては～、～ては～」 diễn tả hành động lặp đi lặp lại (làm rồi xóa, làm rồi xóa)."
       },
       {
         "id": "n2-grammar-037-q02",
@@ -2203,7 +2203,7 @@ export default {
           "わりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mưa thì nghỉ, nắng lại làm tiếp (hành động lặp đi lặp lại trái ngược)."
       },
       {
         "id": "n2-grammar-037-q03",
@@ -2216,7 +2216,7 @@ export default {
           "きり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Thất bại rồi kiểm điểm, kiểm điểm rồi lại thử cách mới (lặp lại liên tục)."
       },
       {
         "id": "n2-grammar-037-q04",
@@ -2229,7 +2229,7 @@ export default {
           "ものなら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Mua rồi lại không đọc (hành động lặp đi lặp lại)."
       },
       {
         "id": "n2-grammar-037-q05",
@@ -2242,7 +2242,7 @@ export default {
           "とおり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Ăn rồi lại ngủ, ăn rồi lại ngủ (vòng lặp sinh hoạt)."
       },
       {
         "id": "n2-grammar-037-q06",
@@ -2255,7 +2255,7 @@ export default {
           "ほど"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Lo lắng rồi lại bàn bạc, bàn bạc rồi lại lo (lặp lại liên tục)."
       },
       {
         "id": "n2-grammar-037-q07",
@@ -2268,7 +2268,7 @@ export default {
           "だけ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Làm rồi lại phá, làm rồi lại phá (vòng lặp chế tác)."
       },
       {
         "id": "n2-grammar-037-q08",
@@ -2281,7 +2281,7 @@ export default {
           "うち"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Nghe rồi lại quên, nghe rồi lại quên."
       },
       {
         "id": "n2-grammar-037-q09",
@@ -2294,7 +2294,7 @@ export default {
           "あげく"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bị nhắc nhở rồi sửa, sửa xong lại mắc lỗi khác."
       },
       {
         "id": "n2-grammar-037-q10",
@@ -2307,7 +2307,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Trèo lên rồi lại xuống, xuống rồi lại trèo."
       }
     ]
   },
@@ -2326,7 +2326,7 @@ export default {
           "だけ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～てこそ」 mang nghĩa \"Chính vì... nên mới... / Có... thì mới thực sự đạt được điều đó\"."
       },
       {
         "id": "n2-grammar-038-q02",
@@ -2339,7 +2339,7 @@ export default {
           "うちに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính vì vượt qua khó khăn cùng nhau thì mới hình thành được lòng tin thực sự."
       },
       {
         "id": "n2-grammar-038-q03",
@@ -2352,7 +2352,7 @@ export default {
           "最中"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính nhờ có một cơ thể khỏe mạnh thì mới..."
       },
       {
         "id": "n2-grammar-038-q04",
@@ -2365,7 +2365,7 @@ export default {
           "ものなら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính vì đã làm cha mẹ rồi thì mới thấu hiểu..."
       },
       {
         "id": "n2-grammar-038-q05",
@@ -2378,7 +2378,7 @@ export default {
           "とおり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính vì tích lũy luyện tập bền bỉ mỗi ngày..."
       },
       {
         "id": "n2-grammar-038-q06",
@@ -2391,7 +2391,7 @@ export default {
           "きり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính vì dám thách thức không sợ thất bại..."
       },
       {
         "id": "n2-grammar-038-q07",
@@ -2404,7 +2404,7 @@ export default {
           "つつ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính vì tự suy nghĩ sâu bằng cái đầu của mình..."
       },
       {
         "id": "n2-grammar-038-q08",
@@ -2417,7 +2417,7 @@ export default {
           "かわりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính vì toàn đội đồng lòng kết hợp..."
       },
       {
         "id": "n2-grammar-038-q09",
@@ -2430,7 +2430,7 @@ export default {
           "あげく"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính vì tiếp thu những lời chỉ trích nghiêm khắc..."
       },
       {
         "id": "n2-grammar-038-q10",
@@ -2443,7 +2443,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Chính vì theo đuổi sự hoàn mỹ không thỏa hiệp..."
       }
     ]
   },
@@ -2462,7 +2462,7 @@ export default {
           "がてら / がてら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～にしろ～にしろ / ～にせよ～にせよ」 có nghĩa là \"Dù là... hay là... thì cũng...\"."
       },
       {
         "id": "n2-grammar-039-q02",
@@ -2475,7 +2475,7 @@ export default {
           "うちに / うちに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù mua ô tô hay xe máy..."
       },
       {
         "id": "n2-grammar-039-q03",
@@ -2488,7 +2488,7 @@ export default {
           "とたん / とたん"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù thành công hay thất bại..."
       },
       {
         "id": "n2-grammar-039-q04",
@@ -2501,7 +2501,7 @@ export default {
           "ものなら / ものなら"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù đồng tình hay phản đối..."
       },
       {
         "id": "n2-grammar-039-q05",
@@ -2514,7 +2514,7 @@ export default {
           "とおり / とおり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù là nói đùa hay nói thật..."
       },
       {
         "id": "n2-grammar-039-q06",
@@ -2527,7 +2527,7 @@ export default {
           "きり / きり"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù là ngày nóng hay ngày lạnh..."
       },
       {
         "id": "n2-grammar-039-q07",
@@ -2540,7 +2540,7 @@ export default {
           "つつ / つつ"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù là món thịt hay món cá..."
       },
       {
         "id": "n2-grammar-039-q08",
@@ -2553,7 +2553,7 @@ export default {
           "かわりに / かわりに"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù là du lịch trong nước hay nước ngoài..."
       },
       {
         "id": "n2-grammar-039-q09",
@@ -2566,7 +2566,7 @@ export default {
           "あげく / あげく"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù là người mới hay người có kinh nghiệm..."
       },
       {
         "id": "n2-grammar-039-q10",
@@ -2579,7 +2579,7 @@ export default {
           "どころか / どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dù thanh toán bằng tiền mặt hay thẻ tín dụng..."
       }
     ]
   },
@@ -2598,7 +2598,7 @@ export default {
           "にわたって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "「～に沿って」 có nghĩa là \"Dựa theo / Bám sát theo (quy tắc, phương châm, đường lối, hoặc đường dọc theo một không gian vật lý)\"."
       },
       {
         "id": "n2-grammar-040-q02",
@@ -2611,7 +2611,7 @@ export default {
           "にあわせて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Đi dạo dọc theo dòng chảy của con sông."
       },
       {
         "id": "n2-grammar-040-q03",
@@ -2624,7 +2624,7 @@ export default {
           "にかけては"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bám sát theo chương trình giảng dạy đã định."
       },
       {
         "id": "n2-grammar-040-q04",
@@ -2637,7 +2637,7 @@ export default {
           "を問わず"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dựa theo yêu cầu của khách hàng."
       },
       {
         "id": "n2-grammar-040-q05",
@@ -2650,7 +2650,7 @@ export default {
           "にともなって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dọc theo tuyến đường ray tàu hỏa."
       },
       {
         "id": "n2-grammar-040-q06",
@@ -2663,7 +2663,7 @@ export default {
           "にそって（※重複注意につき選択肢調整）"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bám sát theo tài liệu hướng dẫn được phát."
       },
       {
         "id": "n2-grammar-040-q07",
@@ -2676,7 +2676,7 @@ export default {
           "に加えて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Dọc theo đường bờ biển."
       },
       {
         "id": "n2-grammar-040-q08",
@@ -2689,7 +2689,7 @@ export default {
           "に反して"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bám sát theo phạm vi ngân sách được giao."
       },
       {
         "id": "n2-grammar-040-q09",
@@ -2702,7 +2702,7 @@ export default {
           "を通じて"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Đi theo dọc con đường mòn leo núi."
       },
       {
         "id": "n2-grammar-040-q10",
@@ -2715,7 +2715,7 @@ export default {
           "をめぐって"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "Bám sát theo các nguyên tắc cơ bản của người chuyên nghiệp."
       }
     ]
   }

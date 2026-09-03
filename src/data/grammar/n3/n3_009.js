@@ -342,13 +342,13 @@ export const N3_009_GRAMMAR = [
                         "japanese": "もし試験を受けていたなら、合格していたと思う。",
                         "reading": "もししけんをうけていたなら、ごうかくしていたとおもう。",
                         "english": "If I had taken the exam, I think I would have passed.",
-                        "vietnamese": "もし試験を受けていたなら、合格していたと思う。"
+                        "vietnamese": "Giả sử tôi đã thi, tôi nghĩ tôi đã đậu."
                     },
                     {
                         "japanese": "もし彼が社長でなかったなら、会社は潰れていたと思う。",
                         "reading": "もしかれがしゃちょうでなかったなら、かいしゃはつぶれていたとおもう。",
                         "english": "If he had not been the president, I think the company would have gone bankrupt.",
-                        "vietnamese": "もし彼が社長でなかったなら、会社は潰れていたと思う。"
+                        "vietnamese": "Giả sử anh ấy không phải là giám đốc, tôi nghĩ công ty đã phá sản."
                     }
                 ],
                 "note": ""
@@ -363,13 +363,13 @@ export const N3_009_GRAMMAR = [
                         "japanese": "もし休みを取ったとしても、旅行に行かないつもりだ。",
                         "reading": "もしやすみをとったとしても、りょこうにいかないつもりだ。",
                         "english": "Even if I take a vacation, I don't intend to go on a trip.",
-                        "vietnamese": "即使我请了假，也打算不去旅行。"
+                        "vietnamese": "Giả sử tôi có nghỉ phép, tôi cũng không định đi du lịch."
                     },
                     {
                         "japanese": "もしお金がたくさんあったとしても、そんなものは買わない。",
                         "reading": "もしおかねがたくさんあったとしても、そんなものはかわない。",
                         "english": "Even if I had a lot of money, I wouldn't buy such a thing.",
-                        "vietnamese": "即使我有很多钱，也不会买那样的东西。"
+                        "vietnamese": "Giả sử tôi có nhiều tiền, tôi cũng không định mua thứ như vậy."
                     }
                 ],
                 "note": ""
