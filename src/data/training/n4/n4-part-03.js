@@ -14,7 +14,7 @@ export default {
                     "行くと"
                 ],
                 "answer": 0,
-                "explanation": "Dùng 「なら」 để tiếp nhận chủ đề (đi Nhật) do người đối thoại đề cập và đưa ra lời khuyên[cite: 15]."
+                "explanation": "Dùng 「なら」 để tiếp nhận chủ đề (đi Nhật) do người đối thoại đề cập và đưa ra lời khuyên."
             },
             {
                 "id": "n4-grammar-format-021-q02",
@@ -27,7 +27,7 @@ export default {
                     "たら"
                 ],
                 "answer": 0,
-                "explanation": "Lấy chủ đề máy ảnh/máy tính mà đối phương quan tâm làm điều kiện để tư vấn: 「～なら」[cite: 15]."
+                "explanation": "Lấy chủ đề máy ảnh/máy tính mà đối phương quan tâm làm điều kiện để tư vấn: 「～なら」."
             },
             {
                 "id": "n4-grammar-format-021-q03",
@@ -40,7 +40,7 @@ export default {
                     "降ると"
                 ],
                 "answer": 0,
-                "explanation": "Dùng 「なら」 để giả định dựa trên thông tin hoặc phỏng đoán tình huống ở mệnh đề trước[cite: 15]."
+                "explanation": "Dùng 「なら」 để giả định dựa trên thông tin hoặc phỏng đoán tình huống ở mệnh đề trước."
             },
             {
                 "id": "n4-grammar-format-021-q04",
@@ -53,7 +53,7 @@ export default {
                     "て"
                 ],
                 "answer": 0,
-                "explanation": "Đưa ra lời khuyên dựa trên vấn đề của người nghe: 「練習するなら」[cite: 15]."
+                "explanation": "Đưa ra lời khuyên dựa trên vấn đề của người nghe: 「練習するなら」."
             },
             {
                 "id": "n4-grammar-format-021-q05",
@@ -66,7 +66,7 @@ export default {
                     "が"
                 ],
                 "answer": 0,
-                "explanation": "Tiếp nhận thông tin về sanaka-san để cung cấp thông tin mới: 「田中さんなら」[cite: 15]."
+                "explanation": "Tiếp nhận thông tin về sanaka-san để cung cấp thông tin mới: 「田中さんなら」."
             },
             {
                 "id": "n4-grammar-format-021-q06",
@@ -79,7 +79,7 @@ export default {
                     "に"
                 ],
                 "answer": 0,
-                "explanation": "Bắt lấy chủ đề món ăn đối phương muốn để giới thiệu quán: 「寿司なら」[cite: 15]."
+                "explanation": "Bắt lấy chủ đề món ăn đối phương muốn để giới thiệu quán: 「寿司なら」."
             },
             {
                 "id": "n4-grammar-format-021-q07",
@@ -92,7 +92,7 @@ export default {
                     "を"
                 ],
                 "answer": 0,
-                "explanation": "Nhắc lại chủ đề cái xe này (これ) để đưa ra đánh giá: 「これなら」[cite: 15]."
+                "explanation": "Nhắc lại chủ đề cái xe này (これ) để đưa ra đánh giá: 「これなら」."
             },
             {
                 "id": "n4-grammar-format-021-q08",
@@ -105,7 +105,7 @@ export default {
                     "て"
                 ],
                 "answer": 0,
-                "explanation": "Dùng 「なら」 để khoanh vùng chủ đề chuyến đi và trả lời thắc mắc[cite: 15]."
+                "explanation": "Dùng 「なら」 để khoanh vùng chủ đề chuyến đi và trả lời thắc mắc."
             },
             {
                 "id": "n4-grammar-format-021-q09",
@@ -118,7 +118,7 @@ export default {
                     "たら"
                 ],
                 "answer": 0,
-                "explanation": "Dựa trên điều kiện phòng rẻ để đưa ra gợi ý khu vực ngoại ô[cite: 15]."
+                "explanation": "Dựa trên điều kiện phòng rẻ để đưa ra gợi ý khu vực ngoại ô."
             },
             {
                 "id": "n4-grammar-format-021-q10",
@@ -131,7 +131,7 @@ export default {
                     "たら"
                 ],
                 "answer": 0,
-                "explanation": "Xác định mục đích học tiếng Nhật làm chủ đề để tư vấn phương pháp học[cite: 15]."
+                "explanation": "Xác định mục đích học tiếng Nhật làm chủ đề để tư vấn phương pháp học."
             }
         ]
     },
@@ -151,7 +151,7 @@ export default {
                     "はずで"
                 ],
                 "answer": 0,
-                "explanation": "Diễn tả mục đích trạng thái không quên (thường đi với động từ thể không ý chí/phủ định)[cite: 15]."
+                "explanation": "Diễn tả mục đích trạng thái không quên (thường đi với động từ thể không ý chí/phủ định)."
             },
             {
                 "id": "n4-grammar-format-022-q02",
@@ -164,7 +164,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Đi với động từ khả năng (話せる) để chỉ mục tiêu đạt được trạng thái năng lực[cite: 15]."
+                "explanation": "Đi với động từ khả năng (話せる) để chỉ mục tiêu đạt được trạng thái năng lực."
             },
             {
                 "id": "n4-grammar-format-022-q03",
@@ -177,7 +177,7 @@ export default {
                     "はず"
                 ],
                 "answer": 0,
-                "explanation": "Đề phòng nguy cơ dậy muộn: 「寝坊しないように」[cite: 15]."
+                "explanation": "Đề phòng nguy cơ dậy muộn: 「寝坊しないように」."
             },
             {
                 "id": "n4-grammar-format-022-q04",
@@ -190,7 +190,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Trạng thái để mọi người có thể nghe thấy: 聞こえるように[cite: 15]."
+                "explanation": "Trạng thái để mọi người có thể nghe thấy: 聞こえるように."
             },
             {
                 "id": "n4-grammar-format-022-q05",
@@ -203,7 +203,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Mục tiêu duy trì trạng thái không béo: 「太らないように」[cite: 15]."
+                "explanation": "Mục tiêu duy trì trạng thái không béo: 「太らないように」."
             },
             {
                 "id": "n4-grammar-format-022-q06",
@@ -216,7 +216,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Đề phòng làm mất hộ chiếu: 「なくさないように」[cite: 15]."
+                "explanation": "Đề phòng làm mất hộ chiếu: 「なくさないように」."
             },
             {
                 "id": "n4-grammar-format-022-q07",
@@ -229,7 +229,7 @@ export default {
                     "はず"
                 ],
                 "answer": 0,
-                "explanation": "Trạng thái để có thể hiểu được lời giáo viên: わかるように[cite: 15]."
+                "explanation": "Trạng thái để có thể hiểu được lời giáo viên: わかるように."
             },
             {
                 "id": "n4-grammar-format-022-q08",
@@ -242,7 +242,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Mục đích phòng tránh bị cảm lạnh: 「風邪をひかないように」[cite: 15]."
+                "explanation": "Mục đích phòng tránh bị cảm lạnh: 「風邪をひかないように」."
             },
             {
                 "id": "n4-grammar-format-022-q09",
@@ -255,7 +255,7 @@ export default {
                     "はず"
                 ],
                 "answer": 0,
-                "explanation": "Tránh việc trễ tàu: 「遅れないように」[cite: 15]."
+                "explanation": "Tránh việc trễ tàu: 「遅れないように」."
             },
             {
                 "id": "n4-grammar-format-022-q10",
@@ -268,7 +268,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Để trẻ con không với tới/không chạm vào: 「触らないように」[cite: 15]."
+                "explanation": "Để trẻ con không với tới/không chạm vào: 「触らないように」."
             }
         ]
     },
@@ -288,7 +288,7 @@ export default {
                     "買った"
                 ],
                 "answer": 0,
-                "explanation": "Cấu trúc V-dương thể từ điển (辞書形) + ために chỉ mục đích hành động có ý chí[cite: 15]."
+                "explanation": "Cấu trúc V-dương thể từ điển (辞書形) + ために chỉ mục đích hành động có ý chí."
             },
             {
                 "id": "n4-grammar-format-023-q02",
@@ -301,7 +301,7 @@ export default {
                     "ところ"
                 ],
                 "answer": 0,
-                "explanation": "Danh từ + のために chỉ mục đích/lợi ích: 「健康のために」[cite: 15]."
+                "explanation": "Danh từ + のために chỉ mục đích/lợi ích: 「健康のために」."
             },
             {
                 "id": "n4-grammar-format-023-q03",
@@ -314,7 +314,7 @@ export default {
                     "働こう"
                 ],
                 "answer": 0,
-                "explanation": "Chỉ vì lợi ích của gia đình (N のために)[cite: 15]."
+                "explanation": "Chỉ vì lợi ích của gia đình (N のために)."
             },
             {
                 "id": "n4-grammar-format-023-q04",
@@ -327,7 +327,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Mục đích cá nhân mang tính ý chí cao: 合格するために[cite: 15]."
+                "explanation": "Mục đích cá nhân mang tính ý chí cao: 合格するために."
             },
             {
                 "id": "n4-grammar-format-023-q05",
@@ -340,7 +340,7 @@ export default {
                     "とき"
                 ],
                 "answer": 0,
-                "explanation": "Động từ thể từ điển đứng trước ために: 留学するために[cite: 15]."
+                "explanation": "Động từ thể từ điển đứng trước ために: 留学するために."
             },
             {
                 "id": "n4-grammar-format-023-q06",
@@ -353,7 +353,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Mục đích xây nhà mới: 建てるために[cite: 15]."
+                "explanation": "Mục đích xây nhà mới: 建てるために."
             },
             {
                 "id": "n4-grammar-format-023-q07",
@@ -366,7 +366,7 @@ export default {
                     "あとで"
                 ],
                 "answer": 0,
-                "explanation": "Vì lợi ích của công ty: 会社のために[cite: 15]."
+                "explanation": "Vì lợi ích của công ty: 会社のために."
             },
             {
                 "id": "n4-grammar-format-023-q08",
@@ -379,7 +379,7 @@ export default {
                     "もの"
                 ],
                 "answer": 0,
-                "explanation": "Mục đích nấu ăn ngon (Lưu ý: 作るために)[cite: 15]."
+                "explanation": "Mục đích nấu ăn ngon (Lưu ý: 作るために)."
             },
             {
                 "id": "n4-grammar-format-023-q09",
@@ -392,7 +392,7 @@ export default {
                     "とき"
                 ],
                 "answer": 0,
-                "explanation": "Mục đích đi du lịch vòng quanh thế giới: 旅行をするために[cite: 15]."
+                "explanation": "Mục đích đi du lịch vòng quanh thế giới: 旅行をするために."
             },
             {
                 "id": "n4-grammar-format-023-q10",
@@ -405,7 +405,7 @@ export default {
                     "こと"
                 ],
                 "answer": 0,
-                "explanation": "Vì lợi ích của xã hội: 社会のために[cite: 15]."
+                "explanation": "Vì lợi ích của xã hội: 社会のために."
             }
         ]
     },
@@ -425,7 +425,7 @@ export default {
                     "にくい"
                 ],
                 "answer": 0,
-                "explanation": "Dự đoán hiện tượng sắp xảy ra dựa trên quan sát thực tế (mây đen): 降りそう[cite: 15]."
+                "explanation": "Dự đoán hiện tượng sắp xảy ra dựa trên quan sát thực tế (mây đen): 降りそう."
             },
             {
                 "id": "n4-grammar-format-024-q02",
@@ -438,7 +438,7 @@ export default {
                     "だ"
                 ],
                 "answer": 0,
-                "explanation": "Tính từ đuôi い bỏ i + そうです (美味しい -> 美味しそう)[cite: 15]."
+                "explanation": "Tính từ đuôi い bỏ i + そうです (美味しい -> 美味しそう)."
             },
             {
                 "id": "n4-grammar-format-024-q03",
@@ -451,7 +451,7 @@ export default {
                     "すぎ"
                 ],
                 "answer": 0,
-                "explanation": "Tính từ い (重い) bỏ i + そう -> 重そう[cite: 15]."
+                "explanation": "Tính từ い (重い) bỏ i + そう -> 重そう."
             },
             {
                 "id": "n4-grammar-format-024-q04",
@@ -464,7 +464,7 @@ export default {
                     "だ"
                 ],
                 "answer": 0,
-                "explanation": "忙しい -> 忙しそう[cite: 15]."
+                "explanation": "忙しい -> 忙しそう."
             },
             {
                 "id": "n4-grammar-format-024-q05",
@@ -477,7 +477,7 @@ export default {
                     "よかったそう"
                 ],
                 "answer": 0,
-                "explanation": "Trường hợp ngoại lệ của いい/よい khi đi với そう là よさそう[cite: 15]."
+                "explanation": "Trường hợp ngoại lệ của いい/よい khi đi với そう là よさそう."
             },
             {
                 "id": "n4-grammar-format-024-q06",
@@ -490,7 +490,7 @@ export default {
                     "だ"
                 ],
                 "answer": 0,
-                "explanation": "Tính từ na (簡単) + そう -> 簡単そう[cite: 15]."
+                "explanation": "Tính từ na (簡単) + そう -> 簡単そう."
             },
             {
                 "id": "n4-grammar-format-024-q07",
@@ -503,7 +503,7 @@ export default {
                     "にく"
                 ],
                 "answer": 0,
-                "explanation": "Động từ thể masu (割れます) bỏ masu + そう (Sắp vỡ): 割れそう[cite: 15]."
+                "explanation": "Động từ thể masu (割れます) bỏ masu + そう (Sắp vỡ): 割れそう."
             },
             {
                 "id": "n4-grammar-format-024-q08",
@@ -529,7 +529,7 @@ export default {
                     "すぎ"
                 ],
                 "answer": 0,
-                "explanation": "甘い -> 甘そう[cite: 15]."
+                "explanation": "甘い -> 甘そう."
             },
             {
                 "id": "n4-grammar-format-024-q10",
@@ -542,7 +542,7 @@ export default {
                     "すぎ"
                 ],
                 "answer": 0,
-                "explanation": "寒い -> 寒そう[cite: 15]."
+                "explanation": "寒い -> 寒そう."
             }
         ]
     },
@@ -562,7 +562,7 @@ export default {
                     "すぎた"
                 ],
                 "answer": 0,
-                "explanation": "Động từ thể masu bỏ masu + すぎます (Dạng V-te: 飲みすぎて)[cite: 15]."
+                "explanation": "Động từ thể masu bỏ masu + すぎます (Dạng V-te: 飲みすぎて)."
             },
             {
                 "id": "n4-grammar-format-025-q02",
@@ -575,7 +575,7 @@ export default {
                     ""
                 ],
                 "answer": 3,
-                "explanation": "Tính từ い bỏ i + すぎる (小さい -> 小さすぎる)[cite: 15]."
+                "explanation": "Tính từ い bỏ i + すぎる (小さい -> 小さすぎる)."
             },
             {
                 "id": "n4-grammar-format-025-q03",
@@ -588,7 +588,7 @@ export default {
                     "すぎて"
                 ],
                 "answer": 0,
-                "explanation": "食べます -> 食べすぎた (Ăn quá nhiều)[cite: 15]."
+                "explanation": "食べます -> 食べすぎた (Ăn quá nhiều)."
             },
             {
                 "id": "n4-grammar-format-025-q04",
@@ -601,7 +601,7 @@ export default {
                     "さ"
                 ],
                 "answer": 0,
-                "explanation": "難しい bỏ i + すぎる -> 難しすぎる[cite: 15]."
+                "explanation": "難しい bỏ i + すぎる -> 難しすぎる."
             },
             {
                 "id": "n4-grammar-format-025-q05",
@@ -614,7 +614,7 @@ export default {
                     "すぎり"
                 ],
                 "answer": 2,
-                "explanation": "Xem TV quá nhiều rồi (V-te): 見すぎて[cite: 15]."
+                "explanation": "Xem TV quá nhiều rồi (V-te): 見すぎて."
             },
             {
                 "id": "n4-grammar-format-025-q06",
@@ -627,7 +627,7 @@ export default {
                     "さ"
                 ],
                 "answer": 0,
-                "explanation": "暗い -> 暗すぎる[cite: 15]."
+                "explanation": "暗い -> 暗すぎる."
             },
             {
                 "id": "n4-grammar-format-025-q07",
@@ -640,7 +640,7 @@ export default {
                     "すぎれ"
                 ],
                 "answer": 2,
-                "explanation": "Làm việc quá sức: 働きすぎて[cite: 15]."
+                "explanation": "Làm việc quá sức: 働きすぎて."
             },
             {
                 "id": "n4-grammar-format-025-q08",
@@ -653,7 +653,7 @@ export default {
                     "さ"
                 ],
                 "answer": 0,
-                "explanation": "重い -> 重すぎる[cite: 15]."
+                "explanation": "重い -> 重すぎる."
             },
             {
                 "id": "n4-grammar-format-025-q09",
@@ -666,7 +666,7 @@ export default {
                     "すぎれ"
                 ],
                 "answer": 0,
-                "explanation": "Lo lắng quá mức: 心配しすぎなくても[cite: 15]."
+                "explanation": "Lo lắng quá mức: 心配しすぎなくても."
             },
             {
                 "id": "n4-grammar-format-025-q10",
@@ -699,7 +699,7 @@ export default {
                     "そう"
                 ],
                 "answer": 0,
-                "explanation": "Chỉ tính chất dễ viết của bút: 書きやすい[cite: 15]."
+                "explanation": "Chỉ tính chất dễ viết của bút: 書きやすい."
             },
             {
                 "id": "n4-grammar-format-026-q02",
@@ -712,7 +712,7 @@ export default {
                     "そう"
                 ],
                 "answer": 0,
-                "explanation": "Chỉ tính chất khó nhớ: 覚えにくい[cite: 15]."
+                "explanation": "Chỉ tính chất khó nhớ: 覚えにくい."
             },
             {
                 "id": "n4-grammar-format-026-q03",
@@ -725,7 +725,7 @@ export default {
                     "そうです"
                 ],
                 "answer": 0,
-                "explanation": "Thuốc đắng nên rất khó uống: 飲みにくいです[cite: 15]."
+                "explanation": "Thuốc đắng nên rất khó uống: 飲みにくいです."
             },
             {
                 "id": "n4-grammar-format-026-q04",
@@ -738,7 +738,7 @@ export default {
                     "そう"
                 ],
                 "answer": 0,
-                "explanation": "Nhỏ gọn nên dễ mang theo: 持ち歩きやすい[cite: 15]."
+                "explanation": "Nhỏ gọn nên dễ mang theo: 持ち歩きやすい."
             },
             {
                 "id": "n4-grammar-format-026-q05",
@@ -751,7 +751,7 @@ export default {
                     "そうです"
                 ],
                 "answer": 0,
-                "explanation": "Đường hẹp nên ô tô khó đi qua: 通りにくいです[cite: 15]."
+                "explanation": "Đường hẹp nên ô tô khó đi qua: 通りにくいです."
             },
             {
                 "id": "n4-grammar-format-026-q06",
@@ -764,7 +764,7 @@ export default {
                     "そう"
                 ],
                 "answer": 0,
-                "explanation": "Giày mềm nên dễ đi: 歩きやすい[cite: 15]."
+                "explanation": "Giày mềm nên dễ đi: 歩きやすい."
             },
             {
                 "id": "n4-grammar-format-026-q07",
@@ -777,7 +777,7 @@ export default {
                     "うです"
                 ],
                 "answer": 0,
-                "explanation": "Chữ nhỏ nên khó đọc: 読みにくいです (đã có みに, chọn くいです)[cite: 15]."
+                "explanation": "Chữ nhỏ nên khó đọc: 読みにくいです (đã có みに, chọn くいです)."
             },
             {
                 "id": "n4-grammar-format-026-q08",
@@ -790,7 +790,7 @@ export default {
                     "そう"
                 ],
                 "answer": 0,
-                "explanation": "Dễ cắt: 切りやすい[cite: 15]."
+                "explanation": "Dễ cắt: 切りやすい."
             },
             {
                 "id": "n4-grammar-format-026-q09",
@@ -803,7 +803,7 @@ export default {
                     "そう"
                 ],
                 "answer": 0,
-                "explanation": "Khó viết do phức tạp: 書きにくい[cite: 15]."
+                "explanation": "Khó viết do phức tạp: 書きにくい."
             },
             {
                 "id": "n4-grammar-format-026-q10",
@@ -816,7 +816,7 @@ export default {
                     "そう"
                 ],
                 "answer": 0,
-                "explanation": "Vật liệu khó vỡ: 割れにくい[cite: 15]."
+                "explanation": "Vật liệu khó vỡ: 割れにくい."
             }
         ]
     },
@@ -836,7 +836,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Thể bị động nhóm 2 (誉める -> 誉められる -> 誉められました)[cite: 15]."
+                "explanation": "Thể bị động nhóm 2 (誉める -> 誉められる -> 誉められました)."
             },
             {
                 "id": "n4-grammar-format-027-q02",
@@ -849,7 +849,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Thể bị động của 建てます (建てられる)[cite: 15]."
+                "explanation": "Thể bị động của 建てます (建てられる)."
             },
             {
                 "id": "n4-grammar-format-027-q03",
@@ -862,7 +862,7 @@ export default {
                     "せられ"
                 ],
                 "answer": 0,
-                "explanation": "Bị chó cắn: 噛まれて (thể bị động 噛まれる chia sang て-form)[cite: 15]."
+                "explanation": "Bị chó cắn: 噛まれて (thể bị động 噛まれる chia sang て-form)."
             },
             {
                 "id": "n4-grammar-format-027-q04",
@@ -875,7 +875,7 @@ export default {
                     "せられ"
                 ],
                 "answer": 0,
-                "explanation": "Bị trộm xe đạp (Bị động tiêu cực): 盗まれて -> 盗まれる[cite: 15]."
+                "explanation": "Bị trộm xe đạp (Bị động tiêu cực): 盗まれて -> 盗まれる."
             },
             {
                 "id": "n4-grammar-format-027-q05",
@@ -888,7 +888,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Được giám đốc mời (bị động): 招待されました[cite: 15]."
+                "explanation": "Được giám đốc mời (bị động): 招待されました."
             },
             {
                 "id": "n4-grammar-format-027-q06",
@@ -901,7 +901,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Bị trưởng phòng nói/nhắc nhở trong cuộc họp: 言われました[cite: 15]."
+                "explanation": "Bị trưởng phòng nói/nhắc nhở trong cuộc họp: 言われました."
             },
             {
                 "id": "n4-grammar-format-027-q07",
@@ -914,7 +914,7 @@ export default {
                     "せられ"
                 ],
                 "answer": 0,
-                "explanation": "Bị em bé khóc làm phiền (Bị động indirect/phiền phức): 泣かされて -> 泣かされる[cite: 15]."
+                "explanation": "Bị em bé khóc làm phiền (Bị động indirect/phiền phức): 泣かされて -> 泣かされる."
             },
             {
                 "id": "n4-grammar-format-027-q08",
@@ -927,7 +927,7 @@ export default {
                     "せられ"
                 ],
                 "answer": 0,
-                "explanation": "Được đọc bởi nhiều người: 読まれています[cite: 15]."
+                "explanation": "Được đọc bởi nhiều người: 読まれています."
             },
             {
                 "id": "n4-grammar-format-027-q09",
@@ -940,7 +940,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Bị mẹ nhờ đi mua sắm: 頼まれました[cite: 15]."
+                "explanation": "Bị mẹ nhờ đi mua sắm: 頼まれました."
             },
             {
                 "id": "n4-grammar-format-027-q10",
@@ -953,7 +953,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Được bạn tiễn ra sân bay: 送られました[cite: 15]."
+                "explanation": "Được bạn tiễn ra sân bay: 送られました."
             }
         ]
     },
@@ -973,7 +973,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Mẹ bắt/cho con ăn rau: 食べさせました[cite: 15]."
+                "explanation": "Mẹ bắt/cho con ăn rau: 食べさせました."
             },
             {
                 "id": "n4-grammar-format-028-q02",
@@ -986,7 +986,7 @@ export default {
                     "させられます"
                 ],
                 "answer": 0,
-                "explanation": "Giáo viên bắt học sinh nhớ kanji (thể sai khiến): 覚えさせます[cite: 15]."
+                "explanation": "Giáo viên bắt học sinh nhớ kanji (thể sai khiến): 覚えさせます."
             },
             {
                 "id": "n4-grammar-format-028-q03",
@@ -999,7 +999,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Trưởng phòng bắt Sato viết báo cáo: 書かせました[cite: 15]."
+                "explanation": "Trưởng phòng bắt Sato viết báo cáo: 書かせました."
             },
             {
                 "id": "n4-grammar-format-028-q04",
@@ -1012,7 +1012,7 @@ export default {
                     "せません"
                 ],
                 "answer": 0,
-                "explanation": "Mẹ sai tôi dọn phòng: させました (từ する -> させる)[cite: 15]."
+                "explanation": "Mẹ sai tôi dọn phòng: させました (từ する -> させる)."
             },
             {
                 "id": "n4-grammar-format-028-q05",
@@ -1025,7 +1025,7 @@ export default {
                     "させました"
                 ],
                 "answer": 3,
-                "explanation": "Bố cho phép tôi lái xe (hoặc bắt lái xe): 運転させました[cite: 15]."
+                "explanation": "Bố cho phép tôi lái xe (hoặc bắt lái xe): 運転させました."
             },
             {
                 "id": "n4-grammar-format-028-q06",
@@ -1038,7 +1038,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Động từ nhóm 1 入る -> 入らせました[cite: 15]."
+                "explanation": "Động từ nhóm 1 入る -> 入らせました."
             },
             {
                 "id": "n4-grammar-format-028-q07",
@@ -1051,7 +1051,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "習う -> 習わせました[cite: 15]."
+                "explanation": "習う -> 習わせました."
             },
             {
                 "id": "n4-grammar-format-028-q08",
@@ -1064,7 +1064,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "走る -> 走らせました[cite: 15]."
+                "explanation": "走る -> 走らせました."
             },
             {
                 "id": "n4-grammar-format-028-q09",
@@ -1077,7 +1077,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "洗う -> 洗わせました[cite: 15]."
+                "explanation": "洗う -> 洗わせました."
             },
             {
                 "id": "n4-grammar-format-028-q10",
@@ -1090,7 +1090,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "出す -> 出させました[cite: 15]."
+                "explanation": "出す -> 出させました."
             }
         ]
     },
@@ -1110,7 +1110,7 @@ export default {
                     "れました"
                 ],
                 "answer": 0,
-                "explanation": "Bị mẹ bắt dọn phòng (Causative Passive): させられました[cite: 15]."
+                "explanation": "Bị mẹ bắt dọn phòng (Causative Passive): させられました."
             },
             {
                 "id": "n4-grammar-format-029-q02",
@@ -1123,7 +1123,7 @@ export default {
                     "かかせました"
                 ],
                 "answer": 0,
-                "explanation": "Bị giáo viên bắt viết kanji 100 lần: 書かされました (hoặc 書かせられました)[cite: 15]."
+                "explanation": "Bị giáo viên bắt viết kanji 100 lần: 書かされました (hoặc 書かせられました)."
             },
             {
                 "id": "n4-grammar-format-029-q03",
@@ -1136,7 +1136,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Bị ép uống rượu: 飲まされました[cite: 15]."
+                "explanation": "Bị ép uống rượu: 飲まされました."
             },
             {
                 "id": "n4-grammar-format-029-q04",
@@ -1149,7 +1149,7 @@ export default {
                     "べさせました"
                 ],
                 "answer": 0,
-                "explanation": "Bị bắt ăn rau: 食べさせられました[cite: 15]."
+                "explanation": "Bị bắt ăn rau: 食べさせられました."
             },
             {
                 "id": "n4-grammar-format-029-q05",
@@ -1162,7 +1162,7 @@ export default {
                     "いきませんでした"
                 ],
                 "answer": 0,
-                "explanation": "Bị mẹ bắt đi mua sắm (hoặc phủ định bị bắt đi): 行かされました[cite: 15]."
+                "explanation": "Bị mẹ bắt đi mua sắm (hoặc phủ định bị bắt đi): 行かされました."
             },
             {
                 "id": "n4-grammar-format-029-q06",
@@ -1175,7 +1175,7 @@ export default {
                     "かかせました"
                 ],
                 "answer": 0,
-                "explanation": "Bị sếp bắt viết báo cáo dài: 書かされました[cite: 15]."
+                "explanation": "Bị sếp bắt viết báo cáo dài: 書かされました."
             },
             {
                 "id": "n4-grammar-format-029-q07",
@@ -1188,7 +1188,7 @@ export default {
                     "させられました"
                 ],
                 "answer": 0,
-                "explanation": "Bị bắt phải chạy trong mưa: 走らされました[cite: 15]."
+                "explanation": "Bị bắt phải chạy trong mưa: 走らされました."
             },
             {
                 "id": "n4-grammar-format-029-q08",
@@ -1201,7 +1201,7 @@ export default {
                     "言われました"
                 ],
                 "answer": 0,
-                "explanation": "Bị bắt phải phát biểu ý kiến: 言わされました[cite: 15]."
+                "explanation": "Bị bắt phải phát biểu ý kiến: 言わされました."
             },
             {
                 "id": "n4-grammar-format-029-q09",
@@ -1214,7 +1214,7 @@ export default {
                     "歌わせました"
                 ],
                 "answer": 0,
-                "explanation": "Bị giáo viên bắt hát trước mặt mọi người: 歌わされました[cite: 15]."
+                "explanation": "Bị giáo viên bắt hát trước mặt mọi người: 歌わされました."
             },
             {
                 "id": "n4-grammar-format-029-q10",
@@ -1227,7 +1227,7 @@ export default {
                     "待ちました"
                 ],
                 "answer": 2,
-                "explanation": "Bị bắt phải đợi suốt buổi chiều: 待たされました[cite: 15]."
+                "explanation": "Bị bắt phải đợi suốt buổi chiều: 待たされました."
             }
         ]
     },
@@ -1247,7 +1247,7 @@ export default {
                     "できました"
                 ],
                 "answer": 0,
-                "explanation": "Cấu trúc Tôn kính ngữ: お + V-stem + になります (お帰りになりました)[cite: 15]."
+                "explanation": "Cấu trúc Tôn kính ngữ: お + V-stem + になります (お帰りになりました)."
             },
             {
                 "id": "n4-grammar-format-030-q02",
@@ -1260,7 +1260,7 @@ export default {
                     "行きます"
                 ],
                 "answer": 0,
-                "explanation": "Tôn kính ngữ đặc biệt của 食べる/飲む là 召し上がります[cite: 15]."
+                "explanation": "Tôn kính ngữ đặc biệt của 食べる/飲む là 召し上がります."
             },
             {
                 "id": "n4-grammar-format-030-q03",
@@ -1273,7 +1273,7 @@ export default {
                     "拝見し"
                 ],
                 "answer": 0,
-                "explanation": "Tôn kính ngữ của 見る là ご覧になります (hoặc お＋V＋になる). Ở đây xin mời xem: ご覧になって[cite: 15]."
+                "explanation": "Tôn kính ngữ của 見る là ご覧になります (hoặc お＋V＋になる). Ở đây xin mời xem: ご覧になって."
             },
             {
                 "id": "n4-grammar-format-030-q04",
@@ -1286,7 +1286,7 @@ export default {
                     "います"
                 ],
                 "answer": 0,
-                "explanation": "Tôn kính ngữ của 行く/来る/いる là いらっしゃいます[cite: 15]."
+                "explanation": "Tôn kính ngữ của 行く/来る/いる là いらっしゃいます."
             },
             {
                 "id": "n4-grammar-format-030-q05",
@@ -1299,7 +1299,7 @@ export default {
                     "お読みしました"
                 ],
                 "answer": 0,
-                "explanation": "Tôn kính ngữ của 読む: お読みになりました[cite: 15]."
+                "explanation": "Tôn kính ngữ của 読む: お読みになりました."
             },
             {
                 "id": "n4-grammar-format-030-q06",
@@ -1312,7 +1312,7 @@ export default {
                     "います"
                 ],
                 "answer": 0,
-                "explanation": "Dùng いらっしゃいます để hỏi sếp có đến công ty không[cite: 15]."
+                "explanation": "Dùng いらっしゃいます để hỏi sếp có đến công ty không."
             },
             {
                 "id": "n4-grammar-format-030-q07",
@@ -1325,7 +1325,7 @@ export default {
                     "しますか"
                 ],
                 "answer": 0,
-                "explanation": "おいでですか là dạng tôn kính ngữ của います/行きます/来ます[cite: 15]."
+                "explanation": "おいでですか là dạng tôn kính ngữ của います/行きます/来ます."
             },
             {
                 "id": "n4-grammar-format-030-q08",
@@ -1338,7 +1338,7 @@ export default {
                     "持ってあります"
                 ],
                 "answer": 0,
-                "explanation": "Tôn kính ngữ của 持っている là お持ちです[cite: 15]."
+                "explanation": "Tôn kính ngữ của 持っている là お持ちです."
             },
             {
                 "id": "n4-grammar-format-030-q09",
@@ -1351,7 +1351,7 @@ export default {
                     "聞きました"
                 ],
                 "answer": 0,
-                "explanation": "Tôn kính ngữ của 見る -> ご覧になる (ご覧になりました)[cite: 15]."
+                "explanation": "Tôn kính ngữ của 見る -> ご覧になる (ご覧になりました)."
             },
             {
                 "id": "n4-grammar-format-030-q10",
@@ -1364,7 +1364,7 @@ export default {
                     "教えられます"
                 ],
                 "answer": 0,
-                "explanation": "Kết hợp Động từ form て + いらっしゃいます (Tôn kính ngữ của います)[cite: 15]."
+                "explanation": "Kết hợp Động từ form て + いらっしゃいます (Tôn kính ngữ của います)."
             }
         ]
     }

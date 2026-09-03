@@ -14,7 +14,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Cấu trúc 'V-普通形 + んです' dùng để hỏi hoặc giải thích nguyên nhân[cite: 2]. Với câu hỏi có nghi vấn từ như 'どうして', dùng 'んですか'[cite: 2]."
+        "explanation": "Cấu trúc 'V-普通形 + んです' dùng để hỏi hoặc giải thích nguyên nhân. Với câu hỏi có nghi vấn từ như 'どうして', dùng 'んですか'."
       },
       {
         "id": "n4-grammar-format-001-q02",
@@ -27,7 +27,7 @@ export default {
           "もの"
         ],
         "answer": 0,
-        "explanation": "Động từ chia thể thông thường (こなかった) kết hợp với 'んです' để giải thích lý do[cite: 2]."
+        "explanation": "Động từ chia thể thông thường (こなかった) kết hợp với 'んです' để giải thích lý do."
       },
       {
         "id": "n4-grammar-format-001-q03",
@@ -40,7 +40,7 @@ export default {
           "んでは"
         ],
         "answer": 1,
-        "explanation": "Dùng '～んですが' để trình bày hoàn cảnh/lý do trước khi đưa ra đề nghị hoặc xin phép[cite: 2]."
+        "explanation": "Dùng '～んですが' để trình bày hoàn cảnh/lý do trước khi đưa ra đề nghị hoặc xin phép."
       },
       {
         "id": "n4-grammar-format-001-q04",
@@ -53,7 +53,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Động từ 'ある' đi với 'んです' để giải thích tình huống[cite: 2]."
+        "explanation": "Động từ 'ある' đi với 'んです' để giải thích tình huống."
       },
       {
         "id": "n4-grammar-format-001-q05",
@@ -66,7 +66,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Tính từ đuôi -na khi đi với 'んです' phải giữ nguyên 'な' (きれいな + んです)[cite: 2]."
+        "explanation": "Tính từ đuôi -na khi đi với 'んです' phải giữ nguyên 'な' (きれいな + んです)."
       },
       {
         "id": "n4-grammar-format-001-q06",
@@ -79,7 +79,7 @@ export default {
           "たいん"
         ],
         "answer": 3,
-        "explanation": "Cấu trúc 'V-たい' đóng vai trò như tính từ đuôi -i, kết hợp trực tiếp thành '～たいんです'[cite: 2]."
+        "explanation": "Cấu trúc 'V-たい' đóng vai trò như tính từ đuôi -i, kết hợp trực tiếp thành '～たいんです'."
       },
       {
         "id": "n4-grammar-format-001-q07",
@@ -92,7 +92,7 @@ export default {
           "で"
         ],
         "answer": 0,
-        "explanation": "Danh từ khi đi với 'んです' phải thêm 'な' (N + な + んです)[cite: 2]."
+        "explanation": "Danh từ khi đi với 'んです' phải thêm 'な' (N + な + んです)."
       },
       {
         "id": "n4-grammar-format-001-q08",
@@ -105,7 +105,7 @@ export default {
           "もの"
         ],
         "answer": 0,
-        "explanation": "Dùng '～たいんですが' để mở đầu câu hỏi xin hướng dẫn/thông tin[cite: 2]."
+        "explanation": "Dùng '～たいんですが' để mở đầu câu hỏi xin hướng dẫn/thông tin."
       },
       {
         "id": "n4-grammar-format-001-q09",
@@ -118,7 +118,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Động từ thể phủ định (ない) + 'んですか' dùng để hỏi lý do[cite: 2]."
+        "explanation": "Động từ thể phủ định (ない) + 'んですか' dùng để hỏi lý do."
       },
       {
         "id": "n4-grammar-format-001-q10",
@@ -131,7 +131,7 @@ export default {
           "もの"
         ],
         "answer": 0,
-        "explanation": "V-た (すいた) + 'んです' giải thích trạng thái/lý do hiện tại[cite: 2]."
+        "explanation": "V-た (すいた) + 'んです' giải thích trạng thái/lý do hiện tại."
       }
     ]
   },
@@ -150,7 +150,7 @@ export default {
           "あげませんか"
         ],
         "answer": 0,
-        "explanation": "Mẫu câu nhờ vả lịch sự 'V-て + いただけませんか'[cite: 2]."
+        "explanation": "Mẫu câu nhờ vả lịch sự 'V-て + いただけませんか'."
       },
       {
         "id": "n4-grammar-format-002-q02",
@@ -163,7 +163,7 @@ export default {
           "いただきませんか"
         ],
         "answer": 0,
-        "explanation": "Đi với động từ thể て (撮って) để nhờ ai đó làm gì cho mình một cách lịch sự[cite: 2]."
+        "explanation": "Đi với động từ thể て (撮って) để nhờ ai đó làm gì cho mình một cách lịch sự."
       },
       {
         "id": "n4-grammar-format-002-q03",
@@ -176,7 +176,7 @@ export default {
           "と"
         ],
         "answer": 0,
-        "explanation": "Động từ 言う chuyển sang thể て thành 言って[cite: 2]."
+        "explanation": "Động từ 言う chuyển sang thể て thành 言って."
       },
       {
         "id": "n4-grammar-format-002-q04",
@@ -189,7 +189,7 @@ export default {
           "教え"
         ],
         "answer": 0,
-        "explanation": "Động từ Nhóm 2 教えろ/教える chuyển sang thể て là 教えて[cite: 2]."
+        "explanation": "Động từ Nhóm 2 教えろ/教える chuyển sang thể て là 教えて."
       },
       {
         "id": "n4-grammar-format-002-q05",
@@ -202,7 +202,7 @@ export default {
           "持った"
         ],
         "answer": 0,
-        "explanation": "Động từ 持ちます (Nhóm 1) sang thể て là 持って[cite: 2]."
+        "explanation": "Động từ 持ちます (Nhóm 1) sang thể て là 持って."
       },
       {
         "id": "n4-grammar-format-002-q06",
@@ -215,7 +215,7 @@ export default {
           "開けた"
         ],
         "answer": 0,
-        "explanation": "Động từ 開けます chuyển sang thể て là 開けて[cite: 2]."
+        "explanation": "Động từ 開けます chuyển sang thể て là 開けて."
       },
       {
         "id": "n4-grammar-format-002-q07",
@@ -228,7 +228,7 @@ export default {
           "と"
         ],
         "answer": 0,
-        "explanation": "Động từ 待ちます chuyển sang thể て thành 待って[cite: 2]."
+        "explanation": "Động từ 待ちます chuyển sang thể て thành 待って."
       },
       {
         "id": "n4-grammar-format-002-q08",
@@ -241,7 +241,7 @@ export default {
           "書き"
         ],
         "answer": 0,
-        "explanation": "Động từ 書きます chuyển sang thể て là 書いて[cite: 2]."
+        "explanation": "Động từ 書きます chuyển sang thể て là 書いて."
       },
       {
         "id": "n4-grammar-format-002-q09",
@@ -254,7 +254,7 @@ export default {
           "と"
         ],
         "answer": 0,
-        "explanation": "Động từ 手伝います chuyển sang thể て là 手伝って[cite: 2]."
+        "explanation": "Động từ 手伝います chuyển sang thể て là 手伝って."
       },
       {
         "id": "n4-grammar-format-002-q10",
@@ -267,7 +267,7 @@ export default {
           "と"
         ],
         "answer": 0,
-        "explanation": "Động từ 話します chuyển sang thể て thành 話して[cite: 2]."
+        "explanation": "Động từ 話します chuyển sang thể て thành 話して."
       }
     ]
   },
@@ -286,7 +286,7 @@ export default {
           "なら"
         ],
         "answer": 0,
-        "explanation": "Cấu trúc xin lời khuyên: 'V-たら + いいですか'[cite: 2]."
+        "explanation": "Cấu trúc xin lời khuyên: 'V-たら + いいですか'."
       },
       {
         "id": "n4-grammar-format-003-q02",
@@ -299,7 +299,7 @@ export default {
           "するなら"
         ],
         "answer": 0,
-        "explanation": "Dùng 'どうしたらいいですか' để hỏi nên làm thế nào[cite: 2]."
+        "explanation": "Dùng 'どうしたらいいですか' để hỏi nên làm thế nào."
       },
       {
         "id": "n4-grammar-format-003-q03",
@@ -312,7 +312,7 @@ export default {
           "なら"
         ],
         "answer": 0,
-        "explanation": "Chia động từ 買います về thể た (買った) + らいいですか[cite: 2]."
+        "explanation": "Chia động từ 買います về thể た (買った) + らいいですか."
       },
       {
         "id": "n4-grammar-format-003-q04",
@@ -325,7 +325,7 @@ export default {
           "なら"
         ],
         "answer": 0,
-        "explanation": "Động từ 聞きます chia thể た là 聞いた + らいいですか[cite: 2]."
+        "explanation": "Động từ 聞きます chia thể た là 聞いた + らいいですか."
       },
       {
         "id": "n4-grammar-format-003-q05",
@@ -338,7 +338,7 @@ export default {
           "なら"
         ],
         "answer": 0,
-        "explanation": "Động từ 行きます chia thể た là 行った + らいいですか[cite: 2]."
+        "explanation": "Động từ 行きます chia thể た là 行った + らいいですか."
       },
       {
         "id": "n4-grammar-format-003-q06",
@@ -351,7 +351,7 @@ export default {
           "なら"
         ],
         "answer": 0,
-        "explanation": "Động từ 出します chia thể た là 出した + らいいですか[cite: 2]."
+        "explanation": "Động từ 出します chia thể た là 出した + らいいですか."
       },
       {
         "id": "n4-grammar-format-003-q07",
@@ -364,7 +364,7 @@ export default {
           "するなら"
         ],
         "answer": 0,
-        "explanation": "Động từ します chuyển thể た thành したら[cite: 2]."
+        "explanation": "Động từ します chuyển thể た thành したら."
       },
       {
         "id": "n4-grammar-format-003-q08",
@@ -377,7 +377,7 @@ export default {
           "なら"
         ],
         "answer": 0,
-        "explanation": "Động từ 乗ります chia thể た thành 乗った[cite: 2]."
+        "explanation": "Động từ 乗ります chia thể た thành 乗った."
       },
       {
         "id": "n4-grammar-format-003-q09",
@@ -390,7 +390,7 @@ export default {
           "なら"
         ],
         "answer": 0,
-        "explanation": "Động từ 来ます (きます) chia thể た là 来た (きた) + らいいですか[cite: 2]."
+        "explanation": "Động từ 来ます (きます) chia thể た là 来た (きた) + らいいですか."
       },
       {
         "id": "n4-grammar-format-003-q10",
@@ -403,7 +403,7 @@ export default {
           "なら"
         ],
         "answer": 0,
-        "explanation": "Động từ 支払います chia thể た thành 支払った + らいいですか[cite: 2]."
+        "explanation": "Động từ 支払います chia thể た thành 支払った + らいいですか."
       }
     ]
   },
@@ -422,7 +422,7 @@ export default {
           "で"
         ],
         "answer": 0,
-        "explanation": "Tân ngữ của động từ khả năng đi với trợ từ が thay vì を[cite: 2]."
+        "explanation": "Tân ngữ của động từ khả năng đi với trợ từ が thay vì を."
       },
       {
         "id": "n4-grammar-format-004-q02",
@@ -435,7 +435,7 @@ export default {
           "使われます"
         ],
         "answer": 0,
-        "explanation": "Động từ 使う (Nhóm 1) đổi đuôi -i (つかい) thành -e + ます -> 使えます[cite: 2]."
+        "explanation": "Động từ 使う (Nhóm 1) đổi đuôi -i (つかい) thành -e + ます -> 使えます."
       },
       {
         "id": "n4-grammar-format-004-q03",
@@ -448,7 +448,7 @@ export default {
           "かけられます"
         ],
         "answer": 0,
-        "explanation": "Động từ かける (Nhóm 2) chuyển thể khả năng bằng cách + られる -> かけられます[cite: 2]."
+        "explanation": "Động từ かける (Nhóm 2) chuyển thể khả năng bằng cách + られる -> かけられます."
       },
       {
         "id": "n4-grammar-format-004-q04",
@@ -461,7 +461,7 @@ export default {
           "行かれます"
         ],
         "answer": 0,
-        "explanation": "Động từ 行く (Nhóm 1) sang thể khả năng đổi ik-i -> ik-e + ます -> 行けます[cite: 2]."
+        "explanation": "Động từ 行く (Nhóm 1) sang thể khả năng đổi ik-i -> ik-e + ます -> 行けます."
       },
       {
         "id": "n4-grammar-format-004-q05",
@@ -474,7 +474,7 @@ export default {
           "食べられます"
         ],
         "answer": 0,
-        "explanation": "Động từ 食べる (Nhóm 2) sang thể khả năng thành 食べられる/食べられます[cite: 2]."
+        "explanation": "Động từ 食べる (Nhóm 2) sang thể khả năng thành 食べられる/食べられます."
       },
       {
         "id": "n4-grammar-format-004-q06",
@@ -487,7 +487,7 @@ export default {
           "来られます"
         ],
         "answer": 0,
-        "explanation": "Động từ 来る (Nhóm 3) chuyển thể khả năng thành こられる (来られます)[cite: 2]."
+        "explanation": "Động từ 来る (Nhóm 3) chuyển thể khả năng thành こられる (来られます)."
       },
       {
         "id": "n4-grammar-format-004-q07",
@@ -500,7 +500,7 @@ export default {
           "弾かれます"
         ],
         "answer": 0,
-        "explanation": "Động từ 弾く (Nhóm 1) sang thể khả năng thành 弾ける/弾けます[cite: 2]."
+        "explanation": "Động từ 弾く (Nhóm 1) sang thể khả năng thành 弾ける/弾けます."
       },
       {
         "id": "n4-grammar-format-004-q08",
@@ -513,7 +513,7 @@ export default {
           "され"
         ],
         "answer": 0,
-        "explanation": "Động từ する (Nhóm 3) trong 運転する chuyển sang thể khả năng thành できる[cite: 2]."
+        "explanation": "Động từ する (Nhóm 3) trong 運転する chuyển sang thể khả năng thành できる."
       },
       {
         "id": "n4-grammar-format-004-q09",
@@ -526,7 +526,7 @@ export default {
           "ぐ"
         ],
         "answer": 0,
-        "explanation": "Động từ 泳ぐ (およぐ) chuyển sang thể khả năng là 泳げる (およげる/およげます)[cite: 2]."
+        "explanation": "Động từ 泳ぐ (およぐ) chuyển sang thể khả năng là 泳げる (およげる/およげます)."
       },
       {
         "id": "n4-grammar-format-004-q10",
@@ -539,7 +539,7 @@ export default {
           "で"
         ],
         "answer": 0,
-        "explanation": "Trợ từ đi kèm động từ khả năng 書けます là が[cite: 2]."
+        "explanation": "Trợ từ đi kèm động từ khả năng 書けます là が."
       }
     ]
   },
@@ -558,7 +558,7 @@ export default {
           "聞いた"
         ],
         "answer": 0,
-        "explanation": "Cấu trúc hành động song song: V-stem + ながら (聞きます -> 聞き)[cite: 2]."
+        "explanation": "Cấu trúc hành động song song: V-stem + ながら (聞きます -> 聞き)."
       },
       {
         "id": "n4-grammar-format-005-q02",
@@ -571,7 +571,7 @@ export default {
           "飲んだ"
         ],
         "answer": 0,
-        "explanation": "Động từ 飲みます bỏ ます thành 飲み + ながら[cite: 2]."
+        "explanation": "Động từ 飲みます bỏ ます thành 飲み + ながら."
       },
       {
         "id": "n4-grammar-format-005-q03",
@@ -584,7 +584,7 @@ export default {
           "見た"
         ],
         "answer": 0,
-        "explanation": "Động từ 見ます bỏ ます thành 見 + ながら[cite: 2]."
+        "explanation": "Động từ 見ます bỏ ます thành 見 + ながら."
       },
       {
         "id": "n4-grammar-format-005-q04",
@@ -597,7 +597,7 @@ export default {
           "まえに"
         ],
         "answer": 0,
-        "explanation": "歩き (V-stem) + ながら dùng để diễn tả 2 hành động diễn ra cùng lúc[cite: 2]."
+        "explanation": "歩き (V-stem) + ながら dùng để diễn tả 2 hành động diễn ra cùng lúc."
       },
       {
         "id": "n4-grammar-format-005-q05",
@@ -610,7 +610,7 @@ export default {
           "まえに"
         ],
         "answer": 0,
-        "explanation": "働き (V-stem) + ながら diễn tả việc vừa đi làm vừa đi học[cite: 2]."
+        "explanation": "働き (V-stem) + ながら diễn tả việc vừa đi làm vừa đi học."
       },
       {
         "id": "n4-grammar-format-005-q06",
@@ -623,7 +623,7 @@ export default {
           "歌った"
         ],
         "answer": 0,
-        "explanation": "Động từ 歌います bỏ ます còn 歌い + ながら[cite: 2]."
+        "explanation": "Động từ 歌います bỏ ます còn 歌い + ながら."
       },
       {
         "id": "n4-grammar-format-005-q07",
@@ -636,7 +636,7 @@ export default {
           "取った"
         ],
         "answer": 0,
-        "explanation": "Động từ 取ります bỏ ます còn 取り + ながら[cite: 2]."
+        "explanation": "Động từ 取ります bỏ ます còn 取り + ながら."
       },
       {
         "id": "n4-grammar-format-005-q08",
@@ -649,7 +649,7 @@ export default {
           "まえに"
         ],
         "answer": 0,
-        "explanation": "笑い (V-stem của 笑います) đi với ながら[cite: 2]."
+        "explanation": "笑い (V-stem của 笑います) đi với ながら."
       },
       {
         "id": "n4-grammar-format-005-q09",
@@ -662,7 +662,7 @@ export default {
           "まえに"
         ],
         "answer": 0,
-        "explanation": "考え (V-stem) + ながら[cite: 2]."
+        "explanation": "考え (V-stem) + ながら."
       },
       {
         "id": "n4-grammar-format-005-q10",
@@ -675,7 +675,7 @@ export default {
           "食べた"
         ],
         "answer": 0,
-        "explanation": "Động từ 食べます bỏ ます thành 食べ + ながら[cite: 2]."
+        "explanation": "Động từ 食べます bỏ ます thành 食べ + ながら."
       }
     ]
   },
@@ -694,7 +694,7 @@ export default {
           "て"
         ],
         "answer": 0,
-        "explanation": "Tính từ đuôi -i (安い) + し dùng để liệt kê lý do[cite: 2]."
+        "explanation": "Tính từ đuôi -i (安い) + し dùng để liệt kê lý do."
       },
       {
         "id": "n4-grammar-format-006-q02",
@@ -707,7 +707,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Trong cấu trúc '～し、～し' thường dùng trợ từ も để nhấn mạnh tính liệt kê lý do[cite: 2]."
+        "explanation": "Trong cấu trúc '～し、～し' thường dùng trợ từ も để nhấn mạnh tính liệt kê lý do."
       },
       {
         "id": "n4-grammar-format-006-q03",
@@ -720,7 +720,7 @@ export default {
           "て"
         ],
         "answer": 0,
-        "explanation": "Tính từ đuôi -i (優しい) + し[cite: 2]."
+        "explanation": "Tính từ đuôi -i (優しい) + し."
       },
       {
         "id": "n4-grammar-format-006-q04",
@@ -733,7 +733,7 @@ export default {
           "て"
         ],
         "answer": 0,
-        "explanation": "Tính từ đuôi -i (近い) đi trực tiếp với し[cite: 2]."
+        "explanation": "Tính từ đuôi -i (近い) đi trực tiếp với し."
       },
       {
         "id": "n4-grammar-format-006-q05",
@@ -746,7 +746,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Đi kèm với trợ từ も thay thế cho が/を[cite: 2]."
+        "explanation": "Đi kèm với trợ từ も thay thế cho が/を."
       },
       {
         "id": "n4-grammar-format-006-q06",
@@ -759,7 +759,7 @@ export default {
           "て"
         ],
         "answer": 0,
-        "explanation": "Tính từ 広い ở thể thông thường đi với し[cite: 2]."
+        "explanation": "Tính từ 広い ở thể thông thường đi với し."
       },
       {
         "id": "n4-grammar-format-006-q07",
@@ -772,7 +772,7 @@ export default {
           "て"
         ],
         "answer": 0,
-        "explanation": "Động từ thể thông thường quá khứ (終わった) + し[cite: 2]."
+        "explanation": "Động từ thể thông thường quá khứ (終わった) + し."
       },
       {
         "id": "n4-grammar-format-006-q08",
@@ -785,7 +785,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Tính từ đuôi -na (静か) khi chia thể thông thường hiện tại khẳng định đi với し phải kèm だ (静かだし)[cite: 2]."
+        "explanation": "Tính từ đuôi -na (静か) khi chia thể thông thường hiện tại khẳng định đi với し phải kèm だ (静かだし)."
       },
       {
         "id": "n4-grammar-format-006-q09",
@@ -798,7 +798,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Danh từ (日曜日) dạng thông thường khẳng định đi với し phải có だ (日曜日だし)[cite: 2]."
+        "explanation": "Danh từ (日曜日) dạng thông thường khẳng định đi với し phải có だ (日曜日だし)."
       },
       {
         "id": "n4-grammar-format-006-q10",
@@ -811,7 +811,7 @@ export default {
           "に"
         ],
         "answer": 0,
-        "explanation": "Sử dụng trợ từ も để đồng bộ cấu trúc liệt kê lý do[cite: 2]."
+        "explanation": "Sử dụng trợ từ も để đồng bộ cấu trúc liệt kê lý do."
       }
     ]
   },
@@ -830,7 +830,7 @@ export default {
           "開けた"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 開きます chia thể て thành 開いて + います biểu thị trạng thái quả đang diễn ra[cite: 2]."
+        "explanation": "Tự động từ 開きます chia thể て thành 開いて + います biểu thị trạng thái quả đang diễn ra."
       },
       {
         "id": "n4-grammar-format-007-q02",
@@ -843,7 +843,7 @@ export default {
           "消した"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 消えます chuyển sang thể て thành 消えて + います[cite: 2]."
+        "explanation": "Tự động từ 消えます chuyển sang thể て thành 消えて + います."
       },
       {
         "id": "n4-grammar-format-007-q03",
@@ -856,7 +856,7 @@ export default {
           "閉めた"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 閉まります thể て là 閉まって + います[cite: 2]."
+        "explanation": "Tự động từ 閉まります thể て là 閉まって + います."
       },
       {
         "id": "n4-grammar-format-007-q04",
@@ -869,7 +869,7 @@ export default {
           "止めた"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 止まります thể て là 止まって + います[cite: 2]."
+        "explanation": "Tự động từ 止まります thể て là 止まって + います."
       },
       {
         "id": "n4-grammar-format-007-q05",
@@ -882,7 +882,7 @@ export default {
           "かけた"
         ],
         "answer": 0,
-        "explanation": "Tự động từ かかります chia thể て thành かかって + います[cite: 2]."
+        "explanation": "Tự động từ かかります chia thể て thành かかって + います."
       },
       {
         "id": "n4-grammar-format-007-q06",
@@ -895,7 +895,7 @@ export default {
           "汚した"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 汚れます thể て là 汚れて + います[cite: 2]."
+        "explanation": "Tự động từ 汚れます thể て là 汚れて + います."
       },
       {
         "id": "n4-grammar-format-007-q07",
@@ -908,7 +908,7 @@ export default {
           "破った"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 破れます thể て là 破れて + います[cite: 2]."
+        "explanation": "Tự động từ 破れます thể て là 破れて + います."
       },
       {
         "id": "n4-grammar-format-007-q08",
@@ -921,7 +921,7 @@ export default {
           "割った"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 割れます thể て là 割れて + います[cite: 2]."
+        "explanation": "Tự động từ 割れます thể て là 割れて + います."
       },
       {
         "id": "n4-grammar-format-007-q09",
@@ -934,7 +934,7 @@ export default {
           "倒した"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 倒れます thể て là 倒れて + います[cite: 2]."
+        "explanation": "Tự động từ 倒れます thể て là 倒れて + います."
       },
       {
         "id": "n4-grammar-format-007-q10",
@@ -947,7 +947,7 @@ export default {
           "外した"
         ],
         "answer": 0,
-        "explanation": "Tự động từ 外れます thể て là 外れて + います[cite: 2]."
+        "explanation": "Tự động từ 外れます thể て là 外れて + います."
       }
     ]
   },
@@ -966,7 +966,7 @@ export default {
           "みせました"
         ],
         "answer": 0,
-        "explanation": "Cấu trúc V-て + しまいました thể hiện sự hoàn thành xong toàn bộ công việc[cite: 2]."
+        "explanation": "Cấu trúc V-て + しまいました thể hiện sự hoàn thành xong toàn bộ công việc."
       },
       {
         "id": "n4-grammar-format-008-q02",
@@ -979,7 +979,7 @@ export default {
           "みせました"
         ],
         "answer": 0,
-        "explanation": "Cấu trúc V-て + しまいました diễn tả sự lỡ làm/tiếc nuối[cite: 2]."
+        "explanation": "Cấu trúc V-て + しまいました diễn tả sự lỡ làm/tiếc nuối."
       },
       {
         "id": "n4-grammar-format-008-q03",
@@ -992,7 +992,7 @@ export default {
           "た"
         ],
         "answer": 0,
-        "explanation": "Động từ 読みます thể て là 読んで[cite: 2]."
+        "explanation": "Động từ 読みます thể て là 読んで."
       },
       {
         "id": "n4-grammar-format-008-q04",
@@ -1005,7 +1005,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Động từ 忘れます thể て là 忘れて[cite: 2]."
+        "explanation": "Động từ 忘れます thể て là 忘れて."
       },
       {
         "id": "n4-grammar-format-008-q05",
@@ -1018,7 +1018,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Động từ 遅れます thể て là 遅れて[cite: 2]."
+        "explanation": "Động từ 遅れます thể て là 遅れて."
       },
       {
         "id": "n4-grammar-format-008-q06",
@@ -1031,7 +1031,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Động từ 落とします thể て là 落として[cite: 2]."
+        "explanation": "Động từ 落とします thể て là 落として."
       },
       {
         "id": "n4-grammar-format-008-q07",
@@ -1044,7 +1044,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Động từ 食べます thể て là 食べて[cite: 2]."
+        "explanation": "Động từ 食べます thể て là 食べて."
       },
       {
         "id": "n4-grammar-format-008-q08",
@@ -1057,7 +1057,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Động từ 壊れます thể て là 壊れて[cite: 2]."
+        "explanation": "Động từ 壊れます thể て là 壊れて."
       },
       {
         "id": "n4-grammar-format-008-q09",
@@ -1070,7 +1070,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Động từ 忘れます thể て là 忘れて[cite: 2]."
+        "explanation": "Động từ 忘れます thể て là 忘れて."
       },
       {
         "id": "n4-grammar-format-008-q10",
@@ -1083,7 +1083,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Động từ 降られます thể て là 降られて[cite: 2]."
+        "explanation": "Động từ 降られます thể て là 降られて."
       }
     ]
   },
@@ -1102,7 +1102,7 @@ export default {
           "みます"
         ],
         "answer": 0,
-        "explanation": "Cấu trúc 'V-て + あります' diễn tả trạng thái do tác động có mục đích của ai đó (thường đi với tha động từ)[cite: 2]."
+        "explanation": "Cấu trúc 'V-て + あります' diễn tả trạng thái do tác động có mục đích của ai đó (thường đi với tha động từ)."
       },
       {
         "id": "n4-grammar-format-009-q02",
@@ -1115,7 +1115,7 @@ export default {
           "した"
         ],
         "answer": 0,
-        "explanation": "Tha động từ 予約する chuyển sang thể て thành 予約して + あります[cite: 2]."
+        "explanation": "Tha động từ 予約する chuyển sang thể て thành 予約して + あります."
       },
       {
         "id": "n4-grammar-format-009-q03",
@@ -1128,7 +1128,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Tha động từ 書きます thể て là 書いて[cite: 2]."
+        "explanation": "Tha động từ 書きます thể て là 書いて."
       },
       {
         "id": "n4-grammar-format-009-q04",
@@ -1141,7 +1141,7 @@ export default {
           "みます"
         ],
         "answer": 0,
-        "explanation": "閉めて (tha động từ thể て) + あります[cite: 2]."
+        "explanation": "閉めて (tha động từ thể て) + あります."
       },
       {
         "id": "n4-grammar-format-009-q05",
@@ -1154,7 +1154,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Tha động từ 置きます thể て là 置いて[cite: 2]."
+        "explanation": "Tha động từ 置きます thể て là 置いて."
       },
       {
         "id": "n4-grammar-format-009-q06",
@@ -1167,7 +1167,7 @@ export default {
           "よう"
         ],
         "answer": 0,
-        "explanation": "Động từ します thể て là して + あります[cite: 2]."
+        "explanation": "Động từ します thể て là して + あります."
       },
       {
         "id": "n4-grammar-format-009-q07",
@@ -1180,7 +1180,7 @@ export default {
           "みます"
         ],
         "answer": 0,
-        "explanation": "書いて (tha động từ thể て) + あります[cite: 2]."
+        "explanation": "書いて (tha động từ thể て) + あります."
       },
       {
         "id": "n4-grammar-format-009-q08",
@@ -1193,7 +1193,7 @@ export default {
           "みます"
         ],
         "answer": 0,
-        "explanation": "つけて (tha động từ つけます thể て) + あります[cite: 2]."
+        "explanation": "つけて (tha động từ つけます thể て) + あります."
       },
       {
         "id": "n4-grammar-format-009-q09",
@@ -1206,7 +1206,7 @@ export default {
           "だ"
         ],
         "answer": 0,
-        "explanation": "Tha động từ 作ります thể て là 作って[cite: 2]."
+        "explanation": "Tha động từ 作ります thể て là 作って."
       },
       {
         "id": "n4-grammar-format-009-q10",
@@ -1219,7 +1219,7 @@ export default {
           "まい"
         ],
         "answer": 0,
-        "explanation": "Tha động từ 掃除します thể て là 掃除して + あります[cite: 2]."
+        "explanation": "Tha động từ 掃除します thể て là 掃除して + あります."
       }
     ]
   },
@@ -1238,7 +1238,7 @@ export default {
           "買い"
         ],
         "answer": 0,
-        "explanation": "Cấu trúc chuẩn bị trước: V-て + おきます (買います -> 買って)[cite: 2]."
+        "explanation": "Cấu trúc chuẩn bị trước: V-て + おきます (買います -> 買って)."
       },
       {
         "id": "n4-grammar-format-010-q02",
@@ -1251,7 +1251,7 @@ export default {
           "みせて"
         ],
         "answer": 0,
-        "explanation": "Duy trì trạng thái giữ nguyên: V-て + おいてください[cite: 2]."
+        "explanation": "Duy trì trạng thái giữ nguyên: V-て + おいてください."
       },
       {
         "id": "n4-grammar-format-010-q03",
@@ -1264,7 +1264,7 @@ export default {
           "る"
         ],
         "answer": 0,
-        "explanation": "Động từ 複写します thể て là 複写して[cite: 2]."
+        "explanation": "Động từ 複写します thể て là 複写して."
       },
       {
         "id": "n4-grammar-format-010-q04",
@@ -1277,7 +1277,7 @@ export default {
           "る"
         ],
         "answer": 0,
-        "explanation": "Động từ 掃除します thể て là 掃除して[cite: 2]."
+        "explanation": "Động từ 掃除します thể て là 掃除して."
       },
       {
         "id": "n4-grammar-format-010-q05",
@@ -1290,7 +1290,7 @@ export default {
           "る"
         ],
         "answer": 0,
-        "explanation": "Động từ 洗います thể て là 洗って[cite: 2]."
+        "explanation": "Động từ 洗います thể て là 洗って."
       },
       {
         "id": "n4-grammar-format-010-q06",
@@ -1303,7 +1303,7 @@ export default {
           "る"
         ],
         "answer": 0,
-        "explanation": "Động từ 戻します thể て là 戻して[cite: 2]."
+        "explanation": "Động từ 戻します thể て là 戻して."
       },
       {
         "id": "n4-grammar-format-010-q07",
@@ -1316,7 +1316,7 @@ export default {
           "る"
         ],
         "answer": 0,
-        "explanation": "Động từ 予約します thể て là 予約して[cite: 2]."
+        "explanation": "Động từ 予約します thể て là 予約して."
       },
       {
         "id": "n4-grammar-format-010-q08",
@@ -1329,7 +1329,7 @@ export default {
           "る"
         ],
         "answer": 0,
-        "explanation": "Động từ 開けます thể て là 開けて[cite: 2]."
+        "explanation": "Động từ 開けます thể て là 開けて."
       },
       {
         "id": "n4-grammar-format-010-q09",
@@ -1342,7 +1342,7 @@ export default {
           "る"
         ],
         "answer": 0,
-        "explanation": "Động từ 作ります thể て là 作って[cite: 2]."
+        "explanation": "Động từ 作ります thể て là 作って."
       },
       {
         "id": "n4-grammar-format-010-q10",
@@ -1355,7 +1355,7 @@ export default {
           "る"
         ],
         "answer": 0,
-        "explanation": "Động từ メモします thể て là メモして[cite: 2]."
+        "explanation": "Động từ メモします thể て là メモして."
       }
     ]
   }

@@ -234,20 +234,20 @@ export default [
             {
                 "id": 1,
                 "speaker": "A",
-                "japanese": "うちの娘が留学したがる[cite: 33]。若いいうちに勉強しておきなさい[cite: 33]と言ったんだけどね。",
+                "japanese": "うちの娘が留学したがる。若いいうちに勉強しておきなさいと言ったんだけどね。",
                 "reading": "うちのむすめがりゅうがくしたがる。わかいうちにべんきょうしておきなさいといったんだけどね。",
                 "romaji": "uchi no musume ga ryuugaku shitagaru. wakai uchi ni benkyou shite okinasai to itta ndakedo ne.",
-                "english": "My daughter wants to study abroad[cite: 33]. I told her to study while she is still young[cite: 33], though.",
-                "vietnamese": "Con gái tôi muốn đi du học[cite: 33]. Tôi đã bảo con bé là hãy học hành chăm chỉ khi còn trẻ[cite: 33] đấy."
+                "english": "My daughter wants to study abroad. I told her to study while she is still young, though.",
+                "vietnamese": "Con gái tôi muốn đi du học. Tôi đã bảo con bé là hãy học hành chăm chỉ khi còn trẻ đấy."
             },
             {
                 "id": 2,
                 "speaker": "B",
-                "japanese": "若い頃の経験は貴いものだから[cite: 34]、行かせてあげるべきじゃないかな[cite: 33]。",
+                "japanese": "若い頃の経験は貴いものだから、行かせてあげるべきじゃないかな。",
                 "reading": "わかいころのけいけんはとうといものだから、いかせてあげるべきじゃないかな。",
                 "romaji": "wakai koro no keiken wa toutoi mono dakara, ikasete ageru beki ja nai ka na.",
-                "english": "Experiences from when you're young are precious[cite: 34], so shouldn't you let her go[cite: 33]?",
-                "vietnamese": "Trải nghiệm thời trẻ là vô cùng quý giá[cite: 34], không phải nên cho con bé đi sao[cite: 33]?"
+                "english": "Experiences from when you're young are precious, so shouldn't you let her go?",
+                "vietnamese": "Trải nghiệm thời trẻ là vô cùng quý giá, không phải nên cho con bé đi sao?"
             },
             {
                 "id": 3,
@@ -256,16 +256,16 @@ export default [
                 "reading": "それはそうだけど、かいがいなんてとおいししんぱいなんだよ。",
                 "romaji": "sore wa sou dakedo, kaigai nante tooi shi shinpai na nda yo.",
                 "english": "That may be true, but overseas is far and I'm worried.",
-                "vietnamese": "Đúng là vậy đấy, nhưng ra nước ngoài thì xa xôi[cite: 34] và tôi thấy lo lắng."
+                "vietnamese": "Đúng là vậy đấy, nhưng ra nước ngoài thì xa xôi và tôi thấy lo lắng."
             },
             {
                 "id": 4,
                 "speaker": "B",
-                "japanese": "元気なうちに海外旅行しようと思っています[cite: 33]なんて言ってたし、きっと大丈夫だよ。",
+                "japanese": "元気なうちに海外旅行しようと思っていますなんて言ってたし、きっと大丈夫だよ。",
                 "reading": "げんきなうちにかいがいりょこうしようとおもっていますなんていってたし、きっとだいじょうぶだよ。",
                 "romaji": "genki na uchi ni kaigai ryokou shiyou to omotte imasu nante itteta shi, kitto daijoubu da yo.",
-                "english": "She even said she intends to travel abroad while she's healthy[cite: 33], so she'll definitely be fine.",
-                "vietnamese": "Con bé còn từng bảo là đang tính đi du lịch nước ngoài trong lúc còn khỏe mạnh[cite: 33], chắc chắn sẽ ổn thôi."
+                "english": "She even said she intends to travel abroad while she's healthy, so she'll definitely be fine.",
+                "vietnamese": "Con bé còn từng bảo là đang tính đi du lịch nước ngoài trong lúc còn khỏe mạnh, chắc chắn sẽ ổn thôi."
             }
         ]
     },
@@ -279,38 +279,38 @@ export default [
             {
                 "id": 1,
                 speaker: "A",
-                japanese: "今度のプロジェクトはスケジュールが厳しすぎて、体がだるいよ[cite: 34]。",
+                japanese: "今度のプロジェクトはスケジュールが厳しすぎて、体がだるいよ。",
                 reading: "こんどのぷろじぇくとはすけじゅーるがきびしすぎて、からだがだるいよ。",
                 romaji: "kondo no purojekuto wa sukejūru ga kibishisugite, karada ga darui yo.",
-                english: "The schedule for this project is way too strict, and my body feels sluggish[cite: 34].",
-                vietnamese: "Lịch trình của dự án lần này quá khắc nghiệt khiến cơ thể tôi mệt mỏi uể oải[cite: 34]."
+                english: "The schedule for this project is way too strict, and my body feels sluggish.",
+                vietnamese: "Lịch trình của dự án lần này quá khắc nghiệt khiến cơ thể tôi mệt mỏi uể oải."
             },
             {
                 id: 2,
                 speaker: "B",
-                japanese: "部長に、もっと詳しい資料を準備して欲しいと言われたんだ[cite: 33]。",
+                japanese: "部長に、もっと詳しい資料を準備して欲しいと言われたんだ。",
                 reading: "ぶちょうに、もっとくわしいしりょうをじゅんびしてほしいといわれたんだ。",
                 romaji: "buchou ni, motto kuwashii shiryou o junbi shite hoshii to iwareta nda.",
-                english: "The department manager said he wants me to prepare more detailed materials[cite: 33].",
-                vietnamese: "Trưởng phòng bảo tôi là muốn tôi chuẩn bị tài liệu chi tiết hơn[cite: 33]."
+                english: "The department manager said he wants me to prepare more detailed materials.",
+                vietnamese: "Trưởng phòng bảo tôi là muốn tôi chuẩn bị tài liệu chi tiết hơn."
             },
             {
                 id: 3,
                 speaker: "A",
-                japanese: "雨が降らないうちに帰りましょう[cite: 33]と言いたいところだけど、まだまだ終わらないわけだ[cite: 33]。",
+                japanese: "雨が降らないうちに帰りましょうと言いたいところだけど、まだまだ終わらないわけだ。",
                 reading: "あめがふらないうちにかえりましょうんといいたいところだけど、まだまだおわらないわけだ。",
                 romaji: "ame ga furanai uchi ni kaerimashou to iitai tokoro dakedo, madamada owaranai wake da.",
-                english: "I'd like to say 'let's go home before it rains'[cite: 33], but it makes sense that we still aren't done[cite: 33].",
-                vietnamese: "Tôi rất muốn nói là 'hãy về nhà trước khi trời mưa'[cite: 33], nhưng thảo nào mà công việc vẫn chưa thể xong[cite: 33]."
+                english: "I'd like to say 'let's go home before it rains', but it makes sense that we still aren't done.",
+                vietnamese: "Tôi rất muốn nói là 'hãy về nhà trước khi trời mưa', nhưng thảo nào mà công việc vẫn chưa thể xong."
             },
             {
                 id: 4,
                 speaker: "B",
-                japanese: "こんな辛い仕事に耐える[cite: 34]なんて、私にできるわけがない[cite: 33]よ。",
+                japanese: "こんな辛い仕事に耐えるなんて、私にできるわけがないよ。",
                 reading: "こんなつらいしごとにたえるなんて、わたしにできるわけがないよ。",
                 romaji: "konna tsurai shigoto ni taeru nante, watashi ni dekiru wake ga nai yo.",
-                english: "There's no way I can endure such a painful job[cite: 33, 34].",
-                vietnamese: "Làm sao mà tôi có thể chịu đựng được một công việc vất vả thế này[cite: 33, 34]."
+                english: "There's no way I can endure such a painful job.",
+                vietnamese: "Làm sao mà tôi có thể chịu đựng được một công việc vất vả thế này."
             }
         ]
     },
@@ -324,38 +324,38 @@ export default [
             {
                 id: 1,
                 speaker: "A",
-                japanese: "コンビニへ行くたびに[cite: 33]、つい買いすぎてしまうんだよね。",
+                japanese: "コンビニへ行くたびに、つい買いすぎてしまうんだよね。",
                 reading: "コンビニへいくたびに、つにかいすぎてしまうんだよね。",
                 romaji: "konbini e iku tabi ni, tsui kaisugiteしまう nda yo.",
-                english: "Every time I go to a convenience store[cite: 33], I accidentally buy too much.",
-                vietnamese: "Cứ mỗi lần đi cửa hàng tiện lợi[cite: 33] là tôi lại lỡ mua quá tay."
+                english: "Every time I go to a convenience store, I accidentally buy too much.",
+                vietnamese: "Cứ mỗi lần đi cửa hàng tiện lợi là tôi lại lỡ mua quá tay."
             },
             {
                 id: 2,
                 speaker: "B",
-                japanese: "お風呂に入っている間に[cite: 33]地震があったの[cite: 33]？外が騒々しい[cite: 34]ね。",
+                japanese: "お風呂に入っている間に地震があったの？外が騒々しいね。",
                 reading: "おふろにはいっているあいだにじしんがあったの？そとがそうぞうしいね。",
                 romaji: "ofuro ni haitte iru aida ni jishin ga atta no? soto ga souzoushii ne.",
-                english: "There was an earthquake while you were taking a bath[cite: 33]? It's noisy outside[cite: 34], isn't it?",
-                vietnamese: "Có động đất xảy ra trong lúc cậu đang tắm[cite: 33] á? Bên ngoài ầm ĩ huyên náo quá[cite: 34]."
+                english: "There was an earthquake while you were taking a bath? It's noisy outside, isn't it?",
+                vietnamese: "Có động đất xảy ra trong lúc cậu đang tắm á? Bên ngoài ầm ĩ huyên náo quá."
             },
             {
                 id: 3,
                 speaker: "A",
-                japanese: "そうなんだよ。シャワーを浴びている最中に[cite: 33]揺れ始めたから驚いたよ。",
+                japanese: "そうなんだよ。シャワーを浴びている最中に揺れ始めたから驚いたよ。",
                 reading: "そうなんだよ。シャワーをあびているさいちゅうにゆれはじめたからおどろいたよ。",
                 romaji: "sou nan da yo. shawā o abite iru saichuu ni yure hajimeta kara odoroita yo.",
-                english: "That's right. I was surprised because it started shaking right in the middle of taking a shower[cite: 33].",
-                vietnamese: "Đúng thế đấy. Đúng lúc tôi đang tắm thì nó bắt đầu rung lắc nên tôi giật cả mình[cite: 33]."
+                english: "That's right. I was surprised because it started shaking right in the middle of taking a shower.",
+                vietnamese: "Đúng thế đấy. Đúng lúc tôi đang tắm thì nó bắt đầu rung lắc nên tôi giật cả mình."
             },
             {
                 id: 4,
                 speaker: "B",
-                japanese: "怪我がなくてよかったよ。本当に散々な目にあったわけだね[cite: 33]。",
+                japanese: "怪我がなくてよかったよ。本当に散々な目にあったわけだね。",
                 reading: "けががなくてよかったよ。ほんとうにさんざんなめにあったわけだね。",
                 romaji: "kega ga nakute yokatta yo. hontou ni sanzan na me ni atta wake da ne.",
-                english: "I'm glad you weren't injured. No wonder you had such a terrible experience[cite: 33].",
-                vietnamese: "May mà cậu không bị thương. Thảo nào mà cậu gặp phải một phen tồi tệ[cite: 33]."
+                english: "I'm glad you weren't injured. No wonder you had such a terrible experience.",
+                vietnamese: "May mà cậu không bị thương. Thảo nào mà cậu gặp phải một phen tồi tệ."
             }
         ]
     },
@@ -369,20 +369,20 @@ export default [
             {
                 id: 1,
                 speaker: "A",
-                japanese: "八月から九月にかけて[cite: 33]、この地方は激しい雨が降る[cite: 34]のかな[cite: 33]。",
+                japanese: "八月から九月にかけて、この地方は激しい雨が降るのかな。",
                 reading: "はちがつからくがつにかけて、このちほうははげしいあめがふるといいな。",
                 romaji: "hachigatsu kara kugatsu ni kakete, kono chihou wa hageshii ame ga furu no ka na.",
-                english: "I wonder if heavy rain will fall in this region from August through September[cite: 33, 34].",
-                vietnamese: "Liệu từ tháng 8 đến tháng 9[cite: 33], khu vực này có mưa dữ dội không nhỉ[cite: 33, 34]?"
+                english: "I wonder if heavy rain will fall in this region from August through September.",
+                vietnamese: "Liệu từ tháng 8 đến tháng 9, khu vực này có mưa dữ dội không nhỉ?"
             },
             {
                 id: 2,
                 speaker: "B",
-                japanese: "天気予報でそう言っていたと言うのは[cite: 33]本当だよ。",
+                japanese: "天気予報でそう言っていたと言うのは本当だよ。",
                 reading: "てんきよほうでそういっていたというのはほんとうだよ。",
                 romaji: "tenki yohou de sou itte ita to iu no wa hontou da yo.",
-                english: "It is true that the weather forecast said so[cite: 33].",
-                vietnamese: "Việc bản tin dự báo thời tiết nói như vậy là sự thật đấy[cite: 33]."
+                english: "It is true that the weather forecast said so.",
+                vietnamese: "Việc bản tin dự báo thời tiết nói như vậy là sự thật đấy."
             },
             {
                 id: 3,
@@ -414,38 +414,38 @@ export default [
             {
                 id: 1,
                 speaker: "A",
-                japanese: "うちの弟は本当にそそっかしい人で[cite: 34]困るよ。",
+                japanese: "うちの弟は本当にそそっかしい人で困るよ。",
                 reading: "うちのおとうとはほんとうにそそっかしいひとでこまるよ。",
                 romaji: "uchi no otouto wa hontou ni sosokkashii hito de komaru yo.",
-                english: "My younger brother is such a careless person[cite: 34] that it's troubling.",
-                vietnamese: "Em trai tôi thực sự là một người bất cẩn cẩu thả[cite: 34] khiến tôi rất phiền lòng."
+                english: "My younger brother is such a careless person that it's troubling.",
+                vietnamese: "Em trai tôi thực sự là một người bất cẩn cẩu thả khiến tôi rất phiền lòng."
             },
             {
                 id: 2,
                 speaker: "B",
-                japanese: "子供が塾に行きたがらない[cite: 33]上に、忘れ物ばかりしているんだっけ？",
+                japanese: "子供が塾に行きたがらない上に、忘れ物ばかりしているんだっけ？",
                 reading: "こどもがじゅくにいきたがらないうえに、わすれものばかりしているんだっけ？",
                 romaji: "kodomo ga juku ni ikitagaranai ue ni, wasuremono bakari shite iru ndakke?",
-                english: "On top of the child not wanting to go to cram school[cite: 33], is he also always forgetting things?",
-                vietnamese: "Ngoài chuyện đứa trẻ không muốn đi học thêm[cite: 33] ra, em ấy còn toàn để quên đồ đạc nữa phải không?"
+                english: "On top of the child not wanting to go to cram school, is he also always forgetting things?",
+                vietnamese: "Ngoài chuyện đứa trẻ không muốn đi học thêm ra, em ấy còn toàn để quên đồ đạc nữa phải không?"
             },
             {
                 id: 3,
                 speaker: "A",
-                japanese: "そうなんだよ。テストは明日だと言うことを忘れないで[cite: 33]って何度も言ったのにさ。",
+                japanese: "そうなんだよ。テストは明日だと言うことを忘れないでって何度も言ったのにさ。",
                 reading: "そうなんだよ。テストはあしただということをわすれないでってなんどもいったのにさ。",
                 romaji: "sou nan da yo. tesuto wa ashita da to iu koto o wasurenaide tte nando mo itta noni sa.",
-                english: "That's right. Even though I told him many times not to forget that the test is tomorrow[cite: 33].",
-                vietnamese: "Đúng thế đấy. Dù tôi đã nhắc đi nhắc lại là đừng quên việc ngày mai có bài kiểm tra[cite: 33] rồi cơ mà."
+                english: "That's right. Even though I told him many times not to forget that the test is tomorrow.",
+                vietnamese: "Đúng thế đấy. Dù tôi đã nhắc đi nhắc lại là đừng quên việc ngày mai có bài kiểm tra rồi cơ mà."
             },
             {
                 id: 4,
                 speaker: "B",
-                japanese: "テストが近いのに[cite: 34]そんな調子じゃ、合格できるわけがないね[cite: 33]。",
+                japanese: "テストが近いのにそんな調子じゃ、合格できるわけがないね。",
                 reading: "テストがちかいのにそんなちょうしじゃ、ごうかくできるわけがないね。",
                 romaji: "tesuto ga chikai noni sonna choushi ja, goukaku dekiru wake ga nai ne.",
-                english: "With the test approaching[cite: 34] and acting like that, there's no way he can pass[cite: 33].",
-                vietnamese: "Kỳ thi đã đến gần[cite: 34] mà với cái thái độ đó thì làm sao mà đỗ được[cite: 33]."
+                english: "With the test approaching and acting like that, there's no way he can pass.",
+                vietnamese: "Kỳ thi đã đến gần mà với cái thái độ đó thì làm sao mà đỗ được."
             }
         ]
     }

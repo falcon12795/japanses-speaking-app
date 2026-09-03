@@ -14,7 +14,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ながら：Mặc dù... nhưng (thường dùng để nối 2 vế đối lập, đi sau tính từ hoặc danh từ)."
       },
       {
         "id": "n2-grammar-101-q02",
@@ -27,7 +27,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "残念ながら：Đáng tiếc là... (dùng để diễn tả sự tiếc nuối khi phải thông báo điều gì)."
       },
       {
         "id": "n2-grammar-101-q03",
@@ -40,7 +40,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ながら：Mặc dù còn nhỏ (diễn tả trạng thái đương nhiên hoặc trái ngược với độ tuổi)."
       },
       {
         "id": "n2-grammar-101-q04",
@@ -53,7 +53,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ながらも：Mặc dù biết là... nhưng vẫn (nhấn mạnh hành động trái ngược với nhận thức)."
       },
       {
         "id": "n2-grammar-101-q05",
@@ -66,7 +66,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ながらも：Mặc dù diễn đạt còn vụng về nhưng vẫn..."
       },
       {
         "id": "n2-grammar-101-q06",
@@ -79,7 +79,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ながらも：Mặc dù dáng người nhỏ nhắn nhưng..."
       },
       {
         "id": "n2-grammar-101-q07",
@@ -92,7 +92,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～つつ / ～ながら：Vừa giữ lại... vừa phát triển (thể hiện sự tồn tại song song hoặc giữ nét cũ trong sự thay đổi)."
       },
       {
         "id": "n2-grammar-101-q08",
@@ -105,7 +105,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "知っていながら / 知りつつ：Mặc dù biết là sai nhưng vẫn lỡ nói dối."
       },
       {
         "id": "n2-grammar-101-q09",
@@ -118,7 +118,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ながらも：Mặc dù còn nhiều bỡ ngỡ, thiếu kinh nghiệm nhưng..."
       },
       {
         "id": "n2-grammar-101-q10",
@@ -131,7 +131,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "生まれながら：Ngay từ khi sinh ra (cấu trúc phó từ/tiếp ngữ cố định)."
       }
     ]
   },
@@ -150,7 +150,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào mà... thì vẫn (điều kiện kéo dài trong một khoảng thời gian)."
       },
       {
         "id": "n2-grammar-102-q02",
@@ -163,7 +163,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào giám đốc còn chưa thay đổi suy nghĩ này thì..."
       },
       {
         "id": "n2-grammar-102-q03",
@@ -176,7 +176,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào còn là học sinh/sinh viên thì..."
       },
       {
         "id": "n2-grammar-102-q04",
@@ -189,7 +189,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào điều kiện này chưa được tuân thủ thì..."
       },
       {
         "id": "n2-grammar-102-q05",
@@ -202,7 +202,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào cơ thể còn khỏe mạnh thì..."
       },
       {
         "id": "n2-grammar-102-q06",
@@ -215,7 +215,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào cậu ta còn không hối lỗi thì..."
       },
       {
         "id": "n2-grammar-102-q07",
@@ -228,7 +228,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào còn hòa bình thì..."
       },
       {
         "id": "n2-grammar-102-q08",
@@ -241,7 +241,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào còn tuân thủ quy định tại hiện trường thì..."
       },
       {
         "id": "n2-grammar-102-q09",
@@ -254,7 +254,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào vẫn còn trong thời hạn bảo hành thì..."
       },
       {
         "id": "n2-grammar-102-q10",
@@ -267,7 +267,7 @@ export default {
           "どころか"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～限りは：Chừng nào chưa nhận được sự đồng ý của đối phương thì..."
       }
     ]
   },
@@ -286,7 +286,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～てはかなわない：Không chịu nổi, thật là phiền toái/khổ sở (diễn tả mức độ khó chịu cao)."
       },
       {
         "id": "n2-grammar-103-q02",
@@ -299,7 +299,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～てはかなわない：Bị làm phiền gây ồn ào ban đêm không chịu nổi."
       },
       {
         "id": "n2-grammar-103-q03",
@@ -312,7 +312,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～てはかなわない：Cứ thay đổi phương hướng liên tục thế này thì không tài nào chịu nổi."
       },
       {
         "id": "n2-grammar-103-q04",
@@ -325,7 +325,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～てはかなわない：Bị bắt phải đãi tiền ăn mỗi lần thế này thì thật kham không nổi."
       },
       {
         "id": "n2-grammar-103-q05",
@@ -338,7 +338,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～てはかなわない：Kinh tế kém và vật giá cao thế này thì thật khổ sở."
       },
       {
         "id": "n2-grammar-103-q06",
@@ -351,7 +351,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～てはかなわない：Bị đổ lỗi cho sai sót của chính họ thì thật không thể chấp nhận/khó chịu."
       },
       {
         "id": "n2-grammar-103-q07",
@@ -364,7 +364,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～てはかなわない：Cả ngày nghỉ mà cũng bị gọi đi làm thì thật phiền toái."
       },
       {
         "id": "n2-grammar-103-q08",
@@ -377,7 +377,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～てはかなわない：Cứ mưa hoài mỗi ngày thế này thì thật không chịu nổi."
       },
       {
         "id": "n2-grammar-103-q09",
@@ -390,7 +390,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～てはかなわない：Bị phàn nàn từng chút một về chuyện vụn vặt thì rất bực bội."
       },
       {
         "id": "n2-grammar-103-q10",
@@ -403,7 +403,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～てはかなわない：Phương tiện giao thông đình trệ liên tục thế này thì thật khốn khổ."
       }
     ]
   },
@@ -422,7 +422,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～はというと：Còn về phần... / Riêng đối với... (dùng để chuyển chủ đề hoặc đối chiếu)."
       },
       {
         "id": "n2-grammar-104-q02",
@@ -435,7 +435,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～はというと：Còn về thành quả của chính sách mới thì..."
       },
       {
         "id": "n2-grammar-104-q03",
@@ -448,7 +448,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～はというと：Nói đến mùa hè năm nay thì..."
       },
       {
         "id": "n2-grammar-104-q04",
@@ -461,7 +461,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～はというと：Còn về phía công ty chúng ta thì..."
       },
       {
         "id": "n2-grammar-104-q05",
@@ -474,7 +474,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～はというと：Còn cá nhân tôi thì..."
       },
       {
         "id": "n2-grammar-104-q06",
@@ -487,7 +487,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～はというと：Nói về giới trẻ gần đây thì..."
       },
       {
         "id": "n2-grammar-104-q07",
@@ -500,7 +500,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～はというと：Còn anh ta thì lại..."
       },
       {
         "id": "n2-grammar-104-q08",
@@ -513,7 +513,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～はというと：Còn kế hoạch du lịch nước ngoài thì việc điều chỉnh lịch trình đang gặp khó khăn."
       },
       {
         "id": "n2-grammar-104-q09",
@@ -526,7 +526,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～はというと：Còn đám họ hàng, đặc biệt là mấy đứa em họ thì..."
       },
       {
         "id": "n2-grammar-104-q10",
@@ -539,7 +539,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～はというと：Còn phần chi phí quan trọng thì lại vượt quá ngân sách."
       }
     ]
   },
@@ -558,7 +558,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に際して：Nhân dịp / Khi chuẩn bị làm việc gì đó (thường mang tính trang trọng)."
       },
       {
         "id": "n2-grammar-105-q02",
@@ -571,7 +571,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に際して：Khi ký kết hợp đồng."
       },
       {
         "id": "n2-grammar-105-q03",
@@ -584,7 +584,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に際し：Nhân dịp phát hành sản phẩm mới."
       },
       {
         "id": "n2-grammar-105-q04",
@@ -597,7 +597,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に際して：Khi nghỉ việc / Nhân lúc nghỉ việc."
       },
       {
         "id": "n2-grammar-105-q05",
@@ -610,7 +610,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に際して：Khi tiến hành phẫu thuật."
       },
       {
         "id": "n2-grammar-105-q06",
@@ -623,7 +623,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に際しまして：Nhân dịp / Khi bắt đầu công trình (thể hiện sự lịch sự, kính ngữ)."
       },
       {
         "id": "n2-grammar-105-q07",
@@ -636,7 +636,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に際して：Khi đi du học."
       },
       {
         "id": "n2-grammar-105-q08",
@@ -649,7 +649,7 @@ export default {
           "どころか"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "ご利用に際して：Khi sử dụng dịch vụ/tiện ích."
       },
       {
         "id": "n2-grammar-105-q09",
@@ -662,7 +662,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に際して：Nhân dịp kết hôn."
       },
       {
         "id": "n2-grammar-105-q10",
@@ -675,7 +675,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に際し：Nhân dịp tổ chức đại hội."
       }
     ]
   },
@@ -694,7 +694,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính là... / Không gì khác ngoài... (khẳng định nguyên nhân/ý nghĩa cốt lõi)."
       },
       {
         "id": "n2-grammar-106-q02",
@@ -707,7 +707,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính vì lo cho con."
       },
       {
         "id": "n2-grammar-106-q03",
@@ -720,7 +720,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính là do sự thiếu chuẩn bị của chúng ta."
       },
       {
         "id": "n2-grammar-106-q04",
@@ -733,7 +733,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính vì có phát ngôn thiếu suy nghĩ của bạn."
       },
       {
         "id": "n2-grammar-106-q05",
@@ -746,7 +746,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính là do sự quyết tâm tột cùng của các nhà nghiên cứu tạo ra."
       },
       {
         "id": "n2-grammar-106-q06",
@@ -759,7 +759,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính là biểu hiện của sự tức tưởi/cay đắng."
       },
       {
         "id": "n2-grammar-106-q07",
@@ -772,7 +772,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính là việc bảo vệ cuộc sống của người dân."
       },
       {
         "id": "n2-grammar-106-q08",
@@ -785,7 +785,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính là nhờ có sự hậu thuẫn từ gia đình."
       },
       {
         "id": "n2-grammar-106-q09",
@@ -798,7 +798,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính vì tồn tại vấn đề xã hội nghiêm trọng đằng sau."
       },
       {
         "id": "n2-grammar-106-q10",
@@ -811,7 +811,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～にほかならない：Chính là nghĩa vụ của chúng ta."
       }
     ]
   },
@@ -830,7 +830,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～をはじめとして：Lấy... làm tiêu biểu, mở đầu (ngoài ra còn nhiều đối tượng khác nữa)."
       },
       {
         "id": "n2-grammar-107-q02",
@@ -843,7 +843,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～をはじめとして：Đầu tiên phải kể đến núi Phú Sĩ và nhiều ngọn núi khác."
       },
       {
         "id": "n2-grammar-107-q03",
@@ -856,7 +856,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～をはじめ：Bắt đầu từ các nước châu Á và mở rộng ra các nước khác."
       },
       {
         "id": "n2-grammar-107-q04",
@@ -869,7 +869,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～をはじめとする：Bắt đầu từ cấp trên và những đồng nghiệp khác."
       },
       {
         "id": "n2-grammar-107-q05",
@@ -882,7 +882,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～をはじめ：Lấy nghệ thuật truyền thống làm tiêu biểu để giới thiệu văn hóa Nhật Bản."
       },
       {
         "id": "n2-grammar-107-q06",
@@ -895,7 +895,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～をはじめとして：Tiêu biểu là vấn đề môi trường và các vấn đề khác."
       },
       {
         "id": "n2-grammar-107-q07",
@@ -908,7 +908,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～をはじめ：Bắt đầu từ thị trưởng và các bên liên quan."
       },
       {
         "id": "n2-grammar-107-q08",
@@ -921,7 +921,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～をはじめとする：Bắt đầu từ điện thoại thông minh và các thiết bị số khác."
       },
       {
         "id": "n2-grammar-107-q09",
@@ -934,7 +934,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～をはじめとして：Bắt đầu từ thầy hiệu trưởng và các giáo viên."
       },
       {
         "id": "n2-grammar-107-q10",
@@ -947,7 +947,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～をはじめとする：Bắt đầu từ Tokyo và các thành phố lớn khác."
       }
     ]
   },
@@ -966,7 +966,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～となると：Một khi đã trở thành / hễ cứ đến tình huống... thì..."
       },
       {
         "id": "n2-grammar-108-q02",
@@ -979,7 +979,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～となると：Hễ cứ nói đến kế hoạch nghỉ ngơi là..."
       },
       {
         "id": "n2-grammar-108-q03",
@@ -992,7 +992,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～となると：Một khi tính đến chuyện mua nhà thì..."
       },
       {
         "id": "n2-grammar-108-q04",
@@ -1005,7 +1005,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～となると：Một khi đã bước vào lĩnh vực chuyên nghiệp thì..."
       },
       {
         "id": "n2-grammar-108-q05",
@@ -1018,7 +1018,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～となると：Một khi đã thực sự tự làm thì..."
       },
       {
         "id": "n2-grammar-108-q06",
@@ -1031,7 +1031,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～となると：Hễ cứ đụng đến quyền lợi của bản thân là..."
       },
       {
         "id": "n2-grammar-108-q07",
@@ -1044,7 +1044,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～となると：Một khi đã là chuyện kết hôn thì..."
       },
       {
         "id": "n2-grammar-108-q08",
@@ -1057,7 +1057,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～となると：Một khi là buổi tiệc quy mô 100 người thì..."
       },
       {
         "id": "n2-grammar-108-q09",
@@ -1070,7 +1070,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～となると：Một khi đã tranh chấp bằng kiện tụng tòa án thì..."
       },
       {
         "id": "n2-grammar-108-q10",
@@ -1083,7 +1083,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～となると：Một khi đã vượt quá phạm vi sở thích thì..."
       }
     ]
   },
@@ -1102,7 +1102,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu có thể... (giả định một việc khó hoặc gần như không thể thực hiện)."
       },
       {
         "id": "n2-grammar-109-q02",
@@ -1115,7 +1115,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu có thể làm được thì..."
       },
       {
         "id": "n2-grammar-109-q03",
@@ -1128,7 +1128,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu có thể mua được..."
       },
       {
         "id": "n2-grammar-109-q04",
@@ -1141,7 +1141,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu có thể quay lại thời học sinh..."
       },
       {
         "id": "n2-grammar-109-q05",
@@ -1154,7 +1154,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu mà được tha thứ..."
       },
       {
         "id": "n2-grammar-109-q06",
@@ -1167,7 +1167,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu có thể thay thế được..."
       },
       {
         "id": "n2-grammar-109-q07",
@@ -1180,7 +1180,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu có thể trốn chạy khỏi hoàn cảnh này..."
       },
       {
         "id": "n2-grammar-109-q08",
@@ -1193,7 +1193,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu mà có thể trò chuyện được..."
       },
       {
         "id": "n2-grammar-109-q09",
@@ -1206,7 +1206,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものなら：Nếu có thể sở hữu được..."
       },
       {
         "id": "n2-grammar-109-q10",
@@ -1219,7 +1219,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "行けるものなら：Nếu giỏi thì cứ thử đi đến chỗ nguy hiểm đó xem (thách thức)."
       }
     ]
   },
@@ -1238,7 +1238,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものがある：Có cảm giác... / Có thứ gì đó (dùng để diễn tả cảm xúc, tính chất sâu sắc đọng lại)."
       },
       {
         "id": "n2-grammar-110-q02",
@@ -1251,7 +1251,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ものがある：Có cảm giác thật sự khắc nghiệt, khó khăn."
       },
       {
         "id": "n2-grammar-110-q03",
@@ -1264,7 +1264,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものがある：Thực sự có cảm giác cô đơn, trống vắng."
       },
       {
         "id": "n2-grammar-110-q04",
@@ -1277,7 +1277,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "目を見張るものがある：Có điểm khiến người ta phải trầm trồ, ngạc nhiên."
       },
       {
         "id": "n2-grammar-110-q05",
@@ -1290,7 +1290,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものがある：Thực sự có cảm giác bơ vơ, lo lắng."
       },
       {
         "id": "n2-grammar-110-q06",
@@ -1303,7 +1303,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ものがある：Thực sự có sức nặng/giá trị khiến người ta cảm phục."
       },
       {
         "id": "n2-grammar-110-q07",
@@ -1316,7 +1316,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものがある：Quả thực có cảm giác rất vất vả, cực nhọc."
       },
       {
         "id": "n2-grammar-110-q08",
@@ -1329,7 +1329,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ものがある：Quả thực có sức hút người xem."
       },
       {
         "id": "n2-grammar-110-q09",
@@ -1342,7 +1342,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ものがある：Quả thực chứa đựng sự ấm áp."
       },
       {
         "id": "n2-grammar-110-q10",
@@ -1355,7 +1355,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "疑問に思うものがある：Quả thực có điểm khiến người ta phải nghi vấn, thắc mắc."
       }
     ]
   },
@@ -1374,7 +1374,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にしても：Cho dù là... đi chăng nữa (thì cũng... / vẫn phải...)."
       },
       {
         "id": "n2-grammar-111-q02",
@@ -1387,7 +1387,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "冗談にしても：Cho dù là nói đùa đi nữa thì..."
       },
       {
         "id": "n2-grammar-111-q03",
@@ -1400,7 +1400,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にしても：Cho dù là không biết đi nữa thì..."
       },
       {
         "id": "n2-grammar-111-q04",
@@ -1413,7 +1413,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～にしても：Cho dù có rẻ đến đâu đi nữa..."
       },
       {
         "id": "n2-grammar-111-q05",
@@ -1426,7 +1426,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にしても：Cho dù là đã thất bại đi nữa..."
       },
       {
         "id": "n2-grammar-111-q06",
@@ -1439,7 +1439,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "行くにしても行かないにしても：Dù là đi hay không đi thì..."
       },
       {
         "id": "n2-grammar-111-q07",
@@ -1452,7 +1452,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にしても：Cho dù là bị trễ đi nữa..."
       },
       {
         "id": "n2-grammar-111-q08",
@@ -1465,7 +1465,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～にしても：Cho dù là đang tức giận đi nữa..."
       },
       {
         "id": "n2-grammar-111-q09",
@@ -1478,7 +1478,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～にしても：Cho dù là tình trạng cơ thể không tốt đi nữa..."
       },
       {
         "id": "n2-grammar-111-q10",
@@ -1491,7 +1491,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "誰がやるにしても：Cho dù là ai làm đi chăng nữa..."
       }
     ]
   },
@@ -1510,7 +1510,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～んだった：Biết thế thì đã... (thể hiện sự hối tiếc về quá khứ, dạng nói tắt của ～のだった)."
       },
       {
         "id": "n2-grammar-112-q02",
@@ -1523,7 +1523,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～んだった：Biết thế ra khỏi nhà sớm hơn thì tốt rồi."
       },
       {
         "id": "n2-grammar-112-q03",
@@ -1536,7 +1536,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～んだった：Biết dở thế này thì đã gọi món khác."
       },
       {
         "id": "n2-grammar-112-q04",
@@ -1549,7 +1549,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "言わないでおくんだった：Biết thế đã không nói ra."
       },
       {
         "id": "n2-grammar-112-q05",
@@ -1562,7 +1562,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "買っておくんだった：Biết thế đã mua từ lúc đó."
       },
       {
         "id": "n2-grammar-112-q06",
@@ -1575,7 +1575,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "やっておくんだった：Biết thế đã làm sẵn từ hôm qua."
       },
       {
         "id": "n2-grammar-112-q07",
@@ -1588,7 +1588,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "信用しないんだった：Biết thế đã không tin tưởng."
       },
       {
         "id": "n2-grammar-112-q08",
@@ -1601,7 +1601,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "勉強するんだった：Biết thế đã học hành nghiêm túc hơn."
       },
       {
         "id": "n2-grammar-112-q09",
@@ -1614,7 +1614,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "行くんだった：Biết thế đã đi bằng tàu điện."
       },
       {
         "id": "n2-grammar-112-q10",
@@ -1627,7 +1627,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "確認しておくんだった：Biết thế đã kiểm tra dự báo thời tiết trước."
       }
     ]
   },
@@ -1646,7 +1646,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～のもとで / ～のもとに：Dưới sự... (sự ảnh hưởng, chỉ đạo hoặc bảo vệ của ai đó)."
       },
       {
         "id": "n2-grammar-113-q02",
@@ -1659,7 +1659,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～のもとで：Dưới mái ấm gia đình ấm cúng."
       },
       {
         "id": "n2-grammar-113-q03",
@@ -1672,7 +1672,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～のもとで：Dưới sự huấn luyện nghiêm khắc."
       },
       {
         "id": "n2-grammar-113-q04",
@@ -1685,7 +1685,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～のもとで：Dưới ánh nắng mặt trời."
       },
       {
         "id": "n2-grammar-113-q05",
@@ -1698,7 +1698,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "法のもとで：Dưới ánh sáng của pháp luật / Trước pháp luật."
       },
       {
         "id": "n2-grammar-113-q06",
@@ -1711,7 +1711,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～のもとで：Dưới sự dẫn dắt của huấn luyện viên xuất sắc."
       },
       {
         "id": "n2-grammar-113-q07",
@@ -1724,7 +1724,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～のもとで：Dưới môi trường đầy đủ điều kiện thuận lợi."
       },
       {
         "id": "n2-grammar-113-q08",
@@ -1737,7 +1737,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～のもとで：Dưới tình yêu thương sâu sắc của cha mẹ."
       },
       {
         "id": "n2-grammar-113-q09",
@@ -1750,7 +1750,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～のもとで：Dưới quy định mới."
       },
       {
         "id": "n2-grammar-113-q10",
@@ -1763,7 +1763,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～のもとで：Dưới quyền vị danh tướng."
       }
     ]
   },
@@ -1782,7 +1782,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào việc... thì có thể phỏng đoán là..."
       },
       {
         "id": "n2-grammar-114-q02",
@@ -1795,7 +1795,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào biểu cảm tươi tắn thì..."
       },
       {
         "id": "n2-grammar-114-q03",
@@ -1808,7 +1808,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào việc xếp hàng dài thì..."
       },
       {
         "id": "n2-grammar-114-q04",
@@ -1821,7 +1821,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào việc cứ liên tục để ý đồng hồ thì..."
       },
       {
         "id": "n2-grammar-114-q05",
@@ -1834,7 +1834,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào việc đường ướt thì..."
       },
       {
         "id": "n2-grammar-114-q06",
@@ -1847,7 +1847,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào việc cửa khóa thì..."
       },
       {
         "id": "n2-grammar-114-q07",
@@ -1860,7 +1860,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào sắc mặt kém thì..."
       },
       {
         "id": "n2-grammar-114-q08",
@@ -1873,7 +1873,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào việc không ai đặt câu hỏi thì..."
       },
       {
         "id": "n2-grammar-114-q09",
@@ -1886,7 +1886,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào việc mang hành lý lớn thì..."
       },
       {
         "id": "n2-grammar-114-q10",
@@ -1899,7 +1899,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～ところをみると：Nhìn vào việc mọi người nói cười vui vẻ thì..."
       }
     ]
   },
@@ -1918,7 +1918,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～抜く：Làm cho đến cùng / Vượt qua đến tận cùng (nhấn mạnh sự kiên trì)."
       },
       {
         "id": "n2-grammar-115-q02",
@@ -1931,7 +1931,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "悩み抜いた末に：Sau khi đã suy nghĩ trăn trở suốt."
       },
       {
         "id": "n2-grammar-115-q03",
@@ -1944,7 +1944,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "乗り越え抜いて：Vượt qua triệt để khó khăn."
       },
       {
         "id": "n2-grammar-115-q04",
@@ -1957,7 +1957,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "考え抜いた末に：Sau khi đã suy nghĩ vắt óc ra."
       },
       {
         "id": "n2-grammar-115-q05",
@@ -1970,7 +1970,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "耐え抜いて：Chịu đựng cho đến cùng thử thách khắc nghiệt."
       },
       {
         "id": "n2-grammar-115-q06",
@@ -1983,7 +1983,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "守り抜いた：Bảo vệ vững chắc niềm tin đến cùng."
       },
       {
         "id": "n2-grammar-115-q07",
@@ -1996,7 +1996,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "やり抜く：Làm cho đến nơi đến chốn, hoàn thành trọn vẹn công việc."
       },
       {
         "id": "n2-grammar-115-q08",
@@ -2009,7 +2009,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "勝ち抜いて：Chiến đấu thắng lợi vượt qua cuộc cạnh tranh khốc liệt."
       },
       {
         "id": "n2-grammar-115-q09",
@@ -2022,7 +2022,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "生き抜いた：Sống kiên cường vượt qua nghịch cảnh đến cùng."
       },
       {
         "id": "n2-grammar-115-q10",
@@ -2035,7 +2035,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "困り抜いたあげく：Sau khi đã bế tắc tột cùng."
       }
     ]
   },
@@ -2054,7 +2054,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に応じて：Ứng với... / Tùy theo... (thay đổi linh hoạt phù hợp với tiêu chí)."
       },
       {
         "id": "n2-grammar-116-q02",
@@ -2067,7 +2067,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に応じて：Tùy theo trình độ để phân chia lớp."
       },
       {
         "id": "n2-grammar-116-q03",
@@ -2080,7 +2080,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に応じて：Tùy theo độ tuổi và thể trạng."
       },
       {
         "id": "n2-grammar-116-q04",
@@ -2093,7 +2093,7 @@ export default {
           "どころか"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に応じて：Ứng với doanh số bán hàng."
       },
       {
         "id": "n2-grammar-116-q05",
@@ -2106,7 +2106,7 @@ export default {
           "ずじまい"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に応じた：Phù hợp với hoàn cảnh (TPO)."
       },
       {
         "id": "n2-grammar-116-q06",
@@ -2119,7 +2119,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に応じて：Đáp ứng linh hoạt tùy theo yêu cầu của khách hàng."
       },
       {
         "id": "n2-grammar-116-q07",
@@ -2132,7 +2132,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に応じて：Tùy theo mức thu nhập để quyết định tiền thuế."
       },
       {
         "id": "n2-grammar-116-q08",
@@ -2145,7 +2145,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に応じて：Ứng với sự thay đổi của thời đại."
       },
       {
         "id": "n2-grammar-116-q09",
@@ -2158,7 +2158,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～に応じた：Phù hợp với thể lực."
       },
       {
         "id": "n2-grammar-116-q10",
@@ -2171,7 +2171,7 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "～に応じて：Tùy theo sự biến đổi của tình hình."
       }
     ]
   },
@@ -2190,7 +2190,7 @@ export default {
           "あまりにも"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "～ずじまい：Cuối cùng thì không làm việc gì đó (rồi kết thúc mà bỏ lỡ cơ hội)."
       },
       {
         "id": "n2-grammar-117-q02",
@@ -2203,7 +2203,7 @@ export default {
           "にすれば"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "言いだせずじまい：Cuối cùng không nói ra được lời nào."
       },
       {
         "id": "n2-grammar-117-q03",
@@ -2216,7 +2216,7 @@ export default {
           "抜きで"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "観られずじまい：Cuối cùng không xem được."
       },
       {
         "id": "n2-grammar-117-q04",
@@ -2229,7 +2229,7 @@ export default {
           "に応じて"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "巡れずじまい：Cuối cùng không đi tham quan được."
       },
       {
         "id": "n2-grammar-117-q05",
@@ -2242,7 +2242,7 @@ export default {
           "どころか"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "謝れずじまい：Cuối cùng không cất lời xin lỗi được."
       },
       {
         "id": "n2-grammar-117-q06",
@@ -2255,7 +2255,7 @@ export default {
           "てでも"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "読めずじまい：Cuối cùng không đọc được lần nào."
       },
       {
         "id": "n2-grammar-117-q07",
@@ -2268,7 +2268,7 @@ export default {
           "というものでもない"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "取り合えずじまい / 連絡できずじまい：Cuối cùng không liên lạc được với nhau."
       },
       {
         "id": "n2-grammar-117-q08",
@@ -2281,7 +2281,7 @@ export default {
           "に際して"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "開けずじまい：Cuối cùng không mở ra uống được."
       },
       {
         "id": "n2-grammar-117-q09",
@@ -2294,7 +2294,7 @@ export default {
           "となると"
         ],
         "answer": 0,
-        "explanation": ""
+        "explanation": "当てられずじまい：Cuối cùng không được gọi tên phát biểu."
       },
       {
         "id": "n2-grammar-117-q10",
@@ -2307,8 +2307,8 @@ export default {
           "限りは"
         ],
         "answer": 1,
-        "explanation": ""
+        "explanation": "会えずじまい：Cuối cùng không gặp được nhau."
       }
     ]
   }
-};
+}
