@@ -7,6 +7,8 @@ import Panel from "./common/Panel";
 import SectionBlock from "./common/SectionBlock";
 import Button from "./common/Button";
 
+const EMPTY_MEANING_IDS = new Set();
+
 function toLines(value) {
   if (!value) return [];
 
@@ -81,7 +83,14 @@ export default function GrammarDetail({
   hasNext,
 }) {
   const { speakText } = useLanguage();
-  const [collapsedMeaningIds, setCollapsedMeaningIds] = useState(new Set());
+  const [expandedMeaningState, setExpandedMeaningState] = useState({
+    grammarId: null,
+    ids: EMPTY_MEANING_IDS,
+  });
+  const expandedMeaningIds =
+    expandedMeaningState.grammarId === grammar?.id
+      ? expandedMeaningState.ids
+      : EMPTY_MEANING_IDS;
 
   const usageSectionNumber = 1;
   const meaningsSectionNumber = grammar?.usage ? 2 : 1;
@@ -111,8 +120,10 @@ export default function GrammarDetail({
   };
 
   const toggleMeaning = (meaningId) => {
-    setCollapsedMeaningIds((prev) => {
-      const next = new Set(prev);
+    setExpandedMeaningState((prev) => {
+      const previousIds =
+        prev.grammarId === grammar.id ? prev.ids : EMPTY_MEANING_IDS;
+      const next = new Set(previousIds);
 
       if (next.has(meaningId)) {
         next.delete(meaningId);
@@ -120,7 +131,7 @@ export default function GrammarDetail({
         next.add(meaningId);
       }
 
-      return next;
+      return { grammarId: grammar.id, ids: next };
     });
   };
 
@@ -171,7 +182,7 @@ export default function GrammarDetail({
         <div className="grammar-meaning-card-list">
           {meaningItems.map((meaningItem, meaningIndex) => {
             const meaningId = getMeaningId(meaningItem, meaningIndex);
-            const isCollapsed = collapsedMeaningIds.has(meaningId);
+            const isExpanded = expandedMeaningIds.has(meaningId);
 
             const usageLines = toLines(
               meaningItem.usage || meaningItem.structure
@@ -195,15 +206,15 @@ export default function GrammarDetail({
                     </span>
 
                   <span className="grammar-meaning-toggle-icon">
-                    {isCollapsed ? (
-                      <ChevronDown size={22} strokeWidth={2.5} />
-                    ) : (
+                    {isExpanded ? (
                       <ChevronUp size={22} strokeWidth={2.5} />
+                    ) : (
+                      <ChevronDown size={22} strokeWidth={2.5} />
                     )}
                   </span>
                 </button>
 
-                {isCollapsed && (
+                {isExpanded && (
                   <div className="grammar-meaning-card-body">
                     {meaningItem.meaning && (
                       <div className="grammar-meaning-row">

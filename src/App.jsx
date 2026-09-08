@@ -599,6 +599,7 @@ function GrammarDetailPage() {
 
   return (
     <GrammarDetail
+      key={grammar.id}
       grammar={grammar}
       onPreviousGrammar={handlePreviousGrammar}
       onNextGrammar={handleNextGrammar}
