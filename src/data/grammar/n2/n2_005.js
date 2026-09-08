@@ -17,7 +17,7 @@ export const N2_005_GRAMMAR =
         "examples": [
           {
             "japanese": "独身どころか、もう子供が三人います。",
-            "reading": "どくしんどころか、もうこどもがさんにんいます。",
+            "reading": "どくしんどころか、もうこどもがさんがんいます。",
             "english": "Far from being single, I already have three children.",
             "vietnamese": "Độc thân sao được, tôi đã có 3 con rồi đấy."
           },
@@ -83,7 +83,7 @@ export const N2_005_GRAMMAR =
             "japanese": "あまりにも悲しいニュースを聞いて、言葉が出なかった。",
             "reading": "あまりにもかなしいニュースをきいて、ことばが出なかった。",
             "english": "Hearing such terribly sad news, I was speechless.",
-            "vietnamese": "Nghe tin quá cạn lời/đau buồn, tôi không nói nên lời."
+            "vietnamese": "Nghe tin quá đau buồn, tôi không nói nên lời."
           },
           {
             "japanese": "その問題はあまりにも複雑で、一人では解決できない。",
@@ -593,7 +593,7 @@ export const N2_005_GRAMMAR =
         "examples": [
           {
             "japanese": "新事業を始めるにあたって、十分な市場調査を行った。",
-            "reading": "しんじぎょうをはじめるにあたって、じゅうぶんなしじょうちょうさを行った。",
+            "reading": "しんじぎょうをはじめるにあたって、じゅうぶんなしじょうちょうさをいった。",
             "english": "In starting the new business, we conducted sufficient market research.",
             "vietnamese": "Khi bắt đầu dự án kinh doanh mới, chúng tôi đã tiến hành nghiên cứu thị trường đầy đủ."
           },
@@ -663,7 +663,7 @@ export const N2_005_GRAMMAR =
           },
           {
             "japanese": "残念ながら、ご期待に沿うことができません。",
-            "reading": "ざんねんながら、ご期待にそうことができません。",
+            "reading": "ざんねんながら、ごきたいにそうことができません。",
             "english": "Regrettably, we cannot meet your expectations.",
             "vietnamese": "Dù rất tiếc nhưng chúng tôi không thể đáp ứng được kỳ vọng của quý vị."
           }
@@ -695,7 +695,7 @@ export const N2_005_GRAMMAR =
           },
           {
             "japanese": "社長がこの考えを変えない限りは、進展はないだろう。",
-            "reading": "しゃちょうがこのかんがえを変えないかぎりは、しんてんはないだろう。",
+            "reading": "しゃちょうがこのかんがえをかえないかぎりは、しんてんはないだろう。",
             "english": "As long as the president doesn't change this mindset, there will probably be no progress.",
             "vietnamese": "Chừng nào giám đốc chưa thay đổi suy nghĩ này thì dự án sẽ khó mà có tiến triển."
           }
@@ -753,13 +753,13 @@ export const N2_005_GRAMMAR =
         "examples": [
           {
             "japanese": "兄は勉強が得意だ。私の方はというと、運動ばかりしている。",
-            "reading": "あにはべんきょうがとくいだ。わたしの方はというと、うんどうばかりしている。",
+            "reading": "あにはべんきょうがとくいだ。わたしのほうはというと、うんどうばかりしている。",
             "english": "My older brother is good at studying. As for me, I just play sports.",
             "vietnamese": "Anh trai tôi học rất giỏi. Còn riêng tôi thì chỉ toàn chơi thể thao."
           },
           {
-            "japanese": "新しい政策の果はというと、まだはっきり見えていない。",
-            "reading": "あたらしいせいさくのかかはというと、まだはっきりみえていない。",
+            "japanese": "新しい政策の結果はというと、まだはっきり見えていない。",
+            "reading": "あたらしいせいさくのけっかはというと、まだはっきりみえていない。",
             "english": "As for the results of the new policy, they are not yet clearly visible.",
             "vietnamese": "Riêng về kết quả của chính sách mới thì hiện tại vẫn chưa thấy rõ ràng."
           }
@@ -1009,7 +1009,7 @@ export const N2_005_GRAMMAR =
         "examples": [
           {
             "japanese": "こんなことなら、傘を持ってくるんだった。",
-            "reading": "こんなことなら、かさをかってくるんだった。",
+            "reading": "こんなことなら、かさをもってくるんだった。",
             "english": "If this was going to happen, I should have brought an umbrella.",
             "vietnamese": "Biết thế này thì giá mà tôi mang theo ô có phải tốt hơn không."
           },

@@ -24,13 +24,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "約束した以上、絶対に守らなければならない。",
-            "reading": "Yakusoku shita ijou, zettai ni mamoranakereba naranai.",
+            "reading": "やくそくしたいじょう、ぜったいにまもらなければならない。",
             "english": "Since I made a promise, I must keep it at all costs.",
             "vietnamese": "Một khi đã hứa thì nhất định phải giữ lời."
           },
           {
             "japanese": "学生である以上、勉強を第一に考えるべきだ。",
-            "reading": "Gakusei de aru ijou, benkyou wo daiichi ni kangaeru beki da.",
+            "reading": "がくせいであるいじょう、べんきょうをだいいちにかんがえるべきだ。",
             "english": "As long as you are a student, you should put studying first.",
             "vietnamese": "Đã là học sinh thì nên đặt việc học lên hàng đầu."
           }
@@ -63,13 +63,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "来日の折には、ぜひ当社にお立ち寄りください。",
-            "reading": "Rainichi no ori ni wa, zehi tousha ni otachiyori kudasai.",
+            "reading": "らいにちのおりには、ぜひとうしゃにおたちよりください。",
             "english": "When you visit Japan, please drop by our company.",
             "vietnamese": "Nhân dịp đến Nhật Bản, xin mời quý vị ghé thăm công ty chúng tôi."
           },
           {
             "japanese": "先月お会いした折に、いただいた名刺をなくしてしまった。",
-            "reading": "Sengetsu oai shita ori ni, itadaita meishi wo nakushite shimatta.",
+            "reading": "せんげつおあいしたおりに、いただいためしをなくしてしまった。",
             "english": "I lost the business card I received when I met you last month.",
             "vietnamese": "Vào lúc gặp mặt tháng trước, tôi đã làm mất danh thiếp nhận được từ bạn."
           }
@@ -102,13 +102,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "彼の態度からして、反省しているとは思えない。",
-            "reading": "Kare no taido kara shite, hansei shite iru to wa omoenai.",
+            "reading": "かれのたいどからして、はんせいしているとはおもえない。",
             "english": "Judging right from his attitude, I don't think he regrets it.",
             "vietnamese": "Xét từ thái độ của anh ta thì không thể nghĩ là anh ta đang hối lỗi."
           },
           {
             "japanese": "この店は入り口の雰囲気からして高級そうだ。",
-            "reading": "Kono mise wa iriguchi no fuuniki kara shite koukyuu sou da.",
+            "reading": "このみせはいりぐちのふんいきからしてこうきゅうそうだ。",
             "english": "Judging from the entrance atmosphere alone, this restaurant looks high-end.",
             "vietnamese": "Cửa hàng này ngay từ bầu không khí ở lối vào đã có vẻ cao cấp rồi."
           }
@@ -142,13 +142,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "日程が決まり次第、すぐにご連絡いたします。",
-            "reading": "Nittei ga kimari shidai, sugu ni gore联系 itashimasu.",
+            "reading": "にっていがきまりしだい、すぐにごれんらくいたします。",
             "english": "As soon as the schedule is decided, we will contact you immediately.",
             "vietnamese": "Ngay sau khi lịch trình được quyết định, tôi sẽ liên lạc lại ngay."
           },
           {
             "japanese": "試験に合格できるかどうかは、あなたの努力次第だ。",
-            "reading": "Shiken ni goukaku dekiru ka dou ka wa, anata no doryoku shidai da.",
+            "reading": "しけんにごうかくできるかどうかは、あなたのどりょくしだいだ。",
             "english": "Whether you pass the exam depends on your effort.",
             "vietnamese": "Có đỗ kỳ thi hay không là tùy thuộc vào nỗ lực của bạn."
           }
@@ -181,13 +181,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "体が丈夫な限り、働き続けたい。",
-            "reading": "Karada ga joubu na kagiri, hatarakitsudukehai.",
+            "reading": "からだがじょうぶなかぎり、はたらきつづけたい。",
             "english": "As long as my body is healthy, I want to keep working.",
             "vietnamese": "Chừng nào cơ thể còn khỏe mạnh, tôi vẫn muốn tiếp tục làm việc."
           },
           {
             "japanese": "私が調べた限りでは、そのような事実はありません。",
-            "reading": "Watashi ga shirabeta kagiri de wa, sono you na jijitsu wa arimasen.",
+            "reading": "わたしがしらべたかぎりでは、そのようなじじつはありません。",
             "english": "As far as I have investigated, there is no such fact.",
             "vietnamese": "Trong phạm vi tôi đã tìm hiểu thì không có sự thật như vậy."
           }
@@ -220,13 +220,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "一度でいいから、世界一周の旅に出てみたいものだ。",
-            "reading": "Ichido de ii kara, sekai isshuu no tabi ni dete mitai mono da.",
+            "reading": "いちどでいいから、せかいいっしゅうのたびにでてみたいものだ。",
             "english": "I really want to go on a round-the-world trip, even just once.",
             "vietnamese": "Dù chỉ một lần thôi, tôi thực sự rất muốn thử đi du lịch vòng quanh thế giới."
           },
           {
             "japanese": "こんなに素晴らしい場所で、ゆっくり暮らしたいものだ。",
-            "reading": "Konna ni subarashii basho de, yukkuri kurashitai mono da.",
+            "reading": "こんなにすばらしいば所で、ゆっくりくらしたいものだ。",
             "english": "I would love to live peacefully in such a wonderful place.",
             "vietnamese": "Thật sự muốn sống thong thả ở một nơi tuyệt vời thế này."
           }
@@ -259,13 +259,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "この病気を簡単に治す方法は、何とか見つからないものだろうか。",
-            "reading": "Kono byouki wo kantan ni naosu houhou wa, nantoka mitsukaranai mono darou ka.",
+            "reading": "このびょうきをかんたになおすほうほうは、なんとかみつからないものだろうか。",
             "english": "Is there really no way to easily cure this disease?",
             "vietnamese": "Liệu có cách nào dễ dàng chữa khỏi bệnh này mà không tìm ra được không?"
           },
           {
             "japanese": "もう少し安く購入できないものかと思う。",
-            "reading": "Mousukoshi yasuku kounyuu dekinai mono ka to omou.",
+            "reading": "もうすこしやすくこうにゅうできないものかとおもう。",
             "english": "I wonder if there isn't any way to buy it a bit cheaper.",
             "vietnamese": "Tôi tự hỏi liệu không có cách nào mua rẻ hơn một chút được sao."
           }
@@ -298,13 +298,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "味はともかく、見た目はとてもきれいです。",
-            "reading": "Aji wa tomokaku, mitame wa totemo kirei desu.",
+            "reading": "あじはともかく、みためはとてもきれいです。",
             "english": "Setting taste aside, the appearance is very beautiful.",
             "vietnamese": "Chưa bàn đến hương vị, vẻ ngoài trông rất đẹp mắt."
           },
           {
             "japanese": "結果はともかく、最後まで全力を尽くすことが大切だ。",
-            "reading": "Kekka wa tomokaku, saigo made zenryoku wo tsukusu koto ga taisetsu da.",
+            "reading": "けっかはともかく、さいごまでぜんりょくをつくすことがたいせつだ。",
             "english": "Regardless of the result, doing your best until the end is what matters.",
             "vietnamese": "Kết quả ra sao chưa bàn tới, điều quan trọng là cố gắng hết sức cho đến cùng."
           }
@@ -337,13 +337,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "給料が下がったが、クビにならなかっただけましだ。",
-            "reading": "Kyuuryou ga sagatta ga, kubi ni naranakatta dake mashi da.",
+            "reading": "きゅうりょうがさがったが、くびにならなかっただけましだ。",
             "english": "My salary went down, but at least I didn't get fired.",
             "vietnamese": "Lương bị giảm thật đấy nhưng không bị đuổi việc vẫn còn là may mắn chán."
           },
           {
             "japanese": "怪我はしたが、命があっただけましだと思わなければならない。",
-            "reading": "Kega wa shita ga, inochi ga atta dake mashi da to omowanakereba naranai.",
+            "reading": "けがはしたが、いのちがあっただけましだとおもわなければならない。",
             "english": "I was injured, but I have to think I'm lucky just to be alive.",
             "vietnamese": "Bị thương thật nhưng phải nghĩ là giữ được mạng sống vẫn còn tốt chán."
           }
@@ -376,13 +376,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "彼とは去年のパーティーで会ったきり、連絡が取れない。",
-            "reading": "Kare to wa kyonen no paatii de atta kiri, renraku ga torenai.",
+            "reading": "かれとはきょねんのぱーてぃーであったきり、れんらくがとれない。",
             "english": "I haven't been able to contact him since meeting him at last year's party.",
             "vietnamese": "Tôi với anh ấy kể từ sau khi gặp nhau ở bữa tiệc năm ngoái thì không liên lạc được nữa."
           },
           {
             "japanese": "息子は朝出かけたきり、まだ帰ってこない。",
-            "reading": "Musuko wa asa dekaketa kiri, mada kaette konai.",
+            "reading": "むすこはあさでかけたきり、まだかえってこない。",
             "english": "My son left this morning and hasn't come back yet.",
             "vietnamese": "Con trai tôi kể từ khi đi ra ngoài buổi sáng tới giờ vẫn chưa về."
           }
@@ -415,13 +415,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "会議に先立って、資料の確認を行ってください。",
-            "reading": "Kaigi ni sakidatte, shiryou no kakunin wo okonatte kudasai.",
+            "reading": "かいぎにさきだって、しりょうのかくにんをおこなってください。",
             "english": "Prior to the meeting, please check the documents.",
             "vietnamese": "Trước khi bắt đầu cuộc họp, xin vui lòng kiểm tra tài liệu."
           },
           {
             "japanese": "新商品の発売に先立ち、試飲会が開かれた。",
-            "reading": "Shinshouhin no hatsubai ni sakidachi, shiinkai ga meirakareta.",
+            "reading": "しんしょうひんのはつばいにさきだち、しいんかいがひらかれた。",
             "english": "Prior to the launch of the new product, a tasting event was held.",
             "vietnamese": "Trước khi bán sản phẩm mới, một buổi dùng thử đã được tổ chức."
           }
@@ -454,13 +454,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "彼の話は信じがたい事実ばかりだ。",
-            "reading": "Kare no hanashi wa shinjigatai jijitsu bakari da.",
+            "reading": "かれのはなしはしんじがたいじじつばかりだ。",
             "english": "His story is full of hard-to-believe facts.",
             "vietnamese": "Câu chuyện của anh ấy toàn là những sự thật khó mà tin nổi."
           },
           {
             "japanese": "長年住んだ家を離れるのは、実に受け入れがたい。",
-            "reading": "Naganen sunda ie wo hanareru no wa, jitsu ni ukeiregatai.",
+            "reading": "ながねんすんだいえをはなれるのは、じつにうけいれがたい。",
             "english": "Leaving the house I lived in for many years is truly hard to accept.",
             "vietnamese": "Rời xa ngôi nhà đã gắn bó nhiều năm quả thực rất khó chấp nhận."
           }
@@ -493,13 +493,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "そんな事故は普通では起こり得ないことだ。",
-            "reading": "Sonna jiko wa futsuu de wa okori enai koto da.",
+            "reading": "そんなじこはふつうではおこりえないことだ。",
             "english": "Such an accident is impossible under normal circumstances.",
             "vietnamese": "Tai nạn như thế trong điều kiện bình thường không thể nào xảy ra được."
           },
           {
             "japanese": "彼が犯人だなんて、あり得ない話だ。",
-            "reading": "Kare ga hanning da nante, ari enai hanashi da.",
+            "reading": "かれがはんにんだなんて、ありえないはなしだ。",
             "english": "That he is the culprit is an impossible story.",
             "vietnamese": "Chuyện anh ấy là thủ phạm là điều tuyệt đối không thể có."
           }
@@ -532,13 +532,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "合格を知った嬉しさのあまり、飛び跳ねてしまった。",
-            "reading": "Goukaku wo shitta ureshisa no amari, tobihanete shimatta.",
+            "reading": "ごうかくをしったうれしさのあまり、とびはねてしまった。",
             "english": "Overjoyed by the news of passing, I jumped up and down.",
             "vietnamese": "Vì quá vui mừng khi biết mình đã đỗ, tôi đã nhảy hẫng lên."
           },
           {
             "japanese": "緊張のあまり、声が震えてしまった。",
-            "reading": "Kinchou no amari, koe ga furuete shimatta.",
+            "reading": "きんちょうのあまり、こえがふるえてしまった。",
             "english": "I was so nervous that my voice trembled.",
             "vietnamese": "Vì quá căng thẳng nên giọng tôi đã bị run."
           }
@@ -571,13 +571,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "彼はアニメのこととなると、急に饒舌になる。",
-            "reading": "Kare wa anime no koto to naru to, kyuu ni jouzetsu ni naru.",
+            "reading": "かれはあにめのこととなると、きゅうにじょうぜつになる。",
             "english": "When it comes to anime, he suddenly becomes talkative.",
             "vietnamese": "Cứ nói đến chuyện Anime là anh ấy lại đột nhiên trở nên nói nhiều hẳn."
           },
           {
             "japanese": "お金のこととなると、みんな真剣な顔になる。",
-            "reading": "Okane no koto to naru to, minna shinken na kao ni naru.",
+            "reading": "おかねのこととなると、みんなしんけんなかおになる。",
             "english": "When it comes to money, everyone gets a serious look on their face.",
             "vietnamese": "Cứ đụng tới chuyện tiền bạc là ai nấy đều tỏ ra nghiêm túc."
           }
@@ -610,13 +610,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "日本の景気は少しずつ回復しつつある。",
-            "reading": "Nihon no keiki wa sukoshi zutsu kaifuku shitsutsu aru.",
+            "reading": "にほんのけいきはすこしずつかいふくしつつある。",
             "english": "Japan's economy is gradually recovering.",
             "vietnamese": "Nền kinh tế Nhật Bản đang từng bước hồi phục dần dần."
           },
           {
             "japanese": "地球温暖化の影響で、環境が変化しつつある。",
-            "reading": "Chikyuu ondanka no eikyou de, kankyou ga henka shitsutsu aru.",
+            "reading": "ちきゅうおんだんかのえいきょうで、かんきょうがへんかしつつある。",
             "english": "Due to global warming, the environment is changing.",
             "vietnamese": "Do ảnh hưởng của hiện tượng nóng lên toàn cầu, môi trường đang ngày càng biến đổi."
           }
@@ -649,13 +649,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "雨が降っては休み、晴れては作業を続けた。",
-            "reading": "Ame ga futte wa yasumi, harete wa sakyou wo tsuduketa.",
+            "reading": "あめがふってはやすみ、はれてはさぎょうをつづけた。",
             "english": "Whenever it rained we rested, and whenever it cleared up we continued working.",
             "vietnamese": "Cứ mưa thì lại nghỉ, nắng lên lại tiếp tục làm việc."
           },
           {
             "japanese": "書いては消し、また書いては消して、ようやく文章が完成した。",
-            "reading": "Kaite wa keshi, mata kaite wa keshite, youyaku bunshou ga kansei shita.",
+            "reading": "かいてはけし、またかいてはけして、ようやくぶんしょうがかんせいした。",
             "english": "Writing and erasing, then writing and erasing again, I finally finished the sentence.",
             "vietnamese": "Cứ viết rồi lại xóa, xóa rồi lại viết, cuối cùng bài văn cũng hoàn thành."
           }
@@ -688,13 +688,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "自分で体験してこそ、その大変さがわかる。",
-            "reading": "Jibun de taiken shite koso, sono taihensasa ga wakaru.",
+            "reading": "じぶんでたいけんしてこそ、そのたいへんさがわかる。",
             "english": "Only by experiencing it yourself can you understand how difficult it is.",
             "vietnamese": "Chỉ khi tự mình trải nghiệm thì mới hiểu được sự vất vả đó."
           },
           {
             "japanese": "互いに信頼し合ってこそ、良いパートナーと言える。",
-            "reading": "Tagai ni shinrai shiatte koso, yoi paatonaa to ieru.",
+            "reading": "たがいにしんらいしあってこそ、よいぱーとなーといえる。",
             "english": "Only when you trust each other can you be called good partners.",
             "vietnamese": "Chỉ khi tin tưởng lẫn nhau thì mới có thể coi là đối tác tốt."
           }
@@ -727,13 +727,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "行くにしろ行かないにしろ、早めに連絡してください。",
-            "reading": "Iku ni shiro ikanai ni shiro, hayame ni renraku shite kudasai.",
+            "reading": "いくにしろいかないにしろ、はやめにれんらくしてください。",
             "english": "Whether you go or not, please contact us as early as possible.",
             "vietnamese": "Dù có đi hay không đi thì cũng hãy liên lạc sớm nhé."
           },
           {
             "japanese": "冗談にしろ、そんなことを言ってはいけない。",
-            "reading": "Joudan ni shiro, sonna koto wo itte wa ikenai.",
+            "reading": "じょうだんにしろ、そんなことをいってはいけない。",
             "english": "Even as a joke, you shouldn't say such things.",
             "vietnamese": "Dù chỉ là nói đùa đi chăng nữa thì cũng không được nói câu đó."
           }
@@ -766,13 +766,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "川に沿って歩くと、大きな公園が見えてくる。",
-            "reading": "Kawa ni sotte aruku to, ookina kouen ga miete kuru.",
+            "reading": "かわにそってあるくと、おおきなこうえんがみえてくる。",
             "english": "If you walk along the river, you will see a large park.",
             "vietnamese": "Nếu đi men theo dòng sông thì sẽ thấy một công viên lớn."
           },
           {
             "japanese": "計画に沿って、着実に作業を進めていきましょう。",
-            "reading": "Keikaku ni sotte, chakujitsu ni sakyou wo susumete ikimashou.",
+            "reading": "けいかくにそって、ちゃくじつにさぎょうをつすめていきましょう。",
             "english": "Let's proceed with the work steadily according to the plan.",
             "vietnamese": "Hãy tiến hành công việc một cách chắc chắn dựa theo kế hoạch nhé."
           }
@@ -805,13 +805,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "お客様のご要望には応じかねます。",
-            "reading": "Okyakusama no goyoubou ni wa oujikanemasu.",
+            "reading": "おきゃくさまのごようぼうにはおうじかねます。",
             "english": "We are unable to meet customer requests.",
             "vietnamese": "Chúng tôi khó có thể đáp ứng được yêu cầu của quý khách."
           },
           {
             "japanese": "個人情報に関する質問には、お答えしかねます。",
-            "reading": "Kojin jouhou ni kansuru shitsumon ni wa, okotaeshikanemasu.",
+            "reading": "こじんじょうほうにかんするしつもんには、おこたえしかねます。",
             "english": "We cannot answer questions regarding personal information.",
             "vietnamese": "Những câu hỏi liên quan đến thông tin cá nhân thì chúng tôi không thể trả lời được."
           }
@@ -844,13 +844,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "納豆は食べられないこともないが、あまり好きではない。",
-            "reading": "Nattou wa taberarenai koto mo nai ga, amari suki de wa nai.",
+            "reading": "なっとうはたべられないこともないが、あまりすきではない。",
             "english": "It's not that I can't eat Natto, but I don't really like it.",
             "vietnamese": "Natto thì cũng không phải là tôi không ăn được, nhưng không thích lắm."
           },
           {
             "japanese": "走れば間に合わないこともないから、急ごう。",
-            "reading": "Hashireba maniawanai koto mo nai kara, isogou.",
+            "reading": "はしればまにあわないこともないから、いそごう。",
             "english": "If we run, it's not impossible to make it in time, so let's hurry.",
             "vietnamese": "Nếu chạy thì cũng không hẳn là không kịp, nên hãy khẩn trương lên."
           }
@@ -865,7 +865,7 @@ export const N2_003_GRAMMAR =
     "level": "N2",
     "lesson": "Lesson 5",
     "title": "～て欲しいものだ",
-    "usage": "V-て / V-ないで + 欲しいものだ / ほしいもんだ",
+    "usage": "V-te / V-not + 欲しいものだ / ほしいもんだ",
     "notes": [
       {
         "lines": [
@@ -883,13 +883,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "政府にはもっと若者の意見を聞いてほしいものだ。",
-            "reading": "Seifu ni wa motto wakamono no iken wo kiite hoshii mono da.",
+            "reading": "せいふにはもっとわかもののいけんをきいてほしいものだ。",
             "english": "I really wish the government would listen more to young people's opinions.",
             "vietnamese": "Rất mong chính phủ sẽ lắng nghe nhiều hơn ý kiến của giới trẻ."
           },
           {
             "japanese": "この騒音が早く静かになってほしいものだ。",
-            "reading": "Kono souon ga hayaku shizuka ni natte hoshii mono da.",
+            "reading": "このそうおんがはやくしずかになってほしいものだ。",
             "english": "I really hope this noise calms down soon.",
             "vietnamese": "Giá mà cái tiếng ồn này nhanh chóng yên tĩnh lại thì tốt biết mấy."
           }
@@ -922,13 +922,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "彼は10年間留学していただけのことはあって、英語がペラペラだ。",
-            "reading": "Kare wa juunengan ruugaku shite ita dake no koto wa atte, Eigo ga perapera da.",
+            "reading": "かれはじゅうねんかんりゅうがくしていただけのことはあって、えいごがぺらぺらだ。",
             "english": "As expected of someone who studied abroad for 10 years, his English is fluent.",
             "vietnamese": "Quả không hổ danh đã đi du học 10 năm, tiếng Anh của anh ấy nói trôi chảy thật."
           },
           {
             "japanese": "この店の商品は高いが、品質が良いだけのことはある。",
-            "reading": "Kono mise no shouhin wa takai ga, hinshitsu ga yoi dake no koto wa aru.",
+            "reading": "このみせのしょうひんはたかいが、ひんしつがよいだけのことはある。",
             "english": "The items in this store are expensive, but they are worth the quality.",
             "vietnamese": "Đồ ở cửa hàng này đắt thật nhưng chất lượng tốt cũng đáng tiền."
           }
@@ -961,13 +961,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "今度の大会で絶対に優勝してみせる。",
-            "reading": "Kondo no taikai de zettai ni yuushou shite miseru.",
+            "reading": "こんどのたいかいでぜったいにゆうしょうしてみせる。",
             "english": "I will definitely win the championship in the next tournament.",
             "vietnamese": "Kỳ thi đấu tới tôi nhất định sẽ vô địch cho mà xem."
           },
           {
             "japanese": "やり方を教えてあげるから、まずは私がやってみせます。",
-            "reading": "Yarikata wo oshiete ageru kara, mazu wa watashi ga yaritte misemasu.",
+            "reading": "やりかたをおしえてあげるから、まずはわたしがやってみせます。",
             "english": "I'll teach you how to do it, so first I will demonstrate.",
             "vietnamese": "Tôi sẽ dạy cách làm, nên trước tiên tôi sẽ làm mẫu cho xem."
           }
@@ -987,7 +987,7 @@ export const N2_003_GRAMMAR =
       {
         "lines": [
           "Một sự kiện quan trọng xảy ra trở thành bước ngoặt hoặc cơ hội để khởi đầu một sự thay đổi lớn.",
-          "Thường dùng trong các chủ đề lịch sử, xã hội, sự nghiệp."
+          "Thường dùng trong các chủ đề lịch sử, sự nghiệp, xã hội."
         ]
       }
     ],
@@ -1000,13 +1000,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "病気を契機に、タバコをやめることにした。",
-            "reading": "Byouki wo keiki ni, tabako wo yameru koto ni shita.",
+            "reading": "びょうきをけいきに、たばこをやめることにした。",
             "english": "Taking my illness as an opportunity, I decided to quit smoking.",
             "vietnamese": "Nhân trận ốm này làm bước ngoặt, tôi đã quyết định bỏ thuốc lá."
           },
           {
             "japanese": "会社設立を契機として、新しい事業を開始した。",
-            "reading": "Kaisha setsuritsu wo keiki to shite, atarashii jigyou wo kaishi shita.",
+            "reading": "かいしゃせつりつをけいきとして、あたらしいじぎょうをかいしした。",
             "english": "Taking the company's establishment as a turning point, we started a new business.",
             "vietnamese": "Lấy mốc thành lập công ty làm thời cơ, chúng tôi đã khởi công kinh doanh mảng mới."
           }
@@ -1039,13 +1039,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "彼はあきらめることなく、最後まで走り続けた。",
-            "reading": "Kare wa akirameru koto naku, saigo made hashiritsuduketa.",
+            "reading": "かれはあきらめることなく、さいごまではしりつづけた。",
             "english": "Without giving up, he kept running until the end.",
             "vietnamese": "Anh ấy không hề bỏ cuộc mà vẫn tiếp tục chạy cho đến phút cuối."
           },
           {
             "japanese": "休むことなく作業を進めたおかげで、予定通りに終わった。",
-            "reading": "Yasumu koto naku sakyou wo susumeta okage de, yoteidouri ni owatta.",
+            "reading": "やすむことなくさぎょうをすすめたおかげで、よていどおりに終わった。",
             "english": "Thanks to carrying on work without taking a break, we finished as scheduled.",
             "vietnamese": "Nhờ tiến hành công việc liên tục mà không nghỉ ngơi, chúng tôi đã hoàn thành đúng kế hoạch."
           }
@@ -1078,13 +1078,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "いろいろ悩んだあげく、会社を辞めることにした。",
-            "reading": "Iroiro nayanda ageku, kaisha wo yameru koto ni shita.",
+            "reading": "いろいろなやんだあげく、かいしゃをやめることにした。",
             "english": "After worrying about many things, I ended up deciding to quit the company.",
             "vietnamese": "Sau một hồi trăn trở đủ điều, rốt cuộc tôi đã quyết định nghỉ việc."
           },
           {
             "japanese": "長時間の議論のあげくに、結論が出なかった。",
-            "reading": "Choujikan no giron no ageku ni, ketsuron ga denakatta.",
+            "reading": "ちょうじかんのぎろんのあげくに、けつろんがでなかった。",
             "english": "After a long discussion, no conclusion was reached.",
             "vietnamese": "Sau một hồi tranh luận kéo dài, kết cục vẫn chẳng đưa ra được kết luận nào."
           }
@@ -1117,13 +1117,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "体によくないと知りつつも、夜遅くにラーメンを食べてしまう。",
-            "reading": "Karada ni yokunai to shiritsutsu mo, yoru osoku ni raamen wo tabete shimau.",
+            "reading": "からだによくないとしりつつも、よるおそくにらーめんをたべてしまう。",
             "english": "Even though I know it's not good for my body, I end up eating ramen late at night.",
             "vietnamese": "Dù biết là không tốt cho sức khỏe nhưng tôi vẫn trỡ ăn ramen vào đêm muộn."
           },
           {
             "japanese": "危険だとわかりつつも、登頂を試みた。",
-            "reading": "Kiken da to wakaritsutsu mo, touchou wo kokoromita.",
+            "reading": "きけんだとわかりつつも、とうちょうをこころみた。",
             "english": "Even while knowing it was dangerous, they attempted to reach the summit.",
             "vietnamese": "Dù biết là nguy hiểm nhưng họ vẫn nỗ lực leo lên đỉnh núi."
           }
@@ -1156,13 +1156,13 @@ export const N2_003_GRAMMAR =
         "examples": [
           {
             "japanese": "傘を持っていかない日に限って、雨が降る。",
-            "reading": "Kasa wo motte ikanai hi ni kagitte, ame ga furu.",
+            "reading": "かさをもっていかないひにかぎって、あめがふる。",
             "english": "Only on days when I don't bring an umbrella does it rain.",
             "vietnamese": "Đúng vào những ngày tôi không mang ô thì trời lại mưa."
           },
           {
             "japanese": "うちの子に限って、そんな悪いことをするはずがない。",
-            "reading": "Uchi no ko ni kagitte, sonna warui koto wo suru hazu ga nai.",
+            "reading": "うちのこにかぎって、そんなわるいことをするはずがない。",
             "english": "My child of all people would never do such a bad thing.",
             "vietnamese": "Riêng con nhà tôi thì không bao giờ có chuyện làm điều xấu như thế."
           }
