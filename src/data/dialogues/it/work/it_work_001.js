@@ -185,11 +185,11 @@ export default [
         "reading":
           "ズオンさん、さきほどおきゃくさまからシーエスブイしゅつりょくのけっかがただしくないというれんらくがありました",
         "romaji":
-          "Rin-san, sakihodo okyakusama kara CSV shutsuryoku no kekka ga tadashikunai to iu renraku ga arimashita.",
+          "Zuon-san, sakihodo okyakusama kara CSV shutsuryoku no kekka ga tadashikunai to iu renraku ga arimashita.",
         "english":
-          "Linh, we just received a report from the customer that the CSV export results are incorrect.",
+          "Zuon, we just received a report from the customer that the CSV export results are incorrect.",
         "vietnamese":
-          "Linh, vừa rồi khách hàng thông báo rằng kết quả xuất CSV không chính xác.",
+          "Zuon, vừa rồi khách hàng thông báo rằng kết quả xuất CSV không chính xác.",
         "acceptedAnswers": [
           "ズオンさん先ほどお客様からCSV出力の結果が正しくないという連絡がありました",
           "ズオンさん、先ほどお客様からCSV出力の結果が正しくないという連絡がありました。",
@@ -261,11 +261,11 @@ export default [
         "reading":
           "リンさん、ちょうさけっかをごほうこくしてもよろしいでしょうか",
         "romaji":
-          "Zuon-san, chousa kekka o gohoukoku shite mo yoroshii deshou ka.",
+          "Rin-san, chousa kekka o gohoukoku shite mo yoroshii deshou ka.",
         "english":
-          "Dương, may I report the investigation results?",
+          "Linh, may I report the investigation results?",
         "vietnamese":
-          "Anh Dương, em xin phép báo cáo kết quả điều tra được không ạ?",
+          "Anh Linh, em xin phép báo cáo kết quả điều tra được không ạ?",
         "acceptedAnswers": [
           "リンさん調査結果をご報告してもよろしいでしょうか",
           "リンさん、調査結果をご報告してもよろしいでしょうか。",
@@ -293,6 +293,78 @@ export default [
       {
         "id": 7,
         "speaker": "B",
+        "japanese": "ちょっと、画面を共有いたします。",
+        "reading":
+          "ちょっと、がめんをきょうゆういたします",
+        "romaji":
+          "Chotto, gamen o kyouyuu itashimasu.",
+        "english":
+          "I will share my screen for a moment.",
+        "vietnamese":
+          "Để em chia sẻ màn hình một chút.",
+        "acceptedAnswers": [
+          "ちょっと画面を共有いたします",
+          "ちょっと、画面を共有いたします。",
+          "ちょっとがめんをきょうゆういたします"
+        ]
+      },
+      {
+        "id": 8,
+        "speaker": "A",
+        "japanese": "はい、どうぞ",
+        "reading":
+          "はい、どうぞ",
+        "romaji":
+          "Hai, douzo.",
+        "english":
+          "Yes, go ahead.",
+        "vietnamese":
+          "Vâng, mời anh chia sẻ.",
+        "acceptedAnswers": [
+          "はいどうぞ",
+          "はい、どうぞ。",
+          "はいどうぞ"
+        ]
+      },
+      {
+        "id": 9,
+        "speaker": "B",
+        "japanese": "画面を見えますか。",
+        "reading":
+          "がめんをみえますか",
+        "romaji":
+          "Gamen o miemasu ka.",
+        "english":
+          "Can you see the screen?",
+        "vietnamese":
+          "Anh có thấy màn hình không?",
+        "acceptedAnswers": [
+          "画面を見えますか",
+          "画面を見えますか。",
+          "がめんをみえますか"
+        ]
+      },
+      {
+        "id": 10,
+        "speaker": "A",
+        "japanese": "はい、見えます。",
+        "reading":
+          "はい、みえます",
+        "romaji":
+          "Hai, miemasu.",
+        "english":
+          "Yes, I can see it.",
+        "vietnamese":
+          "Vâng, em thấy.",
+        "acceptedAnswers": [
+          "はい見えます",
+          "はい、見えます。",
+          "はいみえます"
+        ]
+      },
+      {
+        "id": 11,
+        "speaker": "B",
         "japanese":
           "はい。検索速度を改善するために、SQLとキャッシュ処理を変更しました。",
         "reading":
@@ -310,12 +382,30 @@ export default [
         ]
       },
       {
-        "id": 8,
+        "id": 12,
+        "speaker": "A",
+        "japanese": "そうですか。原因は分かりましたか。",
+        "reading":
+          "そうですか。げんいんはわかりましたか",
+        "romaji":
+          "Sou desu ka. Gen'in wa wakarimashita ka.",
+        "english":
+          "I see. Were you able to identify the cause?",
+        "vietnamese":
+          "Thế à. Anh đã xác định được nguyên nhân chưa?",
+        "acceptedAnswers": [
+          "そうですか原因は分かりましたか",
+          "そうですか。原因は分かりましたか。",
+          "そうですかげんいんはわかりましたか"
+        ]
+      },
+      {
+        "id": 13,
         "speaker": "B",
         "japanese":
-          "その際に変更した共通処理が、CSV出力機能からも利用されていました。",
+          "はい、その際に変更した共通処理が、CSV出力機能からも利用されていました。",
         "reading":
-          "そのさいにへんこうしたきょうつうしょりが、シーエスブイしゅつりょくきのうからもりようされていました",
+          "はい、そのさいにへんこうしたきょうつうしょりが、シーエスブイしゅつりょくきのうからもりようされていました",
         "romaji":
           "Sono sai ni henkou shita kyoutsuu shori ga, CSV shutsuryoku kinou kara mo riyou sarete imashita.",
         "english":
@@ -323,13 +413,13 @@ export default [
         "vietnamese":
           "Phần xử lý dùng chung được thay đổi khi đó cũng đang được chức năng xuất CSV sử dụng.",
         "acceptedAnswers": [
-          "その際に変更した共通処理がCSV出力機能からも利用されていました",
-          "その際に変更した共通処理が、CSV出力機能からも利用されていました。",
-          "そのさいにへんこうしたきょうつうしょりがシーエスブイしゅつりょくきのうからもりようされていました"
+          "はい、その際に変更した共通処理がCSV出力機能からも利用されていました",
+          "はい、その際に変更した共通処理が、CSV出力機能からも利用されていました。",
+          "はい、そのさいにへんこうしたきょうつうしょりがシーエスブイしゅつりょくきのうからもりようされていました"
         ]
       },
       {
-        "id": 9,
+        "id": 14,
         "speaker": "A",
         "japanese":
           "つまり、検索機能の改修によって、CSV出力機能にデグレードが発生したということですね。",
@@ -348,7 +438,7 @@ export default [
         ]
       },
       {
-        "id": 10,
+        "id": 15,
         "speaker": "B",
         "japanese":
           "はい、その通りです。検索機能自体のテストは実施しましたが、関連機能への影響調査が不十分でした。",
@@ -367,7 +457,7 @@ export default [
         ]
       },
       {
-        "id": 11,
+        "id": 16,
         "speaker": "A",
         "japanese":
           "回帰テストからCSV出力機能が漏れていたのでしょうか。",
@@ -386,7 +476,7 @@ export default [
         ]
       },
       {
-        "id": 12,
+        "id": 17,
         "speaker": "B",
         "japanese":
           "はい。CSV出力機能に対する回帰テストの実施漏れが、今回の主な原因です。",
@@ -405,7 +495,7 @@ export default [
         ]
       },
       {
-        "id": 13,
+        "id": 18,
         "speaker": "A",
         "japanese":
           "分かりました。CSV出力以外の機能にも影響がないか、確認できていますか。",
@@ -424,7 +514,7 @@ export default [
         ]
       },
       {
-        "id": 14,
+        "id": 19,
         "speaker": "B",
         "japanese":
           "はい。共通処理を利用している機能を洗い出したところ、ほかにも複数の画面が対象になっていました。",
@@ -442,11 +532,8 @@ export default [
           "はいきょうつうしょりをりようしているきのうをあらいだしたところ、ほかにもふくすうのがめんがたいしょうになっていました"
         ]
       },
-      // ============================================================
-      // 対応方法 - Phương án xử lý
-      // ============================================================
       {
-        "id": 15,
+        "id": 20,
         "speaker": "A",
         "japanese":
           "分かりました。それでは、現在のお客様への影響と、対応方針について説明してください。",
@@ -465,7 +552,7 @@ export default [
         ]
       },
       {
-        "id": 16,
+        "id": 21,
         "speaker": "B",
         "japanese":
           "現在、検索機能は正常に動作していますが、CSV出力機能では、一部の検索条件が出力結果に正しく反映されていません。",
@@ -484,10 +571,10 @@ export default [
         ]
       },
       {
-        "id": 17,
+        "id": 22,
         "speaker": "B",
         "japanese":
-          "まず、共通処理を利用している機能をすべて洗い出し、影響範囲を確認します。",
+          "はい、共通処理を利用している機能をすべて洗い出し、影響範囲を確認します。",
         "reading":
           "まず、きょうつうしょりをりようしているきのうをすべてあらいだし、えいきょうはんいをかくにんします",
         "romaji":
@@ -503,7 +590,7 @@ export default [
         ]
       },
       {
-        "id": 18,
+        "id": 23,
         "speaker": "B",
         "japanese":
           "その上で、検索機能の改善効果を維持しながら、CSV出力機能でも正しい結果を取得できるように共通処理を修正します。",
@@ -522,7 +609,7 @@ export default [
         ]
       },
       {
-        "id": 19,
+        "id": 24,
         "speaker": "A",
         "japanese":
           "検索機能だけでなく、共通処理を利用している関連機能についても回帰テストを実施してください。",
@@ -541,7 +628,7 @@ export default [
         ]
       },
       {
-        "id": 20,
+        "id": 25,
         "speaker": "B",
         "japanese":
           "承知しました。影響機能の一覧とテストケースを整理してから、修正と回帰テストを実施します。",
@@ -560,7 +647,7 @@ export default [
         ]
       },
       {
-        "id": 21,
+        "id": 26,
         "speaker": "A",
         "japanese":
           "お客様への影響が出ているため、今回はホットフィックスとして対応しましょう。また、リリース前には切り戻し手順も確認してください。",
@@ -579,7 +666,7 @@ export default [
         ]
       },
       {
-        "id": 22,
+        "id": 27,
         "speaker": "B",
         "japanese":
           "はい。修正内容、テスト結果、影響範囲、切り戻し手順をまとめた上で、リリース前にレビューを依頼します。",
@@ -597,97 +684,13 @@ export default [
           "はいしゅうせいないようテストけっかえいきょうはんいきりもどしてじゅんをまとめたうえでリリースまえにレビューをいらいします"
         ]
       },
-
-      // ============================================================
-      // 対応結果 - Kết quả xử lý
-      // ============================================================
       {
-        "id": 23,
-        "speaker": "B",
-        "japanese":
-          "リンさん、対応結果をご報告してもよろしいでしょうか。",
-        "reading":
-          "リンさん、たいおうけっかをごほうこくしてもよろしいでしょうか",
-        "romaji":
-          "Zuon-san, taiou kekka o gohoukoku shite mo yoroshii deshou ka.",
-        "english":
-          "Dương, may I report the results of the corrective action?",
-        "vietnamese":
-          "Anh Dương, em xin phép báo cáo kết quả xử lý được không ạ?",
-        "acceptedAnswers": [
-          "リンさん対応結果をご報告してもよろしいでしょうか",
-          "リンさん、対応結果をご報告してもよろしいでしょうか。",
-          "リンさんたいおうけっかをごほうこくしてもよろしいでしょうか"
-        ]
-      },
-      {
-        "id": 24,
+        "id": 28,
         "speaker": "A",
         "japanese":
-          "はい、お願いします。修正とテストは完了しましたか。",
+          "それでは、今回の問題から学んだことを教えてください。",
         "reading":
-          "はい、おねがいします。しゅうせいとテストはかんりょうしましたか",
-        "romaji":
-          "Hai, onegai shimasu. Shuusei to tesuto wa kanryou shimashita ka.",
-        "english":
-          "Yes, please. Have the fix and testing been completed?",
-        "vietnamese":
-          "Được, em báo cáo đi. Việc sửa lỗi và kiểm thử đã hoàn thành chưa?",
-        "acceptedAnswers": [
-          "はいお願いします修正とテストは完了しましたか",
-          "はい、お願いします。修正とテストは完了しましたか。",
-          "はいおねがいしますしゅうせいとテストはかんりょうしましたか"
-        ]
-      },
-      {
-        "id": 25,
-        "speaker": "B",
-        "japanese":
-          "はい、完了しました。共通処理を修正し、検索機能、CSV出力機能、関連するすべての画面で回帰テストを実施しました。",
-        "reading":
-          "はい、かんりょうしました。きょうつうしょりをしゅうせいし、けんさくきのう、シーエスブイしゅつりょくきのう、かんれんするすべてのがめんでかいきテストをじっししました",
-        "romaji":
-          "Hai, kanryou shimashita. Kyoutsuu shori o shuusei shi, kensaku kinou, CSV shutsuryoku kinou, kanren suru subete no gamen de kaiki tesuto o jisshi shimashita.",
-        "english":
-          "Yes, it has been completed. We fixed the common processing and performed regression testing on the search function, CSV export function, and all related screens.",
-        "vietnamese":
-          "Vâng, đã hoàn thành. Chúng em đã sửa phần xử lý chung và thực hiện kiểm thử hồi quy trên chức năng tìm kiếm, chức năng xuất CSV cùng tất cả các màn hình liên quan.",
-        "acceptedAnswers": [
-          "はい完了しました共通処理を修正し検索機能CSV出力機能関連するすべての画面で回帰テストを実施しました",
-          "はい、完了しました。共通処理を修正し、検索機能、CSV出力機能、関連するすべての画面で回帰テストを実施しました。",
-          "はいかんりょうしましたきょうつうしょりをしゅうせいしけんさくきのうシーエスブイしゅつりょくきのうかんれんするすべてのがめんでかいきテストをじっししました"
-        ]
-      },
-      {
-        "id": 26,
-        "speaker": "B",
-        "japanese":
-          "ホットフィックスのリリース後、検索性能が維持され、CSV出力結果も正常になったことを確認しました。",
-        "reading":
-          "ホットフィックスのリリースご、けんさくせいのうがいじされ、シーエスブイしゅつりょくけっかもせいじょうになったことをかくにんしました",
-        "romaji":
-          "Hotto fikkusu no ririisu go, kensaku seinou ga iji sare, CSV shutsuryoku kekka mo seijou ni natta koto o kakunin shimashita.",
-        "english":
-          "After releasing the hotfix, we confirmed that search performance was maintained and the CSV export results were correct.",
-        "vietnamese":
-          "Sau khi phát hành hotfix, chúng em đã xác nhận hiệu năng tìm kiếm vẫn được duy trì và kết quả xuất CSV đã trở lại bình thường.",
-        "acceptedAnswers": [
-          "ホットフィックスのリリース後検索性能が維持されCSV出力結果も正常になったことを確認しました",
-          "ホットフィックスのリリース後、検索性能が維持され、CSV出力結果も正常になったことを確認しました。",
-          "ホットフィックスのリリースごけんさくせいのうがいじされシーエスブイしゅつりょくけっかもせいじょうになったことをかくにんしました"
-        ]
-      },
-
-      // ============================================================
-      // 学んだこと・再発防止策 - Bài học và phòng ngừa tái phát
-      // ============================================================
-      {
-        "id": 27,
-        "speaker": "A",
-        "japanese":
-          "無事に対応できてよかったです。それでは、今回の問題から学んだことを教えてください。",
-        "reading":
-          "ぶじにたいおうできてよかったです。それでは、こんかいのもんだからまなんだことをおしえてください",
+          "それでは、こんかいのもんだからまなんだことをおしえてください",
         "romaji":
           "Buji ni taiou dekite yokatta desu. Soredewa, konkai no mondai kara mananda koto o oshiete kudasai.",
         "english":
@@ -695,13 +698,13 @@ export default [
         "vietnamese":
           "Thật tốt khi vấn đề đã được xử lý thành công. Em hãy cho anh biết bài học rút ra từ vấn đề lần này.",
         "acceptedAnswers": [
-          "無事に対応できてよかったですそれでは今回の問題から学んだことを教えてください",
-          "無事に対応できてよかったです。それでは、今回の問題から学んだことを教えてください。",
-          "ぶじにたいおうできてよかったですそれではこんかいのもんだからまなんだことをおしえてください"
+          "それでは今回の問題から学んだことを教えてください",
+          "それでは、今回の問題から学んだことを教えてください。",
+          "それではこんかいのもんだからまなんだことをおしえてください"
         ]
       },
       {
-        "id": 28,
+        "id": 29,
         "speaker": "B",
         "japanese":
           "今回の問題から、修正対象の機能だけでなく、共通処理を利用しているすべての関連機能を確認すべきだと学びました。",
@@ -720,7 +723,7 @@ export default [
         ]
       },
       {
-        "id": 29,
+        "id": 30,
         "speaker": "B",
         "japanese":
           "また、性能改善であっても、機能変更と同じように影響分析と回帰テストを十分に実施することが重要です。",
@@ -739,7 +742,7 @@ export default [
         ]
       },
       {
-        "id": 30,
+        "id": 31,
         "speaker": "A",
         "japanese":
           "そうですね。では、同じ問題を繰り返さないために、どのような再発防止策を実施しますか。",
@@ -758,7 +761,7 @@ export default [
         ]
       },
       {
-        "id": 31,
+        "id": 32,
         "speaker": "B",
         "japanese":
           "今後は、修正前に影響機能の一覧を作成し、関連機能を回帰テストの対象に含めます。",
@@ -777,7 +780,7 @@ export default [
         ]
       },
       {
-        "id": 32,
+        "id": 33,
         "speaker": "B",
         "japanese":
           "さらに、共通処理を変更する場合は、レビューチェックリストを使用し、別のメンバーにも影響範囲を確認してもらいます。",
@@ -796,7 +799,7 @@ export default [
         ]
       },
       {
-        "id": 33,
+        "id": 34,
         "speaker": "A",
         "japanese":
           "分かりました。今回の事例と再発防止策をチーム全体に共有してください。",
@@ -815,7 +818,7 @@ export default [
         ]
       },
       {
-        "id": 34,
+        "id": 35,
         "speaker": "B",
         "japanese":
           "承知しました。今回の経験を今後の品質向上に活かしていきます。",
@@ -831,6 +834,44 @@ export default [
           "承知しました今回の経験を今後の品質向上に活かしていきます",
           "承知しました。今回の経験を今後の品質向上に活かしていきます。",
           "しょうちしましたこんかいのけいけんをこんごのひんしつこうじょうにいかしていきます"
+        ]
+      },
+      {
+        "id": 36,
+        "speaker": "A",
+        "japanese":
+          "そうですよ。頑張ってね。",
+        "reading":
+          "そうですよ。がんばってね",
+        "romaji":
+          "Sou desu yo. Ganbatte ne.",
+        "english":
+          "That's right. Do your best.",
+        "vietnamese":
+          "Đúng vậy. Cố gắng lên nhé.",
+        "acceptedAnswers": [
+          "そうですよ頑張ってね",
+          "そうですよ。頑張ってね。",
+          "そうですよ。がんばってね"
+        ]
+      },
+      {
+        "id": 37,
+        "speaker": "B",
+        "japanese":
+          "はい、承知しました。ありがとうございました。以上です。",
+        "reading":
+          "はい、しょうちしました。ありがとうございました。いじょうです",
+        "romaji":
+          "Hai, shouchi shimashita. Arigatou gozaimashita. Ijou desu.",
+        "english":
+          "Understood. Thank you very much. That's all.",
+        "vietnamese":
+          "Vâng, tôi đã hiểu. Cảm ơn rất nhiều. Đó là tất cả.",
+        "acceptedAnswers": [
+          "はい承知しましたありがとうございました以上です",
+          "はい、承知しました。ありがとうございました。以上です。",
+          "はい、しょうちしました。ありがとうございました。いじょうです"
         ]
       }
     ]
