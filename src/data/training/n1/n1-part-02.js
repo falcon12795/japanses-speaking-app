@@ -440,7 +440,7 @@ export default {
       {
         "id": "n1-grammar-format-024-q03",
         "grammarId": "n1-grammar-format-024",
-        "question": "予告なしに、イベントの日程が変更された。",
+        "question": "予告___、イベントの日程が変更された。",
         "choices": [
           "なしに",
           "とあれば",
@@ -518,7 +518,7 @@ export default {
       {
         "id": "n1-grammar-format-024-q09",
         "grammarId": "n1-grammar-format-024",
-        "question": "前触れなしに訪ねてきて、彼を驚かせた。",
+        "question": "前触れ___訪ねてきて、彼を驚かせた。",
         "choices": [
           "なしに",
           "に至るまで",
@@ -589,7 +589,7 @@ export default {
       {
         "id": "n1-grammar-format-025-q04",
         "grammarId": "n1-grammar-format-025",
-        "question": "いつからともなく、彼らは付き合い始めたようだ。",
+        "question": "いつから___、彼らは付き合い始めたようだ。",
         "choices": [
           "ともなく",
           "であれ",
@@ -602,7 +602,7 @@ export default {
       {
         "id": "n1-grammar-format-025-q05",
         "grammarId": "n1-grammar-format-025",
-        "question": "誰ともなく、拍手が起こり始めた。",
+        "question": "誰___、拍手が起こり始めた。",
         "choices": [
           "ともなく",
           "んばかりに",
@@ -641,7 +641,7 @@ export default {
       {
         "id": "n1-grammar-format-025-q08",
         "grammarId": "n1-grammar-format-025",
-        "question": "どこへともなく、彼は去っていった。",
+        "question": "どこへ___、彼は去っていった。",
         "choices": [
           "ともなく",
           "にかかわる",
@@ -667,7 +667,7 @@ export default {
       {
         "id": "n1-grammar-format-025-q10",
         "grammarId": "n1-grammar-format-025",
-        "question": "いつともなく、雨は上がっていた。",
+        "question": "いつ___、雨は上がっていた。",
         "choices": [
           "ともなく",
           "極まる",
@@ -764,7 +764,7 @@ export default {
       {
         "id": "n1-grammar-format-026-q07",
         "grammarId": "n1-grammar-format-026",
-        "question": "プロであれアマチュアであれ、全力を尽くすのがマナーだ。",
+        "question": "プロ___アマチュアであれ、全力を尽くすのがマナーだ。",
         "choices": [
           "であれ",
           "とあれば",
@@ -790,7 +790,7 @@ export default {
       {
         "id": "n1-grammar-format-026-q09",
         "grammarId": "n1-grammar-format-026",
-        "question": "男であれ女であれ、平等に機会が与えられるべきだ。",
+        "question": "男___女であれ、平等に機会が与えられるべきだ。",
         "choices": [
           "であれ",
           "と相まって",
@@ -803,7 +803,7 @@ export default {
       {
         "id": "n1-grammar-format-026-q10",
         "grammarId": "n1-grammar-format-026",
-        "question": "どこであれ、君が望む場所へ連れて行こう。",
+        "question": "どこ___、君が望む場所へ連れて行こう。",
         "choices": [
           "であれ",
           "を皮切りに",
@@ -939,7 +939,7 @@ export default {
       {
         "id": "n1-grammar-format-027-q10",
         "grammarId": "n1-grammar-format-027",
-        "question": "国の一大事とあれば、国民全員が協力しなければならない。",
+        "question": "国の一大事___、国民全員が協力しなければならない。",
         "choices": [
           "とあれば",
           "ならいざ知らず",
@@ -1010,7 +1010,7 @@ export default {
       {
         "id": "n1-grammar-format-028-q05",
         "grammarId": "n1-grammar-format-028",
-        "question": "子供ならいざ知らず、大人が公の場であんな我儘を言うべきではない。",
+        "question": "子供___、大人が公の場であんな我儘を言うべきではない。",
         "choices": [
           "ならいざ知らず",
           "んばかりに",
@@ -1062,7 +1062,7 @@ export default {
       {
         "id": "n1-grammar-format-028-q09",
         "grammarId": "n1-grammar-format-028",
-        "question": "自分一人ならいざ知らず、家族を養うとなると話は別だ。",
+        "question": "自分一人___、家族を養うとなると話は別だ。",
         "choices": [
           "ならいざ知らず",
           "にかかわる",
@@ -1146,7 +1146,7 @@ export default {
       {
         "id": "n1-grammar-format-029-q05",
         "grammarId": "n1-grammar-format-029",
-        "question": "あふれんばかりの情熱をもって仕事に立ち向かう。",
+        "question": "あふれ___情熱をもって仕事に立ち向かう。",
         "choices": [
           "んばかりの",
           "と相まって",
@@ -1159,7 +1159,7 @@ export default {
       {
         "id": "n1-grammar-format-029-q06",
         "grammarId": "n1-grammar-format-029",
-        "question": "「出て行け」と言わんばかりの態度を取られた。",
+        "question": "「出て行け」と言わ___態度を取られた。",
         "choices": [
           "んばかりの",
           "を皮切りに",
@@ -1172,7 +1172,7 @@ export default {
       {
         "id": "n1-grammar-format-029-q07",
         "grammarId": "n1-grammar-format-029",
-        "question": "破裂せんばかりに膨らんだ風船。",
+        "question": "破裂せ___膨らんだ風船。",
         "choices": [
           "んばかりに",
           "をもって",
@@ -1185,7 +1185,7 @@ export default {
       {
         "id": "n1-grammar-format-029-q08",
         "grammarId": "n1-grammar-format-029",
-        "question": "身を乗り出さんばかりにして話を聞いていた。",
+        "question": "身を乗り出さ___話を聞いていた。",
         "choices": [
           "んばかりにして",
           "に堪えなくて",
@@ -1198,7 +1198,7 @@ export default {
       {
         "id": "n1-grammar-format-029-q09",
         "grammarId": "n1-grammar-format-029",
-        "question": "飛び上がらんばかりの喜びを全身で表現した。",
+        "question": "飛び上がら___喜びを全身で表現した。",
         "choices": [
           "んばかりの",
           "なしに",
@@ -1211,7 +1211,7 @@ export default {
       {
         "id": "n1-grammar-format-029-q10",
         "grammarId": "n1-grammar-format-029",
-        "question": "溢れんばかりの涙を浮かべて感謝の言葉を述べた。",
+        "question": "溢れ___涙を浮かべて感謝の言葉を述べた。",
         "choices": [
           "んばかりの",
           "とあれば",
@@ -1282,7 +1282,7 @@ export default {
       {
         "id": "n1-grammar-format-030-q05",
         "grammarId": "n1-grammar-format-030",
-        "question": "雑誌をめくるともなくめくっていたら、面白い記事を見つけた。",
+        "question": "雑誌をめくる___めくっていたら、面白い記事を見つけた。",
         "choices": [
           "ともなく",
           "とあれば",
@@ -1334,7 +1334,7 @@ export default {
       {
         "id": "n1-grammar-format-030-q09",
         "grammarId": "n1-grammar-format-030",
-        "question": "昔のアルバムを見るともなくめくっていたら、懐かしい写真が出てきた。",
+        "question": "昔のアルバムを見る___めくっていたら、懐かしい写真が出てきた。",
         "choices": [
           "ともなく",
           "と相まって",
@@ -1347,7 +1347,7 @@ export default {
       {
         "id": "n1-grammar-format-030-q10",
         "grammarId": "n1-grammar-format-030",
-        "question": "隣の人の会話を聞くともなく耳に入ってきた。",
+        "question": "隣の人の会話を聞く___耳に入ってきた。",
         "choices": [
           "ともなく",
           "を皮切りに",

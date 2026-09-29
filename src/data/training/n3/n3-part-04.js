@@ -187,7 +187,7 @@ export default {
         "id": "n3-grammar-format-033-q02",
         "grammarId": "n3-grammar-format-033",
         "question": "人間___、失敗することもあるよ。",
-        "choices": ["だもの", "のもの", "なもの", "のもの"],
+        "choices": ["だもの", "のもの", "なもの", "というもの"],
         "answer": 0,
         "explanation": "Danh từ đi với 「だもの」 (hoặc だものだ) mang ý nghĩa 'vì là... nên... (đương nhiên)'. 'Vì là con người nên cũng có lúc thất bại'."
       },

@@ -777,7 +777,7 @@ export default {
       {
         "id": "n3-grammar-format-096-q08",
         "grammarId": "n3-grammar-format-096",
-        "question": "上司に急げ___と言われた。",
+        "question": "上司に急げ___言われた。",
         "choices": [
           "と",
           "を",

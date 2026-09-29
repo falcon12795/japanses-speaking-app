@@ -726,7 +726,7 @@ export default {
             {
                 "id": "n3-grammar-format-049-q05",
                 "grammarId": "n3-grammar-format-049",
-                "question": "あんな高い服、買わなければ___よかった。",
+                "question": "あんな高い服、買わなければ___。",
                 "choices": ["よかった", "いい", "よさそう", "いいのに"],
                 "answer": 0,
                 "explanation": "Cấu trúc phủ định tiếc nuối 「〜なければよかった」 ('biết thế không mua bộ đồ đắt đỏ đó')."

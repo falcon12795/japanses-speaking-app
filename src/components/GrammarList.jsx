@@ -146,7 +146,7 @@ export default function GrammarList({ onSelectGrammar }) {
 
     const ids = selectedGrammarIds.join(",");
 
-    navigate(`/grammar-training?ids=${encodeURIComponent(ids)}`);
+    navigate(`/training?type=grammar&ids=${encodeURIComponent(ids)}`);
   };
 
   return (

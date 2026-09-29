@@ -1444,7 +1444,7 @@ export default {
       {
         "id": "n5-grammar-format-011-q07",
         "grammarId": "n5-grammar-format-011",
-        "question": "写真を___撮ります。",
+        "question": "写真___撮ります。",
         "choices": [
           "を",
           "が",

@@ -24,7 +24,7 @@ import LanguageSelector, { LANGUAGES } from "./components/LanguageSelector";
 import { LanguageProvider, useLanguage } from "./contexts/LanguageContext";
 import GrammarList from "./components/GrammarList";
 import GrammarDetail from "./components/GrammarDetail";
-import GrammarTraining from "./components/GrammarTraining";
+import Training from "./components/Training";
 import { buildVocabularyTopics, filterWordsByStatus } from "./utils/buildVocabularyTopics";
 
 function Sidebar({ sidebarOpen, setSidebarOpen, language, onChangeLang }) {
@@ -852,8 +852,8 @@ export default function App() {
             }
           />
           <Route
-            path="/grammar-training"
-            element={<GrammarTraining />}
+            path="/training"
+            element={<Training />}
           />
 
           <Route

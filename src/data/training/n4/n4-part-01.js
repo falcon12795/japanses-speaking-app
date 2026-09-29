@@ -445,7 +445,7 @@ export default {
           "かけられます",
           "かけます",
           "かけさせます",
-          "かけられます"
+          "かけれます"
         ],
         "answer": 0,
         "explanation": "Động từ かける (Nhóm 2) chuyển thể khả năng bằng cách + られる -> かけられます."
@@ -471,7 +471,7 @@ export default {
           "食べられます",
           "食べます",
           "食べさせます",
-          "食べられます"
+          "食べれます"
         ],
         "answer": 0,
         "explanation": "Động từ 食べる (Nhóm 2) sang thể khả năng thành 食べられる/食べられます."
@@ -484,7 +484,7 @@ export default {
           "来られます",
           "来ます",
           "来させます",
-          "来られます"
+          "来れます"
         ],
         "answer": 0,
         "explanation": "Động từ 来る (Nhóm 3) chuyển thể khả năng thành こられる (来られます)."

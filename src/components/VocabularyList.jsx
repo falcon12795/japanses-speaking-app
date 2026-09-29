@@ -1,12 +1,12 @@
 import { useMemo, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 import { useLanguage } from "../contexts/LanguageContext";
 
 import Badge from "./common/Badge";
+import Button from "./common/Button";
 import EmptyState from "./common/EmptyState";
 import FilterBar from "./common/FilterBar";
-import ListCard from "./common/ListCard";
 import Panel from "./common/Panel";
 import ProgressBar from "./common/ProgressBar";
 import CollapseGroup from "./common/CollapseGroup";
@@ -138,11 +138,13 @@ export default function VocabularyList({
   progress = {},
   onSelectTopic = () => { },
 }) {
+  const navigate = useNavigate();
   const { vocabulary } = useLanguage();
   const [searchParams, setSearchParams] =
     useSearchParams();
 
   const [expandedSubjects, setExpandedSubjects] = useState({});
+  const [selectedTopicIds, setSelectedTopicIds] = useState([]);
 
   const availableLevels = useMemo(
     () => getAvailableLevels(vocabulary),
@@ -181,11 +183,47 @@ export default function VocabularyList({
 
 
   const setLevel = (level) => {
+    setSelectedTopicIds([]);
     setSearchParams({
       level,
       status: "all",
       subject: "all",
     });
+  };
+
+  const isTopicSelected = (topicId) => selectedTopicIds.includes(topicId);
+
+  const toggleTopicSelection = (event, topicId) => {
+    event.stopPropagation();
+
+    setSelectedTopicIds((prev) =>
+      prev.includes(topicId)
+        ? prev.filter((id) => id !== topicId)
+        : [...prev, topicId]
+    );
+  };
+
+  const isSubjectFullySelected = (topics) =>
+    topics.length > 0 &&
+    topics.every((topic) => selectedTopicIds.includes(topic.id));
+
+  const handleSelectAllSubject = (topics) => {
+    const topicIds = topics.map((topic) => topic.id);
+    const allSelected = topicIds.every((id) => selectedTopicIds.includes(id));
+
+    if (allSelected) {
+      setSelectedTopicIds((prev) => prev.filter((id) => !topicIds.includes(id)));
+    } else {
+      setSelectedTopicIds((prev) => [...new Set([...prev, ...topicIds])]);
+    }
+  };
+
+  const startTraining = () => {
+    if (selectedTopicIds.length === 0) return;
+
+    const ids = selectedTopicIds.join(",");
+
+    navigate(`/training?type=vocabulary&topics=${encodeURIComponent(ids)}`);
   };
 
   const setStatus = (status) => {
@@ -350,12 +388,23 @@ export default function VocabularyList({
 
   return (
     <Panel>
-      <div className="vocabulary-list-header">
-        <h2>Vocabulary Library</h2>
+      <div className="vocabulary-list-top-row">
+        <div className="vocabulary-list-header">
+          <h2>Vocabulary Library</h2>
 
-        <p className="subtitle">
-          Choose a JLPT level and topic to start learning vocabulary.
-        </p>
+          <p className="subtitle">
+            Choose a JLPT level and topic to start learning vocabulary.
+          </p>
+        </div>
+
+        <Button
+          variant="primary"
+          className="vocabulary-training-button"
+          disabled={selectedTopicIds.length === 0}
+          onClick={startTraining}
+        >
+          Training
+        </Button>
       </div>
 
       <FilterBar
@@ -373,6 +422,13 @@ export default function VocabularyList({
         buttonClassName="status-button"
       />
 
+      {selectedTopicIds.length > 0 && (
+        <div className="vocabulary-selected-summary">
+          Selected {selectedTopicIds.length} topic
+          {selectedTopicIds.length > 1 ? "s" : ""}
+        </div>
+      )}
+
       <div className="grammar-lesson-list">
 
         {subjects.map((subject) => {
@@ -386,6 +442,25 @@ export default function VocabularyList({
             <CollapseGroup
               key={subject.subject}
               title={subject.subject}
+              headerActions={
+                <Button
+                  variant={
+                    isSubjectFullySelected(subject.topics)
+                      ? "primary"
+                      : "secondary"
+                  }
+                  size="small"
+                  onClick={(event) => {
+                    event.stopPropagation();
+
+                    handleSelectAllSubject(subject.topics);
+                  }}
+                >
+                  {isSubjectFullySelected(subject.topics)
+                    ? "✓ Selected All"
+                    : "Select All"}
+                </Button>
+              }
               count={`${subject.topics.length} ${subject.topics.length === 1 ? "topic" : "topics"
                 }`}
               isOpen={expanded}
@@ -396,47 +471,75 @@ export default function VocabularyList({
                 <div className="lesson-group-content">
 
                   {subject.topics.map(
-                    (item) => (
+                    (item) => {
+                      const selected = isTopicSelected(item.id);
 
-                      <ListCard
-                        key={item.topic}
-                        className="vocabulary-topic-card"
-                        onClick={() =>
-                          onSelectTopic(
-                            item.id,
-                            statusFilter
-                          )
-                        }
-                      >
-                        <div className="vocabulary-topic-main">
-                          <span className="vocabulary-topic-name">
-                            <span className="dialogue-status-icon">
-                              {getTopicStatusIcon(item.status)}
-                            </span>
+                      return (
+                        <div
+                          key={item.topic}
+                          className={`list-card vocabulary-topic-card vocabulary-selectable-card ${
+                            selected ? "vocabulary-selected-card" : ""
+                          }`}
+                          role="button"
+                          tabIndex={0}
+                          onClick={() =>
+                            onSelectTopic(
+                              item.id,
+                              statusFilter
+                            )
+                          }
+                          onKeyDown={(event) => {
+                            if (event.key === "Enter") {
+                              onSelectTopic(item.id, statusFilter);
+                            }
+                          }}
+                        >
+                          <div className="vocabulary-topic-card-content">
+                            <div className="vocabulary-topic-main">
+                              <span className="vocabulary-topic-name">
+                                <span className="dialogue-status-icon">
+                                  {getTopicStatusIcon(item.status)}
+                                </span>
 
-                            {item.topic}
-                          </span>
+                                {item.topic}
+                              </span>
 
-                          <Badge variant="primary" className="vocabulary-topic-count">
-                            {item.count} words
-                          </Badge>
+                              <Badge variant="primary" className="vocabulary-topic-count">
+                                {item.count} words
+                              </Badge>
+                            </div>
+
+                            <div className="vocabulary-topic-meta">
+                              <span>✅ {item.completedCount}</span>
+                              <span>⭐ {item.favoriteCount}</span>
+                              <span>🔁 {item.reviewCount}</span>
+                              <span>{item.progressPercent}%</span>
+                            </div>
+
+                            <ProgressBar
+                              value={item.progressPercent}
+                              className="topic-progress-bar"
+                              fillClassName="topic-progress-fill"
+                            />
+                          </div>
+
+                          <button
+                            type="button"
+                            className={`vocabulary-select-button ${
+                              selected ? "selected" : ""
+                            }`}
+                            aria-label={
+                              selected
+                                ? `Unselect ${item.topic}`
+                                : `Select ${item.topic}`
+                            }
+                            onClick={(event) =>
+                              toggleTopicSelection(event, item.id)
+                            }
+                          />
                         </div>
-
-                        <div className="vocabulary-topic-meta">
-                          <span>✅ {item.completedCount}</span>
-                          <span>⭐ {item.favoriteCount}</span>
-                          <span>🔁 {item.reviewCount}</span>
-                          <span>{item.progressPercent}%</span>
-                        </div>
-
-                        <ProgressBar
-                          value={item.progressPercent}
-                          className="topic-progress-bar"
-                          fillClassName="topic-progress-fill"
-                        />
-                      </ListCard>
-
-                    ))}
+                      );
+                    })}
 
                   {
                     subject.topics.length === 0 && (

@@ -356,7 +356,7 @@ export default {
       {
         "id": "n5-grammar-format-023-q07",
         "grammarId": "n5-grammar-format-023",
-        "question": "妹は大学で法律を教えて___います。",
+        "question": "妹は大学で法律を教え___います。",
         "choices": [
           "て",
           "で",
@@ -958,7 +958,7 @@ export default {
       {
         "id": "n5-grammar-format-028-q01",
         "grammarId": "n5-grammar-format-028",
-        "question": "私の趣味は写真を撮る___ことです。",
+        "question": "私の趣味は写真を撮る___です。",
         "choices": [
           "こと",
           "もの",

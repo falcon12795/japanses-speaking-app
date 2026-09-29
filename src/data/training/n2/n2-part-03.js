@@ -83,7 +83,7 @@ export default {
       },
       {
         "id": "n2-grammar-041-q07",
-        "grammarId": "n2-grammar-047",
+        "grammarId": "n2-grammar-041",
         "question": "確かな証拠がない以上、どちらの主張が正しいか判断し___。",
         "choices": [
           "かねる",
@@ -550,7 +550,7 @@ export default {
       {
         "id": "n2-grammar-045-q01",
         "grammarId": "n2-grammar-045",
-        "question": "今度の全国大会では、絶対に優勝してみせるという強い決意表明をした。",
+        "question": "今度の全国大会では、絶対に優勝して___という強い決意表明をした。",
         "choices": [
           "みせる",
           "すぎる",
@@ -667,7 +667,7 @@ export default {
       {
         "id": "n2-grammar-045-q10",
         "grammarId": "n2-grammar-045",
-        "question": "彼女は悔し涙を拭きながら、「次は必ず勝ってみせる」と力強く言った。",
+        "question": "彼女は悔し涙を拭きながら、「次は必ず勝って___」と力強く言った。",
         "choices": [
           "みせる",
           "わけにはいかない",
@@ -1669,7 +1669,7 @@ export default {
           "とはいうものの",
           "ことだから",
           "だけに",
-          "だけに"
+          "わりに"
         ],
         "answer": 0,
         "explanation": "Tuy là đầu bếp chuyên nghiệp nhưng..."

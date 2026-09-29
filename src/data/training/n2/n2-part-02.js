@@ -836,7 +836,7 @@ export default {
       {
         "id": "n2-grammar-027-q02",
         "grammarId": "n2-grammar-027",
-        "question": "毎日の通勤ラッシュの満員電車を、少しでもすいてくれない___ものか。",
+        "question": "毎日の通勤ラッシュの満員電車を、少しでもすいてくれない___。",
         "choices": [
           "ものか",
           "かねる",
@@ -862,7 +862,7 @@ export default {
       {
         "id": "n2-grammar-027-q04",
         "grammarId": "n2-grammar-027",
-        "question": "高くて買えない憧れの高級車を、もう少し安く購入できない___ものか。",
+        "question": "高くて買えない憧れの高級車を、もう少し安く購入できない___。",
         "choices": [
           "ものか",
           "にすぎない",
@@ -888,7 +888,7 @@ export default {
       {
         "id": "n2-grammar-027-q06",
         "grammarId": "n2-grammar-027",
-        "question": "忘れがちな漢字の書き取りを、楽しく簡単に覚える方法はない___ものか。",
+        "question": "忘れがちな漢字の書き取りを、楽しく簡単に覚える方法はない___。",
         "choices": [
           "ものか",
           "かねる",
@@ -901,7 +901,7 @@ export default {
       {
         "id": "n2-grammar-027-q07",
         "grammarId": "n2-grammar-027",
-        "question": "近所から聞こえてくる夜間の工事の騒音を、何とか静かにできない___ものか。",
+        "question": "近所から聞こえてくる夜間の工事の騒音を、何とか静かにできない___。",
         "choices": [
           "ものか",
           "ほかない",
@@ -927,7 +927,7 @@ export default {
       {
         "id": "n2-grammar-027-q09",
         "grammarId": "n2-grammar-027",
-        "question": "運動不足を解消するために、毎朝の早起きを習慣にできない___ものか。",
+        "question": "運動不足を解消するために、毎朝の早起きを習慣にできない___。",
         "choices": [
           "ものか",
           "べきではない",
@@ -2182,7 +2182,7 @@ export default {
       {
         "id": "n2-grammar-037-q01",
         "grammarId": "n2-grammar-037",
-        "question": "論文の文章を書いては消し、書いては消して、ようやく完成させた。",
+        "question": "論文の文章を書い___消し、書いては消して、ようやく完成させた。",
         "choices": [
           "ては",
           "ながら",
@@ -2195,7 +2195,7 @@ export default {
       {
         "id": "n2-grammar-037-q02",
         "grammarId": "n2-grammar-037",
-        "question": "雨が降っては休み、晴れては作業を進めるという過酷な工事だった。",
+        "question": "雨が降っ___休み、晴れては作業を進めるという過酷な工事だった。",
         "choices": [
           "ては",
           "から",
@@ -2208,7 +2208,7 @@ export default {
       {
         "id": "n2-grammar-037-q03",
         "grammarId": "n2-grammar-037",
-        "question": "失敗しては反省し、反省しては新しい方法を試すことが大切だ。",
+        "question": "失敗し___反省し、反省しては新しい方法を試すことが大切だ。",
         "choices": [
           "ては",
           "うち",
@@ -2221,7 +2221,7 @@ export default {
       {
         "id": "n2-grammar-037-q04",
         "grammarId": "n2-grammar-037",
-        "question": "買っては読まず、買っては本棚の肥やしにする悪癖が直らない。",
+        "question": "買っ___読まず、買っては本棚の肥やしにする悪癖が直らない。",
         "choices": [
           "ては",
           "反面",
@@ -2234,7 +2234,7 @@ export default {
       {
         "id": "n2-grammar-037-q05",
         "grammarId": "n2-grammar-037",
-        "question": "食べては寝て、食べては寝る生活をしていたら太ってしまった。",
+        "question": "食べ___寝て、食べては寝る生活をしていたら太ってしまった。",
         "choices": [
           "ては",
           "そばから",
@@ -2247,7 +2247,7 @@ export default {
       {
         "id": "n2-grammar-037-q06",
         "grammarId": "n2-grammar-037",
-        "question": "悩んでは相談し、相談してはまた悩む日々が続いている。",
+        "question": "悩んでは相談し、相談し___また悩む日々が続いている。",
         "choices": [
           "ては",
           "ついで",
@@ -2260,7 +2260,7 @@ export default {
       {
         "id": "n2-grammar-037-q07",
         "grammarId": "n2-grammar-037",
-        "question": "作っては壊し、作っては壊すことで技術が磨かれていく。",
+        "question": "作っ___壊し、作っては壊すことで技術が磨かれていく。",
         "choices": [
           "ては",
           "おきに",
@@ -2273,7 +2273,7 @@ export default {
       {
         "id": "n2-grammar-037-q08",
         "grammarId": "n2-grammar-037",
-        "question": "聞いては忘れ、聞いては忘れるので、メモを取るようにしている。",
+        "question": "聞い___忘れ、聞いては忘れるので、メモを取るようにしている。",
         "choices": [
           "ては",
           "わりに",
@@ -2286,7 +2286,7 @@ export default {
       {
         "id": "n2-grammar-037-q09",
         "grammarId": "n2-grammar-037",
-        "question": "注意されては直し、直されてはまた別のミスをするの繰り返しだ。",
+        "question": "注意され___直し、直されてはまた別のミスをするの繰り返しだ。",
         "choices": [
           "ては",
           "とたん",
@@ -2299,7 +2299,7 @@ export default {
       {
         "id": "n2-grammar-037-q10",
         "grammarId": "n2-grammar-037",
-        "question": "登っては下り、下っては登る険しい山道をようやく登りきった。",
+        "question": "登っ___下り、下っては登る険しい山道をようやく登りきった。",
         "choices": [
           "ては",
           "反面",
@@ -2311,7 +2311,7 @@ export default {
       }
     ]
   },
-  "n2-grammar-0238": {
+  "n2-grammar-038": {
     "grammarId": "n2-grammar-038",
     "title": "～てこそ",
     "questions": [
@@ -2356,7 +2356,7 @@ export default {
       },
       {
         "id": "n2-grammar-038-q04",
-        "grammarId": "n2-grammar-034",
+        "grammarId": "n2-grammar-038",
         "question": "親になって___、初めて親の大変さやありがたみが身に染みてわかる。",
         "choices": [
           "こそ",

@@ -357,7 +357,7 @@ export default {
             },
             {
                 "id": "n4-grammar-format-033-q07",
-                "grammarId": "n4-grammar-format-037",
+                "grammarId": "n4-grammar-format-033",
                 "question": "彼の手紙によると、新しい仕事はとても___。",
                 "choices": [
                     "忙しいそうです",
@@ -983,7 +983,7 @@ export default {
                     "るところ",
                     "たところ",
                     "いるところ",
-                    "るところ"
+                    "るとき"
                 ],
                 "answer": 2,
                 "explanation": "V-ている + ところです chỉ hành động đang diễn ra đúng lúc này."
@@ -1193,7 +1193,7 @@ export default {
             {
                 "id": "n4-grammar-format-039-q08",
                 "grammarId": "n4-grammar-format-039",
-                "question": "この靴は買ったばかりですが、もう壊れてしまった。",
+                "question": "この靴は買った___ですが、もう壊れてしまった。",
                 "choices": [
                     "ばかり",
                     "ところ",

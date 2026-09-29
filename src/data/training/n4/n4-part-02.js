@@ -395,7 +395,7 @@ export default {
                 "explanation": "Lịch sự kiện công ty: 予定です."
             },
             {
-                "id": "n4-grammar-format-010-q10",
+                "id": "n4-grammar-format-013-q10",
                 "grammarId": "n4-grammar-format-013",
                 "question": "山田さんは来週の月曜日に退院する___です。",
                 "choices": [

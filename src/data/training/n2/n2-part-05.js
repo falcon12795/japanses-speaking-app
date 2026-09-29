@@ -440,7 +440,7 @@ export default {
       {
         "id": "n2-grammar-084-q03",
         "grammarId": "n2-grammar-084",
-        "question": "何かにつけ___につけ、彼女は私を助けてくれる。",
+        "question": "何か___、彼女は私を助けてくれる。",
         "choices": [
           "につけ",
           "ても差し支えない",
@@ -2401,7 +2401,7 @@ export default {
           "というものでもない",
           "ところをみると",
           "ものがある",
-          "というものでもない"
+          "にほかならない"
         ],
         "answer": 0,
         "explanation": "Không phải cứ văn dài là chi tiết."

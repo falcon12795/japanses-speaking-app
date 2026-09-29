@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Panel from "./common/Panel";
 import Button from "./common/Button";
+import { useLanguage } from "../contexts/LanguageContext";
+import { buildVocabularyTopics } from "../utils/buildVocabularyTopics";
 import { N1_GRAMMAR_QUESTIONS } from "../data/training/n1";
 import { N2_GRAMMAR_QUESTIONS } from "../data/training/n2";
 import { N3_GRAMMAR_QUESTIONS } from "../data/training/n3";
@@ -12,29 +14,29 @@ function shuffleArray(array) {
     return [...array].sort(() => Math.random() - 0.5);
 }
 
-function groupQuestionsByGrammar(questions) {
+function groupQuestionsByGroup(questions) {
     return questions.reduce((grouped, question) => {
-        const grammarId = question.grammarId;
+        const groupId = question.groupId;
 
-        if (!grouped[grammarId]) {
-            grouped[grammarId] = [];
+        if (!grouped[groupId]) {
+            grouped[groupId] = [];
         }
 
-        grouped[grammarId].push(question);
+        grouped[groupId].push(question);
 
         return grouped;
     }, {});
 }
 
 function pickMixedQuestions(questions, limit = 10) {
-    const grouped = groupQuestionsByGrammar(questions);
+    const grouped = groupQuestionsByGroup(questions);
 
-    const grammarIds = shuffleArray(Object.keys(grouped));
+    const groupIds = shuffleArray(Object.keys(grouped));
 
     const shuffledGroups = Object.fromEntries(
-        grammarIds.map((grammarId) => [
-            grammarId,
-            shuffleArray(grouped[grammarId]),
+        groupIds.map((groupId) => [
+            groupId,
+            shuffleArray(grouped[groupId]),
         ])
     );
 
@@ -47,12 +49,12 @@ function pickMixedQuestions(questions, limit = 10) {
     ) {
         hasRemainingQuestions = false;
 
-        for (const grammarId of grammarIds) {
+        for (const groupId of groupIds) {
             if (pickedQuestions.length >= limit) {
                 break;
             }
 
-            const group = shuffledGroups[grammarId];
+            const group = shuffledGroups[groupId];
 
             if (group.length > 0) {
                 pickedQuestions.push(group.shift());
@@ -72,55 +74,122 @@ function getAnswerIndex(question) {
     return question.choices.findIndex((choice) => choice === question.answer);
 }
 
-export default function GrammarTraining() {
+function buildGrammarQuestions(grammarIds) {
+    return grammarIds.flatMap((grammarId) => {
+        var quizGroup;
+        switch (grammarId.substring(0, 2).toUpperCase()) {
+            case "N1":
+                quizGroup = N1_GRAMMAR_QUESTIONS[grammarId];
+                break;
+            case "N2":
+                quizGroup = N2_GRAMMAR_QUESTIONS[grammarId];
+                break;
+            case "N3":
+                quizGroup = N3_GRAMMAR_QUESTIONS[grammarId];
+                break;
+            case "N4":
+                quizGroup = N4_GRAMMAR_QUESTIONS[grammarId];
+                break;
+            default:
+                quizGroup = N5_GRAMMAR_QUESTIONS[grammarId];
+                break;
+        }
+
+        if (!quizGroup?.questions?.length) {
+            return [];
+        }
+
+        return quizGroup.questions.map((question) => ({
+            ...question,
+            groupId: grammarId,
+        }));
+    });
+}
+
+// One fill-in-the-blank question per word: pick the word that fits the
+// example sentence, with distractors sampled from other words of the same level.
+function buildVocabularyQuestions(topics, vocabulary) {
+    const wordPoolByLevel = new Map();
+
+    const getWordPool = (level) => {
+        if (!wordPoolByLevel.has(level)) {
+            wordPoolByLevel.set(
+                level,
+                [
+                    ...new Set(
+                        vocabulary
+                            .filter((item) => item.level === level)
+                            .map((item) => item.japanese)
+                            .filter(Boolean)
+                    ),
+                ]
+            );
+        }
+
+        return wordPoolByLevel.get(level);
+    };
+
+    return topics.flatMap((topic) => {
+        const wordPool = getWordPool(topic.level);
+
+        return topic.words
+            .filter((word) => word.example?.includes(word.japanese))
+            .map((word) => {
+                const distractorChoices = shuffleArray(
+                    wordPool.filter((japanese) => japanese !== word.japanese)
+                ).slice(0, 3);
+
+                const choices = shuffleArray([word.japanese, ...distractorChoices]);
+
+                const readingSuffix =
+                    word.reading && word.reading !== word.japanese
+                        ? ` (${word.reading})`
+                        : "";
+
+                return {
+                    id: `${word.id}-quiz`,
+                    groupId: topic.id,
+                    question: word.example.replace(word.japanese, "___"),
+                    choices,
+                    answer: choices.indexOf(word.japanese),
+                    explanation: `${word.japanese}${readingSuffix} — ${word.meaning}${
+                        word.exampleVietnamese ? ` (${word.exampleVietnamese})` : ""
+                    }`,
+                };
+            });
+    });
+}
+
+export default function Training() {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
+    const { vocabulary } = useLanguage();
     const [answers, setAnswers] = useState({});
     const [submitted, setSubmitted] = useState(false);
     const [shuffleKey, setShuffleKey] = useState(0);
-    // const [previousQuestionIds, setPreviousQuestionIds] = useState([]);
     const [usedQuestionIds, setUsedQuestionIds] = useState([]);
-    const selectedGrammarIds = useMemo(() => {
-        const ids = searchParams.get("ids") || "";
+
+    const mode = searchParams.get("type") === "vocabulary" ? "vocabulary" : "grammar";
+
+    const selectedIds = useMemo(() => {
+        const ids = searchParams.get(mode === "vocabulary" ? "topics" : "ids") || "";
 
         return ids
             .split(",")
             .map((id) => id.trim())
             .filter(Boolean);
-    }, [searchParams]);
+    }, [searchParams, mode]);
 
     const questions = useMemo(() => {
-        const allQuestions = selectedGrammarIds.flatMap((grammarId) => {
-            var quizGroup
-            switch (grammarId.substring(0, 2).toUpperCase()) {
-                case "N1":
-                    quizGroup = N1_GRAMMAR_QUESTIONS[grammarId];
-                    break;
-                case "N2":
-                    quizGroup = N2_GRAMMAR_QUESTIONS[grammarId];
-                    break;
-                case "N3":
-                    quizGroup = N3_GRAMMAR_QUESTIONS[grammarId];
-                    break;
-                case "N4":
-                    quizGroup = N4_GRAMMAR_QUESTIONS[grammarId];
-                    break;
-                default:
-                    quizGroup = N5_GRAMMAR_QUESTIONS[grammarId];
-                    break;
-            }
-            
-
-            if (!quizGroup?.questions?.length) {
-                return [];
-            }
-
-            return quizGroup.questions.map((question) => ({
-                ...question,
-                grammarId,
-                grammarTitle: quizGroup.title,
-            }));
-        });
+        const allQuestions =
+            mode === "vocabulary"
+                ? buildVocabularyQuestions(
+                    buildVocabularyTopics(vocabulary).filter((topic) =>
+                        selectedIds.includes(topic.id)
+                    ),
+                    vocabulary
+                )
+                : buildGrammarQuestions(selectedIds);
 
         if (allQuestions.length === 0) {
             return [];
@@ -135,7 +204,7 @@ export default function GrammarTraining() {
         }
 
         return pickMixedQuestions(availableQuestions, 10);
-    }, [selectedGrammarIds, usedQuestionIds, shuffleKey]);
+    }, [mode, selectedIds, vocabulary, usedQuestionIds, shuffleKey]);
 
     const handleSelectAnswer = (questionId, choiceIndex) => {
         if (submitted) return;
@@ -192,12 +261,16 @@ export default function GrammarTraining() {
         }, 0);
     }, [submitted, questions, answers]);
 
-    if (selectedGrammarIds.length === 0) {
+    const pageTitle = mode === "vocabulary" ? "Vocabulary Training" : "Grammar Training";
+
+    if (selectedIds.length === 0) {
         return (
             <Panel>
-                <h2>Grammar Training</h2>
+                <h2>{pageTitle}</h2>
                 <p className="subtitle">
-                    No grammar pattern has been selected.
+                    {mode === "vocabulary"
+                        ? "No vocabulary topic has been selected."
+                        : "No grammar pattern has been selected."}
                 </p>
 
                 <div className="buttons">
@@ -212,10 +285,12 @@ export default function GrammarTraining() {
     if (questions.length === 0) {
         return (
             <Panel>
-                <h2>Grammar Training</h2>
+                <h2>{pageTitle}</h2>
 
                 <p className="subtitle">
-                    No questions found for the selected grammar patterns.
+                    {mode === "vocabulary"
+                        ? "No questions found for the selected vocabulary topics."
+                        : "No questions found for the selected grammar patterns."}
                 </p>
             </Panel>
         );
@@ -225,7 +300,7 @@ export default function GrammarTraining() {
         <Panel className="grammar-training-panel">
             <div className="grammar-training-header">
                 <div>
-                    <h2>Grammar Training</h2>
+                    <h2>{pageTitle}</h2>
                 </div>
 
                 <Button

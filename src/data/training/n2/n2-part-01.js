@@ -478,7 +478,7 @@ export default {
       },
       {
         "id": "n2-grammar-004-q06",
-        "grammarId": "n2-grammar-006",
+        "grammarId": "n2-grammar-004",
         "question": "彼は毎晩遅くまで残業している___、仕事が一向に進んでいない。",
         "choices": [
           "一方で",
@@ -1124,7 +1124,7 @@ export default {
         "choices": [
           "一方で",
           "どころではない",
-          "一方で",
+          "反面",
           "からすると"
         ],
         "answer": 0,
@@ -1163,7 +1163,7 @@ export default {
         "choices": [
           "一方で",
           "どころではない",
-          "一方で",
+          "反面",
           "からすると"
         ],
         "answer": 0,
@@ -1202,7 +1202,7 @@ export default {
         "choices": [
           "一方で",
           "どころではない",
-          "一方で",
+          "反面",
           "からすると"
         ],
         "answer": 0,
@@ -1260,7 +1260,7 @@ export default {
         "choices": [
           "一方で",
           "どころではない",
-          "一方で",
+          "反面",
           "からすると"
         ],
         "answer": 1,
@@ -1299,7 +1299,7 @@ export default {
         "choices": [
           "一方で",
           "どころではない",
-          "一方で",
+          "反面",
           "からすると"
         ],
         "answer": 1,
@@ -1338,7 +1338,7 @@ export default {
         "choices": [
           "一方で",
           "どころではない",
-          "一方で",
+          "反面",
           "からすると"
         ],
         "answer": 1,
@@ -2616,7 +2616,7 @@ export default {
       {
         "id": "n2-grammar-020-q03",
         "grammarId": "n2-grammar-020",
-        "question": "街で困っているお年寄りを見かけたら、助けず___はいられません。",
+        "question": "街で困っているお年寄りを見かけたら、助け___はいられません。",
         "choices": [
           "に",
           "ず",
@@ -2629,7 +2629,7 @@ export default {
       {
         "id": "n2-grammar-020-q04",
         "grammarId": "n2-grammar-020",
-        "question": "これほど素晴らしい景色を見たら、写真を撮らず___にはいられない。",
+        "question": "これほど素晴らしい景色を見たら、写真を撮ら___にはいられない。",
         "choices": [
           "に",
           "ず",
@@ -2655,7 +2655,7 @@ export default {
       {
         "id": "n2-grammar-020-q06",
         "grammarId": "n2-grammar-020",
-        "question": "彼は毎日遅くまで一生懸命努力しているのだから、応援せず___にはいられない。",
+        "question": "彼は毎日遅くまで一生懸命努力しているのだから、応援せ___にはいられない。",
         "choices": [
           "ず",
           "に",
@@ -2681,7 +2681,7 @@ export default {
       {
         "id": "n2-grammar-020-q08",
         "grammarId": "n2-grammar-020",
-        "question": "真実を知った以上、皆に知らせず___にはいられなかった。",
+        "question": "真実を知った以上、皆に知らせ___にはいられなかった。",
         "choices": [
           "ず",
           "に",
@@ -2694,7 +2694,7 @@ export default {
       {
         "id": "n2-grammar-020-q09",
         "grammarId": "n2-grammar-020",
-        "question": "これだけひどい社会問題について、何か言わず___にはいられない気持ちだ。",
+        "question": "これだけひどい社会問題について、何か言わ___にはいられない気持ちだ。",
         "choices": [
           "ず",
           "ない",

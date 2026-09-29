@@ -699,7 +699,7 @@ export default {
             {
                 "id": "n3-grammar-format-016-q02",
                 "grammarId": "n3-grammar-format-016",
-                "question": "ちょうど今、家を出かける___ところです。",
+                "question": "ちょうど今、家を出かける___です。",
                 "choices": [
                     "前",
                     "あいだ",
@@ -984,7 +984,7 @@ export default {
             {
                 "id": "n3-grammar-format-018-q03",
                 "grammarId": "n3-grammar-format-018",
-                "question": "試験の結果が心配で___ならない。",
+                "question": "試験の結果が心配で___ない。",
                 "choices": [
                     "なら",
                     "たまら",
@@ -997,7 +997,7 @@ export default {
             {
                 "id": "n3-grammar-format-018-q04",
                 "grammarId": "n3-grammar-format-018",
-                "question": "昨夜は暑くて___たまらなかった。",
+                "question": "昨夜は暑くて___なかった。",
                 "choices": [
                     "たまら",
                     "しょうが",
@@ -1036,7 +1036,7 @@ export default {
             {
                 "id": "n3-grammar-format-018-q07",
                 "grammarId": "n3-grammar-format-018",
-                "question": "故郷の家族に会いたくて___ならない。",
+                "question": "故郷の家族に会いたくて___ない。",
                 "choices": [
                     "なら",
                     "たまら",
@@ -1062,7 +1062,7 @@ export default {
             {
                 "id": "n3-grammar-format-018-q09",
                 "grammarId": "n3-grammar-format-018",
-                "question": "合格できたと知って、嬉しくて___たまらなかった。",
+                "question": "合格できたと知って、嬉しくて___なかった。",
                 "choices": [
                     "たまら",
                     "しょうが",
@@ -1075,7 +1075,7 @@ export default {
             {
                 "id": "n3-grammar-format-018-q10",
                 "grammarId": "n3-grammar-format-018",
-                "question": "これからどうなるのか、不安で___ならない。",
+                "question": "これからどうなるのか、不安で___ない。",
                 "choices": [
                     "なら",
                     "たまら",

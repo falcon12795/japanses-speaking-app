@@ -530,7 +530,7 @@ export default {
             {
                 "id": "n3-grammar-format-087-q02",
                 "grammarId": "n3-grammar-format-087",
-                "question": "若者が増える___のではないでしょうか？",
+                "question": "若者が増える___ではないでしょうか？",
                 "choices": ["の", "こと", "もの", "わけ"],
                 "answer": 0,
                 "explanation": "～のではないでしょうか: Chẳng phải là... hay sao? (cách nói nêu ý kiến lịch sự, gợi ý)."

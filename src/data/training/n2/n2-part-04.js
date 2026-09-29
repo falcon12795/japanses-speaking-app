@@ -1554,7 +1554,7 @@ export default {
       {
         "id": "n2-grammar-072-q05",
         "grammarId": "n2-grammar-072",
-        "question": "会社をサボろう___ものなら、すぐにクビになるだろう。",
+        "question": "会社をサボろう___、すぐにクビになるだろう。",
         "choices": [
           "ものなら",
           "くせに",
@@ -1567,7 +1567,7 @@ export default {
       {
         "id": "n2-grammar-072-q06",
         "grammarId": "n2-grammar-072",
-        "question": "犬に近づこう___ものなら、すぐに吠えられる。",
+        "question": "犬に近づこう___、すぐに吠えられる。",
         "choices": [
           "ものなら",
           "おかげで",
@@ -1580,7 +1580,7 @@ export default {
       {
         "id": "n2-grammar-072-q07",
         "grammarId": "n2-grammar-072",
-        "question": "他人の悪口を言おう___ものなら、あっという間に周りに伝わる。",
+        "question": "他人の悪口を言おう___、あっという間に周りに伝わる。",
         "choices": [
           "ものなら",
           "だけに",
@@ -1593,7 +1593,7 @@ export default {
       {
         "id": "n2-grammar-072-q08",
         "grammarId": "n2-grammar-072",
-        "question": "この機会を逃そう___ものなら、二度とチャンスはない。",
+        "question": "この機会を逃そう___、二度とチャンスはない。",
         "choices": [
           "ものなら",
           "わりに",
@@ -1606,7 +1606,7 @@ export default {
       {
         "id": "n2-grammar-072-q09",
         "grammarId": "n2-grammar-072",
-        "question": "少しでも油断しよう___ものなら、すぐに失敗してしまう。",
+        "question": "少しでも油断しよう___、すぐに失敗してしまう。",
         "choices": [
           "ものなら",
           "おかげで",
@@ -1619,7 +1619,7 @@ export default {
       {
         "id": "n2-grammar-072-q010",
         "grammarId": "n2-grammar-072",
-        "question": "試験中に隣の人の答案を見よう___ものなら、即失格になる。",
+        "question": "試験中に隣の人の答案を見よう___、即失格になる。",
         "choices": [
           "ものなら",
           "だけに",

@@ -58,7 +58,7 @@ export default {
       {
         "id": "n1-grammar-format-001-q05",
         "grammarId": "n1-grammar-format-001",
-        "question": "子どもは家に帰る___なり、鞄を投げて遊びに行った。",
+        "question": "子どもは家に帰る___、鞄を投げて遊びに行った。",
         "choices": [
           "なり",
           "や否や",
@@ -97,7 +97,7 @@ export default {
       {
         "id": "n1-grammar-format-001-q08",
         "grammarId": "n1-grammar-format-001",
-        "question": "彼は通知を受け取る___なり、崩れ落ちるように泣いた。",
+        "question": "彼は通知を受け取る___、崩れ落ちるように泣いた。",
         "choices": [
           "なり",
           "がてら",
@@ -123,7 +123,7 @@ export default {
       {
         "id": "n1-grammar-format-001-q10",
         "grammarId": "n1-grammar-format-001",
-        "question": "電話を切る___なり、彼女は慌ただしく出かけて行った。",
+        "question": "電話を切る___、彼女は慌ただしく出かけて行った。",
         "choices": [
           "なり",
           "極まる",
@@ -233,7 +233,7 @@ export default {
       {
         "id": "n1-grammar-format-002-q08",
         "grammarId": "n1-grammar-format-002",
-        "question": "雨がやむ___や否や、子どもたちは外へ遊びに行った。",
+        "question": "雨がや___や否や、子どもたちは外へ遊びに行った。",
         "choices": [
           "む",
           "んだ",
@@ -246,7 +246,7 @@ export default {
       {
         "id": "n1-grammar-format-002-q09",
         "grammarId": "n1-grammar-format-002",
-        "question": "合図が出される___や否や、選手たちは一斉にスタートした。",
+        "question": "合図が出され___や否や、選手たちは一斉にスタートした。",
         "choices": [
           "る",
           "た",
@@ -291,7 +291,7 @@ export default {
       {
         "id": "n1-grammar-format-003-q02",
         "grammarId": "n1-grammar-format-003",
-        "question": "覚えた___そばから新しい単語を忘れてしまう。",
+        "question": "覚え___そばから新しい単語を忘れてしまう。",
         "choices": [
           "た",
           "る",
@@ -304,7 +304,7 @@ export default {
       {
         "id": "n1-grammar-format-003-q03",
         "grammarId": "n1-grammar-format-003",
-        "question": "注意する___そばから、また同じミスを繰り返している。",
+        "question": "注意す___そばから、また同じミスを繰り返している。",
         "choices": [
           "る",
           "た",
@@ -382,7 +382,7 @@ export default {
       {
         "id": "n1-grammar-format-003-q09",
         "grammarId": "n1-grammar-format-003",
-        "question": "書類を整理した___そばから、新しい書類が積み上がっていく。",
+        "question": "書類を整理し___そばから、新しい書類が積み上がっていく。",
         "choices": [
           "た",
           "る",
@@ -453,7 +453,7 @@ export default {
       {
         "id": "n1-grammar-format-004-q04",
         "grammarId": "n1-grammar-format-004",
-        "question": "夕涼み___がてら、近所を少し歩いた。",
+        "question": "夕涼み___、近所を少し歩いた。",
         "choices": [
           "がてら",
           "ともなく",
@@ -479,7 +479,7 @@ export default {
       {
         "id": "n1-grammar-format-004-q06",
         "grammarId": "n1-grammar-format-004",
-        "question": "花見___がてら、公園の周りをランニングした。",
+        "question": "花見___、公園の周りをランニングした。",
         "choices": [
           "がてら",
           "に至るまで",
@@ -505,7 +505,7 @@ export default {
       {
         "id": "n1-grammar-format-004-q08",
         "grammarId": "n1-grammar-format-004",
-        "question": "運動___がてら、一駅分歩いて通勤している。",
+        "question": "運動___、一駅分歩いて通勤している。",
         "choices": [
           "がてら",
           "を余儀なくされる",
@@ -725,7 +725,7 @@ export default {
       {
         "id": "n1-grammar-format-006-q04",
         "grammarId": "n1-grammar-format-006",
-        "question": "本業の___かたわら、週末は写真家として活動している。",
+        "question": "本業___かたわら、週末は写真家として活動している。",
         "choices": [
           "の",
           "に",
@@ -1347,7 +1347,7 @@ export default {
       {
         "id": "n1-grammar-format-010-q10",
         "grammarId": "n1-grammar-format-010",
-        "question": "寒いだの暑いだの言わずに、早く行動しなさい。",
+        "question": "寒い___暑い___言わずに、早く行動しなさい。",
         "choices": [
           "だの / だの",
           "に至るまで",
@@ -1481,7 +1481,7 @@ export default {
         "explanation": "Tạo hiệu ứng không khí 幻想的な."
       },
       {
-        "id": "n1-grammar-format-010-q10",
+        "id": "n1-grammar-format-011-q10",
         "grammarId": "n1-grammar-format-011",
         "question": "運の良さと本人の努力が相まって、大成功を___。",
         "choices": [
@@ -1891,7 +1891,7 @@ export default {
       {
         "id": "n1-grammar-format-014-q10",
         "grammarId": "n1-grammar-format-014",
-        "question": "A社の参入を皮切りに、この市場の競争が激化した。",
+        "question": "A社の参入を___、この市場の競争が激化した。",
         "choices": [
           "皮切りに",
           "極みに",
@@ -1949,7 +1949,7 @@ export default {
       {
         "id": "n1-grammar-format-015-q04",
         "grammarId": "n1-grammar-format-015",
-        "question": "日用品から高級外車に至るまで、何でも揃うデパートだ。",
+        "question": "日用品から高級外車___、何でも揃うデパートだ。",
         "choices": [
           "に至るまで",
           "を押して",
@@ -2027,7 +2027,7 @@ export default {
       {
         "id": "n1-grammar-format-015-q10",
         "grammarId": "n1-grammar-format-015",
-        "question": "子供からお年寄りに至るまで、みんなで歌を楽しんだ。",
+        "question": "子供からお年寄り___、みんなで歌を楽しんだ。",
         "choices": [
           "に至るまで",
           "極まる",
@@ -2182,7 +2182,7 @@ export default {
       {
         "id": "n1-grammar-format-017-q01",
         "grammarId": "n1-grammar-format-017",
-        "question": "当店は本日___をもって閉店させていただきます。",
+        "question": "当店は本日___もって閉店させていただきます。",
         "choices": [
           "を",
           "に",
@@ -2221,7 +2221,7 @@ export default {
       {
         "id": "n1-grammar-format-017-q04",
         "grammarId": "n1-grammar-format-017",
-        "question": "誠意をもって対応すれば、きっと理解してもらえるはずだ。",
+        "question": "誠意___対応すれば、きっと理解してもらえるはずだ。",
         "choices": [
           "をもって",
           "を押して",
@@ -2247,7 +2247,7 @@ export default {
       {
         "id": "n1-grammar-format-017-q06",
         "grammarId": "n1-grammar-format-017",
-        "question": "言葉をもって気持ちを表現するのは難しい。",
+        "question": "言葉___気持ちを表現するのは難しい。",
         "choices": [
           "をもって",
           "に至るまで",
@@ -2260,7 +2260,7 @@ export default {
       {
         "id": "n1-grammar-format-017-q07",
         "grammarId": "n1-grammar-format-017",
-        "question": "書面をもって通知いたしますので、ご確認ください。",
+        "question": "書面___通知いたしますので、ご確認ください。",
         "choices": [
           "をもって",
           "てやまない",
@@ -2299,7 +2299,7 @@ export default {
       {
         "id": "n1-grammar-format-017-q10",
         "grammarId": "n1-grammar-format-017",
-        "question": "熱意をもって交渉に臨んだ結果、契約が成立した。",
+        "question": "熱意___交渉に臨んだ結果、契約が成立した。",
         "choices": [
           "をもって",
           "なくして",

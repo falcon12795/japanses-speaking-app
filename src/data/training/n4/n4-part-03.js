@@ -358,7 +358,7 @@ export default {
             {
                 "id": "n4-grammar-format-023-q07",
                 "grammarId": "n4-grammar-format-023",
-                "question": "会社のために、もっと頑張ります。",
+                "question": "会社の___、もっと頑張ります。",
                 "choices": [
                     "ために",
                     "ように",
@@ -572,7 +572,7 @@ export default {
                     "い",
                     "さ",
                     "な",
-                    ""
+                    "（なし）"
                 ],
                 "answer": 3,
                 "explanation": "Tính từ い bỏ i + すぎる (小さい -> 小さすぎる)."
@@ -595,7 +595,7 @@ export default {
                 "grammarId": "n4-grammar-format-025",
                 "question": "この問題は難し___すぎて、誰も解けなかった。",
                 "choices": [
-                    "",
+                    "（なし）",
                     "い",
                     "な",
                     "さ"
@@ -621,7 +621,7 @@ export default {
                 "grammarId": "n4-grammar-format-025",
                 "question": "部屋が暗___すぎます。電気をつけてください。",
                 "choices": [
-                    "",
+                    "（なし）",
                     "い",
                     "な",
                     "さ"
@@ -647,7 +647,7 @@ export default {
                 "grammarId": "n4-grammar-format-025",
                 "question": "このカバンは重___すぎて、持ち歩くのが大変だ。",
                 "choices": [
-                    "",
+                    "（なし）",
                     "い",
                     "な",
                     "さ"
