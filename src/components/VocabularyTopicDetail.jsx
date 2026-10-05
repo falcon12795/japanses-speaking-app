@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2 } from "lucide-react";
+import { Volume2, Pause, Play } from "lucide-react";
 
 import Button from "./common/Button";
 import IconButton from "./common/IconButton";
@@ -21,6 +21,11 @@ export default function VocabularyTopicDetail({
     const { speakText } = useLanguage();
     const [activeWordId, setActiveWordId] = useState(null);
     const [isListeningAll, setIsListeningAll] = useState(false);
+    const [isPausedListenAll, setIsPausedListenAll] = useState(false);
+    const [listenAllProgress, setListenAllProgress] = useState({
+        current: 0,
+        total: 0,
+    });
 
     const stopRef = useRef(false);
     const wordRefs = useRef({});
@@ -82,17 +87,25 @@ export default function VocabularyTopicDetail({
             stopRef.current = true;
             window.speechSynthesis?.cancel();
             setIsListeningAll(false);
+            setIsPausedListenAll(false);
+            setListenAllProgress({ current: 0, total: 0 });
             return;
         }
 
         stopRef.current = false;
         setIsListeningAll(true);
+        setIsPausedListenAll(false);
+
+        const words = topic.words || [];
 
         try {
-            for (const word of topic.words || []) {
+            for (let index = 0; index < words.length; index += 1) {
                 if (stopRef.current) break;
 
+                const word = words[index];
+
                 setActiveWordId(word.id);
+                setListenAllProgress({ current: index + 1, total: words.length });
 
                 await new Promise((resolve) => {
                     speakText(word.japanese, {
@@ -113,12 +126,26 @@ export default function VocabularyTopicDetail({
             }
         } finally {
             setIsListeningAll(false);
+            setIsPausedListenAll(false);
             setActiveWordId(null);
+            setListenAllProgress({ current: 0, total: 0 });
+        }
+    };
+
+    const togglePauseListenAll = () => {
+        if (!window.speechSynthesis) return;
+
+        if (isPausedListenAll) {
+            window.speechSynthesis.resume();
+            setIsPausedListenAll(false);
+        } else {
+            window.speechSynthesis.pause();
+            setIsPausedListenAll(true);
         }
     };
 
     return (
-        <Panel>
+        <Panel className="topic-detail-panel">
             {/* Header */}
             <div className="topic-detail-header">
                 <div className="topic-header">
@@ -180,6 +207,34 @@ export default function VocabularyTopicDetail({
                     Practice
                 </Button>
             </div>
+
+            {isListeningAll && (
+                <div className="listen-all-bar">
+                    <div className="listen-all-track">
+                        <div
+                            className="listen-all-fill"
+                            style={{
+                                width: `${listenAllProgress.total > 0
+                                    ? (listenAllProgress.current / listenAllProgress.total) * 100
+                                    : 0
+                                    }%`,
+                            }}
+                        />
+                    </div>
+
+                    <span className="listen-all-counter">
+                        {listenAllProgress.current}/{listenAllProgress.total}
+                    </span>
+
+                    <IconButton title="Pause or resume" onClick={togglePauseListenAll}>
+                        {isPausedListenAll ? (
+                            <Play size={16} strokeWidth={2.5} />
+                        ) : (
+                            <Pause size={16} strokeWidth={2.5} />
+                        )}
+                    </IconButton>
+                </div>
+            )}
 
             {/* Word List */}
             <div className="topic-word-list">

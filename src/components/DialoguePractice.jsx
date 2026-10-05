@@ -831,10 +831,6 @@ export default function DialoguePractice({
               )}
             </span>
           </div>
-
-          {currentDialogue.description && (
-            <p className="subtitle">{currentDialogue.description}</p>
-          )}
         </div>
 
         <div className="buttons dialogue-top-actions">
