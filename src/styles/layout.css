@@ -18,8 +18,7 @@
 .panel-card {
   width: 100%;
   background: var(--color-panel);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-panel);
+  border-radius: 0px var(--radius-panel);
   padding: 0px 28px;
   box-shadow: var(--shadow-panel);
 }
