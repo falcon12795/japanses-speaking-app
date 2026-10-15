@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   NavLink,
   Navigate,
@@ -6,6 +6,7 @@ import {
   Routes,
   useLocation,
   useNavigate,
+  useNavigationType,
   useParams,
 } from "react-router-dom";
 
@@ -97,6 +98,119 @@ function Sidebar({ sidebarOpen, setSidebarOpen, language, onChangeLang }) {
       )}
     </>
   );
+}
+
+const WINDOW_SCROLL_KEY = "__window__";
+
+/*
+ * Identifies a scroll container so its position can be saved/restored across
+ * navigations. Window scroll uses a fixed key; nested scrollable elements
+ * (e.g. the internally-scrolled word/dialogue lists, which have their own
+ * overflow-y: auto and never move window.scrollY) are keyed by class name.
+ * Containers outside .main-content (sidebar, modals) are ignored since they
+ * aren't part of route content and keep their DOM node across navigations.
+ */
+function getScrollKey(target) {
+  if (target === document) {
+    return WINDOW_SCROLL_KEY;
+  }
+
+  if (
+    !(target instanceof Element) ||
+    typeof target.className !== "string" ||
+    !target.className.trim() ||
+    !target.closest(".main-content")
+  ) {
+    return null;
+  }
+
+  return target.className.trim().replace(/\s+/g, ".");
+}
+
+/*
+ * Restores scroll position (window and nested scrollable containers) when
+ * navigating back (POP) to a previously visited screen, and resets to top
+ * when moving forward to a genuinely new page. Same-page updates (filters,
+ * accordions) are left untouched so they don't jump unexpectedly.
+ */
+function ScrollRestoration() {
+  const location = useLocation();
+  const navigationType = useNavigationType();
+  const scrollPositions = useRef(new Map());
+  const currentKey = useRef(location.key);
+  const previousPathname = useRef(location.pathname);
+
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+
+    /*
+     * A single listener (keyed off a ref, not re-attached per navigation)
+     * avoids a stale listener from a previous screen misattributing a
+     * scroll event fired by our own restore/reset call below. Capture phase
+     * is required to observe scroll events from nested containers, which
+     * don't bubble.
+     */
+    const handleScroll = (event) => {
+      const scrollKey = getScrollKey(event.target);
+
+      if (!scrollKey) {
+        return;
+      }
+
+      const value =
+        scrollKey === WINDOW_SCROLL_KEY
+          ? window.scrollY
+          : event.target.scrollTop;
+
+      scrollPositions.current.set(`${currentKey.current}|${scrollKey}`, value);
+    };
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+      capture: true,
+    });
+
+    return () =>
+      window.removeEventListener("scroll", handleScroll, { capture: true });
+  }, []);
+
+  useLayoutEffect(() => {
+    const savedY = scrollPositions.current.get(
+      `${location.key}|${WINDOW_SCROLL_KEY}`
+    );
+
+    currentKey.current = location.key;
+
+    if (navigationType === "POP") {
+      window.scrollTo(0, typeof savedY === "number" ? savedY : 0);
+
+      for (const [entryKey, value] of scrollPositions.current) {
+        const [entryLocationKey, scrollKey] = entryKey.split("|");
+
+        if (
+          entryLocationKey !== location.key ||
+          scrollKey === WINDOW_SCROLL_KEY
+        ) {
+          continue;
+        }
+
+        const container = document.querySelector(`.${scrollKey}`);
+
+        if (container) {
+          container.scrollTop = value;
+        }
+      }
+    } else if (
+      navigationType === "PUSH" &&
+      location.pathname !== previousPathname.current
+    ) {
+      window.scrollTo(0, 0);
+    }
+
+    previousPathname.current = location.pathname;
+  }, [location.key, location.pathname, navigationType]);
+
+  return null;
 }
 
 function PageHeader({ setSidebarOpen }) {
@@ -765,6 +879,7 @@ export default function App() {
 
   return (
     <LanguageProvider language={language}>
+      <ScrollRestoration />
       <div className="app-shell">
         {showLangSelector && (
           <LanguageSelector
