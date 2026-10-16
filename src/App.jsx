@@ -22,7 +22,7 @@ import DialoguePractice from "./components/DialoguePractice";
 import JLPTQuiz from "./components/JLPTQuiz";
 import ProgressPanel from "./components/ProgressPanel";
 
-import { loadProgress, saveProgress, syncProgress, loadLanguage, saveLanguage } from "./utils/storage";
+import { loadRemoteProgress, saveProgress, loadLanguage, saveLanguage } from "./utils/storage";
 import LanguageSelector, { LANGUAGES } from "./components/LanguageSelector";
 import { LanguageProvider, useLanguage } from "./contexts/LanguageContext";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
@@ -869,8 +869,8 @@ function DialoguePracticePage({ progress, onProgressChange }) {
   );
 }
 
-function AppContent({ userId }) {
-  const [progress, setProgress] = useState(() => loadProgress(userId));
+function AppContent({ userId, initialProgress }) {
+  const [progress, setProgress] = useState(initialProgress);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [language, setLanguage] = useState(() => loadLanguage());
   const [showLangSelector, setShowLangSelector] = useState(false);
@@ -1072,28 +1072,63 @@ function AppContent({ userId }) {
 }
 
 function AuthGate() {
-  const { user } = useAuth();
-  const userId = user?.id ?? null;
-  const [syncedId, setSyncedId] = useState(null);
+  const { user, logout } = useAuth();
+  const [loaded, setLoaded] = useState(null);
+  const [failedUser, setFailedUser] = useState(null);
+  const [attempt, setAttempt] = useState(0);
 
+  // Comparing the session object (new on every login) forces a fresh server read each time.
   useEffect(() => {
-    if (!userId) return undefined;
+    if (!user) return undefined;
 
     let cancelled = false;
-    syncProgress(userId).finally(() => {
-      if (!cancelled) setSyncedId(userId);
-    });
+    loadRemoteProgress(user.id)
+      .then((progress) => {
+        if (!cancelled) setLoaded({ user, progress });
+      })
+      .catch(() => {
+        if (!cancelled) setFailedUser(user);
+      });
 
     return () => {
       cancelled = true;
     };
-  }, [userId]);
+  }, [user, attempt]);
 
   if (!user) return <LoginPage />;
-  if (syncedId !== user.id) return null;
 
-  // key resets per-user state when switching accounts
-  return <AppContent key={user.id} userId={user.id} />;
+  if (loaded?.user === user) {
+    // key resets per-user state when switching accounts
+    return <AppContent key={user.id} userId={user.id} initialProgress={loaded.progress} />;
+  }
+
+  if (failedUser === user) {
+    return (
+      <main className="auth-shell">
+        <div className="auth-card">
+          <div className="message error" role="alert">
+            Không tải được tiến độ từ máy chủ. Hãy kiểm tra kết nối rồi thử lại.
+          </div>
+          <button
+            type="button"
+            onClick={() => {
+              setFailedUser(null);
+              setAttempt((value) => value + 1);
+            }}
+          >
+            Thử lại
+          </button>
+          <button type="button" className="secondary" onClick={logout}>Đăng xuất</button>
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className="auth-shell">
+      <p>Đang tải tiến độ...</p>
+    </main>
+  );
 }
 
 export default function App() {

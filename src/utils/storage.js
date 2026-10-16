@@ -26,19 +26,14 @@ export const DEFAULT_PROGRESS = {
   jlptWrong: 0,
 };
 
-const progressKey = (userId) => `${STORAGE_KEY}:${userId}`;
-
-// Legacy single-user progress goes to the first account that logs in.
-function migrateLegacyProgress(userId) {
-  const legacy = localStorage.getItem(STORAGE_KEY);
-
-  if (legacy === null || localStorage.getItem(progressKey(userId)) !== null) {
-    return false;
+// Pre-account progress; moved to the first account that logs in.
+function readLegacyProgress() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : null;
+  } catch {
+    return null;
   }
-
-  localStorage.setItem(progressKey(userId), legacy);
-  localStorage.removeItem(STORAGE_KEY);
-  return true;
 }
 
 const isDefaultProgress = (progress) =>
@@ -46,54 +41,40 @@ const isDefaultProgress = (progress) =>
     (key) => JSON.stringify(progress[key] ?? DEFAULT_PROGRESS[key]) === JSON.stringify(DEFAULT_PROGRESS[key])
   );
 
-const pendingSyncs = new Map();
+// userProgress.json is the only store; throws when the server is unreachable.
+export async function loadRemoteProgress(userId) {
+  const remote = await fetchRemoteProgress(userId);
 
-// localStorage is the synchronous cache; userProgress.json is the source of truth when reachable.
-export function syncProgress(userId) {
-  if (!pendingSyncs.has(userId)) {
-    const task = (async () => {
-      const remote = await fetchRemoteProgress(userId);
-
-      // Real progress from another device wins over this device's legacy data.
-      if (remote && !isDefaultProgress(remote)) {
-        localStorage.setItem(progressKey(userId), JSON.stringify(remote));
-        return;
-      }
-
-      migrateLegacyProgress(userId);
-      await pushRemoteProgress(userId, loadProgress(userId));
-    })().finally(() => pendingSyncs.delete(userId));
-
-    pendingSyncs.set(userId, task);
+  // Real progress already on the server wins over this device's legacy data.
+  if (remote && !isDefaultProgress(remote)) {
+    return { ...DEFAULT_PROGRESS, ...remote };
   }
-  return pendingSyncs.get(userId);
+
+  const legacy = readLegacyProgress();
+  const progress = { ...DEFAULT_PROGRESS, ...(legacy ?? remote) };
+
+  if (await pushRemoteProgress(userId, progress)) {
+    if (legacy) localStorage.removeItem(STORAGE_KEY);
+  } else {
+    throw new Error("Cannot save progress");
+  }
+
+  return progress;
 }
 
-export function loadProgress(userId) {
-  try {
-    migrateLegacyProgress(userId);
-    const saved = localStorage.getItem(progressKey(userId));
-
-    if (!saved) {
-      return DEFAULT_PROGRESS;
-    }
-
-    return {
-      ...DEFAULT_PROGRESS,
-      ...JSON.parse(saved),
-    };
-  } catch {
-    return DEFAULT_PROGRESS;
-  }
-}
+// Writes are chained so they reach the server in the order they were made.
+let pushChain = Promise.resolve();
 
 export function saveProgress(userId, progress) {
-  localStorage.setItem(progressKey(userId), JSON.stringify(progress));
-  pushRemoteProgress(userId, progress);
+  pushChain = pushChain
+    .then(() => pushRemoteProgress(userId, progress))
+    .then((ok) => {
+      if (!ok) console.error("Could not save progress to the server.");
+    });
+  return pushChain;
 }
 
-export function resetProgress(userId) {
-  localStorage.removeItem(progressKey(userId));
+export function resetProgress() {
   return DEFAULT_PROGRESS;
 }
 

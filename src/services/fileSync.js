@@ -29,14 +29,18 @@ export async function createRemoteUser(user, progress) {
   return "offline";
 }
 
+// Resolves null when the server has no entry; throws when the server is unreachable.
 export async function fetchRemoteProgress(userId) {
   const result = await call(`/progress/${encodeURIComponent(userId)}`);
-  return result?.ok ? result.data?.progress ?? null : null;
+  if (result?.status === 404 && result.data) return null;
+  if (!result?.ok) throw new Error("Progress server unreachable");
+  return result.data?.progress ?? null;
 }
 
-export function pushRemoteProgress(userId, progress) {
-  return call(`/progress/${encodeURIComponent(userId)}`, {
+export async function pushRemoteProgress(userId, progress) {
+  const result = await call(`/progress/${encodeURIComponent(userId)}`, {
     method: "PUT",
     body: JSON.stringify({ progress })
   });
+  return Boolean(result?.ok);
 }
