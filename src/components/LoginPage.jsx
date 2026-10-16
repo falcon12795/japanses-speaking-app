@@ -56,7 +56,7 @@ export default function LoginPage() {
   return (
     <main className="auth-shell">
       <form className="auth-card" onSubmit={submit} noValidate>
-        <h1>{isLogin ? "ログイン" : "新規登録"}</h1>
+        <h1>{isLogin ? "Login" : "Sign Up"}</h1>
         <p className="muted">Mỗi tài khoản có tiến độ, từ yêu thích và lịch sử quiz riêng.</p>
         {!isLogin && (
           <input name="displayName" value={form.displayName} onChange={update} placeholder="Tên hiển thị" autoComplete="name" />
@@ -90,12 +90,6 @@ export default function LoginPage() {
         <button type="button" className="secondary" onClick={switchMode} disabled={loading}>
           {isLogin ? "Tạo tài khoản" : "Quay lại đăng nhập"}
         </button>
-        {isLogin && (
-          <small>
-            Tài khoản mẫu: admin / admin123{" "}
-            <button type="button" className="link-button" onClick={fillDemoAccount}>Điền sẵn</button>
-          </small>
-        )}
       </form>
     </main>
   );

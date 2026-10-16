@@ -7,11 +7,21 @@
     "updatedAt": null
   },
   "6f2a3479-b451-4b15-8c1b-10778a966d50": {
-    "vocabularyLearned": 0,
+    "vocabularyLearned": 9,
     "vocabularyNeedReview": 0,
     "vocabularySpeakPractice": 0,
     "vocabularyExampleSpeakPractice": 0,
-    "completedVocabulary": [],
+    "completedVocabulary": [
+      "it_anketo_1",
+      "it_anketo_2",
+      "it_anketo_3",
+      "it_anketo_4",
+      "it_anketo_5",
+      "it_anketo_6",
+      "it_anketo_7",
+      "it_anketo_8",
+      "it_anketo_9"
+    ],
     "favoriteVocabulary": [],
     "reviewVocabulary": [],
     "kanaCorrect": 0,

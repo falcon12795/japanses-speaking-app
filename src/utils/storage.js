@@ -41,24 +41,30 @@ function migrateLegacyProgress(userId) {
   return true;
 }
 
+const isDefaultProgress = (progress) =>
+  Object.keys(DEFAULT_PROGRESS).every(
+    (key) => JSON.stringify(progress[key] ?? DEFAULT_PROGRESS[key]) === JSON.stringify(DEFAULT_PROGRESS[key])
+  );
+
 const pendingSyncs = new Map();
 
-// localStorage stays the synchronous cache; userProgress.json is the source of truth when reachable.
+// localStorage is the synchronous cache; userProgress.json is the source of truth when reachable.
 export function syncProgress(userId) {
   if (!pendingSyncs.has(userId)) {
-    pendingSyncs.set(userId, (async () => {
-      const migrated = migrateLegacyProgress(userId);
+    const task = (async () => {
+      const remote = await fetchRemoteProgress(userId);
 
-      if (!migrated) {
-        const remote = await fetchRemoteProgress(userId);
-        if (remote) {
-          localStorage.setItem(progressKey(userId), JSON.stringify(remote));
-          return;
-        }
+      // Real progress from another device wins over this device's legacy data.
+      if (remote && !isDefaultProgress(remote)) {
+        localStorage.setItem(progressKey(userId), JSON.stringify(remote));
+        return;
       }
 
+      migrateLegacyProgress(userId);
       await pushRemoteProgress(userId, loadProgress(userId));
-    })());
+    })().finally(() => pendingSyncs.delete(userId));
+
+    pendingSyncs.set(userId, task);
   }
   return pendingSyncs.get(userId);
 }
