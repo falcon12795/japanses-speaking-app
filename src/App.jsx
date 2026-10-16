@@ -11,7 +11,9 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
+import "./styles/auth.css";
 
+import LoginPage from "./components/LoginPage";
 import VocabularyList from "./components/VocabularyList";
 import VocabularyFlashcard from "./components/VocabularyFlashcard";
 import VocabularyTopicDetail from "./components/VocabularyTopicDetail";
@@ -20,9 +22,10 @@ import DialoguePractice from "./components/DialoguePractice";
 import JLPTQuiz from "./components/JLPTQuiz";
 import ProgressPanel from "./components/ProgressPanel";
 
-import { loadProgress, saveProgress, loadLanguage, saveLanguage } from "./utils/storage";
+import { loadProgress, saveProgress, syncProgress, loadLanguage, saveLanguage } from "./utils/storage";
 import LanguageSelector, { LANGUAGES } from "./components/LanguageSelector";
 import { LanguageProvider, useLanguage } from "./contexts/LanguageContext";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import GrammarList from "./components/GrammarList";
 import GrammarDetail from "./components/GrammarDetail";
 import Training from "./components/Training";
@@ -31,6 +34,7 @@ import { buildVocabularyTopics, filterWordsByStatus } from "./utils/buildVocabul
 function Sidebar({ sidebarOpen, setSidebarOpen, language, onChangeLang }) {
   const lang = LANGUAGES.find((l) => l.code === language);
   const { menuLabels } = useLanguage();
+  const { user, logout } = useAuth();
 
   const menuItems = [
     { to: "/vocabulary", label: menuLabels.vocabulary, icon: "📚" },
@@ -71,6 +75,22 @@ function Sidebar({ sidebarOpen, setSidebarOpen, language, onChangeLang }) {
         </nav>
 
         <div className="sidebar-footer">
+          <div className="sidebar-user">
+            <div className="sidebar-user-avatar" aria-hidden="true">
+              {(user.displayName || user.username).charAt(0).toUpperCase()}
+            </div>
+            <div className="sidebar-user-info">
+              <strong>{user.displayName}</strong>
+              <span>@{user.username}</span>
+            </div>
+            <button
+              type="button"
+              className="sidebar-logout-btn"
+              onClick={logout}
+            >
+              Đăng xuất
+            </button>
+          </div>
           <button
             className="sidebar-lang-btn"
             onClick={onChangeLang}
@@ -849,15 +869,15 @@ function DialoguePracticePage({ progress, onProgressChange }) {
   );
 }
 
-export default function App() {
-  const [progress, setProgress] = useState(() => loadProgress());
+function AppContent({ userId }) {
+  const [progress, setProgress] = useState(() => loadProgress(userId));
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [language, setLanguage] = useState(() => loadLanguage());
   const [showLangSelector, setShowLangSelector] = useState(false);
 
   const handleProgressChange = (nextProgress) => {
     setProgress(nextProgress);
-    saveProgress(nextProgress);
+    saveProgress(userId, nextProgress);
   };
 
   const handleSelectLanguage = (code) => {
@@ -1048,5 +1068,38 @@ export default function App() {
       </main>
     </div>
     </LanguageProvider>
+  );
+}
+
+function AuthGate() {
+  const { user } = useAuth();
+  const userId = user?.id ?? null;
+  const [syncedId, setSyncedId] = useState(null);
+
+  useEffect(() => {
+    if (!userId) return undefined;
+
+    let cancelled = false;
+    syncProgress(userId).finally(() => {
+      if (!cancelled) setSyncedId(userId);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [userId]);
+
+  if (!user) return <LoginPage />;
+  if (syncedId !== user.id) return null;
+
+  // key resets per-user state when switching accounts
+  return <AppContent key={user.id} userId={user.id} />;
+}
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <AuthGate />
+    </AuthProvider>
   );
 }

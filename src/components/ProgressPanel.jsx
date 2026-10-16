@@ -1,8 +1,11 @@
 import { resetProgress } from "../utils/storage";
+import { useAuth } from "../contexts/AuthContext";
 
 export default function ProgressPanel({ progress, onProgressChange }) {
+  const { user } = useAuth();
+
   const handleReset = () => {
-    const emptyProgress = resetProgress();
+    const emptyProgress = resetProgress(user.id);
     onProgressChange(emptyProgress);
   };
 
