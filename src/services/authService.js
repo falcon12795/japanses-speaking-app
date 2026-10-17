@@ -14,14 +14,33 @@ function requireFirebase() {
   }
 }
 
+function isPermissionDenied(error) {
+  return Boolean(
+    error && (
+      error.code === "permission-denied" ||
+      error.message?.includes("permission") ||
+      error.message?.includes("Missing or insufficient permissions")
+    )
+  );
+}
+
 function profileRef(uid) {
   return doc(firestore, "userProfiles", uid);
 }
 
 async function appUser(firebaseUser) {
   if (!firebaseUser) return null;
-  const snapshot = await getDoc(profileRef(firebaseUser.uid));
-  const profile = snapshot.exists() ? snapshot.data() : {};
+
+  let profile = {};
+  try {
+    const snapshot = await getDoc(profileRef(firebaseUser.uid));
+    profile = snapshot.exists() ? snapshot.data() : {};
+  } catch (error) {
+    if (!isPermissionDenied(error)) {
+      throw error;
+    }
+  }
+
   const email = firebaseUser.email || "";
   return {
     id: firebaseUser.uid,
@@ -57,12 +76,20 @@ export async function register({ email, password, displayName }) {
   const name = displayName.trim() || email.trim().split("@")[0];
   const credential = await createUserWithEmailAndPassword(firebaseAuth, email.trim(), password);
   await updateProfile(credential.user, { displayName: name });
-  await setDoc(profileRef(credential.user.uid), {
-    uid: credential.user.uid,
-    email: credential.user.email,
-    displayName: name,
-    createdAt: serverTimestamp(),
-  });
+
+  try {
+    await setDoc(profileRef(credential.user.uid), {
+      uid: credential.user.uid,
+      email: credential.user.email,
+      displayName: name,
+      createdAt: serverTimestamp(),
+    });
+  } catch (error) {
+    if (!isPermissionDenied(error)) {
+      throw error;
+    }
+  }
+
   return appUser(credential.user);
 }
 
