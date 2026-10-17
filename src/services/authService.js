@@ -1,92 +1,72 @@
-import seedUsers from "../data/users.json";
-import { createRemoteUser, fetchRemoteUsers } from "./fileSync";
-import { KEYS, readJson, remove, writeJson } from "./storage";
-import { DEFAULT_PROGRESS } from "../utils/storage";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+  updateProfile,
+} from "firebase/auth";
+import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
+import { firebaseAuth, firestore, isFirebaseConfigured } from "../firebase";
 
-function normalizeUsername(value) {
-  return value.trim().toLowerCase();
-}
-
-export async function hashPassword(password) {
-  const bytes = new TextEncoder().encode(password);
-  const digest = await crypto.subtle.digest("SHA-256", bytes);
-  return Array.from(new Uint8Array(digest))
-    .map((byte) => byte.toString(16).padStart(2, "0"))
-    .join("");
-}
-
-function publicUser(user) {
-  const { passwordHash, ...safeUser } = user;
-  return safeUser;
-}
-
-export function initializeUsers() {
-  const current = readJson(KEYS.USERS, null);
-  if (!current?.users) {
-    writeJson(KEYS.USERS, seedUsers);
-    return seedUsers;
+function requireFirebase() {
+  if (!isFirebaseConfigured) {
+    throw new Error("Firebase chưa được cấu hình. Hãy thêm các biến VITE_FIREBASE_* vào môi trường rồi tải lại ứng dụng.");
   }
-  return current;
 }
 
-export function getUsersDocument() {
-  return initializeUsers();
+function profileRef(uid) {
+  return doc(firestore, "userProfiles", uid);
 }
 
-// users.json is the source of truth when the server is reachable.
-export async function syncUsers() {
-  const remote = await fetchRemoteUsers();
-  if (remote) writeJson(KEYS.USERS, remote);
-}
-
-export function getCurrentUser() {
-  return readJson(KEYS.SESSION, null);
-}
-
-export async function login(username, password) {
-  const normalized = normalizeUsername(username);
-  const passwordHash = await hashPassword(password);
-  const document = getUsersDocument();
-  const user = document.users.find(
-    (item) => item.username === normalized && item.passwordHash === passwordHash
-  );
-
-  if (!user) throw new Error("Tên đăng nhập hoặc mật khẩu không đúng.");
-
-  const session = publicUser(user);
-  writeJson(KEYS.SESSION, session);
-  return session;
-}
-
-export async function register({ username, password, displayName }) {
-  const normalized = normalizeUsername(username);
-  if (!/^[a-z0-9._-]{3,30}$/.test(normalized)) {
-    throw new Error("Username gồm 3-30 ký tự: a-z, 0-9, dấu chấm, gạch dưới hoặc gạch ngang.");
-  }
-  if (password.length < 8) throw new Error("Mật khẩu phải có ít nhất 8 ký tự.");
-
-  const document = getUsersDocument();
-  if (document.users.some((item) => item.username === normalized)) {
-    throw new Error("Tài khoản đã tồn tại.");
-  }
-
-  const user = {
-    id: crypto.randomUUID(),
-    username: normalized,
-    displayName: displayName.trim() || normalized,
-    role: "user",
-    passwordHash: await hashPassword(password),
-    createdAt: new Date().toISOString()
+async function appUser(firebaseUser) {
+  if (!firebaseUser) return null;
+  const snapshot = await getDoc(profileRef(firebaseUser.uid));
+  const profile = snapshot.exists() ? snapshot.data() : {};
+  const email = firebaseUser.email || "";
+  return {
+    id: firebaseUser.uid,
+    uid: firebaseUser.uid,
+    email,
+    username: email.split("@")[0],
+    displayName: profile.displayName || firebaseUser.displayName || email.split("@")[0],
   };
-
-  const result = await createRemoteUser(user, { ...DEFAULT_PROGRESS });
-  if (result === "conflict") throw new Error("Tài khoản đã tồn tại.");
-
-  document.users.push(user);
-  writeJson(KEYS.USERS, document);
-  return publicUser(user);
 }
 
-export function logout() {
-  remove(KEYS.SESSION);
+export function subscribeToAuth(callback, onError) {
+  if (!isFirebaseConfigured) {
+    callback(null);
+    return () => {};
+  }
+  return onAuthStateChanged(firebaseAuth, async (firebaseUser) => {
+    try {
+      callback(await appUser(firebaseUser));
+    } catch (error) {
+      onError?.(error);
+    }
+  }, onError);
+}
+
+export async function login(email, password) {
+  requireFirebase();
+  const credential = await signInWithEmailAndPassword(firebaseAuth, email.trim(), password);
+  return appUser(credential.user);
+}
+
+export async function register({ email, password, displayName }) {
+  requireFirebase();
+  const name = displayName.trim() || email.trim().split("@")[0];
+  const credential = await createUserWithEmailAndPassword(firebaseAuth, email.trim(), password);
+  await updateProfile(credential.user, { displayName: name });
+  await setDoc(profileRef(credential.user.uid), {
+    uid: credential.user.uid,
+    email: credential.user.email,
+    displayName: name,
+    createdAt: serverTimestamp(),
+  });
+  return appUser(credential.user);
+}
+
+export async function logout() {
+  requireFirebase();
+  await signOut(firebaseAuth);
 }

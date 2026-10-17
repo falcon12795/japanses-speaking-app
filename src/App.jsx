@@ -77,11 +77,11 @@ function Sidebar({ sidebarOpen, setSidebarOpen, language, onChangeLang }) {
         <div className="sidebar-footer">
           <div className="sidebar-user">
             <div className="sidebar-user-avatar" aria-hidden="true">
-              {(user.displayName || user.username).charAt(0).toUpperCase()}
+              {(user.displayName || user.email).charAt(0).toUpperCase()}
             </div>
             <div className="sidebar-user-info">
               <strong>{user.displayName}</strong>
-              <span>@{user.username}</span>
+              <span>{user.email}</span>
             </div>
             <button
               type="button"
@@ -877,7 +877,9 @@ function AppContent({ userId, initialProgress }) {
 
   const handleProgressChange = (nextProgress) => {
     setProgress(nextProgress);
-    saveProgress(userId, nextProgress);
+    saveProgress(userId, nextProgress).catch((error) => {
+      console.error("Could not save progress to Firestore:", error);
+    });
   };
 
   const handleSelectLanguage = (code) => {
@@ -1072,9 +1074,10 @@ function AppContent({ userId, initialProgress }) {
 }
 
 function AuthGate() {
-  const { user, logout } = useAuth();
+  const { user, loading: authLoading, logout } = useAuth();
   const [loaded, setLoaded] = useState(null);
   const [failedUser, setFailedUser] = useState(null);
+  const [loadError, setLoadError] = useState(null);
   const [attempt, setAttempt] = useState(0);
 
   // Comparing the session object (new on every login) forces a fresh server read each time.
@@ -1086,14 +1089,25 @@ function AuthGate() {
       .then((progress) => {
         if (!cancelled) setLoaded({ user, progress });
       })
-      .catch(() => {
-        if (!cancelled) setFailedUser(user);
+      .catch((error) => {
+        if (!cancelled) {
+          setFailedUser(user);
+          setLoadError(error.message || "Không thể tải tiến độ từ Firestore. Kiểm tra Firestore Rules và cấu hình Firebase.");
+        }
       });
 
     return () => {
       cancelled = true;
     };
   }, [user, attempt]);
+
+  if (authLoading) {
+    return (
+      <main className="auth-shell">
+        <p>Đang kết nối Firebase...</p>
+      </main>
+    );
+  }
 
   if (!user) return <LoginPage />;
 
@@ -1107,12 +1121,13 @@ function AuthGate() {
       <main className="auth-shell">
         <div className="auth-card">
           <div className="message error" role="alert">
-            Không tải được tiến độ từ máy chủ. Hãy kiểm tra kết nối rồi thử lại.
+            {loadError || "Không tải được tiến độ từ Firestore."}
           </div>
           <button
             type="button"
             onClick={() => {
               setFailedUser(null);
+              setLoadError(null);
               setAttempt((value) => value + 1);
             }}
           >

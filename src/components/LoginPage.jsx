@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
-const EMPTY_FORM = { username: "", password: "", displayName: "" };
+const EMPTY_FORM = { email: "", password: "", displayName: "" };
 
 export default function LoginPage() {
   const { login, register } = useAuth();
@@ -21,24 +21,19 @@ export default function LoginPage() {
     setMode(isLogin ? "register" : "login");
   }
 
-  function fillDemoAccount() {
-    setForm({ ...EMPTY_FORM, username: "admin", password: "admin123" });
-    setNotice({ type: "", text: "" });
-  }
-
   async function submit(event) {
     event.preventDefault();
     setNotice({ type: "", text: "" });
 
-    if (!form.username.trim() || !form.password) {
-      setNotice({ type: "error", text: "Vui lòng nhập đầy đủ username và password." });
+    if (!form.email.trim() || !form.password) {
+      setNotice({ type: "error", text: "Vui lòng nhập đầy đủ email và password." });
       return;
     }
 
     setLoading(true);
     try {
       if (isLogin) {
-        await login(form.username, form.password);
+        await login(form.email, form.password);
       } else {
         await register(form);
         setForm((prev) => ({ ...prev, password: "", displayName: "" }));
@@ -57,11 +52,11 @@ export default function LoginPage() {
     <main className="auth-shell">
       <form className="auth-card" onSubmit={submit} noValidate>
         <h1>{isLogin ? "Login" : "Sign Up"}</h1>
-        <p className="muted">Mỗi tài khoản có tiến độ, từ yêu thích và lịch sử quiz riêng.</p>
+        <p className="muted">Mỗi tài khoản Firebase có tiến độ học riêng được lưu trên đám mây.</p>
         {!isLogin && (
           <input name="displayName" value={form.displayName} onChange={update} placeholder="Tên hiển thị" autoComplete="name" />
         )}
-        <input name="username" value={form.username} onChange={update} placeholder="Username" autoComplete="username" autoFocus required />
+        <input name="email" type="email" value={form.email} onChange={update} placeholder="Email" autoComplete="email" autoFocus required />
         <div className="password-field">
           <input
             name="password"

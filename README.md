@@ -1,18 +1,30 @@
-# React + Vite
+# Japanese Speaking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Firebase Authentication + Cloud Firestore
 
-Currently, two official plugins are available:
+Authentication is handled by Firebase Authentication (Email/Password). Each signed-in Firebase UID owns one Firestore progress document:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `userProfiles/{uid}` — display name and account metadata.
+- `userProgress/{uid}` — vocabulary, dialogue, kana, and quiz progress.
 
-## React Compiler
+The client uses Firebase's public web configuration. Firestore security rules enforce per-user access; do not put Admin SDK credentials or service-account keys in `VITE_*` variables.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Firebase setup
 
-Note: This will impact Vite dev & build performances.
+1. Create/select a Firebase project and register a Web App.
+2. In **Authentication → Sign-in method**, enable **Email/Password**.
+3. Create a **Cloud Firestore** database.
+4. Publish the rules from `firestore.rules` in Firebase Console → Firestore Database → Rules.
+5. Copy the Web App configuration into a local `.env` file based on `.env.example`.
+6. Add the same six `VITE_FIREBASE_*` variables to the Vercel project's Environment Variables for Production (and Preview if needed), then redeploy.
+7. In Firebase Authentication settings, add the deployed Vercel hostname under **Authorized domains**.
 
-## Expanding the ESLint configuration
+The Firebase web API key is intended to be present in the browser. Security comes from Firebase Authentication and Firestore rules, not from hiding this key.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Data and account migration
+
+The current client-side `users.json`/password-hash accounts are not automatically migrated. Create Firebase Auth accounts for users (the login form now uses email), then transfer each legacy progress record to Firestore document `userProgress/{Firebase UID}`. Do not copy legacy password hashes into Firestore or try to use them as Firebase passwords. Existing legacy progress remains in `src/data/userProgress.json` as a source for a one-time migration; it is no longer used by the production app.
+
+### Development
+
+Run `npm install` and `npm run dev`. Without a configured `.env`, Firebase features will report that the Firebase environment variables are missing. See `.env.example` for required keys.
