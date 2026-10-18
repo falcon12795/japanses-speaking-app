@@ -14,12 +14,13 @@ export default function LoginPage() {
   const isLogin = mode === "login";
   const update = (event) => setForm((prev) => ({ ...prev, [event.target.name]: event.target.value }));
 
-  function switchMode() {
-    setNotice({ type: "", text: "" });
-    setForm((prev) => ({ ...prev, password: "" }));
-    setShowPassword(false);
-    setMode(isLogin ? "register" : "login");
-  }
+  // Turn off the ability to switch between login and register modes for now, as it may cause confusion with the progress saving feature. Users should be able to register and then log in, but not switch modes on the same form.
+  // function switchMode() {
+  //   setNotice({ type: "", text: "" });
+  //   setForm((prev) => ({ ...prev, password: "" }));
+  //   setShowPassword(false);
+  //   setMode(isLogin ? "register" : "login");
+  // }
 
   async function submit(event) {
     event.preventDefault();
@@ -82,9 +83,9 @@ export default function LoginPage() {
           </div>
         )}
         <button disabled={loading}>{loading ? "Đang xử lý..." : isLogin ? "Đăng nhập" : "Đăng ký"}</button>
-        <button type="button" className="secondary" onClick={switchMode} disabled={loading}>
+        {/* <button type="button" className="secondary" onClick={switchMode} disabled={loading}>
           {isLogin ? "Tạo tài khoản" : "Quay lại đăng nhập"}
-        </button>
+        </button> */}
       </form>
     </main>
   );
