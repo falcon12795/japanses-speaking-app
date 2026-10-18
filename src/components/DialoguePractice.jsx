@@ -14,6 +14,7 @@ import {
   Play,
 } from "lucide-react";
 import { calculateSpeechScoreWithAcceptedAnswers } from "../utils/scoring";
+import { isSpeechRecognitionSupported } from "../utils/speech";
 import { useLanguage } from "../contexts/LanguageContext";
 
 import Badge from "./common/Badge";
@@ -560,12 +561,9 @@ export default function DialoguePractice({
   };
 
   const practiceDialogue = async () => {
-    if (
-      !window.SpeechRecognition &&
-      !window.webkitSpeechRecognition
-    ) {
+    if (!isSpeechRecognitionSupported()) {
       setStatus(
-        "Practice mode requires Chrome browser with Speech Recognition support."
+        "Speech recognition is not supported by this browser. On mobile, try Chrome on Android or a browser with Web Speech recognition support."
       );
       return;
     }
@@ -990,12 +988,6 @@ export default function DialoguePractice({
 
                       <IconButton
                         title="Speak"
-                        disabled={
-                          !(
-                            window.SpeechRecognition ||
-                            window.webkitSpeechRecognition
-                          )
-                        }
                         onClick={() => speakLine(line)}
                       >
 
