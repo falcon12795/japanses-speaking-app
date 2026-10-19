@@ -817,11 +817,11 @@ export default [
     subject: "Book",
     topic,
     japanese: "横展開",
-    reading: "おうてんかい",
+    reading: "よこてんかい",
     vietnamese: "triển khai đồng bộ, triển khai ngang",
     example: {
       japanese: "修正内容を他のモジュールにも横展開します。",
-      reading: "しゅうせいないようをほかのモジュールにもおうてんかいします。",
+      reading: "しゅうせいないようをほかのモジュールにもよこてんかいします。",
       english: "We will horizontally deploy the fix to other modules as well.",
       vietnamese: "Chúng tôi sẽ triển khai đồng bộ nội dung sửa đổi sang các module khác.",
     },

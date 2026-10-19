@@ -1372,11 +1372,11 @@ export default [
     subject: "Book",
     topic,
     japanese: "横展開",
-    reading: "おうてんかい",
+    reading: "よこてんかい",
     vietnamese: "triển khai đồng bộ, triển khai ngang",
     example: {
       japanese: "この対策を他のプロジェクトにも横展開します。",
-      reading: "このたいさくをほかのプロジェクトにもおうてんかいします。",
+      reading: "このたいさくをほかのプロジェクトにもよこてんかいします。",
       english: "We horizontally deploy this measure to other projects as well.",
       vietnamese: "Chúng tôi triển khai đồng bộ biện pháp này sang các dự án khác.",
     },

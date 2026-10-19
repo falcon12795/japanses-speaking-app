@@ -422,7 +422,7 @@ export default [
         id: 8,
         speaker: "B",
         japanese: "横展開も実施したいと思います。",
-        reading: "おうてんかいもじっししたいとおもいます。",
+        reading: "よこてんかいもじっししたいとおもいます。",
         english: "I would also like to roll it out to other projects.",
         vietnamese: "Tôi cũng muốn triển khai sang các dự án khác."
       },
