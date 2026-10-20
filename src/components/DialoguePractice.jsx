@@ -30,7 +30,7 @@ export default function DialoguePractice({
   onPreviousDialogue,
   onNextDialogue,
 }) {
-  const { speakText, recognizeSpeech } = useLanguage();
+  const { speakText, recognizeSpeechWithAudio } = useLanguage();
   const [role, setRole] = useState("B");
   const [showAllScript, setShowAllScript] = useState(false);
   const [showSubtitle, setShowSubtitle] = useState(false);
@@ -56,6 +56,7 @@ export default function DialoguePractice({
   const [practiceRetryLineId, setPracticeRetryLineId] = useState(null);
   const [practiceStartIndex, setPracticeStartIndex] = useState(0);
   const practiceAbortRef = useRef(false);
+  const recordingUrlsRef = useRef(new Set());
   useEffect(() => {
     if (!window.speechSynthesis) {
       return;
@@ -68,6 +69,11 @@ export default function DialoguePractice({
     };
   }, []);
   const lineRefs = useRef({});
+
+  useEffect(() => () => {
+    recordingUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
+    recordingUrlsRef.current.clear();
+  }, []);
 
   const currentDialogue = dialogue;
 
@@ -222,6 +228,32 @@ export default function DialoguePractice({
     );
   };
 
+  const createRecordingUrl = (lineId, audioBlob) => {
+    const previousUrl = lineResults[lineId]?.audioUrl;
+    if (previousUrl) {
+      URL.revokeObjectURL(previousUrl);
+      recordingUrlsRef.current.delete(previousUrl);
+    }
+
+    if (!audioBlob?.size) return null;
+
+    const url = URL.createObjectURL(audioBlob);
+    recordingUrlsRef.current.add(url);
+    return url;
+  };
+
+  const clearRecordingUrls = () => {
+    recordingUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
+    recordingUrlsRef.current.clear();
+  };
+
+  const playRecording = (url) => {
+    const audio = new Audio(url);
+    audio.play().catch((error) => {
+      setStatus(error.message || "Could not play your recording.");
+    });
+  };
+
   const shouldHideLine = (line) => {
     if (showAllScript) return false;
     if (manualVisibleLineIds.includes(line.id)) return false;
@@ -231,6 +263,7 @@ export default function DialoguePractice({
   };
 
   const resetPracticeState = () => {
+    clearRecordingUrls();
     window.speechSynthesis?.cancel();
 
     listenAllAbortRef.current = true;
@@ -267,6 +300,7 @@ export default function DialoguePractice({
   };
 
   const changeRole = (nextRole) => {
+    clearRecordingUrls();
     setRole(nextRole);
     setShowAllScript(false);
     setManualVisibleLineIds([]);
@@ -337,6 +371,7 @@ export default function DialoguePractice({
   };
 
   const resetAllSpeakResults = () => {
+    clearRecordingUrls();
     setLineResults({});
     setActiveLineId(null);
     setPracticeRetryLineId(null);
@@ -349,6 +384,12 @@ export default function DialoguePractice({
   };
 
   const resetLineSpeakResult = (lineId) => {
+    const recordingUrl = lineResults[lineId]?.audioUrl;
+    if (recordingUrl) {
+      URL.revokeObjectURL(recordingUrl);
+      recordingUrlsRef.current.delete(recordingUrl);
+    }
+
     setLineResults((prev) => {
       const next = { ...prev };
       delete next[lineId];
@@ -635,7 +676,7 @@ export default function DialoguePractice({
             },
           }));
 
-          const transcript = await recognizeSpeech();
+          const { transcript, audioBlob } = await recognizeSpeechWithAudio();
 
           if (practiceAbortRef.current) break;
 
@@ -648,6 +689,7 @@ export default function DialoguePractice({
             transcript,
             score,
             status: score >= 80 ? "Passed" : "Need retry",
+            audioUrl: createRecordingUrl(line.id, audioBlob),
           };
 
           nextLineResults = {
@@ -746,7 +788,7 @@ export default function DialoguePractice({
 
       setStatus(`Listening for speaker ${line.speaker} line ${line.id}...`);
 
-      const transcript = await recognizeSpeech();
+      const { transcript, audioBlob } = await recognizeSpeechWithAudio();
 
       const score = calculateSpeechScoreWithAcceptedAnswers(
         transcript,
@@ -757,6 +799,7 @@ export default function DialoguePractice({
         transcript,
         score,
         status: "Finished",
+        audioUrl: createRecordingUrl(line.id, audioBlob),
       };
 
       const nextLineResults = {
@@ -1067,6 +1110,14 @@ export default function DialoguePractice({
 
                     <div className="score-inline-row">
                       <ScoreBox score={score} />
+                      {lineResult.audioUrl && (
+                        <IconButton
+                          title="Listen to your recording"
+                          onClick={() => playRecording(lineResult.audioUrl)}
+                        >
+                          <Play size={16} strokeWidth={2.5} />
+                        </IconButton>
+                      )}
                     </div>
                   </div>
                 )}

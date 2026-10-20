@@ -149,10 +149,154 @@ function recognizeWithLang(bcp47) {
   });
 }
 
+function recognizeWithLangAndAudio(bcp47) {
+  return new Promise((resolve, reject) => {
+    if (typeof window !== "undefined" && !window.isSecureContext) {
+      reject(new Error("Microphone access requires a secure HTTPS connection. Open the deployed HTTPS site and try again."));
+      return;
+    }
+
+    const SpeechRecognition = getSpeechRecognitionConstructor();
+
+    if (!SpeechRecognition) {
+      reject(new Error("Speech recognition is not supported by this browser. On mobile, try Chrome on Android or a browser with Web Speech recognition support."));
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = bcp47;
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    let stream;
+    let recorder;
+    let transcript = "";
+    let audioBlob = null;
+    let recognitionEnded = false;
+    let recordingReady = false;
+    let recordingDone = false;
+    let settled = false;
+    const audioChunks = [];
+
+    const stopStream = () => {
+      stream?.getTracks().forEach((track) => track.stop());
+    };
+
+    const finishIfReady = () => {
+      if (!settled && recognitionEnded && recordingDone) {
+        settled = true;
+        resolve({ transcript, audioBlob });
+      }
+    };
+
+    const stopRecording = () => {
+      if (recorder && recorder.state !== "inactive") {
+        recorder.stop();
+      } else if (recordingReady) {
+        recordingDone = true;
+        stopStream();
+        finishIfReady();
+      }
+    };
+
+    const fail = (error) => {
+      if (settled) return;
+      settled = true;
+      stopStream();
+      reject(error);
+    };
+
+    recognition.onresult = (event) => {
+      const result = event.results?.[event.resultIndex] || event.results?.[0];
+      transcript = result?.[0]?.transcript?.trim() || "";
+    };
+
+    recognition.onerror = (event) => {
+      fail(new Error(recognitionErrorMessage(event.error)));
+    };
+
+    recognition.onend = () => {
+      recognitionEnded = true;
+
+      if (!transcript) {
+        fail(new Error(recognitionErrorMessage("no-speech")));
+        return;
+      }
+
+      stopRecording();
+      finishIfReady();
+    };
+
+    // Start recognition synchronously from the microphone-button gesture, while
+    // requesting a parallel stream for replaying the user's own voice.
+    try {
+      recognition.start();
+    } catch (error) {
+      fail(new Error(recognitionErrorMessage(error.name === "NotAllowedError" ? "not-allowed" : error.message)));
+      return;
+    }
+
+    if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+      recordingDone = true;
+      return;
+    }
+
+    navigator.mediaDevices.getUserMedia({ audio: true }).then((audioStream) => {
+      stream = audioStream;
+
+      if (settled) {
+        stopStream();
+        return;
+      }
+
+      try {
+        recorder = new MediaRecorder(stream);
+        recorder.ondataavailable = (event) => {
+          if (event.data?.size) audioChunks.push(event.data);
+        };
+        recorder.onstop = () => {
+          audioBlob = audioChunks.length
+            ? new Blob(audioChunks, { type: recorder.mimeType })
+            : null;
+          recordingDone = true;
+          stopStream();
+          finishIfReady();
+        };
+        recorder.onerror = () => {
+          audioBlob = null;
+          recordingDone = true;
+          stopStream();
+          finishIfReady();
+        };
+
+        recorder.start();
+        recordingReady = true;
+
+        if (recognitionEnded) stopRecording();
+      } catch {
+        recordingDone = true;
+        stopStream();
+        finishIfReady();
+      }
+    }).catch(() => {
+      // Recognition can still succeed even if audio recording is unavailable.
+      recordingDone = true;
+      finishIfReady();
+    });
+  });
+}
+
 /** Recognize speech in the given language (lang code: "ja", "en", etc.). */
 export function recognizeSpeech(lang = "ja") {
   const bcp47Map = { ja: "ja-JP", en: "en-US", ko: "ko-KR", zh: "zh-CN", fr: "fr-FR", de: "de-DE", es: "es-ES" };
   return recognizeWithLang(bcp47Map[lang] || "en-US");
+}
+
+/** Recognize speech and capture a local audio recording when supported. */
+export function recognizeSpeechWithAudio(lang = "ja") {
+  const bcp47Map = { ja: "ja-JP", en: "en-US", ko: "ko-KR", zh: "zh-CN", fr: "fr-FR", de: "de-DE", es: "es-ES" };
+  return recognizeWithLangAndAudio(bcp47Map[lang] || "en-US");
 }
 
 /** Backward-compatible alias. */

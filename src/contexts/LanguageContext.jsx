@@ -10,7 +10,7 @@ import { EN_GRAMMAR } from "../data/english/grammar";
 import { EN_DIALOGUES, EN_DIALOGUES_BY_LEVEL } from "../data/english/dialogues";
 import { EN_QUIZ } from "../data/english/quiz";
 
-import { speakText, recognizeSpeech } from "../utils/speech";
+import { speakText, recognizeSpeech, recognizeSpeechWithAudio } from "../utils/speech";
 
 const MENU_LABELS = {
   ja: {
@@ -59,6 +59,7 @@ export function LanguageProvider({ language, children }) {
 
       speakText: (text, options) => speakText(text, language, options),
       recognizeSpeech: () => recognizeSpeech(language),
+      recognizeSpeechWithAudio: () => recognizeSpeechWithAudio(language),
     };
   }, [language]);
 
