@@ -321,6 +321,15 @@ export default function DialoguePractice({
   };
 
   const showAllLines = () => {
+    if (showAllScript) {
+      setShowAllScript(false);
+      setManualVisibleLineIds([]);
+      setManualHiddenLineIds(currentDialogue.lines.map((line) => line.id));
+      setActiveLineId(null);
+      setStatus("Hidden all script lines.");
+      return;
+    }
+
     setShowAllScript(true);
     setManualVisibleLineIds([]);
     setManualHiddenLineIds([]);
@@ -891,7 +900,7 @@ export default function DialoguePractice({
           </Button>
 
           <Button variant="secondary" onClick={showAllLines}>
-            Show all
+            {showAllScript ? "Hide all" : "Show all"}
           </Button>
 
           <Button variant="secondary" onClick={toggleSubtitle}>

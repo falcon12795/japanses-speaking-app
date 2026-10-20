@@ -876,7 +876,7 @@ export default [
     level: "IT",
     subject: "Book",
     topic,
-    japanese: "(リリースを)解放する",
+    japanese: "(リソースを)解放する",
     reading: "かいほうする",
     vietnamese: "giải phóng (tài nguyên)",
     example: {

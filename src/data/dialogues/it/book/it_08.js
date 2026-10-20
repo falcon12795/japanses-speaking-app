@@ -12,7 +12,11 @@ export default [
         japanese: "詳細設計書のレビューを始めましょう。",
         reading: "しょうさいせっけいしょのレビューをはじめましょう。",
         english: "Let's start reviewing the detailed design document.",
-        vietnamese: "Hãy bắt đầu review tài liệu thiết kế chi tiết."
+        vietnamese: "Hãy bắt đầu review tài liệu thiết kế chi tiết.",
+        acceptedAnswers: [
+          "詳細設計書のレビューを始めましょう。",
+          "しょうさいせっけいしょのレビューをはじめましょう。"
+        ]
       },
       {
         id: 2,
@@ -20,7 +24,11 @@ export default [
         japanese: "まず画面詳細設計を確認したいです。",
         reading: "まずがめんしょうさいせっけいをかくにんしたいです。",
         english: "First, I'd like to review the detailed screen design.",
-        vietnamese: "Trước tiên tôi muốn kiểm tra thiết kế chi tiết màn hình."
+        vietnamese: "Trước tiên tôi muốn kiểm tra thiết kế chi tiết màn hình.",
+        acceptedAnswers: [
+          "まず画面詳細設計を確認したいです。",
+          "まずがめんしょうさいせっけいをかくにんしたいです。"
+        ]
       },
       {
         id: 3,
@@ -28,7 +36,11 @@ export default [
         japanese: "表示方法は統一されていますか。",
         reading: "ひょうじほうほうはとういつされていますか。",
         english: "Are the display methods standardized?",
-        vietnamese: "Cách hiển thị đã được thống nhất chưa?"
+        vietnamese: "Cách hiển thị đã được thống nhất chưa?",
+        acceptedAnswers: [
+          "表示方法は統一されていますか。",
+          "ひょうじほうほうはとういつされていますか。"
+        ]
       },
       {
         id: 4,
@@ -36,7 +48,11 @@ export default [
         japanese: "はい。既存システムに合わせて整理しました。",
         reading: "はい。きぞんシステムにあわせてせいりしました。",
         english: "Yes. We aligned it with the existing system.",
-        vietnamese: "Vâng. Chúng tôi đã sắp xếp theo hệ thống hiện tại."
+        vietnamese: "Vâng. Chúng tôi đã sắp xếp theo hệ thống hiện tại.",
+        acceptedAnswers: [
+          "はい。既存システムに合わせて整理しました。",
+          "はい。きぞんシステムにあわせてせいりしました。"
+        ]
       },
       {
         id: 5,
@@ -44,7 +60,11 @@ export default [
         japanese: "条件分岐の処理は細かく定めていますか。",
         reading: "じょうけんぶんきのしょりはこまかくさだめていますか。",
         english: "Have the conditional branches been defined in detail?",
-        vietnamese: "Các nhánh điều kiện đã được xác định chi tiết chưa?"
+        vietnamese: "Các nhánh điều kiện đã được xác định chi tiết chưa?",
+        acceptedAnswers: [
+          "条件分岐の処理は細かく定めていますか。",
+          "じょうけんぶんきのしょりはこまかくさだめていますか。"
+        ]
       },
       {
         id: 6,
@@ -52,7 +72,11 @@ export default [
         japanese: "はい。内部構造も資料一式に含めています。",
         reading: "はい。ないぶこうぞうもしりょういっしきにふくめています。",
         english: "Yes. The internal structure is also included in the document set.",
-        vietnamese: "Vâng. Cấu trúc bên trong cũng được đưa vào bộ tài liệu."
+        vietnamese: "Vâng. Cấu trúc bên trong cũng được đưa vào bộ tài liệu.",
+        acceptedAnswers: [
+          "はい。内部構造も資料一式に含めています。",
+          "はい。ないぶこうぞうもしりょういっしきにふくめています。"
+        ]
       },
       {
         id: 7,
@@ -60,7 +84,11 @@ export default [
         japanese: "保守性も考慮されていますね。",
         reading: "ほしゅせいもこうりょされていますね。",
         english: "Maintainability has also been considered.",
-        vietnamese: "Khả năng bảo trì cũng đã được xem xét."
+        vietnamese: "Khả năng bảo trì cũng đã được xem xét.",
+        acceptedAnswers: [
+          "保守性も考慮されていますね。",
+          "ほしゅせいもこうりょされていますね。"
+        ]
       },
       {
         id: 8,
@@ -68,7 +96,11 @@ export default [
         japanese: "はい。生産性向上も図っています。",
         reading: "はい。せいさんせいこうじょうもはかっています。",
         english: "Yes. We are also aiming to improve productivity.",
-        vietnamese: "Vâng. Chúng tôi cũng hướng tới nâng cao năng suất."
+        vietnamese: "Vâng. Chúng tôi cũng hướng tới nâng cao năng suất.",
+        acceptedAnswers: [
+          "はい。生産性向上も図っています。",
+          "はい。せいさんせいこうじょうもはかっています。"
+        ]
       },
       {
         id: 9,
@@ -76,7 +108,11 @@ export default [
         japanese: "前工程との整合性も問題なさそうですね。",
         reading: "ぜんこうていとのせいごうせいももんだいなさそうですね。",
         english: "Consistency with the previous phase also looks good.",
-        vietnamese: "Sự nhất quán với công đoạn trước có vẻ cũng ổn."
+        vietnamese: "Sự nhất quán với công đoạn trước có vẻ cũng ổn.",
+        acceptedAnswers: [
+          "前工程との整合性も問題なさそうですね。",
+          "ぜんこうていとのせいごうせいももんだいなさそうですね。"
+        ]
       },
       {
         id: 10,
@@ -84,7 +120,11 @@ export default [
         japanese: "はい、その認識で問題ありません。",
         reading: "はい、そのにんしきでもんだいありません。",
         english: "Yes, that understanding is correct.",
-        vietnamese: "Vâng, nhận định đó là chính xác."
+        vietnamese: "Vâng, nhận định đó là chính xác.",
+        acceptedAnswers: [
+          "はい、その認識で問題ありません。",
+          "はい、そのにんしきでもんだいありません。"
+        ]
       }
     ]
   },
@@ -102,7 +142,11 @@ export default [
         japanese: "新規ユーザ追加画面について確認しましょう。",
         reading: "しんきユーザついかがめんについてかくにんしましょう。",
         english: "Let's review the new user registration screen.",
-        vietnamese: "Hãy cùng xác nhận màn hình thêm người dùng mới."
+        vietnamese: "Hãy cùng xác nhận màn hình thêm người dùng mới.",
+        acceptedAnswers: [
+          "新規ユーザ追加画面について確認しましょう。",
+          "しんきユーザついかがめんについてかくにんしましょう。"
+        ]
       },
       {
         id: 2,
@@ -110,7 +154,11 @@ export default [
         japanese: "まずラベルとコントロール名を確認します。",
         reading: "まずラベルとコントロールめいをかくにんします。",
         english: "First, let's confirm the labels and control names.",
-        vietnamese: "Đầu tiên hãy xác nhận nhãn và tên control."
+        vietnamese: "Đầu tiên hãy xác nhận nhãn và tên control.",
+        acceptedAnswers: [
+          "まずラベルとコントロール名を確認します。",
+          "まずラベルとコントロールめいをかくにんします。"
+        ]
       },
       {
         id: 3,
@@ -118,7 +166,11 @@ export default [
         japanese: "テキストボックスの最大長は何桁ですか。",
         reading: "テキストボックスのさいだいちょうはなんけたですか。",
         english: "What is the maximum length of the textbox?",
-        vietnamese: "Textbox có độ dài tối đa bao nhiêu ký tự?"
+        vietnamese: "Textbox có độ dài tối đa bao nhiêu ký tự?",
+        acceptedAnswers: [
+          "テキストボックスの最大長は何桁ですか。",
+          "テキストボックスのさいだいちょうはなんけたですか。"
+        ]
       },
       {
         id: 4,
@@ -126,7 +178,11 @@ export default [
         japanese: "30桁を想定しています。",
         reading: "さんじゅうけたをそうていしています。",
         english: "We assume 30 characters.",
-        vietnamese: "Chúng tôi dự kiến là 30 ký tự."
+        vietnamese: "Chúng tôi dự kiến là 30 ký tự.",
+        acceptedAnswers: [
+          "30桁を想定しています。",
+          "さんじゅうけたをそうていしています。"
+        ]
       },
       {
         id: 5,
@@ -134,7 +190,11 @@ export default [
         japanese: "初期値は設定されていますか。",
         reading: "しょきちはせっていされていますか。",
         english: "Are default values configured?",
-        vietnamese: "Giá trị mặc định đã được thiết lập chưa?"
+        vietnamese: "Giá trị mặc định đã được thiết lập chưa?",
+        acceptedAnswers: [
+          "初期値は設定されていますか。",
+          "しょきちはせっていされていますか。"
+        ]
       },
       {
         id: 6,
@@ -142,7 +202,11 @@ export default [
         japanese: "はい。追加区分に初期値を設定しています。",
         reading: "はい。ついかくぶんにしょきちをせっていしています。",
         english: "Yes. Default values are set for the additional category.",
-        vietnamese: "Vâng. Giá trị mặc định đã được đặt cho phân loại bổ sung."
+        vietnamese: "Vâng. Giá trị mặc định đã được đặt cho phân loại bổ sung.",
+        acceptedAnswers: [
+          "はい。追加区分に初期値を設定しています。",
+          "はい。ついかくぶんにしょきちをせっていしています。"
+        ]
       },
       {
         id: 7,
@@ -150,7 +214,11 @@ export default [
         japanese: "ラジオボタンとコンボボックスは編集可能ですか。",
         reading: "ラジオボタンとコンボボックスはへんしゅうかのうですか。",
         english: "Are the radio buttons and combobox editable?",
-        vietnamese: "Radio button và combobox có thể chỉnh sửa không?"
+        vietnamese: "Radio button và combobox có thể chỉnh sửa không?",
+        acceptedAnswers: [
+          "ラジオボタンとコンボボックスは編集可能ですか。",
+          "ラジオボタンとコンボボックスはへんしゅうかのうですか。"
+        ]
       },
       {
         id: 8,
@@ -158,7 +226,11 @@ export default [
         japanese: "条件によって活性と非活性を切り替えます。",
         reading: "じょうけんによってかっせいとひかっせいをきりかえます。",
         english: "They will switch between active and inactive based on conditions.",
-        vietnamese: "Chúng sẽ chuyển đổi giữa active và inactive theo điều kiện."
+        vietnamese: "Chúng sẽ chuyển đổi giữa active và inactive theo điều kiện.",
+        acceptedAnswers: [
+          "条件によって活性と非活性を切り替えます。",
+          "じょうけんによってかっせいとひかっせいをきりかえます。"
+        ]
       },
       {
         id: 9,
@@ -166,7 +238,11 @@ export default [
         japanese: "入力値チェックも必要ですね。",
         reading: "にゅうりょくちチェックもひつようですね。",
         english: "Input validation is also necessary.",
-        vietnamese: "Kiểm tra giá trị nhập cũng cần thiết."
+        vietnamese: "Kiểm tra giá trị nhập cũng cần thiết.",
+        acceptedAnswers: [
+          "入力値チェックも必要ですね。",
+          "にゅうりょくちチェックもひつようですね。"
+        ]
       },
       {
         id: 10,
@@ -174,6 +250,10 @@ export default [
         japanese: "はい。空白以外を必須条件にします。",
         reading: "はい。くうはくいがいをひっすじょうけんにします。",
         english: "Yes. Non-blank values will be required.",
+        acceptedAnswers: [
+          "はい。空白以外を必須条件にします。",
+          "はい。くうはくいがいをひっすじょうけんにします。"
+        ],
         vietnamese: "Vâng. Giá trị không được để trống sẽ là điều kiện bắt buộc."
       }
     ]
@@ -192,7 +272,11 @@ export default [
         japanese: "レビュー依頼を送りましたか。",
         reading: "レビューいらいをおくりましたか。",
         english: "Did you send the review request?",
-        vietnamese: "Bạn đã gửi yêu cầu review chưa?"
+        vietnamese: "Bạn đã gửi yêu cầu review chưa?",
+        acceptedAnswers: [
+          "レビュー依頼を送りましたか。",
+          "レビューいらいをおくりましたか。"
+        ]
       },
       {
         id: 2,
@@ -200,7 +284,11 @@ export default [
         japanese: "はい。先行レビューも依頼済みです。",
         reading: "はい。せんこうレビューもいらいずみです。",
         english: "Yes. The advance review has also been requested.",
-        vietnamese: "Vâng. Review trước cũng đã được yêu cầu."
+        vietnamese: "Vâng. Review trước cũng đã được yêu cầu.",
+        acceptedAnswers: [
+          "はい。先行レビューも依頼済みです。",
+          "はい。せんこうレビューもいらいずみです。"
+        ]
       },
       {
         id: 3,
@@ -208,7 +296,11 @@ export default [
         japanese: "いつ頃フィードバックをもらえそうですか。",
         reading: "いつごろフィードバックをもらえそうですか。",
         english: "When can we expect feedback?",
-        vietnamese: "Khoảng khi nào chúng ta nhận được phản hồi?"
+        vietnamese: "Khoảng khi nào chúng ta nhận được phản hồi?",
+        acceptedAnswers: [
+          "いつ頃フィードバックをもらえそうですか。",
+          "いつごろフィードバックをもらえそうですか。"
+        ]
       },
       {
         id: 4,
@@ -216,7 +308,11 @@ export default [
         japanese: "今週中には回答が来ると思います。",
         reading: "こんしゅうじゅうにはかいとうがくるとおもいます。",
         english: "I think we'll receive responses within this week.",
-        vietnamese: "Tôi nghĩ sẽ nhận được phản hồi trong tuần này."
+        vietnamese: "Tôi nghĩ sẽ nhận được phản hồi trong tuần này.",
+        acceptedAnswers: [
+          "今週中には回答が来ると思います。",
+          "こんしゅうじゅうにはかいとうがくるとおもいます。"
+        ]
       },
       {
         id: 5,
@@ -224,7 +320,11 @@ export default [
         japanese: "レビュー対象は全ての設計内容ですか。",
         reading: "レビューたいしょうはすべてのせっけいないようですか。",
         english: "Are all design contents included in the review?",
-        vietnamese: "Toàn bộ nội dung thiết kế đều nằm trong phạm vi review chứ?"
+        vietnamese: "Toàn bộ nội dung thiết kế đều nằm trong phạm vi review chứ?",
+        acceptedAnswers: [
+          "レビュー対象は全ての設計内容ですか。",
+          "レビューたいしょうはすべてのせっけいないようですか。"
+        ]
       },
       {
         id: 6,
@@ -232,7 +332,11 @@ export default [
         japanese: "はい。ただし技術面を優先しています。",
         reading: "はい。ただしぎじゅつめんをゆうせんしています。",
         english: "Yes, but we prioritize the technical aspects.",
-        vietnamese: "Vâng, nhưng ưu tiên các khía cạnh kỹ thuật."
+        vietnamese: "Vâng, nhưng ưu tiên các khía cạnh kỹ thuật.",
+        acceptedAnswers: [
+          "はい。ただし技術面を優先しています。",
+          "はい。ただしぎじゅつめんをゆうせんしています。"
+        ]
       },
       {
         id: 7,
@@ -240,7 +344,11 @@ export default [
         japanese: "ネイティブレビューも予定されていますか。",
         reading: "ネイティブレビューもよていされていますか。",
         english: "Is a native review also planned?",
-        vietnamese: "Có kế hoạch native review không?"
+        vietnamese: "Có kế hoạch native review không?",
+        acceptedAnswers: [
+          "ネイティブレビューも予定されていますか。",
+          "ネイティブレビューもよていされていますか。"
+        ]
       },
       {
         id: 8,
@@ -248,7 +356,11 @@ export default [
         japanese: "はい。文言について確認してもらいます。",
         reading: "はい。もんごんについてかくにんしてもらいます。",
         english: "Yes. They will review the wording.",
-        vietnamese: "Có. Họ sẽ kiểm tra phần câu chữ."
+        vietnamese: "Có. Họ sẽ kiểm tra phần câu chữ.",
+        acceptedAnswers: [
+          "はい。文言について確認してもらいます。",
+          "はい。もんごんについてかくにんしてもらいます。"
+        ]
       },
       {
         id: 9,
@@ -256,7 +368,11 @@ export default [
         japanese: "それなら安心ですね。",
         reading: "それならあんしんですね。",
         english: "That sounds reassuring.",
-        vietnamese: "Như vậy thì yên tâm."
+        vietnamese: "Như vậy thì yên tâm.",
+        acceptedAnswers: [
+          "それなら安心ですね。",
+          "それならあんしんですね。"
+        ]
       },
       {
         id: 10,
@@ -264,7 +380,11 @@ export default [
         japanese: "レビュー結果を共有します。",
         reading: "レビューけっかをきょうゆうします。",
         english: "I will share the review results.",
-        vietnamese: "Tôi sẽ chia sẻ kết quả review."
+        vietnamese: "Tôi sẽ chia sẻ kết quả review.",
+        acceptedAnswers: [
+          "レビュー結果を共有します。",
+          "レビューけっかをきょうゆうします。"
+        ]
       }
     ]
   },
@@ -282,7 +402,11 @@ export default [
         japanese: "最近、手戻りが増えていますね。",
         reading: "さいきん、てもどりがふえていますね。",
         english: "Recently, rework has been increasing.",
-        vietnamese: "Gần đây việc làm lại đang tăng lên."
+        vietnamese: "Gần đây việc làm lại đang tăng lên.",
+        acceptedAnswers: [
+          "最近、手戻りが増えていますね。",
+          "さいきん、てもどりがふえていますね。"
+        ]
       },
       {
         id: 2,
@@ -290,7 +414,11 @@ export default [
         japanese: "はい。前提条件の認識がずれていました。",
         reading: "はい。ぜんていじょうけんのにんしきがずれていました。",
         english: "Yes. There was a misunderstanding of the preconditions.",
-        vietnamese: "Vâng. Có sự khác biệt trong nhận thức về điều kiện tiền đề."
+        vietnamese: "Vâng. Có sự khác biệt trong nhận thức về điều kiện tiền đề.",
+        acceptedAnswers: [
+          "はい。前提条件の認識がずれていました。",
+          "はい。ぜんていじょうけんのにんしきがずれていました。"
+        ]
       },
       {
         id: 3,
@@ -298,7 +426,11 @@ export default [
         japanese: "要件の粒度も関係していますか。",
         reading: "ようけんのりゅうどもかんけいしていますか。",
         english: "Is the granularity of requirements also related?",
-        vietnamese: "Độ chi tiết của yêu cầu cũng có liên quan không?"
+        vietnamese: "Độ chi tiết của yêu cầu cũng có liên quan không?",
+        acceptedAnswers: [
+          "要件の粒度も関係していますか。",
+          "ようけんのりゅうどもかんけいしていますか。"
+        ]
       },
       {
         id: 4,
@@ -306,7 +438,11 @@ export default [
         japanese: "その可能性があります。",
         reading: "そのかのうせいがあります。",
         english: "That is possible.",
-        vietnamese: "Điều đó có thể xảy ra."
+        vietnamese: "Điều đó có thể xảy ra.",
+        acceptedAnswers: [
+          "その可能性があります。",
+          "そのかのうせいがあります。"
+        ]
       },
       {
         id: 5,
@@ -314,7 +450,11 @@ export default [
         japanese: "詳細設計工程で整理すべきですね。",
         reading: "しょうさいせっけいこうていでせいりすべきですね。",
         english: "We should organize it during the detailed design phase.",
-        vietnamese: "Chúng ta nên sắp xếp lại trong giai đoạn thiết kế chi tiết."
+        vietnamese: "Chúng ta nên sắp xếp lại trong giai đoạn thiết kế chi tiết.",
+        acceptedAnswers: [
+          "詳細設計工程で整理すべきですね。",
+          "しょうさいせっけいこうていでせいりすべきですね。"
+        ]
       },
       {
         id: 6,
@@ -322,7 +462,11 @@ export default [
         japanese: "はい。進め方を統一したいと思います。",
         reading: "はい。すすめかたをとういつしたいとおもいます。",
         english: "Yes. I want to standardize the way we proceed.",
-        vietnamese: "Vâng. Tôi muốn thống nhất cách thức thực hiện."
+        vietnamese: "Vâng. Tôi muốn thống nhất cách thức thực hiện.",
+        acceptedAnswers: [
+          "はい。進め方を統一したいと思います。",
+          "はい。すすめかたをとういつしたいとおもいます。"
+        ]
       },
       {
         id: 7,
@@ -330,7 +474,11 @@ export default [
         japanese: "レビューを先行して実施しましょう。",
         reading: "レビューをせんこうしてじっししましょう。",
         english: "Let's conduct reviews earlier.",
-        vietnamese: "Hãy thực hiện review sớm hơn."
+        vietnamese: "Hãy thực hiện review sớm hơn.",
+        acceptedAnswers: [
+          "レビューを先行して実施しましょう。",
+          "レビューをせんこうしてじっししましょう。"
+        ]
       },
       {
         id: 8,
@@ -338,7 +486,11 @@ export default [
         japanese: "そうすれば手戻りを減らせます。",
         reading: "そうすればてもどりをへらせます。",
         english: "That will reduce rework.",
-        vietnamese: "Như vậy có thể giảm việc làm lại."
+        vietnamese: "Như vậy có thể giảm việc làm lại.",
+        acceptedAnswers: [
+          "そうすれば手戻りを減らせます。",
+          "そうすればてもどりをへらせます。"
+        ]
       },
       {
         id: 9,
@@ -346,7 +498,11 @@ export default [
         japanese: "オンスケジュールで進めたいですね。",
         reading: "オンスケジュールですすめたいですね。",
         english: "We want to stay on schedule.",
-        vietnamese: "Chúng ta muốn giữ đúng tiến độ."
+        vietnamese: "Chúng ta muốn giữ đúng tiến độ.",
+        acceptedAnswers: [
+          "オンスケジュールで進めたいですね。",
+          "オンスケジュールですすめたいですね。"
+        ]
       },
       {
         id: 10,
@@ -354,7 +510,11 @@ export default [
         japanese: "はい、滞りなく進めます。",
         reading: "はい、とどこおりなくすすめます。",
         english: "Yes, we will proceed smoothly.",
-        vietnamese: "Vâng, chúng tôi sẽ tiến hành suôn sẻ."
+        vietnamese: "Vâng, chúng tôi sẽ tiến hành suôn sẻ.",
+        acceptedAnswers: [
+          "はい、滞りなく進めます。",
+          "はい、とどこおりなくすすめます。"
+        ]
       }
     ]
   },
@@ -372,7 +532,11 @@ export default [
         japanese: "採用管理システムの設計について説明してください。",
         reading: "さいようかんりシステムのせっけいについてせつめいしてください。",
         english: "Please explain the design of the recruitment management system.",
-        vietnamese: "Hãy giải thích thiết kế của hệ thống quản lý tuyển dụng."
+        vietnamese: "Hãy giải thích thiết kế của hệ thống quản lý tuyển dụng.",
+        acceptedAnswers: [
+          "採用管理システムの設計について説明してください。",
+          "さいようかんりシステムのせっけいについてせつめいしてください。"
+        ]
       },
       {
         id: 2,
@@ -380,7 +544,11 @@ export default [
         japanese: "まず業務要件を整理しました。",
         reading: "まずぎょうむようけんをせいりしました。",
         english: "First, we organized the business requirements.",
-        vietnamese: "Trước tiên chúng tôi đã sắp xếp các yêu cầu nghiệp vụ."
+        vietnamese: "Trước tiên chúng tôi đã sắp xếp các yêu cầu nghiệp vụ.",
+        acceptedAnswers: [
+          "まず業務要件を整理しました。",
+          "まずぎょうむようけんをせいりしました。"
+        ]
       },
       {
         id: 3,
@@ -388,7 +556,11 @@ export default [
         japanese: "どのような構成単位がありますか。",
         reading: "どのようなこうせいたんいがありますか。",
         english: "What structural units are there?",
-        vietnamese: "Có những đơn vị cấu trúc nào?"
+        vietnamese: "Có những đơn vị cấu trúc nào?",
+        acceptedAnswers: [
+          "どのような構成単位がありますか。",
+          "どのようなこうせいたんいがありますか。"
+        ]
       },
       {
         id: 4,
@@ -396,7 +568,11 @@ export default [
         japanese: "応募者管理、面接管理、評価管理があります。",
         reading: "おうぼしゃかんり、めんせつかんり、ひょうかかんりがあります。",
         english: "There are applicant management, interview management, and evaluation management.",
-        vietnamese: "Có quản lý ứng viên, quản lý phỏng vấn và quản lý đánh giá."
+        vietnamese: "Có quản lý ứng viên, quản lý phỏng vấn và quản lý đánh giá.",
+        acceptedAnswers: [
+          "応募者管理、面接管理、評価管理があります。",
+          "おうぼしゃかんり、めんせつかんり、ひょうかかんりがあります。"
+        ]
       },
       {
         id: 5,
@@ -404,7 +580,11 @@ export default [
         japanese: "プロトタイプは作成しましたか。",
         reading: "プロトタイプはさくせいしましたか。",
         english: "Have you created a prototype?",
-        vietnamese: "Đã tạo prototype chưa?"
+        vietnamese: "Đã tạo prototype chưa?",
+        acceptedAnswers: [
+          "プロトタイプは作成しましたか。",
+          "プロトタイプはさくせいしましたか。"
+        ]
       },
       {
         id: 6,
@@ -412,7 +592,11 @@ export default [
         japanese: "はい。現行サンプルを参考にしました。",
         reading: "はい。げんこうサンプルをさんこうにしました。",
         english: "Yes. We used the current sample as a reference.",
-        vietnamese: "Vâng. Chúng tôi tham khảo mẫu hiện tại."
+        vietnamese: "Vâng. Chúng tôi tham khảo mẫu hiện tại.",
+        acceptedAnswers: [
+          "はい。現行サンプルを参考にしました。",
+          "はい。げんこうサンプルをさんこうにしました。"
+        ]
       },
       {
         id: 7,
@@ -420,7 +604,11 @@ export default [
         japanese: "業務の実態と合っていますか。",
         reading: "ぎょうむのじったいとあっていますか。",
         english: "Does it match the actual business operations?",
-        vietnamese: "Nó có phù hợp với thực tế nghiệp vụ không?"
+        vietnamese: "Nó có phù hợp với thực tế nghiệp vụ không?",
+        acceptedAnswers: [
+          "業務の実態と合っていますか。",
+          "ぎょうむのじったいとあっていますか。"
+        ]
       },
       {
         id: 8,
@@ -428,7 +616,11 @@ export default [
         japanese: "はい。現場担当者にも確認してもらいました。",
         reading: "はい。げんばたんとうしゃにもかくにんしてもらいました。",
         english: "Yes. The on-site staff also reviewed it.",
-        vietnamese: "Vâng. Người phụ trách hiện trường cũng đã xác nhận."
+        vietnamese: "Vâng. Người phụ trách hiện trường cũng đã xác nhận.",
+        acceptedAnswers: [
+          "はい。現場担当者にも確認してもらいました。",
+          "はい。げんばたんとうしゃにもかくにんしてもらいました。"
+        ]
       },
       {
         id: 9,
@@ -436,7 +628,11 @@ export default [
         japanese: "それなら安心ですね。",
         reading: "それならあんしんですね。",
         english: "That sounds reassuring.",
-        vietnamese: "Như vậy thì yên tâm rồi."
+        vietnamese: "Như vậy thì yên tâm rồi.",
+        acceptedAnswers: [
+          "それなら安心ですね。",
+          "それならあんしんですね。"
+        ]
       },
       {
         id: 10,
@@ -444,7 +640,11 @@ export default [
         japanese: "次回はプロダクト評価を実施します。",
         reading: "じかいはプロダクトひょうかをじっしします。",
         english: "Next, we will conduct the product evaluation.",
-        vietnamese: "Tiếp theo chúng tôi sẽ thực hiện đánh giá sản phẩm."
+        vietnamese: "Tiếp theo chúng tôi sẽ thực hiện đánh giá sản phẩm.",
+        acceptedAnswers: [
+          "次回はプロダクト評価を実施します。",
+          "じかいはプロダクトひょうかをじっしします。"
+        ]
       }
     ]
   }
