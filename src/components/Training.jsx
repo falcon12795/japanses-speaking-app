@@ -9,6 +9,7 @@ import { N2_GRAMMAR_QUESTIONS } from "../data/training/n2";
 import { N3_GRAMMAR_QUESTIONS } from "../data/training/n3";
 import { N4_GRAMMAR_QUESTIONS } from "../data/training/n4";
 import { N5_GRAMMAR_QUESTIONS } from "../data/training/n5";
+import { EN_GRAMMAR_QUESTIONS } from "../data/english/training";
 
 function shuffleArray(array) {
     return [...array].sort(() => Math.random() - 0.5);
@@ -74,26 +75,29 @@ function getAnswerIndex(question) {
     return question.choices.findIndex((choice) => choice === question.answer);
 }
 
+function getGrammarQuizGroup(grammarId) {
+    // English ids look like "a1_gram_01"; Japanese ids look like "n3-grammar-...".
+    if (grammarId.includes("_gram_")) {
+        return EN_GRAMMAR_QUESTIONS[grammarId];
+    }
+
+    switch (grammarId.substring(0, 2).toUpperCase()) {
+        case "N1":
+            return N1_GRAMMAR_QUESTIONS[grammarId];
+        case "N2":
+            return N2_GRAMMAR_QUESTIONS[grammarId];
+        case "N3":
+            return N3_GRAMMAR_QUESTIONS[grammarId];
+        case "N4":
+            return N4_GRAMMAR_QUESTIONS[grammarId];
+        default:
+            return N5_GRAMMAR_QUESTIONS[grammarId];
+    }
+}
+
 function buildGrammarQuestions(grammarIds) {
     return grammarIds.flatMap((grammarId) => {
-        var quizGroup;
-        switch (grammarId.substring(0, 2).toUpperCase()) {
-            case "N1":
-                quizGroup = N1_GRAMMAR_QUESTIONS[grammarId];
-                break;
-            case "N2":
-                quizGroup = N2_GRAMMAR_QUESTIONS[grammarId];
-                break;
-            case "N3":
-                quizGroup = N3_GRAMMAR_QUESTIONS[grammarId];
-                break;
-            case "N4":
-                quizGroup = N4_GRAMMAR_QUESTIONS[grammarId];
-                break;
-            default:
-                quizGroup = N5_GRAMMAR_QUESTIONS[grammarId];
-                break;
-        }
+        const quizGroup = getGrammarQuizGroup(grammarId);
 
         if (!quizGroup?.questions?.length) {
             return [];

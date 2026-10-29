@@ -1,4 +1,3 @@
-import { sub } from "framer-motion/client";
 import subject_01 from "./subject_01";
 import subject_02 from "./subject_02";
 import subject_03 from "./subject_03";
@@ -42,7 +41,7 @@ import subject_40 from "./subject_40";
 import subject_41 from "./subject_41";
 import subject_42 from "./subject_42";
 
-export const EN_SUBJECTS = [
+export default [
     ...subject_01, ...subject_02, ...subject_03, ...subject_04, ...subject_05,
      ...subject_06, ...subject_07, ...subject_08, ...subject_09, ...subject_10,
       ...subject_11, ...subject_12, ...subject_13, ...subject_14, ...subject_15,

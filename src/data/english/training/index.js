@@ -1,0 +1,15 @@
+import { A1_GRAMMAR_QUESTIONS } from "./a1";
+import { A2_GRAMMAR_QUESTIONS } from "./a2";
+import { B1_GRAMMAR_QUESTIONS } from "./b1";
+import { B2_GRAMMAR_QUESTIONS } from "./b2";
+import { C1_GRAMMAR_QUESTIONS } from "./c1";
+import { C2_GRAMMAR_QUESTIONS } from "./c2";
+
+export const EN_GRAMMAR_QUESTIONS = {
+  ...A1_GRAMMAR_QUESTIONS,
+  ...A2_GRAMMAR_QUESTIONS,
+  ...B1_GRAMMAR_QUESTIONS,
+  ...B2_GRAMMAR_QUESTIONS,
+  ...C1_GRAMMAR_QUESTIONS,
+  ...C2_GRAMMAR_QUESTIONS,
+};
