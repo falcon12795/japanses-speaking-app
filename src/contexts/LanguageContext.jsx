@@ -14,6 +14,7 @@ import { speakText, recognizeSpeech, recognizeSpeechWithAudio } from "../utils/s
 
 const MENU_LABELS = {
   ja: {
+    alphabet: "かな",
     vocabulary: "言葉",
     grammar: "文法",
     dialogue: "会話",
@@ -23,6 +24,7 @@ const MENU_LABELS = {
     footerNote: "今日も頑張りましょう！",
   },
   en: {
+    alphabet: "Alphabet",
     vocabulary: "Vocabulary",
     grammar: "Grammar",
     dialogue: "Dialogues",

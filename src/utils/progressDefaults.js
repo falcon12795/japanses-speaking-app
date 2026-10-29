@@ -11,6 +11,9 @@ export const DEFAULT_PROGRESS = {
   kanaCorrect: 0,
   kanaWrong: 0,
 
+  alphabetCorrect: 0,
+  alphabetWrong: 0,
+
   speakingPractice: 0,
   dialoguePractice: 0,
 

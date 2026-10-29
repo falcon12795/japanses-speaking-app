@@ -34,6 +34,12 @@ export default function ProgressPanel({ progress, onProgressChange }) {
           <strong>Kana wrong:</strong> {progress.kanaWrong}
         </p>
         <p>
+          <strong>English alphabet correct:</strong> {progress.alphabetCorrect || 0}
+        </p>
+        <p>
+          <strong>English alphabet wrong:</strong> {progress.alphabetWrong || 0}
+        </p>
+        <p>
           <strong>Speaking practice:</strong> {progress.speakingPractice}
         </p>
         <p>

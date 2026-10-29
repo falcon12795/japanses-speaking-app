@@ -1,0 +1,251 @@
+/* =========================
+   ALPHABET
+========================= */
+
+.alphabet-panel {
+  padding: 20px 28px 32px;
+}
+
+.alphabet-options-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.alphabet-options-label {
+  color: var(--color-muted);
+  font-weight: 700;
+  min-width: 90px;
+}
+
+/* Kana chart */
+
+.kana-detail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 96px;
+  padding: 12px 20px;
+  margin: 12px 0 20px;
+  background: var(--color-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.kana-detail-char {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.kana-detail-romaji {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+.kana-section {
+  margin-bottom: 24px;
+}
+
+.kana-section-subtitle {
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kana-grid {
+  display: grid;
+  gap: 8px;
+  max-width: 560px;
+}
+
+button.kana-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 10px 4px;
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+button.kana-cell:hover {
+  border-color: var(--color-primary);
+  background: #eff6ff;
+  opacity: 1;
+}
+
+button.kana-cell.selected {
+  border-color: var(--color-primary);
+  background: #dbeafe;
+}
+
+.kana-cell-char {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.kana-cell-romaji {
+  font-size: 12px;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+/* English alphabet */
+
+.alphabet-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px 28px;
+  align-items: center;
+  padding: 16px 20px;
+  margin: 12px 0 20px;
+  background: var(--color-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.alphabet-detail-letters {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-primary-dark);
+}
+
+.alphabet-detail-info p {
+  margin: 0 0 6px;
+}
+
+.alphabet-detail-words {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button.alphabet-word-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  text-align: left;
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.alphabet-word-emoji {
+  font-size: 32px;
+}
+
+.alphabet-word-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 13px;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.alphabet-word-text strong {
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.alphabet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 10px;
+  max-width: 720px;
+}
+
+button.alphabet-card {
+  padding: 14px 0;
+  font-size: 24px;
+  font-weight: 800;
+  background: #ffffff;
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+button.alphabet-card.vowel {
+  border-color: #fdba74;
+  background: var(--color-warning-soft);
+}
+
+button.alphabet-card:hover {
+  border-color: var(--color-primary);
+  opacity: 1;
+}
+
+button.alphabet-card.selected {
+  border-color: var(--color-primary);
+  background: #dbeafe;
+  color: var(--color-primary-dark);
+}
+
+/* Quiz */
+
+.alphabet-quiz-score {
+  margin: 12px 0;
+}
+
+.alphabet-quiz-hint {
+  margin-bottom: 8px;
+}
+
+.alphabet-quiz-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background: var(--color-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.alphabet-quiz-prompt-main {
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.alphabet-quiz-prompt-sub {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.alphabet-quiz-options button {
+  font-size: 28px;
+  text-align: center;
+}
+
+.alphabet-quiz-feedback {
+  margin: 4px 0 12px;
+}
+
+@media (max-width: 640px) {
+  .alphabet-panel {
+    padding: 16px;
+  }
+
+  .alphabet-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .alphabet-quiz-options {
+    grid-template-columns: 1fr 1fr;
+  }
+}

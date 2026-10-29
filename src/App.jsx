@@ -21,6 +21,7 @@ import DialogueList from "./components/DialogueList";
 import DialoguePractice from "./components/DialoguePractice";
 import JLPTQuiz from "./components/JLPTQuiz";
 import ProgressPanel from "./components/ProgressPanel";
+import Alphabet from "./components/Alphabet";
 
 import { loadRemoteProgress, saveProgress, loadLanguage, saveLanguage } from "./utils/storage";
 import LanguageSelector, { LANGUAGES } from "./components/LanguageSelector";
@@ -37,6 +38,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen, language, onChangeLang }) {
   const { user, logout } = useAuth();
 
   const menuItems = [
+    { to: "/alphabet",   label: menuLabels.alphabet,   icon: "🔤" },
     { to: "/vocabulary", label: menuLabels.vocabulary, icon: "📚" },
     { to: "/grammar",    label: menuLabels.grammar,    icon: "📖" },
     { to: "/dialogue",   label: menuLabels.dialogue,   icon: "💬" },
@@ -923,6 +925,24 @@ function AppContent({ userId, initialProgress }) {
           <Route
             path="/"
             element={<Navigate to="/vocabulary" replace />}
+          />
+
+          <Route
+            path="/alphabet"
+            element={
+              <>
+                <PageHeader
+                  setSidebarOpen={setSidebarOpen}
+                />
+
+                <section className="content-area">
+                  <Alphabet
+                    progress={progress}
+                    onProgressChange={handleProgressChange}
+                  />
+                </section>
+              </>
+            }
           />
 
           <Route
