@@ -1,0 +1,33 @@
+export default {
+  subject: "Education, Housing & Everyday Life",
+  topics: [
+    ["Education", [
+      ["졸업", "Tốt nghiệp", "내년에 대학교를 졸업해요.", "Năm sau tôi tốt nghiệp đại học."],
+      ["입학", "Nhập học", "삼 월에 입학해요.", "Tháng Ba tôi nhập học."],
+      ["전공", "Chuyên ngành", "제 전공은 경영학이에요.", "Chuyên ngành của tôi là quản trị kinh doanh."],
+      ["장학금", "Học bổng", "장학금을 받았어요.", "Tôi đã nhận được học bổng."],
+      ["유학", "Du học", "한국으로 유학을 가고 싶어요.", "Tôi muốn đi du học Hàn Quốc."],
+      ["발표", "Thuyết trình, công bố", "내일 수업에서 발표해야 해요.", "Ngày mai tôi phải thuyết trình trong lớp."],
+      ["성적", "Điểm số", "성적이 많이 올랐어요.", "Điểm của tôi đã tăng nhiều."],
+      ["합격", "Đỗ", "시험에 합격했어요.", "Tôi đã đỗ kỳ thi."],
+      ["복습하다", "Ôn lại", "집에서 복습해요.", "Tôi ôn lại ở nhà."],
+      ["외우다", "Học thuộc", "단어를 매일 외워요.", "Tôi học thuộc từ vựng mỗi ngày."],
+      ["연습하다", "Luyện tập", "한국어로 말하기를 연습해요.", "Tôi luyện nói tiếng Hàn."],
+      ["발음", "Phát âm", "발음이 정확해요.", "Phát âm chính xác."],
+    ]],
+    ["Housing & Everyday Life", [
+      ["이사", "Chuyển nhà", "다음 달에 이사해요.", "Tháng sau tôi chuyển nhà."],
+      ["아파트", "Chung cư", "아파트에 살아요.", "Tôi sống ở chung cư."],
+      ["월세", "Tiền thuê nhà hàng tháng", "월세가 너무 비싸요.", "Tiền thuê nhà hàng tháng đắt quá."],
+      ["보증금", "Tiền đặt cọc", "보증금을 냈어요.", "Tôi đã đóng tiền đặt cọc."],
+      ["이웃집", "Nhà hàng xóm", "이웃집이 시끄러워요.", "Nhà hàng xóm ồn ào."],
+      ["청소기", "Máy hút bụi", "청소기로 청소해요.", "Tôi dọn dẹp bằng máy hút bụi."],
+      ["세탁기", "Máy giặt", "세탁기가 고장 났어요.", "Máy giặt bị hỏng."],
+      ["냉장고", "Tủ lạnh", "냉장고에 우유가 있어요.", "Có sữa trong tủ lạnh."],
+      ["에어컨", "Điều hòa", "에어컨을 켜 주세요.", "Xin hãy bật điều hòa."],
+      ["쓰레기", "Rác", "쓰레기를 버려요.", "Tôi vứt rác."],
+      ["빨래", "Đồ giặt", "주말에 빨래를 해요.", "Cuối tuần tôi giặt quần áo."],
+      ["설거지", "Rửa bát", "저녁 식사 후에 설거지를 해요.", "Sau bữa tối tôi rửa bát."],
+    ]],
+  ],
+};

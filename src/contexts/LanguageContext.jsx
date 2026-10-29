@@ -10,6 +10,11 @@ import { EN_GRAMMAR } from "../data/english/grammar";
 import { EN_DIALOGUES, EN_DIALOGUES_BY_LEVEL } from "../data/english/dialogues";
 import { EN_QUIZ } from "../data/english/quiz";
 
+import { KO_VOCABULARY, KO_VOCABULARY_BY_LEVEL } from "../data/korean/vocabulary";
+import { KO_GRAMMAR } from "../data/korean/grammar";
+import { KO_DIALOGUES, KO_DIALOGUES_BY_LEVEL } from "../data/korean/dialogues";
+import { KO_QUIZ } from "../data/korean/quiz";
+
 import { speakText, recognizeSpeech, recognizeSpeechWithAudio } from "../utils/speech";
 
 const MENU_LABELS = {
@@ -33,6 +38,16 @@ const MENU_LABELS = {
     quizTitle: "English Quiz",
     footerNote: "Keep up the great work!",
   },
+  ko: {
+    alphabet: "한글",
+    vocabulary: "어휘",
+    grammar: "문법",
+    dialogue: "회화",
+    quiz: "TOPIK Quiz",
+    progress: "진도",
+    quizTitle: "TOPIK Quiz",
+    footerNote: "오늘도 화이팅!",
+  },
 };
 
 const DEFAULT_LABELS = MENU_LABELS.en;
@@ -43,19 +58,20 @@ export function LanguageProvider({ language, children }) {
   const value = useMemo(() => {
     const isJa = language === "ja";
     const isEn = language === "en";
+    const isKo = language === "ko";
 
     return {
       language,
 
-      vocabulary: isJa ? VOCABULARY : isEn ? EN_VOCABULARY : [],
-      vocabularyByLevel: isJa ? VOCABULARY_BY_LEVEL : isEn ? EN_VOCABULARY_BY_LEVEL : {},
+      vocabulary: isJa ? VOCABULARY : isEn ? EN_VOCABULARY : isKo ? KO_VOCABULARY : [],
+      vocabularyByLevel: isJa ? VOCABULARY_BY_LEVEL : isEn ? EN_VOCABULARY_BY_LEVEL : isKo ? KO_VOCABULARY_BY_LEVEL : {},
 
-      grammar: isJa ? GRAMMAR : isEn ? EN_GRAMMAR : [],
+      grammar: isJa ? GRAMMAR : isEn ? EN_GRAMMAR : isKo ? KO_GRAMMAR : [],
 
-      dialogues: isJa ? DIALOGUES : isEn ? EN_DIALOGUES : [],
-      dialoguesByLevel: isJa ? DIALOGUES_BY_LEVEL : isEn ? EN_DIALOGUES_BY_LEVEL : {},
+      dialogues: isJa ? DIALOGUES : isEn ? EN_DIALOGUES : isKo ? KO_DIALOGUES : [],
+      dialoguesByLevel: isJa ? DIALOGUES_BY_LEVEL : isEn ? EN_DIALOGUES_BY_LEVEL : isKo ? KO_DIALOGUES_BY_LEVEL : {},
 
-      quiz: isJa ? JLPT_QUIZ : isEn ? EN_QUIZ : [],
+      quiz: isJa ? JLPT_QUIZ : isEn ? EN_QUIZ : isKo ? KO_QUIZ : [],
 
       menuLabels: MENU_LABELS[language] || DEFAULT_LABELS,
 

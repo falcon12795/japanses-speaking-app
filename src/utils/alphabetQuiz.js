@@ -27,3 +27,55 @@ export function uniqueBy(items, getKey) {
     return true;
   });
 }
+
+/*
+ * Builds a question from a pool of { id, kana, romaji, say? } characters.
+ * type: "read" (character -> romanization), "write" (romanization -> character), "listen" (sound -> character).
+ */
+export function createCharacterQuestion(type, pool) {
+  const target = pickOne(pool);
+  const distractors = shuffle(
+    uniqueBy(
+      pool.filter((item) => item.romaji !== target.romaji),
+      (item) => item.romaji
+    )
+  ).slice(0, 3);
+
+  const toOption = (item, label) => ({
+    id: item.id,
+    label,
+    isCorrect: item === target,
+  });
+
+  const items = shuffle([target, ...distractors]);
+  const spoken = target.say || target.kana;
+  const explanation = `${target.kana} = ${target.romaji}`;
+
+  if (type === "read") {
+    return {
+      prompt: target.kana,
+      hint: "Choose the correct romanization.",
+      speak: spoken,
+      explanation,
+      options: items.map((item) => toOption(item, item.romaji)),
+    };
+  }
+
+  if (type === "write") {
+    return {
+      prompt: target.romaji,
+      hint: "Choose the correct character.",
+      explanation,
+      options: items.map((item) => toOption(item, item.kana)),
+    };
+  }
+
+  return {
+    prompt: "🎧",
+    hint: "Listen, then choose the character you hear.",
+    speak: spoken,
+    autoSpeak: true,
+    explanation,
+    options: items.map((item) => toOption(item, item.kana)),
+  };
+}

@@ -1,0 +1,186 @@
+export default [
+  {
+    lesson: "Lesson 10: Hobbies & Weather",
+    dialogues: [
+      {
+        title: "Talking about hobbies",
+        description: "Sharing a hobby and inviting a friend.",
+        lines: [
+          ["A", "취미가 뭐예요?", "Sở thích của bạn là gì?"],
+          ["B", "저는 사진 찍는 것을 좋아해요.", "Tôi thích chụp ảnh."],
+          ["A", "주로 어디에서 찍어요?", "Bạn thường chụp ở đâu?"],
+          ["B", "주말마다 공원에 가서 찍어요.", "Cuối tuần nào tôi cũng đến công viên chụp."],
+          ["A", "멋있네요. 저도 배우고 싶어요.", "Tuyệt quá. Tôi cũng muốn học."],
+          ["B", "그럼 같이 가요.", "Vậy chúng ta cùng đi."],
+        ],
+      },
+      {
+        title: "Talking about the weather",
+        description: "Chatting about today's and tomorrow's weather.",
+        lines: [
+          ["A", "오늘 날씨가 정말 좋아요.", "Hôm nay thời tiết thật đẹp."],
+          ["B", "네, 하늘도 맑고 따뜻해요.", "Vâng, bầu trời trong và ấm áp."],
+          ["A", "어제는 비가 왔는데요.", "Hôm qua trời mưa mà."],
+          ["B", "내일은 어떨까요?", "Ngày mai không biết thế nào nhỉ?"],
+          ["A", "일기예보에서 흐리다고 했어요.", "Dự báo thời tiết nói là trời âm u."],
+          ["B", "그럼 오늘 산책하러 갈까요?", "Vậy hôm nay chúng ta đi dạo nhé?"],
+        ],
+      },
+      {
+        title: "Playing sports",
+        description: "Talking about jogging and swimming.",
+        lines: [
+          ["A", "운동을 좋아하세요?", "Bạn có thích thể thao không?"],
+          ["B", "네, 매일 아침에 조깅해요.", "Có, sáng nào tôi cũng chạy bộ."],
+          ["A", "저는 수영을 좋아해요.", "Tôi thích bơi lội."],
+          ["B", "수영장이 집 근처에 있어요?", "Bể bơi có gần nhà bạn không?"],
+          ["A", "네, 걸어서 오 분이에요.", "Có, đi bộ năm phút."],
+          ["B", "다음에 같이 가요.", "Lần sau cùng đi nhé."],
+        ],
+      },
+      {
+        title: "Going to the movies",
+        description: "Picking a showtime and buying tickets.",
+        lines: [
+          ["A", "이 영화 봤어요?", "Bạn xem bộ phim này chưa?"],
+          ["B", "아니요, 아직 못 봤어요.", "Chưa, tôi vẫn chưa xem được."],
+          ["A", "정말 재미있대요. 같이 볼까요?", "Nghe nói rất hay. Cùng xem nhé?"],
+          ["B", "좋아요. 몇 시 영화가 있어요?", "Được. Có suất chiếu mấy giờ?"],
+          ["A", "저녁 일곱 시 영화가 있어요.", "Có suất bảy giờ tối."],
+          ["B", "그럼 표는 제가 살게요.", "Vậy để tôi mua vé."],
+        ],
+      },
+      {
+        title: "Singing at karaoke",
+        description: "Inviting a friend to a singing room.",
+        lines: [
+          ["A", "오늘 저녁에 노래방에 갈까요?", "Tối nay chúng ta đi karaoke nhé?"],
+          ["B", "좋아요. 저는 노래를 잘 못해요.", "Được. Nhưng tôi hát không hay."],
+          ["A", "괜찮아요. 즐거우면 돼요.", "Không sao. Vui là được."],
+          ["B", "무슨 노래를 부를 거예요?", "Bạn sẽ hát bài gì?"],
+          ["A", "한국 노래를 연습하고 있어요.", "Tôi đang luyện hát nhạc Hàn."],
+          ["B", "기대돼요.", "Tôi rất mong chờ."],
+        ],
+      },
+    ],
+  },
+  {
+    lesson: "Lesson 11: Health & Daily Routine",
+    dialogues: [
+      {
+        title: "Feeling sick",
+        description: "Telling the doctor where it hurts.",
+        lines: [
+          ["A", "어디가 아프세요?", "Bạn đau ở đâu?"],
+          ["B", "머리가 아프고 열이 나요.", "Tôi đau đầu và bị sốt."],
+          ["A", "언제부터 그랬어요?", "Bạn bị từ khi nào?"],
+          ["B", "어제 저녁부터요.", "Từ tối hôm qua."],
+          ["A", "약을 드시고 푹 쉬세요.", "Hãy uống thuốc và nghỉ ngơi thật nhiều."],
+          ["B", "네, 알겠습니다.", "Vâng, tôi hiểu rồi."],
+        ],
+      },
+      {
+        title: "At the pharmacy",
+        description: "Buying cold medicine and learning how to take it.",
+        lines: [
+          ["A", "안녕하세요. 감기약 주세요.", "Xin chào. Cho tôi thuốc cảm."],
+          ["B", "어디가 불편하세요?", "Bạn thấy khó chịu ở đâu?"],
+          ["A", "목이 아프고 기침이 나요.", "Tôi đau họng và bị ho."],
+          ["B", "이 약을 하루에 세 번 드세요.", "Hãy uống thuốc này ba lần một ngày."],
+          ["A", "식사 전에 먹어요?", "Uống trước bữa ăn à?"],
+          ["B", "아니요, 식사 후에 드세요.", "Không, hãy uống sau bữa ăn."],
+          ["A", "감사합니다.", "Cảm ơn bạn."],
+        ],
+      },
+      {
+        title: "Oversleeping",
+        description: "Explaining why you are late.",
+        lines: [
+          ["A", "왜 이렇게 늦었어요?", "Sao bạn đến muộn thế?"],
+          ["B", "죄송해요. 늦게 일어났어요.", "Xin lỗi. Tôi dậy muộn."],
+          ["A", "어제 몇 시에 잤어요?", "Hôm qua bạn đi ngủ lúc mấy giờ?"],
+          ["B", "새벽 두 시에 잤어요.", "Hai giờ sáng tôi mới ngủ."],
+          ["A", "오늘은 일찍 주무세요.", "Hôm nay hãy đi ngủ sớm nhé."],
+          ["B", "네, 그럴게요.", "Vâng, tôi sẽ làm vậy."],
+        ],
+      },
+      {
+        title: "My daily routine",
+        description: "Describing a normal day from morning to night.",
+        lines: [
+          ["A", "하루 일과가 어떻게 돼요?", "Một ngày của bạn thế nào?"],
+          ["B", "아침 여섯 시에 일어나서 운동해요.", "Tôi dậy lúc sáu giờ sáng rồi tập thể dục."],
+          ["A", "몇 시에 출근해요?", "Bạn đi làm lúc mấy giờ?"],
+          ["B", "여덟 시에 집에서 나가요. 저녁 여섯 시에 퇴근해요.", "Tám giờ tôi ra khỏi nhà. Sáu giờ chiều tan làm."],
+          ["A", "저녁에는 뭐 해요?", "Buổi tối bạn làm gì?"],
+          ["B", "저녁을 먹고 한국어를 공부해요.", "Ăn tối xong tôi học tiếng Hàn."],
+        ],
+      },
+      {
+        title: "Making a hospital appointment",
+        description: "Booking a visit by phone.",
+        lines: [
+          ["A", "병원 예약을 하고 싶어요.", "Tôi muốn đặt lịch khám."],
+          ["B", "어느 날이 좋으세요?", "Bạn muốn ngày nào?"],
+          ["A", "이번 주 금요일 오후가 좋아요.", "Chiều thứ Sáu tuần này thì tốt."],
+          ["B", "세 시에 가능해요. 성함이 어떻게 되세요?", "Ba giờ thì được. Tên bạn là gì ạ?"],
+          ["A", "응우옌 란이에요.", "Tôi là Nguyễn Lan."],
+          ["B", "예약됐습니다. 금요일에 오세요.", "Đã đặt lịch xong. Thứ Sáu bạn đến nhé."],
+        ],
+      },
+    ],
+  },
+  {
+    lesson: "Lesson 12: Services & Places",
+    dialogues: [
+      {
+        title: "At the bank",
+        description: "Opening a new bank account.",
+        lines: [
+          ["A", "통장을 만들고 싶어요.", "Tôi muốn mở một tài khoản."],
+          ["B", "신분증을 보여 주세요.", "Xin hãy cho xem giấy tờ tùy thân."],
+          ["A", "여기 있어요.", "Của bạn đây."],
+          ["B", "이 서류에 이름을 쓰세요.", "Hãy viết tên vào giấy tờ này."],
+          ["A", "체크카드도 만들 수 있어요?", "Tôi làm thêm thẻ ghi nợ được không?"],
+          ["B", "네, 같이 만들어 드릴게요.", "Được, tôi sẽ làm cùng cho bạn."],
+        ],
+      },
+      {
+        title: "At the post office",
+        description: "Sending a parcel abroad.",
+        lines: [
+          ["A", "이 소포를 베트남으로 보내고 싶어요.", "Tôi muốn gửi bưu phẩm này đến Việt Nam."],
+          ["B", "무게를 재 볼게요. 이 킬로그램이에요.", "Để tôi cân thử. Hai ký."],
+          ["A", "얼마나 걸려요?", "Mất bao lâu ạ?"],
+          ["B", "일주일쯤 걸려요.", "Khoảng một tuần."],
+          ["A", "요금은 얼마예요?", "Phí là bao nhiêu?"],
+          ["B", "삼만 오천 원이에요.", "Ba vạn năm nghìn won."],
+        ],
+      },
+      {
+        title: "Hotel check-in",
+        description: "Checking in to a reserved room.",
+        lines: [
+          ["A", "예약한 김민수입니다.", "Tôi là Kim Min-su, người đã đặt phòng."],
+          ["B", "네, 확인했습니다. 삼 박이시죠?", "Vâng, tôi đã kiểm tra. Ba đêm đúng không ạ?"],
+          ["A", "네, 맞아요. 방이 몇 층이에요?", "Vâng, đúng rồi. Phòng ở tầng mấy?"],
+          ["B", "오 층입니다. 여기 열쇠예요.", "Tầng năm ạ. Chìa khóa đây."],
+          ["A", "아침 식사는 몇 시예요?", "Bữa sáng lúc mấy giờ?"],
+          ["B", "일곱 시부터 열 시까지입니다.", "Từ bảy giờ đến mười giờ ạ."],
+        ],
+      },
+      {
+        title: "Reserving a table by phone",
+        description: "Booking a restaurant table for four.",
+        lines: [
+          ["A", "여보세요? 오늘 저녁 일곱 시에 예약하고 싶어요.", "Alo? Tôi muốn đặt bàn lúc bảy giờ tối nay."],
+          ["B", "몇 분이세요?", "Quý khách đi mấy người ạ?"],
+          ["A", "네 명이에요.", "Bốn người."],
+          ["B", "죄송하지만 일곱 시는 자리가 없어요. 여덟 시는 괜찮아요.", "Xin lỗi, bảy giờ hết chỗ. Tám giờ thì được ạ."],
+          ["A", "그럼 여덟 시로 해 주세요.", "Vậy cho tôi tám giờ."],
+          ["B", "성함과 전화번호를 말씀해 주세요.", "Xin cho biết tên và số điện thoại."],
+        ],
+      },
+    ],
+  },
+];

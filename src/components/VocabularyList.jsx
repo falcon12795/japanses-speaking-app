@@ -393,7 +393,7 @@ export default function VocabularyList({
           <h2>Vocabulary Library</h2>
 
           <p className="subtitle">
-            Choose a JLPT level and topic to start learning vocabulary.
+            Choose a level and topic to start learning vocabulary.
           </p>
         </div>
 

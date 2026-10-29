@@ -14,6 +14,9 @@ export const DEFAULT_PROGRESS = {
   alphabetCorrect: 0,
   alphabetWrong: 0,
 
+  hangulCorrect: 0,
+  hangulWrong: 0,
+
   speakingPractice: 0,
   dialoguePractice: 0,
 

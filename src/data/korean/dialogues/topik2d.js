@@ -1,0 +1,156 @@
+export default [
+  {
+    lesson: "Lesson 7: Study & Education",
+    dialogues: [
+      {
+        title: "Study abroad consultation",
+        description: "Asking how to enter a Korean university.",
+        lines: [
+          ["A", "한국에서 대학교를 다니고 싶은데 어떻게 준비해야 해요?", "Tôi muốn học đại học ở Hàn Quốc, phải chuẩn bị thế nào?"],
+          ["B", "먼저 한국어 능력 시험 점수가 필요해요.", "Trước tiên bạn cần điểm kỳ thi năng lực tiếng Hàn."],
+          ["A", "몇 급이 필요해요?", "Cần cấp mấy?"],
+          ["B", "보통 삼 급 이상을 요구해요.", "Thông thường yêu cầu từ cấp ba trở lên."],
+          ["A", "입학 신청은 언제까지 해야 해요?", "Phải đăng ký nhập học trước khi nào?"],
+          ["B", "다음 달 말까지 서류를 내셔야 해요.", "Bạn phải nộp hồ sơ trước cuối tháng sau."],
+        ],
+      },
+      {
+        title: "Applying for a scholarship",
+        description: "Learning the requirements for a scholarship.",
+        lines: [
+          ["A", "장학금을 받으려면 어떻게 해야 해요?", "Muốn nhận học bổng thì phải làm thế nào?"],
+          ["B", "성적이 좋아야 하고 추천서도 필요해요.", "Bạn phải có điểm tốt và cần cả thư giới thiệu."],
+          ["A", "추천서는 누구한테 부탁하면 돼요?", "Nhờ ai viết thư giới thiệu thì được?"],
+          ["B", "담당 교수님께 부탁해 보세요.", "Hãy thử nhờ giáo sư phụ trách."],
+          ["A", "면접도 있어요?", "Có phỏng vấn nữa không?"],
+          ["B", "네, 서류 심사 후에 면접이 있어요.", "Có, sau khi xét hồ sơ sẽ có phỏng vấn."],
+        ],
+      },
+      {
+        title: "Preparing a presentation",
+        description: "Practicing a talk before class.",
+        lines: [
+          ["A", "내일 발표 준비는 잘 되고 있어요?", "Việc chuẩn bị thuyết trình ngày mai có ổn không?"],
+          ["B", "자료는 다 만들었는데 떨려서 연습을 더 해야 해요.", "Tôi làm xong tài liệu rồi nhưng hồi hộp nên phải luyện thêm."],
+          ["A", "제가 들어 줄까요?", "Để tôi nghe giúp bạn nhé?"],
+          ["B", "그래 주시면 정말 도움이 될 거예요.", "Nếu bạn làm vậy thì thật sự giúp ích cho tôi."],
+          ["A", "너무 빨리 읽지 말고 천천히 말하세요.", "Đừng đọc nhanh quá, hãy nói chậm rãi."],
+          ["B", "알겠어요. 한번 해 볼게요.", "Tôi hiểu rồi. Tôi sẽ thử một lần."],
+        ],
+      },
+      {
+        title: "How to study Korean",
+        description: "Getting tips for improving Korean skills.",
+        lines: [
+          ["A", "한국어를 잘하려면 어떻게 공부해야 해요?", "Muốn giỏi tiếng Hàn thì phải học thế nào?"],
+          ["B", "매일 조금씩 말하는 연습을 하세요.", "Hãy luyện nói mỗi ngày một chút."],
+          ["A", "드라마를 보는 것도 도움이 될까요?", "Xem phim truyền hình có giúp ích không?"],
+          ["B", "네, 자막 없이 보면 듣기 실력이 늘어요.", "Có, xem không phụ đề thì kỹ năng nghe sẽ tăng."],
+          ["A", "모르는 표현은 어떻게 해요?", "Còn những cách diễn đạt chưa biết thì làm sao?"],
+          ["B", "노트에 적어 놓고 나중에 다시 복습하세요.", "Hãy ghi vào vở rồi sau đó ôn lại."],
+        ],
+      },
+      {
+        title: "Joining a club",
+        description: "Asking about activities and fees of a club.",
+        lines: [
+          ["A", "동아리에 가입하고 싶은데 어떤 곳이 있어요?", "Tôi muốn tham gia câu lạc bộ, có những câu lạc bộ nào?"],
+          ["B", "사진 동아리와 영화 동아리가 인기가 많아요.", "Câu lạc bộ nhiếp ảnh và điện ảnh rất được ưa chuộng."],
+          ["A", "활동은 일주일에 몇 번 해요?", "Một tuần hoạt động mấy lần?"],
+          ["B", "보통 한 번 모여요. 주말에는 사진을 찍으러 가기도 해요.", "Thường họp một lần. Cuối tuần cũng đi chụp ảnh."],
+          ["A", "회비는 얼마예요?", "Hội phí bao nhiêu?"],
+          ["B", "한 달에 만 원이에요. 신청서를 쓰시겠어요?", "Mười nghìn won mỗi tháng. Bạn điền đơn đăng ký nhé?"],
+        ],
+      },
+      {
+        title: "Exam results",
+        description: "Celebrating a passed exam.",
+        lines: [
+          ["A", "시험 결과 나왔어요?", "Kết quả kỳ thi có chưa?"],
+          ["B", "네, 방금 확인했는데 합격했어요!", "Có, tôi vừa xem và đã đỗ rồi!"],
+          ["A", "정말요? 진짜 축하해요!", "Thật à? Chúc mừng bạn nhé!"],
+          ["B", "고마워요. 열심히 준비한 보람이 있어요.", "Cảm ơn bạn. Công sức chuẩn bị chăm chỉ đã có kết quả."],
+          ["A", "다음 목표는 뭐예요?", "Mục tiêu tiếp theo của bạn là gì?"],
+          ["B", "더 높은 급수에 도전해 보려고요.", "Tôi định thử thách với cấp cao hơn."],
+        ],
+      },
+    ],
+  },
+  {
+    lesson: "Lesson 8: Society & Culture",
+    dialogues: [
+      {
+        title: "Holiday plans",
+        description: "Talking about Chuseok traditions.",
+        lines: [
+          ["A", "추석 연휴에 뭐 할 거예요?", "Kỳ nghỉ Chuseok bạn sẽ làm gì?"],
+          ["B", "고향에 내려가서 가족들과 보낼 거예요.", "Tôi sẽ về quê và ở bên gia đình."],
+          ["A", "차가 많이 막힐 텐데 괜찮아요?", "Đường sẽ tắc nhiều đấy, có sao không?"],
+          ["B", "그래서 일찍 출발하려고요.", "Vì vậy tôi định xuất phát sớm."],
+          ["A", "송편도 만들어요?", "Bạn có làm bánh songpyeon không?"],
+          ["B", "네, 매년 온 가족이 모여서 같이 만들어요.", "Có, hằng năm cả gia đình quây quần cùng làm."],
+        ],
+      },
+      {
+        title: "Invitation to a wedding",
+        description: "Inviting a coworker to a wedding.",
+        lines: [
+          ["A", "다음 달에 결혼하게 됐어요. 와 주실 수 있어요?", "Tháng sau tôi sắp kết hôn. Bạn đến dự được không?"],
+          ["B", "정말요? 축하해요! 날짜가 언제예요?", "Thật à? Chúc mừng! Ngày nào vậy?"],
+          ["A", "오 월 이십 일 토요일 오후 두 시예요.", "Hai giờ chiều thứ Bảy ngày hai mươi tháng Năm."],
+          ["B", "그날 시간이 돼요. 꼭 갈게요.", "Hôm đó tôi rảnh. Nhất định tôi sẽ đến."],
+          ["A", "오시면 식사도 같이 하세요.", "Khi đến hãy cùng dùng bữa nhé."],
+          ["B", "네, 축의금도 준비할게요.", "Vâng, tôi cũng sẽ chuẩn bị tiền mừng."],
+        ],
+      },
+      {
+        title: "Experiencing Korean culture",
+        description: "Planning to try on hanbok in a traditional village.",
+        lines: [
+          ["A", "한복을 입어 본 적이 있어요?", "Bạn đã từng mặc thử hanbok chưa?"],
+          ["B", "아니요, 한 번도 없어요. 입어 보고 싶어요.", "Chưa, chưa lần nào. Tôi muốn mặc thử."],
+          ["A", "이번 주말에 한옥마을에 가서 체험해 볼까요?", "Cuối tuần này chúng ta đến làng hanok trải nghiệm nhé?"],
+          ["B", "좋아요. 사진도 많이 찍어요.", "Được thôi. Chúng ta chụp thật nhiều ảnh nhé."],
+          ["A", "한복을 입고 전통 차도 마실 수 있대요.", "Nghe nói mặc hanbok còn uống được trà truyền thống."],
+          ["B", "정말 기대돼요.", "Tôi rất mong chờ."],
+        ],
+      },
+      {
+        title: "Comforting a friend",
+        description: "Cheering up a friend who failed an exam.",
+        lines: [
+          ["A", "얼굴이 안 좋아 보여요. 무슨 일 있어요?", "Trông bạn không khỏe. Có chuyện gì à?"],
+          ["B", "시험에 떨어져서 기분이 우울해요.", "Tôi trượt kỳ thi nên tâm trạng buồn."],
+          ["A", "많이 속상하겠어요. 하지만 너무 자책하지 마세요.", "Chắc bạn buồn lắm. Nhưng đừng tự trách mình quá."],
+          ["B", "열심히 준비했는데 결과가 좋지 않아서요.", "Tôi đã chuẩn bị chăm chỉ mà kết quả không tốt."],
+          ["A", "다음에는 더 잘할 수 있을 거예요.", "Lần sau bạn sẽ làm tốt hơn."],
+          ["B", "이야기를 들어 줘서 고마워요.", "Cảm ơn bạn đã lắng nghe."],
+        ],
+      },
+      {
+        title: "Traditional food",
+        description: "Learning about samgyetang on a hot day.",
+        lines: [
+          ["A", "이 음식은 이름이 뭐예요?", "Món này tên là gì?"],
+          ["B", "삼계탕이에요. 여름에 건강을 위해 먹는 음식이에요.", "Là samgyetang. Món ăn vào mùa hè để giữ sức khỏe."],
+          ["A", "뜨거운데 왜 더운 날 먹어요?", "Nóng thế mà sao lại ăn vào ngày nóng?"],
+          ["B", "한국 사람들은 더위를 뜨거운 음식으로 이겨 낸다고 생각해요.", "Người Hàn Quốc nghĩ rằng vượt qua cái nóng bằng món ăn nóng."],
+          ["A", "재미있네요. 한번 먹어 볼게요.", "Thú vị thật. Tôi sẽ thử một lần."],
+          ["B", "인삼과 닭이 들어 있어서 몸에 좋아요.", "Có nhân sâm và gà nên rất tốt cho cơ thể."],
+        ],
+      },
+      {
+        title: "A club meeting",
+        description: "Arranging the time and place of a gathering.",
+        lines: [
+          ["A", "이번 모임은 언제 해요?", "Buổi họp mặt lần này khi nào?"],
+          ["B", "토요일 저녁 여섯 시에 하기로 했어요.", "Chúng ta đã quyết định tổ chức lúc sáu giờ tối thứ Bảy."],
+          ["A", "장소는 어디예요?", "Địa điểm ở đâu?"],
+          ["B", "학교 앞 카페에서 만나요.", "Gặp nhau ở quán cà phê trước trường."],
+          ["A", "회원들이 모두 올 수 있을까요?", "Các thành viên có đến đủ được không?"],
+          ["B", "다섯 명이 못 온다고 연락이 왔어요.", "Có năm người báo là không đến được."],
+        ],
+      },
+    ],
+  },
+];

@@ -10,6 +10,7 @@ import { N3_GRAMMAR_QUESTIONS } from "../data/training/n3";
 import { N4_GRAMMAR_QUESTIONS } from "../data/training/n4";
 import { N5_GRAMMAR_QUESTIONS } from "../data/training/n5";
 import { EN_GRAMMAR_QUESTIONS } from "../data/english/training";
+import { KO_GRAMMAR_QUESTIONS } from "../data/korean/grammar";
 
 function shuffleArray(array) {
     return [...array].sort(() => Math.random() - 0.5);
@@ -76,7 +77,11 @@ function getAnswerIndex(question) {
 }
 
 function getGrammarQuizGroup(grammarId) {
-    // English ids look like "a1_gram_01"; Japanese ids look like "n3-grammar-...".
+    // Korean ids look like "ko1_gram_01"; English "a1_gram_01"; Japanese "n3-grammar-...".
+    if (grammarId.startsWith("ko")) {
+        return KO_GRAMMAR_QUESTIONS[grammarId];
+    }
+
     if (grammarId.includes("_gram_")) {
         return EN_GRAMMAR_QUESTIONS[grammarId];
     }

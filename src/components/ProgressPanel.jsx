@@ -40,6 +40,12 @@ export default function ProgressPanel({ progress, onProgressChange }) {
           <strong>English alphabet wrong:</strong> {progress.alphabetWrong || 0}
         </p>
         <p>
+          <strong>Hangul correct:</strong> {progress.hangulCorrect || 0}
+        </p>
+        <p>
+          <strong>Hangul wrong:</strong> {progress.hangulWrong || 0}
+        </p>
+        <p>
           <strong>Speaking practice:</strong> {progress.speakingPractice}
         </p>
         <p>

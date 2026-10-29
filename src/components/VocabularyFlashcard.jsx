@@ -314,8 +314,9 @@ export default function VocabularyFlashcard({
               )}
 
               <p className="example-meaning">
-                {currentCard.example.english || "No English translation"} /{" "}
-                {currentCard.example.vietnamese || "No Vietnamese translation"}
+                {[currentCard.example.english, currentCard.example.vietnamese]
+                  .filter(Boolean)
+                  .join(" / ") || "No translation"}
               </p>
 
               <div className="buttons compact-buttons">

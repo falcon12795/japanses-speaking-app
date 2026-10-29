@@ -139,7 +139,7 @@ export default function DialogueList({ progress = {}, onSelectDialogue }) {
         <h2>Dialogue Library</h2>
 
         <p className="subtitle">
-          Choose a JLPT level and dialogue to start speaking practice.
+          Choose a level and dialogue to start speaking practice.
         </p>
       </div>
 

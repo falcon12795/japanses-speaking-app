@@ -1092,7 +1092,7 @@ export default function DialoguePractice({
 
                             {(line.english || line.vietnamese) && (
                               <p className="dialogue-meaning">
-                                {line.english} / {line.vietnamese}
+                                {[line.english, line.vietnamese].filter(Boolean).join(" / ")}
                               </p>
                             )}
                           </>

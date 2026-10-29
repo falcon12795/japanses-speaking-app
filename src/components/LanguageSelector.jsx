@@ -20,8 +20,8 @@ const LANGUAGES = [
     name: "Korean",
     nativeName: "한국어",
     flag: "🇰🇷",
-    available: false,
-    description: "Coming soon",
+    available: true,
+    description: "Hangul, TOPIK 1–2 vocabulary, grammar & dialogues",
   },
   {
     code: "zh",

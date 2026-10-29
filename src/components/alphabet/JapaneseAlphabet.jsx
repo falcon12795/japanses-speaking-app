@@ -3,7 +3,8 @@ import Button from "../common/Button";
 import AlphabetQuiz from "./AlphabetQuiz";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { KANA_SCRIPTS, getKanaList, getKanaSections } from "../../data/kana";
-import { pickOne, shuffle, uniqueBy } from "../../utils/alphabetQuiz";
+import { createCharacterQuestion } from "../../utils/alphabetQuiz";
+
 
 const SCOPES = [
   { id: "basic", label: "Basic", sections: ["basic"] },
@@ -17,53 +18,6 @@ const QUIZ_TYPES = [
   { id: "write", label: "Romaji → Kana" },
   { id: "listen", label: "Listen → Kana" },
 ];
-
-function createKanaQuestion(type, pool) {
-  const target = pickOne(pool);
-  const distractors = shuffle(
-    uniqueBy(
-      pool.filter((item) => item.romaji !== target.romaji),
-      (item) => item.romaji
-    )
-  ).slice(0, 3);
-
-  const toOption = (item, label) => ({
-    id: item.id,
-    label,
-    isCorrect: item === target,
-  });
-
-  const items = shuffle([target, ...distractors]);
-  const explanation = `${target.kana} = ${target.romaji}`;
-
-  if (type === "read") {
-    return {
-      prompt: target.kana,
-      hint: "Choose the correct romaji.",
-      speak: target.kana,
-      explanation,
-      options: items.map((item) => toOption(item, item.romaji)),
-    };
-  }
-
-  if (type === "write") {
-    return {
-      prompt: target.romaji,
-      hint: "Choose the correct kana.",
-      explanation,
-      options: items.map((item) => toOption(item, item.kana)),
-    };
-  }
-
-  return {
-    prompt: "🎧",
-    hint: "Listen, then choose the kana you hear.",
-    speak: target.kana,
-    autoSpeak: true,
-    explanation,
-    options: items.map((item) => toOption(item, item.kana)),
-  };
-}
 
 function KanaChart({ script, showRomaji, onSpeak }) {
   const sections = useMemo(() => getKanaSections(script), [script]);
@@ -220,7 +174,7 @@ export default function JapaneseAlphabet({ progress, onProgressChange }) {
 
           <AlphabetQuiz
             key={`${script}-${scopeId}-${quizType}`}
-            createQuestion={() => createKanaQuestion(quizType, pool)}
+            createQuestion={() => createCharacterQuestion(quizType, pool)}
             onAnswer={handleAnswer}
             onSpeak={speakText}
           />
