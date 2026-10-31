@@ -13,6 +13,8 @@ import it_12 from "./it_12";
 import it_13 from "./it_13";
 import it_14 from "./it_14";
 import it_15 from "./it_15";
+import it_16 from "./it_16";
+import it_17 from "./it_17";
 
 export const IT_BOOK = [
   ...it_01,
@@ -30,4 +32,6 @@ export const IT_BOOK = [
   ...it_13,
   ...it_14,
   ...it_15,
+  ...it_16,
+  ...it_17,
 ];
