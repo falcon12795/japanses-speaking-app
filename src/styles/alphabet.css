@@ -250,6 +250,52 @@ button.alphabet-card.selected {
   }
 }
 
+/* English sounds */
+.sound-detail-ipa {
+  font-size: 56px;
+}
+
+.sound-tip {
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+.sound-badge-gap {
+  margin-left: 6px;
+}
+
+.sound-pairs-inline {
+  grid-column: 1 / -1;
+}
+
+.sound-pairs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 10px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sound-pairs li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.sound-pair-label {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-muted);
+}
+
+@media (max-width: 640px) {
+  .sound-pairs {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Hangul */
 .hangul-grid {
   grid-template-columns: repeat(7, minmax(0, 1fr));

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../common/Button";
 import AlphabetQuiz from "./AlphabetQuiz";
+import EnglishSounds from "./EnglishSounds";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { EN_ALPHABET } from "../../data/english/alphabet";
 import { pickOne, shuffle } from "../../utils/alphabetQuiz";
@@ -107,6 +108,29 @@ function LetterDetail({ item, onSpeak }) {
 }
 
 export default function EnglishAlphabet({ progress, onProgressChange }) {
+  const [section, setSection] = useState("letters");
+
+  return (
+    <>
+      <div className="buttons">
+        <Button variant="secondary" active={section === "letters"} onClick={() => setSection("letters")}>
+          Letters
+        </Button>
+        <Button variant="secondary" active={section === "sounds"} onClick={() => setSection("sounds")}>
+          Sounds (IPA)
+        </Button>
+      </div>
+
+      {section === "letters" ? (
+        <EnglishLetters progress={progress} onProgressChange={onProgressChange} />
+      ) : (
+        <EnglishSounds progress={progress} onProgressChange={onProgressChange} />
+      )}
+    </>
+  );
+}
+
+function EnglishLetters({ progress, onProgressChange }) {
   const { speakText } = useLanguage();
   const [mode, setMode] = useState("chart");
   const [filter, setFilter] = useState("all");
